@@ -1,0 +1,146 @@
+I"Z+<p>Some time ago (ok a month ago—time ✈️s), I saw this tweet:</p>
+<blockquote class="twitter-tweet" lang="en-gb"><p lang="en" dir="ltr">Need a simple tool to track mentions of a keyword on Twitter by hour. Don’t need a bunch of bells and whistles. Thoughts?</p>&mdash; Kaegan Donnelly (@kaequan) <a href="https://twitter.com/kaequan/status/591359379431104513">April 23, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I thought, “should be easy, lmgt.” However, results for the query “hourly mentions of a word on twitter” didn’t offer clear solutions.
+Days later I came across two relatively simple approaches to tackling the problem. The first is <a href="https://github.com/tweepy/tweepy" target="_blank">Tweepy</a>. The other is <a href="https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html" target="_blank">Logstash</a>.</p>
+
+<p>Tweepy is an <a href="http://www.tweepy.org/" target="_blank">open source Python library</a> for accessing the Twitter API, including the Twitter Streaming API.</p>
+
+<p>Logstash is an open source tool for <a href="https://wikitech.wikimedia.org/wiki/Logstash" target="_blank">collecting, processing, and forwarding events</a>. Logstash can read events from the Twitter Streaming API using <a href="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-twitter.html" target="_blank">its <code class="language-plaintext highlighter-rouge">twitter</code> plugin</a>.</p>
+
+<p>Having tried both, I recommend Logstash over Tweepy for two main reasons:</p>
+
+<ol>
+  <li>it <a href="https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb" target="_blank">deals</a> with the Twitter API rate limits by default</li>
+  <li>it offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step</li>
+</ol>
+
+<p>For both Tweepy and Logstash you need access to Twitter’s streaming API. Follow steps 2 and 3 <a href="https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04" target="_blank">here</a> to create a Twitter app and obtain your <em>Consumer Key</em>, <em>Consumer Key Secret</em>, <em>Access Token</em>, and <em>Access Token Secret</em>.</p>
+
+<h3 id="the-elk-solution">The ELK solution</h3>
+
+<p>Download and install <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-1-4-4" target="_blank">Elasticsearch</a>, <a href="https://www.elastic.co/downloads/logstash" target="_blank">Logstash</a>, and <a href="https://www.elastic.co/downloads/kibana" target="_blank">Kibana</a>. If you are on a Mac, you can</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew <span class="nb">install </span>elasticsearch
+brew <span class="nb">install </span>logstash</code></pre></figure>
+
+<p>Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word <code class="language-plaintext highlighter-rouge">ireland</code> (call it <code class="language-plaintext highlighter-rouge">ireland.conf</code>)</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf"># a logstash config file has three sections:
+# input{}, output{}, and (optional) filter{}; add plugins
+# to specify how events should be handled in each section
+
+input {
+    twitter {
+        # set key and token values from the previous step
+        consumer_key =&gt; ""
+        consumer_secret =&gt; ""
+        oauth_token =&gt; ""
+        oauth_token_secret =&gt; ""
+        # assume we are interested in tracking all
+        # mentions of the word "ireland"
+        keywords =&gt; ["ireland"]
+        # no need for all fields to get hourly counts
+        full_tweet =&gt; false
+    }
+}
+
+output {
+	stdout {
+		# include this to pretty-print the event's json to stdout
+		codec =&gt; rubydebug
+  	}
+}</code></pre></figure>
+
+<p>To start streaming tweets, run</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf">logstash -f ireland.conf</code></pre></figure>
+
+<p>At this point, tweets are written to <code class="language-plaintext highlighter-rouge">stdout</code>. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.</p>
+
+<p>Add the <code class="language-plaintext highlighter-rouge">elasticsearch</code> plugin to the <code class="language-plaintext highlighter-rouge">output</code> section of the configuration</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf">output {
+    elasticsearch {
+        protocol =&gt; "http"
+        host =&gt; "localhost"
+        index =&gt; "irelandtweets"
+    }
+
+	stdout {
+		# include this to pretty-print the event's json to stdout
+		codec =&gt; rubydebug
+  	}
+}</code></pre></figure>
+
+<p>Run Logstash again and have a look at:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">http://localhost:9200/irelandtweets/_search/?pretty</code></pre></figure>
+
+<p>Below is a sample of the output format. You can see, for example, that <code class="language-plaintext highlighter-rouge">65235</code> documents (tweets) have been stored in the <code class="language-plaintext highlighter-rouge">irelandtweets</code> index</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">{</span>
+  <span class="s2">"took"</span> : 2,
+  <span class="s2">"timed_out"</span> : <span class="nb">false</span>,
+  <span class="s2">"_shards"</span> : <span class="o">{</span>
+    <span class="s2">"total"</span> : 5,
+    <span class="s2">"successful"</span> : 5,
+    <span class="s2">"failed"</span> : 0
+  <span class="o">}</span>,
+  <span class="s2">"hits"</span> : <span class="o">{</span>
+    <span class="s2">"total"</span> : 65235,
+    <span class="s2">"max_score"</span> : 1.0,
+    <span class="s2">"hits"</span> : <span class="o">[</span> <span class="o">{</span>
+      <span class="s2">"_index"</span> : <span class="s2">"irelandtweets"</span>,
+      <span class="s2">"_type"</span> : <span class="s2">"logs"</span>,
+      <span class="s2">"_id"</span> : <span class="s2">"AU2B1MGZPj_44djTabLA"</span>,
+      <span class="s2">"_score"</span> : 1.0,
+      <span class="s2">"_source"</span>:<span class="o">{</span><span class="s2">"@timestamp"</span>:<span class="s2">"2015-05-23T17:31:51.000Z"</span>,<span class="s2">"message"</span>:<span class="s2">"Y'all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭"</span>,<span class="s2">"user"</span>:<span class="s2">"LesbiForLauren"</span>,<span class="s2">"client"</span>:<span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">http://twitter.com/download/iphone</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">nofollow</span><span class="se">\"</span><span class="s2">&gt;Twitter for iPhone&lt;/a&gt;"</span>,<span class="s2">"retweeted"</span>:false,<span class="s2">"source"</span>:<span class="s2">"http://twitter.com/LesbiForLauren/status/602165054042034176"</span>,<span class="s2">"@version"</span>:<span class="s2">"1"</span><span class="o">}</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"_index"</span> : <span class="s2">"irelandtweets"</span>,
+      <span class="s2">"_type"</span> : <span class="s2">"logs"</span>,
+      <span class="s2">"_id"</span> : <span class="s2">"AU2B1MGZPj_44djTabLF"</span>,
+      <span class="s2">"_score"</span> : 1.0,
+      <span class="s2">"_source"</span>:<span class="o">{</span><span class="s2">"@timestamp"</span>:<span class="s2">"2015-05-23T17:31:51.000Z"</span>,<span class="s2">"message"</span>:<span class="s2">"RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson."</span>,<span class="s2">"user"</span>:<span class="s2">"SOUTHERNjamespb"</span>,<span class="s2">"client"</span>:<span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">http://www.twitter.com</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">nofollow</span><span class="se">\"</span><span class="s2">&gt;Twitter for BlackBerry&lt;/a&gt;"</span>,<span class="s2">"retweeted"</span>:false,<span class="s2">"source"</span>:<span class="s2">"http://twitter.com/SOUTHERNjamespb/status/602165054889283584"</span>,<span class="s2">"@version"</span>:<span class="s2">"1"</span><span class="o">}</span>
+    <span class="o">}</span>, <span class="o">{</span>
+		...</code></pre></figure>
+
+<p>To start using Kibana, visit</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">http://localhost:5601/</code></pre></figure>
+
+<p>On the Discover tab, there is a configuration form:</p>
+
+<ul>
+  <li>Check off the box: <em>Index contains time-based events</em></li>
+  <li>Fill the <em>Index name or pattern</em> field with <code class="language-plaintext highlighter-rouge">irelandtweets</code></li>
+  <li>Fill the <em>Time-field name</em> field with <code class="language-plaintext highlighter-rouge">@timestamp</code></li>
+</ul>
+
+<p>On the Visualize tab, choose visualization type <code class="language-plaintext highlighter-rouge">Line chart</code>.</p>
+
+<ul>
+  <li>Choose option <code class="language-plaintext highlighter-rouge">From a saved search</code> to use the same query you specified on the Discover tab</li>
+  <li>On the left hand side, you can specify metric and bucket aggregations:</li>
+  <li>For <em>metric aggregation</em>— same as Y-Axis aggregation—choose <code class="language-plaintext highlighter-rouge">Count</code></li>
+  <li>For <em>bucket aggregation</em>—same as X-Axis aggregation
+    <ul>
+      <li>Fill the <em>Aggregation</em> field with <code class="language-plaintext highlighter-rouge">Date Histogram</code></li>
+      <li>Fill the <em>Field</em> field with <code class="language-plaintext highlighter-rouge">@timestamp</code></li>
+      <li>Fill the <em>Interval</em> field with <code class="language-plaintext highlighter-rouge">Minute</code></li>
+    </ul>
+  </li>
+  <li>Click on the Refresh Interval tab at the top. Choose <code class="language-plaintext highlighter-rouge">5 seconds</code> and see your line chart come alive 📈</li>
+</ul>
+
+<p><img src="/files/pics/kibana_screenshot.png" alt="Kibana screenshot" /></p>
+
+<p>Done. Thank you for starting the conversation Kaegan!</p>
+
+<h3 id="more-resources">More resources</h3>
+
+<p>For details about Logstash plugins see <a href="https://www.elastic.co/guide/en/logstash/current/configuration.html" target="_blank">this guide</a>.</p>
+
+<p>Anna Roes has written an excellent overview of Kibana in <a href="https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/" target="_blank">this tutorial</a>.</p>
+:ET
