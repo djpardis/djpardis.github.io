@@ -14,7 +14,12 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="About">{{ site.title }}</a>
+            &nbsp;&lt;&gt;
             <small>{{ site.tagline }}</small>
+            {% for page in site.pages_list %}
+              &nbsp;
+              <a href="{{ page[1]  }}">{{ page[0] }}</a>
+            {% endfor %}
           </h3>
         </div>
       </div>
@@ -24,7 +29,7 @@
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>
       (function(document) {
@@ -42,6 +47,6 @@
           checkbox.checked = false;
         }, false);
       })(document);
-    </script>
+    </script> -->
   </body>
 </html>
