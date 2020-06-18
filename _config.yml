@@ -10,9 +10,9 @@ url:                 "http://djpardis.github.io"
 
 pages_list:
   Bio: '/'
-  Research: '/pubs'
+  Pubs: '/pubs'
   Posts: '/archive'
-  Subscribe: '/atom.xml'
+  RSS: '/atom.xml'
 
 # About
 author:
