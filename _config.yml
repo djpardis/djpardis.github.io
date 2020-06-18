@@ -2,11 +2,17 @@
 permalink:           pretty
 
 # Setup
-title:               "@djpardis — Pardis Noorzad"
+title:               "Pardis Noorzad"
 tagline:             ""
 description:         "Pardis Noorzad"
 baseurl:             ""
 url:                 "http://djpardis.github.io"
+
+pages_list:
+  Bio: '/'
+  Research: '/pubs'
+  Posts: '/archive'
+  Subscribe: '/atom.xml'
 
 # About
 author:
