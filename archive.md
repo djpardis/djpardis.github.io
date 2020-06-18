@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Posts
-published: false
+published: true
 ---
 
 <!-- <h3>Archive</h3> -->
