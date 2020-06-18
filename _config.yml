@@ -9,7 +9,7 @@ baseurl:             ""
 url:                 "http://djpardis.github.io"
 
 pages_list:
-  Bio: '/'
+  # Bio: '/'
   Pubs: '/pubs'
   Posts: '/archive'
   RSS: '/atom.xml'
