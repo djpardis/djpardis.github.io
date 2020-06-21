@@ -11,7 +11,8 @@ url:                 "http://djpardis.github.io"
 pages_list:
   # Bio: '/'
   Pubs: '/pubs'
-  Posts: '/posts'
+  # Posts: '/posts'
+  DJing: '/djing'
   # Sub: '/atom.xml'
 
 # About
