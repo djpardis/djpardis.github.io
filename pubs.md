@@ -7,6 +7,9 @@ title: Pubs
 Full list in <a href="/files/Noorzad2018CV.pdf" target="_blank">CV</a>.
 </p> -->
 
+<!-- ![Pardis Noorzad at TWIMLcon](../files/pics/twimlcon.jpg)
+<sup><a href="https://twimlcon.com/speakers/pardis-noorzad/" target="_blank">Culture and organization for effective ML at Scale</a> at TWIMLcon 2019.</sup> -->
+
 Here is the [feed](../atom.xml) for future updates.
 
 <!-- {% for post in site.posts %}

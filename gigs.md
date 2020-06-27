@@ -4,8 +4,8 @@ title: Gigs
 published: true
 ---
 
-![DJ Pardis and Sim Simah](../files/pics/djpardis_simsimah.jpg)
-<sup><i>The New Parish with Sim Simah and Aarxn Cxle, July 2019.</i></sup>
+![DJ Pardis and Sim Simah](../files/pics/djing.jpg)
+<sup>The New Parish with <em><a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://soundcloud.com/ohsimsimah/flavor-feat-aarxn-cxle-adn-rd" target="_blank">Aarxn Cxle</a>, July 2019.</sup>
 
 ### Writing
 
