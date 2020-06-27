@@ -6,13 +6,13 @@ title:               "Pardis Noorzad"
 tagline:             ""
 description:         "Pardis Noorzad"
 baseurl:             ""
-url:                 "http://djpardis.github.io"
+url:                 "https://djpardis.com"
 
 pages_list:
+  Pubs: '/pubs'
+  Gigs: '/gigs'
   # Bio: '/'
-  DS Pubs: '/pubs'
   # Posts: '/posts'
-  DJ Gigs: '/gigs'
   # Sub: '/atom.xml'
 
 # About
@@ -21,3 +21,8 @@ author:
   url:               https://djpardis.com
   email:             pardis.noorzad@gmail.com
   twitter:           djpardis
+
+safe: false
+
+gems:
+  - jekyll-sitemap
