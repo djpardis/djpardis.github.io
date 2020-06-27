@@ -1,11 +1,11 @@
 ---
 layout: page
-title: DJing
+title: Gigs
 published: true
 ---
 
 ![DJ Pardis and Sim Simah](../files/pics/djpardis_simsimah.jpg)
-<sup>The New Parish with Sim Simah and Aarxn Cxle, July 2019</sup>
+<sup><i>The New Parish with Sim Simah and Aarxn Cxle, July 2019.</i></sup>
 
 ### Writing
 
