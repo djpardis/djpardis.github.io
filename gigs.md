@@ -4,7 +4,7 @@ title: Gigs
 published: true
 ---
 
-<img src="../files/pics/djing.jpg" alt="Pardis Noorzad (aka DJ Pardis) and Sim Simah" title="Pardis Noorzad (aka DJ Pardis) and Sim Simah">
+<img src="files/pics/djing.jpg" alt="Pardis Noorzad (aka DJ Pardis) and Sim Simah" title="Pardis Noorzad (aka DJ Pardis) and Sim Simah">
 <sup><a href="https://www.thenewparish.com/" target="_blank">The New Parish</a> with <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://soundcloud.com/ohsimsimah/flavor-feat-aarxn-cxle-adn-rd" target="_blank">Aarxn Cxle</a>, July 2019.</sup>
 
 ### Blog posts
