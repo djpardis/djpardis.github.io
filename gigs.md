@@ -4,9 +4,9 @@ title: Gigs
 published: true
 ---
 
-<figure>
+<figure style="margin: auto">
 <img src="../files/pics/djing.jpg" alt="Pardis Noorzad (aka DJ Pardis) and Sim Simah" title="Pardis Noorzad (aka DJ Pardis) and Sim Simah" style="margin:5px 0px">
-<figcaption>With <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://soundcloud.com/ohsimsimah/flavor-feat-aarxn-cxle-adn-rd" target="_blank">Aarxn Cxle</a> at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a> , opening for <a href="https://www.instagram.com/mr_camron/?hl=en" target="_blank">@mr_camron</a>!! By <a href="https://photos.meria.agency/" target="_blank">Jesse Meria</a>. July 2019.</figcaption>
+<figcaption style="font-size: 16px;">With <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://soundcloud.com/ohsimsimah/flavor-feat-aarxn-cxle-adn-rd" target="_blank">Aarxn Cxle</a> at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>.<br>By <a href="https://photos.meria.agency/" target="_blank">Jesse Meria</a>. July 2019.</figcaption>
 </figure>
 
 ### Song reviews
