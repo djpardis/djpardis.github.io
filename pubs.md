@@ -16,7 +16,7 @@ Here is the [feed](../atom.xml) for future updates.
   {{ post.date | date_to_string }} &rarr; [ {{ post.title }} ]({{ post.url }})
 {% endfor %} -->
 
-<h3>Blog Posts</h3>
+<h3>Management blog posts</h3>
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
@@ -27,7 +27,7 @@ Here is the [feed](../atom.xml) for future updates.
   More available <a href="https://medium.com/@djpardis/" target="_blank">here</a>.
 </ul> -->
 
-<h3>Publications</h3>
+<h3>Machine learning publications</h3>
 
 - <em>Efficient classification based on sparse regression</em>
             [<a title="Efficient classification based on sparse regression" href="/files/Noorzad2012b.pdf" target="_blank">thesis</a>, <a href="/files/thesis_in_persian.pdf" target="_blank">translation</a>, <a href="/files/defense_slides.pdf" target="_blank">slides</a>]<br/>
@@ -46,7 +46,7 @@ Here is the [feed](../atom.xml) for future updates.
     Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
 
 
-### Talks
+### Machine learning talks
 
 - <em>Efficient classification based on sparse regression</em>
     <br/>
