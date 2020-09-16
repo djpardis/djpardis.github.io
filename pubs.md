@@ -16,7 +16,7 @@ Full list in <a href="/files/Noorzad2018CV.pdf" target="_blank">CV</a>.
   {{ post.date | date_to_string }} &rarr; [ {{ post.title }} ]({{ post.url }})
 {% endfor %} -->
 
-<h3>Management blog posts</h3>
+<h3>Management publications</h3>
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
