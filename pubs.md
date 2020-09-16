@@ -27,7 +27,7 @@ Here is the [feed](../atom.xml) for future updates.
   More available <a href="https://medium.com/@djpardis/" target="_blank">here</a>.
 </ul> -->
 
-<h3>Machine learning publications</h3>
+<h3>ML publications</h3>
 
 - <em>Efficient classification based on sparse regression</em>
             [<a title="Efficient classification based on sparse regression" href="/files/Noorzad2012b.pdf" target="_blank">thesis</a>, <a href="/files/thesis_in_persian.pdf" target="_blank">translation</a>, <a href="/files/defense_slides.pdf" target="_blank">slides</a>]<br/>
@@ -46,7 +46,7 @@ Here is the [feed](../atom.xml) for future updates.
     Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
 
 
-### Machine learning talks
+### ML talks
 
 - <em>Efficient classification based on sparse regression</em>
     <br/>
