@@ -4,7 +4,7 @@ title: Gigs
 published: true
 ---
 
-<img src="../files/pics/djing.jpg" alt="Pardis Noorzad (aka DJ Pardis) and Sim Simah" title="Pardis Noorzad (aka DJ Pardis) and Sim Simah by Jesse Meria at The New Parish" style="margin:5px 0px">
+<!-- <img src="../files/pics/djing.jpg" alt="Pardis Noorzad (aka DJ Pardis) and Sim Simah" title="Pardis Noorzad (aka DJ Pardis) and Sim Simah by Jesse Meria at The New Parish" style="margin:5px 0px"> -->
 
 
 <h3>Song reviews</h3>
