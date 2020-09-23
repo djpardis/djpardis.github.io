@@ -14,13 +14,9 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-            <!-- &nbsp;&lt;&gt; -->
-              &nbsp;&mdash;
-            <small>{{ site.tagline }}</small>
+              &nbsp;&mdash;&nbsp;
             {% for page in site.pages_list %}
-              <!-- &#124; -->
-              &nbsp;
-              <a href="{{ page[1]  }}">{{ page[0] }}</a>
+              <a href="{{ page[1]  }}">{{ page[0] }}</a> &nbsp;
             {% endfor %}
           </h3>
         </div>
