@@ -3,31 +3,14 @@ layout: page
 title: Pubs
 ---
 
-<!-- <p>
-Full list in <a href="/files/Noorzad2018CV.pdf" target="_blank">CV</a>.
-</p> -->
-
-<!-- ![Pardis Noorzad at TWIMLcon](../files/pics/twimlcon.jpg)
-<sup><a href="https://twimlcon.com/speakers/pardis-noorzad/" target="_blank">Culture and organization for effective ML at Scale</a> at TWIMLcon 2019.</sup> -->
-
-<!-- Here is the [feed](../atom.xml) for future updates. -->
-
-<!-- {% for post in site.posts %}
-  {{ post.date | date_to_string }} &rarr; [ {{ post.title }} ]({{ post.url }})
-{% endfor %} -->
-
-<h3>Management pubs</h3>
+### Management pubs
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/management-and-coaching-best-practices-as-a-list-of-n-things-7a6d9c7f0fa5" target="_blank">Management best practices: A list of 20 things</a></em>. December 2018.
 - <em><a href="https://medium.com/@djpardis/q-a-with-steven-sinofsky-at-twitter-hq-a658ca5db953" target="_blank">Q&A with Steven Sinofsky at Twitter HQ: Developing cross-functional teams</a></em>. November 2018.
 
-<!-- <ul>
-  More available <a href="https://medium.com/@djpardis/" target="_blank">here</a>.
-</ul> -->
-
-<h3>ML pubs</h3>
+### ML pubs
 
 - <em>Efficient classification based on sparse regression</em>
             [<a title="Efficient classification based on sparse regression" href="/files/Noorzad2012b.pdf" target="_blank">thesis</a>, <a href="/files/thesis_in_persian.pdf" target="_blank">translation</a>, <a href="/files/defense_slides.pdf" target="_blank">slides</a>]<br/>
