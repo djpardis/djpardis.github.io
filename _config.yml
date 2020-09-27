@@ -11,6 +11,7 @@ url:                 "https://djpardis.com"
 pages_list:
   Pubs: '/pubs'
   Gigs: '/gigs'
+  Books: '/books'
 
 # About
 author:
