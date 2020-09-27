@@ -3,6 +3,13 @@ layout: page
 title: Pubs
 ---
 
+I am currently working on the following blog posts: 
+- <em>Shipping under continuous development: A closer look at the perpetual beta</em>
+- <em>Sports teams vs. engineering teams: Revisiting the applicability of sports analogies to the corporation</em>
+- <em>Data &cap; Water Terms: A brief overview of the data infrastructure landscape</em>
+
+Follow me <a href="https://medium.com/@djpardis/" target="_blank">here</a> for updates.
+
 ### Management pubs
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
