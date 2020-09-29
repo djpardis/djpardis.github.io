@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Books
+title: Library
 ---
 
 I maintain a full catalog of my home library <a href="http://www.librarything.com/profile/djpardis">here</a>. Below is a partial list.
