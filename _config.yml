@@ -9,9 +9,9 @@ baseurl:             ""
 url:                 "https://djpardis.com"
 
 pages_list:
-  Pubs: '/pubs'
+  Writing: '/writing'
   Gigs: '/gigs'
-  Books: '/books'
+  Library: '/library'
 
 # About
 author:
