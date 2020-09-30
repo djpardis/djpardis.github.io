@@ -9,6 +9,7 @@ baseurl:             ""
 url:                 "https://djpardis.com"
 
 pages_list:
+  Bio: '/'
   Writing: '/writing'
   Gigs: '/gigs'
   Library: '/library'
