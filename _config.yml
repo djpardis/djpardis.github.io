@@ -10,7 +10,7 @@ url:                 "https://djpardis.com"
 
 pages_list:
   Bio: '/'
-  Writing: '/writing'
+  Writing: '/pubs'
   Gigs: '/gigs'
   Library: '/library'
 
