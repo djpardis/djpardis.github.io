@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Writing
+title: Pubs
 ---
 
 Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upcoming essays.
