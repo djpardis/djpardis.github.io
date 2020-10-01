@@ -3,9 +3,9 @@ layout: page
 title: Pubs
 ---
 
-Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upcoming essays.
+Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upcoming posts.
 
-### Management essays
+### Management posts.
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
@@ -32,6 +32,12 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upco
 
 
 ### ML talks
+
+- <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
+    <br/>
+    <a title="SOGMSC '14'" href="https://mathstat.uoguelph.ca/graduate/sogmsc">SOGMSC</a>, May 21, 2014. [<a href="/files/modeling_the_facebook_social_network.pdf" target="_blank">slides</a>]
+    <p><i>Abstract.</i> Online social networks are ubiquitous. Social scientists and marketing teams study the resulting social graph to gain insights. In order to study these networks, we must design graph algorithms that scale well with the size and order of the corresponding graphs. To test these algorithms, random samples need to be generated; in this case the random samples are graphs. In this talk, we go over several methods for generating random graphs. We are especially interested in the M-GEOP model, and in assessing the fit of these models to our Facebook dataset.</p>
+
 
 - <em>Efficient classification based on sparse regression</em>
     <br/>
