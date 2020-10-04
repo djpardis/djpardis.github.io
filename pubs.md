@@ -3,7 +3,7 @@ layout: page
 title: Pubs
 ---
 
-Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upcoming posts.
+Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for upcoming posts.
 
 ### Management posts.
 
@@ -20,13 +20,13 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">here</a> for upco
 
 - <em>Regression with sparse approximations of data</em> [<a title="Regression with sparse approximations of data" href="/files/Noorzad2012a.pdf" target="_blank">paper</a>, <a href="http://vbn.aau.dk/files/71866593/poster.pdf" target="_blank">poster</a>]
     <br/>
-    with B. L. Sturm
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
     <br/>
     European Signal Processing Conference (EUSIPCO), 2012.
 
 - <em>On automatic music genre recognition by sparse representation classification using auditory temporal modulations</em> [<a href="http://cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_17.pdf" target="_blank">paper</a>, <a href="http://media.aau.dk/null_space_pursuits/2012/01/frustrations-with-music-genre.html" target="_blank">discussion</a>]
     <br/>
-    with B. L. Sturm
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
     <br/>
     Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
 
