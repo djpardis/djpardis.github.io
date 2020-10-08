@@ -38,3 +38,5 @@ The poster below, designed by my friend <a href="https://www.linkedin.com/in/reg
 [<a href="https://bff.fm/broadcasts/14056" target="_blank">episode</a>, <a href="https://music.apple.com/us/playlist/1-21-first-four-months-2018/pl.u-leyllg6H918eAY" target="_blank">playlist</a>, <a href="https://twitter.com/bff121gigawatts/status/1000407112248250368">tweet</a>]
 <br>
 <a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, May 2018. -->
+
+<img src="/files/pics/djing2.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
