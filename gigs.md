@@ -6,7 +6,7 @@ title: Gigs
 
 <img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
 
-I started DJing in May 2017, playing <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> for colleagues at Twitter HQ. Since June 2019, I've been the tour DJ for <a href="https://open.spotify.com/artist/6rGjsK7JJpHkUTVtj2PPwf" target="_blank">Sim Simah</a> and <a href="https://open.spotify.com/artist/0gvTXbRp8PiAeztLTbbjdX" target="_blank">Aarxn Cxle</a>. The picture above is from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.thenewparish.com/e/camron-62022556135/" target="_blank">the opening act</a>. The poster below, designed by my friend <a href="https://www.linkedin.com/in/regynald/" target="_blank">Regy</a>, is from Bay to Breakers in 2019.
+I started DJing in May 2017, playing <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> for colleagues at Twitter HQ. Since June 2019, I've been the tour DJ for <a href="https://open.spotify.com/artist/6rGjsK7JJpHkUTVtj2PPwf" target="_blank">Sim Simah</a> and <a href="https://open.spotify.com/artist/0gvTXbRp8PiAeztLTbbjdX" target="_blank">Aarxn Cxle</a>. The picture above is from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.thenewparish.com/e/camron-62022556135/" target="_blank">the opening act</a>.
 
 ### Song reviews
 
@@ -33,7 +33,7 @@ I started DJing in May 2017, playing <a href="https://vimeo.com/463652373" targe
 <br>
 <a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, May 2018. -->
 
-
 <center>
 <img src="/files/pics/poster.jpg" alt="Bay to Breakers with Regy and Andrew (aka Papusa Papi)" title="Bay to Breakers with Regy and Andrew (aka Papusa Papi)">
 </center>
+The poster above, designed by my friend <a href="https://www.linkedin.com/in/regynald/" target="_blank">Regy</a>, is from Bay to Breakers in 2019.
