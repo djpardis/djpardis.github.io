@@ -12,25 +12,6 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for u
 - <em><a href="https://medium.com/@djpardis/management-and-coaching-best-practices-as-a-list-of-n-things-7a6d9c7f0fa5" target="_blank">Management best practices: A list of 20 things</a></em>. December 2018.
 - <em><a href="https://medium.com/@djpardis/q-a-with-steven-sinofsky-at-twitter-hq-a658ca5db953" target="_blank">Q&A with Steven Sinofsky at Twitter HQ: Developing cross-functional teams</a></em>. November 2018.
 
-### ML publications
-
-- <em>Efficient classification based on sparse regression</em>
-            [<a title="Efficient classification based on sparse regression" href="/files/Noorzad2012b.pdf" target="_blank">thesis</a>, <a href="/files/thesis_in_persian.pdf" target="_blank">translation</a>, <a href="/files/defense_slides.pdf" target="_blank">slides</a>]<br/>
-            MSc Thesis, Department of CEIT, Amirkabir University of Technology, July 2012.
-
-- <em>Regression with sparse approximations of data</em> [<a title="Regression with sparse approximations of data" href="/files/Noorzad2012a.pdf" target="_blank">paper</a>, <a href="http://vbn.aau.dk/files/71866593/poster.pdf" target="_blank">poster</a>]
-    <br/>
-    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
-    <br/>
-    European Signal Processing Conference (EUSIPCO), 2012.
-
-- <em>On automatic music genre recognition by sparse representation classification using auditory temporal modulations</em> [<a href="http://cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_17.pdf" target="_blank">paper</a>, <a href="http://media.aau.dk/null_space_pursuits/2012/01/frustrations-with-music-genre.html" target="_blank">discussion</a>]
-    <br/>
-    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
-    <br/>
-    Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
-
-
 ### ML talks
 
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
@@ -74,3 +55,21 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for u
 - <em>The split Bregman method for total variation denoising</em><br/>
     	<a title="Amirkabir University of Technology" href="http://aut.ac.ir/" target="_blank">AUT</a>, May 30, 2010. [<a href="/files/the_split_bregman_method_for_l1_regularized_problems.pdf" target="_blank">slides</a>]
     <p><i>Details.</i> This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.</p>
+
+### ML publications
+
+- <em>Efficient classification based on sparse regression</em>
+            [<a title="Efficient classification based on sparse regression" href="/files/Noorzad2012b.pdf" target="_blank">thesis</a>, <a href="/files/thesis_in_persian.pdf" target="_blank">translation</a>, <a href="/files/defense_slides.pdf" target="_blank">slides</a>]<br/>
+            MSc Thesis, Department of CEIT, Amirkabir University of Technology, July 2012.
+
+- <em>Regression with sparse approximations of data</em> [<a title="Regression with sparse approximations of data" href="/files/Noorzad2012a.pdf" target="_blank">paper</a>, <a href="http://vbn.aau.dk/files/71866593/poster.pdf" target="_blank">poster</a>]
+    <br/>
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
+    <br/>
+    European Signal Processing Conference (EUSIPCO), 2012.
+
+- <em>On automatic music genre recognition by sparse representation classification using auditory temporal modulations</em> [<a href="http://cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_17.pdf" target="_blank">paper</a>, <a href="http://media.aau.dk/null_space_pursuits/2012/01/frustrations-with-music-genre.html" target="_blank">discussion</a>]
+    <br/>
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
+    <br/>
+    Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
