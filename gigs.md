@@ -4,7 +4,7 @@ keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis
 title: Gigs
 ---
 
-<img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
+<img src="/files/pics/djing2.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
 
 I started DJing in May 2017, playing <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> at Twitter HQ. Since June 2019, I've been the tour DJ for <a href="https://open.spotify.com/artist/6rGjsK7JJpHkUTVtj2PPwf" target="_blank">Sim Simah</a> and <a href="https://open.spotify.com/artist/0gvTXbRp8PiAeztLTbbjdX" target="_blank">Aarxn Cxle</a>. The picture above is from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.thenewparish.com/e/camron-62022556135/" target="_blank">the opening act</a>.
 
@@ -39,4 +39,4 @@ The poster below, designed by my friend <a href="https://www.linkedin.com/in/reg
 <br>
 <a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, May 2018. -->
 
-<img src="/files/pics/djing2.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
+<img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
