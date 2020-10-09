@@ -3,9 +3,9 @@ layout: page
 title: Pubs
 ---
 
-Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for upcoming posts.
+<!-- Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> to learn about upcoming posts. -->
 
-### Management posts.
+### Management posts
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
@@ -17,7 +17,7 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for u
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
     <br/>
     <a title="SOGMSC '14'" href="https://mathstat.uoguelph.ca/graduate/sogmsc">SOGMSC</a>, May 21, 2014. [<a href="/files/modeling_the_facebook_social_network.pdf" target="_blank">slides</a>]
-    <p><i>Abstract.</i> Online social networks are ubiquitous. To study these networks, we need graph algorithms that scale with the size and order of the associated graphs. To test these algorithms, random samples need to be generated. In this talk, we go over several methods for generating random graphs. We are especially interested in the M-GEOP model, and in assessing the fit of these models to the Facebook dataset.</p>
+    <p><i>Abstract.</i> Online social networks are ubiquitous. To study these networks, we need algorithms that scale with the size and order of their corresponding graphs. To test these algorithms, we require representative random samples. In this talk, we go over several methods for generating random graphs. We are especially interested in the M-GEOP model, and in assessing the fit of these models to the Facebook dataset.</p>
 
 
 - <em>Efficient classification based on sparse regression</em>
@@ -64,12 +64,12 @@ Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for u
 
 - <em>Regression with sparse approximations of data</em> [<a title="Regression with sparse approximations of data" href="/files/Noorzad2012a.pdf" target="_blank">paper</a>, <a href="http://vbn.aau.dk/files/71866593/poster.pdf" target="_blank">poster</a>]
     <br/>
-    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">Bob L. Sturm</a>
     <br/>
     European Signal Processing Conference (EUSIPCO), 2012.
 
 - <em>On automatic music genre recognition by sparse representation classification using auditory temporal modulations</em> [<a href="http://cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_17.pdf" target="_blank">paper</a>, <a href="http://media.aau.dk/null_space_pursuits/2012/01/frustrations-with-music-genre.html" target="_blank">discussion</a>]
     <br/>
-    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">B. L. Sturm</a>
+    with <a href="http://www.eecs.qmul.ac.uk/~sturm/" target="_blank">Bob L. Sturm</a>
     <br/>
     Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences Series. Springer, 2012.
