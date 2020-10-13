@@ -16,7 +16,7 @@ I started DJing in May 2017. Through 2019, I played <a href="https://vimeo.com/4
 ### Radio shows
 
 - <em>1999 Episode 66</em> with <a href="https://twitter.com/skr" target="_blank">Johan Oskarsson</a>
-[<a href="https://bff.fm/broadcasts/13188" target="_blank">episode</a>, <a href="https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA">playlist</a>]
+[<a href="https://bff.fm/broadcasts/13188" target="_blank">episode</a>, <a href="https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA">playlist</a>] (first podcast I ever did)
 <br>
 <a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, February 2018.
 - <em>2018 Episode 79</em> with <a href="https://twitter.com/skr" target="_blank">Johan Oskarsson</a>
