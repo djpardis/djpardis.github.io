@@ -9,6 +9,7 @@ title: Pubs
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
+- <em><a href="https://djpardis.medium.com/sfelc-summit-2019-5a5b2ce91346" target="_blank">SF Engineering Leadership Community Summit 2019: Some notes from the gathering</a></em>. January 2019.
 - <em><a href="https://medium.com/@djpardis/management-and-coaching-best-practices-as-a-list-of-n-things-7a6d9c7f0fa5" target="_blank">Management best practices: A list of 20 things</a></em>. December 2018.
 - <em><a href="https://medium.com/@djpardis/q-a-with-steven-sinofsky-at-twitter-hq-a658ca5db953" target="_blank">Q&A with Steven Sinofsky at Twitter HQ: Developing cross-functional teams</a></em>. November 2018.
 
