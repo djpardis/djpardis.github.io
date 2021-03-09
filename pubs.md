@@ -5,7 +5,7 @@ title: Pubs
 
 <!-- Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> to learn about upcoming posts. -->
 
-### Management posts
+### Management essays
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>. July 2019.
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>. July 2019.
