@@ -16,10 +16,12 @@
           <h3 class="masthead-title">
             <!-- <a href="{{ site.baseurl }}/">Bio</a> &nbsp; -->
 
-            {% for page in site.pages_list %}
-              <span style="background-color: #FFFF00"><a href="{{ page[1]  }}">{{ page[0] }}</a></span>
-               &nbsp;
-            {% endfor %}
+            <center>
+              {% for page in site.pages_list %}
+                <span style="background-color: #FFFF00"><a href="{{ page[1]  }}">{{ page[0] }}</a></span>
+                 &nbsp;
+              {% endfor %}
+            </center>
           </h3>
 
         </div>
