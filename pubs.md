@@ -24,7 +24,7 @@ title: Pubs
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
     <br/>
     <a title="SOGMSC '14'" href="https://mathstat.uoguelph.ca/graduate/sogmsc">SOGMSC</a>, May 21, 2014. [<a href="/files/modeling_the_facebook_social_network.pdf" target="_blank">slides</a>]
-    <p><i>Abstract.</i> Online social networks are ubiquitous graphs. To test algorithms that scale with the size and order of these graphs, we require random samples. In this talk, we go over several methods for generating random graphs representative of online social networks. We are especially interested in the M-GEOP model (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0106052" target="_blank">Bonato et al., 2014</a>), and in assessing the fit of these models to the Facebook dataset.</p>
+    <p><i>Abstract.</i> Online social networks are ubiquitous graphs. To test algorithms that scale with the size and order of these networks, we require random samples. In this talk, we go over several methods for generating random graphs representative of online social networks. We are especially interested in the M-GEOP model (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0106052" target="_blank">Bonato et al., 2014</a>), and in assessing the fit of these models to the Facebook dataset.</p>
 
 - <em>Efficient classification based on sparse regression</em>
     <br/>
