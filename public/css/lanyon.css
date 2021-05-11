@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+a:hover {
+  background-color: #FFFF00;
+  text-decoration: none;
+}
 
 /*
  * Wrapper
@@ -107,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title a {
   color: #7d78b5;
 }
+
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
