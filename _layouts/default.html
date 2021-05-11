@@ -17,10 +17,15 @@
             <!-- <a href="{{ site.baseurl }}/">Bio</a> &nbsp; -->
 
             <center>
-              {% for page in site.pages_list %}
-                <span style="background-color: #FFFF00"><a href="{{ page[1]  }}">{{ page[0] }}</a></span>
+              {% for node in site.pages_list %}
+                {% if page.title == node[0] %}
+                  <span style="background-color: #FFFF00"><a href="{{ node[1]  }}">{{ node[0] }}</a></span>
+                {% else %}
+                  <a href="{{ node[1]  }}">{{ node[0] }}</a>
+                {% endif %}
                  &nbsp;
               {% endfor %}
+
             </center>
           </h3>
 
