@@ -74,14 +74,14 @@ a strong {
   color: inherit;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
-/* a:hover,
-a:focus {
-  text-decoration: underline;
-} */
 
 a:hover,
-a:focus {
+a:focus,
+a:active {
   background-color: #FFFF00;
+  text-decoration: none;
+}
+a:visited {
   text-decoration: none;
 }
 
