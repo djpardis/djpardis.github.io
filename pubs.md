@@ -34,7 +34,7 @@ November 16, 2018.
 - <em>Data Science for tech-enabled healthcare</em>
   <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
   <br/>
-  <a title="AI Summit" href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">The AI Summit — Silicon Valley</a>, October 1, 2020.
+  <a title="AI Summit" href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">The AI Summit</a>, October 1, 2020.
   <br/>
   [<a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">video</a>, <a href="https://medium.com/carbon-blog/covid-19-risk-assessment-simulation-model-684fc27d5019" target="_blank">blog post</a>]
   <!-- <br/>[<a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">conference recording</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target="_blank">pre-recording</a>] -->
