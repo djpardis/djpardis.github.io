@@ -11,7 +11,7 @@ title: Pubs
 <br/>
 July 31, 2019.
 <br/>
-  <em>Citations and coverage.</em> <a href="https://onlinedatasciencemasters.virginia.edu/blog/need-for-interdisciplinary-data-science/" target="_blank">University of Virgina Data Science</a>, <a href="https://www.97ways.com/thelist/8-sit-with-your-stakeholders" target="_blank">97 Ways (Matt Wright)</a>, <a href="https://us20.campaign-archive.com/?e=&u=8974b971ec317d8a98dbbf292&id=05f0f9e91a" target="_blank">Projects to Know (Amplify Partners — Sarah Catanzaro)</a>, <a href="http://roundup.fishtownanalytics.com/issues/survival-analysis-better-presto-pinterest-dagster-data-science-in-organizations-a-two-fer-dsr-194-193857" target="_blank">The Data Science Roundup (Fishtown Analytics — Tristan Handy)</a>, <a href="https://vicki.substack.com/p/selling-data-science" target="_blank">Normcore Tech (Vicki Boykis)</a>, <a href="https://femstreet.substack.com/p/-parenthood-and-entrepreneurship-19-08-04" target="_blank">Femstreet (Sarah N<span>&#246;</span>ckel)</a>, <a href="http://lineardigressions.com/episodes/2019/8/25/organizational-models-for-data-scientists" target="_blank">Linear Digressions</a>, <a href="https://analyticaliq.com/data-science-staffing/" target="_blank">Analytical IQ (Adam Lorton)</a>, <a href="https://hex.tech/blog/data-team-roi">Hex Technologies Blog (Barry McCardel)</a>, <a href="https://fall2019.fullstackdeeplearning.com/course-content/where-to-go-next" target="_blank">Full Stack Deep Learning</a>, <a href="https://www.getrevue.co/profile/shashank/issues/the-ml-times-issue-14-192472" target="_blank">The ML Times</a>, <a href="https://dispatch.nibble.ai/issues/nibble-ai-weekly-issue-23-making-data-science-more-useful-deploying-ai-without-technical-debt-191252" target="_blank">nibble dispatch</a>.
+  <em>Citations and coverage.</em> <a href="https://onlinedatasciencemasters.virginia.edu/blog/need-for-interdisciplinary-data-science/" target="_blank">University of Virgina Data Science</a>, <a href="https://www.97ways.com/thelist/8-sit-with-your-stakeholders" target="_blank">97 Ways (Matt Wright)</a>, <a href="https://us20.campaign-archive.com/?e=&u=8974b971ec317d8a98dbbf292&id=05f0f9e91a" target="_blank">Projects to Know (Amplify Partners — Sarah Catanzaro)</a>, <a href="http://roundup.fishtownanalytics.com/issues/survival-analysis-better-presto-pinterest-dagster-data-science-in-organizations-a-two-fer-dsr-194-193857" target="_blank">The Data Science Roundup (Fishtown Analytics — Tristan Handy)</a>, <a href="https://vicki.substack.com/p/selling-data-science" target="_blank">Normcore Tech (Vicki Boykis)</a>, <a href="https://femstreet.substack.com/p/-parenthood-and-entrepreneurship-19-08-04" target="_blank">Femstreet (Sarah N<span>&#246;</span>ckel)</a>, <a href="http://lineardigressions.com/episodes/2019/8/25/organizational-models-for-data-scientists" target="_blank">Linear Digressions</a>, <a href="https://analyticaliq.com/data-science-staffing/" target="_blank">Analytical IQ (Adam Lorton)</a>, <a href="https://hex.tech/blog/data-team-roi">Hex Technologies Blog (Barry McCardel)</a>, <a href="https://fall2019.fullstackdeeplearning.com/course-content/where-to-go-next" target="_blank">Full Stack Deep Learning</a>, <a href="https://www.getrevue.co/profile/shashank/issues/the-ml-times-issue-14-192472" target="_blank">The ML Times</a>, <a href="https://dispatch.nibble.ai/issues/nibble-ai-weekly-issue-23-making-data-science-more-useful-deploying-ai-without-technical-debt-191252" target="_blank">nibble dispatch</a>, <a href="https://leanpub.com/dshiring" target="_blank">Hiring Data Scientists and Machine Learning Engineers: A Practical Guide (a book by Roy Keyes)</a>.
 
 - <em><a href="https://medium.com/@djpardis/recommendations-for-data-science-team-sizing-and-allocation-strategy-a38f943638e5" target="_blank">Data science team sizing and allocation: An algorithm</a></em>
 <br/>
@@ -28,6 +28,29 @@ December 18, 2018.
 - <em><a href="https://medium.com/@djpardis/q-a-with-steven-sinofsky-at-twitter-hq-a658ca5db953" target="_blank">Q&A with Steven Sinofsky at Twitter HQ: Developing cross-functional teams</a></em>
 <br/>
 November 16, 2018.
+
+### ML panels
+
+- <em>Building Teams and Culture that Support ML Innovation</em>
+  <br/>with <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Ziad Asghar</a> and <a href="https://www.linkedin.com/in/ameenkazerouni/" target="_blank">Ameen Kazerouni</a>, moderated by <a href="https://www.linkedin.com/in/samcharrington/" target="_blank">Sam Charrington</a>
+  <br/>
+  <a href="https://twimlcon.com/sessions/building-teams-and-culture-that-support-ml-innovation/">TWIMLcon</a>, January 22, 2021.
+  <br/>
+  <p><i>Abstract.</i> Traditional approaches to managing technical projects, organizing technical teams, and establishing organizational culture can often be at odds with innovating quickly in general and achieving success with machine learning and AI in particular. In this session we discuss how ML/AI executives can build highly effective ML teams, support them with the right processes and tools, and shift the broader organizational culture in ways that support rapid innovation and adoption of machine learning.</p>
+
+- <em>Making an Impact in Data Science: When Traditional Methods Fail</em>
+  <br/>with <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Eric Glover</a>, <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Halim Abbas</a>, <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Kevin Stumpf </a>, and <a href="https://www.linkedin.com/in/ameenkazerouni/" target="_blank">Sean McPherson</a>
+  <br/>
+  <a href="https://www.eventbrite.com/e/branch-data-science-meetup-tickets-93123429685#">Branch Data Science Meetup 2020</a>, February 27, 2020.
+  <br/>
+  <p><i>Abstract.</i> Sharing stories to help Data Scientists be more effective given the limitations of existing methods.</p>
+
+- <em>Culture & Organization for Effective ML at Scale</em>
+  <br/>with <a href="https://www.linkedin.com/in/ecolson/" target="_blank">Eric Colson</a> and <a href="https://www.linkedin.com/in/jennifer-prendki/" target="_blank">Jennifer Prendki</a>, moderated by <a href="https://www.linkedin.com/in/maribellopez/" target="_blank">Maribel Lopez</a>
+  <br/>
+  <a href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">TWIMLcon</a>, Sep 27, 2019.
+  <br/>
+  <p><i>Abstract.</i> We delve into influencing the way companies think about machine learning, including engaging different functions to work together effectively, i.e., C-suite, Marketing, Sales, Engineering, etc. Hear from people that have experienced startups and large corporations in a range of industries reveal tips and tricks to work faster, more efficiently, and create an org-wide culture that holds machine learning as a valued priority.</p>
 
 ### ML talks
 
