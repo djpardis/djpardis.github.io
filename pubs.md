@@ -44,9 +44,9 @@ November 16, 2018.
   Traditional approaches to managing technical projects can be at odds with achieving success with machine learning. In this session, we discuss how ML and AI executives can build effective teams, support them with the right processes and tools, and shift the broader organizational culture in ways that reinforce innovation in machine learning.</p>
 
 - <em>Making an impact in data science: when traditional methods fail</em>
-  <br/>with <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Eric Glover</a>, <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Halim Abbas</a>, <a href="https://www.linkedin.com/in/ziad-asghar-794404/" target="_blank">Kevin Stumpf</a>, and <a href="https://www.linkedin.com/in/ameenkazerouni/" target="_blank">Sean McPherson</a>
+  <br/>with <a href="https://www.linkedin.com/in/erglover/" target="_blank">Eric Glover</a>, <a href="https://www.linkedin.com/in/halimabbas/" target="_blank">Halim Abbas</a>, <a href="https://www.linkedin.com/in/kevinstumpf/" target="_blank">Kevin Stumpf</a>, and <a href="https://www.linkedin.com/in/sean-mcpherson-8446922/" target="_blank">Sean McPherson</a>
   <br/>
-  <a href="https://www.eventbrite.com/e/branch-data-science-meetup-tickets-93123429685#">Branch Data Science Meetup</a>, February 27, 2020.
+  <a href="https://www.eventbrite.com/e/branch-data-science-meetup-tickets-93123429685#">Branch HQ</a>, February 27, 2020.
   <br/>
   <p><i>Abstract.</i> In this meetup, we hear about data science projects that succeeded in spite of the limitations of existing methodology.</p>
 
@@ -56,6 +56,13 @@ November 16, 2018.
   <a href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">TWIMLcon</a>, Sep 27, 2019.
   <br/>
   <p><i>Abstract.</i> Hear from people that have experienced startups and large corporations in a range of industries reveal tips to work faster, more efficiently, and create an org-wide culture that supports effective ML.</p>
+
+- <em>WiDS San Francisco @ Airbnb</em>
+  <br/>with <a href="https://www.linkedin.com/in/lpruitt/" target="_blank">Laura Pruitt</a>, <a href="https://www.linkedin.com/in/alexandraj777/" target="_blank">Alexandra Johnson</a>, and <a href="https://www.linkedin.com/in/kasiarachuta/" target="_blank">Kasia Rachuta</a>, moderated by <a href="https://www.tableau.com/about/blog/contributors/chloe-tseng" target="_blank">Chloe Tseng</a>
+  <br/>
+  <a href="https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871">Airbnb HQ</a>, March 8, 2018.
+  <br/>
+  <p><i>Abstract.</i> Meet women in the data science field from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>
 
 ### Talks
 
@@ -67,6 +74,10 @@ November 16, 2018.
   ↪ <a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">video</a>, <a href="https://medium.com/carbon-blog/covid-19-risk-assessment-simulation-model-684fc27d5019" target="_blank">blog post</a>, <a href="https://covidclinicaldata.org/" target="_blank">data</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target=_blank>discussion</a>
   <!-- <br/>[<a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">conference recording</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target="_blank">pre-recording</a>] -->
   <p><i>Abstract.</i> The first part of the talk is an overview of the Data Science team roadmap and infrastructure decisions, with a tour of the clinical decision support system and <a href="http://covidclinicaldata.org/" target="_blank">covidclinicaldata.org</a>. The second part is a review of our efforts for the <a href="https://carbonhealth.com/covid-ready" target="_blank">COVID-Ready</a> program. We report on recommendations that can be made to employers, based on simulations surfacing how testing cadence and other policies affect outbreaks in the workplace.</p>
+
+- <em><a href="https://twitter.com/womeng/status/905629538729680896?s=20" target="_blank">DJing and the art of audio signal processing</a></em>
+  <br/>
+  <a href="https://twitterwomen-tech-hh.splashthat.com/">Twitter Women Technical Happy Hour at Twitter HQ</a>, Sept. 6, 2017.
 
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
   <br/>
