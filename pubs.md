@@ -57,16 +57,16 @@ November 16, 2018.
   <br/>
   <p><i>Abstract.</i> Hear from people that have experienced startups and large corporations in a range of industries reveal tips to work faster, more efficiently, and create an org-wide culture that supports effective ML.</p>
 
-- <em>WiDS San Francisco @ Airbnb</em>
+- <em>Women in Data Science meetup: Growing a career in data science</em>
   <br/>with <a href="https://www.linkedin.com/in/lpruitt/" target="_blank">Laura Pruitt</a>, <a href="https://www.linkedin.com/in/alexandraj777/" target="_blank">Alexandra Johnson</a>, and <a href="https://www.linkedin.com/in/kasiarachuta/" target="_blank">Kasia Rachuta</a>, moderated by <a href="https://www.tableau.com/about/blog/contributors/chloe-tseng" target="_blank">Chloe Tseng</a>
   <br/>
   <a href="https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871">Airbnb HQ</a>, March 8, 2018.
   <br/>
-  <p><i>Abstract.</i> Meet women in the data science field from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>
+  <p><i>Abstract.</i> Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>
 
 ### Podcasts
 
-- <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Pardis Noorzad – Head of Data Science at Healthcare Tech #93</a></em>
+- <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Head of Data Science at Healthcare Tech #93</a></em>
   <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
   <br/>
   <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
@@ -87,7 +87,8 @@ November 16, 2018.
 
 - <em><a href="https://twitter.com/womeng/status/905629538729680896?s=20" target="_blank">DJing and the art of audio signal processing</a></em>
   <br/>
-  <a href="https://twitterwomen-tech-hh.splashthat.com/">Twitter Women Technical Happy Hour at Twitter HQ</a>, Sept. 6, 2017.
+  <a href="https://twitterwomen-tech-hh.splashthat.com/">Twitter HQ</a>, Sept. 6, 2017.
+  <p><i>Abstract.</i> In this talk, we review concepts from the audio signal processing field. We then show how familiarity with these concepts allows for a better understanding of DJing tools and techniques.</p>
 
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
   <br/>
