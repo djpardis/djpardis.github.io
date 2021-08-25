@@ -18,10 +18,14 @@ I started DJing in May 2017 and regularly played <a href="https://vimeo.com/4636
 
 - <em><a href="https://bff.fm/broadcasts/13188" target="_blank">1999 Episode 66</a></em> with <a href="https://twitter.com/skr" target="_blank">Johan Oskarsson</a>
 <br>
-<a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, February 2018. [<a href="https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA">playlist</a>]
+<a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, February 2018.
+<br/>
+⤷ <a href="https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA">playlist</a>
 - <em><a href="https://bff.fm/broadcasts/14056" target="_blank">2018 Episode 79</a></em> with <a href="https://twitter.com/skr" target="_blank">Johan Oskarsson</a>
 <br>
-<a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, May 2018. [<a href="https://music.apple.com/us/playlist/1-21-first-four-months-2018/pl.u-leyllg6H918eAY" target="_blank">playlist</a>]
+<a href="https://bff.fm/shows/1-21-gigawatts" target="_blank">1.21 gigawatts</a>, May 2018.
+<br/>
+⤷ <a href="https://music.apple.com/us/playlist/1-21-first-four-months-2018/pl.u-leyllg6H918eAY" target="_blank">playlist</a>
 
 <!-- - <em>1999 Episode 66</em> with <a href="https://twitter.com/skr" target="_blank">Johan</a>
 [<a href="https://bff.fm/broadcasts/13188" target="_blank">episode</a>, <a href="https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA">playlist</a>, <a href="https://twitter.com/bff121gigawatts/status/967460717627453440" target="_blank">tweet</a>]
