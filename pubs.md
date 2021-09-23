@@ -7,7 +7,11 @@ title: Pubs
 
 ### Essays
 
-- <em><a href="https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6" target="_blank">Data ∩ Water Terms: All at sea, exploring the data dictionary</a></em>
+- <em><a href="https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814" target="_blank">Batter plate discipline: It doesn’t pay to swing at every pitch</a></em> 
+<br/>
+September 9, 2021.
+
+- <em><a href="https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6" target="_blank">(Data ∩ Water) Terms: All at sea, exploring the data dictionary</a></em>
 <br/>
 July 19, 2021.
 
