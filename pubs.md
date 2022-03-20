@@ -85,7 +85,7 @@ November 16, 2018.
   <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
   <br/>
   ⤷ <a href="https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/" target="_blank">video</a>, <a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, we review the myriad roadblocks faced by companies evaluating MLOPs platforms in providing access to their data for evaluation purposes. Further, we discuss some potential solutions. </p>
+  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies evaluating MLOPs platforms in providing access to their data for evaluation purposes. Then I discuss a potential solutions. </p>
 
 - <em>Data Science for tech-enabled healthcare</em>
   <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
