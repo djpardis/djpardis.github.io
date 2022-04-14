@@ -7,6 +7,12 @@ title: Pubs
 
 ### Essays
 
+- <em><a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">Challenges in data transfer: Case 1—Evaluating MLOps platforms</a></em>
+<br/>
+March 5, 2022.
+<br/>
+  <em>Citations and coverage.</em> <a href="https://www.dataengineeringweekly.com/p/data-engineering-weekly-80" target="_blank">Data Engineering Weekly #80 (Ananth Packkildurai)</a>, <a href="https://jameskle.com/writes/tecton-apply-meetup2022" target="_blank">What I learned from attending Tecton's apply(meetup) 2022 (James Le)</a>.
+
 - <em><a href="https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814" target="_blank">Batter plate discipline: It doesn’t pay to swing at every pitch</a></em>
 <br/>
 September 9, 2021.
