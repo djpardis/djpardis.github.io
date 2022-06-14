@@ -43,6 +43,37 @@ December 18, 2018.
 <br/>
 November 16, 2018.
 
+### Talks
+
+- <em>Making an impact with data</em>
+  <br/>with <a href="https://www.linkedin.com/in/gorkemy/" target="_blank">Gorkem Yurtseven</a> and <a href="https://britt-allen.github.io/" target="_blank">Britt Allen</a>, moderated by <a href="https://twitter.com/elizabeth_dlha" target="_blank">Elizabeth Dlha</a>
+  <br/>
+  <a title="apply(meetup)" href="https://www.meetup.com/data-mash/events/285750133/" target="_blank">Data Mash #2</a>, June 2, 2022.
+  <br/>
+  ⤷ <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>, <a href="https://twitter.com/brittughknee/status/1532774257482027008?s=20&t=xmzGEH-Z7eAeCZ68xsKL9A" target="_blank">pictures</a>
+  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about about designing OKRs to encourage collaboration among product teams at Twitter. The second is about building the feature creation pipeline for fast iterations on the fraud detection pipeline at Paytm. The last is about Sales enablement at Carbon Health by quantifying risk and presenting helpful data to prospects.</p>
+
+- <em>Data transfer challenges in evaluating MLOps platforms</em>
+  <br/>
+  <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
+  <br/>
+  ⤷ <a href="https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/" target="_blank">video</a>, <a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">blog post</a>
+  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies evaluating MLOPs platforms in providing access to their data for evaluation purposes. Then I discuss a potential solutions. </p>
+
+- <em>Data Science for tech-enabled healthcare</em>
+  <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
+  <br/>
+  <a title="AI Summit" href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">The AI Summit</a>, October 1, 2020.
+  <br/>
+  ⤷ <a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">video</a>, <a href="https://medium.com/carbon-blog/covid-19-risk-assessment-simulation-model-684fc27d5019" target="_blank">blog post</a>, <a href="https://covidclinicaldata.org/" target="_blank">data</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target=_blank>discussion</a>
+  <!-- <br/>[<a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">conference recording</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target="_blank">pre-recording</a>] -->
+  <p><i>Abstract.</i> The first part of the talk is an overview of the Data Science team roadmap and infrastructure decisions, with a tour of the clinical decision support system and <a href="http://covidclinicaldata.org/" target="_blank">covidclinicaldata.org</a>. The second part is a review of our efforts for the <a href="https://carbonhealth.com/covid-ready" target="_blank">COVID-Ready</a> program. We report on recommendations that can be made to employers, based on simulations surfacing how testing cadence and other policies affect outbreaks in the workplace.</p>
+
+- <em><a href="https://twitter.com/womeng/status/905629538729680896?s=20" target="_blank">DJing and the art of audio signal processing</a></em>
+  <br/>
+  <a href="https://twitterwomen-tech-hh.splashthat.com/">Twitter HQ</a>, Sept. 6, 2017.
+  <p><i>Abstract.</i> In this talk, we review concepts from the audio signal processing field. We then show how familiarity with these concepts allows for a better understanding of DJing tools and techniques.</p>
+
 ### Panels
 
 - <em>Building teams and culture that support ML innovation</em>
@@ -72,38 +103,19 @@ November 16, 2018.
   <br/>
   <a href="https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871">Airbnb HQ</a>, March 8, 2018.
   <br/>
-  <p><i>Abstract.</i> Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>
+  <p><i>Abstract.</i> Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>  
 
-### Talks
+### Podcasts
 
-- <em>Making an impact with data</em>
-  <!-- <br/>with <a href="https://www.linkedin.com/in/gorkemy/" target="_blank">Gorkem Yurtseven</a> and <a href="https://britt-allen.github.io/" target="_blank">Britt Allen</a> -->
+- <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Head of Data Science at Healthcare Tech #93</a></em>
+  <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
   <br/>
-  <a title="apply(meetup)" href="https://www.meetup.com/data-mash/events/285750133/" target="_blank">Data Mash #2</a>, June 2, 2022.
+  <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
   <br/>
-  ⤷ <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>, <a href="https://twitter.com/brittughknee/status/1532774257482027008?s=20&t=xmzGEH-Z7eAeCZ68xsKL9A" target="_blank">pictures</a>
-  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about about designing OKRs to encourage collaboration among product teams at Twitter. The second is about building the feature creation pipeline for fast iterations on the fraud detection pipeline at Paytm. The last is about Sales enablement at Carbon Health by quantifying risk and presenting helpful data to prospects.</p>
+  <p><i>Abstract.</i>
+  Thanks to Grant, the episode has turned into a good review of my work history.</p>
 
-- <em>Data transfer challenges in evaluating MLOps platforms</em>
-  <br/>
-  <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
-  <br/>
-  ⤷ <a href="https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/" target="_blank">video</a>, <a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies evaluating MLOPs platforms in providing access to their data for evaluation purposes. Then I discuss a potential solutions. </p>
-
-- <em>Data Science for tech-enabled healthcare</em>
-  <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
-  <br/>
-  <a title="AI Summit" href="https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/">The AI Summit</a>, October 1, 2020.
-  <br/>
-  ⤷ <a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">video</a>, <a href="https://medium.com/carbon-blog/covid-19-risk-assessment-simulation-model-684fc27d5019" target="_blank">blog post</a>, <a href="https://covidclinicaldata.org/" target="_blank">data</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target=_blank>discussion</a>
-  <!-- <br/>[<a href="https://www.youtube.com/watch?v=CQHwLWMQFDk" target="_blank">conference recording</a>, <a href="https://www.pscp.tv/w/1mnxeQdvAZqxX" target="_blank">pre-recording</a>] -->
-  <p><i>Abstract.</i> The first part of the talk is an overview of the Data Science team roadmap and infrastructure decisions, with a tour of the clinical decision support system and <a href="http://covidclinicaldata.org/" target="_blank">covidclinicaldata.org</a>. The second part is a review of our efforts for the <a href="https://carbonhealth.com/covid-ready" target="_blank">COVID-Ready</a> program. We report on recommendations that can be made to employers, based on simulations surfacing how testing cadence and other policies affect outbreaks in the workplace.</p>
-
-- <em><a href="https://twitter.com/womeng/status/905629538729680896?s=20" target="_blank">DJing and the art of audio signal processing</a></em>
-  <br/>
-  <a href="https://twitterwomen-tech-hh.splashthat.com/">Twitter HQ</a>, Sept. 6, 2017.
-  <p><i>Abstract.</i> In this talk, we review concepts from the audio signal processing field. We then show how familiarity with these concepts allows for a better understanding of DJing tools and techniques.</p>
+### Academic talks  
 
 - <em>Modeling the Facebook social network: The memoryless GEO-P graph model</em>
   <br/>
@@ -165,17 +177,7 @@ November 16, 2018.
   <a title="Amirkabir University of Technology" href="http://aut.ac.ir/" target="_blank">AUT</a>, May 30, 2010.
   <br/>
   ⤷ <a href="/files/the_split_bregman_method_for_l1_regularized_problems.pdf" target="_blank">slides</a>
-  <p><i>Details.</i> This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.</p>
-
-### Podcasts
-
-  - <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Head of Data Science at Healthcare Tech #93</a></em>
-    <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
-    <br/>
-    <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
-    <br/>
-    <p><i>Abstract.</i>
-    Thanks to Grant, the episode has turned into a good review of my work history.</p>
+  <p><i>Details.</i> This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.</p>    
 
 ### Publications
 
