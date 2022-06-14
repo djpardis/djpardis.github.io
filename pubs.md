@@ -74,24 +74,15 @@ November 16, 2018.
   <br/>
   <p><i>Abstract.</i> Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>
 
-### Podcasts
-
-- <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Head of Data Science at Healthcare Tech #93</a></em>
-  <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
-  <br/>
-  <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
-  <br/>
-  <p><i>Abstract.</i>
-  Thanks to Grant, the episode has turned into a good review of my work history.</p>
-
 ### Talks
 
 - <em>Making an impact with data</em>
+  <!-- <br/>with <a href="https://www.linkedin.com/in/gorkemy/" target="_blank">Gorkem Yurtseven</a> and <a href="https://britt-allen.github.io/" target="_blank">Britt Allen</a> -->
   <br/>
-  <a title="apply(meetup)" href="https://www.meetup.com/data-mash/events/285750133/">Data Mash #2</a>, June 2, 2022.
+  <a title="apply(meetup)" href="https://www.meetup.com/data-mash/events/285750133/" target="_blank">Data Mash #2</a>, June 2, 2022.
   <br/>
   ⤷ <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>, <a href="https://twitter.com/brittughknee/status/1532774257482027008?s=20&t=xmzGEH-Z7eAeCZ68xsKL9A" target="_blank">pictures</a>
-  <p><i>Abstract.</i> After introducing General Folders, I'll go over three creative and successful data projects. The first is about about designing OKRs to encourage collaboration among the various product teams at Twitter. The second is a review of the design of the feature creation pipeline for fast iterations on the fraud detection pipeline at Paytm. Finally, I talk about enabling Sales teams at Carbon Health by quantifying risk and presenting helpful data to prospects.</p>
+  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about about designing OKRs to encourage collaboration among product teams at Twitter. The second is about building the feature creation pipeline for fast iterations on the fraud detection pipeline at Paytm. The last is about Sales enablement at Carbon Health by quantifying risk and presenting helpful data to prospects.</p>
 
 - <em>Data transfer challenges in evaluating MLOps platforms</em>
   <br/>
@@ -175,6 +166,16 @@ November 16, 2018.
   <br/>
   ⤷ <a href="/files/the_split_bregman_method_for_l1_regularized_problems.pdf" target="_blank">slides</a>
   <p><i>Details.</i> This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.</p>
+
+### Podcasts
+
+  - <em><a title="Pardis Noorzad – Head of Data Science at Healthcare Tech #93" href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target="_blank">Head of Data Science at Healthcare Tech #93</a></em>
+    <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
+    <br/>
+    <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
+    <br/>
+    <p><i>Abstract.</i>
+    Thanks to Grant, the episode has turned into a good review of my work history.</p>
 
 ### Publications
 
