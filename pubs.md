@@ -86,6 +86,13 @@ November 16, 2018.
 
 ### Talks
 
+- <em>Making an impact with data</em>
+  <br/>
+  <a title="apply(meetup)" href="https://www.meetup.com/data-mash/events/285750133/">Data Mash #2</a>, June 2, 2022.
+  <br/>
+  ⤷ <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>, <a href="https://twitter.com/brittughknee/status/1532774257482027008?s=20&t=xmzGEH-Z7eAeCZ68xsKL9A" target="_blank">pictures</a>
+  <p><i>Abstract.</i> After introducing General Folders, I'll go over three creative and successful data projects. The first is about about designing OKRs to encourage collaboration among the various product teams at Twitter. The second is a review of the design of the feature creation pipeline for fast iterations on the fraud detection pipeline at Paytm. Finally, I talk about enabling Sales teams at Carbon Health by quantifying risk and presenting helpful data to prospects.</p>
+
 - <em>Data transfer challenges in evaluating MLOps platforms</em>
   <br/>
   <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
