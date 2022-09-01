@@ -7,6 +7,10 @@ title: Pubs
 
 ### Essays
 
+- <em><a href="https://djpardis.medium.com/interfaces-and-bundle-boundaries-8e0bde2b19da" target="_blank">Interfaces and bundle boundaries: Categorizing design decisions in enterprise product development</a></em>
+<br/>
+August 31, 2022.
+
 - <em><a href="https://djpardis.medium.com/highly-effective-data-science-teams-9006711d2a68" target="_blank">Highly effective data science teams: A list of seven habits</a></em>
 <br/>
 July 21, 2022.
