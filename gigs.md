@@ -10,6 +10,7 @@ I started DJing in May 2017 and regularly played <a href="https://vimeo.com/4636
 
 ### Song reviews
 
+- <em><a href="https://djpardis.medium.com/a-2022-mixtape-81b022fc2fc5" target="_blank">A 2022 mixtape: The world is yours</a></em>. November 2022.
 - <em><a href="https://djpardis.medium.com/a-2021-mixtape-23a2af79d369" target="_blank">A 2021 mixtape: Everlasting game</a></em>. December 2021.
 - <em><a href="https://djpardis.medium.com/a-2020-mixtape-20ffe4701c91" target="_blank">A 2020 mixtape: Let me be your DJ</a></em>. January 2021.
 - <em><a href="https://medium.com/@djpardis/a-2019-mixtape-6a910e8b4771" target="_blank">A 2019 mixtape: Let me be your DJ</a></em>. January 2020.
