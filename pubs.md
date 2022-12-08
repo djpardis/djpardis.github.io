@@ -3,7 +3,7 @@ layout: page
 title: Pubs
 ---
 
-<!-- Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> to learn about upcoming posts. -->
+Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for updates on new posts.
 
 ### Essays
 
