@@ -3,7 +3,7 @@ layout: page
 title: Pubs
 ---
 
-Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for updates on new posts.
+<p><span class="highlight">Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for updates.</span></p>
 
 ### Essays
 
