@@ -3,9 +3,9 @@ layout: page
 title: Pubs
 ---
 
-<p><span class="highlight">Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> for updates.</span></p>
-
 ### Essays
+
+<p><span class="highlight">For updates you can always follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed" target="_blank">RSS</a> or <a href="https://djpardis.medium.com/subscribe" target="_blank">email</a>.</span></p>
 
 - <em><a href="https://djpardis.medium.com/interfaces-and-bundle-boundaries-8e0bde2b19da" target="_blank">Interfaces and bundle boundaries: Categorizing design decisions in enterprise product development</a></em>
 <br/>
