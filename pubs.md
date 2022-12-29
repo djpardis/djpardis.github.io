@@ -60,7 +60,7 @@ November 16, 2018.
   <br/>
   📽 <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>
   <!-- , 📷 <a href="https://twitter.com/brittughknee/status/1532774257482027008" target="_blank">pictures</a> -->
-  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about designing OKRs to encourage collaboration among product teams at Twitter. Second is building the feature creation pipeline for fast updates on the fraud detection engine at Paytm. Last is sales enablement at Carbon Health via quantifying risk and presenting helpful data to prospects.</p>
+  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about designing OKRs to encourage collaboration among product teams at Twitter. Second is building the feature creation pipeline for fast updates on the fraud detection engine at Paytm. Last is sales enablement at Carbon Health via quantifying risk and presenting data to prospects.</p>
 
 - <em>Data transfer challenges in evaluating MLOps platforms</em>
   <br/>
