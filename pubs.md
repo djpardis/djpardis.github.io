@@ -60,14 +60,14 @@ November 16, 2018.
   <br/>
   📽 <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>
   <!-- , 📷 <a href="https://twitter.com/brittughknee/status/1532774257482027008" target="_blank">pictures</a> -->
-  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about designing OKRs to encourage collaboration among product teams at Twitter. Second is building the feature creation pipeline for fast updates on the fraud detection engine at Paytm. Last is sales enablement at Carbon Health via quantifying risk and presenting data to prospects.</p>
+  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, I'll go over three impactful data projects. The first is about designing OKRs to encourage collaboration among product teams at Twitter. The second is about building the feature creation pipeline for the fraud detection engine at Paytm. The last one is about sales enablement at Carbon Health via risk quantification for prospects.</p>
 
 - <em>Data transfer challenges in evaluating MLOps platforms</em>
   <br/>
   <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
   <br/>
   📹 <a href="https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/" target="_blank">video</a>, 📃 <a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies evaluating MLOps platforms in providing access to their data for evaluation purposes. Then I discuss a potential solutions. </p>
+  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies in providing access to their data. Then I discuss potential solutions. </p>
 
 - <em>Data Science for tech-enabled healthcare</em>
   <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
