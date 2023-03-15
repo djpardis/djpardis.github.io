@@ -32,6 +32,10 @@ September 9, 2021.
 - <em><a href="https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6" target="_blank">(Data ∩ Water) Terms: All at sea, exploring the data dictionary</a></em>
 <br/>
 July 19, 2021.
+<br/>
+<em>Citations and coverage.</em> <a href="https://www.oreilly.com/library/view/building-recommendation-systems/9781492097983/ch05.html" target="_blank">Building Recommendation Systems in Python and JAX, Chapter 5</a>.
+
+
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>
 <br/>
@@ -170,6 +174,8 @@ November 16, 2018.
   <br/>
   📽 <a href="/files/feature_learning_with_deep_networks_for_image_classification.pdf" target="_blank">slides</a>
   <p><i>Abstract.</i> An image can be represented at different levels, starting from pixels, going on to edges, to parts, to objects, and beyond. Over the years, many attempts have been made at engineering useful descriptors that are able to extract low-to-high level features from images. But what if we could make this process automatic? What if we could "learn" to detect layer after layer of features of increasing abstraction and complexity? After all, it would be impossible for us to foresee and hard-code all the kinds of invariances necessary to build features for our ever more complicated tasks. In this talk, we go over several unsupervised feature learning methods that have been in the making since 2006.</p>
+
+  <!-- https://www.ijcaonline.org/archives/volume95/number26/16958-7035 -->
 
 - <em>Computational learning theory</em>
   <br/>
