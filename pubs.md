@@ -7,7 +7,7 @@ title: Pubs
 
 <p><span class="highlight">Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed" target="_blank">RSS</a> or <a href="https://djpardis.medium.com/subscribe" target="_blank">email</a> for updates.</span></p>
 
-- <em><a href="https://medium.com/@djpardis/public-speaking-best-practices-da82d4a851d1" target="_blank">Public speaking best practices: Getting better at conference talks</a></em>
+- <em><a href="https://medium.com/@djpardis/public-speaking-best-practices-da82d4a851d1" target="_blank">Public speaking best practices: Towards more engaging conference talks</a></em>
 <br/>
 February 22, 2023.
 
