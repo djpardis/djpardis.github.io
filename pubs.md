@@ -7,6 +7,10 @@ title: Pubs
 
 <p><span class="highlight">Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed" target="_blank">RSS</a> or <a href="https://djpardis.medium.com/subscribe" target="_blank">email</a> for updates.</span></p>
 
+- <em><a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">The state of data exchange: A survey of data transfer and sharing methodology</a></em>
+<br/>
+April 3, 2023.
+
 - <em><a href="https://medium.com/@djpardis/public-speaking-best-practices-da82d4a851d1" target="_blank">Public speaking best practices: Towards more engaging conference talks</a></em>
 <br/>
 February 22, 2023.
@@ -34,7 +38,6 @@ September 9, 2021.
 July 19, 2021.
 <br/>
 <em>Citations and coverage.</em> <a href="https://www.oreilly.com/library/view/building-recommendation-systems/9781492097983/ch05.html" target="_blank">Building Recommendation Systems in Python and JAX, Chapter 5</a>.
-
 
 
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>
