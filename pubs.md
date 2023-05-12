@@ -68,8 +68,8 @@ November 16, 2018.
   <br/>
   <a title="apply(meetup)" href="https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange">Data Council Austin</a>, March 30, 2023.
   <br/>
-  📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Data exchange is integral to every business partnership. Yet data exchange practices are highly manual, prone to leaks, difficult to validate, impossible to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data and outstanding challenges. We conclude by enumerating the properties of a good solution.</p>
+  📹 <a href="https://youtu.be/Np0kTZlbRO4" target="_blank">video</a>, 📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a>
+  <p><i>Abstract.</i> Data exchange is integral to every business partnership. Yet data exchange practices are highly manual, prone to leaks, difficult to validate, impossible to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data and the outstanding challenges. We conclude by enumerating the properties of a good solution.</p>
 
 - <em>Making an impact with data</em>
   <br/>with <a href="https://www.linkedin.com/in/gorkemy/" target="_blank">Gorkem Yurtseven</a> and <a href="https://britt-allen.github.io/" target="_blank">Britt Allen</a>, moderated by <a href="https://twitter.com/elizabeth_dlha" target="_blank">Elizabeth Dlha</a>
