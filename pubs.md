@@ -23,7 +23,7 @@ August 31, 2022.
 <br/>
 July 21, 2022.
 
-- <em><a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">Challenges in data transfer: Case 1—Evaluating MLOps platforms</a></em>
+- <em><a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">Challenges in data sharing and transfer: Case I. Evaluating AI platforms</a></em>
 <br/>
 March 5, 2022.
 <br/>
@@ -80,12 +80,12 @@ November 16, 2018.
   <!-- , 📷 <a href="https://twitter.com/brittughknee/status/1532774257482027008" target="_blank">pictures</a> -->
   <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, we'll review three impactful data projects. First, the design of OKRs to encourage collaboration among product teams at Twitter; second, the feature creation pipeline for fraud detection at Paytm; and finally, sales enablement at Carbon Health via risk quantification.</p>
 
-- <em>Data transfer challenges in evaluating MLOps platforms</em>
+- <em>Data transfer challenges in evaluating AI platforms</em>
   <br/>
   <a title="apply(meetup)" href="https://www.applyconf.com/apply-meetup-february-2022/">apply(meetup)</a>, February 10, 2022.
   <br/>
   📹 <a href="https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/" target="_blank">video</a>, 📃 <a href="https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Not so long ago, I met with over 30 MLOps companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies in providing access to their data. Then I discuss potential solutions. </p>
+  <p><i>Abstract.</i> Not so long ago, I met with over 30 AI companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies in providing access to their data. Then I discuss potential solutions. </p>
 
 - <em>Data Science for tech-enabled healthcare</em>
   <br/>with <a href="https://www.linkedin.com/in/rismakov/" target="_blank">Rebekkah Ismakov</a>
