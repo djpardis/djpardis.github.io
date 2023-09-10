@@ -138,12 +138,23 @@ November 16, 2018.
 
 ### Podcasts
 
+
+
+- <em>Making Cross-Company Data Exchange Easy</em>
+  <br/>with <a title="Kostas Pardalis" href="https://www.linkedin.com/in/kostaspardalis/" target="_blank">Kostas Pardalis</a> and <a title="Eric Dodds" href="https://www.linkedin.com/in/ericdodds/" target="_blank">Eric Dodds</a>
+  <br/>
+  <a href="https://datastackshow.com/" target="_blank">The Data Stack Show</a>, September 6, 2023.
+  <br/>
+  🎙 <a href="https://datastackshow.com/podcast/making-cross-company-data-exchange-easy-with-pardis-noorzad-of-general-folders/" target=_blank>podcast episode</a>
+  <p><i>Abstract.</i>
+  The conversation includes the importance of data collaboration and sharing, the challenges and complexities of data sharing in various industries, the need for efficient and secure solutions, and the underlying definitions and dimensions of the data exchange problem—including infrastructure, security, economics, user needs, and more!</p>
+
 - <em>Head of Data Science at Healthcare Tech #93</em>
-  <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://wikimediafoundation.org/?profile=grant-ingersoll" target="_blank">Grant Ingersoll</a>
+  <br/>with <a title="Grant Ingersoll – CTO at Wikimedia Foundation" href="https://www.linkedin.com/in/grantingersoll/" target="_blank">Grant Ingersoll</a>
   <br/>
   <a href="https://develomentor.com/" target="_blank">Develomentor</a>, June 29, 2020.
   <br/>
-  🎙 <a href="https://develomentor.com/2020/09/21/pardis-noorzad-head-of-data-science-at-healthcare-tech-93/" target=_blank>podcast episode</a>
+  🎙 <a href="https://www.listennotes.com/podcasts/develomentor/pardis-noorzad-head-of-data-YCLkfnTI5ZX/" target=_blank>podcast episode</a>
   <p><i>Abstract.</i>
   Thanks to Grant, the episode has turned into a good review of my work history.</p>
 
