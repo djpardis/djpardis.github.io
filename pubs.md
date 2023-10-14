@@ -39,7 +39,6 @@ July 19, 2021.
 <br/>
 <em>Citations and coverage.</em> <a href="https://www.oreilly.com/library/view/building-recommendation-systems/9781492097983/ch05.html" target="_blank">Building Recommendation Systems in Python and JAX, Chapter 5</a>.
 
-
 - <em><a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Models for integrating data science teams within organizations: A comparative analysis</a></em>
 <br/>
 July 31, 2019.
@@ -64,12 +63,19 @@ November 16, 2018.
 
 ### Talks
 
+- <em>Rethinking B2B data exchange and collaboration</em>
+  <br/>
+  <a title="Crunch Conference" href="https://crunchconf.com/2023/talk/pardis-talk" target="_blank">Compass Tech Summit | Crunch Conference Budapest</a>, October 6, 2023.
+  <br/>
+  <!-- 📹 <a href="https://youtu.be/Np0kTZlbRO4" target="_blank">video</a>, 📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a> -->
+  <p><i>Abstract.</i> Data exchange is integral to every business relationship. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data. We then discuss a number of ways in which we can rearchitect solutions to better match the efficiency and security standards of today.</p>
+
 - <em>The state of cross-company data exchange</em>
   <br/>
-  <a title="apply(meetup)" href="https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange">Data Council Austin</a>, March 30, 2023.
+  <a title="Data Council" href="https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange" target="_blank">Data Council Austin</a>, March 30, 2023.
   <br/>
   📹 <a href="https://youtu.be/Np0kTZlbRO4" target="_blank">video</a>, 📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a>
-  <p><i>Abstract.</i> Data exchange is integral to every business partnership. Yet data exchange practices are highly manual, prone to leaks, difficult to validate, impossible to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data and the outstanding challenges. We conclude by enumerating the properties of a good solution.</p>
+  <p><i>Abstract.</i> Data exchange is integral to every business relationship. Yet data exchange practices are highly manual, prone to leaks, difficult to validate, impossible to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data and the outstanding challenges. We conclude by enumerating the properties of a good solution.</p>
 
 - <em>Making an impact with data</em>
   <br/>with <a href="https://www.linkedin.com/in/gorkemy/" target="_blank">Gorkem Yurtseven</a> and <a href="https://britt-allen.github.io/" target="_blank">Britt Allen</a>, moderated by <a href="https://twitter.com/elizabeth_dlha" target="_blank">Elizabeth Dlha</a>
@@ -137,8 +143,6 @@ November 16, 2018.
   <p><i>Abstract.</i> Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.</p>  
 
 ### Podcasts
-
-
 
 - <em>Making Cross-Company Data Exchange Easy</em>
   <br/>with <a title="Kostas Pardalis" href="https://www.linkedin.com/in/kostaspardalis/" target="_blank">Kostas Pardalis</a> and <a title="Eric Dodds" href="https://www.linkedin.com/in/ericdodds/" target="_blank">Eric Dodds</a>
