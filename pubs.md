@@ -67,8 +67,9 @@ November 16, 2018.
   <br/>
   <a title="Crunch Conference" href="https://crunchconf.com/2023/talk/pardis-talk" target="_blank">Compass Tech Summit | Crunch Conference Budapest</a>, October 6, 2023.
   <br/>
-  <!-- 📹 <a href="https://youtu.be/Np0kTZlbRO4" target="_blank">video</a>, 📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a> -->
-  <p><i>Abstract.</i> Data exchange is integral to every business relationship. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data. We then discuss a number of ways in which we can rearchitect solutions to better match the efficiency and security standards of today.</p>
+  📹 <a href="https://www.youtube.com/watch?v=RnQb7zWRL6w&list=PLcTa2e7_ENN-jaHtBTEXRPKNuBjMXm_xb&index=36" target="_blank">video</a>
+  <!-- , 📽 <a href="https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing" target="_blank">slides</a>, 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a> -->
+  <p><i>Abstract.</i> Data exchange is integral to business collaboration. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods companies use to exchange data. We then discuss solutions that better match the efficiency and security standards of today.</p>
 
 - <em>The state of cross-company data exchange</em>
   <br/>
