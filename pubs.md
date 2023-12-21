@@ -63,6 +63,13 @@ November 16, 2018.
 
 ### Talks
 
+- <em>General Folders: The first AI-powered data logistics company</em>
+  <br/>
+  <a title="Techstars San Diego" href="https://www.eventbrite.com/e/demo-day-techstars-san-diego-powered-by-sdsu-tickets-721547095787" target="_blank">Demo Day: Techstars San Diego Powered by SDSU</a>, December 7, 2023.
+  <br/>
+  📰 <a href="https://www.techstars.com/newsroom/new-class-san-diego-sdsu" target="_blank">coverage 1</a>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7128131114807787520/" target="_blank">2</a>
+  <p><i>Abstract.</i> Join us at Snapdragon Stadium for the first ever Techstars San Diego powered by San Diego State University Demo Day. Meet the incredible cohort of companies as they showcase their progress.</p>
+
 - <em>Cross-company data exchange for the cloud</em>
   <br/>
   <a title="Scale By The Bay" href="https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud" target="_blank">Scale By the Bay: Code and Data in the Age of AI</a>, November 15, 2023.
@@ -93,7 +100,7 @@ November 16, 2018.
   <br/>
   📽 <a href="https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing" target="_blank">slides</a>
   <!-- , 📷 <a href="https://twitter.com/brittughknee/status/1532774257482027008" target="_blank">pictures</a> -->
-  <p><i>Abstract.</i> After introducing <a href="https://twitter.com/GeneralFolders" target="_blank">General Folders</a>, we'll review three impactful data projects. First, the design of OKRs to encourage collaboration among product teams at Twitter; second, the feature creation pipeline for fraud detection at Paytm; and finally, sales enablement at Carbon Health via risk quantification.</p>
+  <p><i>Abstract.</i> After introducing <a href="https://generalfolders.com" target="_blank">General Folders</a>, we'll review three impactful data projects. First, the design of OKRs to encourage collaboration among product teams at Twitter; second, the feature creation pipeline for fraud detection at Paytm; and finally, sales enablement at Carbon Health via risk quantification.</p>
 
 - <em>Data transfer challenges in evaluating AI platforms</em>
   <br/>
