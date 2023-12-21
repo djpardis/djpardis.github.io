@@ -74,8 +74,7 @@ November 16, 2018.
   <br/>
   <a title="Scale By The Bay" href="https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud" target="_blank">Scale By the Bay: Code and Data in the Age of AI</a>, November 15, 2023.
   <br/>
-  📰 <a href="https://twitter.com/ScaleByTheBay/status/1722755722901934481?s=20" target="_blank">coverage 1</a>, <a href="https://twitter.com/ScaleByTheBay/status/1723398456574644417?s=20" target="_blank">2</a>
-  <!-- , 📃 <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">blog post</a> -->
+  📹 <a href="https://www.youtube.com/watch?v=WqNCBJeM3PA&list=PLNESult6cnOlHK5bRvdT8f2UnoyZ9TfKW&index=40" target="_blank">video</a>, 📰 <a href="https://twitter.com/ScaleByTheBay/status/1722755722901934481?s=20" target="_blank">coverage 1</a>, <a href="https://twitter.com/ScaleByTheBay/status/1723398456574644417?s=20" target="_blank">2</a>
   <p><i>Abstract.</i> Data exchange is integral to business collaboration. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods companies use to exchange data. We then discuss solutions that better match the efficiency and security standards of today.</p>
 
 - <em>Rethinking B2B data exchange and collaboration</em>
