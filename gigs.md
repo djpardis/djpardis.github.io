@@ -10,6 +10,7 @@ I started DJing in May 2017 and played <a href="https://vimeo.com/463652373" tar
 
 ### Song reviews
 
+- <em><a href="https://djpardis.medium.com/a-2023-mixtape-e4b3f7b19549" target="_blank">A 2023 mixtape: It's a cruel summer with you</a></em>. December 2023.
 - <em><a href="https://djpardis.medium.com/a-2022-mixtape-81b022fc2fc5" target="_blank">A 2022 mixtape: The world is yours</a></em>. November 2022.
 - <em><a href="https://djpardis.medium.com/a-2021-mixtape-23a2af79d369" target="_blank">A 2021 mixtape: Everlasting game</a></em>. December 2021.
 - <em><a href="https://djpardis.medium.com/a-2020-mixtape-20ffe4701c91" target="_blank">A 2020 mixtape: As long as there is something to strive for</a></em>. January 2021.
