@@ -63,6 +63,13 @@ November 16, 2018.
 
 ### Talks
 
+- <em>A new era in B2B data collaboration</em>
+  <br/>
+  <a title="MDS Fest 2.0" href="https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud" target="_blank">MDS Fest 2.0</a>, April 10, 2024.
+  <br/>
+  📹 <a href="https://www.youtube.com/watch?v=JTUFUPzDM1c" target="_blank">video</a>
+  <p><i>Abstract.</i> Businesses collaborate through data — every contract includes a data sharing or transfer clause. However, data collaboration tools have a long way to go to serve modern enterprise needs. In this talk, we will discuss some of the macro trends and practices impacting products in the data collaboration space. Some of these topics remain open and evolving debates.</p>
+
 - <em>General Folders: The first AI-powered data logistics company</em>
   <br/>
   <a title="Techstars San Diego" href="https://www.eventbrite.com/e/demo-day-techstars-san-diego-powered-by-sdsu-tickets-721547095787" target="_blank">Demo Day: Techstars San Diego Powered by SDSU</a>, December 7, 2023.
