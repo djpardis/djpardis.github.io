@@ -166,6 +166,15 @@ November 16, 2018.
 
 ### Podcasts
 
+- <em>Pardis Noorzad of General Folders: Transforming B2B Data Collaboration</em>
+  <br/>with <a title="Jake Villarreal" href="https://www.linkedin.com/in/jakevillarreal/" target="_blank">Jake Villarreal</a>
+  <br/>
+  <a href="https://www.youtube.com/playlist?list=PLPgI4Y1DZOyXM1D_Y7UxFjuPd6QLakNz7" target="_blank">Born in Silicon Valley by Match Relevant</a>, September 6, 2023.
+  <br/>
+  🎙 <a href="https://youtube.com/watch?v=UEofjLSMKrQ" target=_blank>podcast episode</a>
+  <p><i>Abstract.</i>
+  Join us for an engaging conversation with Pardis Noorzad, Founder and CEO of General Folders. Learn how she is revolutionizing B2B data collaboration and transforming the way businesses handle data logistics.</p>
+
 - <em>Making Cross-Company Data Exchange Easy</em>
   <br/>with <a title="Kostas Pardalis" href="https://www.linkedin.com/in/kostaspardalis/" target="_blank">Kostas Pardalis</a> and <a title="Eric Dodds" href="https://www.linkedin.com/in/ericdodds/" target="_blank">Eric Dodds</a>
   <br/>
