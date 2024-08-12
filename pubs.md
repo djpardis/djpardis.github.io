@@ -7,6 +7,10 @@ title: Pubs
 
 <p><span class="highlight">Follow <a href="https://medium.com/@djpardis/" target="_blank">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed" target="_blank">RSS</a> or <a href="https://djpardis.medium.com/subscribe" target="_blank">email</a> for updates.</span></p>
 
+- <em><a href="https://djpardis.medium.com/startup-advice-e9459d6c1ebb" target="_blank">Startup advice: Some lessons I learned while building General Folders</a></em>
+<br/>
+August 12, 2024.
+
 - <em><a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">The state of data exchange: A survey of data transfer and sharing methodology</a></em>
 <br/>
 April 3, 2023.
