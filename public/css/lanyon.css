@@ -44,7 +44,7 @@ html {
   /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* font-family: Inter, sans-serif;
@@ -81,18 +81,18 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container {
-  max-width: 28rem;
+  max-width: 44rem;
 }
-@media (min-width: 38em) {
-  .container {
-    max-width: 32rem;
-  }
-}
-@media (min-width: 56em) {
+@media (min-width: 30em) {
   .container {
     max-width: 38rem;
   }
 }
+/* @media (min-width: 56em) {
+  .container {
+    max-width: 44rem;
+  }
+} */
 
 
 /*
@@ -104,8 +104,8 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #eee; */
 }
 .masthead-title {
   margin-top: 0;
@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .masthead-title a {
   color: #7d78b5;
+  font-size: 110%;
 }
 .masthead-title small {
   font-size: 75%;
