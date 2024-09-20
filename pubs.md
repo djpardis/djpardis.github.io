@@ -219,7 +219,7 @@ November 16, 2018.
   <br/>
   <a title="University of Montreal" href="http://www.iro.umontreal.ca/?lang=en" target="_blank">UdeM</a>, March 12, 2012 and <a title="Sharif University of Technology" href="http://www.en.sharif.edu/" target="_blank">SUT</a>, February 22, 2012.
   <br/>
-  📽 <a href="/files/sparse_approximation_weighted_regression.pdf" target="_blank">slides</a>
+  📽 <a href="/files/sparse_approximation_weighted_regression.pdf" target="_blank">slides</a>, 📰 <a href="https://mailman.iro.umontreal.ca/mailman3/hyperkitty/list/lisa_seminaires@iro.umontreal.ca/message/M4TWNW2L6G4Y5WD42RNPMDPOYWLU2KHN/" target="_blank">UdeM-McGill-mPrime ML seminar ad</a>
   <p><i>Abstract.</i> We propose sparse approximation weighted regression (SPARROW), a nonparametric method of regression that takes advantage of the sparse linear approximation of a query point. SPARROW employs weights based on sparse approximation in the context of locally constant, locally linear, and locally quadratic regression to generate better estimates than for e.g.,  k-nearest neighbor regression and more generally, kernel-weighted local polynomial regression. Our experimental results show that SPARROW performs competitively.</p>
 
 - <em>Sparse coding and dictionary learning</em>
