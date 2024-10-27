@@ -69,10 +69,10 @@ November 16, 2018.
 
 - <em>The role of B2B data collaboration in marketing</em>
   <br/>
-  <a title="MADS" href="https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772" target="_blank">Marketing Analytics \& Data Science (MADS)</a>, April 10, 2024.
+  <a title="MADS" href="https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772" target="_blank">Marketing Analytics & Data Science (MADS)</a>, October 22, 2024.
   <br/>
   📽 <a href="https://docs.google.com/presentation/d/1-L0A9uRdJyWI_jJIuQyNO2Cqj5rzxmkHdcU26s6hn1I/edit?usp=sharing" target="_blank">slides</a>
-  <p><i>Abstract.</i> This presentation explores the concept of data collaboration and its use cases in marketing. We'll explore how marketers leverage data collaboration to drive informed decision-making, enhance customer experiences, and achieve measurable business outcomes. We'll also discuss current practices, challenges, and potential solutions for streamlining data sharing and enabling seamless collaboration across organizations.</p>
+  <p><i>Abstract.</i> This presentation explores the concept of data collaboration and its use cases in marketing. We'll review how marketers leverage data collaboration to drive decision-making, enhance customer experiences, and achieve business outcomes. We'll also discuss current practices, challenges, and potential solutions for streamlining data sharing and enabling seamless collaboration across organizations.</p>
 
 - <em>A new era in B2B data collaboration</em>
   <br/>
