@@ -1,0 +1,35 @@
+.collapsible-section {
+  margin-bottom: 0.5em;
+}
+
+.collapsible-section summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.collapsible-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section summary::before {
+  content: "+";
+  color: #6B46C1;
+  margin-right: 0.5em;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.collapsible-section[open] summary::before {
+  content: "−";
+}
+
+.collapsible-section[open] summary ~ * {
+  animation: sweep .3s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+} 
