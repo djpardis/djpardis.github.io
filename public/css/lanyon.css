@@ -575,3 +575,17 @@ a.pagination-item:hover {
   border-radius: 1em 0 6em 0;
   background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(140,255,50,1) 0%, rgba(255,255,255,1) 100%);
 }
+
+/* Custom styles */
+.text-center {
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+}
+
+.text-center img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
