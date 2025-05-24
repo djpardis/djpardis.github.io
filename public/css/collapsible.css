@@ -1,5 +1,41 @@
 .collapsible-section {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.collapsible-section + .collapsible-section {
+  padding-top: 0;
+}
+
+.collapsible-section + p {
+  margin: 0;
+  padding-top: 0.25em;
+}
+
+p + .collapsible-section {
+  padding-top: 0.25em;
+  margin-top: 0;
+}
+
+p:has(+ .collapsible-section) {
+  margin-bottom: 0;
+}
+
+.collapsible-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.collapsible-section ul {
+  margin-bottom: 0;
+}
+
+.collapsible-section li {
   margin-bottom: 0.5em;
+}
+
+.collapsible-section li:last-child {
+  margin-bottom: 0;
 }
 
 .collapsible-section summary {
