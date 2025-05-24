@@ -127,7 +127,7 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
 
 - *Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator*  
   with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/misticain/)  
-  [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 23, 2025
+  [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 23, 2025  
   📷 [photos](https://www.instagram.com/p/DKBrPHOxnHt/)
 
 - *Building teams and culture that support ML innovation*  
