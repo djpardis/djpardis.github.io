@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Pubs
+description: Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
+keywords: data science, team management, B2B data collaboration, publications, talks, academic papers
 ---
 
 ### Essays
