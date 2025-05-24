@@ -116,6 +116,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
 
 ### Panels
 
+- *Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator*  
+  with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/samcharrington/)  
+  [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 23, 2025
+
 - *Building teams and culture that support ML innovation*  
   with [Ziad Asghar](https://www.linkedin.com/in/ziad-asghar-794404/), [Ameen Kazerouni](https://www.linkedin.com/in/ameenkazerouni/), moderated by [Sam Charrington](https://www.linkedin.com/in/samcharrington/)  
   [TWIMLcon](https://twimlcon.com/sessions/building-teams-and-culture-that-support-ml-innovation/), January 22, 2021  
