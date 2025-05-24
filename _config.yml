@@ -13,6 +13,7 @@ pages_list:
   Bio: '/'
   Pubs: '/pubs'
   Gigs: '/gigs'
+  Blog: '/blog'
   # Library: '/library'
 
 # About
