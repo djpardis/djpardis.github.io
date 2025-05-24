@@ -5,7 +5,10 @@ description: Publications, talks, panels, podcasts, and academic work by Pardis 
 keywords: data science, team management, B2B data collaboration, publications, talks, academic papers
 ---
 
-### Essays
+<link rel="stylesheet" href="/public/css/collapsible.css">
+
+<details class="collapsible-section" markdown="1" open>
+<summary><h3>Essays</h3></summary>
 
 <div class="highlight" markdown="1">
 Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://medium.com/@djpardis/feed) or [email](https://djpardis.medium.com/subscribe) for updates.
@@ -52,8 +55,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
 
 - *[Q&A with Steven Sinofsky at Twitter HQ: Developing cross-functional teams](https://medium.com/@djpardis/q-a-with-steven-sinofsky-at-twitter-hq-a658ca5db953)*  
   November 16, 2018
+</details>
 
-### Talks
+<details class="collapsible-section" markdown="1">
+<summary><h3>Talks</h3></summary>
 
 - *The role of B2B data collaboration in marketing*  
   [Marketing Analytics & Data Science (MADS)](https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772), October 22, 2024  
@@ -115,8 +120,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
   [Twitter HQ](https://twitterwomen-tech-hh.splashthat.com/), September 6, 2017
 
   *Abstract.* In this talk, we review concepts from the audio signal processing field. We then show how familiarity with these concepts allows for a better understanding of DJing tools and techniques, and vice versa.
+</details>
 
-### Panels
+<details class="collapsible-section" markdown="1">
+<summary><h3>Panels</h3></summary>
 
 - *Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator*  
   with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/misticain/)  
@@ -148,8 +155,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
   [Airbnb HQ](https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871), March 8, 2018
 
   *Abstract.* Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.
+</details>
 
-### Podcasts
+<details class="collapsible-section" markdown="1">
+<summary><h3>Podcasts</h3></summary>
 
 - *Pardis Noorzad of General Folders: Transforming B2B Data Collaboration*  
   with [Jake Villarreal](https://www.linkedin.com/in/jakevillarreal/)  
@@ -171,8 +180,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
   🎙️ [podcast episode](https://www.listennotes.com/podcasts/develomentor/pardis-noorzad-head-of-data-YCLkfnTI5ZX/)
 
   *Abstract.* Thanks to Grant, the episode has turned into a good review of my work history.
+</details>
 
-### Academic talks  
+<details class="collapsible-section" markdown="1">
+<summary><h3>Academic talks</h3></summary>
 
 - *Modeling the Facebook social network: The memoryless GEO-P graph model*  
   [SOGMSC](https://mathstat.uoguelph.ca/graduate/sogmsc), May 21, 2014  
@@ -227,8 +238,10 @@ Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://m
   🎞️ [slides](/files/the_split_bregman_method_for_l1_regularized_problems.pdf)
 
   *Abstract.* This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.
+</details>
 
-### Publications
+<details class="collapsible-section" markdown="1">
+<summary><h3>Publications</h3></summary>
 
 - *Efficient classification based on sparse regression*  
   MSc Thesis, Amirkabir University of Technology, July 2012  
