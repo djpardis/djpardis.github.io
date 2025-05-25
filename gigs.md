@@ -13,8 +13,8 @@ description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), i
 
 I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com/463652373) at Twitter HQ. I usually DJed with [Julien Gaillard](https://www.linkedin.com/in/juliengaillard1/) on the [guitar](https://vimeo.com/463687716). In the summer of 2019, I was the tour DJ for [Sim Simah](https://soundcloud.com/ohsimsimah) and [Aarxn Cxle](https://music.apple.com/us/artist/aarxn-cxle/1453179768). The picture above is by [Jesse Meria](https://www.instagram.com/meria.agency/?hl=ne) from July 2019 at [The New Parish](https://www.thenewparish.com/), where we were [the opening act](https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf).
 
-<details class="collapsible-section" markdown="1" open>
-<summary><h3>Song reviews</h3></summary>
+<details class="collapsible-section" markdown="1">
+<summary><h3>Annual song reviews</h3></summary>
 - *[A 2024 mixtape: Just to be here on this train once again](https://djpardis.medium.com/a-2024-mixtape-606fa68d2dc2)*  
   January 2025
 
@@ -37,7 +37,7 @@ I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com
   December 2018
 </details>
 
-<details class="collapsible-section" markdown="1" open>
+<details class="collapsible-section" markdown="1">
 <summary><h3>Radio shows</h3></summary>
 
 - *[1999 Episode 66](https://bff.fm/broadcasts/13188)* with [Johan Oskarsson](https://twitter.com/skr)  

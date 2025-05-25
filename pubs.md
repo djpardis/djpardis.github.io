@@ -7,7 +7,7 @@ keywords: data science, team management, B2B data collaboration, publications, t
 
 <link rel="stylesheet" href="/public/css/collapsible.css">
 
-<details class="collapsible-section" markdown="1" open>
+<details class="collapsible-section" markdown="1">
 <summary><h3>Essays</h3></summary>
 
 <div class="highlight" markdown="1">
