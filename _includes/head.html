@@ -72,6 +72,27 @@
       padding: 1rem;
       border: 2px dashed #7d78b5;
     }
+
+    /* Custom list styling */
+    .container ul {
+      list-style: none;
+      padding-left: 1.2rem;
+    }
+
+    .container ul li {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .container ul li::before {
+      content: "□";
+      color: #7d78b5;
+      position: absolute;
+      left: -1.2rem;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
     .page img {
       margin: 0.75rem auto;
       max-width: 400px;
