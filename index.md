@@ -10,7 +10,7 @@ title: Bio
 </div>
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
-a Techstars-backed company making data exchange simple and secure. Learn more in 
+a Techstars-backed company making data exchange seamless and secure. Learn more in 
 [this post](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"} 
 or [let's connect](mailto:pardis@generalfolders.com)!
 
@@ -36,6 +36,6 @@ and [sparse classifiers](/files/Noorzad2012b.pdf){:target="_blank" title="Effici
 Here is my bio for conferences and talks.
 
 > Pardis Noorzad is the founder and CEO of General Folders, pioneering 
-> secure data exchange solutions. Previously, she led data science at Carbon Health and 
+> secure data infrastructure solutions. Previously, she led data science at Carbon Health and 
 > Twitter. Her expertise spans healthcare, social media, and fintech, complemented by degrees in software engineering, 
 > math, and AI. 
