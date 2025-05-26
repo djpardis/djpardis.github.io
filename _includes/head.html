@@ -22,6 +22,19 @@
       padding: 0 !important;
       margin: 0 !important;
       min-height: 100vh;
+      overflow-y: scroll; /* Force scrollbar to prevent layout shift */
+    }
+    
+    /* Hide scrollbar but maintain its layout effect */
+    /* For Chrome, Safari, and newer versions of Edge */
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+    
+    /* For Firefox */
+    html {
+      scrollbar-width: none;
     }
     body {
       margin: 0.5rem 2rem !important;
