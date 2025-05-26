@@ -30,7 +30,7 @@ where I published on [music genre recognition](/files/genreSturmNoorzad20120116.
 and [sparse classifiers](/files/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
 
 <div class="text-center">
-    <span class="highlight"><b>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</b></span>
+    <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
 </div>
 
 Here is my bio for conferences and talks.
