@@ -5,13 +5,13 @@ description: 'A guide to tracking and visualizing hourly Twitter mentions using 
 keywords: twitter api, elk stack, logstash, elasticsearch, kibana, data visualization
 ---
 
-Some time ago (ok a month ago—time ✈️s), I saw this tweet:
+Some time ago (OK, a month ago—time ✈️s), I saw this tweet:
 
 > Need a simple tool to track mentions of a keyword on Twitter by hour. Don't need a bunch of bells and whistles. Thoughts?
 > 
 > — Kaegan Donnelly ([@kaequan](https://twitter.com/kaequan/status/591359379431104513)) • April 23, 2015
 
-I thought, "should be easy, lmgt." However, results for the query "hourly mentions of a word on twitter" didn't offer clear solutions.
+I thought, "Should be easy, lmgt." However, results for the query "hourly mentions of a word on Twitter" didn't offer clear solutions.
 Days later I came across two relatively simple approaches to tackling the problem. The first is [Tweepy](https://github.com/tweepy/tweepy). The other is [Logstash](https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html).
 
 Tweepy is an [open source Python library](http://www.tweepy.org/) for accessing the Twitter API, including the Twitter Streaming API.
@@ -20,8 +20,8 @@ Logstash is an open source tool for [collecting, processing, and forwarding even
 
 Having tried both, I recommend Logstash over Tweepy for two main reasons:
 
-1. it [deals](https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb) with the Twitter API rate limits by default
-2. it offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step
+1. It [deals](https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb) with the Twitter API rate limits by default
+2. It offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step
 
 For both Tweepy and Logstash you need access to Twitter's streaming API. Follow steps 2 and 3 [here](https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04) to create a Twitter app and obtain your _Consumer Key_, _Consumer Key Secret_, _Access Token_, and _Access Token Secret_.
 
@@ -33,7 +33,7 @@ brew install elasticsearch
 brew install logstash
 {% endhighlight %}
 
-Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word `ireland` (call it `ireland.conf`)
+Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word `ireland` (call it `ireland.conf`):
 {% highlight apacheconf %}# a logstash config file has three sections:
 # input{}, output{}, and (optional) filter{}; add plugins
 # to specify how events should be handled in each section
@@ -68,7 +68,7 @@ logstash -f ireland.conf
 
 At this point, tweets are written to `stdout`. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.
 
-Add the `elasticsearch` plugin to the `output` section of the configuration
+Add the `elasticsearch` plugin to the `output` section of the configuration:
 
 {% highlight apacheconf %}
 output {
@@ -94,7 +94,7 @@ http://localhost:9200/irelandtweets/_search/?pretty
 {% endhighlight %}
 
 
-Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets` index
+Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets` index:
 {% highlight bash %}
 {
   "took" : 2,
@@ -137,11 +137,11 @@ On the Visualize tab, choose visualization type `Line chart`.
 
 * Choose option `From a saved search` to use the same query you specified on the Discover tab
 * On the left hand side, you can specify metric and bucket aggregations:
- * For _metric aggregation_— same as Y-Axis aggregation—choose `Count`
- * For _bucket aggregation_—same as X-Axis aggregation
-        * Fill the _Aggregation_ field with `Date Histogram`
-        * Fill the _Field_ field with `@timestamp`
-        * Fill the _Interval_ field with `Minute`
+  * For _metric aggregation_—same as Y-Axis aggregation—choose `Count`
+  * For _bucket aggregation_—same as X-Axis aggregation:
+    * Fill the _Aggregation_ field with `Date Histogram`
+    * Fill the _Field_ field with `@timestamp`
+    * Fill the _Interval_ field with `Minute`
 * Click on the Refresh Interval tab at the top. Choose `5 seconds` and see your line chart come alive 📈
 
 ![Kibana screenshot](/files/pics/kibana_screenshot.png)
