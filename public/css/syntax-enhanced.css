@@ -5,7 +5,7 @@
  */
 
 /* Code block container */
-.highlight {
+.highlight.syntax-highlight {
   position: relative;
   margin: 1.5rem 0;
   padding: 0;
@@ -151,7 +151,7 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .highlight {
+  .highlight.syntax-highlight {
     background-color: #1e1e1e;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
@@ -227,9 +227,10 @@
 
 /* Mobile responsiveness */
 @media (max-width: 767px) {
-  .highlight {
-    margin: 1rem -0.5rem;
+  .highlight.syntax-highlight {
+    margin: 1rem 0;
     border-radius: 4px;
+    width: 100%;
   }
   
   .highlight pre {
