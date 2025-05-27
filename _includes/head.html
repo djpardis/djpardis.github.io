@@ -29,17 +29,14 @@
   
   <!-- Container width is now controlled by container-fix.css -->
 
-  <!-- Container width fix CSS - loaded last to override all other styles -->
+  <!-- Container width fix CSS - ensures consistent widths across all screen sizes -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/container-fix.css">
   
-  <!-- Mobile layout fixes - loaded absolutely last to ensure mobile styles take precedence -->
+  <!-- Mobile highlight fixes for text highlighting -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/mobile-fix.css">
 
-  <!-- Icons -->
+  <!-- Simple SVG favicon setup -->
   <link rel="icon" href="{{ site.baseurl }}/public/favicon.svg" type="image/svg+xml">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.svg">
-  <!-- Fallback for browsers that don't support SVG favicons -->
-  <link rel="shortcut icon" sizes="32x32" href="{{ site.baseurl }}/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">

@@ -2,9 +2,9 @@
   <!-- Background with the yellow highlight color -->
   <rect width="32" height="32" fill="#FFFF99" />
   
-  <!-- D in top left, maximized size -->
-  <text x="7" y="13" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="middle" dominant-baseline="middle" fill="#7d78b5">D</text>
+  <!-- D in top left, bigger size, aligned with left edge -->
+  <text x="-1" y="-1" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="600" text-anchor="start" dominant-baseline="hanging" fill="#7d78b5">D</text>
   
-  <!-- J in bottom right, maximized size -->
-  <text x="25" y="23" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="middle" dominant-baseline="middle" fill="#7d78b5">J</text>
+  <!-- J in bottom right, aligned with right edge -->
+  <text x="33" y="30" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="600" text-anchor="end" fill="#7d78b5">J</text>
 </svg>
