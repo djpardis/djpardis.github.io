@@ -94,4 +94,4 @@ http://localhost:9200/irelandtweets/_search/?pretty
 {% endhighlight %}
 
 
-Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets`
+Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets` folder.
