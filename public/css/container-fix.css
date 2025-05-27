@@ -1,0 +1,39 @@
+/* 
+ * Container width fix
+ * This file ensures all containers have consistent width
+ * Added: May 27, 2025
+ */
+
+/* Target ALL container elements with the same width */
+html body .container,
+html body .container.content,
+html body .wrap .container,
+html body .wrap .container.content,
+html body .masthead .container,
+.container,
+.container.content,
+.masthead-title,
+.copyright div {
+  max-width: 42rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Ensure consistency across media queries */
+@media (min-width: 30em), (max-width: 767px) {
+  html body .container,
+  html body .container.content,
+  html body .wrap .container,
+  html body .wrap .container.content,
+  html body .masthead .container,
+  .container,
+  .container.content,
+  .masthead-title,
+  .copyright div {
+    max-width: 42rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
