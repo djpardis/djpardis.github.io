@@ -43,6 +43,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Syntax highlighting settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
 # webmaster_verifications:
 #   google: 1234
 #   bing: 1234
