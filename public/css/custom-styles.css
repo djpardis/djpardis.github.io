@@ -172,6 +172,12 @@ blockquote {
   margin-bottom: 0;
 }
 
+/* Remove extra space when no related posts */
+.post:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 /* Mobile-only adjustments */
 @media (max-width: 767px) {
   body {
