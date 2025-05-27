@@ -1,61 +1,47 @@
 /* 
  * Container width fix
  * This file ensures all containers have consistent width
- * Added: May 27, 2025
  */
 
-/* Target ALL container elements with the same width */
-html body .container,
-html body .container.content,
-html body .wrap .container,
-html body .wrap .container.content,
-html body .masthead .container,
-.container,
-.container.content,
-.masthead-title,
-.copyright div {
-  max-width: 42rem !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Medium screens (tablets and small laptops) */
-@media (min-width: 30em) and (max-width: 48em) {
-  html body .container,
-  html body .container.content,
-  html body .wrap .container,
-  html body .wrap .container.content,
-  html body .masthead .container,
+/* Desktop and tablet container widths */
+@media (min-width: 30em) {
   .container,
   .container.content,
   .masthead-title,
   .copyright div {
-    max-width: 38rem !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    max-width: 42rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-/* Small screens (mobile) */
+/* Mobile container widths */
 @media (max-width: 30em) {
-  html body .container,
-  html body .container.content,
-  html body .wrap .container,
-  html body .wrap .container.content,
-  html body .masthead .container,
-  .container,
+  /* Apply consistent width to all containers */
+  .masthead .container,
   .container.content,
-  .masthead-title,
   .copyright div {
-    max-width: 100% !important;
-    width: calc(100% - 1rem) !important;
-    padding: 0.75rem !important;
-    box-sizing: border-box !important;
+    width: calc(100% - 1rem);
+    max-width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    box-sizing: border-box;
   }
   
-  /* Ensure no horizontal scrolling on mobile */
+  /* Specific fix for masthead-title */
+  .masthead-title {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent layout shift from scrollbar */
+  html {
+    margin-left: calc(100vw - 100%);
+  }
+  
+  /* Prevent horizontal scrolling */
   html, body {
     overflow-x: hidden;
   }
