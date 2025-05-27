@@ -1,0 +1,75 @@
+/* 
+ * Geist Font Implementation
+ * This file applies Vercel's Geist font to the website
+ */
+
+/* Apply Geist Sans as the main font */
+body {
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 400;
+  color: #454545; /* A tad darker than original but still balanced */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Apply Geist Sans to all text elements for consistency */
+p, li, div, span, blockquote, td, th {
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: #454545; /* A tad darker than original but still balanced */
+}
+
+/* Headings with proper font weights */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 400 !important; /* Match body text weight */
+  color: #454545; /* Same as body text */
+  letter-spacing: 0; /* Remove letter spacing */
+}
+
+/* Specific heading sizes - keep hierarchy through size only */
+h1 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Code blocks use Geist Mono */
+code, pre {
+  font-family: 'Geist Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-size: 0.9rem;
+}
+
+/* Masthead styling with Geist Sans */
+.masthead-title {
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 400 !important; /* Match body text weight */
+}
+
+.masthead-title a {
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 400 !important; /* Match body text weight */
+}
+
+/* Preserve the original link color */
+a {
+  color: #7d78b5;
+}
