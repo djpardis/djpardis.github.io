@@ -178,19 +178,6 @@ blockquote {
     padding: 0.5rem;
   }
   
-  .container, 
-  .container.content {
-    padding: 0.75rem;
-  }
-  
-  .masthead-title {
-    padding: 0.5rem;
-  }
-  
-  .copyright div {
-    padding: 0.5rem;
-  }
-  
   .page img {
     max-width: 100%;
   }

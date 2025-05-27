@@ -2,10 +2,14 @@
  * Container width fix
  * This file ensures all containers have consistent width
  * Added: May 27, 2025
- * Updated: May 27, 2025 - Simplified selectors and removed redundancy
  */
 
 /* Target ALL container elements with the same width */
+html body .container,
+html body .container.content,
+html body .wrap .container,
+html body .wrap .container.content,
+html body .masthead .container,
 .container,
 .container.content,
 .masthead-title,
@@ -17,5 +21,42 @@
   margin-right: auto !important;
 }
 
-/* Mobile-specific adjustments are now handled in custom-styles.css */
-/* This keeps container-fix.css focused only on container width */
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 30em) and (max-width: 48em) {
+  html body .container,
+  html body .container.content,
+  html body .wrap .container,
+  html body .wrap .container.content,
+  html body .masthead .container,
+  .container,
+  .container.content,
+  .masthead-title,
+  .copyright div {
+    max-width: 38rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 30em) {
+  html body .container,
+  html body .container.content,
+  html body .wrap .container,
+  html body .wrap .container.content,
+  html body .masthead .container,
+  .container,
+  .container.content,
+  .masthead-title,
+  .copyright div {
+    max-width: 100% !important;
+    width: calc(100% - 1rem) !important;
+    padding: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Ensure no horizontal scrolling on mobile */
+  html, body {
+    overflow-x: hidden;
+  }
+}
