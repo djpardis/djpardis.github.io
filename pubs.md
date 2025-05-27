@@ -10,9 +10,7 @@ keywords: data science, team management, B2B data collaboration, publications, t
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Essays</h3></summary>
 
-<div class="highlight" markdown="1">
-Follow [my blog](https://medium.com/@djpardis/) or subscribe via [RSS](https://medium.com/@djpardis/feed) or [email](https://djpardis.medium.com/subscribe) for updates.
-</div>
+<p><span class="highlight-text">Follow <a href="https://medium.com/@djpardis/">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed">RSS</a> or <a href="https://djpardis.medium.com/subscribe">email</a> for updates.</span></p>
 
 - *[Startup advice: Some lessons I learned while building General Folders](https://djpardis.medium.com/startup-advice-e9459d6c1ebb)*  
   August 12, 2024
