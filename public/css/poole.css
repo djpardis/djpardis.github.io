@@ -76,7 +76,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  background-color: #FFFF00;
+  background-color: #FFFF99;
   text-decoration: none;
 }
 a:visited,
@@ -290,8 +290,8 @@ tbody tr:nth-child(odd) th {
  * Center the page content.
  */
 
-.container {
-  max-width: 38rem;
+.container, .container.content {
+  max-width: 48rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
