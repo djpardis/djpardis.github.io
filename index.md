@@ -10,7 +10,7 @@ title: Bio
 </div>
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
-a Techstars-backed company making data exchange seamless and secure. Learn more in 
+a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company making data exchange seamless and secure. Learn more in 
 [this post](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"} 
 or [let's connect](mailto:pardis@generalfolders.com)!
 
