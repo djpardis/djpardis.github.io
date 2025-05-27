@@ -129,20 +129,19 @@ To start using Kibana, visit
 
 On the Discover tab, there is a configuration form:
 
-* Check off the box: _Index contains time-based events_
-* Fill the _Index name or pattern_ field with `irelandtweets`
-* Fill the _Time-field name_ field with `@timestamp`
+1. Check off the box: _Index contains time-based events_
+2. Fill the _Index name or pattern_ field with `irelandtweets`
+3. Fill the _Time-field name_ field with `@timestamp`
 
 On the Visualize tab, choose visualization type `Line chart`.
 
-* Choose option `From a saved search` to use the same query you specified on the Discover tab
-* On the left hand side, you can specify metric and bucket aggregations:
-  * For _metric aggregation_—same as Y-Axis aggregation—choose `Count`
-  * For _bucket aggregation_—same as X-Axis aggregation:
-    * Fill the _Aggregation_ field with `Date Histogram`
-    * Fill the _Field_ field with `@timestamp`
-    * Fill the _Interval_ field with `Minute`
-* Click on the Refresh Interval tab at the top. Choose `5 seconds` and see your line chart come alive 📈
+1. Choose option `From a saved search` to use the same query you specified on the Discover tab
+2. For metric aggregation (Y-Axis): Choose `Count`
+3. For bucket aggregation (X-Axis):
+   i. Aggregation: `Date Histogram`
+   ii. Field: `@timestamp`
+   iii. Interval: `Minute`
+4. Click on the Refresh Interval tab at the top. Choose `5 seconds` and see your line chart come alive 📈
 
 ![Kibana screenshot](/files/pics/kibana_screenshot.png)
 
