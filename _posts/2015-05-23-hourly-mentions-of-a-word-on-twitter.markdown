@@ -94,4 +94,62 @@ http://localhost:9200/irelandtweets/_search/?pretty
 {% endhighlight %}
 
 
-Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets` folder.
+Below is a sample of the output format. You can see, for example, that `65235` documents (tweets) have been stored in the `irelandtweets` index
+{% highlight bash %}
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 65235,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "irelandtweets",
+      "_type" : "logs",
+      "_id" : "AU2B1MGZPj_44djTabLA",
+      "_score" : 1.0,
+      "_source":{"@timestamp":"2015-05-23T17:31:51.000Z","message":"Y'all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭","user":"LesbiForLauren","client":"<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>","retweeted":false,"source":"http://twitter.com/LesbiForLauren/status/602165054042034176","@version":"1"}
+    }, {
+      "_index" : "irelandtweets",
+      "_type" : "logs",
+      "_id" : "AU2B1MGZPj_44djTabLF",
+      "_score" : 1.0,
+      "_source":{"@timestamp":"2015-05-23T17:31:51.000Z","message":"RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson.","user":"SOUTHERNjamespb","client":"<a href=\"http://www.twitter.com\" rel=\"nofollow\">Twitter for BlackBerry</a>","retweeted":false,"source":"http://twitter.com/SOUTHERNjamespb/status/602165054889283584","@version":"1"}
+    }, {
+               ...
+{% endhighlight %}
+
+To start using Kibana, visit
+{% highlight bash %}http://localhost:5601/
+{% endhighlight %}
+
+On the Discover tab, there is a configuration form:
+
+* Check off the box: _Index contains time-based events_
+* Fill the _Index name or pattern_ field with `irelandtweets`
+* Fill the _Time-field name_ field with `@timestamp`
+
+On the Visualize tab, choose visualization type `Line chart`.
+
+* Choose option `From a saved search` to use the same query you specified on the Discover tab
+* On the left hand side, you can specify metric and bucket aggregations:
+ * For _metric aggregation_— same as Y-Axis aggregation—choose `Count`
+ * For _bucket aggregation_—same as X-Axis aggregation
+        * Fill the _Aggregation_ field with `Date Histogram`
+        * Fill the _Field_ field with `@timestamp`
+        * Fill the _Interval_ field with `Minute`
+* Click on the Refresh Interval tab at the top. Choose `5 seconds` and see your line chart come alive 📈
+
+![Kibana screenshot](/files/pics/kibana_screenshot.png)
+
+Done. Thank you for starting the conversation Kaegan!
+
+### More resources
+
+For details about Logstash plugins see <a href="https://www.elastic.co/guide/en/logstash/current/configuration.html" target="_blank">this guide</a>.
+
+Anna Roes has written an excellent overview of Kibana in <a href="https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/" target="_blank">this tutorial</a>.
