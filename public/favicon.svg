@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Background with the yellow highlight color -->
+  <rect width="32" height="32" fill="#FFFF99" />
+  
+  <!-- D in top left, maximized size -->
+  <text x="7" y="13" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="middle" dominant-baseline="middle" fill="#7d78b5">D</text>
+  
+  <!-- J in bottom right, maximized size -->
+  <text x="25" y="23" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="middle" dominant-baseline="middle" fill="#7d78b5">J</text>
+</svg>
