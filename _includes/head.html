@@ -32,6 +32,11 @@
       overflow-y: scroll; /* Force scrollbar to prevent layout shift */
     }
     
+    /* Prevent layout shift when scrollbar appears/disappears */
+    html {
+      margin-left: calc(100vw - 100%); /* Compensate for scrollbar width */
+    }
+    
     /* Hide scrollbar but maintain its layout effect */
     /* For Chrome, Safari, and newer versions of Edge */
     ::-webkit-scrollbar {
@@ -104,6 +109,7 @@
     .page img {
       margin: 0.75rem auto;
       max-width: 400px;
+      width: 100%;
       height: auto;
       display: block;
     }
@@ -146,6 +152,9 @@
     .highlight-text {
       position: relative;
       z-index: 1;
+      display: inline;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
     .highlight-text::before {
       content: "";
