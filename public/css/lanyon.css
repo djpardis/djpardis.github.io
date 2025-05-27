@@ -80,12 +80,12 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
-.container {
-  max-width: 44rem;
+.container, .container.content {
+  max-width: 48rem;
 }
 @media (min-width: 30em) {
-  .container {
-    max-width: 38rem;
+  .container, .container.content {
+    max-width: 48rem;
   }
 }
 /* @media (min-width: 56em) {
