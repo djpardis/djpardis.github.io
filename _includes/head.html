@@ -77,16 +77,14 @@
       border: 2px solid #7d78b5;
       display: block;
       margin: 0 auto;
-      max-width: 38rem;
-      width: 100%;
       box-sizing: border-box;
     }
-    .masthead .container {
+    .masthead .container, .container.content {
       background: none;
       border: none;
       padding: 0;
     }
-    .container {
+    .container, .container.content {
       margin: 0 auto;
       background-color: rgba(255, 255, 255, 0.9);
       padding: 1rem;
@@ -128,8 +126,6 @@
       border: 2px solid #7d78b5;
       display: block;
       margin: 0 auto;
-      max-width: 38rem;
-      width: 100%;
       box-sizing: border-box;
     }
     .copyright div span {
@@ -146,11 +142,12 @@
       background-color: rgba(140,255,50,0.3);
       z-index: -1;
     }
-    .highlight {
+    /* Highlight text styling - matches copyright span */
+    .highlight-text {
       position: relative;
       z-index: 1;
     }
-    .highlight::before {
+    .highlight-text::before {
       content: "";
       position: absolute;
       left: 0;
@@ -175,7 +172,7 @@
       .wrap {
         padding: 0.5rem;
       }
-      .container {
+      .container, .container.content {
         padding: 0.75rem;
       }
       .masthead-title {
@@ -200,10 +197,17 @@
       }
     }
   </style>
+  
+  <!-- Container width is now controlled by container-fix.css -->
+
+  <!-- Container width fix CSS - loaded last to override all other styles -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/container-fix.css">
 
   <!-- Icons -->
-  <link rel="shortcut icon" sizes="144x144" href="{{ site.baseurl }}/public/favicon.ico">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
+  <link rel="icon" href="{{ site.baseurl }}/public/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.svg">
+  <!-- Fallback for browsers that don't support SVG favicons -->
+  <link rel="shortcut icon" sizes="32x32" href="{{ site.baseurl }}/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
