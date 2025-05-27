@@ -3,8 +3,8 @@
   <rect width="32" height="32" fill="#FFFF99" />
   
   <!-- D in top left, bigger size, aligned with left edge -->
-  <text x="-1" y="-1" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="600" text-anchor="start" dominant-baseline="hanging" fill="#7d78b5">D</text>
+  <text x="-1" y="-1" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="start" dominant-baseline="hanging" fill="#7d78b5">D</text>
   
   <!-- J in bottom right, aligned with right edge -->
-  <text x="33" y="30" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="600" text-anchor="end" fill="#7d78b5">J</text>
+  <text x="33" y="30" font-family="'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="400" text-anchor="end" fill="#7d78b5">J</text>
 </svg>
