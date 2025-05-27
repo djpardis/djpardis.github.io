@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Find all code blocks with the 'highlight' class
   const codeBlocks = document.querySelectorAll('.highlight');
   
+  // Add the syntax-highlight class to differentiate from text highlighting
+  codeBlocks.forEach(function(block) {
+    block.classList.add('syntax-highlight');
+  });
+  
   // Process each code block
   codeBlocks.forEach(function(codeBlock, index) {
     // Get the pre and code elements
