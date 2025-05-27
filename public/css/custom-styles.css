@@ -178,6 +178,11 @@ blockquote {
   padding-bottom: 0;
 }
 
+/* Remove extra space after the last paragraph */
+.post > p:last-child {
+  margin-bottom: 0;
+}
+
 /* Mobile-only adjustments */
 @media (max-width: 767px) {
   body {
@@ -191,6 +196,7 @@ blockquote {
   .container, 
   .container.content {
     padding: 0.75rem;
+    padding-bottom: 0.5rem;
   }
   
   .masthead-title {
@@ -208,6 +214,13 @@ blockquote {
   blockquote {
     padding-left: 1rem;
     padding-right: 0.5rem;
+  }
+  
+  /* Remove extra space after the last paragraph in mobile */
+  .post > p:last-child,
+  .post > div:last-child,
+  .post > pre:last-child {
+    margin-bottom: 0;
   }
   
   /* Highlight adjustments for mobile */
