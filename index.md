@@ -35,7 +35,6 @@ and [sparse classifiers](/files/Noorzad2012b.pdf){:target="_blank" title="Effici
 
 Here is my bio for conferences and talks.
 
-> Pardis Noorzad is the founder and CEO of General Folders, pioneering 
-> secure data infrastructure solutions. Previously, she led data science at Carbon Health and 
-> Twitter. Her expertise spans healthcare, social media, and fintech, complemented by degrees in software engineering, 
-> math, and AI. 
+> Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange. 
+> Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
+> healthcare, and social media, backed by degrees in software engineering, mathematics, and AI.
