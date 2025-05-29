@@ -16,10 +16,15 @@
   <!-- Enhanced syntax highlighting with copy functionality -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax-enhanced.css">
   
-  <!-- Geist Font from Google Fonts -->
+  <!-- Resource hints for faster loading -->
+  <link rel="preload" href="{{ site.baseurl }}/public/css/poole.css" as="style">
+  <link rel="preload" href="{{ site.baseurl }}/public/css/lanyon.css" as="style">
+  <link rel="preload" href="{{ site.baseurl }}/public/css/syntax-enhanced.css" as="style">
+  
+  <!-- Geist Font from Google Fonts - optimized weights -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300..700&family=Geist+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;600&family=Geist+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
   <!-- Geist font styling -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/geist.css">
@@ -27,13 +32,8 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/custom-styles.css">
   
-  <!-- Container width is now controlled by container-fix.css -->
-
   <!-- Container width fix CSS - ensures consistent widths across all screen sizes -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/container-fix.css">
-  
-  <!-- Mobile highlight fixes for text highlighting -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/mobile-fix.css">
 
   <!-- Simple SVG favicon setup -->
   <link rel="icon" href="{{ site.baseurl }}/public/favicon.svg" type="image/svg+xml">
