@@ -63,5 +63,5 @@ defaults:
   - scope:
       path: ""    # Apply to all files
     values:
-      image: /files/pics/djing.jpg  # DJ photo for social media sharing
+      image: /files/pics/profile_pic.jpg  # Profile picture for social media sharing
       canonical_url: "https://djpardis.com"  # For SEO
