@@ -3,6 +3,7 @@ layout: page
 keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, music, mixtapes, radio shows, dj sets
 title: Gigs
 description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections.
+image: /files/pics/djing.jpg
 ---
 
 <link rel="stylesheet" href="/public/css/collapsible.css">
