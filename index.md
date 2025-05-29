@@ -5,8 +5,13 @@ keywords: pardis noorzad, djpardis, pardis, noorzad, dj pardis, data science, ge
 title: Bio
 ---
 
-<div class="text-center">
-    <img src="/files/pics/profile_pic.jpg" alt="Pardis Noorzad" title="Pardis Noorzad">
+<div class="image-container-with-caption">
+    <div class="image-row">
+        <div class="image-container">
+            <img src="/files/pics/profile_pic.jpg" alt="Pardis Noorzad" title="Pardis Noorzad">
+        </div>
+    </div>
+    <div class="image-caption"></div>
 </div>
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
