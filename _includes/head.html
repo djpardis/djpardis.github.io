@@ -45,4 +45,50 @@
   <script src="{{ site.baseurl }}/public/js/external-links.js"></script>
 
   {% seo %}
+
+  <!-- Structured Data for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "{{ site.author.name }}",
+        "alternateName": ["DJ Pardis", "djpardis"],
+        "url": "{{ site.url }}",
+        "sameAs": [
+          "{{ site.social.links[0] }}",
+          "{{ site.social.links[1] }}",
+          "{{ site.social.links[2] }}"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "publisher": {
+          "@type": "Person",
+          "@id": "{{ site.url }}/#person"
+        }
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": "{{ site.url }}/#navigation",
+        "name": "Main Navigation",
+        "hasPart": [
+          {% for page in site.pages_list %}
+          {
+            "@type": "SiteNavigationElementItem",
+            "name": "{{ page[0] }}",
+            "url": "{{ site.url }}{{ page[1] }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
