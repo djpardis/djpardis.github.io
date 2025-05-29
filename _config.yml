@@ -3,7 +3,7 @@ permalink:           pretty
 
 # Setup
 title:               "Pardis Noorzad"
-tagline:             "Data Science & Technology Leadership"
+tagline:             "Data & Technology Leadership"
 description:         "Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions. Previously led data science at Carbon Health and Twitter."
 baseurl:             ""
 url:                 "https://djpardis.com"
@@ -55,6 +55,5 @@ kramdown:
 # webmaster_verifications:
 #   google: 1234
 #   bing: 1234
-#   alexa: 1234
 #   yandex: 1234
 #   baidu: 1234
