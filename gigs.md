@@ -6,8 +6,6 @@ description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), i
 image: /files/pics/djing.jpg
 ---
 
-<link rel="stylesheet" href="/public/css/collapsible.css">
-
 <div class="text-center">
     <img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
 </div>
