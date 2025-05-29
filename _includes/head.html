@@ -44,6 +44,9 @@
   <!-- External links script -->
   <script src="{{ site.baseurl }}/public/js/external-links.js"></script>
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+
   {% seo %}
 
   <!-- Structured Data for Google Search -->
@@ -57,11 +60,17 @@
         "name": "{{ site.author.name }}",
         "alternateName": ["DJ Pardis", "djpardis"],
         "url": "{{ site.url }}",
-        "sameAs": [
-          "{{ site.social.links[0] }}",
-          "{{ site.social.links[1] }}",
-          "{{ site.social.links[2] }}"
-        ]
+        "image": "{{ site.url }}{{ site.defaults[0].values.image }}",
+        "jobTitle": "CEO & Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "General Folders"
+        },
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Twitter"
+        },
+        "sameAs": {{ site.social.links | jsonify }}
       },
       {
         "@type": "WebSite",
@@ -72,18 +81,71 @@
         "publisher": {
           "@type": "Person",
           "@id": "{{ site.url }}/#person"
-        }
+        },
+        "inLanguage": "{{ site.lang }}"
       },
       {
-        "@type": "SiteNavigationElement",
-        "@id": "{{ site.url }}/#navigation",
-        "name": "Main Navigation",
-        "hasPart": [
-          {% for page in site.pages_list %}
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}#webpage",
+        "url": "{{ site.url }}{{ page.url }}",
+        "name": "{{ page.title | default: site.title }}",
+        "description": "{{ page.description | default: site.description }}",
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "about": { "@id": "{{ site.url }}/#person" },
+        "image": "{{ site.url }}{{ page.image | default: site.defaults[0].values.image }}",
+        "inLanguage": "{{ site.lang }}",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "{{ site.url }}",
+                "name": "Home"
+              }
+            },
+            {% if page.url != '/' %}
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "{{ site.url }}{{ page.url }}",
+                "name": "{{ page.title }}"
+              }
+            }
+            {% endif %}
+          ]
+        }
+      },
+      {% if page.layout == 'post' %}
+      {
+        "@type": "BlogPosting",
+        "@id": "{{ site.url }}{{ page.url }}#article",
+        "headline": "{{ page.title }}",
+        "description": "{{ page.description }}",
+        "author": { "@id": "{{ site.url }}/#person" },
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "mainEntityOfPage": { "@id": "{{ site.url }}{{ page.url }}#webpage" },
+        "publisher": { "@id": "{{ site.url }}/#person" },
+        "image": "{{ site.url }}{{ page.image | default: site.defaults[0].values.image }}",
+        "keywords": "{{ page.keywords }}",
+        "inLanguage": "{{ site.lang }}"
+      }
+      {% endif %},
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ site.url }}/#breadcrumb",
+        "itemListElement": [
+          {% for item in site.pages_list %}
           {
-            "@type": "SiteNavigationElementItem",
-            "name": "{{ page[0] }}",
-            "url": "{{ site.url }}{{ page[1] }}"
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "item": {
+              "@id": "{{ site.url }}{{ item[1] }}",
+              "name": "{{ item[0] }}"
+            }
           }{% unless forloop.last %},{% endunless %}
           {% endfor %}
         ]
