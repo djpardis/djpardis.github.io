@@ -65,7 +65,7 @@ body {
 
 /* Image styling */
 .container.content .image-container-with-caption {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .container.content .image-row {
