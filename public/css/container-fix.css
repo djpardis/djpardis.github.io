@@ -64,22 +64,24 @@ body {
 
 /* Mobile container widths */
 @media (max-width: 30em) {
-  .masthead .container,
+  .masthead .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .masthead-title {
+    width: calc(100% - 1rem);
+    margin: 0.125rem 0.5rem;
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
+  }
+
   .container.content,
   .copyright div {
     width: calc(100% - 1rem);
-    max-width: 100%;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.75rem;
-  }
-  
-  .masthead-title {
-    width: 100%;
-    padding: 0.5rem;
-  }
-  
-  .copyright div {
+    margin: 0.125rem 0.5rem;
     padding: 0.5rem;
   }
 }
