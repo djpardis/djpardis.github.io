@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Library
+published: false
 ---
 
 I cataloged [my library](http://www.librarything.com/profile/djpardis). Below is the list.
