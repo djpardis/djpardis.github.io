@@ -127,8 +127,9 @@ noindex: true
     <h3>Test Pages:</h3>
     <div class="page-buttons">
       <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000'">Home Page</button>
-      <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000/pubs'">Publications Page</button>
-      <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000/2015/05/23/hourly-mentions-of-a-word-on-twitter/'">Blog Post</button>
+      <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000/work'">Work Page</button>
+      <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000/gigs'">Gigs Page</button>
+      <button onclick="document.getElementById('mobile-frame').src = 'http://localhost:4000/blog'">Blog</button>
     </div>
     
     <button class="refresh-button" onclick="document.getElementById('mobile-frame').contentWindow.location.reload(true);">Refresh Current Page</button>
@@ -136,11 +137,12 @@ noindex: true
     <div class="test-items">
       <h3>Check These Items:</h3>
       <ul>
-        <li>Menu container size is consistent</li>
-        <li>Highlight text wraps properly</li>
-        <li>No extra space at bottom of posts</li>
-        <li>Code blocks format correctly</li>
-        <li>Container widths are consistent</li>
+        <li>Menu container size matches other containers</li>
+        <li>Images are full width on mobile</li>
+        <li>Container spacing is minimal (0.125rem)</li>
+        <li>Container padding is consistent (0.5rem)</li>
+        <li>Image captions are properly aligned</li>
+        <li>Collapsible sections work correctly</li>
       </ul>
     </div>
     
