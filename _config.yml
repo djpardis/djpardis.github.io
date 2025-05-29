@@ -21,7 +21,6 @@ author:
   name:              "Pardis Noorzad"
   url:               https://djpardis.com
   email:             pardis.noorzad@gmail.com
-  twitter:           djpardis
 
 # Social
 social:
@@ -33,9 +32,6 @@ social:
 
 # SEO
 lang: en_US
-twitter:
-  username: djpardis
-  card: summary
 
 safe: false
 
