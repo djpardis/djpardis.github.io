@@ -5,8 +5,6 @@ description: Blog posts by Pardis Noorzad on data science, technology, and softw
 keywords: blog, data science, technology, software engineering, twitter analytics
 ---
 
-<link rel="stylesheet" href="/public/css/collapsible.css">
-
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Archive</h3></summary>
 
