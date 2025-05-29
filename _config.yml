@@ -57,3 +57,11 @@ kramdown:
 #   bing: 1234
 #   yandex: 1234
 #   baidu: 1234
+
+# Default settings for all pages
+defaults:
+  - scope:
+      path: ""    # Apply to all files
+    values:
+      image: /files/pics/djing.jpg  # DJ photo for social media sharing
+      canonical_url: "https://djpardis.com"  # For SEO
