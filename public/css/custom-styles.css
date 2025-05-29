@@ -1,7 +1,6 @@
 /* 
  * Custom styles for djpardis.github.io
- * Contains styles previously defined inline in head.html
- * Created: May 27, 2025
+ * Contains custom styling and visual enhancements
  */
 
 /* Base layout */
@@ -9,23 +8,9 @@ html, body {
   padding: 0 !important;
   margin: 0 !important;
   min-height: 100vh;
-  overflow-y: scroll; /* Force scrollbar to prevent layout shift */
 }
 
-/* Layout shift prevention - properly implemented */
-html {
-  scrollbar-width: none; /* For Firefox */
-  margin-left: calc(100vw - 100%); /* Compensate for scrollbar width */
-}
-
-/* Hide scrollbar but maintain its layout effect */
-/* For Chrome, Safari, and newer versions of Edge */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-/* Background and body styling */
+/* Background styling */
 body {
   margin: 0.5rem 2rem !important;
   min-height: calc(100vh - 1rem);
@@ -57,31 +42,6 @@ body {
 .masthead {
   text-align: center;
   margin-bottom: 0.5rem;
-}
-
-.masthead-title {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
-  border: 2px solid #7d78b5;
-  display: block;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* Container styling */
-.masthead .container, 
-.container.content {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.container, 
-.container.content {
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
-  border: 2px solid #7d78b5;
 }
 
 /* Custom list styling */
@@ -118,21 +78,21 @@ blockquote {
   justify-content: center;
 }
 
-.copyright div {
-  color: #555;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
-  border: 2px solid #7d78b5;
-  display: block;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .copyright div span {
   position: relative;
   z-index: 1;
 }
 
+/* Highlight text styling */
+.highlight-text {
+  position: relative;
+  z-index: 1;
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlight-text::before,
 .copyright div span::before {
   content: "";
   position: absolute;
@@ -144,26 +104,7 @@ blockquote {
   z-index: -1;
 }
 
-/* Highlight text styling - matches copyright span */
-.highlight-text {
-  position: relative;
-  z-index: 1;
-  display: inline;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.highlight-text::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(140,255,50,0.3);
-  z-index: -1;
-}
-
+/* Page styling */
 .page {
   margin: 0;
 }
@@ -183,8 +124,81 @@ blockquote {
   margin-bottom: 0;
 }
 
+/* Collapsible section styles */
+.collapsible-section {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.collapsible-section + .collapsible-section {
+  padding-top: 0;
+}
+
+.collapsible-section + p {
+  margin: 0;
+  padding-top: 0.25em;
+}
+
+p + .collapsible-section {
+  padding-top: 0.25em;
+  margin-top: 0;
+}
+
+p:has(+ .collapsible-section) {
+  margin-bottom: 0;
+}
+
+.collapsible-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.collapsible-section ul {
+  margin-bottom: 0;
+}
+
+.collapsible-section li {
+  margin-bottom: 0.5em;
+}
+
+.collapsible-section li:last-child {
+  margin-bottom: 0;
+}
+
+.collapsible-section summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.collapsible-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section summary::before {
+  content: "+";
+  color: #6B46C1;
+  margin-right: 0.5em;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.collapsible-section[open] summary::before {
+  content: "−";
+}
+
+.collapsible-section[open] summary ~ * {
+  animation: sweep .3s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
+
 /* Mobile-only adjustments */
-@media (max-width: 767px) {
+@media (max-width: 30em) {
   body {
     margin: 0 !important;
   }
@@ -193,27 +207,13 @@ blockquote {
     padding: 0.5rem;
   }
   
-  .container, 
-  .container.content {
-    padding: 0.75rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .masthead-title {
-    padding: 0.5rem;
-  }
-  
-  .copyright div {
-    padding: 0.5rem;
+  blockquote {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
   }
   
   .page img {
     max-width: 100%;
-  }
-  
-  blockquote {
-    padding-left: 1rem;
-    padding-right: 0.5rem;
   }
   
   /* Remove extra space after the last paragraph in mobile */
@@ -223,8 +223,17 @@ blockquote {
     margin-bottom: 0;
   }
   
+  /* Mobile highlight fix */
+  .highlight-text {
+    background-color: rgba(140,255,50,0.3);
+    display: inline;
+  }
+  
+  .highlight-text::before {
+    display: none;
+  }
+  
   /* Highlight adjustments for mobile */
-  .highlight-text::before,
   .copyright div span::before {
     left: -0.25rem;
     right: -0.25rem;
