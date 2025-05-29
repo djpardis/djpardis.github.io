@@ -5,6 +5,11 @@ description: Publications, talks, panels, podcasts, and academic work by Pardis 
 keywords: data science, team management, B2B data collaboration, publications, talks, academic papers
 ---
 
+<div class="image-row">
+    <img src="/files/pics/vsw2025_panel.jpg" alt="Panel discussion at Vancouver Startup Week 2025" title="Panel discussion at Vancouver Startup Week 2025">
+    <img src="/files/pics/vsw2025_audience.jpg" alt="Audience at Vancouver Startup Week 2025" title="Audience at Vancouver Startup Week 2025">
+</div>
+
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Essays</h3></summary>
 
@@ -121,9 +126,12 @@ keywords: data science, team management, B2B data collaboration, publications, t
 <details class="collapsible-section" markdown="1">
 <summary><h3>Panels</h3></summary>
 
+- *Building a Data Logistics Company*  
+  Vancouver Startup Week, May 29, 2025  
+
 - *Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator*  
-  with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/misticain/)  
-  [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 23, 2025  
+  with [Jared Goodner](https://www.linkedin.com/in/jaredgoodner/), [Nic Halverson](https://www.linkedin.com/in/nichalverson/), moderated by [Silvia Mah](https://www.linkedin.com/in/silviamah/)  
+  [Techstars](https://www.techstars.com/), September 28, 2023  
   📷 [photos](https://www.instagram.com/p/DKBrPHOxnHt/)
 
 - *Building teams and culture that support ML innovation*  
