@@ -53,19 +53,26 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Custom list styling */
-.container ul {
-  list-style: none;
-  padding-left: 0;
+/* Content spacing */
+.container.content > * {
+  margin-bottom: 1rem;
 }
 
-.container ul li {
-  margin-bottom: 1.5rem;
+.container.content > *:last-child {
+  margin-bottom: 0;
 }
 
 /* Image styling */
 .container.content .image-container-with-caption {
   margin: 1rem 0;
+}
+
+.container.content .image-container-with-caption:first-child {
+  margin-top: 0;
+}
+
+.container.content .image-container-with-caption:last-child {
+  margin-bottom: 0;
 }
 
 .container.content .image-row {
