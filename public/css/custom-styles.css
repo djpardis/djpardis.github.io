@@ -93,6 +93,21 @@ body {
   height: auto;
   margin: 0;
   max-width: none;
+  display: block;
+}
+
+/* Specific page styles */
+.work .container.content .image-row img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.gigs .container.content .image-row img,
+.index .container.content .image-row img {
+  height: auto;
+  min-height: 200px;
+  max-height: 400px;
+  object-fit: contain;
 }
 
 .container.content .image-caption {
@@ -110,6 +125,16 @@ body {
   
   .container.content .image-row img {
     max-width: 100%;
+  }
+  
+  .work .container.content .image-row img {
+    height: 250px;
+  }
+  
+  .gigs .container.content .image-row img,
+  .index .container.content .image-row img {
+    min-height: 150px;
+    max-height: 300px;
   }
 }
 
