@@ -26,8 +26,8 @@ My academic background spans software engineering
 at [University of Tehran](http://ece.ut.ac.ir/en){:target="_blank" title="School of Electrical and Computer Engineering at University of Tehran"}, 
 maths and graphs at [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank" title="MSc in Applied Mathematics at Ryerson University"}, 
 and AI research at [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-engineering/en/home){:target="_blank" title="Department of Computer Engineering at Amirkabir University"}, 
-where I studied [music genre recognition](/files/genreSturmNoorzad20120116.pdf){:target="_blank"} 
-and [sparse classifiers](/files/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
+where I studied [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} 
+and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
 
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>

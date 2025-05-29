@@ -5,8 +5,6 @@ description: Publications, talks, panels, podcasts, and academic work by Pardis 
 keywords: data science, team management, B2B data collaboration, publications, talks, academic papers
 ---
 
-<link rel="stylesheet" href="/public/css/collapsible.css">
-
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Essays</h3></summary>
 
@@ -185,37 +183,37 @@ keywords: data science, team management, B2B data collaboration, publications, t
 
 - *Modeling the Facebook social network: The memoryless GEO-P graph model*  
   [SOGMSC](https://mathstat.uoguelph.ca/graduate/sogmsc), May 21, 2014  
-  🎞️ [slides](/files/modeling_the_facebook_social_network.pdf)
+  🎞️ [slides](/files/slides/modeling_the_facebook_social_network.pdf)
 
   *Abstract.* Online social networks are ubiquitous graphs. To test algorithms that scale with the size and order of these networks, we require synthetic samples. In this talk, we go over several methods for generating random graphs representative of online social networks. We are especially interested in the M-GEOP model ([Bonato et al., 2014](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0106052)), and in assessing the fit of these models to the Facebook dataset.
 
 - *Efficient classification based on sparse regression*  
   [AUT](http://aut.ac.ir/aut/), July 17, 2012  
-  🎞️ [slides](/files/defense_slides.pdf)
+  🎞️ [slides](/files/slides/defense_slides.pdf)
 
   *Abstract.* Master's thesis defense slides.
 
 - *SPARROW: SPARse appROximation Weighted regression*  
   [UdeM](http://www.iro.umontreal.ca/?lang=en), March 12, 2012 and [SUT](http://www.en.sharif.edu/), February 22, 2012  
-  🎞️ [slides](/files/sparse_approximation_weighted_regression.pdf), 📰 [UdeM-McGill-mPrime ML seminar ad](https://mailman.iro.umontreal.ca/mailman3/hyperkitty/list/lisa_seminaires@iro.umontreal.ca/message/M4TWNW2L6G4Y5WD42RNPMDPOYWLU2KHN/)
+  🎞️ [slides](/files/slides/sparse_approximation_weighted_regression.pdf), 📰 [UdeM-McGill-mPrime ML seminar ad](https://mailman.iro.umontreal.ca/mailman3/hyperkitty/list/lisa_seminaires@iro.umontreal.ca/message/M4TWNW2L6G4Y5WD42RNPMDPOYWLU2KHN/)
 
   *Abstract.* We propose sparse approximation weighted regression (SPARROW), a nonparametric method of regression that takes advantage of the sparse linear approximation of a query point. SPARROW employs weights based on sparse approximation in the context of locally constant, locally linear, and locally quadratic regression to generate better estimates than for e.g., k-nearest neighbor regression and more generally, kernel-weighted local polynomial regression. Our experimental results show that SPARROW performs competitively.
 
 - *Sparse coding and dictionary learning*  
   [SUT](http://www.sharif.ir/en/), October 5, 2011  
-  🎞️ [slides](/files/sparse_coding_and_dictionary_learning.pdf)
+  🎞️ [slides](/files/slides/sparse_coding_and_dictionary_learning.pdf)
 
   *Abstract.* Sparse coding is achieved by solving an under-determined system of linear equations under sparsity constraints. We briefly look at several algorithms that solve the resulting optimization problem (exactly or approximately). We then see how this optimization principle can be applied in both a supervised and unsupervised context: multiclass classification and feature learning, respectively. Next, we talk about dictionary learning and some of its well-known instances. Applications of dictionary learning include image denoising and inpainting.
 
 - *Feature learning with deep networks for image classification*  
   [SUT](http://www.sharif.ir/en/), May 18, 2011  
-  🎞️ [slides](/files/feature_learning_with_deep_networks_for_image_classification.pdf)
+  🎞️ [slides](/files/slides/feature_learning_with_deep_networks_for_image_classification.pdf)
 
   *Abstract.* An image can be represented at different levels, starting from pixels, going on to edges, to parts, to objects, and beyond. Over the years, many attempts have been made at engineering useful descriptors that are able to extract low-to-high level features from images. But what if we could make this process automatic? What if we could "learn" to detect layer after layer of features of increasing abstraction and complexity? After all, it would be impossible for us to foresee and hard-code all the kinds of invariances necessary to build features for our ever more complicated tasks. In this talk, we go over several unsupervised feature learning methods that have been in the making since 2006.
 
 - *Computational learning theory*  
   [AUT](http://aut.ac.ir/), April 26, 2011  
-  🎞️ [slides](/files/computational_learning_theory.pdf)
+  🎞️ [slides](/files/slides/computational_learning_theory.pdf)
 
   *Abstract.* A review of computational learning theory fundamentals.
 
@@ -227,13 +225,13 @@ keywords: data science, team management, B2B data collaboration, publications, t
 
 - *High dimensional data and dimensionality reduction*  
   [AUT](http://aut.ac.ir/), February 1, 2011  
-  🎞️ [slides](/files/high_dimensional_data_and_dimensionality_reduction.pdf)
+  🎞️ [slides](/files/slides/high-dimensional_data_and_dimensionality_reduction.pdf)
 
   *Abstract.* A review of dimensionality reduction techniques with applications.
 
 - *The split Bregman method for total variation denoising*  
   [AUT](http://aut.ac.ir/), May 30, 2010  
-  🎞️ [slides](/files/the_split_bregman_method_for_l1_regularized_problems.pdf)
+  🎞️ [slides](/files/slides/the_split_bregman_method_for_l1_regularized_problems.pdf)
 
   *Abstract.* This is an overview of the split Bregman method for solving an $\ell_1$-regularized problem arising from TV denoising.
 </details>
@@ -243,14 +241,14 @@ keywords: data science, team management, B2B data collaboration, publications, t
 
 - *Efficient classification based on sparse regression*  
   MSc Thesis, Amirkabir University of Technology, July 2012  
-  📔 [thesis](/files/Noorzad2012b.pdf), 📕 [translation](/files/thesis_in_persian.pdf), 🎞️ [slides](/files/defense_slides.pdf)
+  📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/thesis_in_persian.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
 
 - *Regression with sparse approximations of data*  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   European Signal Processing Conference (EUSIPCO), 2012  
-  📃 [paper](/files/Noorzad2012a.pdf), 📰 [poster](http://vbn.aau.dk/files/71866593/poster.pdf)
+  📃 [paper](/files/papers/Noorzad2012a.pdf), 📰 [poster](http://vbn.aau.dk/files/71866593/poster.pdf)
 
 - *On automatic music genre recognition by sparse representation classification using auditory temporal modulations*  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences (LNCS). Springer, 2012  
-  📃 [paper](http://cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_17.pdf)
+  📃 [paper](/files/papers/genreSturmNoorzad20120116.pdf)
