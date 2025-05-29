@@ -1,0 +1,21 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# Editor and system files
+.DS_Store
+.editorconfig
+.obsidian/
+.vscode/
+
+# Ruby dependency management
+.bundle/
+vendor/
+
+# Jekyll configuration
+_config.gh-pages.yml
+
+# Draft posts
+_drafts/
