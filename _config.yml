@@ -7,7 +7,7 @@ tagline:             'Data Science & Technology Leadership'
 description:         'Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.'
 baseurl:             ""
 url:                 "https://djpardis.com"
-logo:                "/public/favicon.ico"
+logo:                "/public/favicon.svg"
 lang:                'en-US'
 
 pages_list:
@@ -15,7 +15,6 @@ pages_list:
   Pubs: '/pubs'
   Gigs: '/gigs'
   Blog: '/blog'
-  About: '/about'
   # Library: '/library'
 
 # About
@@ -40,6 +39,10 @@ safe: false
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# SASS/SCSS settings
+sass:
+  style: compressed
 
 # Syntax highlighting settings
 highlighter: rouge
