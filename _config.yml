@@ -1,19 +1,21 @@
 # Permalinks
-permalink:           pretty
+permalink: /:year/:month/:day/:title/
 
 # Setup
 title:               "Pardis Noorzad"
-tagline:             "Data & Technology Leadership"
-description:         "Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions. Previously led data science at Carbon Health and Twitter."
+tagline:             'Data Science & Technology Leadership'
+description:         'Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.'
 baseurl:             ""
 url:                 "https://djpardis.com"
 logo:                "/public/favicon.ico"
+lang:                'en-US'
 
 pages_list:
   Bio: '/'
   Pubs: '/pubs'
   Gigs: '/gigs'
   Blog: '/blog'
+  About: '/about'
   # Library: '/library'
 
 # About
@@ -59,9 +61,25 @@ kramdown:
 #   baidu: 1234
 
 # Default settings for all pages
+# Default settings
 defaults:
+  # Default settings for all files
   - scope:
       path: ""    # Apply to all files
     values:
       image: /files/pics/profile_pic.jpg  # Profile picture for social media sharing
-      canonical_url: "https://djpardis.com"  # For SEO
+
+  # Blog posts
+  - scope:
+      path: "_posts"   # Apply to blog posts
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/blog/:year/:month/:day/:title/"
+
+  # Pages
+  - scope:
+      path: ""   # Apply to all pages
+      type: "pages"
+    values:
+      layout: "page"
