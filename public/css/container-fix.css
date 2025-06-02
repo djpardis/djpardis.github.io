@@ -67,6 +67,12 @@ body {
 
 /* Mobile container widths */
 @media (max-width: 30em) {
+  body {
+    /* Add equal padding to top and bottom */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
   .masthead .container {
     width: 100%;
     margin: 0;
