@@ -305,8 +305,13 @@ p:has(+ .collapsible-section) {
   
   /* Ensure responsive image containers on mobile */
   [style*="max-width: min(500px, 100%)"] {
-    margin: 0 0.5rem !important;
-    max-width: calc(100% - 1rem) !important;
+    margin: 0.5rem 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  /* Ensure balanced margin for first paragraph after hero image */
+  [style*="max-width: min(500px, 100%)"] + p {
+    margin-top: 0.5rem;
   }
 
   /* Mobile navigation */
