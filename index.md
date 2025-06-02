@@ -5,7 +5,7 @@ keywords: pardis noorzad, djpardis, pardis, noorzad, dj pardis, data science, ge
 title: Bio
 ---
 
-<div style="margin: 0 auto; max-width: 500px; text-align: center;">
+<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
     <img src="/files/pics/profile_pic.jpg" alt="Pardis Noorzad" title="Pardis Noorzad" style="width: 100%; height: auto; display: block;">
 </div>
 
