@@ -1,0 +1,16 @@
+/* 
+ * Custom image sizing
+ */
+
+/* Specific selector for the first image on the gigs page */
+.gigs .custom-hero-container {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.gigs .custom-hero-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
