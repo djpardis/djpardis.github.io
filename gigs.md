@@ -6,13 +6,8 @@ description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), i
 image: /files/pics/djing.jpg
 ---
 
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            <img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)">
-        </div>
-    </div>
-    <div class="image-caption"></div>
+<div style="margin: 0 auto; max-width: 500px; text-align: center;">
+    <img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)" style="width: 100%; height: auto; display: block;">
 </div>
 
 I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com/463652373) at Twitter HQ. I usually DJed with [Julien Gaillard](https://www.linkedin.com/in/juliengaillard1/) on the [guitar](https://vimeo.com/463687716). In the summer of 2019, I was the tour DJ for [Sim Simah](https://soundcloud.com/ohsimsimah) and [Aarxn Cxle](https://music.apple.com/us/artist/aarxn-cxle/1453179768). The picture above is by [Jesse Meria](https://www.instagram.com/meria.agency/?hl=ne) from July 2019 at [The New Parish](https://www.thenewparish.com/), where we were [the opening act](https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf).
