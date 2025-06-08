@@ -200,6 +200,23 @@ body .wrap .container.content {
   margin: 0;
 }
 
+/* Custom separator styling */
+.arrow-separator {
+  text-align: center;
+  margin: 2rem auto;
+  color: rgba(125, 120, 181, 0.7);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.text-center {
+  text-align: center;
+  margin: 1.5rem auto;
+  color: #515151;
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .page > *:last-child {
   margin-bottom: 0;
 }
