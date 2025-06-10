@@ -101,7 +101,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 > *It's hard to beat a person who never gives up.*  
 > *— Babe Ruth*
 
-**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Focus on your customers. Focus on your collaborators.
+**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers, don't attempt to solve global problems for imaginary customers. 
 
 > *I learned the value of focus. I learned it is better to do one product well than two products in a mediocre way.*  
 > *— Reed Hastings*
