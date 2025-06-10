@@ -87,7 +87,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 **Keep learning.** In every scenario, assume you don't have all the answers. Learn and evolve to become the leader the company needs at each stage. Can you [hire yourself every day](https://youtu.be/qAr-yl9A0Xc?si=wUVTi-zKmvuWsEiK&t=1978)?
 
-**Ask for help.** Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected.
+**Ask for help.** Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected. Knowing when to ask, who to ask, and for what is a skill worth perfecting. 
 
 **Go after capital.** Raise capital to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit.
 
@@ -106,7 +106,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 > *I learned the value of focus. I learned it is better to do one product well than two products in a mediocre way.*  
 > *— Reed Hastings*
 
-**Seize the day.** You might not have achieved all the milestones, but you'll never be this young again.
+**Seize the day.** You might not have achieved all the milestones, but you'll never be this young ever again.
 
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
