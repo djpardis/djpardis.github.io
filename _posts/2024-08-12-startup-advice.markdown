@@ -16,7 +16,7 @@ keywords: startup advice, General Folders, entrepreneurship, company building, l
     <div class="image-caption">From my time at Techstars SDSU.</div>
 </div>
 
-It's been quite the journey building [General Folders](https://generalfolders.com) so far. I learned things I wish I had known before starting the company. I also knew things from past jobs that proved helpful with company building. Below is a list of these lessons. I hope that you find them useful on your journey!
+It's been quite the journey building [General Folders](https://generalfolders.com) so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!
 
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
@@ -101,7 +101,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 > *It's hard to beat a person who never gives up.*  
 > *— Babe Ruth*
 
-**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers, don't attempt to solve global problems for imaginary customers. 
+**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers; don't attempt to solve global problems for imaginary customers. 
 
 > *I learned the value of focus. I learned it is better to do one product well than two products in a mediocre way.*  
 > *— Reed Hastings*
