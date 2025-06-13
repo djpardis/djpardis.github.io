@@ -1,8 +1,25 @@
 ---
 layout: page
-tags: [data, data science, management, technology, software, product, cloud infrastructure]
-keywords: pardis noorzad, djpardis, pardis, noorzad, dj pardis, data science, general folders
 title: Bio
+description: Pardis Noorzad is the founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter.
+keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data exchange, secure data sharing
+tags: [data, data science, management, technology, software, product, cloud infrastructure]
+image: /files/pics/profile_pic.jpg
+canonical_url: https://djpardis.com/
+sitemap:
+  priority: 1.0
+  changefreq: monthly
+  lastmod: 2025-06-13
+og:
+  title: "Pardis Noorzad - CEO & Founder of General Folders"
+  description: "Founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter."
+  image: /files/pics/profile_pic.jpg
+  type: website
+twitter:
+  card: summary_large_image
+  title: "Pardis Noorzad - CEO & Founder of General Folders"
+  description: "Founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter."
+  image: /files/pics/profile_pic.jpg
 ---
 
 <div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
@@ -28,6 +45,10 @@ maths and graphs at [Ryerson University](https://www.torontomu.ca/graphs-group/j
 and AI research at [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-engineering/en/home){:target="_blank" title="Department of Computer Engineering at Amirkabir University"}, 
 where I studied [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} 
 and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
+
+---
+
+**Explore more:** [View my work](/work) • [Read my blog](/blog) • [Check out my playlists](/gigs)
 
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
