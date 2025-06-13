@@ -3,6 +3,10 @@ layout: post
 title: 'Startup advice: Some lessons I learned while building General Folders'
 description: 'Sharing key lessons and insights gained from building General Folders'
 keywords: startup advice, General Folders, entrepreneurship, company building, lessons learned
+sitemap:
+  priority: 0.8
+  changefreq: yearly
+  lastmod: 2024-08-12
 ---
 
 *This article is cross-posted from my [original publication on Medium](https://medium.com/@djpardis/startup-advice-e9459d6c1ebb).*
