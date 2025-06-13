@@ -6,6 +6,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <!-- Google Search Console Verification -->
+  {% if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+  {% endif %}
+
   <title>
     {{ site.title }} &nbsp;—&nbsp; {{ page.title }}
   </title>
@@ -65,14 +70,30 @@
         "url": "{{ site.url }}",
         "image": "{{ site.url }}{{ site.defaults[0].values.image }}",
         "jobTitle": "CEO & Founder",
+        "description": "{{ site.description }}",
+        "knowsAbout": ["Data Science", "Technology Leadership", "Secure Data Exchange", "Enterprise Software", "Team Management"],
         "worksFor": {
           "@type": "Organization",
-          "name": "General Folders"
+          "@id": "{{ site.url }}/#organization",
+          "name": "General Folders",
+          "url": "https://generalfolders.com",
+          "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
+          "foundingDate": "2022",
+          "industry": "Enterprise Software",
+          "founder": { "@id": "{{ site.url }}/#person" }
         },
-        "alumniOf": {
-          "@type": "Organization",
-          "name": "Twitter"
-        },
+        "alumniOf": [
+          {
+            "@type": "Organization",
+            "name": "Twitter",
+            "url": "https://twitter.com"
+          },
+          {
+            "@type": "Organization", 
+            "name": "Carbon Health",
+            "url": "https://carbonhealth.com"
+          }
+        ],
         "sameAs": {{ site.social.links | jsonify }}
       },
       {
@@ -85,7 +106,12 @@
           "@type": "Person",
           "@id": "{{ site.url }}/#person"
         },
-        "inLanguage": "{{ site.lang }}"
+        "inLanguage": "{{ site.lang }}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{ site.url }}/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -120,8 +146,7 @@
             {% endif %}
           ]
         }
-      },
-      {% if page.layout == 'post' %}
+      }{% if page.layout == 'post' %},
       {
         "@type": "BlogPosting",
         "@id": "{{ site.url }}{{ page.url }}#article",
@@ -134,9 +159,10 @@
         "publisher": { "@id": "{{ site.url }}/#person" },
         "image": "{{ site.url }}{{ page.image | default: site.defaults[0].values.image }}",
         "keywords": "{{ page.keywords }}",
-        "inLanguage": "{{ site.lang }}"
-      }
-      {% endif %},
+        "inLanguage": "{{ site.lang }}",
+        "articleSection": "Blog",
+        "wordCount": "{{ page.content | number_of_words }}"
+      }{% endif %},
       {
         "@type": "BreadcrumbList",
         "@id": "{{ site.url }}/#breadcrumb",

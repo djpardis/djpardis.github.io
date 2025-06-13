@@ -1,5 +1,5 @@
-# Permalinks
-permalink: /:year/:month/:day/:title/
+# Permalinks - Use default Jekyll permalink structure
+# permalink: /:year/:month/:day/:title/
 
 # Setup
 title:               "Pardis Noorzad"
@@ -34,11 +34,21 @@ social:
 # SEO
 lang: en_US
 
+# Google Search Console verification
+# Add your Google Search Console verification code here
+google_site_verification: "ATx7HggnAwR6TFQqPQoPgnZv3YqQ0_dHNbbQVc-_mXU"
+
 safe: false
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Sitemap configuration
+sitemap:
+  priority: 1.0
+  changefreq: 'monthly'
+  lastmod: site.time
 
 # SASS/SCSS settings
 sass:

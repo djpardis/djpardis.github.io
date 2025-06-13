@@ -1,9 +1,24 @@
 ---
 layout: page
-keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, music, mixtapes, radio shows, dj sets
+keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, music, mixtapes, radio shows, dj sets, twitter hq, new parish
 title: Gigs
 description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections.
 image: /files/pics/djing.jpg
+canonical_url: https://djpardis.com/gigs
+sitemap:
+  priority: 0.7
+  changefreq: monthly
+  lastmod: 2025-06-13
+og:
+  title: "Gigs - DJ Pardis (Pardis Noorzad)"
+  description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
+  image: /files/pics/djing.jpg
+  type: website
+twitter:
+  card: summary_large_image
+  title: "Gigs - DJ Pardis (Pardis Noorzad)"
+  description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
+  image: /files/pics/djing.jpg
 ---
 
 <div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
@@ -41,11 +56,11 @@ I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com
 
 - *[1999 Episode 66](https://bff.fm/broadcasts/13188)* with [Johan Oskarsson](https://twitter.com/skr)  
   [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts), February 2018  
-  🎵 [playlist](https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA)
+  [playlist](https://music.apple.com/us/playlist/1-21-1999/pl.u-PDb44z4IJYqxXA)
 
 - *[2018 Episode 79](https://bff.fm/broadcasts/14056)* with [Johan Oskarsson](https://twitter.com/skr)  
   [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts), May 2018  
-  🎵 [playlist](https://music.apple.com/us/playlist/1-21-first-four-months-2018/pl.u-leyllg6H918eAY)
+  [playlist](https://music.apple.com/us/playlist/1-21-first-four-months-2018/pl.u-leyllg6H918eAY)
 </details>
 
 The poster below, designed by [Regy Augustin](https://www.linkedin.com/in/regynald/), is from Bay to Breakers in 2019.
