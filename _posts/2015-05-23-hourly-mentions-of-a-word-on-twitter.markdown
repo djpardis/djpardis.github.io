@@ -2,7 +2,22 @@
 layout: post
 title: 'Hourly mentions of a word on Twitter'
 description: 'A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack'
-keywords: twitter api, elk stack, logstash, elasticsearch, kibana, data visualization
+keywords: twitter api, elk stack, logstash, elasticsearch, kibana, data visualization, tweepy, social media analytics
+image: /files/pics/profile_pic.jpg
+sitemap:
+  priority: 0.6
+  changefreq: yearly
+  lastmod: 2015-05-23
+og:
+  title: "Hourly mentions of a word on Twitter - Pardis Noorzad"
+  description: "A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack"
+  image: /files/pics/profile_pic.jpg
+  type: article
+twitter:
+  card: summary_large_image
+  title: "Hourly mentions of a word on Twitter - Pardis Noorzad"
+  description: "A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack"
+  image: /files/pics/profile_pic.jpg
 ---
 
 Some time ago (OK, a month ago—time ✈️s), I saw this tweet:
