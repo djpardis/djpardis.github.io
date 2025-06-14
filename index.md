@@ -46,15 +46,16 @@ and AI research at [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-
 where I studied [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} 
 and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
 
----
-
-**Explore more:** [View my work](/work) • [Read my blog](/blog) • [Check out my playlists](/gigs)
-
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
 </div>
 
-Here is my bio for conferences and talks.
+Check out some of the other pages on my website. 
+- Talks and essays at [Work](/work)
+- New posts on the [Blog](/blog)
+- Annual playlists at [Gigs](/gigs) 
+
+And here is my bio for conferences and talks.
 
 > Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
