@@ -52,7 +52,7 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
 
 Check out some of the other pages: 
 - Talks and conferences at [Work](/work)
-- New posts and projects on the [Blog](/blog)
+- Posts and projects on the [Blog](/blog)
 - Annual playlists at [Gigs](/gigs)
 
 And here is my bio for talks and conferences:
