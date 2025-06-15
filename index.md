@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bio
-description: Pardis Noorzad is the founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter.
+description: Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data exchange, secure data sharing
 tags: [data, data science, management, technology, software, product, cloud infrastructure]
 image: /files/pics/profile_pic.jpg
@@ -12,13 +12,13 @@ sitemap:
   lastmod: 2025-06-13
 og:
   title: "Pardis Noorzad - CEO & Founder of General Folders"
-  description: "Founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter."
+  description: "Founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter."
   image: /files/pics/profile_pic.jpg
   type: website
 twitter:
   card: summary_large_image
   title: "Pardis Noorzad - CEO & Founder of General Folders"
-  description: "Founder and CEO of General Folders, a Techstars-backed company making data exchange seamless and secure. Previously led data science at Carbon Health and Twitter."
+  description: "Founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter."
   image: /files/pics/profile_pic.jpg
 ---
 
@@ -57,6 +57,6 @@ Check out some of the other pages <span style="vertical-align: middle;">→</spa
 
 And here is my bio for talks and conferences <span style="vertical-align: middle;">→</span> 
 
-> Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange. 
+> Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
 > healthcare, and social media, backed by degrees in software engineering, mathematics, and AI.
