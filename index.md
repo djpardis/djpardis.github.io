@@ -50,12 +50,12 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
 </div>
 
-Check out some of the other pages on my website. 
-- Talks and essays at [Work](/work)
-- New posts on the [Blog](/blog)
-- Annual playlists at [Gigs](/gigs) 
+Check out some of the other pages: 
+- Talks and conferences at [Work](/work)
+- New posts and projects on the [Blog](/blog)
+- Annual playlists at [Gigs](/gigs)
 
-And here is my bio for conferences and talks.
+And here is my bio for talks and conferences:
 
 > Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
