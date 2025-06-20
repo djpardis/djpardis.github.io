@@ -7,7 +7,7 @@ image: /files/pics/profile_pic.jpg
 sitemap:
   priority: 0.7
   changefreq: yearly
-  lastmod: 2025-05-31
+  lastmod: 2025-06-20
 og:
   title: "Vibe coding a data room app - Pardis Noorzad"
   description: "Building an intuitive data room app to streamline investor access to startup information"
