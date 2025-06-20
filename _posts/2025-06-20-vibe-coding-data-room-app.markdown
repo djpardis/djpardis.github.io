@@ -20,7 +20,7 @@ twitter:
   image: /files/pics/fundraising-screenshot.png
 ---
 
-This is part 1 of a 2-part post. The first part is to talk about my observation with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is how I set up the magic link authentication flow with [Vercel](https://vercel.com){:target="_blank"}.
+This is part 1 of a 2-part post. The first part is to talk about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow with [Vercel](https://vercel.com){:target="_blank"}.
 
 <div class="image-container-with-caption">
     <div class="image-row">
