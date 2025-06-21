@@ -20,7 +20,7 @@ twitter:
   image: /files/pics/fundraising-screenshot.png
 ---
 
-This is part 1 of a 2-part post. The first part is to talk about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow with [Vercel](https://vercel.com){:target="_blank"}.
+This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow with [Vercel](https://vercel.com){:target="_blank"}.
 
 <div class="image-container-with-caption">
     <div class="image-row">
@@ -34,7 +34,9 @@ This is part 1 of a 2-part post. The first part is to talk about my experience w
 
 ## The problem
 
-To put these cool tools to use, I've been busy working on a number of side projects. One that I'll be discussing today is a custom data room app for [General Folders](https://generalfolders.com){:target="_blank"}. You might think, "what in the mother of yak shaving?" You'd be right. 
+To put these cool tools to use, I've been working on a couple of side projects. The one we'll discuss here is a custom data room app for [General Folders](https://generalfolders.com){:target="_blank"}. 
+
+<!-- You might think, "what in the mother of yak shaving?" You'd be right. 
 
 <div class="image-container-with-caption">
     <div class="image-row">
@@ -43,7 +45,7 @@ To put these cool tools to use, I've been busy working on a number of side proje
         </div>
     </div>
     <div class="image-caption">From <a href="https://sketchplanations.com/yak-shaving" target="_blank">here</a>.</div>
-</div>
+</div> -->
 
 I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here's how they compare:
 
@@ -54,13 +56,15 @@ I evaluated several popular data room solutions to understand their strengths an
 | Google Drive | Familiar interface, real-time collaboration | Poor presentation layer, generic experience | Teams already in Google ecosystem |
 | Dropbox | Simple file sharing, version history | Limited structure for investor narrative | Basic file sharing needs |
 
-For a more thorough comparison of tools and features see [ref 1](#ref1) and [ref 1b](#ref1b). None of these tools fully meet my needs. DocSend's tracking features often discourage investor engagement, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. I need an affordable solution that balances security with brand customization while preserving investor preferences.
+For a more thorough comparison of tools and features see [ref 1](#ref1) and [ref 1b](#ref1b). 
+
+None of these tools fully meet my needs. DocSend's tracking features often discourage investor engagement, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
 
 ## The solution
 
 Given that context, our goal is to build a secure platform, with a brand-consistent look and feel, for startups to share links to confidential documents with authenticated investors. 
 
-What we're envisioning is essentially a file explorer for the browser. In addition to the file explorer, we can add on a file viewer, like a slide viewer or a doc viewer, and replicate the logic that DocSend or Google Workspace have built. However, other than enabling for granular tracking it's hard to justify the effort that goes into building a file viewer given the affordable price tag on Google Workspace products and the familiarity of the experience.  
+What we're envisioning is one flavor of a file explorer for the browser. In addition to the file explorer, we can add on a file viewer, like a slide viewer or a doc viewer, and replicate the logic that DocSend or Google Workspace have built. However, apart from enabling for granular tracking it's hard to justify the effort that goes into building a file viewer given the affordable price tag on Google Workspace products and the familiarity of the experience.  
 
 As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box, are all file explorers at the core which is quite beautiful.
 
@@ -76,7 +80,7 @@ Now we get to the topic of vibe coding. I believe the tools have finally reached
 >
 > — Martin Casado ([@martin_casado](https://x.com/martin_casado/status/1929390376185405743)) • June 1, 2024
 
-To build this data room app, I used [Windsurf](https://windsurf.com){:target="_blank"}, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025. Windsurf combines large language models with specialized code generation capabilities, focusing specifically on full-stack web application development.
+To build this data room app, I used [Windsurf](https://windsurf.com){:target="_blank"}, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025. 
 
 For a comparison of coding agents, see [ref 2](#ref2), [ref 3](#ref3), [ref 4](#ref4), and [ref 5](#ref5). To understand how they work, see [ref 6](#ref6).
 
@@ -86,35 +90,35 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 ### Observations
 
-**IDE interface.** Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating is key.
+**IDE interface.** Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating on a project is key.
 
 **Skill issue.** These tools increase the surface area of projects that I would take on. Everyone has their own areas of competency. I can rely on these tools to help me where I lack skills. This means I can take on brand new projects with more confidence. 
 
 ### Best practices
 
-**Version control and checkpoints.** Version control is good, but specifically when using agents that have write access to your codebase. It's like coding on the same codebase with a colleague that is only really practical with version control. 
+**Version control and checkpoints.** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
 
-The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to  have meaningful commits and checkpoints you can revert to.
+The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits and checkpoints that you can revert to.
 
-I would go so far to recommend you manage your git workflow manually. That way you can be sure you have proper checkpoints and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which has happened to some of us.
+I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful checkpoints and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which does happen.
 
-**Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging. Otherwise, you'll end up with unmaintainable code.
+**Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
 
-**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, what am I getting good at? What skills, if any, am I gaining? When I program, I'm getting better at programming. When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every change before every commit. This way, you'll have better command over your codebase and also learn from your robot friend.
+**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program absent an agent, I get better at programming. When I write, I get better at writing When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every change before every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
+
+**Imprecise details.** Being imprecise can be the source of a lot of pain. Be as clear as possible. _English is code._ I wasted a full half day due to imprecisely describing the folder structure in a project only to realize that it was _my_ prompt and not the agent's dumbness that was leading the project astray.
 
 **Technical details.** I've found that the more accurate I can explain what I want and the more technical context I can provide, the faster and smoother things go. 
 
 **TODO file.** Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. A good TODO file not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of "as per my tenth to last prompt."
 
-**Debugging.** Debugging works easier when you understand the codebase. For example, if I can identify the root cause of a bug, it's easier to write a prompt and fix the problem. Otherwise, it's just an endless loop of the blind leading the blind; which can still work.
-
-**Imprecise details.** Being imprecise can be the source of a lot of pain. Be as clear as possible. _English is code._ I wasted a full half day due to imprecisely describing the folder structure in a project only to realize that it was _my_ prompt and not the agent's dumbness that was leading the project astray.
-
 **Cold starts.** Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don't know what the project structure should look like. Lack of templates isn't necessarily a blocker but templates make the experience smoother and steer the agent towards best practices in domains where you are not as opinionated.
+
+**Debugging.** Debugging works easier when you understand the codebase. For example, if I can identify the root cause of a bug, it's easier to write a prompt and fix the problem. Otherwise, it's just an endless loop of the blind leading the blind; which can still work but can take forever.
 
 **Work estimates.** One thing I've struggled with is trying to estimate how long something takes. Is it easier or harder to provide work estimates with working with an agent? I'd say it's harder. Imagine working with someone without having visibility into their strengths and weaknesses. In my experience I've found the agent is not great at auth flows, but really good at CSS, for example. 
 
-**Pure vibes.** If it's a small, short-term project, it's safe to let the agent take the wheel. It's enough to nudge it in the right direction once in while but little involvement is necessary. However, for a bigger project, or one that's meant to be revised later on, or one that needs to be shared with other collaborators, it's different. In this case it's easier if you know the codebase and review every commit, just as you would if you were working with a colleague who might move to another project at any point. Additionally, if your project is one where performance or security matters then you need to be more alert and involved. 
+**Pure vibes.** If it's a small, short-term project, it makes sense to let the agent take the wheel. All you need to do is to nudge it in the right direction once in while but little involvement is necessary. However, for a bigger project, or one that's meant to be revised later, or one that is shared with other collaborators, it's different. In this case it's easier if you know the codebase and review every commit, just as you would if you were working with a colleague who might move to another project at any point. Additionally, if your project is one where performance or security matters then you need to be more alert and involved. 
 
 **Memories and rules.** A new chat window doesn't always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a [memory or a rule](https://docs.windsurf.com/windsurf/cascade/memories){:target="_blank"} to guide the agent.
 
