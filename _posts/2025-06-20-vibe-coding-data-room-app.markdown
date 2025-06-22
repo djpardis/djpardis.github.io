@@ -98,13 +98,13 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 **Version control** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
 
-The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
+The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically, you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
 
 I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which does happen.
 
 **Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
 
-**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program absent an agent, I get better at programming. When I write, I get better at writing When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every change before every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
+**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program, absent an agent, I get better at programming. When I write, I get better at writing. When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every change before every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
 
 **Imprecise details.** Being imprecise can be the source of a lot of pain. Be as clear as possible. _English is code._ I wasted a full half day due to imprecisely describing the folder structure in a project only to realize that it was _my_ prompt and not the agent's dumbness that was leading the project astray.
 
