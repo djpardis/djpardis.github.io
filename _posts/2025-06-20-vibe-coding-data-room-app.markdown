@@ -96,7 +96,7 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 ### Best practices
 
-**Version control and commits.** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
+**Version control** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
 
 The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
 
