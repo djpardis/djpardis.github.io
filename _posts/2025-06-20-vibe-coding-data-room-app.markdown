@@ -96,11 +96,11 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 ### Best practices
 
-**Version control and checkpoints.** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
+**Version control and commits.** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
 
-The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits and checkpoints that you can revert to.
+The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
 
-I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful checkpoints and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which does happen.
+I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which does happen.
 
 **Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
 
@@ -141,11 +141,11 @@ Here's a sneak peek of what we have so far.
 
 ## Next steps
 
-Along with part 2 of this post where I'll explain the login flow with magic link authentication, I will publish a link for you to take the data room app for a spin. 
+Along with part 2 of this post where I'll explain the login flow with magic link authentication, I will publish a link for you to try out the data room app. 
 
 Next up, stay tuned as I share some of my [explorations](https://github.com/djpardis/mcp-code-qna){:target="_blank"} into MCP servers and agents.
 
-*If you have any feedback or advice, please let me know via [X](https://x.com/djpardisdotcom){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://medium.com/@djpardis){:target="_blank"}. I'm looking forward to hearing from you.*
+*If you have any feedback or advice, please let me know via [X](https://x.com/djpardisdotcom){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9){:target="_blank"}. I'm looking forward to hearing from you.*
 
 ### References
 
