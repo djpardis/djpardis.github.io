@@ -49,12 +49,16 @@ To put these cool tools to use, I've been working on a couple of side projects. 
 
 I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here's how they compare:
 
+<div class="table-responsive">
+
 | Tool | Features | Limitations | Strengths |
 |------|-----------|-------------|----------|
 | DocSend | Document analytics, granular access control | Limited customization, corporate aesthetic | Tracking investor engagement |
 | Notion | Flexible organization, modern interface | Weak access controls, limited analytics | Early-stage startups with simple needs |
 | Google Drive | Familiar interface, real-time collaboration | Poor presentation layer, generic experience | Teams already in Google ecosystem |
 | Dropbox | Simple file sharing, version history | Limited structure for investor narrative | Basic file sharing needs |
+
+</div>
 
 For a more thorough comparison of tools and features see [ref 1](#ref1) and [ref 1b](#ref1b). 
 
@@ -92,7 +96,7 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 **IDE interface.** Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating on a project is key.
 
-**Skill issue.** These tools increase the surface area of projects that I would take on. Everyone has their own areas of competency. I can rely on these tools to help me where I lack skills. This means I can take on brand new projects with more confidence. 
+**Skill issue.** These tools increase the surface area of projects that I would take on. Everyone has their own areas of competency. I can rely on them to help me where I lack skills. This means I can take on brand new projects with more confidence. 
 
 ### Best practices
 
@@ -100,11 +104,11 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically, you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
 
-I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work, which does happen.
+I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work.
 
 **Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
 
-**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program, absent an agent, I get better at programming. When I write, I get better at writing. When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every change before every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
+**Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program, absent an agent, I get better at programming. When I write, I get better at writing. When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
 
 **Imprecise details.** Being imprecise can be the source of a lot of pain. Be as clear as possible. _English is code._ I wasted a full half day due to imprecisely describing the folder structure in a project only to realize that it was _my_ prompt and not the agent's dumbness that was leading the project astray.
 
@@ -112,11 +116,11 @@ I would go so far to recommend you manage your git workflow manually. That way y
 
 **TODO file.** Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. A good TODO file not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of "as per my tenth to last prompt."
 
-**Cold starts.** Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don't know what the project structure should look like. Lack of templates isn't necessarily a blocker but templates make the experience smoother and steer the agent towards best practices in domains where you are not as opinionated.
+**Cold starts.** Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don't know what the project structure should look like. Lack of templates isn't necessarily a blocker but templates make the experience smoother; they steer the agent towards best practices in domains where you are not as opinionated.
 
 **Debugging.** Debugging works easier when you understand the codebase. For example, if I can identify the root cause of a bug, it's easier to write a prompt and fix the problem. Otherwise, it's just an endless loop of the blind leading the blind; which can still work but can take forever.
 
-**Work estimates.** One thing I've struggled with is trying to estimate how long something takes. Is it easier or harder to provide work estimates with working with an agent? I'd say it's harder. Imagine working with someone without having visibility into their strengths and weaknesses. In my experience I've found the agent is not great at auth flows, but really good at CSS, for example. 
+**Work estimates.** One thing I've struggled with is trying to estimate how long something takes. Is it easier or harder to provide work estimates when working with an agent? I'd say it's harder. Imagine working with someone without having visibility into their strengths and weaknesses. In my experience I've found the agent is not great at auth flows, but really good at CSS, for example, but I wouldn't have known that until I got deep into the project. 
 
 **Pure vibes.** If it's a small, short-term project, it makes sense to let the agent take the wheel. All you need to do is to nudge it in the right direction once in while but little involvement is necessary. However, for a bigger project, or one that's meant to be revised later, or one that is shared with other collaborators, it's different. In this case it's easier if you know the codebase and review every commit, just as you would if you were working with a colleague who might move to another project at any point. Additionally, if your project is one where performance or security matters then you need to be more alert and involved. 
 
