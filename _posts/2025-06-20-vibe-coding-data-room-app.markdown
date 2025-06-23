@@ -49,7 +49,7 @@ To put these cool tools to use, I've been working on a couple of side projects. 
 
 I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here's how they compare:
 
-<div class="table-responsive">
+<div class="table-responsive" markdown="1">
 
 | Tool | Features | Limitations | Strengths |
 |------|-----------|-------------|----------|
@@ -60,7 +60,7 @@ I evaluated several popular data room solutions to understand their strengths an
 
 </div>
 
-For a more thorough comparison of tools and features see [ref 1](#ref1) and [ref 1b](#ref1b). 
+For a more thorough comparison of tools and features see [Papermark<sup>1</sup>](#ref1) and [FirmRoom<sup>1b</sup>](#ref1b). 
 
 None of these tools fully meet my needs. DocSend's tracking features often discourage investor engagement, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
 
@@ -86,7 +86,7 @@ Now we get to the topic of vibe coding. I believe the tools have finally reached
 
 To build this data room app, I used [Windsurf](https://windsurf.com){:target="_blank"}, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025. 
 
-For a comparison of coding agents, see [ref 2](#ref2), [ref 3](#ref3), [ref 4](#ref4), and [ref 5](#ref5). To understand how they work, see [ref 6](#ref6).
+For a comparison of coding agents, see [Yogesh's head-to-head comparison<sup>2</sup>](#ref2), [C# Corner's top AI tools<sup>3</sup>](#ref3), [Kingy AI's agent analysis<sup>4</sup>](#ref4), and [BrightCoding's technical benchmarks<sup>5</sup>](#ref5). To understand how they work, see [Sourcegraph's anatomy of coding assistants<sup>6</sup>](#ref6).
 
 ## Observations and best practices
 
