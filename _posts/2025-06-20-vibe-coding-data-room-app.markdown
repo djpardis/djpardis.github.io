@@ -126,6 +126,8 @@ I would go so far to recommend you manage your git workflow manually. That way y
 
 **Memories and rules.** A new chat window doesn't always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a [memory or a rule](https://docs.windsurf.com/windsurf/cascade/memories){:target="_blank"} to guide the agent.
 
+**Elsewhere on the web.** Check out the [Windsurf documentation](https://docs.windsurf.com/windsurf/getting-started){:target="_blank"}<a id="ref7-back" href="#ref7"><sup>7</sup></a> and also [Windsurf rules](https://uibakery.io/blog/windsurf-ai-rules){:target="_blank"}<a id="ref8-back" href="#ref8"><sup>8</sup></a> at UI Bakery for general Windsurf best practices. Also see David Crawshaw's [blog post](https://crawshaw.io/blog/programming-with-agents){:target="_blank"}<a id="ref9-back" href="#ref9"><sup>9</sup></a> for an interesting look at programming with agents.
+
 That's it for now. I'll add to this list as I learn more.
 
 ## Product sneak peek
@@ -166,3 +168,9 @@ Next up, stay tuned as I share some of my [explorations](https://github.com/djpa
 <a id="ref5" href="#ref5-back"><sup>5</sup></a> BrightCoding. (2025). ["AI coding assistants compared: technical benchmarks"](https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/). Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.
 
 <a id="ref6" href="#ref6-back"><sup>6</sup></a> Sourcegraph Engineering. (2024). ["The anatomy of an AI coding assistant"](https://sourcegraph.com/blog/anatomy-of-a-coding-assistant). Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI's text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.
+
+<a id="ref7" href="#ref7-back"><sup>7</sup></a> Windsurf. (2025). ["Getting Started with Windsurf"](https://docs.windsurf.com/windsurf/getting-started). Official documentation on getting started with the Windsurf VSCode fork.
+
+<a id="ref8" href="#ref8-back"><sup>8</sup></a> UI Bakery. (2025). ["Windsurf AI Rules"](https://uibakery.io/blog/windsurf-ai-rules). Best practices for working with Windsurf AI and optimizing its performance.
+
+<a id="ref9" href="#ref9-back"><sup>9</sup></a> Crawshaw, D. (2025). ["Programming with Agents"](https://crawshaw.io/blog/programming-with-agents). An in-depth look at the paradigm shift of programming with AI agents.
