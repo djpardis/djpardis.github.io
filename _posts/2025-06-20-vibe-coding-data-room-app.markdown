@@ -62,7 +62,7 @@ I evaluated several popular data room solutions to understand their strengths an
 
 For a more thorough comparison of tools and features see [Papermark<sup>1</sup>](#ref1) and [FirmRoom<sup>1b</sup>](#ref1b). 
 
-None of these tools fully meet my needs. DocSend's tracking features often discourage investor engagement, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
+None of these tools fully meet my needs. DocSend's tracking features often [discourage investor engagement](https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af){:target="_blank"}, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
 
 ## The solution
 
@@ -126,7 +126,7 @@ I would go so far to recommend you manage your git workflow manually. That way y
 
 **Memories and rules.** A new chat window doesn't always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a [memory or a rule](https://docs.windsurf.com/windsurf/cascade/memories){:target="_blank"} to guide the agent.
 
-**Elsewhere on the web.** Check out the [Windsurf documentation](https://docs.windsurf.com/windsurf/getting-started){:target="_blank"}<a id="ref7-back" href="#ref7"><sup>7</sup></a> and also [Windsurf rules](https://uibakery.io/blog/windsurf-ai-rules){:target="_blank"}<a id="ref8-back" href="#ref8"><sup>8</sup></a> at UI Bakery for general Windsurf best practices. Also see David Crawshaw's [blog post](https://crawshaw.io/blog/programming-with-agents){:target="_blank"}<a id="ref9-back" href="#ref9"><sup>9</sup></a> for an interesting look at programming with agents.
+**Elsewhere on the web.** Check out the [Windsurf documentation](https://docs.windsurf.com/windsurf/getting-started){:target="_blank"}<a id="ref7-back" href="#ref7"><sup>7</sup></a> and also [Windsurf rules](https://uibakery.io/blog/windsurf-ai-rules){:target="_blank"}<a id="ref8-back" href="#ref8"><sup>8</sup></a> at UI Bakery for general Windsurf best practices. Also see David Crawshaw's [blog post](https://crawshaw.io/blog/programming-with-agents){:target="_blank"}<a id="ref9-back" href="#ref9"><sup>9</sup></a> for an interesting look at programming with agents. For more on vibe coding, check out [12 Rules to Vibe Code Without Frustration](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration){:target="_blank"}<a id="ref10-back" href="#ref10"><sup>10</sup></a>.
 
 That's it for now. I'll add to this list as I learn more.
 
