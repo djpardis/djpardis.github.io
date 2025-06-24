@@ -174,3 +174,5 @@ Next up, stay tuned as I share some of my [explorations](https://github.com/djpa
 <a id="ref8" href="#ref8-back"><sup>8</sup></a> UI Bakery. (2025). ["Windsurf AI Rules"](https://uibakery.io/blog/windsurf-ai-rules). Best practices for working with Windsurf AI and optimizing its performance.
 
 <a id="ref9" href="#ref9-back"><sup>9</sup></a> Crawshaw, D. (2025). ["Programming with Agents"](https://crawshaw.io/blog/programming-with-agents). An in-depth look at the paradigm shift of programming with AI agents.
+
+<a id="ref10" href="#ref10-back"><sup>10</sup></a> Creator Economy. (2025). ["12 Rules to Vibe Code Without Frustration"](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration). A practical guide to effective AI-assisted programming techniques and best practices.
