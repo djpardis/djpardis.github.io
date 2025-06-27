@@ -96,11 +96,11 @@ Now let's get to the main point of this post. Below I share some observations I'
 
 **IDE interface.** Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating on a project is key.
 
-**Skill issue.** These tools increase the surface area of projects that I would take on. Everyone has their own areas of competency. I can rely on them to help me where I lack skills. This means I can take on brand new projects with more confidence. 
+**Skill issue.** These tools increase the surface area of projects that I would take on. I know I can rely on them where I lack skills. This means I can take on brand new projects with more confidence. 
 
 ### Best practices
 
-**Version control** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
+**Version control.** Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control. 
 
 The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you're sure about; but practically, you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.
 
