@@ -1,0 +1,26 @@
+{
+  "name": "Pardis Noorzad",
+  "short_name": "DJ Pardis",
+  "description": "Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.",
+  "icons": [
+    {
+      "src": "/public/favicon/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/favicon/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/favicon/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFF99",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}

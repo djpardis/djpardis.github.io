@@ -6,9 +6,9 @@ keywords: data science, team management, B2B data collaboration, publications, t
 image: /files/pics/vsw2025_panel.jpg
 canonical_url: https://djpardis.com/work
 sitemap:
-  priority: 0.9
+  priority: 0.5
   changefreq: monthly
-  lastmod: 2025-06-13
+  lastmod: 2025-06-30
 og:
   title: "Work - Pardis Noorzad"
   description: "Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration."
