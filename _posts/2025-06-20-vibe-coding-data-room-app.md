@@ -106,7 +106,7 @@ The agent sometimes changes already functional files and modules that are not re
 
 I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day's worth of work.
 
-**Nudging.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
+**Local vs global solutions.** The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about _separation of concerns_. Otherwise, you'll end up with unmaintainable code.
 
 **Code review.** As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program, absent an agent, I get better at programming. When I write, I get better at writing. When I vibe code, especially in a domain I'm not familiar with, am I actually learning anything? This is where I'd recommend reviewing every commit. This way, you'll not only have better command over your codebase but also learn from your robot friend.
 
@@ -114,7 +114,7 @@ I would go so far to recommend you manage your git workflow manually. That way y
 
 **Technical details.** I've found that the more accurate I can explain what I want and the more technical context I can provide, the faster and smoother things go. 
 
-**TODO file.** Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. A good TODO file not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of "as per my tenth to last prompt."
+**Planning file (plan.md).** Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. Windsurf's [Planning Mode](https://docs.windsurf.com/windsurf/cascade/planning-mode#planning-mode){:target="_blank"} not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of "as per my tenth to last prompt."
 
 **Cold starts.** Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don't know what the project structure should look like. Lack of templates isn't necessarily a blocker but templates make the experience smoother; they steer the agent towards best practices in domains where you are not as opinionated.
 
