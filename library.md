@@ -2,6 +2,10 @@
 layout: page
 title: Library
 published: false
+sitemap: false
+robotsNoIndex: true
+meta:
+  robots: noindex, nofollow
 ---
 
 I cataloged [my library](http://www.librarything.com/profile/djpardis). Below is the list.
