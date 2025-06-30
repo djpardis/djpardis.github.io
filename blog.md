@@ -24,7 +24,11 @@ twitter:
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>New</h3></summary>
 
-[June 20, 2025] *[Vibe coding a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
+<!-- [June 29, 2025] *[B2B Cross-Company Data Transfer Solutions]({{ site.baseurl }}{% post_url 2025-06-29-b2b-data-transfer-solutions %})*  
+[June 29, 2025] *[AI Companies: Code Refactoring]({{ site.baseurl }}{% post_url 2025-06-29-ai-companies-code-refactoring %})*  
+[June 24, 2025] *[Data Transfer in Financial Services]({{ site.baseurl }}{% post_url 2025-06-24-data-transfer-financial-services %})*  
+[June 24, 2025] *[Revisiting Moneyball]({{ site.baseurl }}{% post_url 2025-06-24-revisiting-moneyball %})*   -->
+[June 20, 2025] *[Vibe coding a data room app: Part I]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
 [August 12, 2024] *[Startup advice: Some lessons I learned while building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
 </details>
 
