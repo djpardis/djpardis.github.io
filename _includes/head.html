@@ -43,8 +43,16 @@
   <!-- Custom image sizing -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/image-size.css">
 
-  <!-- Favicon setup -->
-  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.svg" type="image/svg+xml">
+  <!-- Comprehensive Favicon setup for better search engine visibility -->
+  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.ico" sizes="any"><!-- Default favicon for browsers -->
+  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.svg" type="image/svg+xml"><!-- SVG favicon -->
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/favicon/icons/apple-touch-icon.png"><!-- iOS icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/public/favicon/icons/favicon-32x32.png"><!-- Standard favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/public/favicon/icons/favicon-16x16.png"><!-- Small favicon -->
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/public/favicon/icons/favicon-32x32.png"><!-- Windows tile -->
+  <meta name="msapplication-TileColor" content="#FFFF99"><!-- Windows tile color -->
+  <meta name="theme-color" content="#FFFF99"><!-- Mobile theme color -->
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest"><!-- Web app manifest -->
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
