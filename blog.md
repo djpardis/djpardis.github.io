@@ -29,9 +29,8 @@ twitter:
 [June 24, 2025] *[Data Transfer in Financial Services]({{ site.baseurl }}{% post_url 2025-06-24-data-transfer-financial-services %})*  
 [June 24, 2025] *[Revisiting Moneyball]({{ site.baseurl }}{% post_url 2025-06-24-revisiting-moneyball %})*   -->
 
-<!-- [June 30, 2025] *[Vibe coding a data room app: Part II]({{ site.baseurl }}{% post_url 2025-06-30-vibe-coding-data-room-app-part-ii %})*   -->
-
-[June 20, 2025] *[Vibe coding a data room app: Part I]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
+[July 2, 2025] *[Introducing The Data Room App [Draft]]({{ site.baseurl }}{% post_url 2025-07-02-introducing-the-data-room-app %})*  
+[June 20, 2025] *[Vibe coding a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
 [August 12, 2024] *[Startup advice: Some lessons I learned while building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
 </details>
 

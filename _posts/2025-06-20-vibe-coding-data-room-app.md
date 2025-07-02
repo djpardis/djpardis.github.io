@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vibe coding a data room app: Part I'
+title: 'Vibe coding a data room app'
 description: 'Building an intuitive data room app to streamline investor access to startup information'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication
 image: /files/pics/fundraising-screenshot.png
@@ -148,7 +148,7 @@ Along with part 2 of this post where I'll explain the login flow with magic link
 
 Next up, stay tuned as I share some of my [explorations](https://github.com/djpardis/mcp-code-qna){:target="_blank"} into MCP servers and agents.
 
-*If you have any feedback or advice, please let me know via [X](https://x.com/djpardisdotcom){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9){:target="_blank"}. I'm looking forward to hearing from you.*
+*If you have any feedback or advice, please let me know via [X](https://x.com/djpardis){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9){:target="_blank"}. I'm looking forward to hearing from you.*
 
 ### References
 
