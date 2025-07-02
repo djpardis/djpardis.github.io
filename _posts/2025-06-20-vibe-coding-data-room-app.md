@@ -20,7 +20,7 @@ twitter:
   image: /files/pics/fundraising-screenshot.png
 ---
 
-This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow with [Vercel](https://vercel.com){:target="_blank"}.
+This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow.
 
 <div class="image-container-with-caption">
     <div class="image-row">
@@ -141,19 +141,6 @@ I asked Windsurf directly what advice it would give to someone starting with AI-
 Check out the [Windsurf documentation](https://docs.windsurf.com/windsurf/getting-started){:target="_blank"}<a id="ref7-back" href="#ref7"><sup>7</sup></a> and also [Windsurf rules](https://uibakery.io/blog/windsurf-ai-rules){:target="_blank"}<a id="ref8-back" href="#ref8"><sup>8</sup></a> at UI Bakery for general Windsurf best practices. Also see David Crawshaw's [blog post](https://crawshaw.io/blog/programming-with-agents){:target="_blank"}<a id="ref9-back" href="#ref9"><sup>9</sup></a> for an interesting look at programming with agents. For more on vibe coding, check out [12 Rules to Vibe Code Without Frustration](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration){:target="_blank"}<a id="ref10-back" href="#ref10"><sup>10</sup></a>.
 
 That's it for now. I'll add to this list as I learn more.
-
-## Product sneak peek
-
-Here's a sneak peek of what we have so far. 
-
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            <img src="/files/pics/fundraising-screenshot.png" alt="Fundraising screenshot from data room app" title="Fundraising screenshot from data room app">
-        </div>
-    </div>
-    <div class="image-caption">A screenshot of the fundraising page from the data room app.</div>
-</div>
 
 ## Next steps
 
