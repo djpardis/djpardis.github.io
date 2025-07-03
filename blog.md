@@ -24,7 +24,7 @@ twitter:
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>New</h3></summary>
 
-[July 2, 2025] *[Introducing The Data Room App [Draft]]({{ site.baseurl }}{% post_url 2025-07-02-introducing-the-data-room-app %})*  
+[July 2, 2025] *[Introducing The Data Room App: WIP]({{ site.baseurl }}{% post_url 2025-07-02-introducing-the-data-room-app %})*  
 [June 20, 2025] *[Vibe coding a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
 [August 12, 2024] *[Startup advice: Some lessons I learned while building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
 </details>
