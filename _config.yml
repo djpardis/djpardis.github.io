@@ -15,7 +15,7 @@ pages_list:
   Work: '/work'
   Gigs: '/gigs'
   Blog: '/blog'
-  # Library: '/library'
+  Pod: '/pod'
 
 # About
 author:
