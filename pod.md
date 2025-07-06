@@ -25,7 +25,7 @@ twitter:
     <img src="/files/pics/park w friends.jpg" alt="Friends in the park" title="Friends in the park" style="width: 100%; height: auto; display: block;">
 </div>
 
-Welcome to the new pod, where I host conversations with friends about all aspects of building successful businesses. We explore technology trends, share best practices, discuss industry events, and talk about learning new things in an ever-evolving landscape.
+Welcome to the pod, where I host conversations with friends about all aspects of building successful businesses. We explore technology trends, share best practices, discuss events, and talk about learning new things in the ever-evolving landscape.
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Episodes</h3></summary>
