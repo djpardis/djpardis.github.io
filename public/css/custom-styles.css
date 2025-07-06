@@ -181,6 +181,7 @@ body .wrap .container.content {
   display: inline;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  padding: 0 2px;
 }
 
 .highlight-text::before,
@@ -193,6 +194,11 @@ body .wrap .container.content {
   bottom: 0;
   background-color: rgba(140,255,50,0.3);
   z-index: -1;
+}
+
+/* Pod link styling */
+.pod-link:hover, .pod-link:active {
+  background-color: #FFFF99;
 }
 
 /* Page styling */
