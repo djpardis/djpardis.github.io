@@ -11,21 +11,30 @@ sitemap:
   lastmod: 2025-07-05
 og:
   title: "Pod - Pardis Noorzad"
-  description: "Conversations with friends about all aspects of building successful businesses, technology trends, best practices, events, and learning new things."
+  description: "Conversations with friends about all aspects of building businesses, technology trends, best practices, events, and learning new things."
   image: /files/pics/profile_pic.jpg
   type: website
 twitter:
   card: summary_large_image
   title: "Pod - Pardis Noorzad"
-  description: "Conversations with friends about all aspects of building successful businesses, technology trends, best practices, events, and learning new things."
+  description: "Conversations with friends about all aspects of building businesses, technology trends, best practices, events, and learning new things."
   image: /files/pics/profile_pic.jpg
 ---
 
-<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    <img src="/files/pics/park w friends.jpg" alt="Friends in the park" title="Friends in the park" style="width: 100%; height: auto; display: block;">
+<div class="image-container-with-caption">
+    <div class="image-row">
+        <div class="image-container">
+            <img src="/files/pics/crawford.jpg" alt="Brandon Crawford" title="Brandon Crawford">
+        </div>
+        <div class="image-container">
+            <img src="/files/pics/kb.jpg" alt="KB" title="KB">
+        </div>
+    </div>
 </div>
 
-Welcome to the pod, where I host conversations with friends about all aspects of building successful businesses. We explore technology trends, share best practices, discuss events, and talk about learning new things in the ever-evolving landscape.
+Welcome to the [107 Wins Club](https://107wins.club) podcast, where I host conversations with friends about all aspects of business building. We explore technology trends, share best practices, and talk about learning new things in our ever-changing world.
+
+Why "107 Wins"? The name commemorates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to immortalize that special year in our podcast name.
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Episodes</h3></summary>
