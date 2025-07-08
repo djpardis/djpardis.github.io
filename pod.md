@@ -21,18 +21,15 @@ twitter:
   image: /files/pics/profile_pic.jpg
 ---
 
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            <img src="/files/pics/crawford.jpg" alt="Brandon Crawford" title="Brandon Crawford">
-        </div>
-        <div class="image-container">
-            <img src="/files/pics/kb.jpg" alt="KB" title="KB">
-        </div>
-    </div>
+<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
+    <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants - 107 Wins" style="width: 100%; height: auto; display: block;">
 </div>
 
-Welcome to the [107 Wins Club](https://107wins.club) podcast, where I host conversations with friends about all aspects of business building. We explore technology trends, share best practices, and talk about learning new things in our ever-changing world.
+Welcome to the [107 Wins](https://107wins.club) podcast, where I host conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
+
+**Already scheduled for an upcoming episode?** 👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide) 👈
+
+**Want to be a guest?** 👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request) 👈
 
 Why "107 Wins"? The name commemorates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to immortalize that special year in our podcast name.
 
