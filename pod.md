@@ -25,7 +25,7 @@ twitter:
     <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants - 107 Wins" style="width: 100%; height: auto; display: block;">
 </div>
 
-Welcome to the [107 Wins](https://107wins.club) podcast, where I host conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
+Welcome to the brand new [107 Wins](https://107wins.club) podcast, where we host conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
 
 **Already scheduled for an upcoming episode?** 
 
