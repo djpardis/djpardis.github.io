@@ -26,32 +26,32 @@ twitter:
 Interested in joining us on the 107 Wins podcast? Please fill out the form below.
 
 <form action="https://formspree.io/f/xldnywyl" method="POST" class="form">
-  <div class="form-field" style="margin-bottom: 0.75rem;">
-    <label for="name" style="display: block; margin-bottom: 0.25rem;">Name*</label>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.25rem;">
+  <div class="form-field">
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required>
   </div>
   
-  <div class="form-field" style="margin-bottom: 0.75rem;">
-    <label for="email" style="display: block; margin-bottom: 0.25rem;">Email*</label>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.25rem;">
+  <div class="form-field">
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required>
   </div>
   
-  <div class="form-field" style="margin-bottom: 0.75rem;">
-    <label for="title" style="display: block; margin-bottom: 0.25rem;">Title/Role*</label>
-    <input type="text" id="title" name="title" required style="width: 100%; padding: 0.25rem;">
+  <div class="form-field">
+    <label for="title">Title/Role*</label>
+    <input type="text" id="title" name="title" required>
   </div>
   
-  <div class="form-field" style="margin-bottom: 0.75rem;">
-    <label for="company" style="display: block; margin-bottom: 0.25rem;">Company/Organization*</label>
-    <input type="text" id="company" name="company" required style="width: 100%; padding: 0.25rem;">
+  <div class="form-field">
+    <label for="company">Company/Organization*</label>
+    <input type="text" id="company" name="company" required>
   </div>
   
-  <div class="form-field" style="margin-bottom: 0.75rem;">
-    <label for="topic" style="display: block; margin-bottom: 0.25rem;">What would you like to discuss?*</label>
-    <textarea id="topic" name="topic" rows="4" required style="width: 100%; padding: 0.25rem;"></textarea>
+  <div class="form-field">
+    <label for="topic">What would you like to discuss?*</label>
+    <textarea id="topic" name="topic" rows="4" required></textarea>
   </div>
   
-  <div class="form-field" style="margin-top: 1rem;">
-    <button type="submit" class="button" style="background-color: #3498db; border: none; color: white;">Submit request</button>
+  <div class="form-field">
+    <button type="submit" class="button">Submit request</button>
   </div>
 </form>
