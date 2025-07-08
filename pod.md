@@ -29,11 +29,11 @@ Welcome to the brand new [107 Wins](https://107wins.club) podcast, where we host
 
 **Already scheduled for an upcoming episode?** 
 
-👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide){:target="_blank"} 👈
+🤗 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide){:target="_blank"}
 
 **Want to be a guest?** 
 
-👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request){:target="_blank"} 👈
+💌 [Submit a request]({{ site.baseurl }}/podcast-guest-request){:target="_blank"}
 
 **Why <span class="highlight-text">107 Wins</span>?** 
 
@@ -48,6 +48,19 @@ The name commemorates the SF Giants' historic 2021 season when they won an incre
 [July 15, 2025] *[Episode 1: Title of Episode]({{ site.baseurl }}/pod/episode1)*  
 [July 30, 2025] *[Episode 2: Title of Episode]({{ site.baseurl }}/pod/episode2)*  
 -->
+
+---
+
+<div style="text-align: center; margin-top: 1.5rem;">
+  <div style="display: flex; justify-content: center; gap: 1.5rem;">
+    <a href="https://youtube.com/@107wins" target="_blank" title="YouTube"><i class="fa fa-youtube-play" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://instagram.com/107wins" target="_blank" title="Instagram"><i class="fa fa-instagram" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://bsky.app/profile/107wins.club" target="_blank" title="Bluesky"><i class="fa fa-cloud" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://x.com/107wins" target="_blank" title="X"><i class="fa fa-times" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://open.spotify.com/show/107wins" target="_blank" title="Spotify"><i class="fa fa-spotify" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://podcasts.apple.com/podcast/107wins" target="_blank" title="Apple Podcasts"><i class="fa fa-apple" style="font-size: 1.5rem; color: #3498db;"></i></a>
+  </div>
+</div>
 
 </details>
 
