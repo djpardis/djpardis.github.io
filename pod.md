@@ -27,11 +27,17 @@ twitter:
 
 Welcome to the [107 Wins](https://107wins.club) podcast, where I host conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
 
-**Already scheduled for an upcoming episode?** 👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide){:target="_blank"} 👈
+**Already scheduled for an upcoming episode?** 
 
-**Want to be a guest?** 👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request){:target="_blank"} 👈
+👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide){:target="_blank"} 👈
 
-Why "107 Wins"? The name commemorates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to immortalize that special year in our podcast name.
+**Want to be a guest?** 
+
+👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request){:target="_blank"} 👈
+
+**Why <span class="highlight-text">107 Wins</span>?** 
+
+The name commemorates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to immortalize that special year in our podcast name.
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Episodes</h3></summary>
