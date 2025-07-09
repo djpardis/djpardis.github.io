@@ -23,7 +23,11 @@ twitter:
 ---
 
 <div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    <img src="/files/pics/profile_pic.jpg" alt="Pardis Noorzad" title="Pardis Noorzad" style="width: 100%; height: auto; display: block;">
+    {% include responsive-image.html 
+       path="/files/pics/profile_pic.jpg" 
+       alt="Pardis Noorzad" 
+       title="Pardis Noorzad" 
+       style="width: 100%; height: auto; display: block;" %}
 </div>
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
