@@ -14,7 +14,10 @@ sitemap:
 <div class="image-container-with-caption">
     <div class="image-row">
         <div class="image-container">
-            <img src="https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg" alt="From my time at Techstars SDSU" title="From my time at Techstars SDSU">
+            {% include responsive-image.html 
+               path="https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg" 
+               alt="From my time at Techstars SDSU" 
+               title="From my time at Techstars SDSU" %}
         </div>
     </div>
     <div class="image-caption">From my time at Techstars SDSU.</div>
