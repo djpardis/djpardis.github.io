@@ -12,8 +12,8 @@
 
 {% assign file_path_parts = include.path | split: '.' %}
 {% assign file_extension = file_path_parts | last %}
-{% assign base_path = include.path | replace: file_extension, '' %}
-{% assign webp_path = base_path | append: 'webp' %}
+{% assign base_path = include.path | split: '.' | reverse | shift | reverse | join: '.' %}
+{% assign webp_path = base_path | append: '.webp' %}
 
 <picture>
   {% if file_extension == 'jpg' or file_extension == 'jpeg' or file_extension == 'png' %}
