@@ -219,6 +219,26 @@ body .wrap .container.content {
   background-color: #FFFF99;
 }
 
+/* 107 Wins 90s-style underline styling */
+.wiggly-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.wiggly-underline::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -4px;
+  height: 6px;
+  background: #FF00AA;
+  border-radius: 6px;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
 /* Page styling */
 .page {
   margin: 0;
