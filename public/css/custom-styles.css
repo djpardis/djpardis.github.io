@@ -232,11 +232,19 @@ body .wrap .container.content {
   left: -2px;
   right: -2px;
   bottom: -4px;
-  height: 6px;
+  height: 8px;
   background: #FF00AA;
   border-radius: 6px;
   transform: rotate(-1deg);
   z-index: -1;
+}
+
+/* NEW! label styling */
+.new-label {
+  color: #FF99D6;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  font-weight: bold;
 }
 
 /* Page styling */
