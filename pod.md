@@ -25,17 +25,17 @@ twitter:
     <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants - 107 Wins" style="width: 100%; height: auto; display: block;">
 </div>
 
-Welcome to the brand new [107 Wins](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
+Welcome to the brand new [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
 
 **Already scheduled for an upcoming episode?** 
 
-👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide){:target="_blank"}
+👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide)
 
-**Want to be a guest?** 
+**Want to be a guest on an upcoming episode?** 
 
-👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request){:target="_blank"}
+👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request)
 
-**Why 107 Wins?** 
+**Why <span class="wiggly-underline">107 Wins</span>?** 
 
 The name celebrates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to honor that special year in our podcast name.
 
