@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pod
-description: Conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
+description: Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 keywords: podcast, conversations, business building, technology trends, best practices, events, learning, entrepreneurship, pardis noorzad
 image: /files/pics/107winslogo.png
 canonical_url: https://djpardis.com/pod
@@ -11,21 +11,21 @@ sitemap:
   lastmod: 2025-07-05
 og:
   title: "Pod - Pardis Noorzad"
-  description: "Conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world."
+  description: "Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things."
   image: /files/pics/107winslogo.png
   type: website
 twitter:
   card: summary_large_image
   title: "Pod - Pardis Noorzad"
-  description: "Conversations with friends about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world."
+  description: "Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things."
   image: /files/pics/107winslogo.png
 ---
 
 <div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants - 107 Wins" style="width: 100%; height: auto; display: block;">
+    <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants" style="width: 100%; height: auto; display: block;">
 </div>
 
-Welcome to the brand new [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things in our ever-changing world.
+Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 
 **Already scheduled for an upcoming episode?** 
 
@@ -35,7 +35,7 @@ Welcome to the brand new [<span class="wiggly-underline">107 Wins</span>](https:
 
 👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request)
 
-**Why <span class="wiggly-underline">107 Wins</span>?** 
+**Why the name <span class="wiggly-underline">107 Wins</span>?** 
 
 The name celebrates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to honor that special year in our podcast name.
 
@@ -53,7 +53,7 @@ The name celebrates the SF Giants' historic 2021 season when they won an incredi
 
 <div style="text-align: center; margin-top: 1.5rem;">
   <div style="display: flex; justify-content: center; gap: 1.5rem;">
-    <a href="https://youtube.com/@107winsclub" target="_blank" title="YouTube"><i class="fa fa-youtube-play" style="font-size: 1.5rem; color: #3498db;"></i></a>
+    <a href="https://youtube.com/@107wins" target="_blank" title="YouTube"><i class="fa fa-youtube-play" style="font-size: 1.5rem; color: #3498db;"></i></a>
     <a href="https://instagram.com/107wins.club" target="_blank" title="Instagram"><i class="fa fa-instagram" style="font-size: 1.5rem; color: #3498db;"></i></a>
     <a href="https://bsky.app/profile/107wins.club" target="_blank" title="Bluesky"><i class="fa fa-cloud" style="font-size: 1.5rem; color: #3498db;"></i></a>
     <a href="https://x.com/107winsclub" target="_blank" title="X"><i class="fa fa-times" style="font-size: 1.5rem; color: #3498db;"></i></a>
