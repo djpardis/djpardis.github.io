@@ -1,6 +1,31 @@
-# <span class="highlight-text">107 Wins</span> guest guide
+---
+layout: page
+title: Pod
+description: Guide for guests appearing on the 107 Wins podcast
+keywords: podcast, guest guide, 107 wins, interview preparation
+image: /files/pics/107winslogo.png
+canonical_url: https://djpardis.com/podcast-guest-guide
+sitemap:
+  priority: 0.7
+  changefreq: monthly
+  lastmod: 2025-07-08
+og:
+  title: "Guest Guide - 107 Wins Podcast"
+  description: "Guide for guests appearing on the 107 Wins podcast"
+  image: /files/pics/107winslogo.png
+  type: website
+twitter:
+  card: summary_large_image
+  title: "Guest Guide - 107 Wins Podcast"
+  description: "Guide for guests appearing on the 107 Wins podcast"
+  image: /files/pics/107winslogo.png
+---
 
-Thank you for joining us as a guest on the 107 Wins podcast! This guide provides recommendations to help ensure a quality conversation and enjoyable experience for both you and our listeners.
+[<-- Go back]({{ site.baseurl }}/pod)
+
+# <span class="wiggly-underline">107 Wins</span> guest guide
+
+Thank you for joining us as a guest on the podcast! This guide provides recommendations to help ensure a quality conversation and enjoyable experience for both you and our listeners.
 
 ## Table of contents
 - [Technical setup guide](#technical-setup-guide)
