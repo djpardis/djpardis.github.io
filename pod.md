@@ -21,8 +21,21 @@ twitter:
   image: /files/pics/107winslogo.png
 ---
 
-<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    <img src="/files/pics/2021 giants.jpg" alt="2021 SF Giants" title="2021 SF Giants" style="width: 100%; height: auto; display: block;">
+<div style="margin: 0 auto; max-width: min(1000px, 100%); text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div style="flex: 1; min-width: 300px;">
+        {% include responsive-image.html 
+           path="/files/pics/2021 giants.jpg" 
+           alt="2021 SF Giants" 
+           title="2021 SF Giants" 
+           style="width: 100%; height: auto; display: block;" %}
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+        {% include responsive-image.html 
+           path="/files/pics/baseball.jpg" 
+           alt="Baseball" 
+           title="Baseball" 
+           style="width: 100%; height: auto; display: block;" %}
+    </div>
 </div>
 
 Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.

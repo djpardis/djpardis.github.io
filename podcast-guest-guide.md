@@ -40,7 +40,9 @@ Thank you for joining us as a guest on the podcast! This guide provides recommen
 **We use Riverside.fm for our remote interviews:**
 - High-quality audio and video recording
 - Separate tracks for host and guest
-- Simple browser-based interface (no downloads required)
+- Simple browser-based interface for all platforms (no downloads required)
+- Mac users can also use the desktop app: [Riverside Desktop App](https://riverside.fm/mac-app)
+- Mobile apps available for iOS and Android devices
 - You'll receive a link to join before the scheduled interview
 
 ### Audio equipment
