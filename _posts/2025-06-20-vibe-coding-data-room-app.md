@@ -25,7 +25,9 @@ This is part 1 of a 2-part post. The first part is about my experience with [vib
 <div class="image-container-with-caption">
     <div class="image-row">
         <div class="image-container">
-            <img src="/files/pics/fancy-pooh.jpg" alt="A cute bear saying 'oh bother'">
+            {% include responsive-image.html 
+               path="/files/pics/fancy-pooh.jpg" 
+               alt="A cute bear saying 'oh bother'" %}
         </div>
     </div>
     <div class="image-caption">It's different.</div>
