@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Request to be a guest
+title: Pod
 description: Submit a request to be a guest on the 107 Wins podcast
 keywords: podcast, guest request, 107 wins, interview request
-image: /files/pics/profile_pic.jpg
+image: /files/pics/107winslogo.png
 canonical_url: https://djpardis.com/podcast-guest-request
 sitemap:
   priority: 0.7
@@ -12,18 +12,20 @@ sitemap:
 og:
   title: "Request to be a Guest - 107 Wins Podcast"
   description: "Submit a request to be a guest on the 107 Wins podcast"
-  image: /files/pics/profile_pic.jpg
+  image: /files/pics/107winslogo.png
   type: website
 twitter:
   card: summary_large_image
   title: "Request to be a Guest - 107 Wins Podcast"
   description: "Submit a request to be a guest on the 107 Wins podcast"
-  image: /files/pics/profile_pic.jpg
+  image: /files/pics/107winslogo.png
 ---
 
-# <span class="highlight-text">107 Wins</span> guest request
+[<-- Go back]({{ site.baseurl }}/pod)
 
-Interested in joining us on the 107 Wins podcast? Please fill out the form below.
+# <span class="wiggly-underline">107 Wins</span> guest request
+
+Interested in joining us as a guest on the podcast? Please fill out the form below.
 
 <form action="https://formspree.io/f/xldnywyl" method="POST" class="form">
   <div class="form-field">
