@@ -24,10 +24,16 @@ twitter:
 <div class="image-container-with-caption">
     <div class="image-row">
         <div class="image-container">
-            <img src="/files/pics/vsw2025_panel.jpg" alt="Panel discussion at Vancouver Startup Week 2025" title="Panel discussion at Vancouver Startup Week 2025">
+            {% include responsive-image.html 
+               path="/files/pics/vsw2025_panel.jpg" 
+               alt="Panel discussion at Vancouver Startup Week 2025" 
+               title="Panel discussion at Vancouver Startup Week 2025" %}
         </div>
         <div class="image-container">
-            <img src="/files/pics/vsw2025_audience.jpg" alt="Audience at Vancouver Startup Week 2025" title="Audience at Vancouver Startup Week 2025">
+            {% include responsive-image.html 
+               path="/files/pics/vsw2025_audience.jpg" 
+               alt="Audience at Vancouver Startup Week 2025" 
+               title="Audience at Vancouver Startup Week 2025" %}
         </div>
     </div>
     <div class="image-caption">Techstars SDSU Founder Panel with Misti Cain, Alexander Kurtynin, and Sean Braacx at VSW 2025.</div>
