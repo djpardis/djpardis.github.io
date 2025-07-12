@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 'Introducing The Data Room App: WIP'
+title: 'Introducing the data room app'
+active_section: blog
 description: 'Implementing magic link authentication for a secure investor data room'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, replit
 image: /files/pics/profile_pic.jpg
@@ -9,20 +10,18 @@ sitemap:
   changefreq: yearly
   lastmod: 2025-07-02
 og:
-  title: "Introducing The Data Room App: WIP - Pardis Noorzad"
+  title: "Introducing the data room app - Pardis Noorzad"
   description: "Implementing magic link authentication for a secure investor data room"
   type: article
 twitter:
   card: summary_large_image
-  title: "Introducing The Data Room App: WIP - Pardis Noorzad"
+  title: "Introducing the data room app - Pardis Noorzad"
   description: "Implementing magic link authentication for a secure investor data room"
 ---
 
 In [the first part](/blog/2025/06/20/vibe-coding-data-room-app/){:target="_blank"} of this series, I shared my experience with _vibe coding_ using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
 
 Now, in the second part, I'll focus on one of the most critical aspects of any application: secure authentication. Specifically, I'll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.
-
-
 
 ## Why Replit
 
@@ -34,11 +33,16 @@ Unlike more complex authentication providers that require extensive configuratio
 
 When I need granular control over the different parts of the website and product, I'm going back to Windsurf.
 
-
 ## Try it out
 
 As promised in the first part, you can now try out the data room application yourself. Visit [thedataroom.app](https://thedataroom.app){:target="_blank"} and enter your email to request access.
 
 *If you have any feedback or questions about the implementation, please reach out via [X](https://x.com/djpardis){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://djpardis.medium.com/){:target="_blank"}.*
 
-### References
+## References
+
+1. [Replit Documentation](https://docs.replit.com){:target="_blank"}
+2. [Magic Link Authentication Best Practices](https://auth0.com/blog/magic-links/){:target="_blank"}
+3. [First part: Vibe coding data room app](/blog/2025/06/20/vibe-coding-data-room-app/){:target="_blank"}
+4. [Next.js Documentation](https://nextjs.org/docs){:target="_blank"}
+5. [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/){:target="_blank"}
