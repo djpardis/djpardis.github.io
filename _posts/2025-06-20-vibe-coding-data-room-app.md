@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Vibe coding a data room app'
+active_section: blog
 description: 'Building an intuitive data room app to streamline investor access to startup information'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication
 image: /files/pics/fundraising-screenshot.png
@@ -33,21 +34,9 @@ This is part 1 of a 2-part post. The first part is about my experience with [vib
     <div class="image-caption">It's different.</div>
 </div>
 
-
 ## The problem
 
 To put these cool tools to use, I've been working on a couple of side projects. The one we'll discuss here is a custom data room app for [General Folders](https://generalfolders.com){:target="_blank"}. 
-
-<!-- You might think, "what in the mother of yak shaving?" You'd be right. 
-
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            <img src="/files/pics/sketchplanations-yak-shaving.png" alt="Yak shaving" title="Yak shaving from Sketchplanations">
-        </div>
-    </div>
-    <div class="image-caption">From <a href="https://sketchplanations.com/yak-shaving" target="_blank">here</a>.</div>
-</div> -->
 
 I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here's how they compare:
 
@@ -74,7 +63,7 @@ What we're envisioning is one flavor of a file explorer for the browser. In addi
 
 As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box, are all file explorers at the core which is quite beautiful.
 
-## The tools
+### The tools
 
 Now we get to the topic of vibe coding. I believe the tools have finally reached that critical threshold where they're not just fun demos but genuinely practical for everyday use. And it looks like others feel the same!
 
