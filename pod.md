@@ -33,11 +33,11 @@ Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.
 
 **Already scheduled for an upcoming episode?** 
 
-👉 [Check out our guest guide]({{ site.baseurl }}/podcast-guest-guide)
+👉 Check out our [guest guide]({{ site.baseurl }}/podcast-guest-guide)!
 
 **Want to be a guest on an upcoming episode?** 
 
-👉 [Submit a request]({{ site.baseurl }}/podcast-guest-request)
+👉 Submit a [request]({{ site.baseurl }}/podcast-guest-request)!
 
 **Why the name <span class="wiggly-underline">107 Wins</span>?** 
 
