@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Hourly mentions of a word on Twitter'
+active_section: blog
 description: 'A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack'
 keywords: twitter api, elk stack, logstash, elasticsearch, kibana, data visualization, tweepy, social media analytics
 image: /files/pics/profile_pic.jpg
@@ -27,6 +28,7 @@ Some time ago (OK, a month ago—time ✈️s), I saw this tweet:
 > — Kaegan Donnelly ([@kaequan](https://twitter.com/kaequan/status/591359379431104513)) • April 23, 2015
 
 I thought, "Should be easy, lmgt." However, results for the query "hourly mentions of a word on Twitter" didn't offer clear solutions.
+
 Days later I came across two relatively simple approaches to tackling the problem. The first is [Tweepy](https://github.com/tweepy/tweepy). The other is [Logstash](https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html).
 
 Tweepy is an [open source Python library](http://www.tweepy.org/) for accessing the Twitter API, including the Twitter Streaming API.
