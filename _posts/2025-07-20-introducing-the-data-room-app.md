@@ -20,17 +20,20 @@ twitter:
   description: "Implementing magic link authentication for a secure investor data room"
 ---
 
+![Data room app main interface](/files/pics/dataroom.png)
+*The Data Room App ([thedataroom.app](https://thedataroom.app){:target="_blank"}) provides a clean, intuitive interface for investors to access confidential documents.*
+
 In the first part of this series, I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
 
 Now, in the second part, I'll focus on one of the most critical aspects of any application: secure authentication. Specifically, I'll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.
 
 ## Why Replit
 
-I tried initially to implement magic links with Windsurf. Given that auth flows are not my strong suit, I wasn't able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.
+I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I wasn't able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.
 
 [Replit](https://replit.com){:target="_blank"} is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it's now focused on making software development more accessible and collaborative. What drew me to it was its ability to handle full-stack applications with built-in authentication systems and serverless deployments, all without requiring complex DevOps knowledge.
 
-## Replit vs Windsurf: Technical comparison
+## Replit vs Windsurf: technical comparison
 
 **Authentication and session management**
 Replit's integrated authentication blueprints provide pre-configured [Passport.js](https://www.passportjs.org/){:target="_blank"} setups, session store integration with PostgreSQL, and automatic HTTPS for secure cookie handling. Magic link authentication was implemented in 15 minutes compared to hours of OAuth configuration debugging.
@@ -61,33 +64,36 @@ Windsurf provides control with traditional Git workflows, full file system acces
 
 **Architecture decisions**
 
-- **Simple Content Management**: Founders can organize their data room using a simple Markdown file, just like writing documentation. No complicated admin panels to learn.
+- **Simple content management**: Founders can organize their data room using a simple Markdown file, just like writing documentation. No clunky admin panels.
 
-- **Flexible Document Handling**: The app supports both direct file uploads (protected by authentication) and links to existing documents in Google Drive or Dropbox.
+![Document sections in the data room](/files/pics/sections.png)
+*Changes to sections.md are reflected instantly - no rebuild required.*
 
-- **Passwordless Authentication**: Investors access the data room through magic links sent to their email - no passwords to forget or manage.
+- **Flexible document handling**: The app supports both direct file uploads (protected by authentication) and links to existing documents in Google Drive or Dropbox.
 
-- **Role-Based Access**: Different permissions for founders (who pay for the service) and investors (who get free access), with no account creation required for investors.
+- **Passwordless authentication**: Investors access the data room through magic links sent to their email - no passwords to forget or manage.
 
-- **Engagement Analytics**: Founders can see which documents investors have viewed and when, providing valuable feedback on investor interest.
+- **Role-based access**: Different permissions for founders (who pay for the service) and investors (who get free access), with no account creation required for investors.
 
-- **Frictionless Invitations**: Founders can invite investors with a simple email, generating secure access tokens automatically.
+- **Engagement analytics**: Founders can see which documents investors have viewed and when, providing valuable feedback on investor interest.
+
+- **Frictionless invitations**: Founders can invite investors with a simple email, generating secure access tokens automatically.
 
 ## Implementation results
 
 The platform is deployed at [thedataroom.app](https://thedataroom.app) and operates in waitlist mode for market validation.
 
-## Technical Implementation Details
+## Technical implementation details
 
 Beyond the core features, I implemented several technical components that were critical to the app's success:
 
-**Secure Session Management**  
+**Secure session management**  
 I implemented PostgreSQL-backed sessions with automatic cleanup and secure cookie handling. Thanks to Replit's integrated setup, this took only 5 minutes instead of the day-long process it would typically require.
 
-**Reliable Email Delivery**  
+**Reliable email delivery**  
 The app uses production SMTP integration for reliable delivery of magic links and invitations. During development, I configured the system to log emails to the console for easy testing without worrying about deliverability issues.
 
-**Robust File Security**  
+**Robust file security**  
 The system enforces a 50MB upload limit with strict type validation and secure storage. All uploaded documents require authentication to access, while external links leverage the existing permission systems of services like Google Drive and Dropbox.
 
 ## Development timeline
@@ -103,7 +109,3 @@ If you have past experience with data rooms, I'd love to hear your thoughts on t
 **Live platform:** [thedataroom.app](https://thedataroom.app)
 
 **Access:** Waitlist signups receive discounted pricing; investor access remains free but you would need an invite.
-
----
-
-*Production deployment showcasing modern authentication patterns and cloud-native development on Replit. Available at [thedataroom.app](https://thedataroom.app).*
