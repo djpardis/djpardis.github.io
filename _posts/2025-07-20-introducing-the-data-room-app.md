@@ -9,7 +9,7 @@ image: /files/pics/profile_pic.jpg
 sitemap:
   priority: 0.7
   changefreq: yearly
-  lastmod: 2025-07-02
+  lastmod: 2025-07-20
 og:
   title: "Introducing the data room app - Pardis Noorzad"
   description: "Implementing magic link authentication for a secure investor data room"
