@@ -36,7 +36,7 @@ twitter:
                title="Audience at Vancouver Startup Week 2025" %}
         </div>
     </div>
-    <div class="image-caption">Techstars SDSU Founder Panel with Misti Cain, Alexander Kurtynin, and Sean Braacx at VSW 2025.</div>
+    <div class="image-caption">Techstars SDSU Founder Panel with Misti Cain at VSW 2025.</div>
 </div>
 
 <details class="collapsible-section" markdown="1">
