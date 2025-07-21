@@ -24,9 +24,9 @@ twitter:
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>New</h3></summary>
 
-[July 2, 2025] *[Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-02-introducing-the-data-room-app %})*  
-[June 20, 2025] *[Vibe coding a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
-[August 12, 2024] *[Startup advice: Some lessons I learned while building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
+[July 2, 2025] *[{{ site.posts | where: "url", "/blog/2025/07/02/introducing-the-data-room-app/" | map: "title" | first }}{% assign subtitle_1 = site.posts | where: "url", "/blog/2025/07/02/introducing-the-data-room-app/" | map: "subtitle" | first %}{% if subtitle_1 and subtitle_1 != "" %}: {{ subtitle_1 }}{% endif %}]({{ site.baseurl }}{% post_url 2025-07-02-introducing-the-data-room-app %})*  
+[June 20, 2025] *[{{ site.posts | where: "url", "/blog/2025/06/20/vibe-coding-data-room-app/" | map: "title" | first }}{% assign subtitle_2 = site.posts | where: "url", "/blog/2025/06/20/vibe-coding-data-room-app/" | map: "subtitle" | first %}{% if subtitle_2 and subtitle_2 != "" %}: {{ subtitle_2 }}{% endif %}]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
+[August 12, 2024] *[{{ site.posts | where: "url", "/blog/2024/08/12/startup-advice/" | map: "title" | first }}{% assign subtitle_3 = site.posts | where: "url", "/blog/2024/08/12/startup-advice/" | map: "subtitle" | first %}{% if subtitle_3 and subtitle_3 != "" %}: {{ subtitle_3 }}{% endif %}]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
 </details>
 
 <details class="collapsible-section" markdown="1" open>
