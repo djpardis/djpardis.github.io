@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 'Startup advice: Some lessons I learned while building General Folders'
+title: 'Startup advice'
+subtitle: 'Some lessons I learned while building General Folders'
 description: 'Sharing key lessons and insights gained from building General Folders'
 keywords: startup advice, General Folders, entrepreneurship, company building, lessons learned
 sitemap:
