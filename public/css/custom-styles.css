@@ -108,23 +108,27 @@ body {
 
 /* Specific page styles */
 .work .container.content .image-row img {
-  height: 300px;
-  object-fit: cover;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  height: auto;
 }
 
 .gigs .container.content .image-row img,
 .index .container.content .image-row img {
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
   height: auto;
-  min-height: 300px;
-  max-height: 650px;
-  object-fit: contain;
 }
 
 .container.content .image-caption {
   text-align: center;
   color: #757575;
-  font-size: 0.75rem;
-  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  margin: 0.5rem auto 0.5rem;
+  max-width: 90%;
+  line-height: 1.4;
 }
 
 /* Desktop image sizes */
@@ -138,13 +142,14 @@ body {
   }
   
   .work .container.content .image-row img {
-    height: 250px;
+    height: auto;
+    max-width: 100%;
   }
   
   .gigs .container.content .image-row img,
   .index .container.content .image-row img {
-    min-height: 250px;
-    max-height: 500px;
+    height: auto;
+    max-width: 100%;
   }
 }
 
