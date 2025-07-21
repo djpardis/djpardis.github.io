@@ -25,11 +25,11 @@ twitter:
 ![Data room app main interface](/files/pics/dataroom.png)
 *The Data Room App ([thedataroom.app](https://thedataroom.app){:target="_blank"}) provides a clean, intuitive interface for investors to access confidential documents.*
 
-In the first part of this series, I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
+In the [first part of this series](/blog/2025/06/20/vibe-coding-data-room-app/), I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
 
 Now, in the second part, I'll focus on one of the most critical aspects of any application: secure authentication. Specifically, I'll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.
 
-## Why Replit
+## Solving the authentication challenge
 
 I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I wasn't able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.
 
@@ -53,7 +53,7 @@ Zero-config deployment to custom domains with automatic HTTPS, environment varia
 
 Git operations lack the fluidity of native terminal workflows. Even basic branching and commit management feel clunky in the interface. What would be simple git commands in a terminal become multi-step processes with less feedback and control.
 
-File system access is limited by the container abstraction, making certain debugging scenarios more difficult. System-level performance profiling and direct file manipulation are restricted.
+The container-based environment limits access to lower-level system functions and file operations, which can make debugging complex issues and performance optimization more challenging compared to local development.
 
 ### Windsurf trade-offs
 
@@ -80,29 +80,13 @@ Windsurf provides control with traditional Git workflows, full file system acces
 
 - **Role-based access**: Different permissions for founders (who pay for the service) and investors (who get free access), with no account creation required for investors.
 
-- **Engagement analytics**: Founders can see which documents investors have viewed and when, providing valuable feedback on investor interest.
+- **Engagement analytics**: Founders can see which documents investors have viewed or downloaded and when, providing valuable feedback on investor interest; without being overly intrusive.
 
 - **Frictionless invitations**: Founders can invite investors with a simple email, generating secure access tokens automatically.
 
 ## Implementation results
 
-The platform is deployed at [thedataroom.app](https://thedataroom.app) and operates in waitlist mode for market validation.
-
-## Technical implementation details
-
-Beyond the core features, I implemented several technical components that were critical to the app's success:
-
-### Secure session management
-
-I implemented PostgreSQL-backed sessions with automatic cleanup and secure cookie handling. Thanks to Replit's integrated setup, this took only 5 minutes instead of the day-long process it would typically require.
-
-### Reliable email delivery
-
-The app uses production SMTP integration for reliable delivery of magic links and invitations. During development, I configured the system to log emails to the console for easy testing without worrying about deliverability issues.
-
-### Robust file security
-
-The system enforces a 50MB upload limit with strict type validation and secure storage. All uploaded documents require authentication to access, while external links leverage the existing permission systems of services like Google Drive and Dropbox.
+The platform is deployed at [thedataroom.app](https://thedataroom.app) and operates in waitlist mode for market validation. The implementation includes PostgreSQL-backed secure sessions, reliable email delivery for magic links and invitations, and robust file security with strict validation and secure storage for documents up to 50MB.
 
 ## Development timeline
 
