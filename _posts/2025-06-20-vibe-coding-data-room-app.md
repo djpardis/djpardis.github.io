@@ -24,16 +24,8 @@ twitter:
 
 This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow.
 
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            {% include responsive-image.html 
-               path="/files/pics/fancy-pooh.jpg" 
-               alt="A cute bear saying 'oh bother'" %}
-        </div>
-    </div>
-    <div class="image-caption">It's different.</div>
-</div>
+![A cute bear saying 'oh bother'](/files/pics/fancy-pooh.jpg)
+*It's different.*
 
 ## The problem
 
