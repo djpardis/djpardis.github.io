@@ -12,17 +12,8 @@ sitemap:
 
 *This article is cross-posted from my [original publication on Medium](https://medium.com/@djpardis/startup-advice-e9459d6c1ebb).*
 
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            {% include responsive-image.html 
-               path="https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg" 
-               alt="From my time at Techstars SDSU" 
-               title="From my time at Techstars SDSU" %}
-        </div>
-    </div>
-    <div class="image-caption">From my time at Techstars SDSU.</div>
-</div>
+![From my time at Techstars SDSU](https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg)
+*From my time at Techstars SDSU.*
 
 It's been quite the journey building [General Folders](https://generalfolders.com) so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!
 
