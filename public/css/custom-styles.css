@@ -187,6 +187,42 @@ body .wrap .container.content {
   color: #3498db;
 }
 
+/* Podcast social icons */
+.podcast-social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.podcast-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.podcast-social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-social-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.podcast-social-icon:hover svg {
+  transform: scale(1.1);
+}
+
 .copyright div span {
   position: relative;
   z-index: 1;
