@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Google Search Console Verification -->
+  
+  <meta name="google-site-verification" content="ATx7HggnAwR6TFQqPQoPgnZv3YqQ0_dHNbbQVc-_mXU" />
+  
+
+  <title>
+    Pardis Noorzad &nbsp;—&nbsp; Hourly mentions of a word on Twitter
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <!-- Enhanced syntax highlighting with copy functionality -->
+  <link rel="stylesheet" href="/public/css/syntax-enhanced.css">
+  
+  <!-- Resource hints for faster loading -->
+  <link rel="preload" href="/public/css/poole.css" as="style">
+  <link rel="preload" href="/public/css/lanyon.css" as="style">
+  <link rel="preload" href="/public/css/syntax-enhanced.css" as="style">
+  
+  <!-- Geist Font from Google Fonts - optimized weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Simple Icons for official social media logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;600&family=Geist+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Geist font styling -->
+  <link rel="stylesheet" href="/public/css/geist.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/public/css/custom-styles.css">
+  
+  <!-- Container width fix CSS - ensures consistent widths across all screen sizes -->
+  <link rel="stylesheet" href="/public/css/container-fix.css">
+
+  <!-- Custom image sizing -->
+  <link rel="stylesheet" href="/public/css/image-size.css">
+
+  <!-- Comprehensive Favicon setup for better search engine visibility -->
+  <link rel="icon" href="/public/favicon/favicon.ico" sizes="any"><!-- Default favicon for browsers -->
+  <link rel="icon" href="/public/favicon/favicon.svg" type="image/svg+xml"><!-- SVG favicon -->
+  <link rel="apple-touch-icon" href="/public/favicon/icons/apple-touch-icon.png"><!-- iOS icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/icons/favicon-32x32.png"><!-- Standard favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/icons/favicon-16x16.png"><!-- Small favicon -->
+  <meta name="msapplication-TileImage" content="/public/favicon/icons/favicon-32x32.png"><!-- Windows tile -->
+  <meta name="msapplication-TileColor" content="#FFFF99"><!-- Windows tile color -->
+  <meta name="theme-color" content="#FFFF99"><!-- Mobile theme color -->
+  <link rel="manifest" href="/site.webmanifest"><!-- Web app manifest -->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- External links script -->
+  <script src="/public/js/external-links.js"></script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Hourly mentions of a word on Twitter | Pardis Noorzad</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Hourly mentions of a word on Twitter" />
+<meta name="author" content="Pardis Noorzad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack" />
+<meta property="og:description" content="A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack" />
+<link rel="canonical" href="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/" />
+<meta property="og:url" content="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/" />
+<meta property="og:site_name" content="Pardis Noorzad" />
+<meta property="og:image" content="https://djpardis.com/files/pics/profile_pic.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-05-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://djpardis.com/files/pics/profile_pic.jpg" />
+<meta property="twitter:title" content="Hourly mentions of a word on Twitter" />
+<meta name="google-site-verification" content="ATx7HggnAwR6TFQqPQoPgnZv3YqQ0_dHNbbQVc-_mXU" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pardis Noorzad","url":"https://djpardis.com"},"dateModified":"2015-05-23T00:00:00+00:00","datePublished":"2015-05-23T00:00:00+00:00","description":"A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack","headline":"Hourly mentions of a word on Twitter","image":"https://djpardis.com/files/pics/profile_pic.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://djpardis.com/public/favicon/favicon.svg"},"name":"Pardis Noorzad"},"url":"https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- Structured Data for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://djpardis.com/#person",
+        "name": "Pardis Noorzad",
+        "alternateName": ["DJ Pardis", "djpardis"],
+        "url": "https://djpardis.com",
+        "image": "https://djpardis.com/files/pics/profile_pic.jpg",
+        "jobTitle": "CEO & Founder",
+        "description": "Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.",
+        "knowsAbout": ["Data Science", "Technology Leadership", "Secure Data Exchange", "Enterprise Software", "Team Management"],
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://djpardis.com/#organization",
+          "name": "General Folders",
+          "url": "https://generalfolders.com",
+          "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
+          "foundingDate": "2022",
+          "industry": "Enterprise Software",
+          "founder": { "@id": "https://djpardis.com/#person" }
+        },
+        "alumniOf": [
+          {
+            "@type": "Organization",
+            "name": "Twitter",
+            "url": "https://twitter.com"
+          },
+          {
+            "@type": "Organization", 
+            "name": "Carbon Health",
+            "url": "https://carbonhealth.com"
+          }
+        ],
+        "sameAs": ["https://www.linkedin.com/in/djpardis","https://github.com/djpardis","https://medium.com/@djpardis"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://djpardis.com/#website",
+        "url": "https://djpardis.com",
+        "name": "Pardis Noorzad",
+        "description": "Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.",
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://djpardis.com/#person"
+        },
+        "inLanguage": "en_US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://djpardis.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/#webpage",
+        "url": "https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/",
+        "name": "Hourly mentions of a word on Twitter",
+        "description": "A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack",
+        "isPartOf": { "@id": "https://djpardis.com/#website" },
+        "about": { "@id": "https://djpardis.com/#person" },
+        "image": "https://djpardis.com/files/pics/profile_pic.jpg",
+        "inLanguage": "en_US",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "https://djpardis.com",
+                "name": "Home"
+              }
+            },
+            
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/",
+                "name": "Hourly mentions of a word on Twitter"
+              }
+            }
+            
+          ]
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/#article",
+        "headline": "Hourly mentions of a word on Twitter",
+        "description": "A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack",
+        "author": { "@id": "https://djpardis.com/#person" },
+        "datePublished": "2015-05-23T00:00:00+00:00",
+        "dateModified": "2015-05-23T00:00:00+00:00",
+        "mainEntityOfPage": { "@id": "https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/#webpage" },
+        "publisher": { "@id": "https://djpardis.com/#person" },
+        "image": "https://djpardis.com/files/pics/profile_pic.jpg",
+        "keywords": "twitter api, elk stack, logstash, elasticsearch, kibana, data visualization, tweepy, social media analytics",
+        "inLanguage": "en_US",
+        "articleSection": "Blog",
+        "wordCount": "883"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://djpardis.com/#breadcrumb",
+        "itemListElement": [
+          
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://djpardis.com/",
+              "name": "Bio"
+            }
+          },
+          
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://djpardis.com/work",
+              "name": "Work"
+            }
+          },
+          
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https://djpardis.com/gigs",
+              "name": "Gigs"
+            }
+          },
+          
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@id": "https://djpardis.com/blog",
+              "name": "Blog"
+            }
+          },
+          
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@id": "https://djpardis.com/pod",
+              "name": "Pod"
+            }
+          }
+          
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+          <a class="sidebar-nav-item" href="/">Bio</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/404.html">Page Not Found</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/blog.html">Blog</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/gigs.html">Gigs</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/pod.html">Pod</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/podcast-guest-guide.html">Pod</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/podcast-guest-request.html">Pod</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/work.html">Work</a>
+        
+      
+    
+
+    <!-- <a class="sidebar-nav-item" href="/">Posts</a> -->
+
+
+    <!-- <a class="sidebar-nav-item" href="/archive/v.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a> -->
+    <!-- <span class="sidebar-nav-item">Currently v</span> -->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2025. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+
+          <h3 class="masthead-title">
+            <center>
+              
+                
+                  <a href="/" >Bio</a>
+                
+                 &nbsp;
+              
+                
+                  <a href="/work" >Work</a>
+                
+                 &nbsp;
+              
+                
+                  <a href="/gigs" >Gigs</a>
+                
+                 &nbsp;
+              
+                
+                  <span style="background-color: #FFFF99"><a href="/blog">Blog</a></span>
+                
+                 &nbsp;
+              
+                
+                  <a href="/pod" class="pod-link">Pod<sup style="color: #FF99D6; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.6em; font-weight: bold;">NEW!</sup></a>
+                
+                 &nbsp;
+              
+            </center>
+          </h3>
+
+        </div>
+      </div>
+
+      <div class="container content">
+        <p><a href="/blog">&lt;– Go back</a></p>
+
+<div class="post">
+  <h1 class="post-title">Hourly mentions of a word on Twitter</h1>
+  
+  <h2 class="post-subtitle">Tracking social media data with Tweepy and ELK stack</h2>
+  
+  <span class="post-date">23 May 2015</span>
+  <p>Some time ago (OK, a month ago—time ✈️s), I saw this tweet:</p>
+
+<blockquote>
+  <p>Need a simple tool to track mentions of a keyword on Twitter by hour. Don’t need a bunch of bells and whistles. Thoughts?</p>
+
+  <p>— Kaegan Donnelly (<a href="https://twitter.com/kaequan/status/591359379431104513">@kaequan</a>) • April 23, 2015</p>
+</blockquote>
+
+<p>I thought, “Should be easy, lmgt.” However, results for the query “hourly mentions of a word on Twitter” didn’t offer clear solutions.</p>
+
+<p>Days later I came across two relatively simple approaches to tackling the problem. The first is <a href="https://github.com/tweepy/tweepy">Tweepy</a>. The other is <a href="https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html">Logstash</a>.</p>
+
+<p>Tweepy is an <a href="http://www.tweepy.org/">open source Python library</a> for accessing the Twitter API, including the Twitter Streaming API.</p>
+
+<p>Logstash is an open source tool for <a href="https://wikitech.wikimedia.org/wiki/Logstash">collecting, processing, and forwarding events</a>. Logstash can read events from the Twitter Streaming API using <a href="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-twitter.html">its <code class="language-plaintext highlighter-rouge">twitter</code> plugin</a>.</p>
+
+<p>Having tried both, I recommend Logstash over Tweepy for two main reasons:</p>
+
+<ol>
+  <li>It <a href="https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb">deals</a> with the Twitter API rate limits by default</li>
+  <li>It offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step</li>
+</ol>
+
+<p>For both Tweepy and Logstash you need access to Twitter’s streaming API. Follow steps 2 and 3 <a href="https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04">here</a> to create a Twitter app and obtain your <em>Consumer Key</em>, <em>Consumer Key Secret</em>, <em>Access Token</em>, and <em>Access Token Secret</em>.</p>
+
+<h3 id="the-elk-solution">The ELK solution</h3>
+
+<p>Download and install <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-1-4-4">Elasticsearch</a>, <a href="https://www.elastic.co/downloads/logstash">Logstash</a>, and <a href="https://www.elastic.co/downloads/kibana">Kibana</a>. If you are on a Mac, you can</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew <span class="nb">install </span>elasticsearch
+brew <span class="nb">install </span>logstash</code></pre></figure>
+
+<p>Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word <code class="language-plaintext highlighter-rouge">ireland</code> (call it <code class="language-plaintext highlighter-rouge">ireland.conf</code>):</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf"># a logstash config file has three sections:
+# input{}, output{}, and (optional) filter{}; add plugins
+# to specify how events should be handled in each section
+
+input {
+    twitter {
+        # set key and token values from the previous step
+        consumer_key =&gt; ""
+        consumer_secret =&gt; ""
+        oauth_token =&gt; ""
+        oauth_token_secret =&gt; ""
+        # assume we are interested in tracking all
+        # mentions of the word "ireland"
+        keywords =&gt; ["ireland"]
+        # no need for all fields to get hourly counts
+        full_tweet =&gt; false
+    }
+}
+
+output {
+	stdout {
+		# include this to pretty-print the event's json to stdout
+		codec =&gt; rubydebug
+  	}
+}</code></pre></figure>
+
+<p>To start streaming tweets, run</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf">logstash -f ireland.conf</code></pre></figure>
+
+<p>At this point, tweets are written to <code class="language-plaintext highlighter-rouge">stdout</code>. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.</p>
+
+<p>Add the <code class="language-plaintext highlighter-rouge">elasticsearch</code> plugin to the <code class="language-plaintext highlighter-rouge">output</code> section of the configuration:</p>
+
+<figure class="highlight"><pre><code class="language-apacheconf" data-lang="apacheconf">output {
+    elasticsearch {
+        protocol =&gt; "http"
+        host =&gt; "localhost"
+        index =&gt; "irelandtweets"
+    }
+
+	stdout {
+		# include this to pretty-print the event's json to stdout
+		codec =&gt; rubydebug
+  	}
+}</code></pre></figure>
+
+<p>Run Logstash again and have a look at:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">http://localhost:9200/irelandtweets/_search/?pretty</code></pre></figure>
+
+<p>Below is a sample of the output format. You can see, for example, that <code class="language-plaintext highlighter-rouge">65235</code> documents (tweets) have been stored in the <code class="language-plaintext highlighter-rouge">irelandtweets</code> index:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">{</span>
+  <span class="s2">"took"</span> : 2,
+  <span class="s2">"timed_out"</span> : <span class="nb">false</span>,
+  <span class="s2">"_shards"</span> : <span class="o">{</span>
+    <span class="s2">"total"</span> : 5,
+    <span class="s2">"successful"</span> : 5,
+    <span class="s2">"failed"</span> : 0
+  <span class="o">}</span>,
+  <span class="s2">"hits"</span> : <span class="o">{</span>
+    <span class="s2">"total"</span> : 65235,
+    <span class="s2">"max_score"</span> : 1.0,
+    <span class="s2">"hits"</span> : <span class="o">[</span> <span class="o">{</span>
+      <span class="s2">"_index"</span> : <span class="s2">"irelandtweets"</span>,
+      <span class="s2">"_type"</span> : <span class="s2">"logs"</span>,
+      <span class="s2">"_id"</span> : <span class="s2">"AU2B1MGZPj_44djTabLA"</span>,
+      <span class="s2">"_score"</span> : 1.0,
+      <span class="s2">"_source"</span>:<span class="o">{</span><span class="s2">"@timestamp"</span>:<span class="s2">"2015-05-23T17:31:51.000Z"</span>,<span class="s2">"message"</span>:<span class="s2">"Y'all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭"</span>,<span class="s2">"user"</span>:<span class="s2">"LesbiForLauren"</span>,<span class="s2">"client"</span>:<span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">http://twitter.com/download/iphone</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">nofollow</span><span class="se">\"</span><span class="s2">&gt;Twitter for iPhone&lt;/a&gt;"</span>,<span class="s2">"retweeted"</span>:false,<span class="s2">"source"</span>:<span class="s2">"http://twitter.com/LesbiForLauren/status/602165054042034176"</span>,<span class="s2">"@version"</span>:<span class="s2">"1"</span><span class="o">}</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"_index"</span> : <span class="s2">"irelandtweets"</span>,
+      <span class="s2">"_type"</span> : <span class="s2">"logs"</span>,
+      <span class="s2">"_id"</span> : <span class="s2">"AU2B1MGZPj_44djTabLF"</span>,
+      <span class="s2">"_score"</span> : 1.0,
+      <span class="s2">"_source"</span>:<span class="o">{</span><span class="s2">"@timestamp"</span>:<span class="s2">"2015-05-23T17:31:51.000Z"</span>,<span class="s2">"message"</span>:<span class="s2">"RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson."</span>,<span class="s2">"user"</span>:<span class="s2">"SOUTHERNjamespb"</span>,<span class="s2">"client"</span>:<span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">http://www.twitter.com</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">nofollow</span><span class="se">\"</span><span class="s2">&gt;Twitter for BlackBerry&lt;/a&gt;"</span>,<span class="s2">"retweeted"</span>:false,<span class="s2">"source"</span>:<span class="s2">"http://twitter.com/SOUTHERNjamespb/status/602165054889283584"</span>,<span class="s2">"@version"</span>:<span class="s2">"1"</span><span class="o">}</span>
+    <span class="o">}</span>, <span class="o">{</span>
+               ...</code></pre></figure>
+
+<p>To start using Kibana, visit</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">http://localhost:5601/</code></pre></figure>
+
+<p>On the Discover tab, there is a configuration form:</p>
+
+<ol>
+  <li>Check off the box: <em>Index contains time-based events</em></li>
+  <li>Fill the <em>Index name or pattern</em> field with <code class="language-plaintext highlighter-rouge">irelandtweets</code></li>
+  <li>Fill the <em>Time-field name</em> field with <code class="language-plaintext highlighter-rouge">@timestamp</code></li>
+</ol>
+
+<p>On the Visualize tab, choose visualization type <code class="language-plaintext highlighter-rouge">Line chart</code>.</p>
+
+<ol>
+  <li>Choose option <code class="language-plaintext highlighter-rouge">From a saved search</code> to use the same query you specified on the Discover tab</li>
+  <li>For metric aggregation (Y-Axis): Choose <code class="language-plaintext highlighter-rouge">Count</code></li>
+  <li>For bucket aggregation (X-Axis):
+i. Aggregation: <code class="language-plaintext highlighter-rouge">Date Histogram</code>
+ii. Field: <code class="language-plaintext highlighter-rouge">@timestamp</code>
+iii. Interval: <code class="language-plaintext highlighter-rouge">Minute</code></li>
+  <li>Click on the Refresh Interval tab at the top. Choose <code class="language-plaintext highlighter-rouge">5 seconds</code> and see your line chart come alive 📈</li>
+</ol>
+
+<p><img src="/files/pics/kibana_screenshot.png" alt="Kibana screenshot" /></p>
+
+<p>Done. Thank you for starting the conversation Kaegan!</p>
+
+<h3 id="more-resources">More resources</h3>
+
+<p>For details about Logstash plugins see <a href="https://www.elastic.co/guide/en/logstash/current/configuration.html" target="_blank">this guide</a>.</p>
+
+<p>Anna Roes has written an excellent overview of Kibana in <a href="https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/" target="_blank">this tutorial</a>.</p>
+
+</div>
+
+
+<div class="related">
+  <h2>More on the blog</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/blog/2025/07/20/introducing-the-data-room-app/">
+            Introducing the data room app
+            <small>20 Jul 2025</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/2025/06/20/vibe-coding-data-room-app/">
+            Vibe coding a data room app
+            <small>20 Jun 2025</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/2024/08/12/startup-advice/">
+            Startup advice
+            <small>12 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+
+      <div class="copyright">
+        <div><span>© 2025 Pardis Noorzad.</span></div>
+      </div>
+
+    </div>
+
+    <!-- Code copy functionality script -->
+    <script src="/public/js/code-copy.js"></script>
+    
+    <!-- Reference back-links script -->
+    <script src="/public/js/ref-backlinks.js"></script>
+    
+    <!-- Image optimization script -->
+    <script src="/public/js/image-optimization.js"></script>
+  </body>
+</html>

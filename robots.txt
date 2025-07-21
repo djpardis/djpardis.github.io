@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://djpardis.com/sitemap.xml
+
+# Disallow access to specific files and directories
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /README.md
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+
+# Disallow deleted pages that should not be indexed
+Disallow: /library/
+Disallow: /pubs/
+Disallow: /publications/

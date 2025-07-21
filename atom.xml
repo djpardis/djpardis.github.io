@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Pardis Noorzad</title>
+ <link href="https://djpardis.com/atom.xml" rel="self"/>
+ <link href="https://djpardis.com/"/>
+ <updated>2025-07-21T08:26:41+00:00</updated>
+ <id>https://djpardis.com</id>
+ <author>
+   <name>Pardis Noorzad</name>
+   <email>pardis.noorzad@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Introducing the data room app</title>
+   <link href="https://djpardis.com/blog/2025/07/20/introducing-the-data-room-app/"/>
+   <updated>2025-07-20T00:00:00+00:00</updated>
+   <id>https://djpardis.com/blog/2025/07/20/introducing-the-data-room-app</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/files/pics/dataroom.png&quot; alt=&quot;Data room app main interface&quot; /&gt;
+&lt;em&gt;The Data Room App (&lt;a href=&quot;https://thedataroom.app&quot; target=&quot;_blank&quot;&gt;thedataroom.app&lt;/a&gt;) provides a clean, intuitive interface for investors to access confidential documents.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the first part of this series, I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn’t meet my needs and also highlighted best practices for working with AI coding assistants.&lt;/p&gt;
+
+&lt;p&gt;Now, in the second part, I’ll focus on one of the most critical aspects of any application: secure authentication. Specifically, I’ll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-replit&quot;&gt;Why Replit&lt;/h2&gt;
+
+&lt;p&gt;I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I wasn’t able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://replit.com&quot; target=&quot;_blank&quot;&gt;Replit&lt;/a&gt; is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it’s now focused on making software development more accessible and collaborative. What drew me to it was its ability to handle full-stack applications with built-in authentication systems and serverless deployments, all without requiring complex DevOps knowledge.&lt;/p&gt;
+
+&lt;h2 id=&quot;replit-vs-windsurf-technical-comparison&quot;&gt;Replit vs Windsurf: technical comparison&lt;/h2&gt;
+
+&lt;h3 id=&quot;authentication-and-session-management&quot;&gt;Authentication and session management&lt;/h3&gt;
+
+&lt;p&gt;Replit’s integrated authentication blueprints provide pre-configured &lt;a href=&quot;https://www.passportjs.org/&quot; target=&quot;_blank&quot;&gt;Passport.js&lt;/a&gt; setups, session store integration with PostgreSQL, and automatic HTTPS for secure cookie handling. Magic link authentication was implemented in 15 minutes compared to hours of OAuth configuration debugging.&lt;/p&gt;
+
+&lt;h3 id=&quot;database-integration&quot;&gt;Database integration&lt;/h3&gt;
+
+&lt;p&gt;Instant PostgreSQL provisioning through &lt;a href=&quot;https://neon.tech&quot; target=&quot;_blank&quot;&gt;Neon&lt;/a&gt; with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. &lt;a href=&quot;https://drizzleorm.com&quot; target=&quot;_blank&quot;&gt;Drizzle ORM&lt;/a&gt; integration works seamlessly with database push deployments without migration file management.&lt;/p&gt;
+
+&lt;h3 id=&quot;deployment-infrastructure&quot;&gt;Deployment infrastructure&lt;/h3&gt;
+
+&lt;p&gt;Zero-config deployment to custom domains with automatic HTTPS, environment variable management, and container orchestration. The platform handles load balancing and scaling automatically. Replit eliminated infrastructure bottlenecks including server configuration, database setup, and SSL certificate management.&lt;/p&gt;
+
+&lt;h3 id=&quot;replit-limitations&quot;&gt;Replit limitations&lt;/h3&gt;
+
+&lt;p&gt;Git operations lack the fluidity of native terminal workflows. Even basic branching and commit management feel clunky in the interface. What would be simple git commands in a terminal become multi-step processes with less feedback and control.&lt;/p&gt;
+
+&lt;p&gt;File system access is limited by the container abstraction, making certain debugging scenarios more difficult. System-level performance profiling and direct file manipulation are restricted.&lt;/p&gt;
+
+&lt;h3 id=&quot;windsurf-trade-offs&quot;&gt;Windsurf trade-offs&lt;/h3&gt;
+
+&lt;p&gt;Windsurf provides control with traditional Git workflows, full file system access, and familiar terminal operations. However, the setup overhead for authentication, databases, and deployment significantly slows initial development velocity compared to Replit’s integrated infrastructure.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-room-platform-implementation&quot;&gt;Data room platform implementation&lt;/h2&gt;
+
+&lt;h3 id=&quot;technical-stack&quot;&gt;Technical stack&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;React frontend with TypeScript and shadcn/ui components&lt;/li&gt;
+  &lt;li&gt;Express.js backend with PostgreSQL database&lt;/li&gt;
+  &lt;li&gt;Drizzle ORM for type-safe database operations&lt;/li&gt;
+  &lt;li&gt;JWT-based authentication with 7-day token expiration&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;architecture-decisions&quot;&gt;Architecture decisions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Simple content management&lt;/strong&gt;: Founders can organize their data room using a simple Markdown file, just like writing documentation. No clunky admin panels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/pics/sections.png&quot; alt=&quot;Document sections in the data room&quot; /&gt;
+&lt;em&gt;Changes to sections.md are reflected instantly - no rebuild required.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Flexible document handling&lt;/strong&gt;: The app supports both direct file uploads (protected by authentication) and links to existing documents in Google Drive or Dropbox.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Passwordless authentication&lt;/strong&gt;: Investors access the data room through magic links sent to their email - no passwords to forget or manage.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Role-based access&lt;/strong&gt;: Different permissions for founders (who pay for the service) and investors (who get free access), with no account creation required for investors.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Engagement analytics&lt;/strong&gt;: Founders can see which documents investors have viewed and when, providing valuable feedback on investor interest.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Frictionless invitations&lt;/strong&gt;: Founders can invite investors with a simple email, generating secure access tokens automatically.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implementation-results&quot;&gt;Implementation results&lt;/h2&gt;
+
+&lt;p&gt;The platform is deployed at &lt;a href=&quot;https://thedataroom.app&quot;&gt;thedataroom.app&lt;/a&gt; and operates in waitlist mode for market validation.&lt;/p&gt;
+
+&lt;h2 id=&quot;technical-implementation-details&quot;&gt;Technical implementation details&lt;/h2&gt;
+
+&lt;p&gt;Beyond the core features, I implemented several technical components that were critical to the app’s success:&lt;/p&gt;
+
+&lt;h3 id=&quot;secure-session-management&quot;&gt;Secure session management&lt;/h3&gt;
+
+&lt;p&gt;I implemented PostgreSQL-backed sessions with automatic cleanup and secure cookie handling. Thanks to Replit’s integrated setup, this took only 5 minutes instead of the day-long process it would typically require.&lt;/p&gt;
+
+&lt;h3 id=&quot;reliable-email-delivery&quot;&gt;Reliable email delivery&lt;/h3&gt;
+
+&lt;p&gt;The app uses production SMTP integration for reliable delivery of magic links and invitations. During development, I configured the system to log emails to the console for easy testing without worrying about deliverability issues.&lt;/p&gt;
+
+&lt;h3 id=&quot;robust-file-security&quot;&gt;Robust file security&lt;/h3&gt;
+
+&lt;p&gt;The system enforces a 50MB upload limit with strict type validation and secure storage. All uploaded documents require authentication to access, while external links leverage the existing permission systems of services like Google Drive and Dropbox.&lt;/p&gt;
+
+&lt;h2 id=&quot;development-timeline&quot;&gt;Development timeline&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Week 1: Authentication and data modeling implementation&lt;/li&gt;
+  &lt;li&gt;Week 2: Document management and UI development&lt;/li&gt;
+  &lt;li&gt;Week 3: Email system integration and production deployment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;feedback-request&quot;&gt;Feedback request&lt;/h2&gt;
+
+&lt;p&gt;If you have past experience with data rooms, I’d love to hear your thoughts on the platform. If you’re going to be needing a data room soon, I’d love to show you what we’ve built and get your feedback.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Live platform:&lt;/strong&gt; &lt;a href=&quot;https://thedataroom.app&quot;&gt;thedataroom.app&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Access:&lt;/strong&gt; Waitlist signups receive discounted pricing; investor access remains free but you would need an invite.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Vibe coding a data room app</title>
+   <link href="https://djpardis.com/blog/2025/06/20/vibe-coding-data-room-app/"/>
+   <updated>2025-06-20T00:00:00+00:00</updated>
+   <id>https://djpardis.com/blog/2025/06/20/vibe-coding-data-room-app</id>
+   <content type="html">&lt;p&gt;This is part 1 of a 2-part post. The first part is about my experience with &lt;a href=&quot;https://twitter.com/karpathy/status/1886192184808149383&quot; target=&quot;_blank&quot;&gt;vibe coding&lt;/a&gt;, or rather, &lt;a href=&quot;https://simonwillison.net/2025/Mar/19/vibe-coding/&quot; target=&quot;_blank&quot;&gt;AI-assisted programming&lt;/a&gt; with &lt;a href=&quot;https://windsurf.com&quot; target=&quot;_blank&quot;&gt;Windsurf&lt;/a&gt;. The second part is about how I set up the magic link authentication flow.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/pics/fancy-pooh.jpg&quot; alt=&quot;A cute bear saying &apos;oh bother&apos;&quot; /&gt;
+&lt;em&gt;It’s different.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt;
+
+&lt;p&gt;To put these cool tools to use, I’ve been working on a couple of side projects. The one we’ll discuss here is a custom data room app for &lt;a href=&quot;https://generalfolders.com&quot; target=&quot;_blank&quot;&gt;General Folders&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here’s how they compare:&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot;&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Tool&lt;/th&gt;
+        &lt;th&gt;Features&lt;/th&gt;
+        &lt;th&gt;Limitations&lt;/th&gt;
+        &lt;th&gt;Strengths&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;DocSend&lt;/td&gt;
+        &lt;td&gt;Document analytics, granular access control&lt;/td&gt;
+        &lt;td&gt;Limited customization, corporate aesthetic&lt;/td&gt;
+        &lt;td&gt;Tracking investor engagement&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Notion&lt;/td&gt;
+        &lt;td&gt;Flexible organization, modern interface&lt;/td&gt;
+        &lt;td&gt;Weak access controls, limited analytics&lt;/td&gt;
+        &lt;td&gt;Early-stage startups with simple needs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Google Drive&lt;/td&gt;
+        &lt;td&gt;Familiar interface, real-time collaboration&lt;/td&gt;
+        &lt;td&gt;Poor presentation layer, generic experience&lt;/td&gt;
+        &lt;td&gt;Teams already in Google ecosystem&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Dropbox&lt;/td&gt;
+        &lt;td&gt;Simple file sharing, version history&lt;/td&gt;
+        &lt;td&gt;Limited structure for investor narrative&lt;/td&gt;
+        &lt;td&gt;Basic file sharing needs&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;For a more thorough comparison of tools and features see &lt;a href=&quot;#ref1&quot;&gt;Papermark&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and &lt;a href=&quot;#ref1b&quot;&gt;FirmRoom&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;None of these tools fully meet my needs. DocSend’s tracking features often &lt;a href=&quot;https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af&quot; target=&quot;_blank&quot;&gt;discourage investor engagement&lt;/a&gt;, while its templated approach limits storytelling. It’s also &lt;a href=&quot;https://www.docsend.com/pricing/&quot; target=&quot;_blank&quot;&gt;not cheap&lt;/a&gt; for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn’t allow for the global control of the look and feel of pages in a project. Over time, it’s easy to have pages that look very different. We’re looking for an affordable solution that balances security with brand customization while preserving investor preferences.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solution&quot;&gt;The solution&lt;/h2&gt;
+
+&lt;p&gt;Given that context, our goal is to build a secure platform, with a brand-consistent look and feel, for startups to share links to confidential documents with authenticated investors.&lt;/p&gt;
+
+&lt;p&gt;What we’re envisioning is one flavor of a file explorer for the browser. In addition to the file explorer, we can add on a file viewer, like a slide viewer or a doc viewer, and replicate the logic that DocSend or Google Workspace have built. However, apart from enabling for granular tracking it’s hard to justify the effort that goes into building a file viewer given the affordable price tag on Google Workspace products and the familiarity of the experience.&lt;/p&gt;
+
+&lt;p&gt;As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box, are all file explorers at the core which is quite beautiful.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tools&quot;&gt;The tools&lt;/h3&gt;
+
+&lt;p&gt;Now we get to the topic of vibe coding. I believe the tools have finally reached that critical threshold where they’re not just fun demos but genuinely practical for everyday use. And it looks like others feel the same!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Last time I felt as giddy as I do when vibe coding was my first ever visual basic app. Seismic shifts afoot people, seismic.&lt;/p&gt;
+
+  &lt;p&gt;— Harry Brundage (&lt;a href=&quot;https://x.com/harrybrundage/status/1928812963085070585&quot;&gt;@harrybrundage&lt;/a&gt;) • May 31, 2024&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Programming with AI is what you thought programming would be like prior to learning it.&lt;/p&gt;
+
+  &lt;p&gt;— Martin Casado (&lt;a href=&quot;https://x.com/martin_casado/status/1929390376185405743&quot;&gt;@martin_casado&lt;/a&gt;) • June 1, 2024&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To build this data room app, I used &lt;a href=&quot;https://windsurf.com&quot; target=&quot;_blank&quot;&gt;Windsurf&lt;/a&gt;, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025.&lt;/p&gt;
+
+&lt;p&gt;For a comparison of coding agents, see &lt;a href=&quot;#ref2&quot;&gt;Yogesh’s head-to-head comparison&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, &lt;a href=&quot;#ref3&quot;&gt;C# Corner’s top AI tools&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, &lt;a href=&quot;#ref4&quot;&gt;Kingy AI’s agent analysis&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and &lt;a href=&quot;#ref5&quot;&gt;BrightCoding’s technical benchmarks&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. To understand how they work, see &lt;a href=&quot;#ref6&quot;&gt;Sourcegraph’s anatomy of coding assistants&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;observations-and-best-practices&quot;&gt;Observations and best practices&lt;/h2&gt;
+
+&lt;p&gt;Now let’s get to the main point of this post. Below I share some observations I’ve made while using these tools over the past few months.&lt;/p&gt;
+
+&lt;h3 id=&quot;observations&quot;&gt;Observations&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;IDE interface.&lt;/strong&gt; Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating on a project is key.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skill issue.&lt;/strong&gt; These tools increase the surface area of projects that I would take on. I know I can rely on them where I lack skills. This means I can take on brand new projects with more confidence.&lt;/p&gt;
+
+&lt;h3 id=&quot;best-practices&quot;&gt;Best practices&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Version control.&lt;/strong&gt; Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control.&lt;/p&gt;
+
+&lt;p&gt;The agent sometimes changes already functional files and modules that are not relevant to your prompt. Sometimes it hallucinates and makes updates that are all wrong. Some say to lock a page you’re sure about; but practically, you rarely want to lock a file in an evolving project, so the best bet is to have meaningful commits that you can revert to.&lt;/p&gt;
+
+&lt;p&gt;I would go so far to recommend you manage your git workflow manually. That way you can be sure you have meaningful commits and ways to correct big mistakes and hallucinations. Otherwise you end up resetting a full day’s worth of work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Local vs global solutions.&lt;/strong&gt; The agent sometimes does a local hacky solution rather than fixing the root cause. For example, instead of fixing a css issue globally, it might fix it locally for a specific part of the website, or separately for every part. On those occasions it requires nudging about best practices, for example, about &lt;em&gt;separation of concerns&lt;/em&gt;. Otherwise, you’ll end up with unmaintainable code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code review.&lt;/strong&gt; As I went deep into a couple of projects, spending more and more time on Windsurf, it had me wondering, am I getting good at anything? What skills, if any, am I gaining? When I program, absent an agent, I get better at programming. When I write, I get better at writing. When I vibe code, especially in a domain I’m not familiar with, am I actually learning anything? This is where I’d recommend reviewing every commit. This way, you’ll not only have better command over your codebase but also learn from your robot friend.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Imprecise details.&lt;/strong&gt; Being imprecise can be the source of a lot of pain. Be as clear as possible. &lt;em&gt;English is code.&lt;/em&gt; I wasted a full half day due to imprecisely describing the folder structure in a project only to realize that it was &lt;em&gt;my&lt;/em&gt; prompt and not the agent’s dumbness that was leading the project astray.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Technical details.&lt;/strong&gt; I’ve found that the more accurate I can explain what I want and the more technical context I can provide, the faster and smoother things go.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Planning file (plan.md).&lt;/strong&gt; Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. Windsurf’s &lt;a href=&quot;https://docs.windsurf.com/windsurf/cascade/planning-mode#planning-mode&quot; target=&quot;_blank&quot;&gt;Planning Mode&lt;/a&gt; not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of “as per my tenth to last prompt.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cold starts.&lt;/strong&gt; Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don’t know what the project structure should look like. Lack of templates isn’t necessarily a blocker but templates make the experience smoother; they steer the agent towards best practices in domains where you are not as opinionated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debugging.&lt;/strong&gt; Debugging works easier when you understand the codebase. For example, if I can identify the root cause of a bug, it’s easier to write a prompt and fix the problem. Otherwise, it’s just an endless loop of the blind leading the blind; which can still work but can take forever.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Work estimates.&lt;/strong&gt; One thing I’ve struggled with is trying to estimate how long something takes. Is it easier or harder to provide work estimates when working with an agent? I’d say it’s harder. Imagine working with someone without having visibility into their strengths and weaknesses. In my experience I’ve found the agent is not great at auth flows, but really good at CSS, for example, but I wouldn’t have known that until I got deep into the project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pure vibes.&lt;/strong&gt; If it’s a small, short-term project, it makes sense to let the agent take the wheel. All you need to do is to nudge it in the right direction once in while but little involvement is necessary. However, for a bigger project, or one that’s meant to be revised later, or one that is shared with other collaborators, it’s different. In this case it’s easier if you know the codebase and review every commit, just as you would if you were working with a colleague who might move to another project at any point. Additionally, if your project is one where performance or security matters then you need to be more alert and involved.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Memories and rules.&lt;/strong&gt; A new chat window doesn’t always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a &lt;a href=&quot;https://docs.windsurf.com/windsurf/cascade/memories&quot; target=&quot;_blank&quot;&gt;memory or a rule&lt;/a&gt; to guide the agent.&lt;/p&gt;
+
+&lt;h3 id=&quot;advice-from-windsurf-itself&quot;&gt;Advice from Windsurf itself&lt;/h3&gt;
+
+&lt;p&gt;I asked Windsurf directly what advice it would give to someone starting with AI-assisted programming. Here are some key insights from the tool itself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Context windows.&lt;/strong&gt; Be mindful of the AI’s context window limitations. For large codebases, focus the AI on specific files or components rather than expecting it to understand the entire system at once. This improves response quality and reduces confusion.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Documentation-first approach.&lt;/strong&gt; Ask the AI to document its implementation strategy before writing code. This forces clarity of thought and gives you a chance to course-correct before any code is written.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tool complementarity.&lt;/strong&gt; AI coding tools work best when complemented with traditional development tools like linters, type checkers, and test suites that can catch issues the AI might miss.&lt;/p&gt;
+
+&lt;h3 id=&quot;elsewhere-on-the-web&quot;&gt;Elsewhere on the web&lt;/h3&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://docs.windsurf.com/windsurf/getting-started&quot; target=&quot;_blank&quot;&gt;Windsurf documentation&lt;/a&gt;&lt;a id=&quot;ref7-back&quot; href=&quot;#ref7&quot;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; and also &lt;a href=&quot;https://uibakery.io/blog/windsurf-ai-rules&quot; target=&quot;_blank&quot;&gt;Windsurf rules&lt;/a&gt;&lt;a id=&quot;ref8-back&quot; href=&quot;#ref8&quot;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; at UI Bakery for general Windsurf best practices. Also see David Crawshaw’s &lt;a href=&quot;https://crawshaw.io/blog/programming-with-agents&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt;&lt;a id=&quot;ref9-back&quot; href=&quot;#ref9&quot;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; for an interesting look at programming with agents. For more on vibe coding, check out &lt;a href=&quot;https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration&quot; target=&quot;_blank&quot;&gt;12 Rules to Vibe Code Without Frustration&lt;/a&gt;&lt;a id=&quot;ref10-back&quot; href=&quot;#ref10&quot;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s it for now. I’ll add to this list as I learn more.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;Along with part 2 of this post where I’ll explain the login flow with magic link authentication, I will publish a link for you to try out the data room app.&lt;/p&gt;
+
+&lt;p&gt;Next up, stay tuned as I share some of my &lt;a href=&quot;https://github.com/djpardis/mcp-code-qna&quot; target=&quot;_blank&quot;&gt;explorations&lt;/a&gt; into MCP servers and agents.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you have any feedback or advice, please let me know via &lt;a href=&quot;https://x.com/djpardis&quot; target=&quot;_blank&quot;&gt;X&lt;/a&gt;, &lt;a href=&quot;https://bsky.app/profile/djpardis.com&quot; target=&quot;_blank&quot;&gt;Bluesky&lt;/a&gt;, or &lt;a href=&quot;https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;. I’m looking forward to hearing from you.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref1&quot; href=&quot;#ref1-back&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Papermark. (2023). &lt;a href=&quot;https://www.papermark.com/virtual-data-room-providers&quot;&gt;“Best virtual data room providers comparison”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref1b&quot; href=&quot;#ref1-back&quot;&gt;&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt; FirmRoom. (2023). &lt;a href=&quot;https://firmroom.com/vdr-providers&quot;&gt;“11 best data room providers you need in 2024: Comparison”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref2&quot; href=&quot;#ref2-back&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; Yogesh, B. (2025). &lt;a href=&quot;https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd&quot;&gt;“AI coding tools: A developer’s head-to-head comparison”&lt;/a&gt;. A technical comparison of Cursor, GitHub Copilot, Replit, Cline, and Claude Code from an engineer’s perspective.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref3&quot; href=&quot;#ref3-back&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; C# Corner. (2025). &lt;a href=&quot;https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/&quot;&gt;“Top 7 AI tools for software developers”&lt;/a&gt;. Comprehensive analysis of GitHub Copilot, ChatGPT, Replit AI, Windsurf, Tabnine, Cursor AI, and V0 by Vercel.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref4&quot; href=&quot;#ref4-back&quot;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; Kingy AI. (2025). &lt;a href=&quot;https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/&quot;&gt;“AI coding agents in 2025: Cursor vs. Windsurf vs. Copilot vs. Claude vs. VS Code AI”&lt;/a&gt;. In-depth analysis of strengths and weaknesses across code generation, debugging, refactoring, and large-codebase support.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref5&quot; href=&quot;#ref5-back&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; BrightCoding. (2025). &lt;a href=&quot;https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/&quot;&gt;“AI coding assistants compared: technical benchmarks”&lt;/a&gt;. Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref6&quot; href=&quot;#ref6-back&quot;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; Sourcegraph Engineering. (2024). &lt;a href=&quot;https://sourcegraph.com/blog/anatomy-of-a-coding-assistant&quot;&gt;“The anatomy of an AI coding assistant”&lt;/a&gt;. Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI’s text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref7&quot; href=&quot;#ref7-back&quot;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; Windsurf. (2025). &lt;a href=&quot;https://docs.windsurf.com/windsurf/getting-started&quot;&gt;“Getting Started with Windsurf”&lt;/a&gt;. Official documentation on getting started with the Windsurf VSCode fork.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref8&quot; href=&quot;#ref8-back&quot;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; UI Bakery. (2025). &lt;a href=&quot;https://uibakery.io/blog/windsurf-ai-rules&quot;&gt;“Windsurf AI Rules”&lt;/a&gt;. Best practices for working with Windsurf AI and optimizing its performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref9&quot; href=&quot;#ref9-back&quot;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; Crawshaw, D. (2025). &lt;a href=&quot;https://crawshaw.io/blog/programming-with-agents&quot;&gt;“Programming with Agents”&lt;/a&gt;. An in-depth look at the paradigm shift of programming with AI agents.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;ref10&quot; href=&quot;#ref10-back&quot;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt; Creator Economy. (2025). &lt;a href=&quot;https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration&quot;&gt;“12 Rules to Vibe Code Without Frustration”&lt;/a&gt;. A practical guide to effective AI-assisted programming techniques and best practices.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Startup advice</title>
+   <link href="https://djpardis.com/blog/2024/08/12/startup-advice/"/>
+   <updated>2024-08-12T00:00:00+00:00</updated>
+   <id>https://djpardis.com/blog/2024/08/12/startup-advice</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;This article is cross-posted from my &lt;a href=&quot;https://medium.com/@djpardis/startup-advice-e9459d6c1ebb&quot;&gt;original publication on Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg&quot; alt=&quot;From my time at Techstars SDSU&quot; /&gt;
+&lt;em&gt;From my time at Techstars SDSU.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s been quite the journey building &lt;a href=&quot;https://generalfolders.com&quot;&gt;General Folders&lt;/a&gt; so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!&lt;/p&gt;
+
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;span&gt;&amp;#10210;&amp;nbsp;&amp;nbsp;&amp;#10209;&amp;nbsp;&amp;nbsp;&amp;#10211;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Build a team.&lt;/strong&gt; Bring along co-founders, but &lt;a href=&quot;https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441&quot;&gt;for the right reasons&lt;/a&gt;. Two can outperform one. Building the first team is your most important task.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;People first. Technology second.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Biz Stone&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Be genuinely passionate.&lt;/strong&gt; The secret to hiring great people is to be knowledgeable and passionate about the product and business. Passion is contagious, and expertise is hard to fake. The same holds for sales: don’t underestimate the impact of &lt;em&gt;stoke&lt;/em&gt; on selling a product.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Define the MVP.&lt;/strong&gt; A startup has limited resources, so the scope of the initial version is crucial. Customers expect quality demos, regardless of a company’s size or stage. Determine the minimum amount of &lt;strong&gt;product&lt;/strong&gt; or &lt;strong&gt;visuals&lt;/strong&gt; required to get 1) customer buy-in and 2) relevant feedback.&lt;/p&gt;
+
+&lt;p&gt;A successful MVP is tied to a very particular use case with a well-defined customer profile. Having a well-defined use case, more than anything, paves the way for successful distribution.&lt;/p&gt;
+
+&lt;p&gt;As it turns out, this is an exercise that a company repeats again and again. There’s never an infinite budget, and building products in a vacuum is rarely a good idea. You can easily bankrupt a company as you spend to develop an upcoming version.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;The only way to avoid disruption is to constantly do what you would if you were just starting out.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;—Aaron Levie&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Talk to customers.&lt;/strong&gt; Nothing benefits a company more than customer feedback. Never lose sight of it. Feedback saves products and companies from veering off the tracks into irrelevance.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;You’ll learn more in a day talking to customers than a week of brainstorming, a month of watching competitors, or a year of market research.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;—Aaron Levie&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Embrace change.&lt;/strong&gt; Don’t become overly obsessed with a particular decision or plan. If product reception is anything but stellar, update your strategy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Follow the crowd.&lt;/strong&gt; Tried-and-true practices are popular for a reason. It pays to follow the crowd if you know when and where to apply a technique.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Business is very situational. Rules of thumb are good, but they have to be applied to the right situation. Sometimes the old maxim that you should stick to the knitting is correct, but sometimes it’s wrong. And a senior leader’s job is to figure out: Which situation are you in?&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Jeff Bezos&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Follow trends.&lt;/strong&gt; Don’t ignore market trends. Following trends makes you more likely to get noticed, talked about, and funded.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hire an accountant.&lt;/strong&gt; While it pays to follow trends, plan for the dry season. New trends always give way to newer trends — it’s funny how that works.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stand out.&lt;/strong&gt; Likewise, while following trends can be rewarding, it sometimes pays to focus on what you uniquely believe to be true. You can’t expect a significant return without taking on a risk nobody else wants to take.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Most of the big breakthrough technologies/companies seem crazy at first: PCs, the internet, Bitcoin, Airbnb, Uber, 140 characters.. It has to be a radical product. It has to be something where, when people look at it, at first they say, ‘I don’t get it, I don’t understand it. I think it’s too weird, I think it’s too unusual.’&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Marc Andreessen&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;If you’re waiting for encouragement from others, you’re doing it wrong. By the time people think an idea is good, it’s probably too late.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;—Aaron Levie&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Hustle.&lt;/strong&gt; Aside from being a function of big risk, a big return is also an outcome of hard work. There are no shortcuts. Pick up the phone. Knock on doors. Get the product in front of customers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;There is no royal road to geometry.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Euclid&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Make the call.&lt;/strong&gt; Running a business involves endless decisions with incomplete information. Indecision is a decision. Make the call. Use every decision as an opportunity to learn more about your business.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Action produces information.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Brian Armstrong&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Don’t worry about failure; you only have to be right once.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Drew Houston&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;There is no silver bullet. There are always options and the options have consequences.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Ben Horowitz&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Move fast.&lt;/strong&gt; Faster is better, but only when the goal is to serve customers and tend to their needs. Rushing for PR reasons comes at the expense of quality, ultimately tarnishing the brand.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;My goal is not to fail fast. My goal is to succeed over the long run. They are not the same thing.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Marc Andreessen&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Moving fast is not just about writing more code, sending more emails, and doing more busy work. Building requires clear thinking and planning. It requires coordinating with customers at every step. Skipping steps creates tech debt, ineffective plans, and underwhelmed customers. Rarely do products fail because there isn’t enough &lt;em&gt;code and artifacts&lt;/em&gt;; rather, it is often due to inadequate &lt;em&gt;thought&lt;/em&gt;. Don’t skip steps. And don’t settle for busy work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Keep learning.&lt;/strong&gt; In every scenario, assume you don’t have all the answers. Learn and evolve to become the leader the company needs at each stage. Can you &lt;a href=&quot;https://youtu.be/qAr-yl9A0Xc?si=wUVTi-zKmvuWsEiK&amp;amp;t=1978&quot;&gt;hire yourself every day&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ask for help.&lt;/strong&gt; Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected. Knowing when to ask, who to ask, and for what is a skill worth perfecting.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Go after capital.&lt;/strong&gt; Raise capital to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it’s a hard sell, it’s not a good fit.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Believe in yourself.&lt;/strong&gt; Be kind, especially to yourself. Self-confidence is the only thing you have going for you for a long time. Things won’t ever be perfect, and that’s okay.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;If I waited for perfection… I would never write a word.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;—Margaret Atwood&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Keep going.&lt;/strong&gt; People (mainly yourself) will tell you that what you’re doing is not enough and that if it were to work, it would have worked by now. They will tell you to give up. Don’t. Opportunities will come around.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;It’s hard to beat a person who never gives up.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Babe Ruth&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Keep focused.&lt;/strong&gt; Don’t compare your startup to other startups. Don’t read into startup news. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers; don’t attempt to solve global problems for imaginary customers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;I learned the value of focus. I learned it is better to do one product well than two products in a mediocre way.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;— Reed Hastings&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Seize the day.&lt;/strong&gt; You might not have achieved all the milestones, but you’ll never be this young ever again.&lt;/p&gt;
+
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;span&gt;&amp;#10210;&amp;nbsp;&amp;nbsp;&amp;#10209;&amp;nbsp;&amp;nbsp;&amp;#10211;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What are some of your experiences from working at startups? I’d love to hear from you!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hourly mentions of a word on Twitter</title>
+   <link href="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/"/>
+   <updated>2015-05-23T00:00:00+00:00</updated>
+   <id>https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter</id>
+   <content type="html">&lt;p&gt;Some time ago (OK, a month ago—time ✈️s), I saw this tweet:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Need a simple tool to track mentions of a keyword on Twitter by hour. Don’t need a bunch of bells and whistles. Thoughts?&lt;/p&gt;
+
+  &lt;p&gt;— Kaegan Donnelly (&lt;a href=&quot;https://twitter.com/kaequan/status/591359379431104513&quot;&gt;@kaequan&lt;/a&gt;) • April 23, 2015&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I thought, “Should be easy, lmgt.” However, results for the query “hourly mentions of a word on Twitter” didn’t offer clear solutions.&lt;/p&gt;
+
+&lt;p&gt;Days later I came across two relatively simple approaches to tackling the problem. The first is &lt;a href=&quot;https://github.com/tweepy/tweepy&quot;&gt;Tweepy&lt;/a&gt;. The other is &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html&quot;&gt;Logstash&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tweepy is an &lt;a href=&quot;http://www.tweepy.org/&quot;&gt;open source Python library&lt;/a&gt; for accessing the Twitter API, including the Twitter Streaming API.&lt;/p&gt;
+
+&lt;p&gt;Logstash is an open source tool for &lt;a href=&quot;https://wikitech.wikimedia.org/wiki/Logstash&quot;&gt;collecting, processing, and forwarding events&lt;/a&gt;. Logstash can read events from the Twitter Streaming API using &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/plugins-inputs-twitter.html&quot;&gt;its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twitter&lt;/code&gt; plugin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Having tried both, I recommend Logstash over Tweepy for two main reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It &lt;a href=&quot;https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb&quot;&gt;deals&lt;/a&gt; with the Twitter API rate limits by default&lt;/li&gt;
+  &lt;li&gt;It offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For both Tweepy and Logstash you need access to Twitter’s streaming API. Follow steps 2 and 3 &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04&quot;&gt;here&lt;/a&gt; to create a Twitter app and obtain your &lt;em&gt;Consumer Key&lt;/em&gt;, &lt;em&gt;Consumer Key Secret&lt;/em&gt;, &lt;em&gt;Access Token&lt;/em&gt;, and &lt;em&gt;Access Token Secret&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-elk-solution&quot;&gt;The ELK solution&lt;/h3&gt;
+
+&lt;p&gt;Download and install &lt;a href=&quot;https://www.elastic.co/downloads/past-releases/elasticsearch-1-4-4&quot;&gt;Elasticsearch&lt;/a&gt;, &lt;a href=&quot;https://www.elastic.co/downloads/logstash&quot;&gt;Logstash&lt;/a&gt;, and &lt;a href=&quot;https://www.elastic.co/downloads/kibana&quot;&gt;Kibana&lt;/a&gt;. If you are on a Mac, you can&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;elasticsearch
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;logstash&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ireland&lt;/code&gt; (call it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ireland.conf&lt;/code&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;# a logstash config file has three sections:
+# input{}, output{}, and (optional) filter{}; add plugins
+# to specify how events should be handled in each section
+
+input {
+    twitter {
+        # set key and token values from the previous step
+        consumer_key =&amp;gt; &quot;&quot;
+        consumer_secret =&amp;gt; &quot;&quot;
+        oauth_token =&amp;gt; &quot;&quot;
+        oauth_token_secret =&amp;gt; &quot;&quot;
+        # assume we are interested in tracking all
+        # mentions of the word &quot;ireland&quot;
+        keywords =&amp;gt; [&quot;ireland&quot;]
+        # no need for all fields to get hourly counts
+        full_tweet =&amp;gt; false
+    }
+}
+
+output {
+	stdout {
+		# include this to pretty-print the event&apos;s json to stdout
+		codec =&amp;gt; rubydebug
+  	}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To start streaming tweets, run&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;logstash -f ireland.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;At this point, tweets are written to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdout&lt;/code&gt;. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.&lt;/p&gt;
+
+&lt;p&gt;Add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elasticsearch&lt;/code&gt; plugin to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt; section of the configuration:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;output {
+    elasticsearch {
+        protocol =&amp;gt; &quot;http&quot;
+        host =&amp;gt; &quot;localhost&quot;
+        index =&amp;gt; &quot;irelandtweets&quot;
+    }
+
+	stdout {
+		# include this to pretty-print the event&apos;s json to stdout
+		codec =&amp;gt; rubydebug
+  	}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Run Logstash again and have a look at:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;http://localhost:9200/irelandtweets/_search/?pretty&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Below is a sample of the output format. You can see, for example, that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;65235&lt;/code&gt; documents (tweets) have been stored in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;irelandtweets&lt;/code&gt; index:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;took&quot;&lt;/span&gt; : 2,
+  &lt;span class=&quot;s2&quot;&gt;&quot;timed_out&quot;&lt;/span&gt; : &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;_shards&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;total&quot;&lt;/span&gt; : 5,
+    &lt;span class=&quot;s2&quot;&gt;&quot;successful&quot;&lt;/span&gt; : 5,
+    &lt;span class=&quot;s2&quot;&gt;&quot;failed&quot;&lt;/span&gt; : 0
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;hits&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;total&quot;&lt;/span&gt; : 65235,
+    &lt;span class=&quot;s2&quot;&gt;&quot;max_score&quot;&lt;/span&gt; : 1.0,
+    &lt;span class=&quot;s2&quot;&gt;&quot;hits&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;_index&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;irelandtweets&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_type&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;logs&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_id&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;AU2B1MGZPj_44djTabLA&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_score&quot;&lt;/span&gt; : 1.0,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_source&quot;&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;@timestamp&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;2015-05-23T17:31:51.000Z&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;Y&apos;all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;user&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;LesbiForLauren&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;client&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;a href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;http://twitter.com/download/iphone&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; rel=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;nofollow&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;retweeted&quot;&lt;/span&gt;:false,&lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;http://twitter.com/LesbiForLauren/status/602165054042034176&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;@version&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;_index&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;irelandtweets&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_type&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;logs&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_id&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;AU2B1MGZPj_44djTabLF&quot;&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_score&quot;&lt;/span&gt; : 1.0,
+      &lt;span class=&quot;s2&quot;&gt;&quot;_source&quot;&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;@timestamp&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;2015-05-23T17:31:51.000Z&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson.&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;user&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;SOUTHERNjamespb&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;client&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;a href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;http://www.twitter.com&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; rel=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;nofollow&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;Twitter for BlackBerry&amp;lt;/a&amp;gt;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;retweeted&quot;&lt;/span&gt;:false,&lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;http://twitter.com/SOUTHERNjamespb/status/602165054889283584&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;@version&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+               ...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To start using Kibana, visit&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;http://localhost:5601/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;On the Discover tab, there is a configuration form:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Check off the box: &lt;em&gt;Index contains time-based events&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Fill the &lt;em&gt;Index name or pattern&lt;/em&gt; field with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;irelandtweets&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fill the &lt;em&gt;Time-field name&lt;/em&gt; field with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@timestamp&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;On the Visualize tab, choose visualization type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Line chart&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Choose option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;From a saved search&lt;/code&gt; to use the same query you specified on the Discover tab&lt;/li&gt;
+  &lt;li&gt;For metric aggregation (Y-Axis): Choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Count&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;For bucket aggregation (X-Axis):
+i. Aggregation: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Date Histogram&lt;/code&gt;
+ii. Field: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@timestamp&lt;/code&gt;
+iii. Interval: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Minute&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the Refresh Interval tab at the top. Choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5 seconds&lt;/code&gt; and see your line chart come alive 📈&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/pics/kibana_screenshot.png&quot; alt=&quot;Kibana screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Done. Thank you for starting the conversation Kaegan!&lt;/p&gt;
+
+&lt;h3 id=&quot;more-resources&quot;&gt;More resources&lt;/h3&gt;
+
+&lt;p&gt;For details about Logstash plugins see &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/configuration.html&quot; target=&quot;_blank&quot;&gt;this guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anna Roes has written an excellent overview of Kibana in &lt;a href=&quot;https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/&quot; target=&quot;_blank&quot;&gt;this tutorial&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
