@@ -3,6 +3,16 @@
  * Contains custom styling and visual enhancements
  */
 
+/* Blog post subtitle styling */
+.post-subtitle {
+  margin-top: -0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #8a8a8a;
+  line-height: 1.2;
+}
+
 /* Base layout */
 html, body {
   padding: 0 !important;
