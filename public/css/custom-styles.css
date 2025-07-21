@@ -148,6 +148,17 @@ body {
   }
 }
 
+/* Markdown image caption styling */
+.container.content p img + em {
+  display: block;
+  text-align: center;
+  color: #757575;
+  font-size: 0.85rem;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
 /* Blockquote styling */
 blockquote {
   border-left: 4px solid #7d78b5;
