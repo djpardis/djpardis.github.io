@@ -16,10 +16,15 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
+          bundler-cache: false
+
+      - name: Update bundler
+        run: gem install bundler -v 2.6.9
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle install
 
       - name: Build site
         run: bundle exec jekyll build
@@ -30,4 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
+          cname: djpardis.com
