@@ -41,7 +41,7 @@ Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.
 
 **Why the name <span class="wiggly-underline">107 Wins</span>?** 
 
-The name celebrates the SF Giants' historic 2021 season when they won an incredible 107 regular season games — a franchise record. As dedicated fans who attended way too many games that season, we decided to honor that special year in our podcast name.
+The name celebrates the SF Giants' historic 2021 season when they won an incredible 107 regular season games, a [franchise](https://en.wikipedia.org/wiki/2021_San_Francisco_Giants_season) [record](https://www.mlb.com/news/giants-san-francisco-record-104-wins). As dedicated fans who attended way too many games that season, we decided to honor that special year in our podcast name.
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Episodes</h3></summary>
