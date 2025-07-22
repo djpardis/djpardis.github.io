@@ -14,7 +14,6 @@ pages_list:
   Bio: '/'
   Work: '/work'
   Gigs: '/gigs'
-  Blog: '/blog'
   Pod: '/pod'
 
 # About
