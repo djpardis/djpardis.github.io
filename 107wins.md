@@ -3,7 +3,7 @@ layout: page
 title: 107 Wins
 description: Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 keywords: podcast, conversations, business building, technology trends, best practices, events, learning, entrepreneurship, pardis noorzad
-canonical_url: https://djpardis.com/pod
+canonical_url: https://djpardis.com/107wins
 ---
 
 ![2021 SF Giants](/files/pics/pages/2021giants.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
@@ -28,8 +28,8 @@ The name celebrates the SF Giants' historic 2021 season when they won an incredi
 *Coming soon...*
 
 <!-- Example format for future episodes:
-[July 15, 2025] *[Episode 1: Title of Episode]({{ site.baseurl }}/pod/episode1)*  
-[July 30, 2025] *[Episode 2: Title of Episode]({{ site.baseurl }}/pod/episode2)*  
+[July 15, 2025] *[Episode 1: Title of Episode]({{ site.baseurl }}/107wins/episode1)*  
+[July 30, 2025] *[Episode 2: Title of Episode]({{ site.baseurl }}/107wins/episode2)*  
 -->
 
 ---
