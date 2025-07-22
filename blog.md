@@ -15,6 +15,7 @@ canonical_url: https://djpardis.com/blog
   </div>
 </div>
 
+*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
