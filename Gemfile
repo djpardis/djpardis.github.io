@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-# GitHub Pages
-gem "github-pages", group: :jekyll_plugins
+# Basic Jekyll
+gem "jekyll", "~> 4.0"
+gem "nokogiri"
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-seo-tag'
   gem 'kramdown-parser-gfm'
-  gem 'faraday-retry'
-  gem 'logger', '1.6.6'
 end
