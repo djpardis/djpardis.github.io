@@ -27,14 +27,7 @@ and AI research at [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-
 where I studied [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} 
 and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title="Efficient classification based on sparse regression"}.
 
-<div class="text-center">
-    <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
-</div>
-
-<!-- Check out some 
-<span style="background-color: rgba(140,255,50,0.3);">essays and talks</span> at [Blog](/blog), 
-<span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on [107 Wins](/pod), and 
-<span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs). -->
+{% include separator.html %}
 
 Here is my bio for talks and conferences:
 
