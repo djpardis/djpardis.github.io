@@ -21,13 +21,7 @@ twitter:
   image: /files/pics/107winslogo.png
 ---
 
-<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    {% include responsive-image.html 
-       path="/files/pics/2021 giants.jpg" 
-       alt="2021 SF Giants" 
-       title="2021 SF Giants" 
-       style="width: 100%; height: auto; display: block;" %}
-</div>
+![2021 SF Giants](/files/pics/pages/2021giants.jpg)
 
 Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 
