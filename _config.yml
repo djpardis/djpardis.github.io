@@ -12,7 +12,7 @@ lang:                'en-US'
 
 pages_list:
   Bio: '/'
-  Blog: '/work'
+  Blog: '/blog'
   Gigs: '/gigs'
   Pod: '/pod'
 

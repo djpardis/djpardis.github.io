@@ -3,7 +3,7 @@ layout: page
 title: Blog
 description: Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
 keywords: data science, team management, B2B data collaboration, publications, talks, academic papers, pardis noorzad, general folders
-canonical_url: https://djpardis.com/work
+canonical_url: https://djpardis.com/blog
 ---
 
 <div style="display: flex; gap: 20px;">
