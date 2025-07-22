@@ -9,10 +9,10 @@ canonical_url: https://djpardis.com/
 
 ![Pardis Noorzad](/files/pics/pages/profile_pic.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
-We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
+I am building [General Folders](https://generalfolders.com){:target="_blank"}, 
 a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company making data exchange seamless and secure. Learn more in 
 [this post](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"} 
-or [let's connect](mailto:pardis@generalfolders.com)!
+or [let's connect](mailto:pardis@generalfolders.com).
 
 Previously, I led data science at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} 
 and [Twitter](https://twitter.com/){:target="_blank"}, where I established the 
@@ -34,7 +34,7 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
 </div>
 
 Check out some 
-<span style="background-color: rgba(140,255,50,0.3);">blog posts and talks</span> at [Blog](/blog), 
+<span style="background-color: rgba(140,255,50,0.3);">essays and talks</span> at [Blog](/blog), 
 <span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on the new [Pod](/pod), and 
 <span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs).
 
