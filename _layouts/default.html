@@ -22,9 +22,9 @@
                 {% endif %}
                 
                 {% if is_active %}
-                  <span style="background-color: #FFFF99"><a href="{{ node[1]  }}">{{ node[0] }}{% if node[0] == 'Pod' %}<sup class="new-label">NEW</sup>{% endif %}</a></span>
+                  <span style="background-color: #FFFF99"><a href="{{ node[1]  }}">{{ node[0] }}</a></span>
                 {% else %}
-                  <a href="{{ node[1]  }}" {% if node[0] == 'Pod' %}class="pod-link"{% endif %}>{{ node[0] }}{% if node[0] == 'Pod' %}<sup class="new-label">NEW</sup>{% endif %}</a>
+                  <a href="{{ node[1]  }}" {% if node[0] == '107 Wins' %}class="pod-link"{% endif %}>{{ node[0] }}</a>
                 {% endif %}
                  &nbsp;
               {% endfor %}

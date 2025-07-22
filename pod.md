@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pod
+title: 107 Wins
 description: Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 keywords: podcast, conversations, business building, technology trends, best practices, events, learning, entrepreneurship, pardis noorzad
 canonical_url: https://djpardis.com/pod
