@@ -6,6 +6,14 @@ keywords: data science, team management, B2B data collaboration, publications, t
 canonical_url: https://djpardis.com/blog
 ---
 
+<div style="display: flex; gap: 20px; justify-content: space-between;">
+  <div style="flex: 1;">
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Panel discussion" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="/files/pics/pages/vsw2025_audience.jpg" alt="Audience" style="width: 100%;">
+  </div>
+</div>
 
 
 <details class="collapsible-section" markdown="1" open>
