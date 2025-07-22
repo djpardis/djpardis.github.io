@@ -357,6 +357,19 @@ body .wrap .container.content {
   margin: 0;
 }
 
+/* Fainter circle bullets for blog and gigs pages */
+.page ul {
+  list-style-type: disc;
+}
+
+.page li {
+  margin-bottom: 0.5rem;
+}
+
+.page li::marker {
+  color: #ddd;
+}
+
 /* Custom separator styling */
 .arrow-separator {
   text-align: center;
