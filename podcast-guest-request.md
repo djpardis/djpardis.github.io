@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pod
+title: 107 Wins
 description: Submit a request to be a guest on the 107 Wins podcast
 keywords: podcast, guest request, 107 wins, interview request
 image: /files/pics/107winslogo.png

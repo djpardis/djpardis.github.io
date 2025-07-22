@@ -33,7 +33,7 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
 
 <!-- Check out some 
 <span style="background-color: rgba(140,255,50,0.3);">essays and talks</span> at [Blog](/blog), 
-<span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on the new [Pod](/pod), and 
+<span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on [107 Wins](/pod), and 
 <span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs). -->
 
 Here is my bio for talks and conferences:
