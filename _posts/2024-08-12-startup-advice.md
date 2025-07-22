@@ -13,9 +13,7 @@ keywords: startup advice, General Folders, entrepreneurship, company building, l
 
 It's been quite the journey building [General Folders](https://generalfolders.com) so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!
 
-<div class="text-center">
-    <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
-</div>
+{% include separator.html %}
 
 **Build a team.** Bring along co-founders, but [for the right reasons](https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441). Two can outperform one. Building the first team is your most important task.
 
@@ -33,7 +31,7 @@ As it turns out, this is an exercise that a company repeats again and again. The
 > *The only way to avoid disruption is to constantly do what you would if you were just starting out.*  
 > *—Aaron Levie*
 
-**Sell early and often.** Ultimately, a startup's success hinges on sales and its trajectory. Life is easier if the product can be sold early and often. A startup may struggle to survive with grand plans and lengthy sales cycles unless it secures substantial external funding.
+**Sell early and often.** A startup's success hinges on its sales and the trajectory of those sales. Life is easier if the product can be sold early and often. A startup may struggle to survive with grand plans and lengthy sales cycles unless it secures substantial external funding.
 
 **Talk to customers.** Nothing benefits a company more than customer feedback. Never lose sight of it. Feedback saves products and companies from veering off the tracks into irrelevance.
 
