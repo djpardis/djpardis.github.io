@@ -6,7 +6,7 @@ keywords: podcast, conversations, business building, technology trends, best pra
 canonical_url: https://djpardis.com/pod
 ---
 
-![2021 SF Giants](/files/pics/pages/2021giants.jpg)
+![2021 SF Giants](/files/pics/pages/2021giants.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
 Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 
