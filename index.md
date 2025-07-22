@@ -4,7 +4,7 @@ title: Bio
 description: Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data exchange, secure data sharing
 tags: [data, data science, management, technology, software, product, cloud infrastructure]
-image: /files/pics/profile_pic.jpg
+image: /files/pics/pages/profile_pic.jpg
 canonical_url: https://djpardis.com/
 sitemap:
   priority: 1.0
@@ -13,22 +13,16 @@ sitemap:
 og:
   title: "Pardis Noorzad - CEO & Founder of General Folders"
   description: "Founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter."
-  image: /files/pics/profile_pic.jpg
+  image: /files/pics/pages/profile_pic.jpg
   type: website
 twitter:
   card: summary_large_image
   title: "Pardis Noorzad - CEO & Founder of General Folders"
   description: "Founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter."
-  image: /files/pics/profile_pic.jpg
+  image: /files/pics/pages/profile_pic.jpg
 ---
 
-<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    {% include responsive-image.html 
-       path="/files/pics/profile_pic.jpg" 
-       alt="Pardis Noorzad" 
-       title="Pardis Noorzad" 
-       style="width: 100%; height: auto; display: block;" %}
-</div>
+![Pardis Noorzad](/files/pics/pages/profile_pic.jpg)
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
 a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company making data exchange seamless and secure. Learn more in 
@@ -55,8 +49,7 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
 </div>
 
 Check out some 
-<span style="background-color: rgba(140,255,50,0.3);">talks and presentations</span> at [Work](/work), 
-<span style="background-color: rgba(140,255,50,0.3);">posts and projects</span> on the new [Blog](/blog), 
+<span style="background-color: rgba(140,255,50,0.3);">blog posts and talks</span> at [Work](/work), 
 <span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on the new [Pod](/pod), and 
 <span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs).
 

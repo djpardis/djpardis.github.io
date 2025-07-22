@@ -161,7 +161,7 @@ On the Visualize tab, choose visualization type `Line chart`.
    iii. Interval: `Minute`
 4. Click on the Refresh Interval tab at the top. Choose `5 seconds` and see your line chart come alive 📈
 
-![Kibana screenshot](/files/pics/kibana_screenshot.png)
+![Kibana screenshot](/files/pics/blog/2015/kibana_screenshot.png)
 
 Done. Thank you for starting the conversation Kaegan!
 
