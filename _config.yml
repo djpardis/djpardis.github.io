@@ -88,6 +88,14 @@ defaults:
     values:
       layout: "post"
       permalink: "/blog/:year/:month/:day/:title/"
+      active_section: blog
+      sitemap:
+        priority: 0.7
+        changefreq: yearly
+      og:
+        type: article
+      twitter:
+        card: summary_large_image
 
   # Pages
   - scope:
