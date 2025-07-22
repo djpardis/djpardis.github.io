@@ -13,6 +13,27 @@
   line-height: 1.2;
 }
 
+/* Image and caption spacing for all pages */
+.container.content div[style*="display: flex"] {
+  margin-bottom: 0.25rem;
+}
+
+/* Fix caption paragraph margin for flex-based image layouts */
+.container.content div[style*="display: flex"] + p {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Ensure proper spacing for class-based image containers */
+.container.content .image-container-with-caption {
+  margin-bottom: 0.25rem;
+}
+
+.container.content .image-caption {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
 /* Base layout */
 html, body {
   padding: 0 !important;
@@ -109,7 +130,7 @@ body {
 /* Specific page styles */
 .blog .container.content .image-row img {
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 0;
   border-radius: 5px;
   height: auto;
 }
@@ -126,7 +147,7 @@ body {
   text-align: center;
   color: #757575;
   font-size: 0.85rem;
-  margin: 0.5rem auto 0.5rem;
+  margin: 0.25rem auto 0.5rem;
   max-width: 90%;
   line-height: 1.4;
 }
@@ -159,7 +180,7 @@ body {
   text-align: center;
   color: #757575;
   font-size: 0.85rem;
-  margin: 0.5rem auto 1.5rem;
+  margin: 0.25rem auto 1rem;
   max-width: 90%;
   line-height: 1.4;
 }
@@ -187,7 +208,7 @@ body {
   text-align: center;
   color: #757575;
   font-size: 0.85rem;
-  margin: 0.5rem auto 1.5rem;
+  margin: 0.25rem auto 1rem;
   max-width: 90%;
   line-height: 1.4;
 }
