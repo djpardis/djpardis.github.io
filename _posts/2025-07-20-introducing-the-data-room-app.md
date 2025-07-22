@@ -5,7 +5,7 @@ subtitle: 'Magic link authentication with Replit'
 active_section: blog
 description: 'Implementing magic link authentication for a secure investor data room'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, replit
-image: /files/pics/dataroom.png
+image: /files/pics/blog/2025/dataroom.png
 sitemap:
   priority: 0.7
   changefreq: yearly
@@ -13,16 +13,16 @@ sitemap:
 og:
   title: "Introducing the data room app - Pardis Noorzad"
   description: "Implementing magic link authentication for a secure investor data room"
-  image: /files/pics/dataroom.png
+  image: /files/pics/blog/2025/dataroom.png
   type: article
 twitter:
   card: summary_large_image
   title: "Introducing the data room app - Pardis Noorzad"
   description: "Implementing magic link authentication for a secure investor data room"
-  image: /files/pics/dataroom.png
+  image: /files/pics/blog/2025/dataroom.png
 ---
 
-![Data room app main interface](/files/pics/dataroom.png)
+![Data room app main interface](/files/pics/blog/2025/dataroom.png)
 *The Data Room App ([thedataroom.app](https://thedataroom.app){:target="_blank"}) provides a clean, intuitive interface for investors to access confidential documents.*
 
 In the [first part of this series](/blog/2025/06/20/vibe-coding-data-room-app/), I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
@@ -71,7 +71,7 @@ Windsurf provides control with traditional Git workflows, full file system acces
 
 - **Simple content management**: Founders can organize their data room using a simple Markdown file, just like writing documentation. No clunky admin panels.
 
-![Document sections in the data room](/files/pics/sections.png)
+![Document sections in the data room](/files/pics/blog/2025/sections.png)
 *Changes to sections.md are reflected instantly - no rebuild required.*
 
 - **Flexible document handling**: The app supports both direct file uploads (protected by authentication) and links to existing documents in Google Drive or Dropbox.

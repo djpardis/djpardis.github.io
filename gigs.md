@@ -3,7 +3,7 @@ layout: page
 keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, music, mixtapes, radio shows, dj sets, twitter hq, new parish
 title: Gigs
 description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections.
-image: /files/pics/djing.jpg
+image: /files/pics/pages/djing.jpg
 canonical_url: https://djpardis.com/gigs
 sitemap:
   priority: 0.7
@@ -12,18 +12,16 @@ sitemap:
 og:
   title: "Gigs - DJ Pardis (Pardis Noorzad)"
   description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
-  image: /files/pics/djing.jpg
+  image: /files/pics/pages/djing.jpg
   type: website
 twitter:
   card: summary_large_image
   title: "Gigs - DJ Pardis (Pardis Noorzad)"
   description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
-  image: /files/pics/djing.jpg
+  image: /files/pics/pages/djing.jpg
 ---
 
-<div style="margin: 0 auto; max-width: min(500px, 100%); text-align: center;">
-    <img src="/files/pics/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" title="Sim Simah and Pardis Noorzad (aka DJ Pardis)" style="width: 100%; height: auto; display: block;">
-</div>
+![Sim Simah and Pardis Noorzad (aka DJ Pardis)](/files/pics/pages/djing.jpg)
 
 I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com/463652373) at Twitter HQ. I usually DJed with [Julien Gaillard](https://www.linkedin.com/in/juliengaillard1/) on the [guitar](https://vimeo.com/463687716). In the summer of 2019, I was the tour DJ for [Sim Simah](https://soundcloud.com/ohsimsimah) and [Aarxn Cxle](https://music.apple.com/us/artist/aarxn-cxle/1453179768). The picture above is by [Jesse Meria](https://www.instagram.com/meria.agency/?hl=ne) from July 2019 at [The New Parish](https://www.thenewparish.com/), where we were [the opening act](https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf).
 
@@ -68,7 +66,7 @@ The poster below, designed by [Regy Augustin](https://www.linkedin.com/in/regyna
 <div class="image-container-with-caption">
     <div class="image-row">
         <div class="image-container">
-            <img src="/files/pics/poster.jpg" alt="Bay to Breakers with Regy and Andrew (aka Papusa Papi)" title="Bay to Breakers with Regy and Andrew (aka Papusa Papi)">
+            <img src="/files/pics/pages/poster.jpg" alt="Bay to Breakers with Regy and Andrew (aka Papusa Papi)" title="Bay to Breakers with Regy and Andrew (aka Papusa Papi)">
         </div>
     </div>
     <div class="image-caption"></div>
