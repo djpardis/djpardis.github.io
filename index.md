@@ -10,7 +10,7 @@ canonical_url: https://djpardis.com/
 ![Pardis Noorzad](/files/pics/pages/profile_pic.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
 I am building [General Folders](https://generalfolders.com){:target="_blank"}, 
-a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}. I also built [The Data Room App](https://thedataroom.app){:target="_blank"}, that offers simple and secure data rooms for fundraising.
+a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}. I recently built [The Data Room App](https://thedataroom.app){:target="_blank"}, that offers simple and secure data rooms for fundraising.
 
 Previously, I led data science at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} 
 and [Twitter](https://twitter.com/){:target="_blank"}, where I established the 
