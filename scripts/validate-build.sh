@@ -20,7 +20,7 @@ fi
 
 # Build the site
 echo "🏗️  Building site..."
-if ! bundle exec jekyll build --safe &> /dev/null; then
+if ! bundle exec jekyll build &> /dev/null; then
     echo "❌ Error: Build failed"
     exit 1
 fi
