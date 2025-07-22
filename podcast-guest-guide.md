@@ -21,7 +21,7 @@ twitter:
   image: /files/pics/107winslogo.png
 ---
 
-[← Go back]({{ site.baseurl }}/pod)
+[← Back to 107 Wins]({{ site.baseurl }}/107wins)
 
 # <span class="wiggly-underline">107 Wins</span> guest guide
 
