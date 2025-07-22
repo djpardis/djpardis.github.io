@@ -164,8 +164,8 @@ body {
   line-height: 1.4;
 }
 
-/* Page image styling */
-.container.content img {
+/* Page image styling - only for pages, not posts */
+.page .container.content img {
   display: block;
   margin: 0 auto;
   max-width: 450px;
