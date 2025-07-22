@@ -3,22 +3,7 @@ layout: page
 title: Pod
 description: Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 keywords: podcast, conversations, business building, technology trends, best practices, events, learning, entrepreneurship, pardis noorzad
-image: /files/pics/107winslogo.png
 canonical_url: https://djpardis.com/pod
-sitemap:
-  priority: 0.8
-  changefreq: weekly
-  lastmod: 2025-07-05
-og:
-  title: "Pod - Pardis Noorzad"
-  description: "Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things."
-  image: /files/pics/107winslogo.png
-  type: website
-twitter:
-  card: summary_large_image
-  title: "Pod - Pardis Noorzad"
-  description: "Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things."
-  image: /files/pics/107winslogo.png
 ---
 
 ![2021 SF Giants](/files/pics/pages/2021giants.jpg)
