@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pod
+title: 107 Wins
 description: Guide for guests appearing on the 107 Wins podcast
 keywords: podcast, guest guide, 107 wins, interview preparation
 image: /files/pics/107winslogo.png

@@ -350,13 +350,7 @@ body .wrap .container.content {
   z-index: -1;
 }
 
-/* NEW! label styling */
-.new-label {
-  color: #FF99D6;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
-  font-weight: bold;
-}
+
 
 /* Page styling */
 .page {
