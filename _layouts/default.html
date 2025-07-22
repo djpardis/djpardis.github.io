@@ -14,7 +14,14 @@
           <h3 class="masthead-title">
             <center>
               {% for node in site.pages_list %}
+                {% assign is_active = false %}
                 {% if page.title == node[0] %}
+                  {% assign is_active = true %}
+                {% elsif node[0] == 'Blog' and page.layout == 'post' %}
+                  {% assign is_active = true %}
+                {% endif %}
+                
+                {% if is_active %}
                   <span style="background-color: #FFFF99"><a href="{{ node[1]  }}">{{ node[0] }}{% if node[0] == 'Pod' %}<sup class="new-label">NEW</sup>{% endif %}</a></span>
                 {% else %}
                   <a href="{{ node[1]  }}" {% if node[0] == 'Pod' %}class="pod-link"{% endif %}>{{ node[0] }}{% if node[0] == 'Pod' %}<sup class="new-label">NEW</sup>{% endif %}</a>
