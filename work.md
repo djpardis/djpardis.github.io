@@ -3,7 +3,7 @@ layout: page
 title: Work
 description: Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
 keywords: data science, team management, B2B data collaboration, publications, talks, academic papers, pardis noorzad, general folders
-image: /files/pics/vsw2025_panel.jpg
+image: /files/pics/pages/vsw2025_panel.jpg
 canonical_url: https://djpardis.com/work
 sitemap:
   priority: 0.5
@@ -12,32 +12,35 @@ sitemap:
 og:
   title: "Work - Pardis Noorzad"
   description: "Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration."
-  image: /files/pics/vsw2025_panel.jpg
+  image: /files/pics/pages/vsw2025_panel.jpg
   type: website
 twitter:
   card: summary_large_image
   title: "Work - Pardis Noorzad"
   description: "Publications, talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration."
-  image: /files/pics/vsw2025_panel.jpg
+  image: /files/pics/pages/vsw2025_panel.jpg
 ---
 
-<div class="image-container-with-caption">
-    <div class="image-row">
-        <div class="image-container">
-            {% include responsive-image.html 
-               path="/files/pics/vsw2025_panel.jpg" 
-               alt="Panel discussion at Vancouver Startup Week 2025" 
-               title="Panel discussion at Vancouver Startup Week 2025" %}
-        </div>
-        <div class="image-container">
-            {% include responsive-image.html 
-               path="/files/pics/vsw2025_audience.jpg" 
-               alt="Audience at Vancouver Startup Week 2025" 
-               title="Audience at Vancouver Startup Week 2025" %}
-        </div>
-    </div>
-    <div class="image-caption">Techstars SDSU Founder Panel with Misti Cain at VSW 2025.</div>
+<div style="display: flex; gap: 20px;">
+  <div style="flex: 1;">
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Panel discussion" style="width: 100%">
+  </div>
+  <div style="flex: 1;">
+    <img src="/files/pics/pages/vsw2025_audience.jpg" alt="Audience" style="width: 100%">
+  </div>
 </div>
+
+*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
+
+<details class="collapsible-section" markdown="1" open>
+<summary><h3>Blog posts</h3></summary>
+
+[July 21, 2025] *[Revisiting moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-21-revisiting-moneyball %})*  
+[July 20, 2025] *[Introducing the data room app: Magic link authentication with Replit]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})*  
+[June 20, 2025] *[Vibe coding the data room app: Building with Windsurf]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
+[August 12, 2024] *[Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
+[May 23, 2015] *[Hourly mentions of a word on Twitter]({{ site.baseurl }}{% post_url 2015-05-23-hourly-mentions-of-a-word-on-twitter %})*  
+</details>
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Essays</h3></summary>
