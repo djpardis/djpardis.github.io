@@ -285,6 +285,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   kramdown-parser-gfm
+  logger (= 1.6.6)
 
 BUNDLED WITH
    2.6.9

@@ -1,5 +1,5 @@
 {% comment %}
-  Responsive image include that supports WebP with fallback
+  Responsive image include
   Usage: 
   {% include responsive-image.html 
     path="/files/pics/image.jpg" 
@@ -10,28 +10,13 @@
   %}
 {% endcomment %}
 
-{% assign file_path_parts = include.path | split: '.' %}
-{% assign file_extension = file_path_parts | last %}
-{% assign base_path = include.path | split: '.' | reverse | shift | reverse | join: '.' %}
-{% assign webp_path = base_path | append: '.webp' %}
-
-<picture>
-  {% if file_extension == 'jpg' or file_extension == 'jpeg' or file_extension == 'png' %}
-  <!-- WebP version as primary source -->
-  <source srcset="{{ webp_path }}" type="image/webp">
-  <!-- Original format as fallback -->
-  <source srcset="{{ include.path }}" type="image/{{ file_extension }}">
-  {% endif %}
-  <!-- Fallback img tag for older browsers -->
-  <img 
-    src="{{ webp_path }}" 
-    alt="{{ include.alt }}" 
-    {% if include.title %}title="{{ include.title }}"{% endif %} 
-    {% if include.class %}class="{{ include.class }}"{% endif %}
-    {% if include.width %}width="{{ include.width }}"{% endif %}
-    {% if include.height %}height="{{ include.height }}"{% endif %}
-    {% if include.style %}style="{{ include.style }}"{% endif %}
-    loading="lazy"
-    decoding="async"
-    onerror="this.onerror=null; this.src='{{ include.path }}';">
-</picture>
+<img 
+  src="{{ include.path }}" 
+  alt="{{ include.alt }}" 
+  {% if include.title %}title="{{ include.title }}"{% endif %} 
+  {% if include.class %}class="{{ include.class }}"{% endif %}
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.style %}style="{{ include.style }}"{% endif %}
+  loading="lazy"
+  decoding="async">
