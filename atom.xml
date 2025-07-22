@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml version="1.0" encoding="utf-8"?><html><body>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Pardis Noorzad</title>
- <link href="https://djpardis.com/atom.xml" rel="self"/>
- <link href="https://djpardis.com/"/>
- <updated>2025-07-22T04:50:07+00:00</updated>
+ <link href="https://djpardis.com/atom.xml" rel="self">
+ <link href="https://djpardis.com/">
+ <updated>2025-07-22T04:57:24+00:00</updated>
  <id>https://djpardis.com</id>
  <author>
    <name>Pardis Noorzad</name>
@@ -14,13 +15,13 @@
  
  <entry>
    <title>Revisiting moneyball</title>
-   <link href="https://djpardis.com/blog/2025/07/21/revisiting-moneyball/"/>
+   <link href="https://djpardis.com/blog/2025/07/21/revisiting-moneyball/">
    <updated>2025-07-21T00:00:00+00:00</updated>
    <id>https://djpardis.com/blog/2025/07/21/revisiting-moneyball</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/files/pics/blog/2025/moneyball.jpg&quot; alt=&quot;Moneyball concept visualization&quot; /&gt;
+   <content type="html">&lt;p&gt;&lt;img src="/files/pics/blog/2025/moneyball.jpg" alt="Moneyball concept visualization" /&gt;
 &lt;em&gt;Oakland Coliseum, September 2022.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;why-are-we-still-talking-about-moneyball&quot;&gt;Why are we still talking about Moneyball?&lt;/h2&gt;
+&lt;h2 id="why-are-we-still-talking-about-moneyball"&gt;Why are we still talking about Moneyball?&lt;/h2&gt;
 
 &lt;p&gt;Why am I talking about Moneyball? For one, I’ve been meaning to write this post since 2019. 2018 even.&lt;/p&gt;
 
@@ -28,13 +29,13 @@
 
 &lt;p&gt;The story endures because it represents a fundamental shift in how we think about competition, value, and decision-making—not just in sports, but across industries. The 2002 Oakland A’s proved that data-driven insights could compete with raw financial power, inspiring everything from Wall Street trading algorithms to Silicon Valley hiring practices.&lt;/p&gt;
 
-&lt;h2 id=&quot;understanding-moneyball&quot;&gt;Understanding Moneyball&lt;/h2&gt;
+&lt;h2 id="understanding-moneyball"&gt;Understanding Moneyball&lt;/h2&gt;
 
 &lt;p&gt;Let’s begin by discussing the author’s intentions for writing Moneyball and what he found intriguing about the A’s in 2002.&lt;/p&gt;
 
 &lt;p&gt;Below, we’ll review some of the book’s most critical themes. Their impact has been so significant that they have since become memes.&lt;/p&gt;
 
-&lt;h3 id=&quot;analytics-leads-to-more-transparent-decision-making&quot;&gt;Analytics leads to more transparent decision-making.&lt;/h3&gt;
+&lt;h3 id="analytics-leads-to-more-transparent-decision-making"&gt;Analytics leads to more transparent decision-making.&lt;/h3&gt;
 
 &lt;p&gt;Michael Lewis was fascinated by Billy Beane’s willingness to reject conventional wisdom and make decisions based purely on data. The A’s front office, working with statistician Paul DePodesta, used sabermetric analysis to challenge traditional scouting methods that often relied on subjective evaluations of “athleticism” or “baseball instincts.”&lt;/p&gt;
 
@@ -42,7 +43,7 @@
 
 &lt;p&gt;The revolution wasn’t just about finding better players; it was about creating a decision-making framework that could be understood, replicated, and improved upon. Today, virtually every major league team employs statistical analysts, and the transparency Beane pioneered has become industry standard.&lt;/p&gt;
 
-&lt;h3 id=&quot;getting-on-base-is-undervalued-and-a-team-can-use-this-to-their-advantage&quot;&gt;Getting on base is undervalued, and a team can use this to their advantage.&lt;/h3&gt;
+&lt;h3 id="getting-on-base-is-undervalued-and-a-team-can-use-this-to-their-advantage"&gt;Getting on base is undervalued, and a team can use this to their advantage.&lt;/h3&gt;
 
 &lt;p&gt;The core insight of Moneyball was that on-base percentage (OBP) was massively undervalued by traditional baseball evaluation. While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of these traditional statistics.&lt;/p&gt;
 
@@ -52,7 +53,7 @@
 
 &lt;p&gt;The strategy worked: the 2002 A’s ranked 2nd in the American League in on-base percentage (.339) despite having the third-lowest payroll in baseball. They proved that systematic undervaluation of specific skills could be exploited by analytical teams willing to ignore conventional wisdom.&lt;/p&gt;
 
-&lt;h3 id=&quot;scott-hatteberg-was-undervalued&quot;&gt;Scott Hatteberg was undervalued.&lt;/h3&gt;
+&lt;h3 id="scott-hatteberg-was-undervalued"&gt;Scott Hatteberg was undervalued.&lt;/h3&gt;
 
 &lt;p&gt;Scott Hatteberg perfectly embodied the “Moneyball player”—someone with real value that traditional scouting missed, available at below-market price due to perceived limitations. The former Boston Red Sox catcher developed nerve damage in his throwing elbow, making catching nearly impossible and leaving him without a clear defensive position.&lt;/p&gt;
 
@@ -64,7 +65,7 @@
 
 &lt;p&gt;The success wasn’t accidental—it was the predictable result of identifying undervalued skills and creating conditions for those skills to flourish.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-streak&quot;&gt;The streak.&lt;/h3&gt;
+&lt;h3 id="the-streak"&gt;The streak.&lt;/h3&gt;
 
 &lt;p&gt;The 20-game winning streak (August 13 - September 4, 2002) became the dramatic centerpiece of the Moneyball story, but its significance goes beyond the record itself. The streak demonstrated that analytical decision-making could produce sustained excellence, not just occasional success.&lt;/p&gt;
 
@@ -79,7 +80,7 @@
 
 &lt;p&gt;More importantly, the streak occurred during a season where the A’s won 103 games despite having one of baseball’s smallest payrolls, proving that analytical insights could sustain success over a full season, not just during hot streaks.&lt;/p&gt;
 
-&lt;h3 id=&quot;you-can-build-a-player-in-aggregate&quot;&gt;You can build a player in aggregate.&lt;/h3&gt;
+&lt;h3 id="you-can-build-a-player-in-aggregate"&gt;You can build a player in aggregate.&lt;/h3&gt;
 &lt;p&gt;The A’s discovered they could construct effective offensive production by combining players with complementary skills rather than seeking complete players. This insight challenged the traditional scouting preference for “five-tool players” who could hit for average, hit for power, run, field, and throw.&lt;/p&gt;
 
 &lt;p&gt;Instead of expensive superstars, the A’s assembled a roster where different players contributed specific, undervalued skills:&lt;/p&gt;
@@ -94,7 +95,7 @@
 
 &lt;p&gt;The strategy proved that modern baseball success could be engineered through analytical understanding of how different skills combined to produce runs and wins. This systems thinking approach has since influenced roster construction throughout professional sports.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-playoffs-are-a-crapshoot&quot;&gt;The playoffs are a crapshoot.&lt;/h3&gt;
+&lt;h3 id="the-playoffs-are-a-crapshoot"&gt;The playoffs are a crapshoot.&lt;/h3&gt;
 
 &lt;p&gt;One of Moneyball’s most controversial assertions was that playoff success is largely random—a “crapshoot” where the best regular season team frequently loses due to small sample sizes and variance inherent in short series.&lt;/p&gt;
 
@@ -106,7 +107,7 @@
 
 &lt;p&gt;However, the theory also suggests that consistently reaching the playoffs—which analytical methods enable—eventually produces championship opportunities. The Boston Red Sox proved this in 2004 and 2007, using Moneyball principles combined with higher payroll to win multiple titles.&lt;/p&gt;
 
-&lt;h3 id=&quot;baseball-is-in-fact-romantic&quot;&gt;Baseball is, in fact, romantic.&lt;/h3&gt;
+&lt;h3 id="baseball-is-in-fact-romantic"&gt;Baseball is, in fact, romantic.&lt;/h3&gt;
 &lt;p&gt;Despite its statistical foundation, Moneyball ultimately affirmed baseball’s romantic appeal rather than diminishing it. The story resonated precisely because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages.&lt;/p&gt;
 
 &lt;p&gt;The romance lay not in rejecting emotion for cold calculation, but in finding new ways to appreciate the game’s beauty. Scott Hatteberg’s walk-off home run was no less thrilling because it was enabled by analytical insight. Miguel Tejada’s MVP season wasn’t diminished by being part of a systematically constructed roster.&lt;/p&gt;
@@ -117,11 +118,11 @@
 
 &lt;p&gt;Modern baseball has vindicated this perspective: advanced analytics coexist with traditional appreciation for the game’s beauty, creating richer rather than diminished fan experiences.&lt;/p&gt;
 
-&lt;h2 id=&quot;critiquing-moneyball&quot;&gt;Critiquing Moneyball&lt;/h2&gt;
+&lt;h2 id="critiquing-moneyball"&gt;Critiquing Moneyball&lt;/h2&gt;
 
 &lt;p&gt;In retrospect, how did the viewpoints in Moneyball hold up? Let’s examine a few criticisms of Moneyball, providing context for each.&lt;/p&gt;
 
-&lt;h3 id=&quot;moneyball-overlooks-existing-talent-on-the-2002-roster&quot;&gt;Moneyball overlooks existing talent on the 2002 roster.&lt;/h3&gt;
+&lt;h3 id="moneyball-overlooks-existing-talent-on-the-2002-roster"&gt;Moneyball overlooks existing talent on the 2002 roster.&lt;/h3&gt;
 
 &lt;p&gt;The most substantial criticism of Moneyball—both the book and especially the 2011 film—is that it systematically downplayed or ignored the exceptional traditional talent on the 2002 Oakland roster. The narrative focused so heavily on undervalued acquisitions that it obscured the presence of genuine superstars.&lt;/p&gt;
 
@@ -139,7 +140,7 @@ Critics argue that the Moneyball narrative deliberately ignored that the A’s h
 
 &lt;p&gt;The criticism extends beyond simple omission—the story actively misrepresented how the team achieved success by minimizing the contributions of traditionally scouted superstars while amplifying the impact of analytically identified role players.&lt;/p&gt;
 
-&lt;h3 id=&quot;moneyball-promotes-low-payrolls-in-baseball-thus-ruining-the-game&quot;&gt;Moneyball promotes low payrolls in baseball, thus ruining the game.&lt;/h3&gt;
+&lt;h3 id="moneyball-promotes-low-payrolls-in-baseball-thus-ruining-the-game"&gt;Moneyball promotes low payrolls in baseball, thus ruining the game.&lt;/h3&gt;
 
 &lt;p&gt;This criticism fundamentally misunderstands Moneyball’s actual message and subsequent influence. The lesson of Moneyball was never “cheap is good”—it was about maximizing efficiency and finding market inefficiencies.&lt;/p&gt;
 
@@ -161,7 +162,7 @@ Rather than promoting frugality, Moneyball’s lasting impact has been to make a
 
 &lt;p&gt;The criticism confuses cause and effect: teams that adopted analytical methods without increasing spending weren’t following Moneyball’s principles—they were using analytics as an excuse for cost-cutting that was already occurring due to economic pressures unrelated to the book’s influence.&lt;/p&gt;
 
-&lt;h3 id=&quot;moneyball-promotes-the-use-of-analytics-in-baseball-thus-ruining-the-sport&quot;&gt;Moneyball promotes the use of analytics in baseball, thus ruining the sport.&lt;/h3&gt;
+&lt;h3 id="moneyball-promotes-the-use-of-analytics-in-baseball-thus-ruining-the-sport"&gt;Moneyball promotes the use of analytics in baseball, thus ruining the sport.&lt;/h3&gt;
 
 &lt;p&gt;This criticism has evolved as baseball analytics have become incredibly sophisticated, moving far beyond the simple on-base percentage focus of the original Moneyball era to cutting-edge biomechanical analysis.&lt;/p&gt;
 
@@ -184,7 +185,7 @@ Analytics have created more informed fans who discuss metrics like BABIP (Battin
 &lt;p&gt;&lt;strong&gt;The Aesthetic Question:&lt;/strong&gt;
 The “three true outcomes” criticism reflects analytics’ success in identifying efficient approaches, not system failure. While some aesthetics changed, the 2024 season featured dramatic moments like Freddie Freeman’s walk-off grand slam and Shohei Ohtani’s historic 50-50 season—proving analytics enhance rather than eliminate baseball’s emotional impact.&lt;/p&gt;
 
-&lt;h3 id=&quot;moneyball-suggests-baseball-is-unfair-even-though-its-not-that-unfair-comparatively-speaking&quot;&gt;Moneyball suggests baseball is unfair, even though it’s not that unfair, comparatively speaking.&lt;/h3&gt;
+&lt;h3 id="moneyball-suggests-baseball-is-unfair-even-though-its-not-that-unfair-comparatively-speaking"&gt;Moneyball suggests baseball is unfair, even though it’s not that unfair, comparatively speaking.&lt;/h3&gt;
 
 &lt;p&gt;Baseball’s competitive balance compared to other major sports presents a fascinating paradox that the 2024-2025 seasons have made even more complex.&lt;/p&gt;
 
@@ -239,7 +240,7 @@ The Oakland A’s final 2024 season in Oakland symbolizes this debate. Their $66
 
 &lt;p&gt;The fairness question has evolved beyond payroll gaps to include deferred payment strategies, luxury tax manipulation, and revenue sharing effectiveness. The 2024 season proved that while money matters, analytics, player development, and organizational competence remain crucial competitive factors.&lt;/p&gt;
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;It’s hard to overlook the attention that Moneyball has brought and continues to bring to baseball and sabermetrics, capturing the imagination of a new generation of fans, analysts, and decision-makers across industries.&lt;/p&gt;
 
@@ -263,7 +264,7 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;The revolution isn’t complete—it’s accelerating. Every breakthrough in biomechanical analysis, every innovative contract structure, every insight from advanced metrics continues the path that Billy Beane and the 2002 Oakland A’s pioneered. The principles endure even as the applications become increasingly sophisticated.&lt;/p&gt;
 
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;h2 id="references"&gt;References&lt;/h2&gt;
 
 &lt;p&gt;[1] Baseball-Reference.com. “2002 Oakland Athletics Statistics.” Available at: https://www.baseball-reference.com/teams/OAK/2002.shtml&lt;/p&gt;
 
@@ -306,49 +307,49 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
  
  <entry>
    <title>Introducing the data room app</title>
-   <link href="https://djpardis.com/blog/2025/07/20/introducing-the-data-room-app/"/>
+   <link href="https://djpardis.com/blog/2025/07/20/introducing-the-data-room-app/">
    <updated>2025-07-20T00:00:00+00:00</updated>
    <id>https://djpardis.com/blog/2025/07/20/introducing-the-data-room-app</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/files/pics/blog/2025/dataroom.png&quot; alt=&quot;Data room app main interface&quot; /&gt;
-&lt;em&gt;The Data Room App (&lt;a href=&quot;https://thedataroom.app&quot; target=&quot;_blank&quot;&gt;thedataroom.app&lt;/a&gt;) provides a clean, intuitive interface for investors to access confidential documents.&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img src="/files/pics/blog/2025/dataroom.png" alt="Data room app main interface" /&gt;
+&lt;em&gt;The Data Room App (&lt;a href="https://thedataroom.app" target="_blank"&gt;thedataroom.app&lt;/a&gt;) provides a clean, intuitive interface for investors to access confidential documents.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;In the &lt;a href=&quot;/blog/2025/06/20/vibe-coding-data-room-app/&quot;&gt;first part of this series&lt;/a&gt;, I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn’t meet my needs and also highlighted best practices for working with AI coding assistants.&lt;/p&gt;
+&lt;p&gt;In the &lt;a href="/blog/2025/06/20/vibe-coding-data-room-app/"&gt;first part of this series&lt;/a&gt;, I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn’t meet my needs and also highlighted best practices for working with AI coding assistants.&lt;/p&gt;
 
 &lt;p&gt;Now, in the second part, I’ll focus on one of the most critical aspects of any application: secure authentication. Specifically, I’ll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.&lt;/p&gt;
 
-&lt;h2 id=&quot;solving-the-authentication-challenge&quot;&gt;Solving the authentication challenge&lt;/h2&gt;
+&lt;h2 id="solving-the-authentication-challenge"&gt;Solving the authentication challenge&lt;/h2&gt;
 
 &lt;p&gt;I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I wasn’t able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://replit.com&quot; target=&quot;_blank&quot;&gt;Replit&lt;/a&gt; is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it’s now focused on making software development more accessible and collaborative. What drew me to it was its ability to handle full-stack applications with built-in authentication systems and serverless deployments, all without requiring complex DevOps knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://replit.com" target="_blank"&gt;Replit&lt;/a&gt; is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it’s now focused on making software development more accessible and collaborative. What drew me to it was its ability to handle full-stack applications with built-in authentication systems and serverless deployments, all without requiring complex DevOps knowledge.&lt;/p&gt;
 
-&lt;h2 id=&quot;replit-vs-windsurf-technical-comparison&quot;&gt;Replit vs Windsurf: technical comparison&lt;/h2&gt;
+&lt;h2 id="replit-vs-windsurf-technical-comparison"&gt;Replit vs Windsurf: technical comparison&lt;/h2&gt;
 
-&lt;h3 id=&quot;authentication-and-session-management&quot;&gt;Authentication and session management&lt;/h3&gt;
+&lt;h3 id="authentication-and-session-management"&gt;Authentication and session management&lt;/h3&gt;
 
-&lt;p&gt;Replit’s integrated authentication blueprints provide pre-configured &lt;a href=&quot;https://www.passportjs.org/&quot; target=&quot;_blank&quot;&gt;Passport.js&lt;/a&gt; setups, session store integration with PostgreSQL, and automatic HTTPS for secure cookie handling. Magic link authentication was implemented in 15 minutes compared to hours of OAuth configuration debugging.&lt;/p&gt;
+&lt;p&gt;Replit’s integrated authentication blueprints provide pre-configured &lt;a href="https://www.passportjs.org/" target="_blank"&gt;Passport.js&lt;/a&gt; setups, session store integration with PostgreSQL, and automatic HTTPS for secure cookie handling. Magic link authentication was implemented in 15 minutes compared to hours of OAuth configuration debugging.&lt;/p&gt;
 
-&lt;h3 id=&quot;database-integration&quot;&gt;Database integration&lt;/h3&gt;
+&lt;h3 id="database-integration"&gt;Database integration&lt;/h3&gt;
 
-&lt;p&gt;Instant PostgreSQL provisioning through &lt;a href=&quot;https://neon.tech&quot; target=&quot;_blank&quot;&gt;Neon&lt;/a&gt; with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. &lt;a href=&quot;https://drizzleorm.com&quot; target=&quot;_blank&quot;&gt;Drizzle ORM&lt;/a&gt; integration works seamlessly with database push deployments without migration file management.&lt;/p&gt;
+&lt;p&gt;Instant PostgreSQL provisioning through &lt;a href="https://neon.tech" target="_blank"&gt;Neon&lt;/a&gt; with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. &lt;a href="https://drizzleorm.com" target="_blank"&gt;Drizzle ORM&lt;/a&gt; integration works seamlessly with database push deployments without migration file management.&lt;/p&gt;
 
-&lt;h3 id=&quot;deployment-infrastructure&quot;&gt;Deployment infrastructure&lt;/h3&gt;
+&lt;h3 id="deployment-infrastructure"&gt;Deployment infrastructure&lt;/h3&gt;
 
 &lt;p&gt;Zero-config deployment to custom domains with automatic HTTPS, environment variable management, and container orchestration. The platform handles load balancing and scaling automatically. Replit eliminated infrastructure bottlenecks including server configuration, database setup, and SSL certificate management.&lt;/p&gt;
 
-&lt;h3 id=&quot;replit-limitations&quot;&gt;Replit limitations&lt;/h3&gt;
+&lt;h3 id="replit-limitations"&gt;Replit limitations&lt;/h3&gt;
 
 &lt;p&gt;Git operations lack the fluidity of native terminal workflows. Even basic branching and commit management feel clunky in the interface. What would be simple git commands in a terminal become multi-step processes with less feedback and control.&lt;/p&gt;
 
 &lt;p&gt;The container-based environment limits access to lower-level system functions and file operations, which can make debugging complex issues and performance optimization more challenging compared to local development.&lt;/p&gt;
 
-&lt;h3 id=&quot;windsurf-trade-offs&quot;&gt;Windsurf trade-offs&lt;/h3&gt;
+&lt;h3 id="windsurf-trade-offs"&gt;Windsurf trade-offs&lt;/h3&gt;
 
 &lt;p&gt;Windsurf provides control with traditional Git workflows, full file system access, and familiar terminal operations. However, the setup overhead for authentication, databases, and deployment significantly slows initial development velocity compared to Replit’s integrated infrastructure.&lt;/p&gt;
 
-&lt;h2 id=&quot;data-room-platform-implementation&quot;&gt;Data room platform implementation&lt;/h2&gt;
+&lt;h2 id="data-room-platform-implementation"&gt;Data room platform implementation&lt;/h2&gt;
 
-&lt;h3 id=&quot;technical-stack&quot;&gt;Technical stack&lt;/h3&gt;
+&lt;h3 id="technical-stack"&gt;Technical stack&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;React frontend with TypeScript and shadcn/ui components&lt;/li&gt;
   &lt;li&gt;Express.js backend with PostgreSQL database&lt;/li&gt;
@@ -356,13 +357,13 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
   &lt;li&gt;JWT-based authentication with 7-day token expiration&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;architecture-decisions&quot;&gt;Architecture decisions&lt;/h3&gt;
+&lt;h3 id="architecture-decisions"&gt;Architecture decisions&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Simple content management&lt;/strong&gt;: Founders can organize their data room using a simple Markdown file, just like writing documentation. No clunky admin panels.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/files/pics/blog/2025/sections.png&quot; alt=&quot;Document sections in the data room&quot; /&gt;
+&lt;p&gt;&lt;img src="/files/pics/blog/2025/sections.png" alt="Document sections in the data room" /&gt;
 &lt;em&gt;Changes to sections.md are reflected instantly - no rebuild required.&lt;/em&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -383,11 +384,11 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;implementation-results&quot;&gt;Implementation results&lt;/h2&gt;
+&lt;h2 id="implementation-results"&gt;Implementation results&lt;/h2&gt;
 
-&lt;p&gt;The platform is deployed at &lt;a href=&quot;https://thedataroom.app&quot;&gt;thedataroom.app&lt;/a&gt; and operates in waitlist mode for market validation. The implementation includes PostgreSQL-backed secure sessions, reliable email delivery for magic links and invitations, and robust file security with strict validation and secure storage for documents up to 50MB.&lt;/p&gt;
+&lt;p&gt;The platform is deployed at &lt;a href="https://thedataroom.app"&gt;thedataroom.app&lt;/a&gt; and operates in waitlist mode for market validation. The implementation includes PostgreSQL-backed secure sessions, reliable email delivery for magic links and invitations, and robust file security with strict validation and secure storage for documents up to 50MB.&lt;/p&gt;
 
-&lt;h2 id=&quot;development-timeline&quot;&gt;Development timeline&lt;/h2&gt;
+&lt;h2 id="development-timeline"&gt;Development timeline&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Week 1: Authentication and data modeling implementation&lt;/li&gt;
@@ -395,11 +396,11 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
   &lt;li&gt;Week 3: Email system integration and production deployment&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;feedback-request&quot;&gt;Feedback request&lt;/h2&gt;
+&lt;h2 id="feedback-request"&gt;Feedback request&lt;/h2&gt;
 
 &lt;p&gt;If you have past experience with data rooms, I’d love to hear your thoughts on the platform. If you’re going to be needing a data room soon, I’d love to show you what we’ve built and get your feedback.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Live platform:&lt;/strong&gt; &lt;a href=&quot;https://thedataroom.app&quot;&gt;thedataroom.app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Live platform:&lt;/strong&gt; &lt;a href="https://thedataroom.app"&gt;thedataroom.app&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Access:&lt;/strong&gt; Waitlist signups receive discounted pricing; investor access remains free but you would need an invite.&lt;/p&gt;
 </content>
@@ -407,21 +408,21 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
  
  <entry>
    <title>Vibe coding a data room app</title>
-   <link href="https://djpardis.com/blog/2025/06/20/vibe-coding-data-room-app/"/>
+   <link href="https://djpardis.com/blog/2025/06/20/vibe-coding-data-room-app/">
    <updated>2025-06-20T00:00:00+00:00</updated>
    <id>https://djpardis.com/blog/2025/06/20/vibe-coding-data-room-app</id>
-   <content type="html">&lt;p&gt;This is part 1 of a 2-part post. The first part is about my experience with &lt;a href=&quot;https://twitter.com/karpathy/status/1886192184808149383&quot; target=&quot;_blank&quot;&gt;vibe coding&lt;/a&gt;, or rather, &lt;a href=&quot;https://simonwillison.net/2025/Mar/19/vibe-coding/&quot; target=&quot;_blank&quot;&gt;AI-assisted programming&lt;/a&gt; with &lt;a href=&quot;https://windsurf.com&quot; target=&quot;_blank&quot;&gt;Windsurf&lt;/a&gt;. The second part is about how I set up the magic link authentication flow.&lt;/p&gt;
+   <content type="html">&lt;p&gt;This is part 1 of a 2-part post. The first part is about my experience with &lt;a href="https://twitter.com/karpathy/status/1886192184808149383" target="_blank"&gt;vibe coding&lt;/a&gt;, or rather, &lt;a href="https://simonwillison.net/2025/Mar/19/vibe-coding/" target="_blank"&gt;AI-assisted programming&lt;/a&gt; with &lt;a href="https://windsurf.com" target="_blank"&gt;Windsurf&lt;/a&gt;. The second part is about how I set up the magic link authentication flow.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/files/pics/blog/2025/fancy-pooh.jpg&quot; alt=&quot;A cute bear saying &apos;oh bother&apos;&quot; /&gt;
+&lt;p&gt;&lt;img src="/files/pics/blog/2025/fancy-pooh.jpg" alt="A cute bear saying 'oh bother'" /&gt;
 &lt;em&gt;It’s different.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt;
+&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
 
-&lt;p&gt;To put these cool tools to use, I’ve been working on a couple of side projects. The one we’ll discuss here is a custom data room app for &lt;a href=&quot;https://generalfolders.com&quot; target=&quot;_blank&quot;&gt;General Folders&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To put these cool tools to use, I’ve been working on a couple of side projects. The one we’ll discuss here is a custom data room app for &lt;a href="https://generalfolders.com" target="_blank"&gt;General Folders&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here’s how they compare:&lt;/p&gt;
 
-&lt;div class=&quot;table-responsive&quot;&gt;
+&lt;div class="table-responsive"&gt;
 
   &lt;table&gt;
     &lt;thead&gt;
@@ -462,11 +463,11 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;/div&gt;
 
-&lt;p&gt;For a more thorough comparison of tools and features see &lt;a href=&quot;#ref1&quot;&gt;Papermark&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and &lt;a href=&quot;#ref1b&quot;&gt;FirmRoom&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a more thorough comparison of tools and features see &lt;a href="#ref1"&gt;Papermark&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and &lt;a href="#ref1b"&gt;FirmRoom&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;None of these tools fully meet my needs. DocSend’s tracking features often &lt;a href=&quot;https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af&quot; target=&quot;_blank&quot;&gt;discourage investor engagement&lt;/a&gt;, while its templated approach limits storytelling. It’s also &lt;a href=&quot;https://www.docsend.com/pricing/&quot; target=&quot;_blank&quot;&gt;not cheap&lt;/a&gt; for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn’t allow for the global control of the look and feel of pages in a project. Over time, it’s easy to have pages that look very different. We’re looking for an affordable solution that balances security with brand customization while preserving investor preferences.&lt;/p&gt;
+&lt;p&gt;None of these tools fully meet my needs. DocSend’s tracking features often &lt;a href="https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af" target="_blank"&gt;discourage investor engagement&lt;/a&gt;, while its templated approach limits storytelling. It’s also &lt;a href="https://www.docsend.com/pricing/" target="_blank"&gt;not cheap&lt;/a&gt; for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn’t allow for the global control of the look and feel of pages in a project. Over time, it’s easy to have pages that look very different. We’re looking for an affordable solution that balances security with brand customization while preserving investor preferences.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-solution&quot;&gt;The solution&lt;/h2&gt;
+&lt;h2 id="the-solution"&gt;The solution&lt;/h2&gt;
 
 &lt;p&gt;Given that context, our goal is to build a secure platform, with a brand-consistent look and feel, for startups to share links to confidential documents with authenticated investors.&lt;/p&gt;
 
@@ -474,37 +475,37 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box, are all file explorers at the core which is quite beautiful.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-tools&quot;&gt;The tools&lt;/h3&gt;
+&lt;h3 id="the-tools"&gt;The tools&lt;/h3&gt;
 
 &lt;p&gt;Now we get to the topic of vibe coding. I believe the tools have finally reached that critical threshold where they’re not just fun demos but genuinely practical for everyday use. And it looks like others feel the same!&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Last time I felt as giddy as I do when vibe coding was my first ever visual basic app. Seismic shifts afoot people, seismic.&lt;/p&gt;
 
-  &lt;p&gt;— Harry Brundage (&lt;a href=&quot;https://x.com/harrybrundage/status/1928812963085070585&quot;&gt;@harrybrundage&lt;/a&gt;) • May 31, 2024&lt;/p&gt;
+  &lt;p&gt;— Harry Brundage (&lt;a href="https://x.com/harrybrundage/status/1928812963085070585"&gt;@harrybrundage&lt;/a&gt;) • May 31, 2024&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Programming with AI is what you thought programming would be like prior to learning it.&lt;/p&gt;
 
-  &lt;p&gt;— Martin Casado (&lt;a href=&quot;https://x.com/martin_casado/status/1929390376185405743&quot;&gt;@martin_casado&lt;/a&gt;) • June 1, 2024&lt;/p&gt;
+  &lt;p&gt;— Martin Casado (&lt;a href="https://x.com/martin_casado/status/1929390376185405743"&gt;@martin_casado&lt;/a&gt;) • June 1, 2024&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;To build this data room app, I used &lt;a href=&quot;https://windsurf.com&quot; target=&quot;_blank&quot;&gt;Windsurf&lt;/a&gt;, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025.&lt;/p&gt;
+&lt;p&gt;To build this data room app, I used &lt;a href="https://windsurf.com" target="_blank"&gt;Windsurf&lt;/a&gt;, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025.&lt;/p&gt;
 
-&lt;p&gt;For a comparison of coding agents, see &lt;a href=&quot;#ref2&quot;&gt;Yogesh’s head-to-head comparison&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, &lt;a href=&quot;#ref3&quot;&gt;C# Corner’s top AI tools&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, &lt;a href=&quot;#ref4&quot;&gt;Kingy AI’s agent analysis&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and &lt;a href=&quot;#ref5&quot;&gt;BrightCoding’s technical benchmarks&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. To understand how they work, see &lt;a href=&quot;#ref6&quot;&gt;Sourcegraph’s anatomy of coding assistants&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a comparison of coding agents, see &lt;a href="#ref2"&gt;Yogesh’s head-to-head comparison&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, &lt;a href="#ref3"&gt;C# Corner’s top AI tools&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, &lt;a href="#ref4"&gt;Kingy AI’s agent analysis&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and &lt;a href="#ref5"&gt;BrightCoding’s technical benchmarks&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. To understand how they work, see &lt;a href="#ref6"&gt;Sourcegraph’s anatomy of coding assistants&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;observations-and-best-practices&quot;&gt;Observations and best practices&lt;/h2&gt;
+&lt;h2 id="observations-and-best-practices"&gt;Observations and best practices&lt;/h2&gt;
 
 &lt;p&gt;Now let’s get to the main point of this post. Below I share some observations I’ve made while using these tools over the past few months.&lt;/p&gt;
 
-&lt;h3 id=&quot;observations&quot;&gt;Observations&lt;/h3&gt;
+&lt;h3 id="observations"&gt;Observations&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;IDE interface.&lt;/strong&gt; Interacting with LLMs directly inside an IDE is what makes the programming use case for LLMs so successful. Fast feedback loops while iterating on a project is key.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Skill issue.&lt;/strong&gt; These tools increase the surface area of projects that I would take on. I know I can rely on them where I lack skills. This means I can take on brand new projects with more confidence.&lt;/p&gt;
 
-&lt;h3 id=&quot;best-practices&quot;&gt;Best practices&lt;/h3&gt;
+&lt;h3 id="best-practices"&gt;Best practices&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Version control.&lt;/strong&gt; Version control is good in any situation, but specifically when working with agents that have write access to your codebase. This is not disimlar to how collaborating with a colleague is made practical via version control.&lt;/p&gt;
 
@@ -520,7 +521,7 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;&lt;strong&gt;Technical details.&lt;/strong&gt; I’ve found that the more accurate I can explain what I want and the more technical context I can provide, the faster and smoother things go.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Planning file (plan.md).&lt;/strong&gt; Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. Windsurf’s &lt;a href=&quot;https://docs.windsurf.com/windsurf/cascade/planning-mode#planning-mode&quot; target=&quot;_blank&quot;&gt;Planning Mode&lt;/a&gt; not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of “as per my tenth to last prompt.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Planning file (plan.md).&lt;/strong&gt; Aside from technically detailed prompts, it helps to have a well-defined project definition at the outset. The project goes smoother if there is a clear roadmap. Windsurf’s &lt;a href="https://docs.windsurf.com/windsurf/cascade/planning-mode#planning-mode" target="_blank"&gt;Planning Mode&lt;/a&gt; not only helps keep track of tasks but can also serve as a reference to past prompts instead of the alternative of “as per my tenth to last prompt.”&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cold starts.&lt;/strong&gt; Starting from a template is a great idea, when available. Starting from scratch can be challenging especially if you don’t know what the project structure should look like. Lack of templates isn’t necessarily a blocker but templates make the experience smoother; they steer the agent towards best practices in domains where you are not as opinionated.&lt;/p&gt;
 
@@ -530,9 +531,9 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;&lt;strong&gt;Pure vibes.&lt;/strong&gt; If it’s a small, short-term project, it makes sense to let the agent take the wheel. All you need to do is to nudge it in the right direction once in while but little involvement is necessary. However, for a bigger project, or one that’s meant to be revised later, or one that is shared with other collaborators, it’s different. In this case it’s easier if you know the codebase and review every commit, just as you would if you were working with a colleague who might move to another project at any point. Additionally, if your project is one where performance or security matters then you need to be more alert and involved.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Memories and rules.&lt;/strong&gt; A new chat window doesn’t always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a &lt;a href=&quot;https://docs.windsurf.com/windsurf/cascade/memories&quot; target=&quot;_blank&quot;&gt;memory or a rule&lt;/a&gt; to guide the agent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memories and rules.&lt;/strong&gt; A new chat window doesn’t always remember how we did things before and will find a new way of doing things, that while probably correct, is not consistent with the rest of the codebase. In these settings it makes sense to create a &lt;a href="https://docs.windsurf.com/windsurf/cascade/memories" target="_blank"&gt;memory or a rule&lt;/a&gt; to guide the agent.&lt;/p&gt;
 
-&lt;h3 id=&quot;advice-from-windsurf-itself&quot;&gt;Advice from Windsurf itself&lt;/h3&gt;
+&lt;h3 id="advice-from-windsurf-itself"&gt;Advice from Windsurf itself&lt;/h3&gt;
 
 &lt;p&gt;I asked Windsurf directly what advice it would give to someone starting with AI-assisted programming. Here are some key insights from the tool itself.&lt;/p&gt;
 
@@ -542,63 +543,63 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;&lt;strong&gt;Tool complementarity.&lt;/strong&gt; AI coding tools work best when complemented with traditional development tools like linters, type checkers, and test suites that can catch issues the AI might miss.&lt;/p&gt;
 
-&lt;h3 id=&quot;elsewhere-on-the-web&quot;&gt;Elsewhere on the web&lt;/h3&gt;
+&lt;h3 id="elsewhere-on-the-web"&gt;Elsewhere on the web&lt;/h3&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://docs.windsurf.com/windsurf/getting-started&quot; target=&quot;_blank&quot;&gt;Windsurf documentation&lt;/a&gt;&lt;a id=&quot;ref7-back&quot; href=&quot;#ref7&quot;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; and also &lt;a href=&quot;https://uibakery.io/blog/windsurf-ai-rules&quot; target=&quot;_blank&quot;&gt;Windsurf rules&lt;/a&gt;&lt;a id=&quot;ref8-back&quot; href=&quot;#ref8&quot;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; at UI Bakery for general Windsurf best practices. Also see David Crawshaw’s &lt;a href=&quot;https://crawshaw.io/blog/programming-with-agents&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt;&lt;a id=&quot;ref9-back&quot; href=&quot;#ref9&quot;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; for an interesting look at programming with agents. For more on vibe coding, check out &lt;a href=&quot;https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration&quot; target=&quot;_blank&quot;&gt;12 Rules to Vibe Code Without Frustration&lt;/a&gt;&lt;a id=&quot;ref10-back&quot; href=&quot;#ref10&quot;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href="https://docs.windsurf.com/windsurf/getting-started" target="_blank"&gt;Windsurf documentation&lt;/a&gt;&lt;a id="ref7-back" href="#ref7"&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; and also &lt;a href="https://uibakery.io/blog/windsurf-ai-rules" target="_blank"&gt;Windsurf rules&lt;/a&gt;&lt;a id="ref8-back" href="#ref8"&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; at UI Bakery for general Windsurf best practices. Also see David Crawshaw’s &lt;a href="https://crawshaw.io/blog/programming-with-agents" target="_blank"&gt;blog post&lt;/a&gt;&lt;a id="ref9-back" href="#ref9"&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; for an interesting look at programming with agents. For more on vibe coding, check out &lt;a href="https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration" target="_blank"&gt;12 Rules to Vibe Code Without Frustration&lt;/a&gt;&lt;a id="ref10-back" href="#ref10"&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;That’s it for now. I’ll add to this list as I learn more.&lt;/p&gt;
 
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+&lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt;
 
 &lt;p&gt;Along with part 2 of this post where I’ll explain the login flow with magic link authentication, I will publish a link for you to try out the data room app.&lt;/p&gt;
 
-&lt;p&gt;Next up, stay tuned as I share some of my &lt;a href=&quot;https://github.com/djpardis/mcp-code-qna&quot; target=&quot;_blank&quot;&gt;explorations&lt;/a&gt; into MCP servers and agents.&lt;/p&gt;
+&lt;p&gt;Next up, stay tuned as I share some of my &lt;a href="https://github.com/djpardis/mcp-code-qna" target="_blank"&gt;explorations&lt;/a&gt; into MCP servers and agents.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;If you have any feedback or advice, please let me know via &lt;a href=&quot;https://x.com/djpardis&quot; target=&quot;_blank&quot;&gt;X&lt;/a&gt;, &lt;a href=&quot;https://bsky.app/profile/djpardis.com&quot; target=&quot;_blank&quot;&gt;Bluesky&lt;/a&gt;, or &lt;a href=&quot;https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;. I’m looking forward to hearing from you.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you have any feedback or advice, please let me know via &lt;a href="https://x.com/djpardis" target="_blank"&gt;X&lt;/a&gt;, &lt;a href="https://bsky.app/profile/djpardis.com" target="_blank"&gt;Bluesky&lt;/a&gt;, or &lt;a href="https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9" target="_blank"&gt;Medium&lt;/a&gt;. I’m looking forward to hearing from you.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;h3 id="references"&gt;References&lt;/h3&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref1&quot; href=&quot;#ref1-back&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Papermark. (2023). &lt;a href=&quot;https://www.papermark.com/virtual-data-room-providers&quot;&gt;“Best virtual data room providers comparison”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref1" href="#ref1-back"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Papermark. (2023). &lt;a href="https://www.papermark.com/virtual-data-room-providers"&gt;“Best virtual data room providers comparison”&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref1b&quot; href=&quot;#ref1-back&quot;&gt;&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt; FirmRoom. (2023). &lt;a href=&quot;https://firmroom.com/vdr-providers&quot;&gt;“11 best data room providers you need in 2024: Comparison”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref1b" href="#ref1-back"&gt;&lt;sup&gt;1b&lt;/sup&gt;&lt;/a&gt; FirmRoom. (2023). &lt;a href="https://firmroom.com/vdr-providers"&gt;“11 best data room providers you need in 2024: Comparison”&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref2&quot; href=&quot;#ref2-back&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; Yogesh, B. (2025). &lt;a href=&quot;https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd&quot;&gt;“AI coding tools: A developer’s head-to-head comparison”&lt;/a&gt;. A technical comparison of Cursor, GitHub Copilot, Replit, Cline, and Claude Code from an engineer’s perspective.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref2" href="#ref2-back"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; Yogesh, B. (2025). &lt;a href="https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd"&gt;“AI coding tools: A developer’s head-to-head comparison”&lt;/a&gt;. A technical comparison of Cursor, GitHub Copilot, Replit, Cline, and Claude Code from an engineer’s perspective.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref3&quot; href=&quot;#ref3-back&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; C# Corner. (2025). &lt;a href=&quot;https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/&quot;&gt;“Top 7 AI tools for software developers”&lt;/a&gt;. Comprehensive analysis of GitHub Copilot, ChatGPT, Replit AI, Windsurf, Tabnine, Cursor AI, and V0 by Vercel.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref3" href="#ref3-back"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; C# Corner. (2025). &lt;a href="https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/"&gt;“Top 7 AI tools for software developers”&lt;/a&gt;. Comprehensive analysis of GitHub Copilot, ChatGPT, Replit AI, Windsurf, Tabnine, Cursor AI, and V0 by Vercel.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref4&quot; href=&quot;#ref4-back&quot;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; Kingy AI. (2025). &lt;a href=&quot;https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/&quot;&gt;“AI coding agents in 2025: Cursor vs. Windsurf vs. Copilot vs. Claude vs. VS Code AI”&lt;/a&gt;. In-depth analysis of strengths and weaknesses across code generation, debugging, refactoring, and large-codebase support.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref4" href="#ref4-back"&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; Kingy AI. (2025). &lt;a href="https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/"&gt;“AI coding agents in 2025: Cursor vs. Windsurf vs. Copilot vs. Claude vs. VS Code AI”&lt;/a&gt;. In-depth analysis of strengths and weaknesses across code generation, debugging, refactoring, and large-codebase support.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref5&quot; href=&quot;#ref5-back&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; BrightCoding. (2025). &lt;a href=&quot;https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/&quot;&gt;“AI coding assistants compared: technical benchmarks”&lt;/a&gt;. Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref5" href="#ref5-back"&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; BrightCoding. (2025). &lt;a href="https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/"&gt;“AI coding assistants compared: technical benchmarks”&lt;/a&gt;. Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref6&quot; href=&quot;#ref6-back&quot;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; Sourcegraph Engineering. (2024). &lt;a href=&quot;https://sourcegraph.com/blog/anatomy-of-a-coding-assistant&quot;&gt;“The anatomy of an AI coding assistant”&lt;/a&gt;. Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI’s text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref6" href="#ref6-back"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; Sourcegraph Engineering. (2024). &lt;a href="https://sourcegraph.com/blog/anatomy-of-a-coding-assistant"&gt;“The anatomy of an AI coding assistant”&lt;/a&gt;. Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI’s text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref7&quot; href=&quot;#ref7-back&quot;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; Windsurf. (2025). &lt;a href=&quot;https://docs.windsurf.com/windsurf/getting-started&quot;&gt;“Getting Started with Windsurf”&lt;/a&gt;. Official documentation on getting started with the Windsurf VSCode fork.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref7" href="#ref7-back"&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; Windsurf. (2025). &lt;a href="https://docs.windsurf.com/windsurf/getting-started"&gt;“Getting Started with Windsurf”&lt;/a&gt;. Official documentation on getting started with the Windsurf VSCode fork.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref8&quot; href=&quot;#ref8-back&quot;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; UI Bakery. (2025). &lt;a href=&quot;https://uibakery.io/blog/windsurf-ai-rules&quot;&gt;“Windsurf AI Rules”&lt;/a&gt;. Best practices for working with Windsurf AI and optimizing its performance.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref8" href="#ref8-back"&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; UI Bakery. (2025). &lt;a href="https://uibakery.io/blog/windsurf-ai-rules"&gt;“Windsurf AI Rules”&lt;/a&gt;. Best practices for working with Windsurf AI and optimizing its performance.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref9&quot; href=&quot;#ref9-back&quot;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; Crawshaw, D. (2025). &lt;a href=&quot;https://crawshaw.io/blog/programming-with-agents&quot;&gt;“Programming with Agents”&lt;/a&gt;. An in-depth look at the paradigm shift of programming with AI agents.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref9" href="#ref9-back"&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; Crawshaw, D. (2025). &lt;a href="https://crawshaw.io/blog/programming-with-agents"&gt;“Programming with Agents”&lt;/a&gt;. An in-depth look at the paradigm shift of programming with AI agents.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&quot;ref10&quot; href=&quot;#ref10-back&quot;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt; Creator Economy. (2025). &lt;a href=&quot;https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration&quot;&gt;“12 Rules to Vibe Code Without Frustration”&lt;/a&gt;. A practical guide to effective AI-assisted programming techniques and best practices.&lt;/p&gt;
+&lt;p&gt;&lt;a id="ref10" href="#ref10-back"&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt; Creator Economy. (2025). &lt;a href="https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration"&gt;“12 Rules to Vibe Code Without Frustration”&lt;/a&gt;. A practical guide to effective AI-assisted programming techniques and best practices.&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Startup advice</title>
-   <link href="https://djpardis.com/blog/2024/08/12/startup-advice/"/>
+   <link href="https://djpardis.com/blog/2024/08/12/startup-advice/">
    <updated>2024-08-12T00:00:00+00:00</updated>
    <id>https://djpardis.com/blog/2024/08/12/startup-advice</id>
-   <content type="html">&lt;p&gt;&lt;em&gt;This article is cross-posted from my &lt;a href=&quot;https://medium.com/@djpardis/startup-advice-e9459d6c1ebb&quot;&gt;original publication on Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;em&gt;This article is cross-posted from my &lt;a href="https://medium.com/@djpardis/startup-advice-e9459d6c1ebb"&gt;original publication on Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg&quot; alt=&quot;From my time at Techstars SDSU&quot; /&gt;
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg" alt="From my time at Techstars SDSU" /&gt;
 &lt;em&gt;From my time at Techstars SDSU.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;It’s been quite the journey building &lt;a href=&quot;https://generalfolders.com&quot;&gt;General Folders&lt;/a&gt; so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!&lt;/p&gt;
+&lt;p&gt;It’s been quite the journey building &lt;a href="https://generalfolders.com"&gt;General Folders&lt;/a&gt; so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!&lt;/p&gt;
 
-&lt;div class=&quot;text-center&quot;&gt;
+&lt;div class="text-center"&gt;
     &lt;span&gt;&amp;#10210;&amp;nbsp;&amp;nbsp;&amp;#10209;&amp;nbsp;&amp;nbsp;&amp;#10211;&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Build a team.&lt;/strong&gt; Bring along co-founders, but &lt;a href=&quot;https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441&quot;&gt;for the right reasons&lt;/a&gt;. Two can outperform one. Building the first team is your most important task.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Build a team.&lt;/strong&gt; Bring along co-founders, but &lt;a href="https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441"&gt;for the right reasons&lt;/a&gt;. Two can outperform one. Building the first team is your most important task.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;People first. Technology second.&lt;/em&gt;&lt;br /&gt;
@@ -683,7 +684,7 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;Moving fast is not just about writing more code, sending more emails, and doing more busy work. Building requires clear thinking and planning. It requires coordinating with customers at every step. Skipping steps creates tech debt, ineffective plans, and underwhelmed customers. Rarely do products fail because there isn’t enough &lt;em&gt;code and artifacts&lt;/em&gt;; rather, it is often due to inadequate &lt;em&gt;thought&lt;/em&gt;. Don’t skip steps. And don’t settle for busy work.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Keep learning.&lt;/strong&gt; In every scenario, assume you don’t have all the answers. Learn and evolve to become the leader the company needs at each stage. Can you &lt;a href=&quot;https://youtu.be/qAr-yl9A0Xc?si=wUVTi-zKmvuWsEiK&amp;amp;t=1978&quot;&gt;hire yourself every day&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep learning.&lt;/strong&gt; In every scenario, assume you don’t have all the answers. Learn and evolve to become the leader the company needs at each stage. Can you &lt;a href="https://youtu.be/qAr-yl9A0Xc?si=wUVTi-zKmvuWsEiK&amp;amp;t=1978"&gt;hire yourself every day&lt;/a&gt;?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Ask for help.&lt;/strong&gt; Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected. Knowing when to ask, who to ask, and for what is a skill worth perfecting.&lt;/p&gt;
 
@@ -712,7 +713,7 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 
 &lt;p&gt;&lt;strong&gt;Seize the day.&lt;/strong&gt; You might not have achieved all the milestones, but you’ll never be this young ever again.&lt;/p&gt;
 
-&lt;div class=&quot;text-center&quot;&gt;
+&lt;div class="text-center"&gt;
     &lt;span&gt;&amp;#10210;&amp;nbsp;&amp;nbsp;&amp;#10209;&amp;nbsp;&amp;nbsp;&amp;#10211;&lt;/span&gt;
 &lt;/div&gt;
 
@@ -722,7 +723,7 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
  
  <entry>
    <title>Hourly mentions of a word on Twitter</title>
-   <link href="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/"/>
+   <link href="https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter/">
    <updated>2015-05-23T00:00:00+00:00</updated>
    <id>https://djpardis.com/blog/2015/05/23/hourly-mentions-of-a-word-on-twitter</id>
    <content type="html">&lt;p&gt;Some time ago (OK, a month ago—time ✈️s), I saw this tweet:&lt;/p&gt;
@@ -730,49 +731,49 @@ As MLB approaches its 2026 CBA negotiations with unprecedented spending disparit
 &lt;blockquote&gt;
   &lt;p&gt;Need a simple tool to track mentions of a keyword on Twitter by hour. Don’t need a bunch of bells and whistles. Thoughts?&lt;/p&gt;
 
-  &lt;p&gt;— Kaegan Donnelly (&lt;a href=&quot;https://twitter.com/kaequan/status/591359379431104513&quot;&gt;@kaequan&lt;/a&gt;) • April 23, 2015&lt;/p&gt;
+  &lt;p&gt;— Kaegan Donnelly (&lt;a href="https://twitter.com/kaequan/status/591359379431104513"&gt;@kaequan&lt;/a&gt;) • April 23, 2015&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I thought, “Should be easy, lmgt.” However, results for the query “hourly mentions of a word on Twitter” didn’t offer clear solutions.&lt;/p&gt;
 
-&lt;p&gt;Days later I came across two relatively simple approaches to tackling the problem. The first is &lt;a href=&quot;https://github.com/tweepy/tweepy&quot;&gt;Tweepy&lt;/a&gt;. The other is &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html&quot;&gt;Logstash&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Days later I came across two relatively simple approaches to tackling the problem. The first is &lt;a href="https://github.com/tweepy/tweepy"&gt;Tweepy&lt;/a&gt;. The other is &lt;a href="https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html"&gt;Logstash&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Tweepy is an &lt;a href=&quot;http://www.tweepy.org/&quot;&gt;open source Python library&lt;/a&gt; for accessing the Twitter API, including the Twitter Streaming API.&lt;/p&gt;
+&lt;p&gt;Tweepy is an &lt;a href="http://www.tweepy.org/"&gt;open source Python library&lt;/a&gt; for accessing the Twitter API, including the Twitter Streaming API.&lt;/p&gt;
 
-&lt;p&gt;Logstash is an open source tool for &lt;a href=&quot;https://wikitech.wikimedia.org/wiki/Logstash&quot;&gt;collecting, processing, and forwarding events&lt;/a&gt;. Logstash can read events from the Twitter Streaming API using &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/plugins-inputs-twitter.html&quot;&gt;its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twitter&lt;/code&gt; plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Logstash is an open source tool for &lt;a href="https://wikitech.wikimedia.org/wiki/Logstash"&gt;collecting, processing, and forwarding events&lt;/a&gt;. Logstash can read events from the Twitter Streaming API using &lt;a href="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-twitter.html"&gt;its &lt;code class="language-plaintext highlighter-rouge"&gt;twitter&lt;/code&gt; plugin&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Having tried both, I recommend Logstash over Tweepy for two main reasons:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;It &lt;a href=&quot;https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb&quot;&gt;deals&lt;/a&gt; with the Twitter API rate limits by default&lt;/li&gt;
+  &lt;li&gt;It &lt;a href="https://github.com/logstash-plugins/logstash-input-twitter/blob/master/lib/logstash/inputs/twitter.rb"&gt;deals&lt;/a&gt; with the Twitter API rate limits by default&lt;/li&gt;
   &lt;li&gt;It offers Elasticsearch and Kibana integration—simplifying the aggregation and visualization steps, respectively, that naturally follow the data (tweet) collection step&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;For both Tweepy and Logstash you need access to Twitter’s streaming API. Follow steps 2 and 3 &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04&quot;&gt;here&lt;/a&gt; to create a Twitter app and obtain your &lt;em&gt;Consumer Key&lt;/em&gt;, &lt;em&gt;Consumer Key Secret&lt;/em&gt;, &lt;em&gt;Access Token&lt;/em&gt;, and &lt;em&gt;Access Token Secret&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;For both Tweepy and Logstash you need access to Twitter’s streaming API. Follow steps 2 and 3 &lt;a href="https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04"&gt;here&lt;/a&gt; to create a Twitter app and obtain your &lt;em&gt;Consumer Key&lt;/em&gt;, &lt;em&gt;Consumer Key Secret&lt;/em&gt;, &lt;em&gt;Access Token&lt;/em&gt;, and &lt;em&gt;Access Token Secret&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-elk-solution&quot;&gt;The ELK solution&lt;/h3&gt;
+&lt;h3 id="the-elk-solution"&gt;The ELK solution&lt;/h3&gt;
 
-&lt;p&gt;Download and install &lt;a href=&quot;https://www.elastic.co/downloads/past-releases/elasticsearch-1-4-4&quot;&gt;Elasticsearch&lt;/a&gt;, &lt;a href=&quot;https://www.elastic.co/downloads/logstash&quot;&gt;Logstash&lt;/a&gt;, and &lt;a href=&quot;https://www.elastic.co/downloads/kibana&quot;&gt;Kibana&lt;/a&gt;. If you are on a Mac, you can&lt;/p&gt;
+&lt;p&gt;Download and install &lt;a href="https://www.elastic.co/downloads/past-releases/elasticsearch-1-4-4"&gt;Elasticsearch&lt;/a&gt;, &lt;a href="https://www.elastic.co/downloads/logstash"&gt;Logstash&lt;/a&gt;, and &lt;a href="https://www.elastic.co/downloads/kibana"&gt;Kibana&lt;/a&gt;. If you are on a Mac, you can&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;elasticsearch
-brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;logstash&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-bash" data-lang="bash"&gt;brew &lt;span class="nb"&gt;install &lt;/span&gt;elasticsearch
+brew &lt;span class="nb"&gt;install &lt;/span&gt;logstash&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ireland&lt;/code&gt; (call it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ireland.conf&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;Make sure you have Elasticsearch and Kibana running. Before running Logstash, you need to prepare a configuration file. Below is a sample configuration file to collect tweets containing the word &lt;code class="language-plaintext highlighter-rouge"&gt;ireland&lt;/code&gt; (call it &lt;code class="language-plaintext highlighter-rouge"&gt;ireland.conf&lt;/code&gt;):&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;# a logstash config file has three sections:
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-apacheconf" data-lang="apacheconf"&gt;# a logstash config file has three sections:
 # input{}, output{}, and (optional) filter{}; add plugins
 # to specify how events should be handled in each section
 
 input {
     twitter {
         # set key and token values from the previous step
-        consumer_key =&amp;gt; &quot;&quot;
-        consumer_secret =&amp;gt; &quot;&quot;
-        oauth_token =&amp;gt; &quot;&quot;
-        oauth_token_secret =&amp;gt; &quot;&quot;
+        consumer_key =&amp;gt; ""
+        consumer_secret =&amp;gt; ""
+        oauth_token =&amp;gt; ""
+        oauth_token_secret =&amp;gt; ""
         # assume we are interested in tracking all
-        # mentions of the word &quot;ireland&quot;
-        keywords =&amp;gt; [&quot;ireland&quot;]
+        # mentions of the word "ireland"
+        keywords =&amp;gt; ["ireland"]
         # no need for all fields to get hourly counts
         full_tweet =&amp;gt; false
     }
@@ -780,99 +781,100 @@ input {
 
 output {
 	stdout {
-		# include this to pretty-print the event&apos;s json to stdout
+		# include this to pretty-print the event's json to stdout
 		codec =&amp;gt; rubydebug
   	}
 }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;To start streaming tweets, run&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;logstash -f ireland.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-apacheconf" data-lang="apacheconf"&gt;logstash -f ireland.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;At this point, tweets are written to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdout&lt;/code&gt;. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.&lt;/p&gt;
+&lt;p&gt;At this point, tweets are written to &lt;code class="language-plaintext highlighter-rouge"&gt;stdout&lt;/code&gt;. In order to visualize tweet counts using Kibana, you need to save the tweets to Elasticsearch.&lt;/p&gt;
 
-&lt;p&gt;Add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elasticsearch&lt;/code&gt; plugin to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt; section of the configuration:&lt;/p&gt;
+&lt;p&gt;Add the &lt;code class="language-plaintext highlighter-rouge"&gt;elasticsearch&lt;/code&gt; plugin to the &lt;code class="language-plaintext highlighter-rouge"&gt;output&lt;/code&gt; section of the configuration:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apacheconf&quot; data-lang=&quot;apacheconf&quot;&gt;output {
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-apacheconf" data-lang="apacheconf"&gt;output {
     elasticsearch {
-        protocol =&amp;gt; &quot;http&quot;
-        host =&amp;gt; &quot;localhost&quot;
-        index =&amp;gt; &quot;irelandtweets&quot;
+        protocol =&amp;gt; "http"
+        host =&amp;gt; "localhost"
+        index =&amp;gt; "irelandtweets"
     }
 
 	stdout {
-		# include this to pretty-print the event&apos;s json to stdout
+		# include this to pretty-print the event's json to stdout
 		codec =&amp;gt; rubydebug
   	}
 }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Run Logstash again and have a look at:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;http://localhost:9200/irelandtweets/_search/?pretty&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-bash" data-lang="bash"&gt;http://localhost:9200/irelandtweets/_search/?pretty&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Below is a sample of the output format. You can see, for example, that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;65235&lt;/code&gt; documents (tweets) have been stored in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;irelandtweets&lt;/code&gt; index:&lt;/p&gt;
+&lt;p&gt;Below is a sample of the output format. You can see, for example, that &lt;code class="language-plaintext highlighter-rouge"&gt;65235&lt;/code&gt; documents (tweets) have been stored in the &lt;code class="language-plaintext highlighter-rouge"&gt;irelandtweets&lt;/code&gt; index:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;took&quot;&lt;/span&gt; : 2,
-  &lt;span class=&quot;s2&quot;&gt;&quot;timed_out&quot;&lt;/span&gt; : &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;_shards&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&quot;total&quot;&lt;/span&gt; : 5,
-    &lt;span class=&quot;s2&quot;&gt;&quot;successful&quot;&lt;/span&gt; : 5,
-    &lt;span class=&quot;s2&quot;&gt;&quot;failed&quot;&lt;/span&gt; : 0
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;hits&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&quot;total&quot;&lt;/span&gt; : 65235,
-    &lt;span class=&quot;s2&quot;&gt;&quot;max_score&quot;&lt;/span&gt; : 1.0,
-    &lt;span class=&quot;s2&quot;&gt;&quot;hits&quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;s2&quot;&gt;&quot;_index&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;irelandtweets&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_type&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;logs&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_id&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;AU2B1MGZPj_44djTabLA&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_score&quot;&lt;/span&gt; : 1.0,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_source&quot;&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;@timestamp&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;2015-05-23T17:31:51.000Z&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;Y&apos;all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;user&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;LesbiForLauren&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;client&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;a href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;http://twitter.com/download/iphone&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; rel=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;nofollow&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;retweeted&quot;&lt;/span&gt;:false,&lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;http://twitter.com/LesbiForLauren/status/602165054042034176&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;@version&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;s2&quot;&gt;&quot;_index&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;irelandtweets&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_type&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;logs&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_id&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;AU2B1MGZPj_44djTabLF&quot;&lt;/span&gt;,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_score&quot;&lt;/span&gt; : 1.0,
-      &lt;span class=&quot;s2&quot;&gt;&quot;_source&quot;&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;@timestamp&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;2015-05-23T17:31:51.000Z&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson.&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;user&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;SOUTHERNjamespb&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;client&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;a href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;http://www.twitter.com&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; rel=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;nofollow&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;Twitter for BlackBerry&amp;lt;/a&amp;gt;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;retweeted&quot;&lt;/span&gt;:false,&lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;http://twitter.com/SOUTHERNjamespb/status/602165054889283584&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;@version&quot;&lt;/span&gt;:&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;"took"&lt;/span&gt; : 2,
+  &lt;span class="s2"&gt;"timed_out"&lt;/span&gt; : &lt;span class="nb"&gt;false&lt;/span&gt;,
+  &lt;span class="s2"&gt;"_shards"&lt;/span&gt; : &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"total"&lt;/span&gt; : 5,
+    &lt;span class="s2"&gt;"successful"&lt;/span&gt; : 5,
+    &lt;span class="s2"&gt;"failed"&lt;/span&gt; : 0
+  &lt;span class="o"&gt;}&lt;/span&gt;,
+  &lt;span class="s2"&gt;"hits"&lt;/span&gt; : &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"total"&lt;/span&gt; : 65235,
+    &lt;span class="s2"&gt;"max_score"&lt;/span&gt; : 1.0,
+    &lt;span class="s2"&gt;"hits"&lt;/span&gt; : &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="s2"&gt;"_index"&lt;/span&gt; : &lt;span class="s2"&gt;"irelandtweets"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_type"&lt;/span&gt; : &lt;span class="s2"&gt;"logs"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_id"&lt;/span&gt; : &lt;span class="s2"&gt;"AU2B1MGZPj_44djTabLA"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_score"&lt;/span&gt; : 1.0,
+      &lt;span class="s2"&gt;"_source"&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"@timestamp"&lt;/span&gt;:&lt;span class="s2"&gt;"2015-05-23T17:31:51.000Z"&lt;/span&gt;,&lt;span class="s2"&gt;"message"&lt;/span&gt;:&lt;span class="s2"&gt;"Y'all have no idea how happy I am for Ireland 💗 Can my country say yes to equality too 😭"&lt;/span&gt;,&lt;span class="s2"&gt;"user"&lt;/span&gt;:&lt;span class="s2"&gt;"LesbiForLauren"&lt;/span&gt;,&lt;span class="s2"&gt;"client"&lt;/span&gt;:&lt;span class="s2"&gt;"&amp;lt;a href=&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;http://twitter.com/download/iphone&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt; rel=&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;nofollow&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;"&lt;/span&gt;,&lt;span class="s2"&gt;"retweeted"&lt;/span&gt;:false,&lt;span class="s2"&gt;"source"&lt;/span&gt;:&lt;span class="s2"&gt;"http://twitter.com/LesbiForLauren/status/602165054042034176"&lt;/span&gt;,&lt;span class="s2"&gt;"@version"&lt;/span&gt;:&lt;span class="s2"&gt;"1"&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;, &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="s2"&gt;"_index"&lt;/span&gt; : &lt;span class="s2"&gt;"irelandtweets"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_type"&lt;/span&gt; : &lt;span class="s2"&gt;"logs"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_id"&lt;/span&gt; : &lt;span class="s2"&gt;"AU2B1MGZPj_44djTabLF"&lt;/span&gt;,
+      &lt;span class="s2"&gt;"_score"&lt;/span&gt; : 1.0,
+      &lt;span class="s2"&gt;"_source"&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"@timestamp"&lt;/span&gt;:&lt;span class="s2"&gt;"2015-05-23T17:31:51.000Z"&lt;/span&gt;,&lt;span class="s2"&gt;"message"&lt;/span&gt;:&lt;span class="s2"&gt;"RT @muyskerm: @Jack_Septic_Eye Well done Ireland. The U.S. could take a lesson."&lt;/span&gt;,&lt;span class="s2"&gt;"user"&lt;/span&gt;:&lt;span class="s2"&gt;"SOUTHERNjamespb"&lt;/span&gt;,&lt;span class="s2"&gt;"client"&lt;/span&gt;:&lt;span class="s2"&gt;"&amp;lt;a href=&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;http://www.twitter.com&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt; rel=&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;nofollow&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;&amp;gt;Twitter for BlackBerry&amp;lt;/a&amp;gt;"&lt;/span&gt;,&lt;span class="s2"&gt;"retweeted"&lt;/span&gt;:false,&lt;span class="s2"&gt;"source"&lt;/span&gt;:&lt;span class="s2"&gt;"http://twitter.com/SOUTHERNjamespb/status/602165054889283584"&lt;/span&gt;,&lt;span class="s2"&gt;"@version"&lt;/span&gt;:&lt;span class="s2"&gt;"1"&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;, &lt;span class="o"&gt;{&lt;/span&gt;
                ...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;To start using Kibana, visit&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;http://localhost:5601/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-bash" data-lang="bash"&gt;http://localhost:5601/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;On the Discover tab, there is a configuration form:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Check off the box: &lt;em&gt;Index contains time-based events&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Fill the &lt;em&gt;Index name or pattern&lt;/em&gt; field with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;irelandtweets&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Fill the &lt;em&gt;Time-field name&lt;/em&gt; field with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@timestamp&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fill the &lt;em&gt;Index name or pattern&lt;/em&gt; field with &lt;code class="language-plaintext highlighter-rouge"&gt;irelandtweets&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fill the &lt;em&gt;Time-field name&lt;/em&gt; field with &lt;code class="language-plaintext highlighter-rouge"&gt;@timestamp&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;On the Visualize tab, choose visualization type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Line chart&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On the Visualize tab, choose visualization type &lt;code class="language-plaintext highlighter-rouge"&gt;Line chart&lt;/code&gt;.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Choose option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;From a saved search&lt;/code&gt; to use the same query you specified on the Discover tab&lt;/li&gt;
-  &lt;li&gt;For metric aggregation (Y-Axis): Choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Count&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Choose option &lt;code class="language-plaintext highlighter-rouge"&gt;From a saved search&lt;/code&gt; to use the same query you specified on the Discover tab&lt;/li&gt;
+  &lt;li&gt;For metric aggregation (Y-Axis): Choose &lt;code class="language-plaintext highlighter-rouge"&gt;Count&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;For bucket aggregation (X-Axis):
-i. Aggregation: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Date Histogram&lt;/code&gt;
-ii. Field: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@timestamp&lt;/code&gt;
-iii. Interval: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Minute&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Click on the Refresh Interval tab at the top. Choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5 seconds&lt;/code&gt; and see your line chart come alive 📈&lt;/li&gt;
+i. Aggregation: &lt;code class="language-plaintext highlighter-rouge"&gt;Date Histogram&lt;/code&gt;
+ii. Field: &lt;code class="language-plaintext highlighter-rouge"&gt;@timestamp&lt;/code&gt;
+iii. Interval: &lt;code class="language-plaintext highlighter-rouge"&gt;Minute&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the Refresh Interval tab at the top. Choose &lt;code class="language-plaintext highlighter-rouge"&gt;5 seconds&lt;/code&gt; and see your line chart come alive 📈&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/files/pics/blog/2015/kibana_screenshot.png&quot; alt=&quot;Kibana screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/files/pics/blog/2015/kibana_screenshot.png" alt="Kibana screenshot" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Done. Thank you for starting the conversation Kaegan!&lt;/p&gt;
 
-&lt;h3 id=&quot;more-resources&quot;&gt;More resources&lt;/h3&gt;
+&lt;h3 id="more-resources"&gt;More resources&lt;/h3&gt;
 
-&lt;p&gt;For details about Logstash plugins see &lt;a href=&quot;https://www.elastic.co/guide/en/logstash/current/configuration.html&quot; target=&quot;_blank&quot;&gt;this guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For details about Logstash plugins see &lt;a href="https://www.elastic.co/guide/en/logstash/current/configuration.html" target="_blank"&gt;this guide&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Anna Roes has written an excellent overview of Kibana in &lt;a href=&quot;https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/&quot; target=&quot;_blank&quot;&gt;this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Anna Roes has written an excellent overview of Kibana in &lt;a href="https://www.timroes.de/2015/02/07/kibana-4-tutorial-part-1-introduction/" target="_blank"&gt;this tutorial&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
 
 </feed>
+</body></html>
