@@ -164,6 +164,17 @@ body {
   line-height: 1.4;
 }
 
+/* Caption styling for pages with image containers */
+.container.content div + p em {
+  display: block;
+  text-align: center;
+  color: #757575;
+  font-size: 0.85rem;
+  margin: 0.25rem auto 0.25rem;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
 /* Blockquote styling */
 blockquote {
   border-left: 4px solid #7d78b5;
