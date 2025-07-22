@@ -11,7 +11,6 @@ canonical_url: https://djpardis.com/blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-[July 21, 2025] *[Revisiting moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-21-revisiting-moneyball %})*  
 [July 20, 2025] *[Introducing the data room app: Magic link authentication with Replit]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})*  
 [June 20, 2025] *[Vibe coding the data room app: Building with Windsurf]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})*  
 [August 12, 2024] *[Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
