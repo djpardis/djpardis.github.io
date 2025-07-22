@@ -27,13 +27,13 @@ twitter:
 
 Thank you for joining us as a guest on the podcast! This guide provides recommendations to help ensure a quality conversation and enjoyable experience for both you and our listeners.
 
-## Table of contents
+## Table of contents {#table-of-contents}
 - [Technical setup guide](#technical-setup-guide)
 - [Pre-interview information](#pre-interview-information)
 - [Day of interview checklist](#day-of-interview-checklist)
 - [Conversation format](#conversation-format)
 
-## Technical setup guide
+## Technical setup guide {#technical-setup-guide}
 
 ### Interview platform
 
@@ -65,7 +65,7 @@ Thank you for joining us as a guest on the podcast! This guide provides recommen
 
 [Back to top](#table-of-contents)
 
-## Pre-interview information
+## Pre-interview information {#pre-interview-information}
 
 Please share the following information at least 3 days before our scheduled conversation:
 
@@ -86,7 +86,7 @@ Please share the following information at least 3 days before our scheduled conv
 
 [Back to top](#table-of-contents)
 
-## Day of interview checklist
+## Day of interview checklist {#day-of-interview-checklist}
 
 Before we begin recording:
 - Test your audio and video setup
@@ -96,7 +96,7 @@ Before we begin recording:
 
 [Back to top](#table-of-contents)
 
-## Conversation format
+## Conversation format {#conversation-format}
 
 Our episodes typically follow this structure:
 1. **Introduction** (2-3 minutes)
