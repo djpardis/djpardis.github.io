@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # Basic Jekyll
 gem "jekyll", "~> 4.0"
-gem "nokogiri"
+gem "nokogiri", "~> 1.18.8"
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
