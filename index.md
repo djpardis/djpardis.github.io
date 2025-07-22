@@ -33,12 +33,12 @@ and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank" title=
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
 </div>
 
-Check out some 
+<!-- Check out some 
 <span style="background-color: rgba(140,255,50,0.3);">essays and talks</span> at [Blog](/blog), 
 <span style="background-color: rgba(140,255,50,0.3);">conversations with friends</span> on the new [Pod](/pod), and 
-<span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs).
+<span style="background-color: rgba(140,255,50,0.3);">annual playlists</span> at [Gigs](/gigs). -->
 
-And here is my bio for talks and conferences:
+Here is my bio for talks and conferences:
 
 > Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
