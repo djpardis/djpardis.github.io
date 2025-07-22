@@ -24,7 +24,7 @@ It's been quite the journey building [General Folders](https://generalfolders.co
 
 **Be genuinely passionate.** The secret to hiring great people is to be knowledgeable and passionate about the product and business. Passion is contagious, and expertise is hard to fake. The same holds for sales: don't underestimate the impact of *stoke* on selling a product.
 
-**Define the MVP.** A startup has limited resources, so the scope of the initial version is crucial. Customers expect quality demos, regardless of a company's size or stage. Determine the minimum amount of **product** or **visuals** required to get 1) customer buy-in and 2) relevant feedback.
+**Define the MVP.** A startup has limited resources, so the scope of the initial version is crucial. Determine the minimum amount of **product** or **visuals** required to get 1) customer buy-in and 2) relevant feedback.
 
 A successful MVP is tied to a very particular use case with a well-defined customer profile. Having a well-defined use case, more than anything, paves the way for successful distribution.
 
@@ -32,6 +32,8 @@ As it turns out, this is an exercise that a company repeats again and again. The
 
 > *The only way to avoid disruption is to constantly do what you would if you were just starting out.*  
 > *—Aaron Levie*
+
+**Sell early and often.** Ultimately, a startup's success hinges on sales and its trajectory. Life is easier if the product can be sold early and often. A startup may struggle to survive with grand plans and lengthy sales cycles unless it secures substantial external funding.
 
 **Talk to customers.** Nothing benefits a company more than customer feedback. Never lose sight of it. Feedback saves products and companies from veering off the tracks into irrelevance.
 
