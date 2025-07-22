@@ -3,22 +3,7 @@ layout: page
 keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, music, mixtapes, radio shows, dj sets, twitter hq, new parish
 title: Gigs
 description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections.
-image: /files/pics/pages/djing.jpg
 canonical_url: https://djpardis.com/gigs
-sitemap:
-  priority: 0.7
-  changefreq: monthly
-  lastmod: 2025-06-13
-og:
-  title: "Gigs - DJ Pardis (Pardis Noorzad)"
-  description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
-  image: /files/pics/pages/djing.jpg
-  type: website
-twitter:
-  card: summary_large_image
-  title: "Gigs - DJ Pardis (Pardis Noorzad)"
-  description: "DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections."
-  image: /files/pics/pages/djing.jpg
 ---
 
 ![Sim Simah and Pardis Noorzad (aka DJ Pardis)](/files/pics/pages/djing.jpg)
