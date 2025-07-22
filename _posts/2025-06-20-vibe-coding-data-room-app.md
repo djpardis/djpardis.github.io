@@ -2,24 +2,8 @@
 layout: post
 title: 'Vibe coding a data room app'
 subtitle: 'Adventures with Windsurf'
-active_section: blog
 description: 'Building an intuitive data room app to streamline investor access to startup information'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication
-image: /files/pics/blog/2025/fundraising-screenshot.png
-sitemap:
-  priority: 0.7
-  changefreq: yearly
-  lastmod: 2025-06-20
-og:
-  title: "Vibe coding a data room app - Pardis Noorzad"
-  description: "Building an intuitive data room app to streamline investor access to startup information"
-  image: /files/pics/blog/2025/fundraising-screenshot.png
-  type: article
-twitter:
-  card: summary_large_image
-  title: "Vibe coding a data room app - Pardis Noorzad"
-  description: "Building an intuitive data room app to streamline investor access to startup information"
-  image: /files/pics/blog/2025/fundraising-screenshot.png
 ---
 
 This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow.
