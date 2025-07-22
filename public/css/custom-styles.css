@@ -357,17 +357,23 @@ body .wrap .container.content {
   margin: 0;
 }
 
-/* Fainter circle bullets for blog and gigs pages */
+/* X bullets for blog and gigs pages */
 .page ul {
-  list-style-type: disc;
+  list-style: none;
 }
 
 .page li {
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
 }
 
-.page li::marker {
+.page li::before {
+  content: "×";
   color: #ddd;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Custom separator styling */
