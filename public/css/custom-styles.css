@@ -164,14 +164,7 @@ body {
   line-height: 1.4;
 }
 
-/* Page image styling - only for pages, not posts */
-.page .container.content img {
-  display: block;
-  margin: 0 auto;
-  max-width: 450px;
-  width: 100%;
-  height: auto;
-}
+
 
 /* Caption styling for pages with image containers */
 .container.content div + p em {
