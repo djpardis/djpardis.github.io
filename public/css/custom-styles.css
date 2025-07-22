@@ -166,6 +166,21 @@ body {
 
 
 
+/* Page image styling - only for pages, not posts */
+.page .container.content img {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 450px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Override for blog posts */
+.post .container.content img {
+  max-width: none !important;
+  margin: initial !important;
+}
+
 /* Caption styling for pages with image containers */
 .container.content div + p em {
   display: block;
