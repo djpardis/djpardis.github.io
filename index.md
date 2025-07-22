@@ -7,7 +7,7 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-![Pardis Noorzad](/files/pics/pages/profile_pic.jpg)
+![Pardis Noorzad](/files/pics/pages/profile_pic.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
 We are building [General Folders](https://generalfolders.com){:target="_blank"}, 
 a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company making data exchange seamless and secure. Learn more in 
