@@ -13,25 +13,59 @@
   line-height: 1.2;
 }
 
-/* Image and caption spacing for all pages */
-.container.content div[style*="display: flex"] {
-  margin-bottom: 0.25rem;
+
+
+
+/* Image row and container styling */
+.container.content .image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 0 0.25rem 0;
+  width: 100%;
 }
 
-/* Fix caption paragraph margin for flex-based image layouts */
-.container.content div[style*="display: flex"] + p {
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
+.container.content .image-row .image-container {
+  flex: 1 1 100%;
+  width: 100%;
+  margin: 0;
 }
 
-/* Ensure proper spacing for class-based image containers */
-.container.content .image-container-with-caption {
-  margin-bottom: 0.25rem;
+.container.content .image-row img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  max-width: none;
+  display: block;
 }
 
+/* Caption styling for consistent appearance */
 .container.content .image-caption {
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  color: #757575;
+  font-size: 0.85rem;
+  margin: 0.25rem auto 1rem;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+/* Desktop responsive */
+@media (min-width: 30em) {
+  .container.content .image-row .image-container {
+    flex: 0 1 48%;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 30em) {
+  .container.content .image-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .container.content .image-row .image-container {
+    flex: 1 1 100%;
+  }
 }
 
 /* Base layout */
@@ -143,14 +177,7 @@ body {
   height: auto;
 }
 
-.container.content .image-caption {
-  text-align: center;
-  color: #757575;
-  font-size: 0.85rem;
-  margin: 0.25rem auto 0.5rem;
-  max-width: 90%;
-  line-height: 1.4;
-}
+/* Removed duplicate - handled above */
 
 /* Desktop image sizes */
 @media (min-width: 30em) {

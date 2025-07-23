@@ -31,8 +31,11 @@ jobs:
           ruby-version: 3.1.2
           bundler-cache: true
           
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+      - name: Clean and install dependencies
+        run: |
+          rm -f Gemfile.lock
+          bundle lock --add-platform x86_64-linux
+          bundle install --jobs 4 --retry 3
           
       - name: Setup Pages
         id: pages
