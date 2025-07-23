@@ -360,19 +360,19 @@ body .wrap .container.content {
 /* X bullets for blog and gigs pages */
 .page ul {
   list-style: none;
+  padding-left: 1rem;
 }
 
 .page li {
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 0.5rem;
 }
 
 .page li::before {
   content: "×";
   color: #ddd;
   position: absolute;
-  left: 0;
+  left: -1rem;
   top: 0;
 }
 
