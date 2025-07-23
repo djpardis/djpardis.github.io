@@ -48,32 +48,24 @@ sitemap:
   priority: 1.0
   changefreq: 'monthly'
   lastmod: site.time
+  
+# Exclude files from sitemap and build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .git/
+  - .github/
+  - scripts/
+  - public/preview/
+  - google-site-verification.html
 
-# SASS/SCSS settings
-sass:
-  style: compressed
-
-# Syntax highlighting settings
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-
-# webmaster_verifications:
-#   google: 1234
-#   bing: 1234
-#   yandex: 1234
-#   baidu: 1234
-
-# Default settings for all pages
-# Default settings
+# Files to exclude from sitemap specifically
 defaults:
   # Default settings for all files
   - scope:
@@ -103,3 +95,43 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      
+  # Exclude preview files from sitemap
+  - scope:
+      path: "public/preview"
+    values:
+      sitemap: false
+      
+  # Exclude papers and slides from main sitemap (they can be in their own sitemap)
+  - scope:
+      path: "files/papers"
+    values:
+      sitemap: false
+      
+  - scope:
+      path: "files/slides"  
+    values:
+      sitemap: false
+
+# SASS/SCSS settings
+sass:
+  style: compressed
+
+# Syntax highlighting settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# webmaster_verifications:
+#   google: 1234
+#   bing: 1234
+#   yandex: 1234
+#   baidu: 1234
