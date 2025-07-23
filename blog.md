@@ -6,16 +6,16 @@ keywords: data science, team management, B2B data collaboration, publications, t
 canonical_url: https://djpardis.com/blog
 ---
 
-<div style="display: flex; gap: 20px; justify-content: space-between;">
-  <div style="flex: 1;">
-    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Panel discussion" style="width: 100%;">
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Panel discussion">
   </div>
-  <div style="flex: 1;">
-    <img src="/files/pics/pages/vsw2025_audience.jpg" alt="Audience" style="width: 100%;">
+  <div class="image-container">
+    <img src="/files/pics/pages/vsw2025_audience.jpg" alt="Audience">
   </div>
 </div>
 
-*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
+<p class="image-caption">Techstars SDSU Founder Panel with Misti Cain at VSW 2025.</p>
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>

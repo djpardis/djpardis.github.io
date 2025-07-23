@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Use stable Jekyll version that worked before
-gem "jekyll", "~> 4.3.0"
+# Use Jekyll 4.2.x which doesn't use sass-embedded
+gem "jekyll", "~> 4.2.0"
 gem "nokogiri", "~> 1.16.0"
 
 group :jekyll_plugins do
