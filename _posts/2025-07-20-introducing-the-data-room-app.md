@@ -29,7 +29,7 @@ Replit's integrated authentication blueprints provide pre-configured [Passport.j
 
 Instant PostgreSQL provisioning through [Neon](https://neon.tech){:target="_blank"} with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. [Drizzle ORM](https://drizzleorm.com){:target="_blank"} integration works seamlessly with database push deployments without migration file management.
 
-**Update (July 2025)**: Replit has since launched [separate development and production databases](https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases){:target="_blank"}, a significant enhancement that makes the platform more suited for developing real-world applications. This feature enables safer iteration by isolating development changes from live customer data, with automated migration assistance between environments. This advancement positions Replit as a compelling choice for production applications beyond side projects and prototypes.
+Update (July 2025): Replit has since launched [separate development and production databases](https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases){:target="_blank"}, a significant enhancement that makes the platform more suited for developing real-world applications. This feature enables safer iteration by isolating development changes from live customer data, with automated migration assistance between environments. This advancement positions Replit as a compelling choice for production applications beyond side projects and prototypes.
 
 ### Deployment infrastructure
 
