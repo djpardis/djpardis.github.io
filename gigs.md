@@ -7,6 +7,8 @@ canonical_url: https://djpardis.com/gigs
 ---
 
 ![Sim Simah and Pardis Noorzad (aka DJ Pardis)](/files/pics/pages/djing.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Sim Simah and DJ Pardis at The New Parish in 2019. Photo by Jesse Meria.*
+<!-- *DJ Pardis opening for Cam'ron with Sim Simah at The New Parish, Oakland (July 2019). Photo by Jesse Meria.* -->
 
 I started DJing in May 2017 and played [themed Tea Time tunes](https://vimeo.com/463652373) at Twitter HQ. I usually DJed with [Julien Gaillard](https://www.linkedin.com/in/juliengaillard1/) on the [guitar](https://vimeo.com/463687716). In the summer of 2019, I was the tour DJ for [Sim Simah](https://soundcloud.com/ohsimsimah) and [Aarxn Cxle](https://music.apple.com/us/artist/aarxn-cxle/1453179768). The picture above is by [Jesse Meria](https://www.instagram.com/meria.agency/?hl=ne) from July 2019 at [The New Parish](https://www.thenewparish.com/), where we were [the opening act](https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf).
 
