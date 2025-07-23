@@ -365,7 +365,7 @@ body .wrap .container.content {
 .page li {
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 0.8rem;
+  padding-left: 0.5rem;
 }
 
 .page li::before {
