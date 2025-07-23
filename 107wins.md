@@ -4,6 +4,7 @@ title: 107 Wins
 description: Conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 keywords: podcast, conversations, business building, technology trends, best practices, events, learning, entrepreneurship, pardis noorzad
 canonical_url: https://djpardis.com/107wins
+permalink: /107wins/
 ---
 
 ![2021 SF Giants](/files/pics/pages/2021giants.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
