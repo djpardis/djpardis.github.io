@@ -118,10 +118,14 @@
           "@id": "{{ site.url }}/#person"
         },
         "inLanguage": "{{ site.lang }}",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "{{ site.url }}/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
+        "mainNavigationElement": {
+          "@type": "SiteNavigationElement",
+          "name": "Main Navigation",
+          "url": [
+            {% for item in site.pages_list %}
+            "{{ site.url }}{{ item[1] }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
         }
       },
       {
