@@ -4,6 +4,7 @@ keywords: pardis noorzad, djpardis, realdjpardis, pardis, noorzad, dj pardis, mu
 title: Gigs
 description: DJ sets, mixtapes, and radio shows by Pardis Noorzad (DJ Pardis), including performances at Twitter HQ and The New Parish, and annual mixtape collections.
 canonical_url: https://djpardis.com/gigs
+permalink: /gigs/
 ---
 
 ![Sim Simah and Pardis Noorzad (aka DJ Pardis)](/files/pics/pages/djing.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
