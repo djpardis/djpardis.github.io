@@ -80,14 +80,22 @@ This transparency allowed decisions regarding players to be justified through ob
 
 ### [Getting on base is undervalued, and teams can use this to their advantage.](#table-of-contents) {#getting-on-base-is-undervalued}
 
-While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics [[1]](#ref1)[[2]](#ref2). 
+While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics [1](#ref1)[2](#ref2). 
 
 The math was simple: teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
 The strategy worked: the 2002 A's ranked 2nd in the American League (AL) in OBP (.339) despite having the third-lowest payroll in baseball.
 
-![2002 A's stats](/files/pics/blog/2025/sections.png)
-*In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M)[[3]](#ref3)[[4]](#ref4).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/obp1.png" alt="2002 A's OBP stats">
+  </div>
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/obp2.png" alt="2002 A's payroll stats">
+  </div>
+</div>
+
+<p class="image-caption">In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a href="#ref3">[3]</a><a href="#ref4">[4]</a>.</p>
 
 ### [Scott Hatteberg is undervalued.](#table-of-contents) {#scott-hatteberg-is-undervalued}
 
@@ -99,8 +107,14 @@ The position switch to first base was unprecedented; he had never played the pos
 
 Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 slash line, 68 walks versus 56 strikeouts, and 4.15 pitches per plate appearance (3rd in AL). His defining moment came on September 4, 2002, when his walk-off home run against Kansas City secured the A's 20th consecutive victory and set an AL record.
 
-![Hatteberg walk-off](/files/pics/blog/2025/dataroom.png)
-*Hatteberg hit a walk-off home run to give the A's a 12–11 win and a then-AL record 20-game winning streak.*
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          src="https://www.youtube.com/embed/qWMwo_qEQW8" 
+          frameborder="0" 
+          allowfullscreen>
+  </iframe>
+</div>
+<p class="image-caption">Hatteberg's historic walk-off home run that gave the A's a 12–11 win and a then-AL record 20-game winning streak.</p>
 
 ### [The streak is historic and remarkable.](#table-of-contents) {#the-streak-is-historic-and-remarkable}
 
@@ -110,7 +124,7 @@ The streak's climactic finish, Oakland blowing an 11–0 lead to Kansas City bef
 
 More importantly, the streak occurred during a season where the A's won 103 games despite having one of baseball's lowest payrolls.
 
-*The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) [[4]](#ref4)[[5]](#ref5).*
+*The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) [4](#ref4)[5](#ref5).*
 
 ### [You can build a player in aggregate.](#table-of-contents) {#you-can-build-a-player-in-aggregate}
 
@@ -125,20 +139,21 @@ Instead of expensive superstars, the A's assembled a roster where different play
 
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
-![Chain visualization](/files/pics/pages/chain.png)
-*[From here](https://twitter.com/djpardis/status/1316095842434134017).*
+![Building a player in aggregate](/files/pics/blog/2025/buildinagg.png)
+*[From here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
-Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs," acknowledging that his analytical approach, while dominant over 162 games, couldn't overcome October's inherent randomness. It's a "crapshoot" because the best regular season team frequently loses due to small sample sizes and variance inherent in short series [[6]](#ref6).
+Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs," acknowledging that his analytical approach, while dominant over 162 games, couldn't overcome October's inherent randomness. It's a "crapshoot" because the best regular season team frequently loses due to small sample sizes and variance inherent in short series [6](#ref6).
 
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times - a 28% success rate.
 
+![World Series winners](/files/pics/blog/2025/wswinners.png)
 *World series winners since 1995 and their win-loss records.*
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
-Academic analysis by Stanford (2015) [[6]](#ref6) found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" [[7]](#ref7).
+Academic analysis by Stanford (2015) [6](#ref6) found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" [7](#ref7).
 
 The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP- the cornerstone of their analytical advantage - declined 11% in playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
 
@@ -148,8 +163,8 @@ This randomness explains why sabermetricians often view regular-season performan
 
 The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
-![Baseball romance](/files/pics/pages/poster.jpg)
-*[From here](https://twitter.com/djpardis/status/1316095842434134017).*
+![Baseball romance](/files/pics/blog/2025/romantic.png)
+**
 
 Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
 
@@ -167,7 +182,7 @@ The A's were excellent at drafting talent. And their lineup in 2002 was made up 
 
 Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 RBIs while providing leadership throughout the season. Barry Zito won the AL Cy Young Award with a 23–5 record and 2.75 ERA. These weren't marginal players elevated by analytics; they were elite performers by any standard.
 
-Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" [[8]](#ref8). The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
+Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" [8](#ref8). The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
 
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
@@ -207,13 +222,13 @@ Analytics improved baseball's efficiency but arguably damaged its entertainment 
 
 Despite conventional wisdom linking salary caps to competitive balance, the data shows MLB's luxury tax system has produced championship diversity equal to hard-cap leagues: 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
 
-However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams [[9]](#ref9). Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
+However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams [9](#ref9). Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
 Despite this, playoff access remains remarkably broad - 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
 
 While the NBA currently enjoys unprecedented parity - seven different champions in seven years (2019–2025) - this represents a dramatic shift from its historically dynasty-heavy nature where superstars concentrated championships among elite teams.
 
-The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century [[10]](#ref10).
+The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century [10](#ref10).
 
 This suggests that playoff format, season length, and sport-specific factors matter more than financial structures alone.
 
@@ -223,11 +238,8 @@ Whether the 2002 A's succeeded primarily through analytics or traditional talent
 
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
-![Brad Pitt meeting](/files/pics/pages/profile_pic.jpg)
-*[From here](https://twitter.com/djpardis/status/1316095842434134017).*
-
+![Billy Beane](/files/pics/blog/2025/billybeane.jpg)
 *Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.*
-*[From here](https://twitter.com/djpardis/status/1316095842434134017).*
 
 ## [References](#table-of-contents) {#references}
 
