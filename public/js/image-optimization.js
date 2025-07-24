@@ -83,8 +83,8 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   const container = document.createElement('div');
   container.style.cssText = `
     position: relative;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90vw;
+    max-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,8 +95,10 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   enlargedImg.src = img.src;
   enlargedImg.alt = img.alt;
   enlargedImg.style.cssText = `
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
