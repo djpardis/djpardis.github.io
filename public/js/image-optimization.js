@@ -83,8 +83,8 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   const container = document.createElement('div');
   container.style.cssText = `
     position: relative;
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 80%;
+    max-height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
