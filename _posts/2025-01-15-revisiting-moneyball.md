@@ -124,7 +124,15 @@ The streak's climactic finish, Oakland blowing an 11–0 lead to Kansas City bef
 
 More importantly, the streak occurred during a season where the A's won 103 games despite having one of baseball's lowest payrolls.
 
-*The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) [4](#ref4)[5](#ref5).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/wins1.png" alt="2002 A's wins stats">
+  </div>
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/wins2.png" alt="2002 MLB payroll stats">
+  </div>
+</div>
+<p class="image-caption">The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) <a href="#ref4">[4]</a><a href="#ref5">[5]</a>.</p>
 
 ### [You can build a player in aggregate.](#table-of-contents) {#you-can-build-a-player-in-aggregate}
 
@@ -140,7 +148,7 @@ Instead of expensive superstars, the A's assembled a roster where different play
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
 ![Building a player in aggregate](/files/pics/blog/2025/buildinagg.png)
-*[From here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
+*From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
@@ -164,7 +172,7 @@ This randomness explains why sabermetricians often view regular-season performan
 The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
 ![Baseball romance](/files/pics/blog/2025/romantic.png)
-**
+*From [here](https://x.com/MLB/status/1914109400413016515).*
 
 Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
 
@@ -238,27 +246,33 @@ Whether the 2002 A's succeeded primarily through analytics or traditional talent
 
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
+![DJ Pardis tweet](/files/pics/blog/2025/djpardistwete.png)
+*From [here](https://x.com/djpardis/status/1188636997557993472).*
+
 ![Billy Beane](/files/pics/blog/2025/billybeane.jpg)
 *Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.*
 
+![Dating Moneyball](/files/pics/blog/2025/datingmoneyball.png)
+*From [here](https://x.com/MoneyballMemes/status/1859314869972902336).*
+
 ## [References](#table-of-contents) {#references}
 
-<a id="ref1" href="#ref1-back">[1]</a> Bucknell University Baseball Statistics Research (1996–2000). "Runs Scored Correlations." Available at: https://www.eg.bucknell.edu/~bvollmay/baseball/runs1.html
+<a id="ref1" href="#ref1-back">[1]</a> Bucknell University Baseball Statistics Research (1996–2000). "Runs Scored Correlations." Available at: <https://www.eg.bucknell.edu/~bvollmay/baseball/runs1.html>
 
-<a id="ref2" href="#ref2-back">[2]</a> FanGraphs Community Research (2014–2017). "Relationship Between OBP and Runs Scored in College Baseball." Available at: https://community.fangraphs.com/relationship-between-obp-and-runs-scored-in-college-baseball/
+<a id="ref2" href="#ref2-back">[2]</a> FanGraphs Community Research (2014–2017). "Relationship Between OBP and Runs Scored in College Baseball." Available at: <https://community.fangraphs.com/relationship-between-obp-and-runs-scored-in-college-baseball/>
 
-<a id="ref3" href="#ref3-back">[3]</a> Baseball Almanac - 2002 AL OBP Leaders (https://www.baseball-almanac.com/yearly/top25.php?s=OBP&l=AL&y=2002)
+<a id="ref3" href="#ref3-back">[3]</a> Baseball Almanac - 2002 AL OBP Leaders <https://www.baseball-almanac.com/yearly/top25.php?s=OBP&l=AL&y=2002>
 
-<a id="ref4" href="#ref4-back">[4]</a> The Baseball Cube - 2002 MLB Team Payrolls (https://www.thebaseballcube.com/content/payroll_year/2002/)
+<a id="ref4" href="#ref4-back">[4]</a> The Baseball Cube - 2002 MLB Team Payrolls <https://www.thebaseballcube.com/content/payroll_year/2002/>
 
-<a id="ref5" href="#ref5-back">[5]</a> Baseball-Reference - 2002 MLB Standings (https://www.baseball-reference.com/leagues/majors/2002-standings.shtml)
+<a id="ref5" href="#ref5-back">[5]</a> Baseball-Reference - 2002 MLB Standings <https://www.baseball-reference.com/leagues/majors/2002-standings.shtml>
 
-<a id="ref6" href="#ref6-back">[6]</a> Stanford Sports Analytics Club - "Examining MLB Postseason Cluster Luck: or, Why the Playoffs Might Be a Crapshoot" (https://stanfordsportsanalytics.wordpress.com/2015/03/24/examining-mlb-postseason-cluster-luck-or-why-the-playoffs-might-be-a-crapshoot/)
+<a id="ref6" href="#ref6-back">[6]</a> Stanford Sports Analytics Club - "Examining MLB Postseason Cluster Luck: or, Why the Playoffs Might Be a Crapshoot" <https://stanfordsportsanalytics.wordpress.com/2015/03/24/examining-mlb-postseason-cluster-luck-or-why-the-playoffs-might-be-a-crapshoot/>
 
-<a id="ref7" href="#ref7-back">[7]</a> Braves Journal - "The Playoffs are a Crapshoot" (https://bravesjournal.com/2019/12/30/the-playoffs-are-a-crapshoot-a-5-part-series-introduction/)
+<a id="ref7" href="#ref7-back">[7]</a> Braves Journal - "The Playoffs are a Crapshoot" <https://bravesjournal.com/2019/12/30/the-playoffs-are-a-crapshoot-a-5-part-series-introduction/>
 
-<a id="ref8" href="#ref8-back">[8]</a> Grantland - "Baseball's Big Three: A Look Back at Tim Hudson, Mark Mulder, and Barry Zito in Oakland" (https://grantland.com/the-triangle/mlb-oakland-as-big-three-tim-hudson-barry-zito-mark-mulder-billy-beane-moneyball/)
+<a id="ref8" href="#ref8-back">[8]</a> Grantland - "Baseball's Big Three: A Look Back at Tim Hudson, Mark Mulder, and Barry Zito in Oakland" <https://grantland.com/the-triangle/mlb-oakland-as-big-three-tim-hudson-barry-zito-mark-mulder-billy-beane-moneyball/>
 
-<a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" (https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/)
+<a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" <https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/>
 
-<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" (https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/) 
+<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/> 
