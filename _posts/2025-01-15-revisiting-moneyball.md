@@ -10,14 +10,18 @@ image: /files/pics/blog/2025/moneyball.jpg
 
 *This post was originally published on [Medium](https://djpardis.medium.com/revisiting-moneyball-074fc2435b07) and is cross-posted here.*
 
-<div class="image-container-with-caption">
-  <img src="/files/pics/blog/2025/oakland1.jpg" alt="Oakland Coliseum">
-  <p class="image-caption">Oakland Coliseum, September 2022.</p>
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/oakland1.jpg" alt="Oakland Coliseum">
+  </div>
 </div>
+
+<p class="image-caption">Oakland Coliseum, September 2022.</p>
 
 <div class="toc-container">
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
+<li><a href="#introduction">Introduction</a></li>
 <li><a href="#understanding-moneyball">Understanding Moneyball</a>
   <ul>
     <li><a href="#analytics-leads-to-more-transparent-decision-making">Analytics leads to more transparent decision-making.</a></li>
@@ -41,14 +45,20 @@ image: /files/pics/blog/2025/moneyball.jpg
 </ul>
 </div>
 
+
+## Introduction {#introduction}
+
 Why are we still talking about Moneyball? Why am I talking about Moneyball?
 
 For one, I've been meaning to write this post since 2019. 2018 even.
 
-<div class="image-container-with-caption">
-  <img src="/files/pics/blog/2025/friendsarethebest.png" alt="My friends are the best">
-  <p class="image-caption">My friends are the best. [From here](https://twitter.com/djpardis/status/1316095842434134017).</p>
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/friendsarethebest.png" alt="My friends are the best">
+  </div>
 </div>
+
+<p class="image-caption">My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017).</p>
 
 The book was published in 2003, and the movie was released in 2011. It feels silly to rehash, except the whole thing fascinates fans two decades later. Why? On the one hand, it is loved because it tells the classic underdog story while suggesting that nerdy analytics contributed to the wins; on the other, and especially as the A's leave Oakland, it is blamed for encouraging low payrolls and critiqued for overstating the impact of analytics on the 2002 season and beyond.
 
@@ -147,8 +157,13 @@ Instead of expensive superstars, the A's assembled a roster where different play
 
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
-![Building a player in aggregate](/files/pics/blog/2025/buildinagg.png)
-*From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/buildinagg.png" alt="Building a player in aggregate">
+  </div>
+</div>
+
+<p class="image-caption">From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).</p>
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
@@ -156,8 +171,13 @@ Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs,"
 
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times - a 28% success rate.
 
-![World Series winners](/files/pics/blog/2025/wswinners.png)
-*World series winners since 1995 and their win-loss records.*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/wswinners.png" alt="World Series winners">
+  </div>
+</div>
+
+<p class="image-caption">World series winners since 1995 and their win-loss records.</p>
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
@@ -171,8 +191,13 @@ This randomness explains why sabermetricians often view regular-season performan
 
 The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
-![Baseball romance](/files/pics/blog/2025/romantic.png)
-*From [here](https://x.com/MLB/status/1914109400413016515).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/romantic.png" alt="Baseball romance">
+  </div>
+</div>
+
+<p class="image-caption">From [here](https://x.com/MLB/status/1914109400413016515).</p>
 
 Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
 
@@ -246,14 +271,29 @@ Whether the 2002 A's succeeded primarily through analytics or traditional talent
 
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
-![DJ Pardis tweet](/files/pics/blog/2025/djpardistwete.png)
-*From [here](https://x.com/djpardis/status/1188636997557993472).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/djpardistwete.png" alt="DJ Pardis tweet">
+  </div>
+</div>
 
-![Billy Beane](/files/pics/blog/2025/billybeane.jpg)
-*Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.*
+<p class="image-caption">From [here](https://x.com/djpardis/status/1188636997557993472).</p>
 
-![Dating Moneyball](/files/pics/blog/2025/datingmoneyball.png)
-*From [here](https://x.com/MoneyballMemes/status/1859314869972902336).*
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/billybeane.jpg" alt="Billy Beane">
+  </div>
+</div>
+
+<p class="image-caption">Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.</p>
+
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/datingmoneyball.png" alt="Dating Moneyball">
+  </div>
+</div>
+
+<p class="image-caption">From [here](https://x.com/MoneyballMemes/status/1859314869972902336).</p>
 
 ## [References](#table-of-contents) {#references}
 
