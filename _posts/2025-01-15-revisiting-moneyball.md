@@ -10,13 +10,8 @@ image: /files/pics/blog/2025/moneyball.jpg
 
 *This post was originally published on [Medium](https://djpardis.medium.com/revisiting-moneyball-074fc2435b07) and is cross-posted here.*
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/oakland1.jpg" alt="Oakland Coliseum">
-  </div>
-</div>
-
-<p class="image-caption">Oakland Coliseum, September 2022.</p>
+![Oakland Coliseum](/files/pics/blog/2025/oakland1.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Oakland Coliseum, September 2022.*
 
 <div class="toc-container">
 <h2 id="table-of-contents">Table of contents</h2>
@@ -46,19 +41,14 @@ image: /files/pics/blog/2025/moneyball.jpg
 </div>
 
 
-## Introduction {#introduction}
+## [Introduction](#table-of-contents) {#introduction}
 
 Why are we still talking about Moneyball? Why am I talking about Moneyball?
 
 For one, I've been meaning to write this post since 2019. 2018 even.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/friendsarethebest.png" alt="My friends are the best">
-  </div>
-</div>
-
-<p class="image-caption">My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017).</p>
+![My friends are the best](/files/pics/blog/2025/friendsarethebest.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017).*
 
 The book was published in 2003, and the movie was released in 2011. It feels silly to rehash, except the whole thing fascinates fans two decades later. Why? On the one hand, it is loved because it tells the classic underdog story while suggesting that nerdy analytics contributed to the wins; on the other, and especially as the A's leave Oakland, it is blamed for encouraging low payrolls and critiqued for overstating the impact of analytics on the 2002 season and beyond.
 
@@ -73,12 +63,11 @@ The book was published in 2003, and the movie was released in 2011. It feels sil
     <img src="/files/pics/blog/2025/moneytweets3.png" alt="Moneyball tweet 3">
   </div>
 </div>
-
-<p class="image-caption">From [here](https://twitter.com/djpardis/status/1316095842434134017), [here](https://twitter.com/djpardis/status/1316095842434134017), and [here](https://twitter.com/djpardis/status/1316095842434134017).</p>
+*From [here](https://twitter.com/djpardis/status/1316095842434134017), [here](https://twitter.com/djpardis/status/1316095842434134017), and [here](https://twitter.com/djpardis/status/1316095842434134017).*
 
 In this post, I'll go over the author's intentions for writing the book, followed by popular critiques of Moneyball. The goal is to address some of the recurring debates as we cover the main themes and provide historical context for each.
 
-## Understanding Moneyball {#understanding-moneyball}
+## [Understanding Moneyball](#table-of-contents) {#understanding-moneyball}
 
 Let's begin by discussing the book's central themes and what the author found intriguing about the A's in 2002. Moneyball has been so influential that many of these themes have since become memes.
 
@@ -104,8 +93,7 @@ The strategy worked: the 2002 A's ranked 2nd in the American League (AL) in OBP 
     <img src="/files/pics/blog/2025/obp2.png" alt="2002 A's payroll stats">
   </div>
 </div>
-
-<p class="image-caption">In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a href="#ref3">[3]</a><a href="#ref4">[4]</a>.</p>
+*In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a href="#ref3">[3]</a><a href="#ref4">[4]</a>.*
 
 ### [Scott Hatteberg is undervalued.](#table-of-contents) {#scott-hatteberg-is-undervalued}
 
@@ -142,7 +130,7 @@ More importantly, the streak occurred during a season where the A's won 103 game
     <img src="/files/pics/blog/2025/wins2.png" alt="2002 MLB payroll stats">
   </div>
 </div>
-<p class="image-caption">The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) <a href="#ref4">[4]</a><a href="#ref5">[5]</a>.</p>
+*The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) <a href="#ref4">[4]</a><a href="#ref5">[5]</a>.*
 
 ### [You can build a player in aggregate.](#table-of-contents) {#you-can-build-a-player-in-aggregate}
 
@@ -157,13 +145,8 @@ Instead of expensive superstars, the A's assembled a roster where different play
 
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/buildinagg.png" alt="Building a player in aggregate">
-  </div>
-</div>
-
-<p class="image-caption">From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).</p>
+![Building a player in aggregate](/files/pics/blog/2025/buildinagg.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
@@ -171,13 +154,8 @@ Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs,"
 
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times - a 28% success rate.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/wswinners.png" alt="World Series winners">
-  </div>
-</div>
-
-<p class="image-caption">World series winners since 1995 and their win-loss records.</p>
+![World Series winners](/files/pics/blog/2025/wswinners.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*World series winners since 1995 and their win-loss records.*
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
@@ -191,13 +169,8 @@ This randomness explains why sabermetricians often view regular-season performan
 
 The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/romantic.png" alt="Baseball romance">
-  </div>
-</div>
-
-<p class="image-caption">From [here](https://x.com/MLB/status/1914109400413016515).</p>
+![Baseball romance](/files/pics/blog/2025/romantic.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From [here](https://x.com/MLB/status/1914109400413016515).*
 
 Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
 
@@ -271,29 +244,14 @@ Whether the 2002 A's succeeded primarily through analytics or traditional talent
 
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/djpardistwete.png" alt="DJ Pardis tweet">
-  </div>
-</div>
+![DJ Pardis tweet](/files/pics/blog/2025/djpardistwete.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From [here](https://x.com/djpardis/status/1188636997557993472).*
 
-<p class="image-caption">From [here](https://x.com/djpardis/status/1188636997557993472).</p>
+![Billy Beane](/files/pics/blog/2025/billybeane.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.*
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/billybeane.jpg" alt="Billy Beane">
-  </div>
-</div>
-
-<p class="image-caption">Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.</p>
-
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/datingmoneyball.png" alt="Dating Moneyball">
-  </div>
-</div>
-
-<p class="image-caption">From [here](https://x.com/MoneyballMemes/status/1859314869972902336).</p>
+![Dating Moneyball](/files/pics/blog/2025/datingmoneyball.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From [here](https://x.com/MoneyballMemes/status/1859314869972902336).*
 
 ## [References](#table-of-contents) {#references}
 
