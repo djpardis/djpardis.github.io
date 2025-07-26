@@ -103,9 +103,6 @@
 /* Table of Contents styling */
 .container.content .toc-container {
   background-color: rgba(125, 120, 181, 0.08);
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin: 1.5rem 0 2rem;
 }
 
 .container.content .toc-container h2#table-of-contents {
@@ -156,6 +153,39 @@
 
 .container.content .toc-container ul ul li::marker {
   color: #7d78b5;
+}
+
+/* Post container styling */
+.container.content .post-container {
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  line-height: 1.5;
+}
+
+/* Specific container types */
+.container.content .toc-container {
+  background-color: rgba(125, 120, 181, 0.08);
+}
+
+.container.content .crosspost-container {
+  background-color: rgba(173, 216, 230, 0.15);
+}
+
+.container.content .update-container {
+  background-color: rgba(255, 192, 203, 0.15);
+}
+
+.container.content .note-container {
+  background-color: rgba(255, 255, 0, 0.15);
+}
+
+.container.content .warning-container {
+  background-color: rgba(255, 165, 0, 0.15);
+}
+
+.container.content .success-container {
+  background-color: rgba(144, 238, 144, 0.15);
 }
 
 /* Desktop responsive */
