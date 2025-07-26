@@ -112,25 +112,32 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   
   container.appendChild(enlargedImg);
   
+  // Create counter variable for navigation (even if no multiple images)
+  let counter = null;
+  
   // Add navigation buttons if there are multiple images
   if (imagesArray.length > 1) {
+    // Image counter
+    counter = document.createElement('div');
+    
     // Previous button
     const prevBtn = createNavButton('‹', 'left', () => {
       const newIndex = currentIndex > 0 ? currentIndex - 1 : imagesArray.length - 1;
-      showLightbox(imagesArray[newIndex], newIndex, imagesArray);
+      updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
+      currentIndex = newIndex;
     });
     
     // Next button
     const nextBtn = createNavButton('›', 'right', () => {
       const newIndex = currentIndex < imagesArray.length - 1 ? currentIndex + 1 : 0;
-      showLightbox(imagesArray[newIndex], newIndex, imagesArray);
+      updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
+      currentIndex = newIndex;
     });
     
     container.appendChild(prevBtn);
     container.appendChild(nextBtn);
     
-    // Image counter
-    const counter = document.createElement('div');
+    // Configure counter styling
     counter.textContent = `${currentIndex + 1} / ${imagesArray.length}`;
     counter.style.cssText = `
       position: absolute;
@@ -161,13 +168,15 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
       case 'ArrowLeft':
         if (imagesArray.length > 1) {
           const newIndex = currentIndex > 0 ? currentIndex - 1 : imagesArray.length - 1;
-          showLightbox(imagesArray[newIndex], newIndex, imagesArray);
+          updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
+          currentIndex = newIndex;
         }
         break;
       case 'ArrowRight':
         if (imagesArray.length > 1) {
           const newIndex = currentIndex < imagesArray.length - 1 ? currentIndex + 1 : 0;
-          showLightbox(imagesArray[newIndex], newIndex, imagesArray);
+          updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
+          currentIndex = newIndex;
         }
         break;
     }
@@ -248,4 +257,15 @@ function processMarkdownLinksInCaptions() {
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
     caption.innerHTML = html;
   });
+}
+
+function updateLightboxImage(img, newIndex, imagesArray, enlargedImg, counter) {
+  // Update the image source and alt text
+  enlargedImg.src = img.src;
+  enlargedImg.alt = img.alt;
+  
+  // Update the counter if it exists
+  if (counter && imagesArray.length > 1) {
+    counter.textContent = `${newIndex + 1} / ${imagesArray.length}`;
+  }
 }
