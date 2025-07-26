@@ -165,27 +165,27 @@
 
 /* Specific container types */
 .container.content .toc-container {
-  background-color: rgba(125, 120, 181, 0.08);
+  background-color: rgba(125, 120, 181, 0.18);
 }
 
 .container.content .crosspost-container {
-  background-color: rgba(173, 216, 230, 0.15);
+  background-color: rgba(173, 216, 230, 0.25);
 }
 
 .container.content .update-container {
-  background-color: rgba(255, 192, 203, 0.15);
+  background-color: rgba(255, 192, 203, 0.25);
 }
 
 .container.content .note-container {
-  background-color: rgba(255, 255, 0, 0.15);
+  background-color: rgba(255, 255, 0, 0.25);
 }
 
 .container.content .warning-container {
-  background-color: rgba(255, 165, 0, 0.15);
+  background-color: rgba(255, 165, 0, 0.25);
 }
 
 .container.content .success-container {
-  background-color: rgba(144, 238, 144, 0.15);
+  background-color: rgba(144, 238, 144, 0.25);
 }
 
 /* Desktop responsive */
@@ -447,23 +447,16 @@ body .wrap .container.content {
   height: 2.75rem;
   border-radius: 50%;
   background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
+  border: 1px solid #e0e0e0;
 }
 
 .podcast-social-icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #ccc;
 }
 
 .podcast-social-icon svg {
   width: 1.4rem;
   height: 1.4rem;
-  transition: transform 0.2s ease;
-}
-
-.podcast-social-icon:hover svg {
-  transform: scale(1.1);
 }
 
 .copyright div span {
