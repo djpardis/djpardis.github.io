@@ -403,6 +403,10 @@ body .wrap .container.content {
   border: 2px solid #7d78b5 !important;
 }
 
+
+
+
+
 /* Copyright section styling */
 .copyright {
   text-align: center;
@@ -823,4 +827,126 @@ p:has(+ .collapsible-section) {
 .button:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+}
+
+/* Newsletter Signup Styling */
+.newsletter-section {
+  margin: 2rem 0 1.5rem;
+}
+
+/* Desktop and tablet newsletter width */
+@media (min-width: 30em) {
+  .newsletter-signup {
+    background-color: rgba(125, 120, 181, 0.08);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: left;
+    max-width: 42rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile newsletter width */
+@media (max-width: 30em) {
+  .newsletter-signup {
+    background-color: rgba(125, 120, 181, 0.08);
+    border-radius: 6px;
+    padding: 0.5rem;
+    text-align: left;
+    width: calc(100% - 1rem);
+    margin: 0.125rem 0.5rem;
+  }
+}
+
+.newsletter-signup p {
+  margin-bottom: 1rem;
+  color: #515151;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.newsletter-form .form-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #7d78b5;
+  box-shadow: 0 0 0 2px rgba(125, 120, 181, 0.1);
+}
+
+.newsletter-button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.newsletter-button:hover {
+  background-color: #2980b9;
+}
+
+.newsletter-button:active {
+  background-color: #2471a3;
+}
+
+.newsletter-message {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  display: none;
+}
+
+.newsletter-message.success {
+  background-color: rgba(144, 238, 144, 0.25);
+  color: #2d5a2d;
+  border: 1px solid rgba(144, 238, 144, 0.5);
+}
+
+.newsletter-message.error {
+  background-color: rgba(255, 165, 0, 0.25);
+  color: #8b4513;
+  border: 1px solid rgba(255, 165, 0, 0.5);
+}
+
+/* Mobile form layout */
+@media (max-width: 500px) {
+  .newsletter-form .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .newsletter-input {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .newsletter-button {
+    width: auto;
+    align-self: flex-start;
+  }
 }
