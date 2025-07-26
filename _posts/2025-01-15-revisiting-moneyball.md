@@ -78,6 +78,9 @@ In this post, I'll go over the author's intentions for writing the book, followe
 
 Let's begin by discussing the book's central themes and what the author found intriguing about the A's in 2002. Moneyball has been so influential that many of these themes have since become memes.
 
+![Oakland Coliseum](/files/pics/blog/2025/oakland2.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Oakland Coliseum, September 2022.*
+
 ### [Analytics leads to more transparent decision-making.](#table-of-contents) {#analytics-leads-to-more-transparent-decision-making}
 
 The A's GM, Billy Beane, working with statistician Paul DePodesta, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
