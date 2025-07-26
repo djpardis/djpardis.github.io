@@ -236,7 +236,7 @@ Analytics improved baseball's efficiency but arguably damaged its entertainment 
 
 ### [Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.](#table-of-contents) {#moneyball-suggests-baseball-is-unfair}
 
-Despite conventional wisdom linking salary caps to competitive balance, the data shows MLB's luxury tax system has produced championship diversity equal to hard-cap leagues: 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
+Despite conventional wisdom linking salary caps to competitive balance, the data shows MLB's luxury tax system has produced championship diversity equal to hard-cap leagues: since 1995, counting 30 championship years, 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
 
 However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
