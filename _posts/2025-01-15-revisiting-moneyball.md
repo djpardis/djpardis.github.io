@@ -8,12 +8,17 @@ date: 2025-07-24
 image: /files/pics/blog/2025/moneyball.jpg
 ---
 
-*This post was originally published on [Medium](https://djpardis.medium.com/revisiting-moneyball-074fc2435b07) and is cross-posted here.*
+<div class="crosspost-container post-container" style="margin-bottom: 0.5rem; font-style: italic;">
+This post was originally published on <a href="https://djpardis.medium.com/revisiting-moneyball-074fc2435b07" target="_blank">Medium</a> and is cross-posted here.
+</div>
 
-![Oakland Coliseum](/files/pics/blog/2025/oakland1.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Oakland Coliseum, September 2022.*
+<div class="update-container post-container" style="font-style: italic;">
+Update, January 25, 2025<br><br>
+<a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">A friend</a> used Google's <a href="https://notebooklm.google.com/notebook/9b1b10b3-5029-4a6a-814d-8b542b5163e4/audio?original_referer=https:%2F%2Ft.co%23&pli=1" target="_blank">NotebookLM</a> to create a podcast discussion of this post.
+The piece also made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">Hacker News</a> front page.
+</div>
 
-<div class="toc-container">
+<div class="toc-container post-container">
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
@@ -40,6 +45,8 @@ image: /files/pics/blog/2025/moneyball.jpg
 </ul>
 </div>
 
+![Oakland Coliseum](/files/pics/blog/2025/oakland1.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Oakland Coliseum, September 2022.*
 
 ## [Introduction](#table-of-contents) {#introduction}
 
@@ -48,7 +55,7 @@ Why are we still talking about Moneyball? Why am I talking about Moneyball?
 For one, I've been meaning to write this post since 2019. 2018 even.
 
 ![My friends are the best](/files/pics/blog/2025/friendsarethebest.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017).*
+*My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017){:target="_blank"}.*
 
 The book was published in 2003, and the movie was released in 2011. It feels silly to rehash, except the whole thing fascinates fans two decades later. Why? On the one hand, it is loved because it tells the classic underdog story while suggesting that nerdy analytics contributed to the wins; on the other, and especially as the A's leave Oakland, it is blamed for encouraging low payrolls and critiqued for overstating the impact of analytics on the 2002 season and beyond.
 
@@ -63,7 +70,7 @@ The book was published in 2003, and the movie was released in 2011. It feels sil
     <img src="/files/pics/blog/2025/moneytweets3.png" alt="Moneyball tweet 3">
   </div>
 </div>
-*From [here](https://twitter.com/djpardis/status/1316095842434134017), [here](https://twitter.com/djpardis/status/1316095842434134017), and [here](https://twitter.com/djpardis/status/1316095842434134017).*
+*From [here](https://twitter.com/djpardis/status/1316095842434134017){:target="_blank"}, [here](https://twitter.com/djpardis/status/1316095842434134017){:target="_blank"}, and [here](https://twitter.com/djpardis/status/1316095842434134017){:target="_blank"}.*
 
 In this post, I'll go over the author's intentions for writing the book, followed by popular critiques of Moneyball. The goal is to address some of the recurring debates as we cover the main themes and provide historical context for each.
 
@@ -146,7 +153,7 @@ Instead of expensive superstars, the A's assembled a roster where different play
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
 ![Building a player in aggregate](/files/pics/blog/2025/buildinagg.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y).*
+*From [here](https://bsky.app/profile/foolishbb.bsky.social/post/3lawoaoavhc2y){:target="_blank"}.*
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
@@ -170,7 +177,7 @@ This randomness explains why sabermetricians often view regular-season performan
 The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
 ![Baseball romance](/files/pics/blog/2025/romantic.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*From [here](https://x.com/MLB/status/1914109400413016515).*
+*From [here](https://x.com/MLB/status/1914109400413016515){:target="_blank"}.*
 
 Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
 
@@ -198,7 +205,7 @@ After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Bi
 
 Although Beane declined, the Red Sox promoted Theo Epstein to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
 
-Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (47+ personnel, compared to 3 in 1988) and maintaining MLB's highest payroll. Their championship validated that analytics enables more effective spending rather than reduced spending.
+Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (47+ personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
 
 The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under Steve Cohen, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
 
@@ -245,32 +252,33 @@ Whether the 2002 A's succeeded primarily through analytics or traditional talent
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
 ![DJ Pardis tweet](/files/pics/blog/2025/djpardistwete.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*From [here](https://x.com/djpardis/status/1188636997557993472).*
+*From [here](https://x.com/djpardis/status/1188636997557993472){:target="_blank"}.*
 
 ![Billy Beane](/files/pics/blog/2025/billybeane.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Proud to finally meet Brad Pitt back in October 2019. He gave one of the best talks I ever heard.*
 
 ![Dating Moneyball](/files/pics/blog/2025/datingmoneyball.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*From [here](https://x.com/MoneyballMemes/status/1859314869972902336).*
+*From [here](https://x.com/MoneyballMemes/status/1859314869972902336){:target="_blank"}.*
+
 
 ## [References](#table-of-contents) {#references}
 
-<a id="ref1" href="#ref1-back">[1]</a> Bucknell University Baseball Statistics Research (1996–2000). "Runs Scored Correlations." Available at: <https://www.eg.bucknell.edu/~bvollmay/baseball/runs1.html>
+<a id="ref1" href="#ref1-back">[1]</a> Bucknell University Baseball Statistics Research (1996–2000). "Runs Scored Correlations." Available at: <a href="https://www.eg.bucknell.edu/~bvollmay/baseball/runs1.html" target="_blank">https://www.eg.bucknell.edu/~bvollmay/baseball/runs1.html</a>
 
-<a id="ref2" href="#ref2-back">[2]</a> FanGraphs Community Research (2014–2017). "Relationship Between OBP and Runs Scored in College Baseball." Available at: <https://community.fangraphs.com/relationship-between-obp-and-runs-scored-in-college-baseball/>
+<a id="ref2" href="#ref2-back">[2]</a> FanGraphs Community Research (2014–2017). "Relationship Between OBP and Runs Scored in College Baseball." Available at: <a href="https://community.fangraphs.com/relationship-between-obp-and-runs-scored-in-college-baseball/" target="_blank">https://community.fangraphs.com/relationship-between-obp-and-runs-scored-in-college-baseball/</a>
 
-<a id="ref3" href="#ref3-back">[3]</a> Baseball Almanac - 2002 AL OBP Leaders <https://www.baseball-almanac.com/yearly/top25.php?s=OBP&l=AL&y=2002>
+<a id="ref3" href="#ref3-back">[3]</a> Baseball Almanac - 2002 AL OBP Leaders <a href="https://www.baseball-almanac.com/yearly/top25.php?s=OBP&l=AL&y=2002" target="_blank">https://www.baseball-almanac.com/yearly/top25.php?s=OBP&l=AL&y=2002</a>
 
-<a id="ref4" href="#ref4-back">[4]</a> The Baseball Cube - 2002 MLB Team Payrolls <https://www.thebaseballcube.com/content/payroll_year/2002/>
+<a id="ref4" href="#ref4-back">[4]</a> The Baseball Cube - 2002 MLB Team Payrolls <a href="https://www.thebaseballcube.com/content/payroll_year/2002/" target="_blank">https://www.thebaseballcube.com/content/payroll_year/2002/</a>
 
-<a id="ref5" href="#ref5-back">[5]</a> Baseball-Reference - 2002 MLB Standings <https://www.baseball-reference.com/leagues/majors/2002-standings.shtml>
+<a id="ref5" href="#ref5-back">[5]</a> Baseball-Reference - 2002 MLB Standings <a href="https://www.baseball-reference.com/leagues/majors/2002-standings.shtml" target="_blank">https://www.baseball-reference.com/leagues/majors/2002-standings.shtml</a>
 
-<a id="ref6" href="#ref6-back">[6]</a> Stanford Sports Analytics Club - "Examining MLB Postseason Cluster Luck: or, Why the Playoffs Might Be a Crapshoot" <https://stanfordsportsanalytics.wordpress.com/2015/03/24/examining-mlb-postseason-cluster-luck-or-why-the-playoffs-might-be-a-crapshoot/>
+<a id="ref6" href="#ref6-back">[6]</a> Stanford Sports Analytics Club - "Examining MLB Postseason Cluster Luck: or, Why the Playoffs Might Be a Crapshoot" <a href="https://stanfordsportsanalytics.wordpress.com/2015/03/24/examining-mlb-postseason-cluster-luck-or-why-the-playoffs-might-be-a-crapshoot/" target="_blank">https://stanfordsportsanalytics.wordpress.com/2015/03/24/examining-mlb-postseason-cluster-luck-or-why-the-playoffs-might-be-a-crapshoot/</a>
 
-<a id="ref7" href="#ref7-back">[7]</a> Braves Journal - "The Playoffs are a Crapshoot" <https://bravesjournal.com/2019/12/30/the-playoffs-are-a-crapshoot-a-5-part-series-introduction/>
+<a id="ref7" href="#ref7-back">[7]</a> Braves Journal - "The Playoffs are a Crapshoot" <a href="https://bravesjournal.com/2019/12/30/the-playoffs-are-a-crapshoot-a-5-part-series-introduction/" target="_blank">https://bravesjournal.com/2019/12/30/the-playoffs-are-a-crapshoot-a-5-part-series-introduction/</a>
 
-<a id="ref8" href="#ref8-back">[8]</a> Grantland - "Baseball's Big Three: A Look Back at Tim Hudson, Mark Mulder, and Barry Zito in Oakland" <https://grantland.com/the-triangle/mlb-oakland-as-big-three-tim-hudson-barry-zito-mark-mulder-billy-beane-moneyball/>
+<a id="ref8" href="#ref8-back">[8]</a> Grantland - "Baseball's Big Three: A Look Back at Tim Hudson, Mark Mulder, and Barry Zito in Oakland" <a href="https://grantland.com/the-triangle/mlb-oakland-as-big-three-tim-hudson-barry-zito-mark-mulder-billy-beane-moneyball/" target="_blank">https://grantland.com/the-triangle/mlb-oakland-as-big-three-tim-hudson-barry-zito-mark-mulder-billy-beane-moneyball/</a>
 
-<a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" <https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/>
+<a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" <a href="https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/" target="_blank">https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/</a>
 
-<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/> 
+<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <a href="https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/" target="_blank">https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/</a> 
