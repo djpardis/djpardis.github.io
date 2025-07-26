@@ -23,6 +23,7 @@ function addImageLightbox() {
   const allImages = document.querySelectorAll('img');
   const clickableImages = [];
   
+  // Process images in DOM order to maintain proper carousel sequence
   allImages.forEach(img => {
     // Skip small images (likely icons), images in navigation, and other UI elements
     const skipSelectors = [
@@ -32,11 +33,28 @@ function addImageLightbox() {
     
     if (skipSelectors.some(selector => img.closest(selector))) return;
     
-    // Wait for image to load to check dimensions
-    if (img.complete) {
-      checkAndMakeClickable(img, clickableImages);
-    } else {
-      img.addEventListener('load', () => checkAndMakeClickable(img, clickableImages));
+    // Check if image should be clickable (either loaded or assume it's large enough)
+    const shouldMakeClickable = () => {
+      // If loaded, check dimensions
+      if (img.complete && img.naturalWidth > 0) {
+        return img.naturalWidth >= 150 && img.naturalHeight >= 150;
+      }
+      // If not loaded yet, assume it's clickable (will be filtered out if too small on load)
+      return true;
+    };
+    
+    if (shouldMakeClickable()) {
+      // Add to clickable images array in DOM order
+      clickableImages.push(img);
+      
+      // Make image clickable
+      img.style.cursor = 'pointer';
+      img.setAttribute('title', 'Click to enlarge');
+      
+      img.addEventListener('click', function() {
+        const imageIndex = clickableImages.indexOf(this);
+        showLightbox(this, imageIndex, clickableImages);
+      });
     }
   });
   
@@ -44,22 +62,7 @@ function addImageLightbox() {
   window.clickableImages = clickableImages;
 }
 
-function checkAndMakeClickable(img, clickableImages) {
-  // Skip very small images (likely icons)
-  if (img.naturalWidth < 150 || img.naturalHeight < 150) return;
-  
-  // Make image clickable
-  img.style.cursor = 'pointer';
-  img.setAttribute('title', 'Click to enlarge');
-  
-  // Add to clickable images array
-  clickableImages.push(img);
-  
-  img.addEventListener('click', function() {
-    const imageIndex = clickableImages.indexOf(this);
-    showLightbox(this, imageIndex, clickableImages);
-  });
-}
+
 
 function showLightbox(img, currentIndex = 0, imagesArray = []) {
   // Create lightbox overlay
