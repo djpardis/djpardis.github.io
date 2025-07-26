@@ -210,17 +210,22 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
 function createNavButton(text, side, clickHandler) {
   const button = document.createElement('button');
   button.textContent = text;
+  
+  // Check if mobile for positioning
+  const isMobile = window.innerWidth <= 768;
+  const sidePosition = isMobile ? '10px' : '-60px';
+  
   button.style.cssText = `
     position: absolute;
     top: 50%;
-    ${side}: -60px;
+    ${side}: ${sidePosition};
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.9);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+    width: ${isMobile ? '44px' : '50px'};
+    height: ${isMobile ? '44px' : '50px'};
+    font-size: ${isMobile ? '20px' : '24px'};
     font-weight: bold;
     cursor: pointer;
     color: #333;
@@ -230,11 +235,12 @@ function createNavButton(text, side, clickHandler) {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
     user-select: none;
+    z-index: 10001;
   `;
   
   button.addEventListener('mouseover', () => {
     button.style.backgroundColor = 'white';
-    button.style.transform = 'translateY(-50%) scale(1.1)';
+    button.style.transform = `translateY(-50%) scale(${isMobile ? '1.05' : '1.1'})`;
   });
   
   button.addEventListener('mouseout', () => {
