@@ -28,7 +28,7 @@ I evaluated several popular data room solutions to understand their strengths an
 
 </div>
 
-For a more thorough comparison of tools and features see [Papermark<sup>1</sup>](#ref1) and [FirmRoom<sup>1b</sup>](#ref1b). 
+For a more thorough comparison of tools and features see Papermark <a href="#ref1">[1]</a> and FirmRoom <a href="#ref1b">[1b]</a>. 
 
 None of these tools fully meet my needs. DocSend's tracking features often [discourage investor engagement](https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af){:target="_blank"}, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
 
@@ -54,7 +54,7 @@ Now we get to the topic of vibe coding. I believe the tools have finally reached
 
 To build this data room app, I used [Windsurf](https://windsurf.com){:target="_blank"}, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025. 
 
-For a comparison of coding agents, see [Yogesh's head-to-head comparison<sup>2</sup>](#ref2), [C# Corner's top AI tools<sup>3</sup>](#ref3), [Kingy AI's agent analysis<sup>4</sup>](#ref4), and [BrightCoding's technical benchmarks<sup>5</sup>](#ref5). To understand how they work, see [Sourcegraph's anatomy of coding assistants<sup>6</sup>](#ref6).
+For a comparison of coding agents, see Yogesh's head-to-head comparison <a href="#ref2">[2]</a>, C# Corner's top AI tools <a href="#ref3">[3]</a>, Kingy AI's agent analysis <a href="#ref4">[4]</a>, and BrightCoding's technical benchmarks <a href="#ref5">[5]</a>. To understand how they work, see Sourcegraph's anatomy of coding assistants <a href="#ref6">[6]</a>.
 
 ## Observations and best practices
 
@@ -106,7 +106,7 @@ I asked Windsurf directly what advice it would give to someone starting with AI-
 
 ### Elsewhere on the web
 
-Check out the [Windsurf documentation](https://docs.windsurf.com/windsurf/getting-started){:target="_blank"}<a id="ref7-back" href="#ref7"><sup>7</sup></a> and also [Windsurf rules](https://uibakery.io/blog/windsurf-ai-rules){:target="_blank"}<a id="ref8-back" href="#ref8"><sup>8</sup></a> at UI Bakery for general Windsurf best practices. Also see David Crawshaw's [blog post](https://crawshaw.io/blog/programming-with-agents){:target="_blank"}<a id="ref9-back" href="#ref9"><sup>9</sup></a> for an interesting look at programming with agents. For more on vibe coding, check out [12 Rules to Vibe Code Without Frustration](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration){:target="_blank"}<a id="ref10-back" href="#ref10"><sup>10</sup></a>.
+Check out the Windsurf documentation <a href="#ref7">[7]</a> and Windsurf rules at UI Bakery <a href="#ref8">[8]</a> for general Windsurf best practices. Also see David Crawshaw's blog post <a href="#ref9">[9]</a> for an interesting look at programming with agents. For more on vibe coding, check out 12 Rules to Vibe Code Without Frustration <a href="#ref10">[10]</a>.
 
 That's it for now. I'll add to this list as I learn more.
 
@@ -120,24 +120,24 @@ Next up, stay tuned as I share some of my [explorations](https://github.com/djpa
 
 ### References
 
-<a id="ref1" href="#ref1-back"><sup>1</sup></a> Papermark. (2023). ["Best virtual data room providers comparison"](https://www.papermark.com/virtual-data-room-providers).
+<a id="ref1" href="#ref1-back">[1]</a> Papermark. (2023). ["Best virtual data room providers comparison"](https://www.papermark.com/virtual-data-room-providers).
 
-<a id="ref1b" href="#ref1-back"><sup>1b</sup></a> FirmRoom. (2023). ["11 best data room providers you need in 2024: Comparison"](https://firmroom.com/vdr-providers).
+<a id="ref1b" href="#ref1-back">[1b]</a> FirmRoom. (2023). ["11 best data room providers you need in 2024: Comparison"](https://firmroom.com/vdr-providers).
 
-<a id="ref2" href="#ref2-back"><sup>2</sup></a> Yogesh, B. (2025). ["AI coding tools: A developer's head-to-head comparison"](https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd). A technical comparison of Cursor, GitHub Copilot, Replit, Cline, and Claude Code from an engineer's perspective.
+<a id="ref2" href="#ref2-back">[2]</a> Yogesh, B. (2025). ["AI coding tools: A developer's head-to-head comparison"](https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd). A technical comparison of Cursor, GitHub Copilot, Replit, Cline, and Claude Code from an engineer's perspective.
 
-<a id="ref3" href="#ref3-back"><sup>3</sup></a> C# Corner. (2025). ["Top 7 AI tools for software developers"](https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/). Comprehensive analysis of GitHub Copilot, ChatGPT, Replit AI, Windsurf, Tabnine, Cursor AI, and V0 by Vercel.
+<a id="ref3" href="#ref3-back">[3]</a> C# Corner. (2025). ["Top 7 AI tools for software developers"](https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/). Comprehensive analysis of GitHub Copilot, ChatGPT, Replit AI, Windsurf, Tabnine, Cursor AI, and V0 by Vercel.
 
-<a id="ref4" href="#ref4-back"><sup>4</sup></a> Kingy AI. (2025). ["AI coding agents in 2025: Cursor vs. Windsurf vs. Copilot vs. Claude vs. VS Code AI"](https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/). In-depth analysis of strengths and weaknesses across code generation, debugging, refactoring, and large-codebase support.
+<a id="ref4" href="#ref4-back">[4]</a> Kingy AI. (2025). ["AI coding agents in 2025: Cursor vs. Windsurf vs. Copilot vs. Claude vs. VS Code AI"](https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/). In-depth analysis of strengths and weaknesses across code generation, debugging, refactoring, and large-codebase support.
 
-<a id="ref5" href="#ref5-back"><sup>5</sup></a> BrightCoding. (2025). ["AI coding assistants compared: technical benchmarks"](https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/). Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.
+<a id="ref5" href="#ref5-back">[5]</a> BrightCoding. (2025). ["AI coding assistants compared: technical benchmarks"](https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/). Technical analysis showing Windsurf processes 180 tokens/second with Llama 3.1 405B model, Cursor averages 220 tokens/second with GPT-4o, and GitHub Copilot processes 150 tokens/second with standard models. Engineers prefer Cursor (42%) for refactoring, Windsurf (38%) for speed and privacy, and Copilot (36%) for reliability.
 
-<a id="ref6" href="#ref6-back"><sup>6</sup></a> Sourcegraph Engineering. (2024). ["The anatomy of an AI coding assistant"](https://sourcegraph.com/blog/anatomy-of-a-coding-assistant). Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI's text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.
+<a id="ref6" href="#ref6-back">[6]</a> Sourcegraph Engineering. (2024). ["The anatomy of an AI coding assistant"](https://sourcegraph.com/blog/anatomy-of-a-coding-assistant). Technical blog explaining how modern AI coding assistants work under the hood, detailing the vector embedding techniques (using OpenAI's text-embedding-ada-002 or custom models), context fetching mechanisms, and how different features (autocomplete, chat, test generation) use specialized retrieval methods optimized for latency (76ms) or accuracy depending on the use case.
 
-<a id="ref7" href="#ref7-back"><sup>7</sup></a> Windsurf. (2025). ["Getting Started with Windsurf"](https://docs.windsurf.com/windsurf/getting-started). Official documentation on getting started with the Windsurf VSCode fork.
+<a id="ref7" href="#ref7-back">[7]</a> Windsurf. (2025). ["Getting Started with Windsurf"](https://docs.windsurf.com/windsurf/getting-started). Official documentation on getting started with the Windsurf VSCode fork.
 
-<a id="ref8" href="#ref8-back"><sup>8</sup></a> UI Bakery. (2025). ["Windsurf AI Rules"](https://uibakery.io/blog/windsurf-ai-rules). Best practices for working with Windsurf AI and optimizing its performance.
+<a id="ref8" href="#ref8-back">[8]</a> UI Bakery. (2025). ["Windsurf AI Rules"](https://uibakery.io/blog/windsurf-ai-rules). Best practices for working with Windsurf AI and optimizing its performance.
 
-<a id="ref9" href="#ref9-back"><sup>9</sup></a> Crawshaw, D. (2025). ["Programming with Agents"](https://crawshaw.io/blog/programming-with-agents). An in-depth look at the paradigm shift of programming with AI agents.
+<a id="ref9" href="#ref9-back">[9]</a> Crawshaw, D. (2025). ["Programming with Agents"](https://crawshaw.io/blog/programming-with-agents). An in-depth look at the paradigm shift of programming with AI agents.
 
-<a id="ref10" href="#ref10-back"><sup>10</sup></a> Creator Economy. (2025). ["12 Rules to Vibe Code Without Frustration"](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration). A practical guide to effective AI-assisted programming techniques and best practices.
+<a id="ref10" href="#ref10-back">[10]</a> Creator Economy. (2025). ["12 Rules to Vibe Code Without Frustration"](https://creatoreconomy.so/p/12-rules-to-vibe-code-without-frustration). A practical guide to effective AI-assisted programming techniques and best practices.
