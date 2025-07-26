@@ -89,7 +89,7 @@ This transparency allowed decisions regarding players to be justified through ob
 
 ### [Getting on base is undervalued, and teams can use this to their advantage.](#table-of-contents) {#getting-on-base-is-undervalued}
 
-While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics [1](#ref1)[2](#ref2). 
+While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics <a href="#ref1">[1]</a><a href="#ref2">[2]</a>. 
 
 The math was simple: teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
@@ -160,7 +160,7 @@ This aggregate approach allowed Oakland to compete with teams spending three tim
 
 ### [The playoffs are a crapshoot.](#table-of-contents) {#the-playoffs-are-a-crapshoot}
 
-Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs," acknowledging that his analytical approach, while dominant over 162 games, couldn't overcome October's inherent randomness. It's a "crapshoot" because the best regular season team frequently loses due to small sample sizes and variance inherent in short series [6](#ref6).
+Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs," acknowledging that his analytical approach, while dominant over 162 games, couldn't overcome October's inherent randomness. It's a "crapshoot" because the best regular season team frequently loses due to small sample sizes and variance inherent in short series <a href="#ref6">[6]</a>.
 
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times - a 28% success rate.
 
@@ -169,7 +169,7 @@ The statistical evidence supports this theory. Since the Wild Card era began in 
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
-Academic analysis by Stanford (2015) [6](#ref6) found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" [7](#ref7).
+Academic analysis by Stanford <a href="#ref6">[6]</a> found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" <a href="#ref7">[7]</a>.
 
 The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP- the cornerstone of their analytical advantage - declined 11% in playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
 
@@ -198,7 +198,7 @@ The A's were excellent at drafting talent. And their lineup in 2002 was made up 
 
 Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 RBIs while providing leadership throughout the season. Barry Zito won the AL Cy Young Award with a 23–5 record and 2.75 ERA. These weren't marginal players elevated by analytics; they were elite performers by any standard.
 
-Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" [8](#ref8). The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
+Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" <a href="#ref8">[8]</a>. The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
 
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
@@ -238,13 +238,13 @@ Analytics improved baseball's efficiency but arguably damaged its entertainment 
 
 Despite conventional wisdom linking salary caps to competitive balance, the data shows MLB's luxury tax system has produced championship diversity equal to hard-cap leagues: 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
 
-However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams [9](#ref9). Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
+However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
 Despite this, playoff access remains remarkably broad - 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
 
 While the NBA currently enjoys unprecedented parity - seven different champions in seven years (2019–2025) - this represents a dramatic shift from its historically dynasty-heavy nature where superstars concentrated championships among elite teams.
 
-The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century [10](#ref10).
+The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century <a href="#ref10">[10]</a>.
 
 This suggests that playoff format, season length, and sport-specific factors matter more than financial structures alone.
 
