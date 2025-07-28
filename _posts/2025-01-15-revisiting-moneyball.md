@@ -14,8 +14,8 @@ This post was originally published on <a href="https://djpardis.medium.com/revis
 
 <div class="update-container post-container" style="margin-bottom: 1rem; font-style: italic;">
 Update, January 25, 2025<br><br>
-1. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/9b1b10b3-5029-4a6a-814d-8b542b5163e4/audio?original_referer=https:%2F%2Ft.co%23&pli=1" target="_blank">NotebookLM</a> to create a podcast discussion of this post.<br>
-2. The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!
+1. The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!<br>
+2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/9b1b10b3-5029-4a6a-814d-8b542b5163e4/audio?original_referer=https:%2F%2Ft.co%23&pli=1" target="_blank">NotebookLM</a> to create a podcast discussion of this post.
 </div>
 
 <div class="toc-container post-container">
@@ -52,7 +52,7 @@ Update, January 25, 2025<br><br>
 
 Why are we still talking about Moneyball? Why am I talking about Moneyball?
 
-For one, I've been meaning to write this post since 2019. 2018 even.
+For one, I've been meaning to write this post since 2019. [2018](https://x.com/djpardis/status/1089264609305911296){:target="_blank"} even.
 
 ![My friends are the best](/files/pics/blog/2025/friendsarethebest.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *My friends are the best. From [here](https://twitter.com/djpardis/status/1316095842434134017){:target="_blank"}.*
@@ -192,7 +192,7 @@ The most substantial criticism of Moneyball, both the book and especially the fi
 
 The A's were excellent at drafting talent. And their lineup in 2002 was made up of more than just underdogs.
 
-**The Big Three**: Hudson (6th round, 1997), Mulder (2nd overall, 1998), and Zito (9th overall, 1999) were all top-10 picks. By 2002, this trio anchored Oakland's rotation with elite performance.
+**The Big Three**. Tim Hudson (6th round, 1997), Mark Mulder (2nd overall, 1998), and Barry Zito (9th overall, 1999) were all top-10 picks. By 2002, this trio anchored Oakland's rotation with elite performance.
 
 **Miguel Tejada** (international signing, 1993) and **Eric Chavez** (10th overall, 1996) provided MVP-caliber offense and Gold Glove defense. Both were premium draft investments that matured into franchise cornerstones.
 
@@ -228,15 +228,16 @@ Analytics has improved baseball in measurable ways:
 
 However, the use of analytics has not been without downsides:
 
-**The "Three True Outcomes" problem**: Home runs, walks, and strikeouts now dominate baseball, with 35% of plate appearances ending without involving seven defensive players. This has reduced balls in play by 20% since 1980, creating longer games with less action.
+**The "Three True Outcomes" problem**. Home runs, walks, and strikeouts now dominate baseball, with 35% of plate appearances ending without involving seven defensive players. This has reduced balls in play by 20% since 1980, creating longer games with less action.
 
-**Entertainment decline**: As Theo Epstein admitted, "executives like me who have spent a lot of time using analytics…have unwittingly had a negative impact on the aesthetic value of the game." Even Bill James acknowledged the game's aesthetics "went to hell in a dump truck" due to excessive strikeouts and endless pitching changes.
+**Entertainment decline**. As Theo Epstein admitted, "executives like me who have spent a lot of time using analytics…have unwittingly had a negative impact on the aesthetic value of the game." Even Bill James acknowledged the game's aesthetics "went to hell in a dump truck" due to excessive strikeouts and endless pitching changes.
 
 Analytics improved baseball's efficiency but arguably damaged its entertainment value - a trade-off MLB addressed with 2023 rule changes, including pitch clocks and shift bans.
 
 ### [Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.](#table-of-contents) {#moneyball-suggests-baseball-is-unfair}
 
-Despite conventional wisdom linking salary caps to competitive balance, the data shows MLB's luxury tax system has produced championship diversity equal to hard-cap leagues: since 1995, counting 30 championship years, 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
+Despite conventional wisdom linking salary caps to competitive balance, the data shows that MLB's luxury tax system has produced championship diversity equal to hard-cap league. Since 1995, counting 30 championship years, 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
+
 
 However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
