@@ -220,6 +220,11 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 
 The analytics revolution was already underway before Moneyball - the book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
 
+To understand baseball's numerical history, you can go back even further. **Henry Chadwick**, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
+
+![A vintage 1876 baseball box score showing detailed game statistics in handwritten format](/files/pics/blog/2025/1876boxscore.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/1876boxscore.jpg" target="_blank">1876</a>.*
+
 Analytics has improved baseball in measurable ways:
 
 **Player development**. Teams now use personalized training programs based on biomechanical analysis, injury prevention through wearable technology, and real-time feedback systems.
