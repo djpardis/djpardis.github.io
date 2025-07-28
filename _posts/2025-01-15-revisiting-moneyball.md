@@ -128,6 +128,8 @@ Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 s
 
 The 20-game winning streak (August 13 - September 4, 2002) became the dramatic centerpiece of the Moneyball story.
 
+During the historic run, **Billy Koch** (acquired December 7, 2001) recorded wins or saves in 12 of the 20 games, while **Cory Lidle** (acquired January 8, 2001), who was arguably the streak's MVP, posted a microscopic 0.20 ERA in August with 32 consecutive scoreless innings.
+
 The streak's climactic finish, Oakland blowing an 11–0 lead to Kansas City before Hatteberg's walk-off home run, provided Hollywood-worthy drama that helped make the analytical approach culturally compelling.
 
 More importantly, the streak occurred during a season where the A's won 103 games despite having one of baseball's lowest payrolls.
@@ -200,6 +202,8 @@ Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 
 
 Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" <a href="#ref8">[8]</a>. The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
 
+<!-- It should be noted that Moneyball's likely focus on budget-conscious acquisitions like Hatteberg, Justice, and Bradford was mainly due to the three departed stars after the 2001 season: Jason Giambi (MVP first baseman who signed a 7-year, $120 million contract with the Yankees), Johnny Damon (center fielder who left for a 4-year, $31 million deal with Boston), and Jason Isringhausen (closer who joined St. Louis for 4 years, $27 million). Combined, Oakland lost approximately $31.6 million in annual talent ($17.1M + $7.75M + $6.75M) while operating with a total payroll of just $41 million. The Big Three, Tejada, and Chavez were likely overlooked because they were also part of the 2001 team. -->
+
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
 The lesson of Moneyball is not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
@@ -208,9 +212,13 @@ After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Bi
 
 Although Beane declined, the Red Sox promoted Theo Epstein to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
 
-Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (47+ personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
+When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by Farhan Zaidi. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
+
+Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (with over 47 personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
 
 The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under Steve Cohen, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
+
+It turns out that Moneyball is about money. Billy Beane's Oakland A's succeeded not because they rejected the importance of money, but because they maximized every dollar's impact when competing against teams with three times their budget. The book's enduring relevance lies in demonstrating how intelligence and efficiency can overcome - though not eliminate - financial disadvantage.
 
 Rather than promoting frugality, Moneyball's lasting impact has been to make teams more analytical. Every MLB franchise now employs statisticians and data scientists. The result has been more informed decision making at all spending levels, not a reduction in overall spending. Moneyball's impact, short-term or long-term, has not been frugality.
 
@@ -219,6 +227,11 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 ### [Moneyball promotes the use of analytics in baseball, thus ruining the sport.](#table-of-contents) {#moneyball-promotes-analytics}
 
 The analytics revolution was already underway before Moneyball - the book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
+
+To understand baseball’s numerical history, you can go back even further. **Henry Chadwick**, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
+
+![A vintage 1876 baseball box score showing detailed game statistics in handwritten format](/files/pics/blog/2025/1876boxscore.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*From <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/1876boxscore.jpg" target="_blank">1876</a>.*
 
 Analytics has improved baseball in measurable ways:
 
