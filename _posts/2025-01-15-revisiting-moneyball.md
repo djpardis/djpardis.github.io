@@ -74,6 +74,11 @@ The book was published in 2003, and the movie was released in 2011. It feels sil
 
 In this post, I'll go over the author's intentions for writing the book, followed by popular critiques of Moneyball. The goal is to address some of the recurring debates as we cover the main themes and provide historical context for each.
 
+<a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/1876boxscore.jpg" target="_blank">
+  <img src="/files/pics/blog/2025/1876boxscore.jpg" alt="1876 baseball box score" style="max-width: 500px; display: block; margin: 0 auto;">
+</a>
+From <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/1876boxscore.jpg" target="_blank">1876</a>.
+
 ## [Understanding Moneyball](#table-of-contents) {#understanding-moneyball}
 
 Let's begin by discussing the book's central themes and what the author found intriguing about the A's in 2002. Moneyball has been so influential that many of these themes have since become memes.
