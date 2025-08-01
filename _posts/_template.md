@@ -7,6 +7,8 @@ keywords: keyword1, keyword2, keyword3
 ---
 
 <!-- Table of Contents (use for posts with 3+ sections) -->
+<!-- IMPORTANT: When changing heading titles, update BOTH the TOC link AND heading ID -->
+<!-- ID Convention: lowercase, hyphens, no punctuation. "Title Here." → #title-here -->
 <div class="toc-container">
 ## Table of contents.
 - <a href="#section-1">Main section title</a>
@@ -17,6 +19,14 @@ keywords: keyword1, keyword2, keyword3
 </div>
 
 Your content starts here...
+
+## [Main section title](#table-of-contents) {#section-1}
+
+Content for your main section...
+
+### [Subsection ending with period.](#table-of-contents) {#subsection-1}
+
+Subsection content...
 
 <!-- OFFICIAL IMAGE + CAPTION PATTERN (works everywhere automatically) -->
 ![Alt text description](/files/pics/example.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
