@@ -1,10 +1,11 @@
 ---
 layout: page
-title: 107 Wins
+title: 107 Wins Guest Request
 description: Submit a request to be a guest on the 107 Wins podcast
 keywords: podcast, guest request, 107 wins, interview request
 image: /files/pics/107winslogo.png
 canonical_url: https://djpardis.com/podcast-guest-request
+permalink: /podcast-guest-request/
 sitemap:
   priority: 0.7
   changefreq: monthly
