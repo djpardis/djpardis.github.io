@@ -3,8 +3,8 @@
   <div class="newsletter-signup">
     <p>Subscribe to get notified when I publish new posts.</p>
     
-    <!-- Replace action URL with your Mailchimp form action URL -->
-    <form action="#" method="post" class="newsletter-form" id="newsletter-form">
+    <!-- Standard form submission that actually works -->
+    <form action="https://buttondown.email/api/emails/embed-subscribe/pardis" method="post" class="newsletter-form" id="newsletter-form">
       <div class="form-group">
         <input 
           type="email" 
@@ -16,6 +16,7 @@
         >
         <button type="submit" class="newsletter-button">Subscribe</button>
       </div>
+      <input type="hidden" value="1" name="embed">
       <div id="newsletter-message" class="newsletter-message"></div>
     </form>
   </div>
