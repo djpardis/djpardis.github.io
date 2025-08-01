@@ -1,10 +1,11 @@
 ---
 layout: page
-title: 107 Wins
+title: 107 Wins Guest Guide
 description: Guide for guests appearing on the 107 Wins podcast
 keywords: podcast, guest guide, 107 wins, interview preparation
 image: /files/pics/107winslogo.png
 canonical_url: https://djpardis.com/podcast-guest-guide
+permalink: /podcast-guest-guide/
 sitemap:
   priority: 0.7
   changefreq: monthly
