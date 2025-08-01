@@ -13,7 +13,7 @@ This post was originally published on <a href="https://djpardis.medium.com/revis
 </div>
 
 <div class="update-container post-container" style="margin-bottom: 1rem; font-style: italic;">
-Update, January 25, 2025<br><br>
+Update, July 25, 2025<br><br>
 1. The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!<br>
 2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/9b1b10b3-5029-4a6a-814d-8b542b5163e4/audio?original_referer=https:%2F%2Ft.co%23&pli=1" target="_blank">NotebookLM</a> to create a podcast discussion of this post.
 </div>
@@ -24,10 +24,11 @@ Update, January 25, 2025<br><br>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#understanding-moneyball">Understanding Moneyball</a>
   <ul>
-    <li><a href="#analytics-leads-to-more-transparent-decision-making">Analytics leads to more transparent decision-making.</a></li>
-    <li><a href="#getting-on-base-is-undervalued">Getting on base is undervalued.</a></li>
-    <li><a href="#scott-hatteberg-is-undervalued">Scott Hatteberg is undervalued.</a></li>
-    <li><a href="#the-streak-is-historic-and-remarkable">The streak is historic and remarkable.</a></li>
+    <li><a href="#the-2001-as-lost-significant-talent">The 2001 A's lost significant talent.</a></li>
+    <li><a href="#analytics-unlocks-more-transparent-decision-making">Analytics unlocks more transparent decision-making.</a></li>
+    <li><a href="#getting-on-base-was-undervalued">Getting on base was undervalued.</a></li>
+    <li><a href="#scott-hatteberg-was-undervalued">Scott Hatteberg was undervalued.</a></li>
+    <li><a href="#the-streak-was-historic-and-remarkable">The streak was historic and remarkable.</a></li>
     <li><a href="#you-can-build-a-player-in-aggregate">You can build a player in aggregate.</a></li>
     <li><a href="#the-playoffs-are-a-crapshoot">The playoffs are a crapshoot.</a></li>
     <li><a href="#its-hard-not-to-be-romantic-about-baseball">It's hard not to be romantic about baseball.</a></li>
@@ -81,13 +82,18 @@ Let's begin by discussing the book's central themes and what the author found in
 ![Oakland Coliseum](/files/pics/blog/2025/oakland2.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Oakland Coliseum, September 2022.*
 
-### [Analytics leads to more transparent decision-making.](#table-of-contents) {#analytics-leads-to-more-transparent-decision-making}
+### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
+
+After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
+
+
+### [Analytics unlocks more transparent decision-making.](#table-of-contents) {#analytics-unlocks-more-transparent-decision-making}
 
 The A's GM, Billy Beane, working with statistician Paul DePodesta, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
 
 This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed Scott Hatteberg or traded for David Justice, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. This approach also aimed to make decision makers accountable for outcomes by establishing a decision-making framework that could be communicated, replicated, and thus improved upon.
 
-### [Getting on base is undervalued, and teams can use this to their advantage.](#table-of-contents) {#getting-on-base-is-undervalued}
+### [Getting on base was undervalued.](#table-of-contents) {#getting-on-base-was-undervalued}
 
 While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics <a href="#ref1">[1]</a><a href="#ref2">[2]</a>. 
 
@@ -105,7 +111,7 @@ The strategy worked: the 2002 A's ranked 2nd in the American League (AL) in OBP 
 </div>
 *In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a href="#ref3">[3]</a><a href="#ref4">[4]</a>.*
 
-### [Scott Hatteberg is undervalued.](#table-of-contents) {#scott-hatteberg-is-undervalued}
+### [Scott Hatteberg was undervalued.](#table-of-contents) {#scott-hatteberg-was-undervalued}
 
 Scott Hatteberg was available at a below-market price due to perceived limitations. The former Boston Red Sox catcher developed nerve damage in his throwing elbow, making catching nearly impossible and leaving him without a clear defensive position.
 
@@ -124,7 +130,7 @@ Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 s
 </div>
 <p class="image-caption">Hatteberg's historic walk-off home run that gave the A's a 12–11 win and a then-AL record 20-game winning streak.</p>
 
-### [The streak is historic and remarkable.](#table-of-contents) {#the-streak-is-historic-and-remarkable}
+### [The streak was historic and remarkable.](#table-of-contents) {#the-streak-was-historic-and-remarkable}
 
 The 20-game winning streak (August 13 - September 4, 2002) became the dramatic centerpiece of the Moneyball story.
 
@@ -202,8 +208,6 @@ Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 
 
 Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" <a href="#ref8">[8]</a>. The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
 
-<!-- It should be noted that Moneyball's likely focus on budget-conscious acquisitions like Hatteberg, Justice, and Bradford was mainly due to the three departed stars after the 2001 season: Jason Giambi (MVP first baseman who signed a 7-year, $120 million contract with the Yankees), Johnny Damon (center fielder who left for a 4-year, $31 million deal with Boston), and Jason Isringhausen (closer who joined St. Louis for 4 years, $27 million). Combined, Oakland lost approximately $31.6 million in annual talent ($17.1M + $7.75M + $6.75M) while operating with a total payroll of just $41 million. The Big Three, Tejada, and Chavez were likely overlooked because they were also part of the 2001 team. -->
-
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
 The lesson of Moneyball is not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
@@ -254,9 +258,9 @@ Despite conventional wisdom linking salary caps to competitive balance, the data
 
 However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
-Despite this, playoff access remains remarkably broad - 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
+Despite this, playoff access remains remarkably broad: 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
 
-While the NBA currently enjoys unprecedented parity - seven different champions in seven years (2019–2025) - this represents a dramatic shift from its historically dynasty-heavy nature where superstars concentrated championships among elite teams.
+While the NBA currently enjoys unprecedented parity, seven different champions in seven years (2019–2025), this represents a dramatic shift from its historically dynasty-heavy nature where superstars concentrated championships among elite teams.
 
 The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century <a href="#ref10">[10]</a>.
 
