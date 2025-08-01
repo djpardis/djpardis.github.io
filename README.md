@@ -77,6 +77,26 @@ To test mobile responsiveness (images, captions, layout):
 
 **No custom preview tools needed** - browser dev tools are the standard.
 
+## TOC Management
+
+To update or add new Table of Contents entries:
+
+### Quick Helper Script
+```bash
+# Generate TOC elements for any title
+node scripts/toc-helper.js "Your Section Title" 
+node scripts/toc-helper.js "Your Subsection Title" --subsection
+
+# Example output provides: anchor ID, TOC entry, and heading format
+```
+
+### Manual Process
+1. **Update TOC link**: `<a href="#new-anchor-id">New Title</a>`
+2. **Update heading ID**: `{#new-anchor-id}`
+3. **Use convention**: lowercase, hyphens, no punctuation
+
+**Documentation**: See `_templates/toc-manager.md` for complete guidelines.
+
 ## Contact
 
 For more information, visit [djpardis.com](https://djpardis.com) or connect via [LinkedIn](https://www.linkedin.com/in/djpardis) or [GitHub](https://github.com/djpardis).
