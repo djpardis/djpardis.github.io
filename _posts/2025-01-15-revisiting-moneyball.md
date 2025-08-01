@@ -170,7 +170,7 @@ This aggregate approach allowed Oakland to compete with teams spending three tim
 
 Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs," acknowledging that his analytical approach, while dominant over 162 games, couldn't overcome October's inherent randomness. It's a "crapshoot" because the best regular season team frequently loses due to small sample sizes and variance inherent in short series <a href="#ref6">[6]</a>.
 
-The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times - a 28% success rate.
+The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times (a 28% success rate).
 
 ![World Series winners](/files/pics/blog/2025/wswinners.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *World series winners since 1995 and their win-loss records.*
