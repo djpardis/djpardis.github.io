@@ -8,6 +8,7 @@ permalink: /107wins/
 ---
 
 ![2021 SF Giants](/files/pics/pages/2021giants.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*The 2021 SF Giants at Oracle Park.*
 
 Welcome to the [<span class="wiggly-underline">107 Wins</span>](https://107wins.club) podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 
