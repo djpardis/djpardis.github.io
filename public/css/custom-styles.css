@@ -13,8 +13,18 @@
   line-height: 1.2;
 }
 
+/* Reference and citation highlighting */
+:target {
+  background-color: #FFFF99;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
 
-
+/* Enhanced highlighting for reference numbers */
+:target sup {
+  background-color: transparent;
+}
 
 /* Image row and container styling */
 .container.content .image-row {
@@ -73,19 +83,19 @@
 
 
 
-/* Markdown image caption styling - use same style as image-caption class */
-.container.content p img + em {
-  display: block;
-  text-align: center;
-  color: #757575;
-  font-size: 0.85rem;
-  font-style: normal;
-  margin: 8px auto 16px;
-  max-width: 90%;
-  line-height: 1.4;
+/* ===== UNIFIED IMAGE + CAPTION SYSTEM ===== */
+/* Default image styling - works everywhere (pages, posts, all layouts) */
+img[style*="max-width: 500px"] {
+  max-width: 500px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 5px;
+  height: auto !important;
 }
 
-/* Caption styling - matches working pages exactly */
+/* Caption styling - for italic text following images */
+img[style*="max-width: 500px"] + em,
+.container.content p img + em,
 .container.content .image-caption,
 .container.content p.image-caption {
   display: block;
@@ -96,6 +106,14 @@
   margin: 8px auto 16px;
   max-width: 90%;
   line-height: 1.4;
+}
+
+/* Mobile responsive - force 100% width on small screens */
+@media (max-width: 768px) {
+  img[style*="max-width: 500px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 
@@ -354,20 +372,7 @@ body {
 
 
 
-/* Page image styling - only for pages, not posts */
-.page .container.content img {
-  display: block !important;
-  margin: 0 auto !important;
-  max-width: 450px !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* Override for blog posts */
-.post .container.content img {
-  max-width: none !important;
-  margin: initial !important;
-}
+/* Removed conflicting page/post overrides - unified system handles all cases */
 
 /* Caption styling for pages with image containers */
 .container.content div + p em {
@@ -712,12 +717,7 @@ p:has(+ .collapsible-section) {
     max-width: 100%;
   }
 
-  /* Force responsive images on mobile for pages with max-width styling */
-  .page p img[style*="max-width: 500px"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
+  /* Removed redundant mobile rule - unified system handles this */
 
   /* Blog page flex container on mobile */
   .page .container.content div[style*="display: flex"] {
