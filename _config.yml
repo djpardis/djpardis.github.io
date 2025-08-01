@@ -16,6 +16,17 @@ pages_list:
   Gigs: '/gigs'
   107 Wins: '/107wins'
 
+# Collections for better organization
+collections:
+  admin_pages:
+    output: true
+    permalink: /:name/
+  podcast_pages:
+    output: true
+    permalink: /:name/
+  templates:
+    output: false  # Templates don't need URLs
+
 # About
 author:
   name:              "Pardis Noorzad"

@@ -19,3 +19,4 @@ _config.gh-pages.yml
 
 # Draft posts
 _drafts/
+*.DS_Store
