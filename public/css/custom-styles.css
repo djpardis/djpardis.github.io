@@ -206,6 +206,10 @@ img[style*="max-width: 500px"] + em,
   background-color: rgba(144, 238, 144, 0.25);
 }
 
+.container.content .subscribe-container {
+  background-color: rgba(144, 238, 144, 0.25);
+}
+
 /* Desktop responsive */
 @media (min-width: 30em) {
   .container.content .image-row .image-container {
@@ -965,5 +969,82 @@ p:has(+ .collapsible-section) {
   .newsletter-button {
     width: auto;
     align-self: flex-start;
+  }
+}
+
+/* Subscribe container follows same pattern as other post containers */
+
+.subscribe-cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #7d78b5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe-cta-button:hover {
+  background-color: #6b66a3;
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: #fff;
+}
+
+.subscribe-cta-button:active {
+  transform: translateY(0);
+}
+
+/* Page Subscribe CTA */
+.page-subscribe-cta {
+  background-color: rgba(125, 120, 181, 0.12);
+  border-radius: 8px;
+  padding: 2.5rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+.page-subscribe-cta h2 {
+  margin: 0 0 1rem 0;
+  color: #7d78b5;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.page-subscribe-cta p {
+  margin: 0 0 2rem 0;
+  color: #515151;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.page-subscribe-cta .newsletter-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Mobile responsive for subscribe components */
+@media (max-width: 30em) {
+  .subscribe-prompt,
+  .page-subscribe-cta {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .subscribe-prompt h3 {
+    font-size: 1.25rem;
+  }
+  
+  .page-subscribe-cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .page-subscribe-cta p {
+    font-size: 1rem;
   }
 }
