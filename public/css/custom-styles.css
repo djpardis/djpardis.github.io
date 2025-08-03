@@ -863,6 +863,10 @@ p:has(+ .collapsible-section) {
 
 /* Mobile newsletter width */
 @media (max-width: 30em) {
+  .newsletter-section {
+    padding: 0; /* Remove padding on mobile to match other containers */
+  }
+  
   .newsletter-signup {
     background-color: rgba(125, 120, 181, 0.08);
     border-radius: 6px;
