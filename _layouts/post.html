@@ -12,6 +12,9 @@ layout: default
   {% endif %}
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
+  
+  <!-- Post-End Subscribe Prompt -->
+  {% include post-end-subscribe.html %}
 </div>
 
 {% if site.related_posts.size > 0 %}
