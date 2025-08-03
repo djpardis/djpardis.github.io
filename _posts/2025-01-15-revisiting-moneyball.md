@@ -24,8 +24,8 @@ Update, July 25, 2025<br><br>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#understanding-moneyball">Understanding Moneyball</a>
   <ul>
-    <li><a href="#analytics-unlocks-transparent-decision-making">Analytics unlocks transparent decision-making.</a></li>
     <li><a href="#the-2001-as-lost-significant-talent">The 2001 A's lost significant talent.</a></li>
+    <li><a href="#analytics-unlocks-transparent-decision-making">Analytics unlocks transparent decision-making.</a></li>
     <li><a href="#getting-on-base-was-undervalued">Getting on base was undervalued.</a></li>
     <li><a href="#scott-hatteberg-was-undervalued">Scott Hatteberg was undervalued.</a></li>
     <li><a href="#the-streak-was-historic-and-remarkable">The streak was historic and remarkable.</a></li>
@@ -82,15 +82,15 @@ Let's begin by discussing the book's central themes and what the author found in
 ![Oakland Coliseum](/files/pics/blog/2025/oakland2.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Oakland Coliseum, September 2022.*
 
+### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
+
+After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
+
 ### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
 The A's GM, **Billy Beane**, working with statistician **Paul DePodesta**, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
 
 This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed **Scott Hatteberg** or traded for **David Justice**, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. This approach also aimed to make decision makers accountable for outcomes by establishing a decision-making framework that could be communicated, replicated, and thus improved upon.
-
-### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
-
-After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched Billy Beane and the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
 
 ### [Getting on base was undervalued.](#table-of-contents) {#getting-on-base-was-undervalued}
 
