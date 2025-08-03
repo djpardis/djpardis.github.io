@@ -39,7 +39,9 @@
       </div>
 
       <!-- Newsletter Signup Form -->
+      {% unless page.url == '/subscribe/' %}
       {% include newsletter-signup.html %}
+      {% endunless %}
 
       <div class="copyright">
         <div><span>© {{ site.time | date: '%Y' }} Pardis Noorzad.</span></div>
