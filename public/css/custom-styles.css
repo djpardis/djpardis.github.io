@@ -93,8 +93,17 @@ img[style*="max-width: 500px"] {
   height: auto !important;
 }
 
+img[style*="max-width: 350px"] {
+  max-width: 350px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 5px;
+  height: auto !important;
+}
+
 /* Caption styling - for italic text following images */
 img[style*="max-width: 500px"] + em,
+img[style*="max-width: 350px"] + em,
 .container.content p img + em,
 .container.content .image-caption,
 .container.content p.image-caption {
@@ -111,6 +120,11 @@ img[style*="max-width: 500px"] + em,
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
   img[style*="max-width: 500px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  img[style*="max-width: 350px"] {
     width: 100% !important;
     max-width: 100% !important;
   }
