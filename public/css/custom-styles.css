@@ -811,17 +811,17 @@ p:has(+ .collapsible-section) {
 
 .button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   background-color: #3498db;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 500;
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .button:hover {
@@ -918,6 +918,7 @@ p:has(+ .collapsible-section) {
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 500;
+  font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   cursor: pointer;
   transition: background-color 0.2s ease;
   white-space: nowrap;
