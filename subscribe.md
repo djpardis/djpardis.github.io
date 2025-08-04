@@ -7,17 +7,20 @@ canonical_url: https://djpardis.com/subscribe
 permalink: /subscribe/
 ---
 
-## 📧 Never miss an update
+## 💌 Never miss an update
 
-Get notified about new posts and podcast episodes every couple of weeks. I share insights on data science, startups, and the journey of building [General Folders](https://generalfolders.com) and [The Data Room App](https://thedataroom.app).
+Get notified about new posts and podcast episodes every couple of weeks. 
+<!-- I share insights on data science, startups, and the journey of building [General Folders](https://generalfolders.com) and [The Data Room App](https://thedataroom.app). -->
 
-### What you'll get:
+### What you'll get
 
 - **🎯 Quality over quantity**: Updates every couple of weeks, not daily spam
-- **📝 Behind-the-scenes insights**: The real stories behind building data science products
-- **🎙️ Podcast episodes**: Deep dives into data science, entrepreneurship, and tech
-- **💡 Lessons learned**: Practical insights from working at Twitter, Carbon Health, and building startups
+- **📝 Behind-the-scenes insights**: Posts about the real stories behind building products
+- **🎙️ Podcast episodes**: Deep dives into data, startups, and new tech from [107 Wins](/107wins.md)
+- **⚾️ Baseball fun**: Posts about sabermetrics or pure baseball facts
+- **🎶 Playlists**: Annual top 20 playlists with brief song reviews
 
+<br>
 <!-- MailerLite Form -->
 <form class="newsletter-form" id="subscribe-page-form" action="https://assets.mailerlite.com/jsonp/1709436/forms/161652905296791207/subscribe" method="post" target="_blank" data-last-submit="0">
   <!-- Honeypot field (invisible to humans, catches bots) -->
