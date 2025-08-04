@@ -131,7 +131,7 @@ img[style*="max-width: 500px"] + em,
 }
 
 .container.content .toc-container ul {
-  list-style-type: disc;
+  list-style: none;
   margin: 0;
   padding-left: 1.5rem;
 }
@@ -141,8 +141,12 @@ img[style*="max-width: 500px"] + em,
   position: relative;
 }
 
-.container.content .toc-container li::marker {
+.container.content .toc-container li::before {
+  content: "×";
   color: #7d78b5;
+  position: absolute;
+  left: -1rem;
+  top: 0;
 }
 
 .container.content .toc-container a {
@@ -159,7 +163,7 @@ img[style*="max-width: 500px"] + em,
 }
 
 .container.content .toc-container ul ul {
-  list-style-type: circle;
+  list-style: none;
   margin: 0.25rem 0 0.5rem;
   padding-left: 1.5rem;
 }
@@ -169,8 +173,12 @@ img[style*="max-width: 500px"] + em,
   font-size: 1rem;
 }
 
-.container.content .toc-container ul ul li::marker {
+.container.content .toc-container ul ul li::before {
+  content: "÷";
   color: #7d78b5;
+  position: absolute;
+  left: -1rem;
+  top: 0;
 }
 
 /* Post container styling */
@@ -516,7 +524,7 @@ body .wrap .container.content {
   position: absolute;
   left: -2px;
   right: -2px;
-  bottom: -4px;
+  bottom: -8px;
   height: 8px;
   background: #FF00AA;
   border-radius: 6px;
