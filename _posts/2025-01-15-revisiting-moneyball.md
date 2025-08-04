@@ -84,7 +84,7 @@ Let's begin by discussing the book's central themes and what the author found in
 
 ### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
 
-After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
+After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
 
 ### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
@@ -172,7 +172,7 @@ Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs,"
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times (a 28% success rate).
 
 ![World Series winners](/files/pics/blog/2025/wswinners.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*World series winners since 1995 and their win-loss records.*
+*World Series winners with best regular season record since 1995 and their win-loss records.*
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
