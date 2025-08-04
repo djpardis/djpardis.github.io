@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle multiple newsletter form IDs  
   const formIds = [
     'newsletter-footer-form',           // Footer newsletter widget
-    'newsletter-subscribe-page-form',   // Dedicated subscribe page
-    'newsletter-page-cta-form'          // Page-level call-to-action
+    'newsletter-subscribe-page-form'    // Dedicated subscribe page
   ];
   
   formIds.forEach(function(formId) {
