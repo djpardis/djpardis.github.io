@@ -40,7 +40,7 @@ Thank you for joining us as a guest on the podcast! This guide provides recommen
 
 ## [Pre-interview information](#table-of-contents) {#pre-interview-information}
 
-Please share the following information at least 3 days before our scheduled conversation:
+Please share the following information at least 3 days before our scheduled conversation.
 
 <span class="wiggly-underline">When you're ready, submit your answers using [this form]({{ site.baseurl }}/podcast-guest-pre-interview/).</span>
 
