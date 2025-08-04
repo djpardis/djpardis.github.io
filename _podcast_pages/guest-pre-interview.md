@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 107 Wins Pre-Interview Information
+title: Pre-interview information
 description: Submit pre-interview information for the 107 Wins podcast
 keywords: podcast, pre-interview, 107 wins, guest information
 image: /files/pics/107winslogo.png
@@ -22,9 +22,9 @@ twitter:
   image: /files/pics/107winslogo.png
 ---
 
-[← Back to 107 Wins]({{ site.baseurl }}/107wins)
+[← Back to 107 Wins guest guide]({{ site.baseurl }}/podcast-guest-guide)
 
-# <span class="wiggly-underline">107 Wins</span> pre-interview information
+# Pre-interview information
 
 Please share the following information at least 3 days before our scheduled conversation.
 
@@ -49,8 +49,8 @@ Please share the following information at least 3 days before our scheduled conv
   </div>
   
   <div class="form-field">
-    <label for="pronunciation">Name pronunciation and professional title*</label>
-    <input type="text" id="pronunciation" name="pronunciation" required placeholder="How to pronounce your name + your current title/role">
+    <label for="pronunciation">Name pronunciation</label>
+    <input type="text" id="pronunciation" name="pronunciation" placeholder="How to pronounce your name">
   </div>
   
   <div class="form-field">
