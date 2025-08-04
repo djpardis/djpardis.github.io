@@ -34,6 +34,10 @@ The name celebrates the SF Giants' historic 2021 season when they won an incredi
 [July 30, 2025] *[Episode 2: Title of Episode]({{ site.baseurl }}/107wins/episode2)*  
 -->
 
+<div class="update-container post-container" style="background-color: rgba(255, 0, 170, 0.06);">
+💌 <strong>Stay in the loop.</strong> Get notified about new posts and podcast episodes every couple of weeks. <a href="{{ site.baseurl }}/subscribe/" target="_blank">Subscribe for updates</a>.
+</div>
+
 ---
 
 <div class="podcast-social-grid">
