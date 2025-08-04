@@ -50,7 +50,7 @@ Our episodes typically follow this structure:
 
 Please share the following information at least 3 days before our scheduled conversation.
 
-<span class="wiggly-underline">When you're ready, submit your answers using [this form]({{ site.baseurl }}/podcast-guest-pre-interview/).</span>
+When you're ready, submit your answers using <span class="wiggly-underline">[this form]({{ site.baseurl }}/podcast-guest-pre-interview/)</span>.
 
 ### About you
 - How you'd like to be introduced (brief bio)
