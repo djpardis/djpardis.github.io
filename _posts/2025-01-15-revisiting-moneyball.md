@@ -84,7 +84,7 @@ Let's begin by discussing the book's central themes and what the author found in
 
 ### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
 
-After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
+After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players that others had overlooked.
 
 ### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
