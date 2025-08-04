@@ -12,13 +12,13 @@ permalink: /107wins/
 
 Welcome to the <span class="wiggly-underline">[107 Wins](https://107wins.club)</span> podcast, where we host conversations about all aspects of business building. We explore tech trends, share best practices, and talk about learning new things.
 
-**Already scheduled for an upcoming episode?** 
-
-👉 Check out our [guest guide]({{ site.baseurl }}/podcast-guest-guide)!
-
 **Want to be a guest on an upcoming episode?** 
 
 👉 Submit a [request]({{ site.baseurl }}/podcast-guest-request)!
+
+**Already scheduled for an upcoming episode?** 
+
+👉 Check out our [guest guide]({{ site.baseurl }}/podcast-guest-guide)!
 
 **Why the name <span class="wiggly-underline">107 Wins</span>?** 
 
