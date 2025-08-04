@@ -8,6 +8,7 @@ canonical_url: https://djpardis.com/
 ---
 
 ![Pardis Noorzad](/files/pics/pages/profile_pic.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Not my favorite haircut.*
 
 I am building [General Folders](https://generalfolders.com){:target="_blank"}, 
 a [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}. I also built [The Data Room App](https://thedataroom.app){:target="_blank"}, that offers simple and secure data rooms for fundraising. Check out my [blog](/blog/2025/07/20/introducing-the-data-room-app/) for more info. 
