@@ -85,6 +85,8 @@ Please share the following information at least 3 days before our scheduled conv
 - Any resources or recommendations to share
 - Call-to-action for listeners (if applicable)
 
+When you're ready, submit your answers [here]({{ site.baseurl }}/podcast-guest-pre-interview/).
+
 [Back to top](#table-of-contents)
 
 ## Day of interview checklist {#day-of-interview-checklist}
