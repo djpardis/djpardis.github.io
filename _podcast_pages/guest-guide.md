@@ -31,12 +31,20 @@ Thank you for joining us as a guest on the podcast! This guide provides recommen
 <div class="toc-container post-container">
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
+<li><a href="#conversation-format">Conversation format</a></li>
 <li><a href="#pre-interview-information">Pre-interview information</a></li>
 <li><a href="#day-of-interview-checklist">Day of interview checklist</a></li>
-<li><a href="#conversation-format">Conversation format</a></li>
 <li><a href="#technical-setup-guide">Technical setup guide</a></li>
 </ul>
 </div>
+
+## [Conversation format](#table-of-contents) {#conversation-format}
+
+Our episodes typically follow this structure:
+1. **Introduction** (2-3 minutes)
+2. **Your background** (5-7 minutes)
+3. **Main discussion** (30-40 minutes)
+4. **Closing thoughts** (5 minutes)
 
 ## [Pre-interview information](#table-of-contents) {#pre-interview-information}
 
@@ -66,20 +74,6 @@ Before we begin recording:
 - Close unnecessary applications
 - Silence notifications
 - Restart your computer (helps prevent technical issues)
-
-## [Conversation format](#table-of-contents) {#conversation-format}
-
-Our episodes typically follow this structure:
-1. **Introduction** (2-3 minutes)
-2. **Your background** (5-7 minutes)
-3. **Main discussion** (30-40 minutes)
-4. **Closing thoughts** (5 minutes)
-
-### For a great conversation
-- Be conversational and authentic
-- Share specific stories and examples
-- Take your time - it's fine to pause and gather thoughts
-- We can always edit if needed
 
 ## [Technical setup guide](#table-of-contents) {#technical-setup-guide}
 
