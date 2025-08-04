@@ -7,16 +7,8 @@ canonical_url: https://djpardis.com/blog
 permalink: /blog/
 ---
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Panel discussion">
-  </div>
-  <div class="image-container">
-    <img src="/files/pics/pages/vsw2025_audience.jpg" alt="Audience">
-  </div>
-</div>
-
-<p class="image-caption">Techstars SDSU Founder Panel with Misti Cain at VSW 2025.</p>
+![Techstars SDSU Founder Panel with Misti Cain at VSW 2025](/files/pics/pages/vsw2025_panel.jpg){: style="max-width: 350px; display: block; margin: 0 auto;"}
+*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
