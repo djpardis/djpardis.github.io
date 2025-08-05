@@ -157,7 +157,7 @@ img[style*="max-width: 350px"] + em,
 
 .container.content .toc-container li::before {
   content: "×";
-  color: #7d78b5;
+  color: #ddd;
   position: absolute;
   left: -1rem;
   top: 0;
@@ -189,7 +189,7 @@ img[style*="max-width: 350px"] + em,
 
 .container.content .toc-container ul ul li::before {
   content: "÷";
-  color: #7d78b5;
+  color: #ddd;
   position: absolute;
   left: -1rem;
   top: 0;
@@ -205,31 +205,31 @@ img[style*="max-width: 350px"] + em,
 
 /* Specific container types */
 .container.content .toc-container {
-  background-color: rgba(125, 120, 181, 0.18);
+  background-color: rgba(125, 120, 181, 0.08);
 }
 
 .container.content .crosspost-container {
-  background-color: rgba(173, 216, 230, 0.25);
+  background-color: rgba(173, 216, 230, 0.12);
 }
 
 .container.content .update-container {
-  background-color: rgba(255, 192, 203, 0.25);
+  background-color: rgba(255, 192, 203, 0.12);
 }
 
 .container.content .note-container {
-  background-color: rgba(255, 255, 0, 0.25);
+  background-color: rgba(255, 255, 0, 0.12);
 }
 
 .container.content .warning-container {
-  background-color: rgba(255, 165, 0, 0.25);
+  background-color: rgba(255, 165, 0, 0.12);
 }
 
 .container.content .success-container {
-  background-color: rgba(144, 238, 144, 0.25);
+  background-color: rgba(144, 238, 144, 0.12);
 }
 
 .container.content .subscribe-container {
-  background-color: rgba(144, 238, 144, 0.25);
+  background-color: rgba(144, 238, 144, 0.12);
 }
 
 /* Desktop responsive */
