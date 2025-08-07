@@ -13,7 +13,7 @@ permalink: /blog/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-- *[Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-01-15-revisiting-moneyball %})*  
+- *[Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})*  
   July 24, 2025
 
 - *[Introducing the data room app: Magic link authentication with Replit]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})*  
