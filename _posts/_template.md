@@ -4,6 +4,8 @@ title: 'Your Post Title'
 subtitle: 'Optional subtitle'
 description: 'Brief description for SEO and social sharing'
 keywords: keyword1, keyword2, keyword3
+# date: YYYY-MM-DD (optional - Jekyll uses filename date if not specified)
+# IMPORTANT: If you include a date field, it MUST match the filename date
 ---
 
 <!-- Table of Contents (use for posts with 3+ sections) -->
