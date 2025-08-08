@@ -7,8 +7,8 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-![Pardis Noorzad](/files/pics/pages/new profile pic.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Hayes Valley, 2022.*
+![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Much better.*
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
