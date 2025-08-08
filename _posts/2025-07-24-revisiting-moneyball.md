@@ -84,7 +84,7 @@ Let's begin by discussing the book's central themes and what the author found in
 
 ### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
 
-After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
+After losing MVP **Jason Giambi** (7-year, $120M), **Johnny Damon** (4-year, $31M), and closer **Jason Isringhausen** (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
 
 ### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
@@ -96,9 +96,9 @@ This transparency allowed decisions regarding players to be justified through ob
 
 While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics <a href="#ref1">[1]</a><a href="#ref2">[2]</a>. 
 
-The math was simple: teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
+The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
-The strategy worked: the 2002 A's ranked 2nd in the American League (AL) in OBP (.339) despite having the third-lowest payroll in baseball.
+The strategy worked. The 2002 A's ranked 2nd in the American League (AL) in OBP (.339) despite having the third-lowest payroll in baseball.
 
 <div class="image-row">
   <div class="image-container">
@@ -211,15 +211,15 @@ Oakland executives Billy Beane, David Forst, and scout Ron Washington later ackn
 
 The lesson of Moneyball is not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
 
-After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Billy Beane as a GM with a five-year, $12.5M contract that would have made him the highest paid GM in baseball history. The offer was a testament to how highly Henry and then-CEO Larry Lucchino regarded Beane's analytical approach.
+After the 2002 season, Red Sox ownership (led by **John W. Henry**) tried to hire Billy Beane as a GM with a five-year, $12.5M contract that would have made him the highest paid GM in baseball history. The offer was a testament to how highly Henry and then-CEO **Larry Lucchino** regarded Beane's analytical approach.
 
-Although Beane declined, the Red Sox promoted Theo Epstein to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
+Although Beane declined, the Red Sox promoted **Theo Epstein** to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
 
-When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by Farhan Zaidi. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
+When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by **Farhan Zaidi**. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
 
 Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (with over 47 personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
 
-The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under Steve Cohen, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
+The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under **Steve Cohen**, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
 
 It turns out that Moneyball is about money. Billy Beane's Oakland A's succeeded not because they rejected the importance of money, but because they maximized every dollar's impact when competing against teams with three times their budget. The book's enduring relevance lies in demonstrating how intelligence and efficiency can overcome - though not eliminate - financial disadvantage.
 
