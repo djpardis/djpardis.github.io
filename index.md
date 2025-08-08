@@ -8,7 +8,7 @@ canonical_url: https://djpardis.com/
 ---
 
 ![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Much better.*
+*Alamo Square.*
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
