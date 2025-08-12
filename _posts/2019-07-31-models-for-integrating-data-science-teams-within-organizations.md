@@ -70,9 +70,13 @@ This post was originally published on <a href="https://medium.com/@djpardis/mode
     <img src="/files/pics/blog/2019/ds-team-models-3.jpeg" alt="DS Crit meeting photo 3">
   </div>
 </div>
-*At our <a href="https://twitter.com/djpardis/status/955946036693843969" target="_blank">inaugural DS Crit meeting at Twitter HQ</a>.*
+*With AWS Redshift, you can create data shares and share it with internal and external customers.*<br><br>
+*This is Marketplace at Bruges by Samuel Prout.*<br><br>
+*From here.*
 
 Beginning in the <a href="https://en.wikipedia.org/wiki/Apache_Hadoop" target="_blank">first decade of the 21st century</a>, internet companies were able to gain visibility into the business in ways never possible in the age of spreadsheets and relational database management systems. No longer did they need to wait for end-of-quarter financial results in order to gauge business performance; and no more did they need to rely on extrapolations from samples to get a comprehensive view of what was working for all customers. In addition to improved visibility into the state of the business, the new data storage and aggregation capabilities enabled companies to build <a href="https://www.oreilly.com/library/view/data-analytics-with/9781491913734/ch01.html" target="_blank">data products</a> like search engines, language processors, and recommender systems.
+
+
 
 What became important was to determine how this work could be achieved efficiently and effectively. Designing and building a data science organization is a complex problem, particularly when determining the nature of data science interactions with stakeholders.
 
@@ -93,6 +97,8 @@ In this post, I compare some of the popular models of integrating data science t
 **Product success.** Data scientists opportunity size new ideas, design experiments and metrics, and design and tune models. They promote the correct use of data within the company. New products shipped without these considerations usually contain deficiencies in instrumentation and implementation, and are potentially misaligned with company strategy. The customer voice is not accurately represented when experiments are incorrectly assessed and metrics incorrectly crafted. The decision making process is delayed without high quality data and metrics. Machine learning projects either fail or lack in quality without data science involvement.
 
 I make a number of assumptions. The *company* is a single <a href="https://cio-wiki.org/wiki/Strategic_Business_Unit" target="_blank">strategic business unit (SBU)</a>. The SBU is partitioned in two ways. First, it is partitioned into independent *functions,* with respect to specialization and responsibilities. Each function (e.g. design, marketing, or sales) is a group managing the needs of the business within the context of their specialization and responsibilities. Second, the SBU is partitioned with respect to outputs and services, into independent *products.* The products are independent in that they have independent launch timelines. Using these definitions, a *product team* is a subset of the SBU—with <a href="https://en.wikipedia.org/wiki/Cross-functional_team" target="_blank">cross-functional</a> membership—responsible for delivering a product or service.
+
+
 
 A *data scientist (DS)* is skilled in data engineering, data management, data analysis, and machine learning; and *data science* is their work. The *data science function* is a group of data scientists and their managers.
 
