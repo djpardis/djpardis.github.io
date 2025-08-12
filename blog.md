@@ -25,6 +25,9 @@ permalink: /blog/
 - *[Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
   August 12, 2024
 
+- *[Models for integrating data science teams within organizations: A comparative analysis]({{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %})*  
+  July 31, 2019
+
 - *[Hourly mentions of a word on Twitter]({{ site.baseurl }}{% post_url 2015-05-23-hourly-mentions-of-a-word-on-twitter %})*  
   May 23, 2015
 </details>
