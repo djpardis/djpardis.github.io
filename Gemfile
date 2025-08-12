@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-# Use Jekyll 4.2.x which doesn't use sass-embedded
-gem "jekyll", "~> 4.2.0"
-gem "nokogiri", "~> 1.16.0"
+# Use Jekyll 4.4.x for security updates
+gem "jekyll", "~> 4.4.0"
+gem "nokogiri", "~> 1.18.0"
 gem "webrick", "~> 1.7"
 
 group :jekyll_plugins do
