@@ -204,7 +204,7 @@ iframe ~ em {
 
 /* Third level bullets */
 .toc-container ul ul ul li::before {
-  content: "∫";
+  content: "⊃";
 }
 
 /* Links */
