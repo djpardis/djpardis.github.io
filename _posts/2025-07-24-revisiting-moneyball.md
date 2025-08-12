@@ -15,7 +15,7 @@ This post was originally published on <a href="https://djpardis.medium.com/revis
 <div class="update-container post-container" style="margin-bottom: 1rem; font-style: italic;">
 Update, July 25, 2025<br><br>
 1. The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!<br>
-2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/9b1b10b3-5029-4a6a-814d-8b542b5163e4/audio?original_referer=https:%2F%2Ft.co%23&pli=1" target="_blank">NotebookLM</a> to create a podcast discussion of this post.
+2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/a28919ba-fc09-43e6-8fa6-491365e8525a?artifactId=e9345839-0370-471a-83b1-99cd10227847" target="_blank">NotebookLM</a> to create a podcast discussion of this post.
 </div>
 
 <div class="toc-container post-container">
