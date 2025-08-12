@@ -48,9 +48,12 @@ This post was originally published on <a href="https://medium.com/@djpardis/the-
       </ul>
     </li>
     <li><a href="#solution-properties">What are the properties of a solution?</a></li>
-    <li><a href="#reactions">Reactions to the talk</a></li>
   </ul>
 </li>
+</ul>
+
+<ul>
+<li><a href="#reactions">Reactions to the talk</a></li>
 </ul>
 </div>
 
