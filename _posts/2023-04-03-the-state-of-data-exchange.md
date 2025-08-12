@@ -20,7 +20,7 @@ This post was originally published on <a href="https://medium.com/@djpardis/the-
     <li><a href="#business-partners">Business partners exchange data for a variety of reasons</a></li>
     <li><a href="#companies-build-solutions">Companies build solutions for data exchange today</a>
       <ul>
-        <li><a href="#excel-csv-sftp">Send or receive data as Excel/CSV by Gmail, Slack, Dropbox, or over SFTP</a></li>
+        <li><a href="#excel-csv-sftp">Send or receive data as an Excel file or CSV by Gmail, Slack, Dropbox, or over SFTP</a></li>
         <li><a href="#share-credentials">Transfer data by sharing AWS or database credentials</a></li>
         <li><a href="#expose-api">Make data available by exposing an API</a></li>
         <li><a href="#implement-api">Pull data by implementing an API</a></li>
@@ -39,7 +39,7 @@ This post was originally published on <a href="https://medium.com/@djpardis/the-
         <li><a href="#vendor-apis">Not all vendor APIs are implemented by major integration companies</a></li>
         <li><a href="#staffing-issues">Some data consumers are not staffed adequately</a></li>
         <li><a href="#obscure-formats">Some data consumers ask for an obscure format</a></li>
-        <li><a href="#pricing-complexity">Pricing an exchange is complex</a></li>
+        <li><a href="#pricing-complexity">Pricing an exchange is complex. Who should pay? And what amount?</a></li>
         <li><a href="#speed-challenge">Speed is a challenge</a></li>
         <li><a href="#security-compliance">Security is a challenge. So is compliance</a></li>
         <li><a href="#pipeline-maintenance">Monitoring and maintaining so many different pipelines is a challenge</a></li>
