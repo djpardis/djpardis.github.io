@@ -4,7 +4,7 @@
  */
 
 /* Blog post subtitle styling */
-.post-subtitle {
+.post .post-subtitle {
   margin-top: -0.8rem;
   margin-bottom: 1.2rem;
   font-size: 1.35rem;
@@ -193,6 +193,11 @@ img[style*="max-width: 350px"] + em,
   position: absolute;
   left: -1rem;
   top: 0;
+}
+
+/* Remove bullets from third level TOC items */
+.container.content .toc-container ul ul ul li::before {
+  content: none;
 }
 
 /* Post container styling */
