@@ -132,72 +132,82 @@ img[style*="max-width: 350px"] + em,
 
 
 
-/* Table of Contents styling */
-.container.content .toc-container {
+/* ===== TABLE OF CONTENTS STYLING ===== */
+/* TOC Container */
+.toc-container {
   background-color: rgba(125, 120, 181, 0.08);
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow: hidden;
 }
 
-.container.content .toc-container h2#table-of-contents {
+/* TOC Title */
+.toc-container h2#table-of-contents {
   margin: 0 0 1rem 0;
   padding: 0;
   color: #7d78b5;
   font-size: 1.25rem;
 }
 
-.container.content .toc-container ul {
+/* Base list styling */
+.toc-container ul {
   list-style: none;
   margin: 0;
   padding-left: 1rem;
 }
 
-.container.content .toc-container li {
+/* List items */
+.toc-container li {
   margin: 0.4rem 0;
   position: relative;
 }
 
-.container.content .toc-container li::before {
+/* Bullets for all levels */
+.toc-container li::before {
   content: "×";
   color: #bbb;
   position: absolute;
   left: -1rem;
   top: 0;
+  font-weight: normal;
 }
 
-.container.content .toc-container a {
+/* Second level bullets */
+.toc-container ul ul li::before {
+  content: "÷";
+}
+
+/* Third level bullets */
+.toc-container ul ul ul li::before {
+  content: "∫";
+}
+
+/* Links */
+.toc-container a {
   text-decoration: none;
   color: #7d78b5;
   font-size: 1rem;
   line-height: 1.4;
+  display: block;
 }
 
-.container.content .toc-container a:hover,
-.container.content .toc-container a:focus {
+/* Link hover/focus states */
+.toc-container a:hover,
+.toc-container a:focus {
   background-color: #FFFF99;
   text-decoration: none;
 }
 
-.container.content .toc-container ul ul {
-  list-style: none;
+/* Nested lists */
+.toc-container ul ul {
   margin: 0.25rem 0 0.5rem;
   padding-left: 1rem;
 }
 
-.container.content .toc-container ul ul li {
+.toc-container ul ul li {
   margin: 0.25rem 0;
   font-size: 1rem;
-}
-
-.container.content .toc-container ul ul li::before {
-  content: "÷";
-  color: #bbb;
-  position: absolute;
-  left: -1rem;
-  top: 0;
-}
-
-/* Remove bullets from third level TOC items */
-.container.content .toc-container ul ul ul li::before {
-  content: none;
 }
 
 /* Post container styling */
