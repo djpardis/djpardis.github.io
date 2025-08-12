@@ -25,6 +25,9 @@ permalink: /blog/
 - *[Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})*  
   August 12, 2024
 
+- *[The state of data exchange: A survey of data transfer and sharing methodology]({{ site.baseurl }}{% post_url 2023-04-03-the-state-of-data-exchange %})*  
+  April 3, 2023
+
 - *[Models for integrating data science teams within organizations: A comparative analysis]({{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %})*  
   July 31, 2019
 
