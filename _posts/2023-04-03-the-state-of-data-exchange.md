@@ -56,8 +56,6 @@ This post was originally published on <a href="https://medium.com/@djpardis/the-
 
 I just got back from [Data Council](https://www.datacouncil.ai/austin){:target="_blank"}. Thanks to Pete Soderling for an excellent conference where people gather to discuss the future of data infra, AI, and analytics. It was an energizing couple of days with many valuable takeaways as I work on [General Folders](https://twitter.com/GeneralFolders){:target="_blank"}.
 
-A recording of [the talk](https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange){:target="_blank"} is available on YouTube.
-
 <iframe src="https://www.youtube.com/embed/Np0kTZlbRO4?list=PLAesBe-zAQmF-GpvZ3ba5YpVzoVbgzl8M" width="700" height="393" frameborder="0" scrolling="no"></iframe>
 <p style="text-align: center; color: #757575; font-size: 0.85rem; font-style: normal; margin: 8px auto 16px; max-width: 90%; line-height: 1.4;">A recording of the talk is available on YouTube.</p>
 
