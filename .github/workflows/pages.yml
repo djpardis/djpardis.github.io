@@ -29,14 +29,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
-          bundler-cache: true
+          bundler-cache: false
           
       - name: Clean and install dependencies
         run: |
           rm -f Gemfile.lock
-          bundle lock --add-platform x86_64-linux
-          bundle config set without 'development test'
-          bundle install --jobs 4 --retry 3
+          bundle install --jobs 4 --retry 3 --without development test
           
       - name: Setup Pages
         id: pages
