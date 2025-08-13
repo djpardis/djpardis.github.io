@@ -13,22 +13,22 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data exchange](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
+- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for B2B data exchange ([learn more](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"})
 
-- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising ([read more](/blog/2025/07/20/introducing-the-data-room-app/))
+- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising ([learn more](/blog/2025/07/20/introducing-the-data-room-app/))
 
 </details>
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Career highlights</h3></summary>
 
-- **Head of Data** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built data infrastructure for healthcare ([learn more](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"}) 
+- **Head of Data** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the data function; shipped the data infrastructure for modern healthcare ([learn more](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"}) 
 
-- **Data Science Leader** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} for Search, Trends, Recommendations, etc.
+- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; fixed bugs and shipped improvements to Search, Trends, Recommendations, Notifications, etc.
 
-- **ML Engineering** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a Fraud Detection System protecting 100M+ users
+- **ML Engineering** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
 
-- **ML Engineering** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a Promotion Optimization System for multi-channel retailers
+- **ML Engineering** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a promotion optimization system and a product recommendation system for multi-channel retailers
 
 </details>
 
@@ -36,13 +36,13 @@ canonical_url: https://djpardis.com/
 <summary><h3>Academic background</h3></summary>
 
 - **Applied Mathematics** — [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas: Random graph models of online social networks
+&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | Random graph models of online social networks
 
 - **Artificial Intelligence (AI)** — [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-engineering/en/home){:target="_blank"} (MSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas: [Music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank"} 
+&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | [Music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank"} 
 
 - **Software Engineering** — [University of Tehran](http://ece.ut.ac.ir/en){:target="_blank"} (BSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas: RL and theorem proving systems
+&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | Reinforcement learning; theorem proving systems
 
 </details>
 
