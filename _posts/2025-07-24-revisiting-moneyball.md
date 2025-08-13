@@ -16,7 +16,9 @@ This post was originally published on <a href="https://djpardis.medium.com/revis
 Update, July 25, 2025<br><br>
 1. The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!<br>
 2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/a28919ba-fc09-43e6-8fa6-491365e8525a?artifactId=e9345839-0370-471a-83b1-99cd10227847" target="_blank">NotebookLM</a> to create a podcast discussion of this post.<br><br>
-<iframe src="https://jumpshare.com/share/chrIh55BD3L7dXfrQDjw" width="100%" height="100" frameborder="0" scrolling="no" style="max-height: 100px; height: 100px !important; overflow: hidden;"></iframe>
+<div style="position: relative; width: 100%; height: 140px; max-width: 100%; overflow: hidden;">
+  <iframe src="https://jumpshare.com/share/chrIh55BD3L7dXfrQDjw" width="100%" height="140" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: 140px; overflow: hidden;"></iframe>
+</div>
 </div>
 
 <div class="toc-container post-container">
