@@ -13,20 +13,20 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for B2B data exchange ([learn more](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"})
+- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data exchange](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
 
-- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising ([learn more](/blog/2025/07/20/introducing-the-data-room-app/))
+- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure [data rooms](/blog/2025/07/20/introducing-the-data-room-app/) for fundraising
 
 </details>
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Career highlights</h3></summary>
 
-- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the data function; shipped the data infrastructure for modern healthcare ([learn more](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"}) 
+- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the [data function](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} from the ground up; architected company-wide data infrastructure for modern healthcare
 
-- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; fixed bugs and shipped features to Search, Trends, Recommendations, Notifications, etc.
+- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; shipped features and fixed critical bugs across Search, Trends, Recommendations, and Notifications
 
-- **ML Engineering** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
+- **ML Engineer** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
 
 - **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a promotion optimization system and a product recommendation system for multi-channel retailers
 
