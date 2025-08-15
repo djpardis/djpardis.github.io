@@ -93,7 +93,7 @@ robots: noindex, nofollow
 }
 </style>
 
-# Pardis Noorzad <a href="#" onclick="window.print(); return false;" style="color: #7d78b5; text-decoration: none; margin-left: auto; display: inline-block; float: right; vertical-align: baseline;" class="print-icon">🖨️</a>
+# Pardis Noorzad
 
 **Founder** | <a href="https://generalfolders.com" target="_blank">General Folders</a>  
 **Data and AI leader**
@@ -147,22 +147,19 @@ Founder and CEO of General Folders, a **Techstars-backed company** pioneering **
 
 ## Education
 
-### **MSc Applied Mathematics** • [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"}
-*Toronto, ON*
+### **MSc Applied Mathematics** • Ryerson University
 
 - RA for <a href="https://djpardis.com/files/modeling_the_facebook_social_network.pdf" target="_blank">random graph models of online social networks</a> with <a href="https://math.ryerson.ca/~abonato/" target="_blank">Anthony Bonato</a> at the <a href="https://www.torontomu.ca/graphs-group/" target="_blank">Graphs@Ryerson Lab</a>
 - TA for Discrete Mathematics, Automata Theory, Linear Algebra, and Calculus, 3 semesters each
 - <a href="https://www.torontomu.ca/content/dam/senate/senate-meetings/agenda/2013/20130604agendamin.pdf" target="_blank">Grad Student Representative</a> on the Ryerson Senate
 
 ### **MSc Artificial Intelligence** • Amirkabir University of Technology (AUT)
-*Tehran, Iran*
 
 - RA for <a href="https://djpardis.com/files/Noorzad2012b.pdf" target="_blank">classification in high-dimensional problems</a> with <a href="https://scholar.google.com/citations?user=EYk7M80AAAAJ&hl=en" target="_blank">Mohammad Rahmati</a> at the Pattern Recognition Lab at AUT
 - RA for <a href="https://djpardis.com/files/genreSturmNoorzad20120116.pdf" target="_blank">sparse classifiers and music genre recognition</a> with <a href="https://www.kth.se/profile/bobs" target="_blank">Bob L. Sturm</a> at Aalborg University Copenhagen
 - RA for large-scale image classification with <a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=32512" target="_blank"> Mehrdad Shahshahani</a> at <a href="https://en.sharif.ir/" target="_blank">Sharif</a> and <a href="https://www.ipm.ac.ir/" target="_blank">IPM</a>
 
 ### **BSc Software Engineering** • University of Tehran
-*Tehran, Iran*
 
 - <a href="https://www.cmu.edu/dietrich/philosophy/undergraduate/summer-school/index.html" target="_blank">Summer School in Logic</a> with Jeremy Avigad at <a href="https://www.cmu.edu/" target="_blank">CMU</a> 
 - RA for Transfer Learning in RL with <a href="https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028" target="_blank">Majid Nili</a> at the Robotics & AI Lab
