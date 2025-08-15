@@ -147,7 +147,7 @@ Founder and CEO of General Folders, a **Techstars-backed company** pioneering **
 
 ## Education
 
-### **MSc Applied Mathematics** • Ryerson University
+### **MSc Applied Mathematics** • [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"}
 *Toronto, ON* | *2012 - 2014*
 
 - RA for <a href="https://djpardis.com/files/modeling_the_facebook_social_network.pdf" target="_blank">random graph models of online social networks</a> with <a href="https://math.ryerson.ca/~abonato/" target="_blank">Anthony Bonato</a> at the <a href="https://www.torontomu.ca/graphs-group/" target="_blank">Graphs@Ryerson Lab</a>
