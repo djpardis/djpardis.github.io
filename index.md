@@ -24,7 +24,7 @@ canonical_url: https://djpardis.com/
 
 - **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the [data function](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} from the ground up; architected company-wide data infrastructure for modern healthcare
 
-- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; shipped features and fixed critical bugs across Search, Trends, Recommendations, and Notifications
+- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; shipped features and fixed critical bugs across Search, Trends, Events, Recommendations, and Notifications
 
 - **ML Engineer** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
 
