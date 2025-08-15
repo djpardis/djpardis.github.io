@@ -36,13 +36,13 @@ canonical_url: https://djpardis.com/
 <summary><h3>Academic background</h3></summary>
 
 - **Applied Mathematics** — [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-Focus: [Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
+Research focus: [Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
 
 - **Artificial Intelligence (AI)** — [Amirkabir University of Technology](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-Focus: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [sparse classifiers and music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
+Research focus: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"}, [sparse classifiers, and music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
 
 - **Software Engineering** — [University of Tehran](http://ece.ut.ac.ir/en){:target="_blank"} (BSc)  
-Focus: [Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
+Research focus: [Transfer learning in reinforcement learning](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
 
 </details>
 
