@@ -1,0 +1,144 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{fontenc}
+\usepackage{cmbright}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Use clean, modern sans-serif fonts
+\renewcommand{\familydefault}{\sfdefault}
+
+% Colors matching your website
+\definecolor{linkcolor}{RGB}{125, 120, 181}
+\definecolor{textcolor}{RGB}{69, 69, 69}
+
+% Hyperlink styling
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor
+}
+
+% Title formatting
+\titleformat{\section}
+    {\Large\bfseries\color{textcolor}}
+    {}{0em}{}[\color{lightgray}\titlerule]
+
+\titleformat{\subsection}
+    {\large\bfseries\color{textcolor}}
+    {}{0em}{}
+
+% Custom spacing - tighter for 2 pages
+\setlength{\parskip}{0.3em}
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.1em, topsep=0.1em, label=\textcolor{lightgray}{$\times$}}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=0.1em, topsep=0.1em}
+
+% Header styling - left aligned like HTML
+\renewcommand{\maketitle}{%
+    {\Huge\bfseries\color{textcolor} Pardis Noorzad}\\[0.8em]
+    {\large\bfseries Founder} $|$ \href{https://generalfolders.com}{General Folders}\\[0.2em]
+    {\large\itshape Based in Vancouver, BC}
+    \vspace{0.5em}
+}
+
+\begin{document}
+
+\maketitle
+
+\section*{Professional Summary}
+
+Founder and CEO of General Folders, a \textbf{Techstars-backed company} pioneering \textbf{secure data exchange solutions} for enterprises. Expert in \textbf{building data organizations} from the ground up (Twitter and Carbon Health), \textbf{scaling ML systems} to millions of users (Twitter and Paytm), and \textbf{leading technical teams} (General Folders, Twitter, Carbon Health). Background spans healthcare, retail, fintech, adtech, and social media backed by degrees in \textbf{software engineering}, \textbf{mathematics}, and \textbf{AI}.
+
+\section*{Experience}
+
+\subsection*{\textbf{Founder \& CEO} $\bullet$ General Folders}
+\textit{San Francisco, CA \& San Diego, CA} $|$ \textit{2022 - Present}
+
+\begin{itemize}
+    \item Raised pre-seed, built a distributed team of 17, and joined \href{https://www.techstars.com/newsroom/new-class-san-diego-sdsu}{Techstars SDSU}
+    \item Built \href{https://generalfolders.com}{gfv1.0}, offering cross-company data transfer services
+    \item Launched \href{https://thedataroom.app}{The Data Room App} for simple and secure fundraising
+\end{itemize}
+
+\subsection*{\textbf{Chief Data Officer} $\bullet$ Carbon Health}
+\textit{San Francisco, CA} $|$ \textit{2019 - 2021}
+
+\begin{itemize}
+    \item Built the data function of 10
+    \item Architected company-wide data infrastructure scaling to 2.5K employees
+    \item Led data strategy and implementation across Finance, Engineering, Product, Partnerships, Marketing, Clinic Operations, Support, and Real Estate
+\end{itemize}
+
+\subsection*{\textbf{Data Science Lead and Manager} $\bullet$ Twitter}
+\textit{San Francisco, CA} $|$ \textit{2016 - 2019}
+
+\begin{itemize}
+    \item Built a team of 10 distributed across SF and NYC
+    \item Shipped features and fixed major bugs in Search, Trends, Events, Recommendations, and Notifications
+    \item Won \href{https://x.com/jadeloyzaga/status/1142237141495189504}{\#Hackweek} and \href{https://x.com/djpardis/status/1089036783050842113}{\#TweetTank} company-wide competitions
+\end{itemize}
+
+\subsection*{\textbf{ML Engineer} $\bullet$ Paytm}
+\textit{Toronto, ON} $|$ \textit{2015 - 2016}
+
+\begin{itemize}
+    \item Shipped the first fully automated fraud detection system scaling to 100M+ users
+    \item Built a promotion and product recommendation system
+    \item Lead Paytm Noida's Hive to Spark migration efforts in Databricks/AWS
+\end{itemize}
+
+\subsection*{\textbf{Data Scientist} $\bullet$ Rubikloud}
+\textit{Toronto, ON} $|$ \textit{2014 - 2015}
+
+\begin{itemize}
+    \item Joined at pre-seed, first data/engineering hire
+    \item Shipped a promotion optimization system for multi-channel retailers
+    \item Built anomaly detection, search trend detection, and recommendation systems
+\end{itemize}
+
+\section*{Education}
+
+\subsection*{\textbf{MSc Applied Mathematics} $\bullet$ Ryerson University}
+\textit{Toronto, ON} $|$ \textit{2012 - 2014}
+
+\begin{itemize}
+    \item RA for \href{https://djpardis.com/files/modeling_the_facebook_social_network.pdf}{random graph models of online social networks} with \href{https://math.ryerson.ca/~abonato/}{Anthony Bonato} at the \href{https://www.torontomu.ca/graphs-group/}{Graphs@Ryerson Lab}
+    \item TA for Discrete Mathematics, Automata Theory, Linear Algebra, and Calculus, 3 semesters each
+    \item \href{https://www.torontomu.ca/content/dam/senate/senate-meetings/agenda/2013/20130604agendamin.pdf}{Grad Student Representative} on the Ryerson Senate
+\end{itemize}
+
+\subsection*{\textbf{MSc Artificial Intelligence} $\bullet$ Amirkabir University of Technology (AUT)}
+\textit{Tehran, Iran} $|$ \textit{2009 - 2012}
+
+\begin{itemize}
+    \item RA for \href{https://djpardis.com/files/Noorzad2012b.pdf}{classification in high-dimensional problems} with \href{https://scholar.google.com/citations?user=EYk7M80AAAAJ&hl=en}{Mohammad Rahmati} at the Pattern Recognition Lab at AUT
+    \item RA for \href{https://djpardis.com/files/genreSturmNoorzad20120116.pdf}{sparse classifiers and music genre recognition} with \href{https://www.kth.se/profile/bobs}{Bob L. Sturm} at Aalborg University Copenhagen
+    \item RA for large-scale image classification with \href{https://www.genealogy.math.ndsu.nodak.edu/id.php?id=32512}{Mehrdad Shahshahani} at \href{https://en.sharif.ir/}{Sharif} and \href{https://www.ipm.ac.ir/}{IPM}
+\end{itemize}
+
+\subsection*{\textbf{BSc Software Engineering} $\bullet$ University of Tehran}
+\textit{Tehran, Iran} $|$ \textit{2004 - 2009}
+
+\begin{itemize}
+    \item \href{https://www.cmu.edu/dietrich/philosophy/undergraduate/summer-school/index.html}{Summer School in Logic} with Jeremy Avigad at \href{https://www.cmu.edu/}{CMU}
+    \item RA for Transfer Learning in RL with \href{https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028}{Majid Nili} at the Robotics \& AI Lab
+    \item RA for automatic verification of composed web services using constraint automata with \href{https://www.es.mdu.se/staff/3242-Marjan_Sirjani}{Marjan Sirjani} at the Formal Methods Lab
+    \item TA for Data Structures and Algorithms, 3 semesters
+    \item ECE Student Representative, 3 years
+    \item \href{https://www.linkedin.com/company/ut-acm/}{ACM Student Chapter} Vice Chair, 3 years
+\end{itemize}
+
+\section*{Contact}
+
+\textbf{Website:} \href{https://djpardis.com}{djpardis.com}\\
+\textbf{LinkedIn:} \href{https://linkedin.com/in/djpardis}{linkedin.com/in/djpardis}\\
+\textbf{Email:} \href{mailto:pardis@generalfolders.com}{pardis@generalfolders.com}\\
+\textbf{Phone:} (250) 444-2121
+
+\end{document}
