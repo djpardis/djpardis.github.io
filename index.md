@@ -28,7 +28,7 @@ canonical_url: https://djpardis.com/
 
 - **ML Engineering** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
 
-- **ML Engineering** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a promotion optimization system and a product recommendation system for multi-channel retailers
+- **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a promotion optimization system and a product recommendation system for multi-channel retailers
 
 </details>
 
