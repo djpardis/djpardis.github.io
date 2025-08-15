@@ -22,9 +22,9 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Career highlights</h3></summary>
 
-- **Head of Data** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the data function; shipped the data infrastructure for modern healthcare ([learn more](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"}) 
+- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the data function; shipped the data infrastructure for modern healthcare ([learn more](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"}) 
 
-- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; fixed bugs and shipped improvements to Search, Trends, Recommendations, Notifications, etc.
+- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; fixed bugs and shipped features to Search, Trends, Recommendations, Notifications, etc.
 
 - **ML Engineering** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
 
@@ -35,17 +35,16 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Academic background</h3></summary>
 
-- **Applied Mathematics** — [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | Random graph models of online social networks
+- **Applied Mathematics** — [Ryerson University](https://www.torontomu.ca/graphs-group/){:target="_blank"} (MSc)  
+Focus: [Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
 
-- **Artificial Intelligence (AI)** — [Amirkabir University](http://ceit.aut.ac.ir/autcms/computer-engineering/en/home){:target="_blank"} (MSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | [Music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} and [sparse classifiers](/files/papers/Noorzad2012b.pdf){:target="_blank"} 
+- **Artificial Intelligence (AI)** — [Amirkabir University of Technology (AUT)](http://ceit.aut.ac.ir/autcms/computer-engineering/en/home){:target="_blank"} (MSc)  
+Focus: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [sparse classifiers and music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
 
 - **Software Engineering** — [University of Tehran](http://ece.ut.ac.ir/en){:target="_blank"} (BSc)  
-&nbsp;&nbsp;&nbsp;&nbsp;Focus areas | Reinforcement learning; theorem proving systems
+Focus: [Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
 
 </details>
-
 
 {% include separator.html %}
 
@@ -54,3 +53,5 @@ Here is my bio for talks and conferences:
 > Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
 > healthcare, and social media, backed by degrees in software engineering, mathematics, and AI.
+
+View full [CV](/cv/).
