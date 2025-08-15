@@ -54,4 +54,4 @@ Here is my bio for talks and conferences:
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
 > healthcare, and social media, backed by degrees in software engineering, mathematics, and AI.
 
-View [CV](/cv/).
+View [CV](/cv).
