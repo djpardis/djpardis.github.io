@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.css %}
+<link rel="stylesheet" href="{{ page.css | relative_url }}">
+{% endif %}
+
 <div class="page">
   {{ content }}
 </div>
