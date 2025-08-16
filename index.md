@@ -22,27 +22,31 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Career highlights</h3></summary>
 
-- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} — Built the [data function](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} from the ground up; architected company-wide data infrastructure for modern healthcare
+- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} <br>
+Built the [data team](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} and set up company-wide data infra for modern healthcare 
 
-- **Data Science Lead** at [Twitter](https://twitter.com/){:target="_blank"} — Established the [data function](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"}; shipped features and fixed critical bugs across Search, Trends, Events, Recommendations, and Notifications
+- **Data Science Manager** at [Twitter](https://twitter.com/){:target="_blank"} <br>
+Established the [PDS](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} team; shipped major fixes to Search, Trends, and Notifications 
 
-- **ML Engineer** at [Paytm](http://www.paytm.com){:target="_blank"} — Built a fraud detection system scaling to 100M+ users
+- **ML Engineer** at [Paytm](http://www.paytm.com){:target="_blank"}<br>
+Shipped a fully automated fraud detection system scaling to 100M+ users
 
-- **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} — Built a promotion optimization system and a product recommendation system for multi-channel retailers
+- **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} <br>
+Designed and shipped the flagship promotion optimization system
 
 </details>
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Academic background</h3></summary>
 
-- **Applied Mathematics** — [Ryerson University](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-Research focus: [Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
+- **Applied Mathematics** — [Ryerson University (MSc)](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"}   
+[Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
 
-- **Artificial Intelligence (AI)** — [Amirkabir University of Technology](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"} (MSc)  
-Research focus: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"}, [sparse classifiers, and music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
+- **Artificial Intelligence (AI)** — [Amirkabir University of Technology (MSc)](http://aut.ac.ir/){:target="_blank"}  
+[Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
 
-- **Software Engineering** — [University of Tehran](http://ece.ut.ac.ir/en){:target="_blank"} (BSc)  
-Research focus: [Transfer learning in reinforcement learning](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
+- **Software Engineering** — [University of Tehran (BSc)](http://ece.ut.ac.ir/en){:target="_blank"}  
+[Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
 
 </details>
 
