@@ -1,60 +1,64 @@
 ---
 layout: page
-title: 107 Wins Guest Request
-description: Submit a request to be a guest on the 107 Wins podcast
-keywords: podcast, guest request, 107 wins, interview request
-image: /files/pics/107winslogo.png
-canonical_url: https://djpardis.com/podcast-guest-request
-permalink: /podcast-guest-request/
-sitemap:
-  priority: 0.7
-  changefreq: monthly
-  lastmod: 2025-07-08
-og:
-  title: "Request to be a Guest - 107 Wins Podcast"
-  description: "Submit a request to be a guest on the 107 Wins podcast"
-  image: /files/pics/107winslogo.png
-  type: website
-twitter:
-  card: summary_large_image
-  title: "Request to be a Guest - 107 Wins Podcast"
-  description: "Submit a request to be a guest on the 107 Wins podcast"
-  image: /files/pics/107winslogo.png
+title: "Guest Request"
+css: 107wins-shared
 ---
 
-[← Back to 107 Wins]({{ site.baseurl }}/107wins)
+{% include 107wins-header.html %}
 
-# <span class="wiggly-underline">107 Wins</span> guest request
+<div class="section">
+  <p><a href="/107wins.html">← Back to 107 Wins</a></p>
+</div>
 
-Interested in joining us as a guest on the podcast? Please fill out the form below.
+<div class="section">
+  <h2>Request to be a guest</h2>
+  <p>Interested in being a guest on the 107 Wins podcast? Fill out this form and we'll get back to you soon!</p>
+</div>
 
-<form action="https://formspree.io/f/xldnywyl" method="POST" class="form">
+<form action="https://formspree.io/f/xldnywyl" method="POST">
+  <input type="hidden" name="_subject" value="107 Wins Guest Request">
+  
   <div class="form-field">
-    <label for="name">Name*</label>
+    <label for="name">Full name</label>
     <input type="text" id="name" name="name" required>
   </div>
   
   <div class="form-field">
-    <label for="email">Email*</label>
+    <label for="email">Email address</label>
     <input type="email" id="email" name="email" required>
   </div>
   
   <div class="form-field">
-    <label for="title">Title/Role*</label>
-    <input type="text" id="title" name="title" required>
+    <label for="company">Company or organization</label>
+    <input type="text" id="company" name="company">
   </div>
   
   <div class="form-field">
-    <label for="company">Company/Organization*</label>
-    <input type="text" id="company" name="company" required>
+    <label for="title">Job title or role</label>
+    <input type="text" id="title" name="title">
   </div>
   
   <div class="form-field">
-    <label for="topic">What would you like to discuss?*</label>
-    <textarea id="topic" name="topic" rows="4" required></textarea>
+    <label for="background">Brief background and experience</label>
+    <textarea id="background" name="background" required></textarea>
   </div>
   
   <div class="form-field">
-    <button type="submit" class="button">Submit request</button>
+    <label for="topics">Topics you'd like to discuss</label>
+    <textarea id="topics" name="topics" required></textarea>
   </div>
+  
+  <div class="form-field">
+    <label for="why">Why you'd like to be a guest</label>
+    <textarea id="why" name="why" required></textarea>
+  </div>
+  
+  <div class="form-field">
+    <label for="availability">General availability</label>
+    <input type="text" id="availability" name="availability" placeholder="e.g., Weekdays after 5pm PT, weekends">
+  </div>
+  
+  <button type="submit">Submit guest request</button>
 </form>
+
+{% include 107wins-footer.html %}
