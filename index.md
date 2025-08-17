@@ -32,13 +32,13 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Career highlights</h3></summary>
 
-- **Chief Data Officer** at [Carbon Health](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} <br>
-Built the [data team](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} and set up company-wide data infra for modern healthcare 
+- **Chief Data Officer** at Carbon Health <br>
+Built the [data team](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} and set up [company-wide data infra](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} for modern healthcare 
 
-- **Data Science Manager** at [Twitter](https://twitter.com/){:target="_blank"} <br>
-Established the [PDS](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} team; shipped major fixes to Search, Trends, and Notifications 
+- **Data Science Manager** at Twitter <br>
+Established the [PDS](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} team; shipped major fixes to Search, Trends, and Notifications; won [#Hackweek](https://x.com/jadeloyzaga/status/1142237141495189504){:target="_blank"} and [#TweetTank](https://x.com/djpardis/status/1089036783050842113){:target="_blank"} company-wide competitions 
 
-- **ML Engineer** at [Paytm](http://www.paytm.com){:target="_blank"}<br>
+- **ML Engineer** at Paytm<br>
 Shipped a fully automated fraud detection system scaling to 100M+ users
 
 - **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} <br>
