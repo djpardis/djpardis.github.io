@@ -14,7 +14,7 @@ pages_list:
   Bio: '/'
   Blog: '/blog'
   Gigs: '/gigs'
-  107 Wins: '/107wins'
+  107 Wins: '/107wins.html'
 
 # Collections for better organization
 collections:
