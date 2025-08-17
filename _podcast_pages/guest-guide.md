@@ -1,112 +1,57 @@
 ---
 layout: page
-title: 107 Wins Guest Guide
-description: Guide for guests appearing on the 107 Wins podcast
-keywords: podcast, guest guide, 107 wins, interview preparation
-image: /files/pics/107winslogo.png
-canonical_url: https://djpardis.com/podcast-guest-guide
-permalink: /podcast-guest-guide/
-sitemap:
-  priority: 0.7
-  changefreq: monthly
-
-og:
-  title: "Guest Guide - 107 Wins Podcast"
-  description: "Guide for guests appearing on the 107 Wins podcast"
-  image: /files/pics/107winslogo.png
-  type: website
-twitter:
-  card: summary_large_image
-  title: "Guest Guide - 107 Wins Podcast"
-  description: "Guide for guests appearing on the 107 Wins podcast"
-  image: /files/pics/107winslogo.png
+title: "Guest Guide"
+css: 107wins-shared
 ---
 
-[← Back to 107 Wins]({{ site.baseurl }}/107wins)
+{% include 107wins-header.html %}
 
-# <span class="wiggly-underline">107 Wins</span> guest guide
-
-Thank you for joining us as a guest on the podcast! This guide provides recommendations to help ensure a quality conversation and enjoyable experience for both you and our listeners.
-
-<div class="toc-container post-container">
-<h2 id="table-of-contents">Table of contents</h2>
-<ul>
-<li><a href="#conversation-format">Conversation format</a></li>
-<li><a href="#pre-interview-information">Pre-interview information</a></li>
-<li><a href="#day-of-interview-checklist">Day of interview checklist</a></li>
-<li><a href="#technical-setup-guide">Technical setup guide</a></li>
-</ul>
+<div class="section">
+  <p><a href="/107wins.html">← Back to 107 Wins</a></p>
 </div>
 
-## [Conversation format](#table-of-contents) {#conversation-format}
+<div class="section">
+  <h2>Welcome to the 107 Wins podcast!</h2>
+  <p>We're excited to have you as a guest on our show. This guide will help you prepare for your upcoming episode and ensure we have a great conversation.</p>
+</div>
 
-Our episodes typically follow this structure:
-1. **Introduction** (2-3 minutes)
-2. **Your background** (5-7 minutes)
-3. **Main discussion** (30-40 minutes)
-4. **Closing thoughts** (5 minutes)
+<div class="section">
+  <h2>What to expect</h2>
+  <p>Our podcast focuses on business building, tech trends, and learning. We typically cover:</p>
+  <ul>
+    <li>Your background and experience</li>
+    <li>Key insights from your work</li>
+    <li>Lessons learned and best practices</li>
+    <li>Current trends and future outlook</li>
+    <li>Advice for others in your field</li>
+  </ul>
+</div>
 
-## [Pre-interview information](#table-of-contents) {#pre-interview-information}
+<div class="section">
+  <h2>Preparation tips</h2>
+  <p>To make the most of our conversation:</p>
+  <ul>
+    <li>Think about 2-3 key stories or insights you'd like to share</li>
+    <li>Prepare examples that illustrate your points</li>
+    <li>Consider what listeners can learn from your experience</li>
+    <li>Be ready to discuss both successes and challenges</li>
+  </ul>
+</div>
 
-Please share the following information at least 3 days before our scheduled conversation.
+<div class="section">
+  <h2>Technical setup</h2>
+  <p>We'll send you a recording link before the episode. Please ensure:</p>
+  <ul>
+    <li>You have a quiet environment</li>
+    <li>Your microphone is working properly</li>
+    <li>You have a stable internet connection</li>
+    <li>You're available for the full scheduled time</li>
+  </ul>
+</div>
 
-When you're ready, submit your answers using <span class="wiggly-underline">[this form]({{ site.baseurl }}/podcast-guest-pre-interview/)</span>.
+<div class="section">
+  <h2>Questions?</h2>
+  <p>If you have any questions about being a guest or need to reschedule, please reach out to us at <a href="mailto:hello@107wins.club">hello@107wins.club</a>.</p>
+</div>
 
-### About you
-- How you'd like to be introduced (brief bio)
-- Name pronunciation and professional title
-- Relevant links (website, social media, projects)
-
-### Conversation topics
-- 2-3 main topics you'd like to discuss
-- Any specific questions you'd like us to ask
-- Topics you'd prefer not to discuss
-
-### For our audience
-- Key takeaways you hope listeners will gain
-- Any resources or recommendations to share
-- Call-to-action for listeners (if applicable)
-
-## [Day of interview checklist](#table-of-contents) {#day-of-interview-checklist}
-
-Before we begin recording:
-- Test your audio and video setup
-- Close unnecessary applications
-- Silence notifications
-- Restart your computer (helps prevent technical issues)
-
-## [Technical setup guide](#table-of-contents) {#technical-setup-guide}
-
-### Interview platform
-
-**We use Riverside.fm for our remote interviews:**
-- High-quality audio and video recording
-- Separate tracks for host and guest
-- Simple browser-based interface for all platforms (no downloads required)
-- Mac users can also use the desktop app: [Riverside Desktop App](https://riverside.fm/mac-app)
-- Mobile apps available for iOS and Android devices
-- You'll receive a link to join before the scheduled interview
-
-### Audio equipment
-
-**Recommended setup:**
-- Apple microphones (including MacBook built-in mics) work well
-- External microphones like Blue Yeti or Audio-Technica are also good options
-- Position microphone 6-8 inches away from your mouth
-- Wired headphones to prevent echo and feedback
-- Quiet environment with minimal background noise
-
-### Video & environment
-
-**For best results:**
-- Position camera at eye level (external webcam preferred)
-- Face a light source; avoid being backlit
-- Choose a clean, uncluttered background
-- Use a wired internet connection when possible
-- Find a quiet space with minimal echo
-
-We're looking forward to a great discussion!
-
----
-
-*107 Wins podcast - Updated {{ "now" | date: "%B %d, %Y" }}*
+{% include 107wins-footer.html %}
