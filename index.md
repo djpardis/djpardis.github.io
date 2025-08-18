@@ -20,7 +20,7 @@ canonical_url: https://djpardis.com/
 
 </details>
 
-<details class="collapsible-section" markdown="1" open>
+<details class="collapsible-section" markdown="1">
 <summary><h3>Currently building</h3></summary>
 
 - **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data exchange](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
