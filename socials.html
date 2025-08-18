@@ -14,12 +14,17 @@
             </div>
             
             <div class="hero-right">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <nav>
-                              <ul class="nav-menu">
-            <li><a href="/episodes.html">Episodes</a></li>
-            <li><a href="/guest-request.html">Be our guest</a></li>
-            <li><a href="/socials.html">Follow us</a></li>
-          </ul>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="/episodes.html">Episodes</a></li>
+                        <li><a href="/guest-request.html">Be our guest</a></li>
+                        <li><a href="/socials.html">Follow us</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -106,5 +111,12 @@
             <p><em>&copy; <script>document.write(new Date().getFullYear());</script> The 107 Wins Pod. All rights reserved.</em></p>
         </div>
     </div>
+    
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
