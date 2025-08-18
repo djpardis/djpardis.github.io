@@ -11,6 +11,38 @@ body {
   color: #333;
   background: #f0f2ff;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Baseball */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d1d5ff'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E"),
+    /* Microphone */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d1d5ff'%3E%3Cpath d='M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z'/%3E%3C/svg%3E"),
+    /* Robot */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d1d5ff'%3E%3Cpath d='M12 2c-1.1 0-2 .9-2 2v2H6c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2h-4V4c0-1.1-.9-2-2-2zm-2 4V4h4v2h-4zm-2 4h2v2h-2v-2zm6 0h2v2h-2v-2z'/%3E%3C/svg%3E"),
+    /* Trophy */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d1d5ff'%3E%3Cpath d='M7 4V2C7 1.45 7.45 1 8 1h8c.55 0 1 .45 1 1v2h3c.55 0 1 .45 1 1v3c0 1.66-1.34 3-3 3h-1v1c0 1.66-1.34 3-3 3H8c-1.66 0-3-1.34-3-3v-1H4c-1.66 0-3-1.34-3-3V5c0-.55.45-1 1-1h3zm0 2H5v3c0 .55.45 1 1 1h1V6H7zm10 0h-1v4h1c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1V6H7v4H6V6H5v3c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V6h-1z'/%3E%3C/svg%3E"),
+    /* Lightbulb */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d1d5ff'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm-1 15h2v2h-2v-2zm-2-1h6v1H9v-1z'/%3E%3C/svg%3E");
+  background-size: 80px 80px, 70px 70px, 60px 60px, 90px 90px, 75px 75px;
+  background-repeat: repeat;
+  background-position: 
+    50px 50px,
+    200px 100px,
+    350px 200px,
+    150px 300px,
+    400px 150px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 .container {
@@ -93,6 +125,13 @@ body {
   color: #4A90E2;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Back button specific styling - only target the back button text */
+.section p a[href*="107wins.html"],
+.section p a[href*="guest-guide.html"] {
+  font-size: 1.1rem !important;
 }
 
 .section a:hover {
@@ -191,17 +230,19 @@ body {
 .form-group {
   display: flex;
   gap: 0.75rem;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
 .newsletter-input {
   flex: 1;
-  padding: 0.5rem 1rem;
+  padding: 12px 16px;
   border: 2px solid #e5e5e5;
   font-size: 1rem;
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   min-width: 0;
+  height: 48px;
+  box-sizing: border-box;
 }
 
 .newsletter-input:focus {
@@ -218,11 +259,13 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
+  height: 48px;
+  box-sizing: border-box;
 }
 
 .newsletter-button:hover {
@@ -341,7 +384,7 @@ ul li {
   position: relative;
   margin: 0.25rem 0;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -363,6 +406,6 @@ ol {
 ol li {
   margin: 0.25rem 0;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
