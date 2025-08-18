@@ -38,6 +38,13 @@ body {
   margin-bottom: 0;
 }
 
+/* Ensure linked title uses link color */
+.hero-left h1 {
+  color: #4A90E2;
+}
+.hero-left h1 a:hover {
+  color: #357ABD;
+}
 
 
 .hero-right {
@@ -79,7 +86,6 @@ body {
 .nav-menu a:hover {
   color: #357ABD;
 }
-
 
 
 
@@ -172,7 +178,12 @@ body {
   }
 }
 
-
+.caption {
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
 
 .newsletter-signup {
   background-color: rgba(125, 120, 181, 0.08);
@@ -192,7 +203,7 @@ body {
 .newsletter-signup p {
   margin-bottom: 1rem;
   color: #515151;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-top: 0;
   text-align: left;
@@ -215,7 +226,7 @@ body {
   flex: 1;
   padding: 12px 16px;
   border: 2px solid #e5e5e5;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   min-width: 0;
   height: 48px;
@@ -236,7 +247,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   white-space: nowrap;
   text-decoration: none;
@@ -320,13 +331,9 @@ button:hover {
     padding: 1rem;
   }
   
-
-  
   .hero-right {
     gap: 1rem;
   }
-  
-
   
   .form-group {
     flex-direction: column;
@@ -376,8 +383,6 @@ ol li {
   font-size: 1.1rem;
   line-height: 1.5;
 }
-
-
 
 /* Social Grid */
 .social-grid {
