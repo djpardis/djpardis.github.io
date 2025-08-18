@@ -23,6 +23,8 @@ body {
   padding: 2rem;
   background: white;
   min-height: 100vh;
+  display: flex; /* allow sticky footer */
+  flex-direction: column;
 }
 
 .hero {
@@ -33,7 +35,7 @@ body {
   margin-bottom: 2rem;
   background: linear-gradient(135deg, rgba(255, 153, 214, 0.3), rgba(74, 144, 226, 0.2));
   padding: 2rem;
-  margin: 0 -2rem 2rem -2rem;
+  margin: -2rem -2rem 2rem -2rem; /* pull header up to top */
   border-radius: 0;
 }
 
@@ -194,10 +196,16 @@ body {
 
 .newsletter-signup {
   background-color: rgba(255, 153, 214, 0.12);
-  padding: 1rem;
+  padding: 2rem;
   text-align: left;
   width: 100%;
   margin: 0 0 2rem 0;
+  box-sizing: border-box;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: calc(100% + 4rem);
 }
 
 .newsletter-signup h2 {
@@ -208,7 +216,7 @@ body {
 }
 
 .newsletter-signup p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #515151;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -268,15 +276,23 @@ body {
 }
 
 .footer {
-  margin-top: 3rem;
+  margin-top: auto; /* stick to bottom when content is short */
   padding-top: 2rem;
-  border-top: 1px solid #eee;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem; /* restore to match header/newsletter content alignment */
+  padding-right: 2rem; /* restore */
+  border-top: 1px solid #eee; /* light divider spanning full width */
+  width: calc(100% + 4rem);
+  box-sizing: border-box;
 }
 
 .footer p {
   text-align: left;
   color: #666;
   font-size: 1.1rem;
+  margin-left: -2rem;
+  padding-left: 2rem;
 }
 
 /* Form styles */
@@ -337,8 +353,27 @@ button:hover {
   }
   
   .hero {
-    margin: 0 -1rem 2rem -1rem;
+    margin: -1rem -1rem 2rem -1rem; /* pull header up to top on mobile */
     padding: 1rem;
+  }
+  
+  .footer {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem; /* restore mobile padding */
+    padding-right: 1rem; /* restore mobile padding */
+  }
+  
+  .newsletter-signup {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .footer p {
+    margin-left: -1rem;
+    padding-left: 1rem;
   }
   
   .hero-right {
