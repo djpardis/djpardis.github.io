@@ -31,7 +31,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
 }
 
 .hero-left {
@@ -41,6 +40,9 @@ body {
 /* Ensure linked title uses link color */
 .hero-left h1 {
   color: #4A90E2;
+}
+.hero-left h1 a {
+  text-decoration: none;
 }
 .hero-left h1 a:hover {
   color: #357ABD;
@@ -244,7 +246,7 @@ body {
   background: #4A90E2;
   color: white;
   border: none;
-  font-weight: 600;
+  font-weight: normal;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.1rem;
@@ -258,7 +260,6 @@ body {
 
 .newsletter-button:hover {
   background: #357ABD;
-  transform: translateY(-1px);
 }
 
 .footer {
@@ -322,7 +323,6 @@ button {
 
 button:hover {
   background: #357ABD;
-  transform: translateY(-1px);
 }
 
 /* Responsive design */
@@ -418,7 +418,7 @@ ol li {
   text-decoration: none;
   border: none;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   transition: all 0.3s ease;
@@ -427,7 +427,7 @@ ol li {
 
 .social-item .cta-button:hover {
   background: #357ABD;
-  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 /* Mobile Navigation */
@@ -453,6 +453,11 @@ ol li {
   
   .hero-right {
     position: relative;
+    margin-left: 1rem;
+  }
+  
+  .hero-left h1 {
+    font-size: 1.5rem;
   }
   
   .nav-menu {
@@ -513,5 +518,15 @@ ol li {
   .newsletter-form .form-group {
     justify-content: flex-start !important;
     align-items: flex-start !important;
+  }
+  
+  .footer p {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  
+  .footer p em {
+    display: block;
   }
 }
