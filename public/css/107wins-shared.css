@@ -523,9 +523,10 @@ ol li {
   color: #10B981;
 }
 
-.social-item {
+.social-grid .social-item {
   padding: 1.5rem;
   text-align: center;
+  border: 2px solid #20B2AA;
 }
 
 .social-item h3 {
