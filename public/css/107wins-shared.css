@@ -506,7 +506,7 @@ button:hover {
   /* Mobile footer and newsletter width fixes */
   .footer {
     margin: -1rem -1rem 0 -1rem;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     box-sizing: border-box;
