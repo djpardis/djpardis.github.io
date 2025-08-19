@@ -13,8 +13,8 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
 
-- **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/) and [adventures with Replit](/blog/2025/07/20-introducing-the-data-room-app/) 
-- **Data tools** — [B2B data transfer use cases and methodology]({% post_url 2023-04-03-the-state-of-data-exchange %}); [data ∩ water terms](https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6) 
+- **Data tools** — [B2B data transfer use cases and methodology]({% post_url 2023-04-03-the-state-of-data-exchange %}); [Data ∩ water terms](https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6) 
+- **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/); [Adventures in authentication](/blog/2025/07/20-introducing-the-data-room-app/) 
 - **Sports analytics** — [Revisiting Moneyball](/blog/2024/12/24/revisiting-moneyball/) 
 - **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf)
 
@@ -27,7 +27,7 @@ canonical_url: https://djpardis.com/
 
 - **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure [data rooms](/blog/2025/07/20/introducing-the-data-room-app/) for fundraising
 
-- **[The 107 Wins Pod](https://107wins.club){:target="_blank"}** — Conversations about all aspects of business building, tech trends, best practices, and learning new things
+- **[The 107 Wins Pod](https://107wins.club){:target="_blank"}** — Conversations about business building, tech trends, proven tactics, and learning new things
 
 </details>
 
