@@ -435,11 +435,12 @@ button:hover {
   }
   
   .hero-left h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
   
   .hero-left {
     flex: 1;
+    padding-left: 1rem;
   }
   
   .hero-right {
@@ -561,6 +562,6 @@ button:hover {
   }
   
   .hero-left h1 a {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
 }
