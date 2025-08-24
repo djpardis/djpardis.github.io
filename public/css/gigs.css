@@ -30,7 +30,7 @@ body::before {
 
 /* Header - Optimized */
 .site-header {
-  background: linear-gradient(135deg, #FF99D6 0%, #4A90E2 50%, #10B981 100%);
+  background: linear-gradient(135deg, #FF99D6 0%, #4A90E2 25%, #FFFF99 50%, #10B981 100%);
   color: white;
   padding: 2rem 0;
   position: sticky;
@@ -185,45 +185,138 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Mixtape grid - Horizontal layout */
-.mixtape-grid {
+
+
+/* Reviews grid - Clean compact design with gradient accents */
+.reviews-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
-.mixtape-item {
+/* NUCLEAR OPTION - Remove ALL underlines from reviews */
+.reviews-grid,
+.reviews-grid *,
+.review-item,
+.review-item *,
+.review-item:link,
+.review-item:visited,
+.review-item:hover,
+.review-item:active,
+.review-item:focus {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: none !important;
+  text-decoration-thickness: none !important;
+  text-underline-offset: none !important;
+  text-underline-position: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Force override any inherited link styles */
+.reviews-grid a,
+.reviews-grid a:link,
+.reviews-grid a:visited,
+.reviews-grid a:hover,
+.reviews-grid a:active,
+.reviews-grid a:focus {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: none !important;
+  text-decoration-thickness: none !important;
+  text-underline-offset: none !important;
+  text-underline-position: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* EXTRA AGGRESSIVE - Target the actual link elements */
+a.review-item,
+a.review-item:link,
+a.review-item:visited,
+a.review-item:hover,
+a.review-item:active,
+a.review-item:focus {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: none !important;
+  text-decoration-thickness: none !important;
+  text-underline-offset: none !important;
+  text-underline-position: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-bottom: none !important;
+  border: none !important;
+}
+
+.review-item {
   background: white;
-  border: 2px solid rgba(255, 153, 214, 0.3);
-  padding: 1.5rem 2rem;
-  text-decoration: none;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none !important;
   color: #333;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 15px rgba(255, 153, 214, 0.1);
-  border-radius: 12px;
+  gap: 0.8rem;
+  transition: none;
+  border-radius: 0;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
 }
 
-.mixtape-item:hover {
-  border-color: #FF99D6;
-  box-shadow: 0 6px 20px rgba(255, 153, 214, 0.2);
+.review-item:hover {
+  transform: none;
+  box-shadow: none;
 }
 
-.mixtape-title {
-  font-weight: 700;
+
+
+.review-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #FF99D6, #4A90E2, #FFFF99);
+  transition: none;
+}
+
+.review-item:hover::before {
+  width: 8px;
+}
+
+.review-title {
+  font-weight: 600;
   font-size: 1.1rem;
   color: #4A90E2;
+  flex: 1;
+  line-height: 1.4;
+  margin-left: 0.8rem;
 }
 
-.mixtape-date {
+.review-date {
   color: #666;
   font-size: 1.1rem;
   font-weight: 500;
+  flex-shrink: 0;
+  background: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
 }
+
+
 
 /* Radio grid - Simplified */
 .radio-grid {
@@ -313,13 +406,18 @@ h2::after {
   border-radius: 8px;
 }
 
-/* Footer - Simplified */
+/* Footer - Pink textured background, goes to bottom */
 .site-footer {
-  background: rgba(255, 153, 214, 0.05);
-  border-top: 3px solid #4A90E2;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 153, 214, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 153, 214, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 153, 214, 0.08) 0%, transparent 50%);
+  border-top: none;
   padding: 2.5rem 0;
   text-align: center;
   color: #333;
+  position: relative;
+  margin-bottom: 0;
 }
 
 .footer-content {
@@ -330,8 +428,8 @@ h2::after {
 
 .site-footer p {
   font-size: 1.1rem;
-  font-weight: 700;
-  color: #4A90E2;
+  font-weight: 500;
+  color: #666;
 }
 
 /* Form styling - Optimized */
@@ -409,6 +507,221 @@ h2::after {
   margin-top: 2.5rem;
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .header-content,
+  .hero-content,
+  .content-wrapper {
+    max-width: 1200px;
+  }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (max-width: 1199px) {
+  .header-content,
+  .hero-content,
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .hero-content {
+    gap: 2rem;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+  }
+  
+  .hero-text {
+    flex: 0 1 400px;
+  }
+}
+
+/* Small screens (tablets - 768px and down) */
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .book-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .hero-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .reviews-grid {
+    gap: 0.5rem;
+  }
+  
+  .review-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+  
+  .review-title {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
+  
+  .review-date {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  
+  .radio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    padding: 1rem;
+  }
+}
+
+/* Mobile screens (480px and down) */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 1.5rem 0;
+  }
+  
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header-content {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .book-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
+  
+  .content-wrapper {
+    padding: 0 1rem;
+  }
+  
+  .review-item {
+    padding: 0.8rem;
+  }
+  
+  .review-title {
+    font-size: 1.1rem;
+  }
+  
+  .review-date {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .radio-item {
+    padding: 1.5rem;
+  }
+  
+  .service-item {
+    padding: 1.5rem;
+  }
+  
+  .service-item h4 {
+    font-size: 1rem;
+  }
+  
+  .service-item p {
+    font-size: 0.9rem;
+  }
+  
+  .form-field label {
+    font-size: 1rem;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .booking-form button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-content {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  .hero-image img {
+    max-width: 300px;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .site-header,
+  .book-button,
+  .hero-section {
+    display: none;
+  }
+  
+  .content-section {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+  
+
+}
+
 .service-item {
   background: white;
   border: 3px solid rgba(16, 185, 129, 0.3);
@@ -456,9 +769,7 @@ h2::after {
     padding: 0 1rem;
   }
   
-  .mixtape-grid {
-    gap: 0.8rem;
-  }
+
   
   .radio-grid {
     grid-template-columns: 1fr;
