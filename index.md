@@ -8,17 +8,17 @@ canonical_url: https://djpardis.com/
 ---
 
 ![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Alamo Square.*
+*Park with friends.*
 
-<details class="collapsible-section" markdown="1" open>
+<!-- <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
 
 - **Data tools** — [B2B data transfer use cases and methodology]({% post_url 2023-04-03-the-state-of-data-exchange %}); [Data ∩ water terms](https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6) 
 - **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/); [Adventures in authentication](/blog/2025/07/20-introducing-the-data-room-app/) 
 - **Sports analytics** — [Revisiting Moneyball](/blog/2024/12/24/revisiting-moneyball/) 
-- **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf)
+- **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf) 
 
-</details>
+</details> -->
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Currently building</h3></summary>
