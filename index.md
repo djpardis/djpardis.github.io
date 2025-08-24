@@ -7,8 +7,8 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Park with friends.*
+<!-- ![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Park with friends.* -->
 
 <!-- <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
