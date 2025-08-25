@@ -28,7 +28,7 @@ body::before {
 
 /* Header - Optimized */
 .site-header {
-  background: linear-gradient(135deg, #4A90E2 0%, #FF99D6 50%, #10B981 100%);
+  background: conic-gradient(from 0deg, #4A90E2, #FF99D6, #FFFF99, #10B981, #4A90E2);
   color: white;
   padding: 2rem 0;
   position: sticky;
@@ -98,7 +98,7 @@ body::before {
 }
 
 .hero-image img {
-  max-width: 500px;
+  max-width: 650px;
   width: 100%;
   height: auto;
   border: 3px solid rgba(16, 185, 129, 0.3);
@@ -107,7 +107,7 @@ body::before {
 }
 
 .hero-text {
-  flex: 0 1 500px;
+  flex: 0 1 400px;
 }
 
 .hero-text p {
