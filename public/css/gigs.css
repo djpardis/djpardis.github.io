@@ -1,8 +1,24 @@
-/* DJ Pardis - Optimized for Performance */
+/* DJ Pardis - Optimized for Performance & Responsiveness */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -29,7 +45,7 @@ body::before {
 /* Header - Optimized */
 .site-header {
   background: 
-    linear-gradient(to right, #7BB3F0 0%, #FFB3E0 30%, #FFB3E0 70%, #4FD1A5 100%),
+    linear-gradient(to right, #2C5AA0 0%, #FFB3E0 30%, #FFB3E0 70%, #10B981 100%),
     repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255, 255, 255, 0.15) 30px, rgba(255, 255, 255, 0.15) 35px);
   color: white;
   padding: 2rem 0;
@@ -223,12 +239,14 @@ h2::after {
 
 
 
-/* Reviews grid - Clean compact design with gradient accents */
+/* Reviews table - Table rows with same boundary color */
 .reviews-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 1rem;
+  background: rgba(16, 185, 129, 0.05);
+  border: 3px solid rgba(16, 185, 129, 0.3);
+  padding: 0;
+  margin-top: 2rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 /* NUCLEAR OPTION - Remove ALL underlines from reviews */
@@ -291,25 +309,25 @@ a.review-item:focus {
 }
 
 .review-item {
-  background: white;
+  background: none;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   text-decoration: none !important;
   color: #333;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  transition: none;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 0;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
   box-shadow: none;
 }
 
 .review-item:hover {
-  transform: none;
-  box-shadow: none;
+  background: white;
+}
+
+.review-item:last-child {
+  border-bottom: none;
 }
 
 
@@ -343,77 +361,76 @@ a.review-item:focus {
   font-size: 1.3rem;
   font-weight: 400;
   flex-shrink: 0;
-  background: white;
   padding: 0.3rem 0.6rem;
-  border-radius: 12px;
   white-space: nowrap;
-  border: 2px solid transparent;
-  background-clip: padding-box;
   position: relative;
-  transition: border-image 0.2s ease;
 }
 
-.review-item:hover .review-date {
-  border: 2px solid;
-  border-image: linear-gradient(135deg, #FF99D6, #4A90E2, #FFFF99) 1;
-}
+/* Removed annoying hover effect on dates */
 
 
 
-/* Radio grid - Optimized for performance */
+/* Radio grid - One per line like reviews */
 .radio-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  background: rgba(16, 185, 129, 0.05);
+  border: 3px solid rgba(16, 185, 129, 0.3);
+  padding: 0;
   margin-top: 2rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .radio-item {
-  background: white;
-  border: 3px solid rgba(16, 185, 129, 0.3);
-  padding: 2rem;
-  box-shadow: none;
-  transition: border-color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none !important;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .radio-item:hover {
-  border-color: #10B981;
-  box-shadow: none;
+  background: white;
 }
 
+/* Radio content is now inline */
+
 .radio-title {
-  display: block;
+  display: inline;
   font-size: 1.3rem;
   font-weight: 400;
   color: #333;
   text-decoration: none;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
 }
 
 .radio-host {
-  display: block;
+  display: inline;
   color: #333;
-  margin-bottom: 0.8rem;
   font-weight: 400;
   font-size: 1.3rem;
 }
 
 .radio-show {
-  display: block;
+  display: inline;
   color: #333;
   text-decoration: none;
   font-weight: 400;
-  margin-bottom: 0.8rem;
   font-size: 1.3rem;
 }
 
 .radio-date {
   display: block;
-  color: #333;
-  margin-bottom: 1rem;
+  color: #666;
   font-weight: 400;
   font-size: 1.3rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: auto;
 }
 
 .radio-playlist {
@@ -435,6 +452,8 @@ a.review-item:focus {
   background: rgba(16, 185, 129, 0.5);
 }
 
+/* No borders between radio items */
+
 /* Poster section - Simplified */
 .poster-section {
   text-align: center;
@@ -448,6 +467,8 @@ a.review-item:focus {
   border: 3px solid rgba(16, 185, 129, 0.3);
   box-shadow: none;
   border-radius: 0;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer - Light pink with simple texture */
@@ -499,7 +520,7 @@ a.review-item:focus {
 .form-field textarea {
   width: 100%;
   padding: 1.2rem;
-  border: 3px solid #e1e5e9;
+  border: 3px solid rgba(16, 185, 129, 0.3);
   font-size: 1.3rem;
   font-family: inherit;
   background: white;
@@ -514,7 +535,7 @@ a.review-item:focus {
   padding: 1.2rem;
   font-size: 1.3rem;
   font-family: inherit;
-  border: 3px solid #e1e5e9;
+  border: 3px solid rgba(16, 185, 129, 0.3);
   background: white;
   color: #333;
   cursor: pointer;
@@ -526,13 +547,13 @@ a.review-item:focus {
 
 input[type="date"]:focus,
 .form-field input[type="date"]:focus {
-  border-color: #4A90E2 !important;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1) !important;
+  border-color: #10B981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
 }
 
 input[type="date"]:hover,
 .form-field input[type="date"]:hover {
-  border-color: #4A90E2 !important;
+  border-color: #10B981 !important;
 }
 
 /* Target webkit date picker specifically - move to right side */
@@ -588,6 +609,10 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  border: 3px solid rgba(16, 185, 129, 0.3);
+  padding: 2rem;
+  border-radius: 0;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -657,13 +682,14 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   
   .reviews-grid {
     gap: 0.8rem;
+    padding: 1rem;
   }
   
   .review-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
-    padding: 1.2rem;
+    padding: 1rem;
   }
   
   .review-title {
@@ -837,18 +863,15 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 
 .service-item {
   background: white;
-  border: 3px solid rgba(16, 185, 129, 0.3);
+  border: none;
   padding: 1.5rem;
   text-align: center;
   box-shadow: none;
-  transition: border-color 0.2s ease;
+  transition: background-color 0.2s ease;
   border-radius: 0;
 }
 
-.service-item:hover {
-  border-color: #10B981;
-  box-shadow: none;
-}
+/* No hover effect for service items */
 
 .service-item h4 {
   font-size: 1.3rem;
