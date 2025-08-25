@@ -146,11 +146,13 @@ a {
   color: #4A90E2;
   text-decoration: none;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 a:hover {
   color: #357ABD;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* Content sections - Optimized */
@@ -181,7 +183,7 @@ a:hover {
 .content-section a {
   color: #4A90E2;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.3rem;
   border-bottom: none;
   transition: none;
@@ -331,7 +333,7 @@ a.review-item:focus {
 }
 
 .review-title {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.3rem;
   color: #4A90E2;
   flex: 1;
@@ -496,7 +498,7 @@ a.review-item:focus {
 
 .form-field label {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
   color: #333;
@@ -861,7 +863,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 
 .service-item h4 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #10B981;
   margin-bottom: 1rem;
 }
@@ -870,6 +872,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   color: #666;
   line-height: 1.6;
   font-size: 1.3rem;
+  font-weight: 400;
 }
 
 /* Responsive design - Optimized */
