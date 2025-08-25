@@ -981,7 +981,7 @@ p:has(+ .collapsible-section) {
 .newsletter-form .form-group {
   display: flex;
   gap: 0.75rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .newsletter-input {
