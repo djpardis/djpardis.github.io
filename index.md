@@ -11,7 +11,7 @@ canonical_url: https://djpardis.com/
 *Park with friends.*
 
 <!-- <div class="crosspost-container post-container" style="margin-bottom: 1rem;"> -->
-🏡 <strong>Welcome.</strong> I'm a data scientist and entrepreneur interested in data and AI tools and sharing what I learn through <a href="/blog">writing</a> and <a href="https://107wins.club" target="_blank">podcasting</a>. I love baseball. I used to <a href="https://djpardis.club" target="_blank">DJ</a> here and there, though the one in my handle stands for data janitor.
+🏡 <strong>Welcome.</strong> I'm a data scientist and entrepreneur interested in data and AI tools. I share what I learn through <a href="/blog">writing</a> and <a href="https://107wins.club" target="_blank">podcasting</a>. I love baseball. I used to <a href="https://djpardis.club" target="_blank">DJ</a> here and there, though the DJ in my handle stands for data janitor.
 <!-- </div> -->
 
 <!-- <details class="collapsible-section" markdown="1" open>
