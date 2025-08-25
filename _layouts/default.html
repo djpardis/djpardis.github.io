@@ -15,7 +15,7 @@
             <center>
               {% for node in site.pages_list %}
                 {% assign is_active = false %}
-                {% if page.title == node[0] %}
+                {% if page.title contains node[0] or page.title == node[0] %}
                   {% assign is_active = true %}
                 {% elsif node[0] == 'Blog' and page.layout == 'post' %}
                   {% assign is_active = true %}
