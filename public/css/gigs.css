@@ -12,6 +12,19 @@ img {
   display: block;
 }
 
+/* Optimize for fast rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce paint operations */
+.site-header,
+.site-footer,
+.hero-section {
+  will-change: auto;
+}
+
 /* Optimize animations for performance */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -332,38 +345,24 @@ a.review-item:focus {
 
 
 
-.review-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(135deg, #FF99D6, #4A90E2, #FFFF99);
-  transition: none;
-}
 
-.review-item:hover::before {
-  width: 8px;
-}
 
 .review-title {
   font-weight: 600;
   font-size: 1.3rem;
   color: #4A90E2;
-  flex: 1;
-  line-height: 1.4;
-  margin-left: 0.8rem;
+  margin-left: 0;
 }
 
 .review-date {
-  color: #666;
+  color: #333;
   font-size: 1.3rem;
   font-weight: 400;
   flex-shrink: 0;
   padding: 0.3rem 0.6rem;
   white-space: nowrap;
   position: relative;
+  margin-left: auto;
 }
 
 /* Removed annoying hover effect on dates */
@@ -388,9 +387,14 @@ a.review-item:focus {
   color: #333;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
   border-radius: 0;
   box-shadow: none;
+}
+
+.radio-item .review-title {
+  font-weight: 400;
+  color: #333;
 }
 
 .radio-item:hover {
@@ -406,6 +410,7 @@ a.review-item:focus {
   color: #333;
   text-decoration: none;
   margin-bottom: 0;
+  margin-right: 0.3rem;
 }
 
 .radio-host {
@@ -413,6 +418,7 @@ a.review-item:focus {
   color: #333;
   font-weight: 400;
   font-size: 1.3rem;
+  margin-right: 0.3rem;
 }
 
 .radio-show {
@@ -421,6 +427,7 @@ a.review-item:focus {
   text-decoration: none;
   font-weight: 400;
   font-size: 1.3rem;
+  margin-right: 0.3rem;
 }
 
 .radio-date {
@@ -488,9 +495,9 @@ a.review-item:focus {
   padding: 0 2rem;
 }
 
-.site-footer p {
+.site-footer .footer-content p {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
   position: relative;
   z-index: 1;
@@ -708,7 +715,10 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   }
   
   .radio-item {
-    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem;
   }
   
   .services-grid {
