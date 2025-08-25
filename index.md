@@ -7,8 +7,12 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-<!-- ![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Park with friends.* -->
+![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Park with friends.*
+
+Welcome! <br>
+
+I'm a data scientist and entrepreneur interested in data and AI tools and sharing what I learn through [writing](/blog) and [podcasting](https://107wins.club). I think baseball is cool. I used to [DJ](https://djpardis.club) here and there, though the one in my handle stands for data janitor.
 
 <!-- <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
@@ -17,6 +21,7 @@ canonical_url: https://djpardis.com/
 - **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/); [Adventures in authentication](/blog/2025/07/20-introducing-the-data-room-app/) 
 - **Sports analytics** — [Revisiting Moneyball](/blog/2024/12/24/revisiting-moneyball/) 
 - **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf) 
+- **DJing** — [Check out my sets and radio shows](https://djpardis.club){:target="_blank"}
 
 </details> -->
 
