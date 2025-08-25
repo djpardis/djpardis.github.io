@@ -254,10 +254,11 @@ iframe {
 }
 
 /* Post container styling */
-.container.content .post-container {
+.container.content .post-container,
+.post-container {
   border-radius: 6px;
   padding: 1rem 1.5rem;
-  margin: 1.5rem 0 2rem;
+  margin: 0.5rem 0 0.5rem;
   line-height: 1.5;
 }
 
@@ -266,8 +267,16 @@ iframe {
   background-color: rgba(125, 120, 181, 0.08);
 }
 
-.container.content .crosspost-container {
-  background-color: rgba(173, 216, 230, 0.12);
+.container.content .crosspost-container,
+.crosspost-container {
+  background-color: rgba(255, 191, 0, 0.15);
+}
+
+/* Ensure links work inside containers */
+.post-container a {
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
 
 .container.content .update-container {
