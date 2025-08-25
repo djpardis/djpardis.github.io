@@ -10,9 +10,9 @@ canonical_url: https://djpardis.com/
 ![Pardis Noorzad](/files/pics/pages/profile pic 3.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Park with friends.*
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
+<!-- <div class="crosspost-container post-container" style="margin-bottom: 1rem;"> -->
 🏡 <strong>Welcome.</strong> I'm a data scientist and entrepreneur interested in data and AI tools and sharing what I learn through <a href="/blog">writing</a> and <a href="https://107wins.club" target="_blank">podcasting</a>. I love baseball. I used to <a href="https://djpardis.club" target="_blank">DJ</a> here and there, though the one in my handle stands for data janitor.
-</div>
+<!-- </div> -->
 
 <!-- <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
