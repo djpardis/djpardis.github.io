@@ -138,7 +138,7 @@ body::before {
 }
 
 .hero-text {
-  flex: 0 1 400px;
+  flex: 0 1 600px;
 }
 
 .hero-text p {
@@ -255,7 +255,6 @@ h2::after {
 /* Reviews table - Table rows with same boundary color */
 .reviews-grid {
   background: rgba(16, 185, 129, 0.05);
-  border: 3px solid rgba(16, 185, 129, 0.3);
   padding: 0;
   margin-top: 2rem;
   border-radius: 0;
@@ -330,7 +329,6 @@ a.review-item:focus {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 0;
   box-shadow: none;
 }
@@ -339,9 +337,7 @@ a.review-item:focus {
   background: white;
 }
 
-.review-item:last-child {
-  border-bottom: none;
-}
+
 
 
 
@@ -372,7 +368,6 @@ a.review-item:focus {
 /* Radio grid - One per line like reviews */
 .radio-grid {
   background: rgba(16, 185, 129, 0.05);
-  border: 3px solid rgba(16, 185, 129, 0.3);
   padding: 0;
   margin-top: 2rem;
   border-radius: 0;
@@ -506,7 +501,7 @@ a.review-item:focus {
 /* Form styling - Optimized */
 .booking-form {
   width: 100%;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .form-field {
