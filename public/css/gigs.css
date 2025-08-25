@@ -66,7 +66,7 @@ body::before {
   padding: 1rem 2rem;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 0;
   transition: background-color 0.2s ease;
@@ -116,14 +116,16 @@ body::before {
 }
 
 .hero-text p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  color: #333;
 }
 
 .hero-text a {
   color: #4A90E2;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
 .hero-text a:hover {
@@ -143,6 +145,7 @@ body::before {
 a {
   color: #4A90E2;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
 a:hover {
@@ -168,16 +171,18 @@ a:hover {
 }
 
 .content-section p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   max-width: 800px;
+  color: #333;
 }
 
 .content-section a {
   color: #4A90E2;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.3rem;
   border-bottom: none;
   transition: none;
 }
@@ -198,6 +203,14 @@ h2 {
   position: relative;
 }
 
+/* Ensure all headings use consistent font sizing */
+h3, h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
 h2::after {
   content: '';
   position: absolute;
@@ -215,8 +228,8 @@ h2::after {
 .reviews-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
+  gap: 0.3rem;
+  margin-top: 1rem;
 }
 
 /* NUCLEAR OPTION - Remove ALL underlines from reviews */
@@ -281,12 +294,12 @@ a.review-item:focus {
 .review-item {
   background: white;
   border: none;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
   text-decoration: none !important;
   color: #333;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   transition: none;
   border-radius: 0;
   width: 100%;
@@ -318,8 +331,8 @@ a.review-item:focus {
 }
 
 .review-title {
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
   color: #4A90E2;
   flex: 1;
   line-height: 1.4;
@@ -328,16 +341,22 @@ a.review-item:focus {
 
 .review-date {
   color: #666;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 400;
   flex-shrink: 0;
   background: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 16px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
   white-space: nowrap;
   border: 2px solid transparent;
   background-clip: padding-box;
   position: relative;
+  transition: border-image 0.2s ease;
+}
+
+.review-item:hover .review-date {
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #FF99D6, #4A90E2, #FFFF99) 1;
 }
 
 
@@ -366,53 +385,54 @@ a.review-item:focus {
 
 .radio-title {
   display: block;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #10B981;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
   text-decoration: none;
   margin-bottom: 0.8rem;
 }
 
 .radio-host {
   display: block;
-  color: #666;
+  color: #333;
   margin-bottom: 0.8rem;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 
 .radio-show {
   display: block;
-  color: #4A90E2;
+  color: #333;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .radio-date {
   display: block;
-  color: #666;
+  color: #333;
   margin-bottom: 1rem;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 
 .radio-playlist {
   display: inline-block;
-  background: linear-gradient(135deg, #10B981, #059669);
+  background: rgba(16, 185, 129, 0.3);
   color: white !important;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   border-radius: 0;
-  transition: background 0.2s ease;
-  box-shadow: none;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .radio-playlist:hover {
-  background: linear-gradient(135deg, #059669, #047857);
+  background: rgba(16, 185, 129, 0.5);
 }
 
 /* Poster section - Simplified */
@@ -476,10 +496,10 @@ a.review-item:focus {
 .form-field label {
   display: block;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 0.8rem;
   color: #333;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.5px;
 }
 
@@ -488,7 +508,7 @@ a.review-item:focus {
   width: 100%;
   padding: 1.2rem;
   border: 3px solid #e1e5e9;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-family: inherit;
   background: white;
   color: #333;
@@ -500,7 +520,7 @@ a.review-item:focus {
 /* Date input field - keep it simple and matching site */
 .form-field input[type="date"] {
   padding: 1.2rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-family: inherit;
   border: 3px solid #e1e5e9;
   background: white;
@@ -555,17 +575,15 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 .booking-form button[type="submit"] {
   background: #4A90E2;
   color: white;
-  padding: 1.2rem 2.5rem;
-  border: none;
-  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.3rem;
   font-weight: 700;
-  font-family: inherit;
   border-radius: 0;
   cursor: pointer;
   transition: background-color 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 3px 10px rgba(74, 144, 226, 0.2);
 }
 
 .booking-form button[type="submit"]:hover {
@@ -621,7 +639,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   
   .book-button {
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .hero-content {
@@ -674,6 +692,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   .form-field input,
   .form-field textarea {
     padding: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -727,25 +746,27 @@ input[type="date"]::-webkit-calendar-picker-indicator,
     padding: 1.5rem;
   }
   
+
+  
   .service-item {
     padding: 1.5rem;
   }
   
   .service-item h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .service-item p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   
   .form-field label {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .form-field input,
   .form-field textarea {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0.8rem;
   }
   
@@ -811,7 +832,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 }
 
 .service-item h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #10B981;
   margin-bottom: 1rem;
@@ -820,7 +841,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 .service-item p {
   color: #666;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 /* Responsive design - Optimized */
@@ -835,7 +856,7 @@ input[type="date"]::-webkit-calendar-picker-indicator,
   
   .book-button {
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   .content-wrapper {
