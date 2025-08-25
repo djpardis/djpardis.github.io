@@ -28,7 +28,9 @@ body::before {
 
 /* Header - Optimized */
 .site-header {
-  background: conic-gradient(from 0deg, #4A90E2, #FF99D6, #FFFF99, #10B981, #4A90E2);
+  background: 
+    linear-gradient(to right, #7BB3F0 0%, #FFB3E0 30%, #FFB3E0 70%, #4FD1A5 100%),
+    repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255, 255, 255, 0.15) 30px, rgba(255, 255, 255, 0.15) 35px);
   color: white;
   padding: 2rem 0;
   position: sticky;
