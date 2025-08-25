@@ -52,13 +52,13 @@ Designed and shipped the flagship promotion optimization system
 <summary><h3>Academic background</h3></summary>
 
 - **Applied Mathematics** — [Ryerson University (MSc)](https://www.torontomu.ca/graphs-group/join-us/){:target="_blank"}   
-[Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
+Research: [Random graph models of online social networks](/files/slides/modeling_the_facebook_social_network.pdf){:target="_blank"}
 
 - **Artificial Intelligence (AI)** — [Amirkabir University of Technology (MSc)](http://aut.ac.ir/){:target="_blank"}  
-[Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
+Research: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"}
 
 - **Software Engineering** — [University of Tehran (BSc)](http://ece.ut.ac.ir/en){:target="_blank"}  
-[Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
+Research: [Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"}
 
 </details>
 
