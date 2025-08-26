@@ -12,7 +12,7 @@ canonical_url: https://djpardis.com/
     <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="width: 1500px; height: auto; max-width: 100%;">
   </div>
   <div style="background: transparent;">
-    🏡 I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.
+    🏡 Hello! I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.
   </div>
 </div>
 
