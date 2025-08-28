@@ -7,7 +7,7 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-<div class="hero-container" style="display: flex; align-items: center; gap: 30px; background: transparent;">
+<div class="hero-container" style="display: flex; align-items: center; gap: 20px; background: transparent;">
   <div>
     <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="width: 1500px; height: auto; max-width: 100%;">
   </div>
@@ -17,18 +17,29 @@ canonical_url: https://djpardis.com/
 </div>
 
 <style>
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+}
+
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column !important;
     align-items: flex-start !important;
     text-align: left !important;
+    gap: 15px !important;
   }
+  
   .hero-container img {
     width: 100% !important;
     max-width: 400px !important;
   }
 }
 </style>
+
+
 
 <!-- <details class="collapsible-section" markdown="1" open>
 <summary><h3>Interests and hobbies</h3></summary>
