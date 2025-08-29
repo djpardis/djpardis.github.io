@@ -70,13 +70,9 @@ This post was originally published on <a href="https://medium.com/@djpardis/mode
     <img src="/files/pics/blog/2019/ds-team-models-3.jpeg" alt="DS Crit meeting photo 3">
   </div>
 </div>
-*With AWS Redshift, you can create data shares and share it with internal and external customers.*<br><br>
-*This is Marketplace at Bruges by Samuel Prout.*<br><br>
-*From here.*
+*At our <a href="https://twitter.com/djpardis/status/955946036693843969" target="_blank">inaugural DS Crit meeting</a> at Twitter HQ.*
 
 Beginning in the <a href="https://en.wikipedia.org/wiki/Apache_Hadoop" target="_blank">first decade of the 21st century</a>, internet companies were able to gain visibility into the business in ways never possible in the age of spreadsheets and relational database management systems. No longer did they need to wait for end-of-quarter financial results in order to gauge business performance; and no more did they need to rely on extrapolations from samples to get a comprehensive view of what was working for all customers. In addition to improved visibility into the state of the business, the new data storage and aggregation capabilities enabled companies to build <a href="https://www.oreilly.com/library/view/data-analytics-with/9781491913734/ch01.html" target="_blank">data products</a> like search engines, language processors, and recommender systems.
-
-
 
 What became important was to determine how this work could be achieved efficiently and effectively. Designing and building a data science organization is a complex problem, particularly when determining the nature of data science interactions with stakeholders.
 
