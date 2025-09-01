@@ -122,6 +122,12 @@ defaults:
       path: "files/slides"  
     values:
       sitemap: false
+      
+  # Exclude CV page from sitemap (has noindex tag)
+  - scope:
+      path: "cv.md"
+    values:
+      sitemap: false
 
 # SASS/SCSS settings
 sass:
