@@ -10,9 +10,6 @@ Disallow: /.git/
 Disallow: /.github/
 Disallow: /node_modules/
 
-# Disallow deleted pages that should not be indexed
-Disallow: /library/
-Disallow: /pubs/
-Disallow: /publications/
+
 
 
