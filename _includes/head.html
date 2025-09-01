@@ -11,12 +11,7 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
   {% endif %}
 
-  {% comment %}
-  <!-- Manual title disabled - Jekyll SEO plugin handles titles -->
-  <title>
-    {{ page.title }} — {{ site.title }}
-  </title>
-  {% endcomment %}
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
@@ -67,133 +62,40 @@
 
   {% seo %}
 
-  <!-- Structured Data for Google Search -->
+  <!-- Additional Person schema for richer profile data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": "{{ site.author.name }}",
+    "alternateName": ["DJ Pardis", "djpardis"],
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}{{ site.defaults[0].values.image }}",
+    "jobTitle": "CEO & Founder",
+    "description": "{{ site.description }}",
+    "knowsAbout": ["Data Science", "Technology Leadership", "Secure Data Exchange", "Enterprise Software", "Team Management"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "General Folders",
+      "url": "https://generalfolders.com",
+      "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
+      "foundingDate": "2022",
+      "industry": "Enterprise Software"
+    },
+    "alumniOf": [
       {
-        "@type": "Person",
-        "@id": "{{ site.url }}/#person",
-        "name": "{{ site.author.name }}",
-        "alternateName": ["DJ Pardis", "djpardis"],
-        "url": "{{ site.url }}",
-        "image": "{{ site.url }}{{ site.defaults[0].values.image }}",
-        "jobTitle": "CEO & Founder",
-        "description": "{{ site.description }}",
-        "knowsAbout": ["Data Science", "Technology Leadership", "Secure Data Exchange", "Enterprise Software", "Team Management"],
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "{{ site.url }}/#organization",
-          "name": "General Folders",
-          "url": "https://generalfolders.com",
-          "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
-          "foundingDate": "2022",
-          "industry": "Enterprise Software",
-          "founder": { "@id": "{{ site.url }}/#person" }
-        },
-        "alumniOf": [
-          {
-            "@type": "Organization",
-            "name": "Twitter",
-            "url": "https://twitter.com"
-          },
-          {
-            "@type": "Organization", 
-            "name": "Carbon Health",
-            "url": "https://carbonhealth.com"
-          }
-        ],
-        "sameAs": {{ site.social.links | jsonify }}
+        "@type": "Organization",
+        "name": "Twitter",
+        "url": "https://twitter.com"
       },
       {
-        "@type": "WebSite",
-        "@id": "{{ site.url }}/#website",
-        "url": "{{ site.url }}",
-        "name": "{{ site.title }}",
-        "description": "{{ site.description }}",
-        "publisher": {
-          "@type": "Person",
-          "@id": "{{ site.url }}/#person"
-        },
-        "inLanguage": "{{ site.lang }}",
-        "mainNavigationElement": {
-          "@type": "SiteNavigationElement",
-          "name": "Main Navigation",
-          "url": [
-            {% for item in site.pages_list %}
-            "{{ site.url }}{{ item[1] }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          ]
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}{{ page.url }}#webpage",
-        "url": "{{ site.url }}{{ page.url }}",
-        "name": "{{ page.title | default: site.title }}",
-        "description": "{{ page.description | default: site.description }}",
-        "isPartOf": { "@id": "{{ site.url }}/#website" },
-        "about": { "@id": "{{ site.url }}/#person" },
-        "image": "{{ site.url }}{{ page.image | default: site.defaults[0].values.image }}",
-        "inLanguage": "{{ site.lang }}",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@id": "{{ site.url }}",
-                "name": "Home"
-              }
-            },
-            {% if page.url != '/' %}
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@id": "{{ site.url }}{{ page.url }}",
-                "name": "{{ page.title }}"
-              }
-            }
-            {% endif %}
-          ]
-        }
-      }{% if page.layout == 'post' %},
-      {
-        "@type": "BlogPosting",
-        "@id": "{{ site.url }}{{ page.url }}#article",
-        "headline": "{{ page.title }}",
-        "description": "{{ page.description }}",
-        "author": { "@id": "{{ site.url }}/#person" },
-        "datePublished": "{{ page.date | date_to_xmlschema }}",
-        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-        "mainEntityOfPage": { "@id": "{{ site.url }}{{ page.url }}#webpage" },
-        "publisher": { "@id": "{{ site.url }}/#person" },
-        "image": "{{ site.url }}{{ page.image | default: site.defaults[0].values.image }}",
-        "keywords": "{{ page.keywords }}",
-        "inLanguage": "{{ site.lang }}",
-        "articleSection": "Posts",
-        "wordCount": "{{ page.content | number_of_words }}"
-      }{% endif %},
-      {
-        "@type": "BreadcrumbList",
-        "@id": "{{ site.url }}/#breadcrumb",
-        "itemListElement": [
-          {% for item in site.pages_list %}
-          {
-            "@type": "ListItem",
-            "position": {{ forloop.index }},
-            "item": {
-              "@id": "{{ site.url }}{{ item[1] }}",
-              "name": "{{ item[0] }}"
-            }
-          }{% unless forloop.last %},{% endunless %}
-          {% endfor %}
-        ]
+        "@type": "Organization", 
+        "name": "Carbon Health",
+        "url": "https://carbonhealth.com"
       }
-    ]
+    ],
+    "sameAs": {{ site.social.links | jsonify }}
   }
   </script>
   
