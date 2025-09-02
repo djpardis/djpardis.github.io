@@ -70,7 +70,7 @@ This post was originally published on <a href="https://medium.com/@djpardis/mode
     <img src="/files/pics/blog/2019/ds-team-models-3.jpeg" alt="DS Crit meeting photo 3">
   </div>
 </div>
-*At our <a href="https://twitter.com/djpardis/status/955946036693843969" target="_blank">inaugural DS Crit meeting</a> at Twitter HQ.*
+*At our <a href="https://twitter.com/djpardis/status/955946036693843969" target="_blank">inaugural DS Crit meeting</a> at Twitter HQ.* 
 
 Beginning in the <a href="https://en.wikipedia.org/wiki/Apache_Hadoop" target="_blank">first decade of the 21st century</a>, internet companies were able to gain visibility into the business in ways never possible in the age of spreadsheets and relational database management systems. No longer did they need to wait for end-of-quarter financial results in order to gauge business performance; and no more did they need to rely on extrapolations from samples to get a comprehensive view of what was working for all customers. In addition to improved visibility into the state of the business, the new data storage and aggregation capabilities enabled companies to build <a href="https://www.oreilly.com/library/view/data-analytics-with/9781491913734/ch01.html" target="_blank">data products</a> like search engines, language processors, and recommender systems.
 
@@ -78,7 +78,7 @@ What became important was to determine how this work could be achieved efficient
 
 > A DS team isn't just the people, it is the process and the interaction of the team with the rest of the company.
 > 
-> DJ Patil <a href="#ref2">[2]</a>
+> DJ Patil</a>
 
 In this post, I compare some of the popular models of integrating data science teams within companies. In determining the best model, I take into account the following factors:
 
