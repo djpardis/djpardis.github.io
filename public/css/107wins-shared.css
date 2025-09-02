@@ -565,3 +565,25 @@ button:hover {
     font-size: 1.8rem !important;
   }
 }
+
+/* Required field styling */
+.required {
+  color: #e53e3e;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.form-field label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Optional: Add a subtle note about required fields */
+.form-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
