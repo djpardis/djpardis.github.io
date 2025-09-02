@@ -67,21 +67,28 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "{{ site.url }}/#person",
     "name": "{{ site.author.name }}",
     "alternateName": ["DJ Pardis", "djpardis"],
     "url": "{{ site.url }}",
-    "image": "{{ site.url }}{{ site.defaults[0].values.image }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{{ site.defaults[0].values.image }}"
+    },
     "jobTitle": "CEO & Founder",
     "description": "{{ site.description }}",
-    "knowsAbout": ["Data Science", "Technology Leadership", "Secure Data Exchange", "Enterprise Software", "Team Management"],
+    "knowsAbout": [
+      "Data Science",
+      "Technology Leadership", 
+      "Secure Data Exchange",
+      "Enterprise Software",
+      "Team Management"
+    ],
     "worksFor": {
       "@type": "Organization",
       "name": "General Folders",
       "url": "https://generalfolders.com",
       "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
-      "foundingDate": "2022",
-      "industry": "Enterprise Software"
+      "foundingDate": "2022-01-01"
     },
     "alumniOf": [
       {
