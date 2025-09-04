@@ -712,13 +712,10 @@ button:hover {
     gap: 0;
   }
   
-  /* Adjust Tetris positioning for mobile */
-  .hero-section::before {
-    left: -100px;
-  }
-  
+  /* Hide Tetris elements on mobile to prevent overlap and scrolling */
+  .hero-section::before,
   .hero-section::after {
-    right: -100px;
+    display: none;
   }
 }
 
