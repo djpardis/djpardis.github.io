@@ -637,34 +637,111 @@ button:hover {
   }
   
   .hero {
-    margin: -1rem -1rem 2rem -1rem;
+    margin: 0;
+    margin-bottom: 2rem;
     padding: 1rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    min-height: 60px;
+  }
+  
+  /* Add top padding to account for fixed header */
+  .podcast-container {
+    padding-top: 80px;
+  }
+  
+  /* Keep same Tetris block size on mobile but adjust for mobile width */
+  .hero::before {
+    width: 35px;
+    height: 35px;
+    box-shadow: 
+      /* Top row - blue blocks */
+      0 0 0 0 rgba(74, 144, 226, 0.2),
+      35px 0 0 0 rgba(74, 144, 226, 0.2),
+      70px 0 0 0 rgba(74, 144, 226, 0.2),
+      105px 0 0 0 rgba(74, 144, 226, 0.2),
+      140px 0 0 0 rgba(74, 144, 226, 0.2),
+      175px 0 0 0 rgba(74, 144, 226, 0.2),
+      210px 0 0 0 rgba(74, 144, 226, 0.2),
+      245px 0 0 0 rgba(74, 144, 226, 0.2),
+      280px 0 0 0 rgba(74, 144, 226, 0.2),
+      315px 0 0 0 rgba(74, 144, 226, 0.2),
+      350px 0 0 0 rgba(74, 144, 226, 0.2),
+      385px 0 0 0 rgba(74, 144, 226, 0.2),
+      420px 0 0 0 rgba(74, 144, 226, 0.2),
+      
+      /* Second row - green blocks */
+      0 35px 0 0 rgba(16, 185, 129, 0.15),
+      35px 35px 0 0 rgba(16, 185, 129, 0.15),
+      70px 35px 0 0 rgba(16, 185, 129, 0.15),
+      105px 35px 0 0 rgba(16, 185, 129, 0.15),
+      140px 35px 0 0 rgba(16, 185, 129, 0.15),
+      175px 35px 0 0 rgba(16, 185, 129, 0.15),
+      210px 35px 0 0 rgba(16, 185, 129, 0.15),
+      245px 35px 0 0 rgba(16, 185, 129, 0.15),
+      280px 35px 0 0 rgba(16, 185, 129, 0.15),
+      315px 35px 0 0 rgba(16, 185, 129, 0.15),
+      350px 35px 0 0 rgba(16, 185, 129, 0.15),
+      385px 35px 0 0 rgba(16, 185, 129, 0.15),
+      420px 35px 0 0 rgba(16, 185, 129, 0.15),
+      
+      /* Third row - pink blocks */
+      0 70px 0 0 rgba(255, 153, 214, 0.3),
+      35px 70px 0 0 rgba(255, 153, 214, 0.3),
+      70px 70px 0 0 rgba(255, 153, 214, 0.3),
+      105px 70px 0 0 rgba(255, 153, 214, 0.3),
+      140px 70px 0 0 rgba(255, 153, 214, 0.3),
+      175px 70px 0 0 rgba(255, 153, 214, 0.3),
+      210px 70px 0 0 rgba(255, 153, 214, 0.3),
+      245px 70px 0 0 rgba(255, 153, 214, 0.3),
+      280px 70px 0 0 rgba(255, 153, 214, 0.3),
+      315px 70px 0 0 rgba(255, 153, 214, 0.3),
+      350px 70px 0 0 rgba(255, 153, 214, 0.3),
+      385px 70px 0 0 rgba(255, 153, 214, 0.3),
+      420px 70px 0 0 rgba(255, 153, 214, 0.3);
   }
   
   .hamburger {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .hero-right {
     position: relative;
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
   }
   
   .hero-left h1 {
     font-size: 1.5rem;
     font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
   }
   
   .hero-left {
     flex: 1;
     padding-left: 1rem;
+    display: flex;
+    align-items: center;
   }
   
-  .hero-right {
-    flex-shrink: 0;
+  .hero-left h1 a {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
   }
   
   .nav-menu {
@@ -771,6 +848,16 @@ button:hover {
   /* Additional mobile improvements */
   .section h2 {
     font-size: 1.5rem;
+  }
+  
+  /* Add proper spacing after sticky header on mobile for pages without hero section */
+  .hero + .section {
+    margin-top: 1.5rem;
+  }
+  
+  /* But don't add extra spacing when there's a hero section */
+  .hero + .hero-section + .section {
+    margin-top: 0;
   }
 
   .section h3 {
