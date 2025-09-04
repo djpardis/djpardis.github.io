@@ -42,7 +42,6 @@ body {
   top: 0;
   z-index: 1000;
   margin-top: -2rem;
-  position: relative;
   overflow: visible;
 }
 
@@ -232,80 +231,7 @@ body {
   overflow: visible;
 }
 
-.hero-section::before,
-.hero-section::after {
-  content: '';
-  position: absolute;
-  border-radius: 4px;
-  z-index: 1;
-}
-
-/* Left side Tetris game */
-.hero-section::before {
-  left: 0;
-  bottom: 0;
-  width: 35px;
-  height: 35px;
-  background: rgba(16, 185, 129, 0.15);
-  box-shadow: 
-    /* Left side Tetris base - different pattern */
-    0 0 0 0 rgba(74, 144, 226, 0.2),
-    35px 0 0 0 rgba(16, 185, 129, 0.15),
-    70px 0 0 0 rgba(255, 153, 214, 0.3),
-    105px 0 0 0 rgba(255, 153, 214, 0.3),
-    140px 0 0 0 rgba(74, 144, 226, 0.2),
-    175px 0 0 0 rgba(16, 185, 129, 0.15),
-    /* Different stacking pattern */
-    35px -35px 0 0 rgba(16, 185, 129, 0.15),
-    70px -35px 0 0 rgba(255, 153, 214, 0.3),
-    105px -35px 0 0 rgba(255, 153, 214, 0.3),
-    140px -35px 0 0 rgba(74, 144, 226, 0.2),
-    /* Gaps and higher stacks */
-    70px -70px 0 0 rgba(255, 153, 214, 0.3),
-    105px -70px 0 0 rgba(255, 153, 214, 0.3),
-    140px -70px 0 0 rgba(74, 144, 226, 0.2),
-    /* One tall stack */
-    140px -105px 0 0 rgba(74, 144, 226, 0.2),
-    /* One falling piece: L-piece */
-    35px -140px 0 0 rgba(16, 185, 129, 0.15),
-    35px -175px 0 0 rgba(16, 185, 129, 0.15),
-    35px -210px 0 0 rgba(16, 185, 129, 0.15),
-    70px -210px 0 0 rgba(16, 185, 129, 0.15);
-}
-
-/* Right side Tetris game - with base */
-.hero-section::after {
-  right: 0;
-  bottom: 0;
-  width: 35px;
-  height: 35px;
-  background: rgba(255, 153, 214, 0.3);
-  box-shadow: 
-    /* Tetris-like base with irregular heights */
-    0 0 0 0 rgba(74, 144, 226, 0.2),
-    -35px 0 0 0 rgba(74, 144, 226, 0.2),
-    -70px 0 0 0 rgba(16, 185, 129, 0.15),
-    -105px 0 0 0 rgba(16, 185, 129, 0.15),
-    -140px 0 0 0 rgba(255, 153, 214, 0.3),
-    -175px 0 0 0 rgba(255, 153, 214, 0.3),
-    /* Irregular stacking - different heights */
-    0 -35px 0 0 rgba(74, 144, 226, 0.2),
-    -35px -35px 0 0 rgba(74, 144, 226, 0.2),
-    -70px -35px 0 0 rgba(16, 185, 129, 0.15),
-    -140px -35px 0 0 rgba(255, 153, 214, 0.3),
-    -175px -35px 0 0 rgba(255, 153, 214, 0.3),
-    /* Higher stacks in some places */
-    0 -70px 0 0 rgba(74, 144, 226, 0.2),
-    -140px -70px 0 0 rgba(255, 153, 214, 0.3),
-    -175px -70px 0 0 rgba(255, 153, 214, 0.3),
-    /* Even higher */
-    -175px -105px 0 0 rgba(255, 153, 214, 0.3),
-    /* One falling piece: S-piece */
-    -70px -105px 0 0 rgba(255, 153, 214, 0.3),
-    -35px -105px 0 0 rgba(255, 153, 214, 0.3),
-    -35px -140px 0 0 rgba(255, 153, 214, 0.3),
-    0 -140px 0 0 rgba(255, 153, 214, 0.3);
-}
+/* Tetris blocks removed from hero section */
 
 .hero-content {
   max-width: 1000px;
@@ -648,7 +574,7 @@ button:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: transparent;
+    background: white;
     height: 105px;
   }
   
