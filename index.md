@@ -46,7 +46,7 @@ canonical_url: https://djpardis.com/
 
 - **Data tools** — [B2B data transfer use cases and methodology]({% post_url 2023-04-03-the-state-of-data-exchange %}); [Data ∩ water terms](https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6) 
 - **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/); [Adventures in authentication](/blog/2025/07/20-introducing-the-data-room-app/) 
-- **Sports analytics** — [Revisiting Moneyball](/blog/2024/12/24/revisiting-moneyball/) 
+- **Sports analytics** — [Revisiting Moneyball](/blog/2025/07/24/revisiting-moneyball/) 
 - **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf) 
 - **DJing** — [Check out my sets and radio shows](https://djpardis.club){:target="_blank"}
 
