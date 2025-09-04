@@ -711,6 +711,15 @@ button:hover {
     grid-template-columns: 1fr;
     gap: 0;
   }
+  
+  /* Adjust Tetris positioning for mobile */
+  .hero-section::before {
+    left: -100px;
+  }
+  
+  .hero-section::after {
+    right: -100px;
+  }
 }
 
 /* Required field styling */
