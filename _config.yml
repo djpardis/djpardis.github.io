@@ -51,7 +51,6 @@ safe: false
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Jekyll SEO Tag configuration - this is the correct way
 title_separator: " — "
