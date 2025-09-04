@@ -639,7 +639,7 @@ button:hover {
   .hero {
     margin: 0;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 0;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     box-sizing: border-box;
@@ -648,16 +648,27 @@ button:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    min-height: 60px;
+    background: transparent;
+    height: 105px;
+  }
+  
+  .hero-left {
+    position: absolute;
+    top: 52.5px;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  
+  .hero-right {
+    position: absolute;
+    top: 52.5px;
+    right: 1rem;
+    transform: translateY(-50%);
   }
   
   /* Add top padding to account for fixed header */
   .podcast-container {
-    padding-top: 80px;
+    padding-top: 105px;
   }
   
   /* Keep same Tetris block size on mobile but adjust for mobile width */
@@ -718,30 +729,27 @@ button:hover {
   }
   
   .hero-right {
-    position: relative;
-    margin-left: 1rem;
     display: flex;
     align-items: center;
+    height: 100%;
   }
   
   .hero-left h1 {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1;
   }
   
   .hero-left {
-    flex: 1;
-    padding-left: 1rem;
     display: flex;
     align-items: center;
+    height: 100%;
   }
   
   .hero-left h1 a {
-    display: flex;
-    align-items: center;
-    line-height: 1.2;
+    margin: 0;
+    line-height: 1;
   }
   
   .nav-menu {
@@ -852,7 +860,7 @@ button:hover {
   
   /* Add proper spacing after sticky header on mobile for pages without hero section */
   .hero + .section {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
   
   /* But don't add extra spacing when there's a hero section */
