@@ -49,18 +49,7 @@ google_site_verification: "ATx7HggnAwR6TFQqPQoPgnZv3YqQ0_dHNbbQVc-_mXU"
 
 safe: false
 
-plugins:
-  - jekyll-sitemap
-
-# Jekyll SEO Tag configuration - this is the correct way
-title_separator: " — "
-
-# Sitemap configuration
-sitemap:
-  priority: 1.0
-  changefreq: 'monthly'
-  lastmod: site.time
-  
+plugins: []
 # Exclude files from sitemap and build
 exclude:
   - Gemfile
