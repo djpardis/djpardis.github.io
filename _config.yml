@@ -82,9 +82,6 @@ defaults:
       layout: "post"
       permalink: "/blog/:year/:month/:day/:title/"
       active_section: blog
-      sitemap:
-        priority: 0.7
-        changefreq: yearly
       og:
         type: article
       twitter:
@@ -97,22 +94,6 @@ defaults:
     values:
       layout: "page"
       
-  # Exclude preview files from sitemap
-  - scope:
-      path: "public/preview"
-    values:
-      sitemap: false
-      
-  # Exclude papers and slides from main sitemap (they can be in their own sitemap)
-  - scope:
-      path: "files/papers"
-    values:
-      sitemap: false
-      
-  - scope:
-      path: "files/slides"  
-    values:
-      sitemap: false
       
 
 
