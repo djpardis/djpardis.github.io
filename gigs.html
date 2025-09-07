@@ -34,11 +34,11 @@
 
     <link rel="stylesheet" href="/public/css/gigs.css">
     
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data for SEO and Site Hierarchy -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "WebSite"],
       "name": "DJ Pardis",
       "description": "Professional DJ services for events, weddings, corporate parties, and special occasions",
       "url": "https://djpardis.com/gigs.html",
@@ -56,7 +56,19 @@
       "serviceType": "DJ Services",
       "areaServed": ["San Francisco", "Bay Area", "California"],
       "priceRange": "$$",
-      "image": "https://djpardis.com/files/pics/pages/djing.jpg"
+      "image": "https://djpardis.com/files/pics/pages/djing.jpg",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "DJ Pardis Home",
+          "url": "https://djpardis.com/gigs.html"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Book DJ Pardis",
+          "url": "https://djpardis.com/djpardis-request.html"
+        }
+      ]
     }
     </script>
 </head>
