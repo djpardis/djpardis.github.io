@@ -31,6 +31,35 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/pod_favicon/apple-touch-icon.png">
 
   <link rel="stylesheet" href="/public/css/107wins-shared.css?v=3">
+  
+  <!-- Structured Data for Site Hierarchy -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The 107 Wins Pod",
+    "alternateName": "107 Wins Podcast",
+    "url": "https://djpardis.com/107wins",
+    "mainEntity": {
+      "@type": "PodcastSeries",
+      "name": "The 107 Wins Pod",
+      "description": "Conversations about business building, tech trends, proven tactics, and learning new things",
+      "url": "https://djpardis.com/107wins"
+    },
+    "hasPart": [
+      {
+        "@type": "WebPage",
+        "name": "Hosts",
+        "url": "https://djpardis.com/hosts.html"
+      },
+      {
+        "@type": "WebPage", 
+        "name": "Episodes",
+        "url": "https://djpardis.com/episodes.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="podcast-container">
