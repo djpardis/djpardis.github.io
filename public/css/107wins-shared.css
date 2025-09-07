@@ -223,7 +223,7 @@ body {
 .hero-section {
   background: white;
   color: #1e293b;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   margin: 1rem 0 2rem 0;
   text-align: center;
   border-radius: 0;
@@ -623,6 +623,10 @@ button:hover {
   
   .pod-logo {
     max-width: 200px;
+  }
+  
+  .hero-section {
+    padding: 2rem 1rem;
   }
   
   /* Keep same Tetris block size on mobile but adjust for mobile width */
