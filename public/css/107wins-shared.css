@@ -238,6 +238,24 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+}
+
+.hero-logo {
+  flex-shrink: 0;
+}
+
+.pod-logo {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-title {
@@ -595,6 +613,16 @@ button:hover {
   /* Add top padding to account for fixed header */
   .podcast-container {
     padding-top: 105px;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .pod-logo {
+    max-width: 200px;
   }
   
   /* Keep same Tetris block size on mobile but adjust for mobile width */
