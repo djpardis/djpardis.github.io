@@ -29,6 +29,35 @@
   <link rel="manifest" href="/site.webmanifest"><!-- Clean web app manifest -->
 
   <link rel="stylesheet" href="/public/css/gigs.css">
+  
+  <!-- Structured Data for DJ Site Hierarchy -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DJ Pardis",
+    "url": "https://djpardis.com/gigs.html",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://djpardis.com/#person",
+      "name": "DJ Pardis",
+      "jobTitle": "Professional DJ",
+      "description": "Professional DJ services for events, weddings, corporate parties"
+    },
+    "hasPart": [
+      {
+        "@type": "WebPage",
+        "name": "DJ Pardis Home",
+        "url": "https://djpardis.com/gigs.html"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Book DJ Pardis",
+        "url": "https://djpardis.com/djpardis-request.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Full-width header with strong visual impact -->
