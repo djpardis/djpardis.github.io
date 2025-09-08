@@ -93,7 +93,7 @@ After losing MVP **Jason Giambi** (7-year, $120M), **Johnny Damon** (4-year, $31
 
 The A's GM, **Billy Beane**, working with statistician **Paul DePodesta**, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
 
-This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed **Scott Hatteberg** or traded for **David Justice**, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. This approach also aimed to make decision makers accountable for outcomes by establishing a decision-making framework that could be communicated, replicated, and thus improved upon.
+This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed **Scott Hatteberg** or traded for **David Justice**, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. 
 
 ### [Getting on base was undervalued.](#table-of-contents) {#getting-on-base-was-undervalued}
 
