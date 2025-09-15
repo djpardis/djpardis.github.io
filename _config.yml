@@ -49,7 +49,8 @@ google_site_verification: "ATx7HggnAwR6TFQqPQoPgnZv3YqQ0_dHNbbQVc-_mXU"
 
 safe: false
 
-plugins: []
+plugins:
+  - jekyll-seo-tag
 # Exclude files from sitemap and build
 exclude:
   - Gemfile
