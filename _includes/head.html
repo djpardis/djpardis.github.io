@@ -11,6 +11,9 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
   {% endif %}
 
+  <!-- SEO plugin -->
+  {% seo %}
+
 
 
   <!-- CSS -->
@@ -138,47 +141,80 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "{{ site.title }}",
-    "alternateName": "djpardis.com",
+    "alternateName": ["djpardis.com", "DJ Pardis", "Pardis Noorzad"],
     "url": "{{ site.url }}",
     "description": "{{ site.description }}",
+    "publisher": {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author.name }}",
+      "sameAs": {{ site.social.links | jsonify }}
+    },
     "author": {
       "@type": "Person",
+      "@id": "{{ site.url }}/#person",
       "name": "{{ site.author.name }}"
     },
     "mainEntity": {
       "@type": "Person",
+      "@id": "{{ site.url }}/#person",
       "name": "{{ site.author.name }}"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ site.url }}"
     },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
     "hasPart": [
       {
         "@type": "WebPage",
         "name": "Bio",
         "url": "{{ site.url }}/",
-        "description": "Biography and background of Pardis Noorzad"
+        "description": "Biography and background of Pardis Noorzad",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website"
+        }
       },
       {
         "@type": "WebPage", 
         "name": "Work",
         "url": "{{ site.url }}/work/",
-        "description": "Professional work, talks, and publications"
+        "description": "Professional work, talks, and publications",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website"
+        }
       },
       {
         "@type": "WebPage",
         "name": "Blog", 
         "url": "{{ site.url }}/blog/",
-        "description": "Blog posts on data science and technology"
+        "description": "Blog posts on data science and technology",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website"
+        }
       },
       {
         "@type": "WebPage",
         "name": "Subscribe",
         "url": "{{ site.url }}/subscribe/", 
-        "description": "Newsletter subscription for updates"
+        "description": "Newsletter subscription for updates",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website"
+        }
       }
-    ]
+    ],
+    "@id": "{{ site.url }}/#website"
   }
   </script>
 
