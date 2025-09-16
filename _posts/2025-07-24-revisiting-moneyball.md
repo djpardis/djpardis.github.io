@@ -117,7 +117,7 @@ The strategy worked. The 2002 A's ranked 2nd in the American League (AL) in OBP 
 
 Scott Hatteberg was available at a below-market price due to perceived limitations. The former Boston Red Sox catcher developed nerve damage in his throwing elbow, making catching nearly impossible and leaving him without a clear defensive position.
 
-Oakland signed Hatteberg to first base for $950K on a one-year contract after Colorado declined salary arbitration. The A's saw past the injury to identify his core value: exceptional plate discipline and on-base skills. His .367 OBP in 2000 and .410 OBP in 1999 demonstrated an ability to get on base that strongly correlated with offensive production.
+Oakland signed Hatteberg to first base for $950K on a one-year contract after Colorado declined salary arbitration. The A's saw past the injury to identify exceptional plate discipline and on-base skills. His .367 OBP in 2000 and .410 OBP in 1999 demonstrated an ability to get on base.
 
 The position switch to first base was unprecedented; he had never played the position professionally. He learned first base during spring training with infield coach **Ron Washington**.
 
