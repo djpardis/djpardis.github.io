@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/image-size.css">
 
   <!-- Clean favicon setup - PNG DJ logo -->
-  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.png?v=2" type="image/png"><!-- DJ logo favicon -->
+  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.png?v=4" type="image/png"><!-- DJ logo favicon -->
   <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.ico" sizes="any"><!-- ICO fallback -->
   <meta name="msapplication-TileColor" content="#FFFF99"><!-- Windows tile color -->
   <meta name="theme-color" content="#FFFF99"><!-- Mobile theme color -->
@@ -95,16 +95,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
-    "alternateName": ["DJ Pardis", "djpardis"],
-    "url": "{{ site.url }}",
+        "@type": "Person",
+        "name": "{{ site.author.name }}",
+        "alternateName": ["DJ Pardis", "djpardis"],
+        "url": "{{ site.url }}",
     "image": {
       "@type": "ImageObject",
       "url": "{{ site.url }}{{ site.defaults[0].values.image }}"
     },
-    "jobTitle": "CEO & Founder",
-    "description": "{{ site.description }}",
+        "jobTitle": "CEO & Founder",
+        "description": "{{ site.description }}",
     "knowsAbout": [
       "Data Science",
       "Technology Leadership", 
@@ -112,26 +112,26 @@
       "Enterprise Software",
       "Team Management"
     ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "General Folders",
-      "url": "https://generalfolders.com",
-      "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "General Folders",
+          "url": "https://generalfolders.com",
+          "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
       "foundingDate": "2022-01-01"
-    },
-    "alumniOf": [
-      {
-        "@type": "Organization",
-        "name": "Twitter",
-        "url": "https://twitter.com"
-      },
-      {
-        "@type": "Organization", 
-        "name": "Carbon Health",
-        "url": "https://carbonhealth.com"
-      }
-    ],
-    "sameAs": {{ site.social.links | jsonify }}
+        },
+        "alumniOf": [
+          {
+            "@type": "Organization",
+            "name": "Twitter",
+            "url": "https://twitter.com"
+          },
+          {
+            "@type": "Organization", 
+            "name": "Carbon Health",
+            "url": "https://carbonhealth.com"
+          }
+        ],
+        "sameAs": {{ site.social.links | jsonify }}
   }
   </script>
 
@@ -139,13 +139,13 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+        "@type": "WebSite",
     "name": "{{ site.title }}",
     "alternateName": ["djpardis.com", "DJ Pardis", "Pardis Noorzad"],
-    "url": "{{ site.url }}",
-    "description": "{{ site.description }}",
-    "publisher": {
-      "@type": "Person",
+        "url": "{{ site.url }}",
+        "description": "{{ site.description }}",
+        "publisher": {
+          "@type": "Person",
       "@id": "{{ site.url }}/#person",
       "name": "{{ site.author.name }}",
       "sameAs": {{ site.social.links | jsonify }}
@@ -223,17 +223,17 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
         "name": "{{ site.title }}",
         "item": "{{ site.url }}"
       },
-      {
-        "@type": "ListItem", 
-        "position": 2,
+            {
+              "@type": "ListItem",
+              "position": 2,
         "name": "{{ page.title }}",
         "item": "{{ site.url }}{{ page.url }}"
       }
