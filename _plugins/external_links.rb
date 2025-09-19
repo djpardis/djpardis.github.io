@@ -1,7 +1,10 @@
 require 'nokogiri'
 
 Jekyll::Hooks.register [:pages, :posts], :post_render do |doc|
-  doc.output = process_external_links(doc.output)
+  # Skip XML files like sitemap.xml and atom feeds
+  unless doc.url.end_with?('.xml') || doc.path.end_with?('.xml')
+    doc.output = process_external_links(doc.output)
+  end
 end
 
 def process_external_links(content)

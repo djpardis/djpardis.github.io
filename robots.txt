@@ -9,6 +9,5 @@ Disallow: /.git/
 Disallow: /.github/
 Disallow: /node_modules/
 
-
-
-
+# Sitemap
+Sitemap: https://djpardis.com/sitemap.xml
