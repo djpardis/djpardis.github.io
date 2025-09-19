@@ -58,8 +58,8 @@ module Jekyll
     end
 
     def process_page(page)
-      # Skip if it's a Jekyll system file
-      return if page.name.start_with?('_') || page.name == 'Gemfile' || page.name == 'Gemfile.lock'
+      # Skip if it's a Jekyll system file or sitemap
+      return if page.name.start_with?('_') || page.name == 'Gemfile' || page.name == 'Gemfile.lock' || page.name == 'sitemap.xml'
       
       # Auto-extract first image from content if no image is specified
       if page.data['image'].nil? || page.data['image'].empty?
