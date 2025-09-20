@@ -19,18 +19,18 @@ Fill out the form below and I'll get back to you within 24-48 hours.
   <h3>Contact information</h3>
   
   <p><strong>First name *</strong><br>
-  <input type="text" id="first_name" name="first_name" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
+  <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
   
   <p><strong>Last name *</strong><br>
-  <input type="text" id="last_name" name="last_name" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
+  <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
   
   <p><strong>Company / Venue *</strong><br>
-  <input type="text" id="company_venue" name="company_venue" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
+  <input type="text" id="company_venue" name="company_venue" placeholder="Company or venue name" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
   
   <h3>Event details</h3>
   
   <p><strong>Event date *</strong><br>
-  <input type="date" id="event_date" name="event_date" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding: 12px; box-sizing: border-box;"></p>
+  <input type="date" id="event_date" name="event_date" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit; min-height: 44px; box-sizing: border-box;"></p>
   
   <p><strong>Event location *</strong><br>
   <input type="text" id="event_location" name="event_location" placeholder="City, neighborhood, or full address" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
