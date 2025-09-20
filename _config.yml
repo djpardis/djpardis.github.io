@@ -14,7 +14,7 @@ pages_list:
   Bio: '/'
   Blog: '/blog'
   Work: '/work'
-  Gigs: '/gigs'
+  Gigs: '/dj-gigs'
 
 # Collections for better organization
 collections:
