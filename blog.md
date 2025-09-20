@@ -7,8 +7,8 @@ canonical_url: https://djpardis.com/blog
 permalink: /blog/
 ---
 
-![Cactus](/files/pics/pages/cactus.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*Cactus at dusk, April 2023.*
+![Sunset over water](/files/pics/pages/ocean.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+*Sunset over water, April 2023.*
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
