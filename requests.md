@@ -30,10 +30,10 @@ Fill out the form below and I'll get back to you within 24-48 hours.
   <h3>Event details</h3>
   
   <p><strong>Event date *</strong><br>
-  <input type="date" id="event_date" name="event_date" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
+  <input type="date" id="event_date" name="event_date" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding: 12px; box-sizing: border-box;"></p>
   
   <p><strong>Event location *</strong><br>
-  <input type="text" id="event_location" name="event_location" placeholder="City, State or Full Address" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
+  <input type="text" id="event_location" name="event_location" placeholder="City, neighborhood, or full address" required class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
   
   <p><strong>Event website</strong><br>
   <input type="url" id="event_website" name="event_website" placeholder="https://example.com" class="newsletter-input" style="width: 100%; font-family: inherit; font-size: inherit;"></p>
