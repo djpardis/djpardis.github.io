@@ -3,8 +3,8 @@ layout: page
 title: Gigs
 description: DJ Pardis - Professional DJ services for events, weddings, corporate parties. Annual song reviews, radio shows, and live performances.
 keywords: DJ Pardis, DJ services, wedding DJ, corporate DJ, event DJ, party DJ, San Francisco DJ, Bay Area DJ, professional DJ
-canonical_url: https://djpardis.com/gigs
-permalink: /gigs/
+canonical_url: https://djpardis.com/dj-gigs
+permalink: /dj-gigs/
 ---
 
 <div class="hero-container" style="display: flex; align-items: center; gap: 20px; background: transparent;">
