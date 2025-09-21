@@ -38,3 +38,10 @@ permalink: /blog/
 - *[Hourly mentions of a word on Twitter]({{ site.baseurl }}{% post_url 2015-05-23-hourly-mentions-of-a-word-on-twitter %})*  
   May 23, 2015
 </details>
+
+<details class="collapsible-section" markdown="1">
+<summary><h3>Coming soon</h3></summary>
+
+- *[Modern finance teams need data science]({{ site.baseurl }}/2025/09/21/modern-finance-teams-data-science/)*  
+  September 21, 2025 (draft)  
+</details>
