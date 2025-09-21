@@ -11,7 +11,7 @@ permalink: /work/
 *Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
 
 <details class="collapsible-section" markdown="1">
-<summary><h3>Essays</h3></summary>
+<summary><h3>Essays archive</h3></summary>
 
 <p><span class="highlight-text">Follow <a href="https://medium.com/@djpardis/">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed">RSS</a> or <a href="https://djpardis.medium.com/subscribe">email</a> for updates.</span></p>
 
