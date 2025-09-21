@@ -42,6 +42,9 @@ permalink: /blog/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Coming soon</h3></summary>
 
-- *[Modern finance teams need data science]({{ site.baseurl }}/2025/09/21/modern-finance-teams-data-science/)*  
-  September 21, 2025 (draft)  
+- *[Products that scale: One solution does not fit all](/2025/09/21/products-that-scale/)*  
+  September 21, 2025 (draft)
+
+- *[Modern finance teams need data science](/2025/09/21/modern-finance-teams-data-science/)*  
+  September 21, 2025 (draft)
 </details>
