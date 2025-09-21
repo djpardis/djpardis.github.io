@@ -78,7 +78,7 @@ What became important was to determine how this work could be achieved efficient
 
 > A DS team isn't just the people, it is the process and the interaction of the team with the rest of the company.
 > 
-> DJ Patil</a>
+> DJ Patil<a href="#ref2">[2]</a>
 
 In this post, I compare some of the popular models of integrating data science teams within companies. In determining the best model, I take into account the following factors:
 
@@ -292,10 +292,13 @@ P.S. I had an easier time saying all of this in a Tweet,
 
 ## [References](#table-of-contents) {#references}
 
-<a id="ref1" href="#ref1">[1]</a> <a href="https://medium.learningbyshipping.com/functional-versus-unit-organizations-6b82bfbaa57" target="_blank">Functional versus Unit Organizations</a> by Steven Sinofsky<br>
-<a id="ref2" href="#ref2">[2]</a> <a href="http://www.datascienceassn.org/sites/default/files/Building%20Data%20Science%20Teams.pdf" target="_blank">Building Data Science Teams</a> by DJ Patil<br>
-<a id="ref3" href="#ref3">[3]</a> <a href="https://www.oreilly.com/ideas/where-should-you-put-your-data-scientists" target="_blank">Where should you put your data scientists</a> by Daniel Tunkelang<br>
-<a id="ref4" href="#ref4">[4]</a> <a href="https://www.youtube.com/watch?v=rqWnEJXnfiY" target="_blank">How to play well with others</a> by Josh Wills
+<a id="ref1" href="#ref1-back">[1]</a> <a href="https://medium.learningbyshipping.com/functional-versus-unit-organizations-6b82bfbaa57" target="_blank">Functional versus Unit Organizations</a> by Steven Sinofsky<br>
+
+<a id="ref2" href="#ref2-back">[2]</a> <a href="http://www.datascienceassn.org/sites/default/files/Building%20Data%20Science%20Teams.pdf" target="_blank">Building Data Science Teams</a> by DJ Patil<br>
+
+<a id="ref3" href="#ref3-back">[3]</a> <a href="https://www.oreilly.com/ideas/where-should-you-put-your-data-scientists" target="_blank">Where should you put your data scientists</a> by Daniel Tunkelang<br>
+
+<a id="ref4" href="#ref4-back">[4]</a> <a href="https://www.youtube.com/watch?v=rqWnEJXnfiY" target="_blank">How to play well with others</a> by Josh Wills
 
 ## [Acknowledgements](#table-of-contents) {#acknowledgements}
 

@@ -160,6 +160,14 @@ iframe {
   }
 }
 
+/* Force URL wrapping everywhere - not just mobile */
+.post p a[href^="http"] {
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+}
+
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
   img[style*="max-width: 500px"] {
@@ -170,6 +178,21 @@ iframe {
   img[style*="max-width: 350px"] {
     width: 100% !important;
     max-width: 100% !important;
+  }
+  
+  /* Mobile responsive - force all links to wrap */
+  .post a {
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    display: inline-block !important;
+  }
+  
+  /* Force container to allow wrapping */
+  .wrap .container.content {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
   }
 }
 
@@ -209,7 +232,7 @@ iframe {
 /* Bullets for all levels */
 .toc-container li::before {
   content: "×";
-  color: #bbb;
+  color: #888;
   position: absolute;
   left: -1rem;
   top: 0;
@@ -633,7 +656,7 @@ body .wrap .container.content {
 
 .page li::before {
   content: "×";
-  color: #bbb;
+  color: #888;
   position: absolute;
   left: -1rem;
   top: 0;
@@ -1137,4 +1160,9 @@ p:has(+ .collapsible-section) {
   .page-subscribe-cta p {
     font-size: 1rem;
   }
+}
+
+/* Reference section responsive styling */
+#references ~ p a {
+  word-break: break-all;
 }
