@@ -7,7 +7,7 @@ canonical_url: https://djpardis.com/subscribe
 permalink: /subscribe/
 ---
 
-## Never miss an update
+<h1 class="post-title">Never miss an update</h1>
 
 Get notified about new posts and podcast episodes every couple of weeks. 
 <!-- I share insights on data science, startups, and the journey of building [General Folders](https://generalfolders.com) and [The Data Room App](https://thedataroom.app). -->
