@@ -39,7 +39,7 @@ permalink: /dj-gigs/
 }
 </style>
 
-<details class="collapsible-section" markdown="1" open>
+<details class="collapsible-section" markdown="1">
 <summary><h3>Annual song reviews</h3></summary>
 
 - *[A 2024 mixtape: Just to be here on this train once again](https://djpardis.medium.com/a-2024-mixtape-606fa68d2dc2)*  
@@ -81,6 +81,6 @@ permalink: /dj-gigs/
 
 The poster below, designed by [Regy Augustin](https://www.linkedin.com/in/regynald/), is from Bay to Breakers in 2019.
 
-![Bay to Breakers DJ Pardis Poster](/files/pics/pages/poster.jpg){: style="max-width: 400px; display: block; margin: 0 auto;"}
+![Bay to Breakers DJ Pardis Poster](/files/pics/pages/poster.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
 </details>
