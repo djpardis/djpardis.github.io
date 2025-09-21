@@ -79,11 +79,8 @@ permalink: /dj-gigs/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Bay to Breakers</h3></summary>
 
+The poster below, designed by [Regy Augustin](https://www.linkedin.com/in/regynald/), is from Bay to Breakers in 2019.
+
 ![Bay to Breakers DJ Pardis Poster](/files/pics/pages/poster.jpg){: style="max-width: 400px; display: block; margin: 0 auto;"}
-*Bay to Breakers promotional poster.*
 
 </details>
-
----
-
-*For booking inquiries, please visit [DJ requests](/requests/).*
