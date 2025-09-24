@@ -11,9 +11,6 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
   {% endif %}
 
-
-
-
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/lanyon.css">
@@ -76,7 +73,7 @@
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   {% else %}
-  <meta property="og:image" content="{{ site.url }}{{ site.defaults[0].values.image }}">
+  <meta property="og:image" content="{{ site.url }}/files/pics/profile_pic.jpg">
   {% endif %}
   
   <!-- Twitter -->
@@ -86,64 +83,83 @@
   {% if page.image %}
   <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
   {% else %}
-  <meta name="twitter:image" content="{{ site.url }}{{ site.defaults[0].values.image }}">
+  <meta name="twitter:image" content="{{ site.url }}/files/pics/profile_pic.jpg">
   {% endif %}
 
   <!-- Additional Person schema for richer profile data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "{{ site.author.name }}",
-        "alternateName": ["DJ Pardis", "djpardis"],
-        "url": "{{ site.url }}",
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": "{{ site.author.name }}",
+    "alternateName": ["DJ Pardis", "djpardis"],
+    "url": "{{ site.url }}",
     "image": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}{{ site.defaults[0].values.image }}"
+      "url": "{{ site.url }}/files/pics/profile_pic.jpg"
     },
-        "jobTitle": "CEO & Founder",
-        "description": "{{ site.description }}",
-    "knowsAbout": [
-      "Data Science",
-      "Technology Leadership", 
-      "Secure Data Exchange",
-      "Enterprise Software",
-      "Team Management"
-    ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "General Folders",
-          "url": "https://generalfolders.com",
-          "description": "Techstars-backed company making data exchange seamless and secure for enterprises",
-      "foundingDate": "2022-01-01"
-        },
-        "alumniOf": [
-          {
-            "@type": "Organization",
-            "name": "Twitter",
-            "url": "https://twitter.com"
-          },
-          {
-            "@type": "Organization", 
-            "name": "Carbon Health",
-            "url": "https://carbonhealth.com"
-          }
-        ],
-        "sameAs": {{ site.social.links | jsonify }}
+    "jobTitle": "CEO & Founder",
+    "description": "{{ site.description }}",
+    "sameAs": {{ site.social.links | jsonify }}
   }
   </script>
+
+  <!-- Blog post specific schema for better hierarchy -->
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author.name }}"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author.name }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "{{ site.url }}/blog/#blog",
+      "name": "Pardis Noorzad Blog",
+      "description": "Personal blog on data science, team management, startup building, and technology leadership",
+      "url": "{{ site.url }}/blog/",
+      "publisher": {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "{{ site.author.name }}"
+      }
+    },
+    "articleSection": "Blog",
+    "keywords": "{{ page.keywords }}"
+  }
+  </script>
+  {% endif %}
 
   <!-- Website navigation schema for better sitelinks -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-        "@type": "WebSite",
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website",
     "name": "{{ site.title }}",
     "alternateName": ["djpardis.com", "DJ Pardis", "Pardis Noorzad"],
-        "url": "{{ site.url }}",
-        "description": "{{ site.description }}",
-        "publisher": {
-          "@type": "Person",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "publisher": {
+      "@type": "Person",
       "@id": "{{ site.url }}/#person",
       "name": "{{ site.author.name }}",
       "sameAs": {{ site.social.links | jsonify }}
@@ -170,49 +186,163 @@
       },
       "query-input": "required name=search_term_string"
     },
+    "sameAs": {{ site.social.links | jsonify }},
     "hasPart": [
       {
         "@type": "WebPage",
+        "@id": "{{ site.url }}/#homepage",
         "name": "Bio",
         "url": "{{ site.url }}/",
         "description": "Biography and background of Pardis Noorzad",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "{{ site.title }}",
+              "item": "{{ site.url }}"
+            }
+          ]
         }
       },
       {
         "@type": "WebPage", 
+        "@id": "{{ site.url }}/work/#workpage",
         "name": "Work",
         "url": "{{ site.url }}/work/",
         "description": "Professional work, talks, and publications",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "{{ site.title }}",
+              "item": "{{ site.url }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Work",
+              "item": "{{ site.url }}/work/"
+            }
+          ]
         }
       },
       {
         "@type": "WebPage",
+        "@id": "{{ site.url }}/blog/#blogpage",
         "name": "Blog", 
         "url": "{{ site.url }}/blog/",
         "description": "Blog posts on data science and technology",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website"
+        },
+        "mainEntity": {
+          "@type": "Blog",
+          "@id": "{{ site.url }}/blog/#blog",
+          "name": "Pardis Noorzad Blog",
+          "description": "Personal blog on data science, team management, startup building, and technology leadership",
+          "url": "{{ site.url }}/blog/",
+          "publisher": {
+            "@type": "Person",
+            "@id": "{{ site.url }}/#person",
+            "name": "{{ site.author.name }}"
+          }
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "{{ site.title }}",
+              "item": "{{ site.url }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "{{ site.url }}/blog/"
+            }
+          ]
         }
       },
       {
         "@type": "WebPage",
-        "name": "Subscribe",
-        "url": "{{ site.url }}/subscribe/", 
-        "description": "Newsletter subscription for updates",
+        "@id": "{{ site.url }}/dj-gigs/#gigspage",
+        "name": "Gigs",
+        "url": "{{ site.url }}/dj-gigs/",
+        "description": "DJ services and event information",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "{{ site.title }}",
+              "item": "{{ site.url }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Gigs",
+              "item": "{{ site.url }}/dj-gigs/"
+            }
+          ]
         }
       }
-    ],
-    "@id": "{{ site.url }}/#website"
+    ]
+  }
+  </script>
+
+  <!-- Site Navigation Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": "Main Navigation",
+    "url": "{{ site.url }}",
+    "hasPart": [
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Bio",
+        "url": "{{ site.url }}/",
+        "description": "Biography and background of Pardis Noorzad"
+      },
+      {
+        "@type": "SiteNavigationElement", 
+        "name": "Blog",
+        "url": "{{ site.url }}/blog/",
+        "description": "Blog posts on data science and technology"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Work",
+        "url": "{{ site.url }}/work/",
+        "description": "Professional work, talks, and publications"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Gigs",
+        "url": "{{ site.url }}/dj-gigs/",
+        "description": "DJ services and event information"
+      }
+    ]
   }
   </script>
 
@@ -221,20 +351,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
         "name": "{{ site.title }}",
         "item": "{{ site.url }}"
+      }{% if page.layout == 'post' %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "{{ site.url }}/blog"
       },
-            {
-              "@type": "ListItem",
-              "position": 2,
+      {
+        "@type": "ListItem",
+        "position": 3,
         "name": "{{ page.title }}",
         "item": "{{ site.url }}{{ page.url }}"
-      }
+      }{% else %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.title }}",
+        "item": "{{ site.url }}{{ page.url }}"
+      }{% endif %}
     ]
   }
   </script>
