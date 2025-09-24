@@ -42,25 +42,25 @@ permalink: /dj-gigs/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Annual song reviews</h3></summary>
 
-- *[A 2024 mixtape: Just to be here on this train once again](https://djpardis.medium.com/a-2024-mixtape-606fa68d2dc2)*  
+- [A 2024 mixtape: Just to be here on this train once again](https://djpardis.medium.com/a-2024-mixtape-606fa68d2dc2)  
   January 2025
 
-- *[A 2023 mixtape: It's a cruel summer with you](https://djpardis.medium.com/a-2023-mixtape-e4b3f7b19549)*  
+- [A 2023 mixtape: It's a cruel summer with you](https://djpardis.medium.com/a-2023-mixtape-e4b3f7b19549)  
   December 2023
 
-- *[A 2022 mixtape: The world is yours](https://djpardis.medium.com/a-2022-mixtape-81b022fc2fc5)*  
+- [A 2022 mixtape: The world is yours](https://djpardis.medium.com/a-2022-mixtape-81b022fc2fc5)  
   November 2022
 
-- *[A 2021 mixtape: Everlasting game](https://djpardis.medium.com/a-2021-mixtape-23a2af79d369)*  
+- [A 2021 mixtape: Everlasting game](https://djpardis.medium.com/a-2021-mixtape-23a2af79d369)  
   December 2021
 
-- *[A 2020 mixtape: As long as there is something to strive for](https://djpardis.medium.com/a-2020-mixtape-20ffe4701c91)*  
+- [A 2020 mixtape: As long as there is something to strive for](https://djpardis.medium.com/a-2020-mixtape-20ffe4701c91)  
   January 2021
 
-- *[A 2019 mixtape: Let me be your DJ](https://medium.com/@djpardis/a-2019-mixtape-6a910e8b4771)*  
+- [A 2019 mixtape: Let me be your DJ](https://medium.com/@djpardis/a-2019-mixtape-6a910e8b4771)  
   January 2020
 
-- *[A 2018 mixtape: Let me be your Chase B](https://medium.com/@djpardis/a-2018-mixtape-fac340db5e11)*  
+- [A 2018 mixtape: Let me be your Chase B](https://medium.com/@djpardis/a-2018-mixtape-fac340db5e11)  
   December 2018
 
 </details>
@@ -68,10 +68,10 @@ permalink: /dj-gigs/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Radio shows</h3></summary>
 
-- *[1999 — Episode 66](https://bff.fm/broadcasts/13188)* with [Johan Oskarsson](https://twitter.com/skr) at [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts)  
+- [1999 — Episode 66](https://bff.fm/broadcasts/13188) with [Johan Oskarsson](https://twitter.com/skr) at [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts)  
   February 2018
 
-- *[2018 — Episode 79](https://bff.fm/broadcasts/14056)* with [Johan Oskarsson](https://twitter.com/skr) at [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts)  
+- [2018 — Episode 79](https://bff.fm/broadcasts/14056) with [Johan Oskarsson](https://twitter.com/skr) at [1.21 gigawatts](https://bff.fm/shows/1-21-gigawatts)  
   May 2018
 
 </details>
