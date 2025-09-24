@@ -227,11 +227,6 @@ iframe {
 .toc-container li {
   margin: 0.4rem 0;
   position: relative;
-  font-style: normal !important;
-}
-
-.toc-container li em {
-  font-style: normal !important;
 }
 
 /* Bullets for all levels */
@@ -657,11 +652,6 @@ body .wrap .container.content {
 .page li {
   margin-bottom: 0.5rem;
   position: relative;
-  font-style: normal !important;
-}
-
-.page li em {
-  font-style: normal !important;
 }
 
 .page li::before {
