@@ -68,6 +68,7 @@ exclude:
   - scripts/
   - public/preview/
   - google-site-verification.html
+  - episode1-transcript.md
 
 # Files to exclude from sitemap specifically
 defaults:
