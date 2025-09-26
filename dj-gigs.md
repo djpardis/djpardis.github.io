@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Gigs
-description: DJ Pardis - Professional DJ services for events, weddings, corporate parties. Annual song reviews, radio shows, and live performances.
-keywords: DJ Pardis, DJ services, wedding DJ, corporate DJ, event DJ, party DJ, San Francisco DJ, Bay Area DJ, professional DJ
+description: DJ Pardis music portfolio and performance history. Tour DJ for Sim Simah and Aarxn Cxle, featured performances at Twitter HQ and The New Parish opening for artists like Cam'ron.
+keywords: DJ Pardis, DJ portfolio, Sim Simah tour DJ, Twitter HQ performance, New Parish, originals, mixtapes, Bay Area DJ history, DJ performances
 canonical_url: https://djpardis.com/dj-gigs
 permalink: /dj-gigs/
 ---
