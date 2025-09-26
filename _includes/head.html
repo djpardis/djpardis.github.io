@@ -58,12 +58,27 @@
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+  
+  <!-- Site root connection for better hierarchy -->
+  <link rel="home" href="{{ site.url }}/">
+  <link rel="index" href="{{ site.url }}/">
+  
+  <!-- Breadcrumb markup for site hierarchy -->
+  <link rel="up" href="{{ site.url }}/{% if page.url == '/' %}{% elsif page.layout == 'post' %}blog/{% endif %}">
 
   <!-- Title with proper separator -->
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   
   <!-- Meta description -->
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- Site authority signals for grouping -->
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="publisher" content="{{ site.author.name }}">
+  <meta name="copyright" content="{{ site.author.name }}">
+  <link rel="author" href="{{ site.url }}">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   
   <!-- Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
