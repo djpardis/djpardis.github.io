@@ -42,10 +42,17 @@
   <!-- Custom image sizing -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/image-size.css">
 
-  <!-- Clean favicon setup - PNG DJ logo -->
-  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon"><!-- Root favicon for Google -->
-  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.png?v=5" type="image/png"><!-- DJ logo favicon -->
-  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.ico" sizes="any"><!-- ICO fallback -->
+  <!-- Favicon optimized for search engines and browsers -->
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+  <link rel="icon" href="{{ site.baseurl }}/public/favicon/favicon.png" type="image/png" sizes="512x512">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <!-- Apple touch icons for iOS and mobile search optimization -->
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/favicon/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/favicon/favicon.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/favicon/favicon.png" sizes="180x180">
+  <!-- Microsoft tile optimization -->
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/public/favicon/favicon.png">
   <meta name="msapplication-TileColor" content="#FFFF99"><!-- Windows tile color -->
   <meta name="theme-color" content="#FFFF99"><!-- Mobile theme color -->
   <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest?v=2"><!-- Clean web app manifest -->
