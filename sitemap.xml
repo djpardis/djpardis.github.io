@@ -4,20 +4,47 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- HOME START - Highest authority for grouping -->
+{% for page in site.pages %}
+  {% if page.url == '/' %}
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endif %}
+{% endfor %}
+<!-- CORE SECTION PAGES - Blog/Work BEFORE posts show grouping -->
+{% for page in site.pages %}
+  {% unless page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
+  {% if page.url == '/blog/' or page.url == '/work/' or page.url == '/dj-gigs/' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>{% if page.url == '/blog/' %}0.9{% elsif page.url == '/work/' %}0.8{% else %}0.8{% endif %}</priority>
+  </url>
+  {% endif %}
+  {% endunless %}
+{% endfor %}
+<!-- BLOG POSTS AFTER BLOG PAGE REPLACED -->
 {% for post in site.posts %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.65</priority>
   </url>
 {% endfor %}
+<!-- SUB-PAGES EXCLUDE -->
 {% for page in site.pages %}
-  {% unless page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
+  {% unless page.url == '/' or page.url == '/blog/' or page.url == '/work/' or page.url == '/dj-gigs/' or page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>{% if page.url == '/' %}1.0{% elsif page.url == '/blog/' %}0.9{% elsif page.url == '/work/' %}0.8{% else %}0.6{% endif %}</priority>
+    <priority>0.55</priority>
   </url>
   {% endunless %}
 {% endfor %}
