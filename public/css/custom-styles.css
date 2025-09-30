@@ -160,13 +160,6 @@ iframe {
   }
 }
 
-/* Force URL wrapping everywhere - not just mobile */
-.post p a[href^="http"] {
-  word-break: break-all !important;
-  overflow-wrap: break-word !important;
-  white-space: normal !important;
-  max-width: 100% !important;
-}
 
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
@@ -180,14 +173,6 @@ iframe {
     max-width: 100% !important;
   }
   
-  /* Mobile responsive - force all links to wrap */
-  .post a {
-    word-break: break-all !important;
-    overflow-wrap: break-word !important;
-    hyphens: auto !important;
-    max-width: 100% !important;
-    display: inline-block !important;
-  }
   
   /* Force container to allow wrapping */
   .wrap .container.content {
@@ -249,13 +234,19 @@ iframe {
   content: "⊃";
 }
 
-/* Links */
-.toc-container a {
-  text-decoration: none;
-  color: #7d78b5;
-  font-size: 1rem;
-  line-height: 1.4;
-  display: block;
+/* Links - force normal word wrapping with high specificity */
+.toc-container a,
+.post .toc-container a,
+.container .toc-container a,
+.post-container.toc-container a {
+  text-decoration: none !important;
+  color: #7d78b5 !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 /* Link hover/focus states */
@@ -1162,7 +1153,3 @@ p:has(+ .collapsible-section) {
   }
 }
 
-/* Reference section responsive styling */
-#references ~ p a {
-  word-break: break-all;
-}
