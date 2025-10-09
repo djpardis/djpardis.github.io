@@ -74,7 +74,7 @@
   margin: 0;
   padding: 1rem;
   overflow-x: auto;
-  font-family: "SF Mono", "Geist Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "JetBrains Mono", "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Dank Mono", "Operator Mono", "Cascadia Code", "Menlo", monospace;
   font-size: 0.9rem;
   line-height: 1.5;
 }
