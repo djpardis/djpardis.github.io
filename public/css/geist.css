@@ -54,7 +54,7 @@ h4, h5, h6 {
 
 /* Code blocks use Geist Mono */
 code, pre {
-  font-family: 'Geist Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-family: "JetBrains Mono", "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Dank Mono", "Operator Mono", "Cascadia Code", "Menlo", monospace !important;
   font-size: 0.9rem;
 }
 
