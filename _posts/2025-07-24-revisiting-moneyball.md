@@ -14,7 +14,7 @@ This post was originally published on <a href="https://djpardis.medium.com/revis
 
 <div class="update-container post-container" style="margin-bottom: 1rem; font-style: italic;">
 Update, July 25, 2025<br>
-The piece made it to the <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a> front page. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a>!<br>
+The piece made it to the front page of <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a>. Thank you <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a> for letting me know!<br>
 <!-- 2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/a28919ba-fc09-43e6-8fa6-491365e8525a?artifactId=e9345839-0370-471a-83b1-99cd10227847" target="_blank">NotebookLM</a> to create a podcast discussion of this post.<br><br>
 <div style="position: relative; width: 100%; height: 140px; max-width: 100%; overflow: hidden;">
   <iframe src="https://jumpshare.com/share/chrIh55BD3L7dXfrQDjw" width="100%" height="140" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 140px !important; max-height: 140px !important; aspect-ratio: unset !important; overflow: hidden;"></iframe>
@@ -87,13 +87,13 @@ Let's begin by discussing the book's central themes and what the author found in
 
 ### [The 2001 A's lost significant talent.](#table-of-contents) {#the-2001-as-lost-significant-talent}
 
-After losing MVP **Jason Giambi** (7-year, $120M), **Johnny Damon** (4-year, $31M), and closer **Jason Isringhausen** (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to **Michael Lewis** as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
+After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
 
 ### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
-The A's GM, **Billy Beane**, working with statistician **Paul DePodesta**, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
+The A's GM, Billy Beane, working with statistician Paul DePodesta, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
 
-This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed **Scott Hatteberg** or traded for **David Justice**, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. 
+This transparency allowed decisions regarding players to be justified through objective metrics. When the A's signed Scott Hatteberg or traded for David Justice, they could point to specific evidence, like on-base percentage (OBP) or plate discipline, to justify their decision. 
 
 ### [Getting on base was undervalued.](#table-of-contents) {#getting-on-base-was-undervalued}
 
@@ -119,7 +119,7 @@ Scott Hatteberg was available at a below-market price due to perceived limitatio
 
 Oakland signed Hatteberg to first base for $950K on a one-year contract after Colorado declined salary arbitration. The A's saw past the injury to identify exceptional plate discipline and on-base skills. His .367 OBP in 2000 and .410 OBP in 1999 demonstrated an ability to get on base.
 
-The position switch to first base was unprecedented. He had never played the position professionally. He learned first base during spring training with infield coach **Ron Washington**.
+The position switch to first base was unprecedented. He had never played the position professionally. He learned first base during spring training with infield coach Ron Washington.
 
 Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 slash line, 68 walks versus 56 strikeouts, and 4.15 pitches per plate appearance (3rd in AL). His defining moment came on September 4, 2002, when his walk-off home run against Kansas City secured the A's 20th consecutive victory and set an AL record.
 
@@ -136,7 +136,7 @@ Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 s
 
 The 20-game winning streak (August 13 - September 4, 2002) became the dramatic centerpiece of the Moneyball story.
 
-During the historic run, **Billy Koch** (acquired December 7, 2001) recorded wins or saves in 12 of the 20 games, while **Cory Lidle** (acquired January 8, 2001), who was arguably the streak's MVP, posted a microscopic 0.20 ERA in August with 32 consecutive scoreless innings.
+During the historic run, Billy Koch (acquired December 7, 2001) recorded wins or saves in 12 of the 20 games, while Cory Lidle (acquired January 8, 2001), who was arguably the streak's MVP, posted a microscopic 0.20 ERA in August with 32 consecutive scoreless innings.
 
 The streak's climactic finish, Oakland blowing an 11–0 lead to Kansas City before Hatteberg's walk-off home run, provided Hollywood-worthy drama that helped make the analytical approach culturally compelling.
 
@@ -158,10 +158,10 @@ The A's discovered they could construct effective offensive production by combin
 
 Instead of expensive superstars, the A's assembled a roster where different players contributed specific, undervalued skills:
 
-- **Scott Hatteberg**: Exceptional plate discipline and OBP despite injuries
-- **David Justice**: Power and veteran clutch experience despite declining speed
-- **Jeremy Giambi**: High OBP despite defensive limitations
-- **Chad Bradford**: Unique submarine delivery that produced results
+- Scott Hatteberg: Exceptional plate discipline and OBP despite injuries
+- David Justice: Power and veteran clutch experience despite declining speed
+- Jeremy Giambi: High OBP despite defensive limitations
+- Chad Bradford: Unique submarine delivery that produced results
 
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
@@ -204,7 +204,7 @@ The A's were excellent at drafting talent. And their lineup in 2002 was made up 
 
 **The Big Three**. Tim Hudson (6th round, 1997), Mark Mulder (2nd overall, 1998), and Barry Zito (9th overall, 1999) were all top-10 picks. By 2002, this trio anchored Oakland's rotation with elite performance.
 
-**Miguel Tejada** (international signing, 1993) and **Eric Chavez** (10th overall, 1996) provided MVP-caliber offense and Gold Glove defense. Both were premium draft investments that matured into franchise cornerstones.
+Miguel Tejada (international signing, 1993) and Eric Chavez (10th overall, 1996) provided MVP-caliber offense and Gold Glove defense. Both were premium draft investments that matured into franchise cornerstones.
 
 Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 RBIs while providing leadership throughout the season. Barry Zito won the AL Cy Young Award with a 23–5 record and 2.75 ERA. These weren't marginal players elevated by analytics; they were elite performers by any standard.
 
@@ -214,15 +214,15 @@ Oakland executives Billy Beane, David Forst, and scout Ron Washington later ackn
 
 The lesson of Moneyball is not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
 
-After the 2002 season, Red Sox ownership (led by **John W. Henry**) tried to hire Billy Beane as a GM with a five-year, $12.5M contract that would have made him the highest paid GM in baseball history. The offer was a testament to how highly Henry and then-CEO **Larry Lucchino** regarded Beane's analytical approach.
+After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Billy Beane as a GM with a five-year, $12.5M contract that would have made him the highest paid GM in baseball history. The offer was a testament to how highly Henry and then-CEO Larry Lucchino regarded Beane's analytical approach.
 
-Although Beane declined, the Red Sox promoted **Theo Epstein** to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
+Although Beane declined, the Red Sox promoted Theo Epstein to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
 
-When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by **Farhan Zaidi**. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
+When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by Farhan Zaidi. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
 
 Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (with over 47 personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
 
-The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under **Steve Cohen**, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
+The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under Steve Cohen, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
 
 It turns out that Moneyball is about money. Billy Beane's Oakland A's succeeded not because they rejected the importance of money, but because they maximized every dollar's impact when competing against teams with three times their budget. The book's enduring relevance lies in demonstrating how intelligence and efficiency can overcome - though not eliminate - financial disadvantage.
 
@@ -234,7 +234,7 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 
 The analytics revolution was already underway before Moneyball - the book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
 
-To understand baseball’s numerical history, you can go back even further. **Henry Chadwick**, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
+To understand baseball's numerical history, you can go back even further. Henry Chadwick, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
 
 ![A vintage 1876 baseball box score showing detailed game statistics in handwritten format](/files/pics/blog/2025/1876boxscore.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *From <a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/1876boxscore.jpg" target="_blank">1876</a>.*
