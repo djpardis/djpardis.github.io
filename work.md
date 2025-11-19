@@ -158,6 +158,7 @@ permalink: /work/
   *Abstract.* Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.
 </details>
 
+<!--
 <details class="collapsible-section" markdown="1">
 <summary><h3>Podcasts</h3></summary>
 
@@ -182,6 +183,7 @@ permalink: /work/
 
   *Abstract.* Thanks to Grant, the episode has turned into a good review of my work history.
 </details>
+-->
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Academic talks</h3></summary>
