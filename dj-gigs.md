@@ -42,6 +42,9 @@ permalink: /dj-gigs/
 <details class="collapsible-section" markdown="1">
 <summary><h3>Annual song reviews</h3></summary>
 
+- [A 2025 mixtape: True love](https://djpardis.medium.com/a-2025-mixtape-685bb2431899)  
+  December 2025
+
 - [A 2024 mixtape: Just to be here on this train once again](https://djpardis.medium.com/a-2024-mixtape-606fa68d2dc2)  
   January 2025
 
