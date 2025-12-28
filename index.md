@@ -55,7 +55,7 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data exchange](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
+- **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
 
 - **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure [data rooms](/blog/2025/07/20/introducing-the-data-room-app/) for fundraising
 
