@@ -158,10 +158,12 @@ The A's discovered they could construct effective offensive production by combin
 
 Instead of expensive superstars, the A's assembled a roster where different players contributed specific, undervalued skills:
 
-- Scott Hatteberg: Exceptional plate discipline and OBP despite injuries
-- David Justice: Power and veteran clutch experience despite declining speed
-- Jeremy Giambi: High OBP despite defensive limitations
-- Chad Bradford: Unique submarine delivery that produced results
+- Scott Hatteberg (signed Jan 2, 2002): Injured catcher converted to first baseman, valued for exceptional plate discipline
+- David Justice (traded Dec 14, 2001): Aging slugger acquired cheaply after the Yankees gave up on him, provided veteran power and leadership
+- Jeremy Giambi (traded Feb 18, 2000): High-OBP outfielder whose walk rate offset his defensive limitations
+- Chad Bradford (traded Dec 7, 2000): Submarine reliever overlooked by scouts, acquired for a minor league catcher
+- Billy Koch (traded Dec 7, 2001): Proven closer bought low after a rough 2001, rebounded to win AL Reliever of the Year
+- Cory Lidle (traded Jan 8, 2001): Control pitcher with poor surface stats but strong peripherals, became a reliable #4 starter
 
 This aggregate approach allowed Oakland to compete with teams spending three times their payroll. Rather than paying premium prices for complete players, they constructed a competitive roster through strategic combinations to produce runs and wins.
 
@@ -247,7 +249,7 @@ Analytics has improved baseball in measurable ways:
 
 However, the use of analytics has not been without downsides:
 
-**The "Three True Outcomes" problem**. Home runs, walks, and strikeouts now dominate baseball, with 35% of plate appearances ending without involving seven defensive players. This has reduced balls in play by 20% since 1980, creating longer games with less action.
+**The "Three True Outcomes" problem**. Home runs, walks, and strikeouts now dominate baseball, with 35% of plate appearances ending without involving seven defensive players. This has reduced balls in play by 20% since 1980, resulting in longer games with less action.
 
 **Entertainment decline**. As Theo Epstein admitted, "executives like me who have spent a lot of time using analytics…have unwittingly had a negative impact on the aesthetic value of the game." Even Bill James acknowledged the game's aesthetics "went to hell in a dump truck" due to excessive strikeouts and endless pitching changes.
 
