@@ -44,7 +44,7 @@ html {
   /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* font-family: Inter, sans-serif;
@@ -81,11 +81,11 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container, .container.content {
-  max-width: 48rem;
+  max-width: 60rem;
 }
 @media (min-width: 30em) {
   .container, .container.content {
-    max-width: 48rem;
+    max-width: 60rem;
   }
 }
 /* @media (min-width: 56em) {
