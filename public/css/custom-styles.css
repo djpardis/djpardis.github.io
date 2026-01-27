@@ -28,6 +28,26 @@
   background-color: transparent;
 }
 
+/* Hero container: image + text side-by-side (index, dj-gigs) — define once */
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 15px !important;
+  }
+  .hero-container img {
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+}
+
 /* Image row and container styling */
 .container.content .image-row {
   display: flex;
@@ -990,6 +1010,23 @@ p:has(+ .collapsible-section) {
   font-size: 1rem;
   line-height: 1.5;
   margin-top: 0;
+}
+
+/* DJ promo: same container, green + tighter (one line) */
+.newsletter-section.dj-promo {
+  margin: 1rem 0 0.5rem;
+}
+.newsletter-section.dj-promo .newsletter-signup {
+  background-color: rgba(255, 105, 180, 0.12);
+  padding: 0.5rem 1rem;
+}
+.newsletter-section.dj-promo .newsletter-signup p {
+  margin-bottom: 0;
+}
+@media (max-width: 30em) {
+  .newsletter-section.dj-promo .newsletter-signup {
+    padding: 0.4rem 0.5rem;
+  }
 }
 
 .newsletter-form .form-group {
