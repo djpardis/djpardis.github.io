@@ -7,61 +7,62 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-<div class="bio-hero">
-  <div class="bio-hero-image">
+<div class="index-hero">
+  <div class="index-hero-img">
     <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025">
   </div>
-  <div class="bio-hero-text">
+  <div class="index-hero-text">
     <p>🏡 Hello!</p>
-<p>I research data systems and AI infrastructure that operate at scale. I'm currently working on the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. Previously, I led data teams at Carbon Health and Twitter, and shipped production AI systems at Paytm. I've <a href="/blog">written about</a> infrastructure and organization challenges in data and AI teams.</p>
+    <p>I research data systems and AI infrastructure. I'm currently working on the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. Previously, I led data teams at Carbon Health and Twitter, and shipped production AI systems at Paytm. I've <a href="/blog">written about</a> infrastructure and organization challenges in data and AI teams.</p>
   </div>
 </div>
 
 <style>
-/* Bio hero: image left, paragraph right, same image size (400px), inset from edges */
-.container.content .bio-hero {
+.index-hero {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  gap: 20px;
   max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
   box-sizing: border-box;
 }
-.container.content .bio-hero-image {
-  flex-shrink: 0;
-  border-radius: 8px;
-  overflow: hidden;
+.index-hero-text {
+  flex: 1;
+  text-align: left;
 }
-.container.content .bio-hero-image img {
+.index-hero-text p {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.index-hero-text p:last-child {
+  margin-bottom: 0;
+}
+.index-hero-img img {
   height: 400px;
   width: auto;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 5px;
+  display: block;
 }
-.container.content .bio-hero-text {
-  flex: 1;
-}
-.container.content .bio-hero-text p {
-  margin: 0;
-}
-.container.content .bio-hero-text p + p {
-  margin-top: 0.75rem;
-}
-
 @media (max-width: 768px) {
-  .container.content .bio-hero {
-    flex-direction: column;
-    gap: 0.5rem;
+  .index-hero {
+    flex-direction: column !important;
+    gap: 1rem;
   }
-  .container.content .bio-hero-image,
-  .container.content .bio-hero-image img {
-    border-radius: 8px;
+  .index-hero-img img {
+    max-width: 100%;
+    height: auto;
   }
-  .container.content .bio-hero-image {
-    overflow: hidden;
+}
+/* Match blog pages on mobile: use container’s padding only, no extra side space */
+@media (max-width: 30em) {
+  .index-hero {
+    margin: 1rem 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
   }
 }
 </style>
