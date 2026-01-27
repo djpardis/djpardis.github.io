@@ -58,7 +58,7 @@ body {
   .container.content,
   .masthead-title,
   .copyright div {
-    max-width: 60rem;
+    max-width: 48rem;
     width: 100%;
     margin-left: auto;
     margin-right: auto;

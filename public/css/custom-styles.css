@@ -1007,7 +1007,7 @@ p:has(+ .collapsible-section) {
 /* Ensure consistent spacing with adjacent elements */
 .newsletter-signup {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 48rem;
 }
 
 /* Desktop and tablet newsletter width */
@@ -1017,7 +1017,7 @@ p:has(+ .collapsible-section) {
     border-radius: 6px;
     padding: 1rem;
     text-align: left;
-    max-width: 60rem;
+    max-width: 48rem;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
