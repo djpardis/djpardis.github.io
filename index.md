@@ -12,16 +12,23 @@ canonical_url: https://djpardis.com/
     <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025">
   </div>
   <div class="bio-hero-text">
-    <p>🏡 Hello! I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.</p>
+    <p>🏡 Hello!</p>
+<p>I research data systems and AI infrastructure that operate at scale. I'm currently working on the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. Previously, I led data teams at Carbon Health and Twitter, and shipped production AI systems at Paytm. I've <a href="/blog">written about</a> infrastructure and organization challenges in data and AI teams.</p>
   </div>
 </div>
 
 <style>
-/* Bio hero: image left, paragraph right, same image size (400px) */
+/* Bio hero: image left, paragraph right, same image size (400px), inset from edges */
 .container.content .bio-hero {
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 .container.content .bio-hero-image {
   flex-shrink: 0;
@@ -40,11 +47,21 @@ canonical_url: https://djpardis.com/
 .container.content .bio-hero-text p {
   margin: 0;
 }
+.container.content .bio-hero-text p + p {
+  margin-top: 0.75rem;
+}
 
 @media (max-width: 768px) {
   .container.content .bio-hero {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  .container.content .bio-hero-image,
+  .container.content .bio-hero-image img {
+    border-radius: 8px;
+  }
+  .container.content .bio-hero-image {
+    overflow: hidden;
   }
 }
 </style>
