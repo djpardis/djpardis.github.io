@@ -23,10 +23,9 @@ canonical_url: https://djpardis.com/
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  max-width: 100%;
-  margin: 1.5rem 0;
-  padding: 0;
+  max-width: 56rem;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
   box-sizing: border-box;
 }
 .index-hero-text {
@@ -61,6 +60,9 @@ canonical_url: https://djpardis.com/
 @media (max-width: 30em) {
   .index-hero {
     margin: 1rem 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
   }
 }
 </style>

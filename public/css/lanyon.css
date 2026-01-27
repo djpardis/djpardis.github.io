@@ -81,11 +81,11 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container, .container.content {
-  max-width: 48rem;
+  max-width: 60rem;
 }
 @media (min-width: 30em) {
   .container, .container.content {
-    max-width: 48rem;
+    max-width: 60rem;
   }
 }
 /* @media (min-width: 56em) {
