@@ -7,34 +7,43 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-<div class="hero-container" style="display: flex; align-items: center; gap: 20px; background: transparent;">
-  <div>
-    <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="width: 1500px; height: auto; max-width: 100%;">
+<div class="bio-hero">
+  <div class="bio-hero-image">
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025">
   </div>
-  <div style="background: transparent;">
-    🏡 Hello! I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.
+  <div class="bio-hero-text">
+    <p>🏡 Hello! I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.</p>
   </div>
 </div>
 
 <style>
-.hero-container {
+/* Bio hero: image left, paragraph right, same image size (400px) */
+.container.content .bio-hero {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: transparent;
+  gap: 2rem;
+}
+.container.content .bio-hero-image {
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container.content .bio-hero-image img {
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.container.content .bio-hero-text {
+  flex: 1;
+}
+.container.content .bio-hero-text p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    gap: 15px !important;
-  }
-  
-  .hero-container img {
-    width: 100% !important;
-    max-width: 400px !important;
+  .container.content .bio-hero {
+    flex-direction: column;
   }
 }
 </style>

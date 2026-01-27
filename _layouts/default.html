@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{% if page.url == '/' or page.url == '' %}index{% endif %}{% if page.layout == 'post' %} blog{% endif %}">
 
     {% include sidebar.html %}
 
