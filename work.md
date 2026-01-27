@@ -11,7 +11,7 @@ permalink: /work/
 
 
 
-<details class="collapsible-section" markdown="1">
+<details class="collapsible-section" markdown="1" open>
 <summary><h3>Talks</h3></summary>
 
 - The role of B2B data collaboration in marketing  
