@@ -34,9 +34,12 @@
   justify-content: center;
   gap: 20px;
   margin: 1.5rem auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   width: 100%;
   text-align: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .container.content .image-row .image-container {
@@ -53,6 +56,20 @@
   border-radius: 5px;
   height: auto;
   display: block;
+}
+
+/* Same-height variant for image rows (e.g. bio page) – centered as a group, rounded corners */
+.container.content .image-row.same-height {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.content .image-row.same-height img {
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* Mobile responsiveness for image rows */
@@ -409,7 +426,10 @@ body {
   justify-content: center;
   gap: 20px;
   margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .container.content .image-row .image-container {
@@ -437,8 +457,14 @@ body {
 .index .container.content .image-row img {
   max-width: 100%;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   height: auto;
+}
+
+.index .container.content .image-row.same-height {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Removed duplicate - handled above */
