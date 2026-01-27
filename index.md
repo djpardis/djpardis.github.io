@@ -44,6 +44,7 @@ canonical_url: https://djpardis.com/
 @media (max-width: 768px) {
   .container.content .bio-hero {
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
 </style>
