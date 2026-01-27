@@ -7,7 +7,7 @@ canonical_url: https://djpardis.com/dj-gigs
 permalink: /dj-gigs/
 ---
 
-<div class="hero-container" style="display: flex; align-items: center; gap: 20px; background: transparent;">
+<div class="hero-container">
   <div style="flex: 0 0 auto;">
     <img src="/files/pics/pages/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" style="width: 400px; height: auto; max-width: 100%;">
   </div>
@@ -15,29 +15,6 @@ permalink: /dj-gigs/
     I started DJing in May 2017 and played <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> at Twitter HQ. I usually DJed with <a href="https://www.linkedin.com/in/juliengaillard1/" target="_blank">Julien Gaillard</a> on the <a href="https://vimeo.com/463687716" target="_blank">guitar</a>. In the summer of 2019, I was the tour DJ for <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://music.apple.com/us/artist/aarxn-cxle/1453179768" target="_blank">Aarxn Cxle</a>. The picture is by <a href="https://www.instagram.com/meria.agency/?hl=ne" target="_blank">Jesse Meria</a> from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf" target="_blank">the opening act</a>.
   </div>
 </div>
-
-<style>
-.hero-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: transparent;
-}
-
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    gap: 15px !important;
-  }
-  
-  .hero-container img {
-    width: 100% !important;
-    max-width: 400px !important;
-  }
-}
-</style>
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Annual song reviews</h3></summary>
