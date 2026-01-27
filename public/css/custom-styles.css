@@ -467,7 +467,7 @@ body {
   margin-right: auto;
 }
 
-/* Removed duplicate - handled above */
+/* Index hero: layout scoped in index.md */
 
 /* Desktop image sizes */
 @media (min-width: 30em) {
