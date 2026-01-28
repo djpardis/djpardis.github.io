@@ -13,7 +13,7 @@ canonical_url: https://djpardis.com/
     <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
   </div>
   <div style="background: transparent;">
-    🏡 Hi there! I research and build data and AI systems that operate at scale. I'm currently tackling the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
+    🏡 Hi there! I research and build data and AI systems. I'm currently tackling the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
   </div>
 </div>
 
