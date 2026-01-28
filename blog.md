@@ -35,9 +35,6 @@ permalink: /blog
 <details class="collapsible-section" markdown="1">
 <summary><h3>Coming soon</h3></summary>
 
-- [The evolution of software engineering from FORTRAN to LLMs](/2026/01/evolution-software-engineering-fortran-llms/)  
-  January 2026 (draft)
-
 - [Building a robust contract understanding system: Doing more than data infrastructure at General Folders](/2025/10/09/contract-understanding-system/)  
   October 9, 2025 (draft)
 
