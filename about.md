@@ -13,8 +13,8 @@ canonical_url: https://djpardis.com/
     <img src="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
   </div>
   <div style="background: transparent;">
-    <p>🏡 Hi, I’m Pardis! </p>
-    <p>I’ve led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and built production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>. I'm now working on solving challenges in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a> and making data rooms better with <a href="https://thedataroom.app" target="_blank">The Data Room App</a>.</p>
+    <p>🏡 Hello! </p>
+    <p>I'm an engineer building data and AI tools. I <a href="/blog">write</a> and interview friends on <a href="/107wins.html">my podcast</a>.</p>
   </div>
 </div>
 
@@ -65,16 +65,16 @@ canonical_url: https://djpardis.com/
 <summary><h3>Career highlights</h3></summary>
 
 - **Chief Data Officer** at [Carbon Health](https://carbonhealth.com){:target="_blank"} <br>
-Built the [data team](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} and set up [company-wide data infra](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} for modern healthcare 
+Established the [data team](https://www.linkedin.com/posts/carbon-health_meet-pardis-noorzad-head-of-data-science-activity-6649426702302871552-DnLa/){:target="_blank"} and set up [company-wide data infra](https://www.youtube.com/watch?v=CQHwLWMQFDk){:target="_blank"} for healthcare 
 
 - **Data Science Manager** at [Twitter](https://twitter.com){:target="_blank"} <br>
-Established the [PDS](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} team; shipped major fixes to Search, Trends, and Notifications; won [#Hackweek](https://x.com/jadeloyzaga/status/1142237141495189504){:target="_blank"} and [#TweetTank](https://x.com/djpardis/status/1089036783050842113){:target="_blank"} company-wide competitions 
+Established the [PDS](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd){:target="_blank"} team; shipped major fixes to Search, Trends, and Recommendations; won [#Hackweek](https://x.com/jadeloyzaga/status/1142237141495189504){:target="_blank"} and [#TweetTank](https://x.com/djpardis/status/1089036783050842113){:target="_blank"} company-wide competitions 
 
 - **ML Engineer** at [Paytm](https://paytm.com){:target="_blank"}<br>
-Shipped a fully automated fraud detection system scaling to 100M+ users
+Shipped the first fully autonomous fraud detection system scaling to 100M+ users
 
 - **Data Scientist** at [Rubikloud](https://www.linkedin.com/company/rubikloud-technologies/){:target="_blank"} <br>
-Designed and shipped the flagship promotion optimization system
+Shipped the flagship promotion optimization system, among other AI products
 
 </details>
 

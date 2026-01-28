@@ -113,8 +113,6 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
     e.stopPropagation();
   });
 
-  applyLightboxSize(img, enlargedImg);
-
   container.appendChild(enlargedImg);
   
   // Create counter variable for navigation (even if no multiple images)
@@ -270,21 +268,9 @@ function processMarkdownLinksInCaptions() {
   });
 }
 
-function getWorkHeroMatchWidth(img) {
-  if (!img.classList.contains('work-hero-lightbox-img')) return null;
-  return Math.min(0.9 * window.innerWidth, 0.72 * window.innerHeight);
-}
-
-function applyLightboxSize(img, enlargedImg) {
-  const matchWidth = getWorkHeroMatchWidth(img);
-  enlargedImg.style.maxWidth = matchWidth ? matchWidth + 'px' : '90vw';
-  enlargedImg.style.maxHeight = matchWidth ? '90vh' : '90vh';
-}
-
 function updateLightboxImage(img, newIndex, imagesArray, enlargedImg, counter) {
   enlargedImg.src = img.src;
   enlargedImg.alt = img.alt;
-  applyLightboxSize(img, enlargedImg);
   if (counter && imagesArray.length > 1) {
     counter.textContent = `${newIndex + 1} / ${imagesArray.length}`;
   }

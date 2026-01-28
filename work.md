@@ -9,9 +9,9 @@ permalink: /work/
 
 <figure class="work-hero-image">
   <div class="work-hero-crop">
-    <img class="work-hero-lightbox-img" src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025" />
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025" />
   </div>
-  <figcaption>Techstars SDSU Founder Panel with Misti Cain at VSW 2025.</figcaption>
+  <figcaption>Techstars SDSU Founder Panel at VSW 2025.</figcaption>
 </figure>
 
 <details class="collapsible-section" markdown="1">

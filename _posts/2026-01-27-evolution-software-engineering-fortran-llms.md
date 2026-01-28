@@ -10,4 +10,4 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
 
 ![Camera obscura](/files/pics/blog/2026/camera%20obscura.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
 
-Write your post content here.
+Coming soon!
