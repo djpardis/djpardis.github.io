@@ -23,13 +23,13 @@ canonical_url: https://djpardis.com/
 - I write about data and AI systems and teams. More [here](/blog).
 
   <div class="link-cards">
-    <div class="link-card link-card-placeholder">
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-01-27-evolution-software-engineering-fortran-llms %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/ocean.jpg')"></div>
       <div class="link-card-body">
         <span class="link-card-title">The evolution of software engineering from FORTRAN to LLMs</span>
-        <span class="link-card-domain">Coming soon...</span>
+        <span class="link-card-domain">djpardis.com</span>
       </div>
-    </div>
+    </a>
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
       <div class="link-card-body">
