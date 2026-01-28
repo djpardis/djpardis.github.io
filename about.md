@@ -10,45 +10,15 @@ canonical_url: https://djpardis.com/
 
 <div class="hero-container">
   <div>
-    <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
+    <img src="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
   </div>
   <div style="background: transparent;">
-    🏡 Hi there! I research and build data and AI systems. I'm currently tackling the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
+    <p>🏡 Hi, I’m Pardis! </p>
+    <p>I’ve led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and built production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>. I'm now working on challenges in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>; and making data rooms easier with <a href="https://thedataroom.app" target="_blank">The Data Room App</a>.</p>
   </div>
 </div>
 
 <details class="collapsible-section" markdown="1" open>
-<summary><h3>Notable posts</h3></summary>
-
-- [Read more](/blog) about data infra, AI coding, and organizations
-
-  <div class="link-cards">
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-01-27-evolution-software-engineering-fortran-llms %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/camera%20obscura.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">The evolution of software engineering</span>
-        <span class="link-card-domain">djpardis.com</span>
-      </div>
-    </a>
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">Revisiting Moneyball</span>
-        <span class="link-card-domain">djpardis.com</span>
-      </div>
-    </a>
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2019/ds-team-models-1.jpeg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">Models for integrating data science teams</span>
-        <span class="link-card-domain">djpardis.com</span>
-      </div>
-    </a>
-  </div>
-
-</details>
-
-<details class="collapsible-section" markdown="1">
 <summary><h3>Currently building</h3></summary>
 
 - **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
