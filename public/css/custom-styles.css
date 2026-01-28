@@ -180,6 +180,116 @@ iframe {
   }
 }
 
+/* Front-and-center: two small YouTube embeds in a row */
+.featured-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.featured-videos .video-embed {
+  flex: 1 1 280px;
+  max-width: 320px;
+}
+.featured-videos .video-embed iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+}
+.featured-videos .video-embed p {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+@media (max-width: 600px) {
+  .featured-videos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-videos .video-embed {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Front-and-center: featured posts row */
+.featured-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.featured-posts .post-card {
+  flex: 1 1 260px;
+  max-width: 360px;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.featured-posts .post-card a {
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .featured-posts {
+    flex-direction: column;
+  }
+  .featured-posts .post-card {
+    max-width: 100%;
+  }
+}
+
+/* LinkedIn-style link cards under experience (thumbnail + title + domain) */
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 0.75rem 0 1rem;
+  max-width: 560px;
+}
+.link-card {
+  display: block;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.link-card:hover {
+  border-color: #999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.link-card-image {
+  height: 0;
+  padding-bottom: 52.35%;
+  background-size: cover;
+  background-position: center;
+  background-color: #f0f0f0;
+}
+.link-card-body {
+  padding: 10px 12px;
+}
+.link-card-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+.link-card-domain {
+  font-size: 0.8rem;
+  color: #666;
+}
+@media (max-width: 520px) {
+  .link-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
