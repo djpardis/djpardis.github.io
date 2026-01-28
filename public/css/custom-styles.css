@@ -818,6 +818,33 @@ body .wrap .container.content {
   margin: 0;
 }
 
+/* Work page hero image: horizontal crop, same width as lightbox (min(90vw, 72vh)) */
+.work-hero-image {
+  margin: 0 auto 1rem;
+  max-width: min(90vw, 72vh);
+}
+.work-hero-crop {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+.work-hero-crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  vertical-align: bottom;
+}
+.work-hero-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
 /* X bullets for blog and gigs pages */
 .page ul {
   list-style: none;
