@@ -10,7 +10,7 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-- [The evolution of software engineering from FORTRAN to LLMs: Including an in-depth look at AI coding milestones]({{ site.baseurl }}{% post_url 2026-01-01-evolution-software-engineering-fortran-llms %})  
+- [The evolution of software engineering from FORTRAN to LLMs: Including an in-depth look at AI coding milestones]({{ site.baseurl }}/blog/2026/01/01/evolution-software-engineering-fortran-llms/)  
   January 1, 2026
 
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
