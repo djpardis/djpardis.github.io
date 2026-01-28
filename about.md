@@ -13,7 +13,7 @@ canonical_url: https://djpardis.com/
     <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
   </div>
   <div style="background: transparent;">
-    🏡 Hi there! I research and build data and AI systems that operate at scale. I'm currently tackling the hard problems in B2B data transfer through <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
+    🏡 Hi there! I research and build data and AI systems that operate at scale. I'm currently tackling the hard problems in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
   </div>
 </div>
 
@@ -24,7 +24,7 @@ canonical_url: https://djpardis.com/
 
   <div class="link-cards">
     <div class="link-card link-card-placeholder">
-      <div class="link-card-image"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/ocean.jpg')"></div>
       <div class="link-card-body">
         <span class="link-card-title">The evolution of software engineering from FORTRAN to LLMs</span>
         <span class="link-card-domain">Coming soon...</span>
@@ -76,14 +76,14 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Introducing the data room app</span>
+        <span class="link-card-title">Magic link authentication with Replit</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Vibe coding a data room app</span>
+        <span class="link-card-title">Lessons in AI coding</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>

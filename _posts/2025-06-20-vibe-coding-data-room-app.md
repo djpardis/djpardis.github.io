@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Vibe coding a data room app'
-subtitle: 'Adventures with Windsurf'
+title: 'Lessons in AI coding'
+subtitle: 'Building a data room app'
 description: 'Building an intuitive data room app to streamline investor access to startup information'
 keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication
 ---
