@@ -14,7 +14,7 @@ canonical_url: https://djpardis.com/
   </div>
   <div style="background: transparent;">
     <p>🏡 Hi, I’m Pardis! </p>
-    <p>I’ve led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and built production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>. I'm now working on challenges in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a>; and making data rooms easier with <a href="https://thedataroom.app" target="_blank">The Data Room App</a>.</p>
+    <p>I’ve led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and built production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>. I'm now working on solving challenges in B2B data transfer at <a href="https://generalfolders.com" target="_blank">General Folders</a> and making data rooms better with <a href="https://thedataroom.app" target="_blank">The Data Room App</a>.</p>
   </div>
 </div>
 
