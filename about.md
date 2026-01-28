@@ -20,13 +20,13 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Notable posts</h3></summary>
 
-- I write about data and AI systems and teams. More [here](/blog).
+- [Read more](/blog) about data infra, AI coding, and organizations
 
   <div class="link-cards">
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-01-27-evolution-software-engineering-fortran-llms %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/ocean.jpg')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/camera%20obscura.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">The evolution of software engineering from FORTRAN to LLMs</span>
+        <span class="link-card-title">The evolution of software engineering</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
@@ -76,7 +76,7 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Magic link authentication with Replit</span>
+        <span class="link-card-title">Magic link auth with Replit</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>

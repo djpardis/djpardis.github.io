@@ -280,7 +280,7 @@ iframe {
 }
 .link-card-image {
   height: 0;
-  padding-bottom: 24%;
+  padding-bottom: 48%;
   background-size: cover;
   background-position: center;
   background-color: #f0f0f0;
@@ -296,6 +296,7 @@ iframe {
   margin-bottom: 1px;
 }
 .link-card-domain {
+  display: block;
   font-size: 0.72rem;
   color: #666;
 }
