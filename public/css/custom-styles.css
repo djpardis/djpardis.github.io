@@ -35,6 +35,17 @@
   gap: 20px;
   background: transparent;
 }
+.hero-container > div:first-child {
+  flex: 1.4 1 58%;
+  min-width: 0;
+}
+.hero-container > div:first-child img {
+  width: 100%;
+  max-width: 100%;
+}
+.hero-container > div:last-child {
+  flex: 1 1 38%;
+}
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column !important;
@@ -42,9 +53,13 @@
     text-align: left !important;
     gap: 15px !important;
   }
+  .hero-container > div:first-child,
+  .hero-container > div:last-child {
+    flex: none !important;
+  }
   .hero-container img {
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 500px !important;
   }
 }
 
@@ -244,15 +259,15 @@ iframe {
 /* LinkedIn-style link cards under experience (thumbnail + title + domain) */
 .link-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin: 0.75rem 0 1rem;
-  max-width: 560px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0.5rem 0 0.75rem;
+  max-width: 600px;
 }
 .link-card {
   display: block;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   background: #fff;
   text-decoration: none;
@@ -265,26 +280,40 @@ iframe {
 }
 .link-card-image {
   height: 0;
-  padding-bottom: 52.35%;
+  padding-bottom: 24%;
   background-size: cover;
   background-position: center;
   background-color: #f0f0f0;
 }
 .link-card-body {
-  padding: 10px 12px;
+  padding: 6px 8px;
 }
 .link-card-title {
   display: block;
   font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.25;
-  margin-bottom: 2px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  margin-bottom: 1px;
 }
 .link-card-domain {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: #666;
 }
-@media (max-width: 520px) {
+.link-card-placeholder {
+  cursor: default;
+  border-style: dashed;
+  border-color: #ccc;
+  opacity: 0.85;
+}
+.link-card-placeholder .link-card-image {
+  background-color: #e8e8e8;
+}
+@media (max-width: 540px) {
+  .link-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
   .link-cards {
     grid-template-columns: 1fr;
   }
