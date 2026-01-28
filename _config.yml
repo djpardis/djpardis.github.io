@@ -11,7 +11,7 @@ logo:                "/public/favicon/favicon.svg"
 lang:                'en-US'
 
 pages_list:
-  Bio: '/'
+  About: '/'
   Blog: '/blog'
   Work: '/work'
 

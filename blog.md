@@ -8,25 +8,6 @@ permalink: /blog
 ---
 
 <details class="collapsible-section" markdown="1" open>
-<summary><h3>Coming soon</h3></summary>
-
-- [The evolution of software engineering from FORTRAN to LLMs](/2026/01/evolution-software-engineering-fortran-llms/)  
-  January 2026 (draft)
-
-- [Building a robust contract understanding system: Doing more than data infrastructure at General Folders](/2025/10/09/contract-understanding-system/)  
-  October 9, 2025 (draft)
-
-- [Towards automated code refactoring: A semantic code understanding system](/2025/10/09/mcp-code-qna-deep-dive/)  
-  October 9, 2025 (draft)
-
-- [Products that scale: One solution does not fit all](/2025/09/21/products-that-scale/)  
-  September 21, 2025 (draft)
-
-- [Data science for modern finance teams](/2025/09/21/modern-finance-teams-data-science/)  
-  September 21, 2025 (draft)
-</details>
-
-<details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
@@ -46,6 +27,25 @@ permalink: /blog
 
 - [Models for integrating data science teams within organizations: A comparative analysis]({{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %})  
   July 31, 2019
+</details>
+
+<details class="collapsible-section" markdown="1">
+<summary><h3>Coming soon</h3></summary>
+
+- [The evolution of software engineering from FORTRAN to LLMs](/2026/01/evolution-software-engineering-fortran-llms/)  
+  January 2026 (draft)
+
+- [Building a robust contract understanding system: Doing more than data infrastructure at General Folders](/2025/10/09/contract-understanding-system/)  
+  October 9, 2025 (draft)
+
+- [Towards automated code refactoring: A semantic code understanding system](/2025/10/09/mcp-code-qna-deep-dive/)  
+  October 9, 2025 (draft)
+
+- [Products that scale: One solution does not fit all](/2025/09/21/products-that-scale/)  
+  September 21, 2025 (draft)
+
+- [Data science for modern finance teams](/2025/09/21/modern-finance-teams-data-science/)  
+  September 21, 2025 (draft)
 </details>
 
 <details class="collapsible-section" markdown="1">
