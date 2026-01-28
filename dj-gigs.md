@@ -16,7 +16,7 @@ permalink: /dj-gigs/
   </div>
 </div>
 
-<details class="collapsible-section" markdown="1">
+<details class="collapsible-section" markdown="1" open>
 <summary><h3>Annual song reviews</h3></summary>
 
 - [A 2025 mixtape: True love](https://djpardis.medium.com/a-2025-mixtape-685bb2431899)  

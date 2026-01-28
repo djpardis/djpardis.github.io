@@ -46,6 +46,15 @@
 .hero-container > div:last-child {
   flex: 1 1 38%;
 }
+
+/* Tighter spacing between hero and "Currently building" on homepage */
+.page > .hero-container {
+  margin-bottom: 0.5rem;
+}
+.hero-container + .collapsible-section summary h3 {
+  margin-top: 0;
+}
+
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column !important;
@@ -818,10 +827,10 @@ body .wrap .container.content {
   margin: 0;
 }
 
-/* Work page hero image: horizontal crop (4:3), same width as lightbox (min(90vw, 72vh)) */
+/* Work page hero image: horizontal crop (4:3), ~homepage profile size */
 .work-hero-image {
   margin: 0 auto 1rem;
-  max-width: min(90vw, 72vh);
+  max-width: min(24rem, 100%);
 }
 .work-hero-crop {
   aspect-ratio: 4 / 3;
