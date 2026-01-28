@@ -827,13 +827,13 @@ body .wrap .container.content {
   margin: 0;
 }
 
-/* Work page hero image: horizontal crop (4:3), same width as homepage/gigs hero image column (58%) */
+/* Work page hero image: cropped to same size and aspect ratio as homepage/gigs (58% width, 3:2) */
 .work-hero-image {
   margin: 0 auto 1rem;
   max-width: 58%;
 }
 .work-hero-crop {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   cursor: pointer;
   display: block;
