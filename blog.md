@@ -10,13 +10,16 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
+- [The evolution of software engineering from FORTRAN to LLMs: Including an in-depth look at AI coding milestones]({{ site.baseurl }}{% post_url 2026-01-01-evolution-software-engineering-fortran-llms %})  
+  January 1, 2026
+
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
 
-- [Introducing the data room app: Magic link authentication with Replit]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
+- [Magic link authentication with Replit: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
   July 20, 2025
 
-- [Vibe coding the data room app: Building with Windsurf]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
+- [Lessons in AI coding: Building a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
   June 20, 2025
 
 - [Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})  
