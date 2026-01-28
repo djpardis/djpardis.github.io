@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Bio
+title: About
+permalink: /
 description: Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data exchange solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data exchange, secure data sharing
 tags: [data, data science, management, technology, software, product, cloud infrastructure]
@@ -16,25 +17,46 @@ canonical_url: https://djpardis.com/
   </div>
 </div>
 
-
-
-<!-- <details class="collapsible-section" markdown="1" open>
-<summary><h3>Interests and hobbies</h3></summary>
-
-- **Data tools** — [B2B data transfer use cases and methodology]({% post_url 2023-04-03-the-state-of-data-exchange %}); [Data ∩ water terms](https://djpardis.medium.com/data-water-terms-6bf9e9c7aad6) 
-- **AI tools** — [AI coding best practices](/blog/2025/06/20-vibe-coding-data-room-app/); [Adventures in authentication](/blog/2025/07/20-introducing-the-data-room-app/) 
-- **Sports analytics** — [Revisiting Moneyball](/blog/2025/07/24/revisiting-moneyball/) 
-- **Baseball** — [Batter plate discipline](https://djpardis.medium.com/batter-plate-discipline-7d7d5e92a814); [MLB recruiting explained](https://djpardis.medium.com/how-does-mlb-recruiting-work-13e96c2519cf) 
-- **DJing** — [Check out my sets and radio shows](https://djpardis.club){:target="_blank"}
-
-</details> -->
-
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
 - **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
 
-- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure [data rooms](/blog/2025/07/20/introducing-the-data-room-app/) for fundraising
+  <div class="link-cards">
+    <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
+      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">The state of cross-company data exchange</span>
+        <span class="link-card-domain">youtube.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="https://www.youtube.com/watch?v=UEofjLSMKrQ" target="_blank">
+      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/UEofjLSMKrQ/hqdefault.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Pardis Noorzad of General Folders</span>
+        <span class="link-card-domain">youtube.com</span>
+      </div>
+    </a>
+  </div>
+
+- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising
+
+  <div class="link-cards">
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Vibe coding a data room app</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Introducing the data room app</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+  </div>
 
 - **[The 107 Wins Pod](https://107wins.club){:target="_blank"}** — Conversations about business building, tech trends, proven tactics, and learning new things
 
@@ -67,7 +89,7 @@ Designed and shipped the flagship promotion optimization system
 <!-- Research: [Classification in high-dimensional problems](/files/papers/Noorzad2012b.pdf){:target="_blank"} and [music genre recognition](/files/papers/genreSturmNoorzad20120116.pdf){:target="_blank"} -->
 
 - **Software Engineering** — [University of Tehran (BSc)](http://ece.ut.ac.ir/en){:target="_blank"}  
-<!-- Research: [Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/3242-Marjan_Sirjani){:target="_blank"} -->
+<!-- Research: [Transfer learning in RL](https://www.ipm.ac.ir/personalinfo.jsp?PeopleCode=IP0000028){:target="_blank"} and [automatic verification of composed web services](https://www.es.mdu.se/staff/342-Marjan_Sirjani){:target="_blank"} -->
 
 </details>
 
@@ -78,4 +100,3 @@ Here is my bio for talks and conferences:
 > Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
 > healthcare, and social media, backed by degrees in software engineering, mathematics, and AI. -->
-
