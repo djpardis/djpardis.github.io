@@ -10,12 +10,43 @@ canonical_url: https://djpardis.com/
 
 <div class="hero-container">
   <div>
-    <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="width: 1500px; height: auto; max-width: 100%;">
+    <img src="/files/pics/pages/profile pic 3.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
   </div>
   <div style="background: transparent;">
-    🏡 Hello! I'm a data scientist and entrepreneur building data and AI tools. In my free time, I <a href="/blog">write</a> and interview friends on my <a href="https://107wins.club" target="_blank">podcast</a>.
+    🏡 Hi there! I research and build data and AI systems that operate at scale. I'm currently tackling the hard problems in B2B data transfer through <a href="https://generalfolders.com" target="_blank">General Folders</a>. I led data teams at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a>, and shipped production AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.
   </div>
 </div>
+
+<details class="collapsible-section" markdown="1" open>
+<summary><h3>Notable posts</h3></summary>
+
+- I write about data and AI systems and teams. More [here](/blog).
+
+  <div class="link-cards">
+    <div class="link-card link-card-placeholder">
+      <div class="link-card-image"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">The evolution of software engineering from FORTRAN to LLMs</span>
+        <span class="link-card-domain">Coming soon...</span>
+      </div>
+    </div>
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Revisiting Moneyball</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2019/ds-team-models-1.jpeg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Models for integrating data science teams</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+  </div>
+
+</details>
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
@@ -23,17 +54,17 @@ canonical_url: https://djpardis.com/
 - **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
 
   <div class="link-cards">
-    <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
-      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">The state of cross-company data exchange</span>
-        <span class="link-card-domain">youtube.com</span>
-      </div>
-    </a>
     <a class="link-card" href="https://www.youtube.com/watch?v=UEofjLSMKrQ" target="_blank">
       <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/UEofjLSMKrQ/hqdefault.jpg')"></div>
       <div class="link-card-body">
         <span class="link-card-title">Pardis Noorzad of General Folders</span>
+        <span class="link-card-domain">youtube.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
+      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">The state of cross-company data exchange</span>
         <span class="link-card-domain">youtube.com</span>
       </div>
     </a>
@@ -42,13 +73,6 @@ canonical_url: https://djpardis.com/
 - **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising
 
   <div class="link-cards">
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">Vibe coding a data room app</span>
-        <span class="link-card-domain">djpardis.com</span>
-      </div>
-    </a>
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
       <div class="link-card-body">
@@ -56,9 +80,14 @@ canonical_url: https://djpardis.com/
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
+    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Vibe coding a data room app</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
   </div>
-
-- **[The 107 Wins Pod](https://107wins.club){:target="_blank"}** — Conversations about business building, tech trends, proven tactics, and learning new things
 
 </details>
 
