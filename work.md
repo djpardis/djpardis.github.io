@@ -136,7 +136,7 @@ permalink: /work/
 </details>
 
 <details class="collapsible-section" markdown="1">
-<summary><h3>Academic talks</h3></summary>
+<summary><h3>Research</h3></summary>
 
 - Modeling the Facebook social network: The memoryless GEO-P graph model  
   [SOGMSC](https://mathstat.uoguelph.ca/graduate/sogmsc), May 21, 2014  
