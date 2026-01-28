@@ -320,6 +320,30 @@ iframe {
   }
 }
 
+/* Blog hero: same card size as home page (home = 600px/3 cols); 2×2 grid → width so each card = (600-16)/3 px */
+.hero-container.blog-hero .blog-hero-cards {
+  flex: 0 0 calc((600px - 16px) / 3 * 2 + 8px);
+  min-width: 0;
+}
+.hero-container.blog-hero .link-cards {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: none;
+}
+@media (max-width: 768px) {
+  .hero-container.blog-hero .blog-hero-cards {
+    flex: none;
+  }
+}
+@media (max-width: 540px) {
+  .hero-container.blog-hero .link-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .hero-container.blog-hero .link-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
