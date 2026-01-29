@@ -72,23 +72,7 @@ permalink: /blog
 </details>
 
 <details class="collapsible-section" markdown="1">
-<summary><h3>Coming soon</h3></summary>
-
-- [Building a robust contract understanding system: Doing more than data infrastructure at General Folders](/2025/10/09/contract-understanding-system/)  
-  October 9, 2025 (draft)
-
-- [Towards automated code refactoring: A semantic code understanding system](/2025/10/09/mcp-code-qna-deep-dive/)  
-  October 9, 2025 (draft)
-
-- [Products that scale: One solution does not fit all](/2025/09/21/products-that-scale/)  
-  September 21, 2025 (draft)
-
-- [Data science for modern finance teams](/2025/09/21/modern-finance-teams-data-science/)  
-  September 21, 2025 (draft)
-</details>
-
-<details class="collapsible-section" markdown="1">
-<summary><h3>Archive</h3></summary>
+<summary><h3>Medium</h3></summary>
 
 <p><span class="highlight-text">Follow <a href="https://medium.com/@djpardis/">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed">RSS</a> or <a href="https://djpardis.medium.com/subscribe">email</a> for updates.</span></p>
 
