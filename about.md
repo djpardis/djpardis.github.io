@@ -33,7 +33,7 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
       <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">The state of cross-company data transfer</span>
+        <span class="link-card-title">The state of cross-company data exchange</span>
         <span class="link-card-domain">youtube.com</span>
       </div>
     </a>
