@@ -33,8 +33,15 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
       <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">The state of cross-company data exchange</span>
+        <span class="link-card-title">The state of cross-company data transfer</span>
         <span class="link-card-domain">youtube.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="https://datastackshow.com/podcast/making-cross-company-data-exchange-easy-with-pardis-noorzad-of-general-folders/" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/datastackshow-banner.png')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Making cross-company data exchange easy</span>
+        <span class="link-card-domain">datastackshow.com</span>
       </div>
     </a>
   </div>
