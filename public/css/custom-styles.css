@@ -854,6 +854,24 @@ body .wrap .container.content {
   text-align: center;
 }
 
+/* Mobile: work hero full width like homepage */
+@media (max-width: 768px) {
+  .work-hero-image {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .work-hero-crop {
+    width: 100%;
+  }
+  .work-hero-crop img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 /* X bullets for blog and gigs pages */
 .page ul {
   list-style: none;
