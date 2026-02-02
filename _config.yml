@@ -75,7 +75,7 @@ defaults:
   - scope:
       path: ""    # Apply to all files
     values:
-      image: /files/pics/profile_pic.jpg  # Profile picture for social media sharing
+      image: /files/pics/pages/profile_pic.jpg  # Profile picture for social media sharing
 
   # Blog posts
   - scope:
