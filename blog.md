@@ -120,7 +120,7 @@ permalink: /blog
 </details>
 
 <details class="collapsible-section" markdown="1">
-<summary><h3>TBT</h3></summary>
+<summary><h3>#tbt</h3></summary>
 
 - [Hourly mentions of a word on Twitter]({{ site.baseurl }}{% post_url 2015-05-23-hourly-mentions-of-a-word-on-twitter %})  
   May 23, 2015
