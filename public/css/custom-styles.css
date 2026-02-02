@@ -827,22 +827,14 @@ body .wrap .container.content {
   margin: 0;
 }
 
-/* Work page hero image: cropped to same size and aspect ratio as homepage/gigs (58% width, 3:2) */
+/* Work page hero image: full image, no crop */
 .work-hero-image {
   margin: 0 auto 1rem;
   max-width: 58%;
 }
-.work-hero-crop {
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-  cursor: pointer;
-  display: block;
-}
-.work-hero-crop img {
+.work-hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
   vertical-align: bottom;
 }
@@ -862,10 +854,7 @@ body .wrap .container.content {
     margin-left: 0;
     margin-right: 0;
   }
-  .work-hero-crop {
-    width: 100%;
-  }
-  .work-hero-crop img {
+  .work-hero-image img {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
