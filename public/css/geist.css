@@ -1,11 +1,11 @@
 /* 
- * Geist Font Implementation
- * This file applies Vercel's Geist font to the website
+ * Readable typography (Inter: highly legible, Cursor-like)
  */
 
-/* Apply Geist Sans as the main font */
+/* Apply Inter – clean, readable sans-serif */
 body {
-  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1rem;
   font-weight: 400;
   color: #454545; /* A tad darker than original but still balanced */
   -webkit-font-smoothing: antialiased;
@@ -13,15 +13,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Apply Geist Sans to all text elements for consistency */
+/* Apply Inter to body text */
 p, li, div, span, blockquote, td, th {
-  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   color: #454545; /* A tad darker than original but still balanced */
 }
 
 /* Headings with proper font weights */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-weight: 400 !important; /* Match body text weight */
   color: #454545; /* Same as body text */
   letter-spacing: 0; /* Remove letter spacing */
@@ -58,14 +58,14 @@ code, pre {
   font-size: 0.9rem;
 }
 
-/* Masthead styling with Geist Sans */
+/* Masthead styling */
 .masthead-title {
-  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-weight: 400 !important; /* Match body text weight */
 }
 
 .masthead-title a {
-  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-weight: 400 !important; /* Match body text weight */
 }
 
