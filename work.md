@@ -7,10 +7,10 @@ canonical_url: https://djpardis.com/work
 permalink: /work/
 ---
 
-<figure class="work-hero-image">
+<div class="work-hero-image">
   <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025" />
-  <figcaption>Techstars SDSU Founder Panel at VSW 2025.</figcaption>
-</figure>
+</div>
+*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
