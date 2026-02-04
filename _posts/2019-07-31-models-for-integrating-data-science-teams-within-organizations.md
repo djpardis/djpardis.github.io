@@ -7,7 +7,7 @@ keywords: data science, team organization, management, organizational design, pr
 image: /files/pics/blog/2019/ds-team-models-1.jpeg
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem; font-style: italic;">
+<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
 This post was originally published on <a href="https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd" target="_blank">Medium</a> and is cross-posted here.
 </div>
 
