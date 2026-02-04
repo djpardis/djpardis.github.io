@@ -49,7 +49,9 @@ The piece made it to the front page of <a href="https://news.ycombinator.com/ite
 </ul>
 </div>
 
-![Oakland Coliseum](/files/pics/blog/2025/oakland1.jpg){: style="max-width: 500px; display: block; margin: 0 auto;"}
+<div class="post-hero-image">
+<img src="/files/pics/blog/2025/oakland1.jpg" alt="Oakland Coliseum">
+</div>
 *Oakland Coliseum, September 2022.*
 
 ## [Introduction](#table-of-contents) {#introduction}
@@ -123,7 +125,7 @@ The position switch to first base was unprecedented. He had never played the pos
 
 Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 slash line, 68 walks versus 56 strikeouts, and 4.15 pitches per plate appearance (3rd in AL). His defining moment came on September 4, 2002, when his walk-off home run against Kansas City secured the A's 20th consecutive victory and set an AL record.
 
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0;">
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
           src="https://www.youtube.com/embed/qWMwo_qEQW8" 
           frameborder="0" 

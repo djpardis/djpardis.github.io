@@ -28,6 +28,61 @@
   background-color: transparent;
 }
 
+/* ===== SECTION-SPECIFIC REFERENCES (per-section reference blocks) ===== */
+.section-references {
+  margin: 1.5rem 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.section-references strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.section-references ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-references li,
+.section-references .ref-item {
+  margin: 0;
+  padding: 0.6rem 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: block;
+}
+
+.section-references .ref-item:first-child {
+  padding-top: 0;
+}
+
+.section-references .ref-item:last-child {
+  padding-bottom: 0;
+}
+
+/* [Bac57] is the bullet—no circle, no dash, no indentation */
+.section-references li > a[id^="ref-"],
+.section-references .ref-item > a[id^="ref-"] {
+  color: #7d78b5;
+}
+
+.section-references a {
+  color: #555;
+  text-decoration: none;
+}
+
+.section-references a:hover {
+  color: #7d78b5;
+}
+
+.section-references em {
+  font-style: italic;
+}
+
 /* Hero container: image + text side-by-side (index, dj-gigs) — define once */
 .hero-container {
   display: flex;
@@ -87,12 +142,12 @@
   flex: 1 1 300px;
   margin: 0;
   text-align: center;
-  max-width: 500px;
+  max-width: none;
 }
 
 .container.content .image-row img {
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 5px;
   height: auto;
@@ -129,8 +184,69 @@
 
 
 
-/* ===== UNIFIED IMAGE + CAPTION SYSTEM ===== */
-/* Default image styling - works everywhere (pages, posts, all layouts) */
+/* ===== POST HERO IMAGE: FULL WIDTH ===== */
+.post-hero-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 0 0;
+}
+.post-hero-image img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: block;
+  border-radius: 5px;
+  height: auto;
+}
+
+/* ===== CAPTION SYSTEM (central) =====
+ * All captions: 8px above, 16px below. Media containers have no bottom margin
+ * so the caption provides consistent spacing. Add new caption patterns here.
+ */
+:root {
+  --caption-margin: 8px auto 16px;
+  --caption-color: #757575;
+  --caption-font-size: 0.85rem;
+  --caption-max-width: 90%;
+}
+
+/* Caption styling - all patterns in one place */
+.post-hero-image + p,
+.work-hero-image + p,
+.video-container + p,
+.container.content .image-row + p,
+img[style*="max-width: 500px"] + em,
+img[style*="max-width: 350px"] + em,
+.container.content p img + em,
+.container.content div + p em,
+.container.content .image-caption,
+.container.content p.image-caption,
+iframe + em,
+iframe ~ em {
+  display: block;
+  text-align: center;
+  color: var(--caption-color);
+  font-size: var(--caption-font-size);
+  font-style: normal;
+  margin: var(--caption-margin);
+  max-width: var(--caption-max-width);
+  line-height: 1.4;
+}
+
+/* Media containers: no bottom margin when caption follows */
+.post-hero-image,
+.video-container,
+.container.content .image-row:has(+ p),
+.container.content .image-container-with-caption:has(+ p),
+.page > .work-hero-image {
+  margin-bottom: 0;
+}
+.video-container {
+  margin-top: 1.5rem;
+  max-width: 100%;
+}
+
+/* ===== IMAGE SIZING (inline/markdown) ===== */
 img[style*="max-width: 500px"] {
   max-width: 500px !important;
   display: block !important;
@@ -138,53 +254,12 @@ img[style*="max-width: 500px"] {
   border-radius: 5px;
   height: auto !important;
 }
-
 img[style*="max-width: 350px"] {
   max-width: 350px !important;
   display: block !important;
   margin: 0 auto !important;
   border-radius: 5px;
   height: auto !important;
-}
-
-/* Caption styling - for italic text following images */
-img[style*="max-width: 500px"] + em,
-img[style*="max-width: 350px"] + em,
-.container.content p img + em,
-.container.content .image-caption,
-.container.content p.image-caption {
-  display: block;
-  text-align: center;
-  color: #757575;
-  font-size: 0.85rem;
-  font-style: normal;
-  margin: 8px auto 16px;
-  max-width: 90%;
-  line-height: 1.4;
-}
-
-/* Caption styling for iframes (videos) */
-iframe + em {
-  display: block !important;
-  text-align: center !important;
-  color: #757575 !important;
-  font-size: 0.85rem !important;
-  font-style: normal !important;
-  margin: 8px auto 16px !important;
-  max-width: 90% !important;
-  line-height: 1.4 !important;
-}
-
-/* Alternative selector for iframe captions */
-iframe ~ em {
-  display: block !important;
-  text-align: center !important;
-  color: #757575 !important;
-  font-size: 0.85rem !important;
-  font-style: normal !important;
-  margin: 8px auto 16px !important;
-  max-width: 90% !important;
-  line-height: 1.4 !important;
 }
 
 /* Responsive iframe styling */
@@ -405,6 +480,32 @@ iframe {
 .toc-container li {
   margin: 0.4rem 0;
   position: relative;
+}
+
+/* Era headers: collapsible-section style, > bullet (same color as ×), same indent as intro/conclusion */
+.toc-container li.toc-era {
+  list-style: none;
+}
+.toc-container li.toc-era::before {
+  display: none;
+}
+.toc-container li.toc-era .collapsible-section {
+  margin: 0;
+  padding: 0;
+}
+.toc-container li.toc-era .collapsible-section summary {
+  position: relative;
+}
+.toc-container li.toc-era .collapsible-section summary::before {
+  content: ">";
+  color: #888;
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  margin-right: 0;
+}
+.toc-container li.toc-era .collapsible-section[open] summary::before {
+  content: "∨";
 }
 
 /* Bullets for all levels */
@@ -658,32 +759,57 @@ body {
   }
 }
 
-/* Markdown image caption styling - use same style as image-caption class */
-.container.content p img + em {
-  display: block;
-  text-align: center;
-  color: #757575;
-  font-size: 0.85rem;
-  font-style: normal;
-  margin: 8px auto 16px;
-  max-width: 90%;
-  line-height: 1.4;
+/* Headings without links: use normal heading color, not link color */
+.post h2:not(:has(a)),
+.post h3:not(:has(a)),
+.post h4:not(:has(a)),
+.post h5:not(:has(a)),
+.post h6:not(:has(a)) {
+  color: #313131;
 }
 
+/* Section headings that link back to TOC: styled as links (color only, no underline) */
+.post .era-heading a,
+.post h2 a[href="#table-of-contents"],
+.post h3 a[href="#table-of-contents"],
+.post h4 a[href="#table-of-contents"],
+.post h5 a[href="#table-of-contents"],
+.post h6 a[href="#table-of-contents"] {
+  color: #7d78b5;
+  text-decoration: none;
+}
+.post .era-heading a:hover,
+.post h2 a[href="#table-of-contents"]:hover,
+.post h3 a[href="#table-of-contents"]:hover,
+.post h4 a[href="#table-of-contents"]:hover,
+.post h5 a[href="#table-of-contents"]:hover,
+.post h6 a[href="#table-of-contents"]:hover {
+  background-color: #FFFF99;
+  text-decoration: none;
+}
+.post .era-heading {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-
-/* Removed conflicting page/post overrides - unified system handles all cases */
-
-/* Caption styling for pages with image containers */
-.container.content div + p em {
-  display: block;
-  text-align: center;
-  color: #757575;
-  font-size: 0.85rem;
-  font-style: normal;
-  margin: 8px auto 16px;
-  max-width: 90%;
-  line-height: 1.4;
+/* Inline code - match block code exactly (0.875rem, same font) */
+.post code:not(pre code),
+.container.content code:not(pre code) {
+  padding: 0.2em 0.4em;
+  font-family: "JetBrains Mono", "SF Mono", "Consolas", "Monaco", monospace !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+  color: #24292f;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+.post pre code,
+.highlight code,
+.highlight .highlight-line-content {
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 /* Blockquote styling */
@@ -703,9 +829,9 @@ body .wrap .copyright div {
   border-bottom: 2px solid #7d78b5 !important;
 }
 
-/* Content container gets full borders */
+/* Content area border */
 body .wrap .container.content {
-  border: 2px solid #7d78b5 !important;
+  border: 2px solid #7d78b5;
 }
 
 
@@ -829,7 +955,7 @@ body .wrap .container.content {
 
 /* Work page hero image: full image, no crop */
 .work-hero-image {
-  margin: 0 auto 1rem;
+  margin: 0 auto 0;
   max-width: 58%;
 }
 .work-hero-image img {
@@ -837,13 +963,6 @@ body .wrap .container.content {
   height: auto;
   display: block;
   vertical-align: bottom;
-}
-.work-hero-image figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: #555;
-  text-align: center;
 }
 
 /* Mobile: work hero full width like homepage */
@@ -1065,10 +1184,17 @@ p:has(+ .collapsible-section) {
     height: auto !important;
   }
   
-  /* Ensure captions are properly sized on mobile */
-  .container.content .image-caption,
+  /* Caption system: mobile overrides (see CAPTION SYSTEM section) */
+  .post-hero-image + p,
+  .work-hero-image + p,
+  .video-container + p,
+  .container.content .image-row + p,
   .container.content p img + em,
-  .container.content div + p em {
+  .container.content div + p em,
+  .container.content .image-caption,
+  .container.content p.image-caption,
+  iframe + em,
+  iframe ~ em {
     max-width: 95%;
     padding: 0 0.5rem;
   }
