@@ -6,7 +6,7 @@ description: 'Sharing key lessons and insights gained from building General Fold
 keywords: startup advice, General Folders, entrepreneurship, company building, lessons learned
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem; font-style: italic;">
+<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
 This article is cross-posted from my <a href="https://medium.com/@djpardis/startup-advice-e9459d6c1ebb" target="_blank">original publication on Medium</a>.
 </div>
 

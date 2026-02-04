@@ -8,12 +8,12 @@ date: 2025-07-24
 image: /files/pics/blog/2025/moneyball.jpg
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem; font-style: italic;">
+<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
 This post was originally published on <a href="https://djpardis.medium.com/revisiting-moneyball-074fc2435b07" target="_blank">Medium</a> and is cross-posted here.
 </div>
 
-<div class="update-container post-container" style="margin-bottom: 1rem; font-style: italic;">
-Update, July 25, 2025<br>
+<div class="update-container post-container" style="margin-bottom: 1rem;">
+<em>Update, July 25, 2025</em><br>
 The piece made it to the front page of <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a>. Thanks to <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a> for letting me know!<br>
 <!-- 2. <a href="https://x.com/WiLuisE/status/1948550390397763759" target="_blank">My friend Luis</a> used <a href="https://notebooklm.google.com/notebook/a28919ba-fc09-43e6-8fa6-491365e8525a?artifactId=e9345839-0370-471a-83b1-99cd10227847" target="_blank">NotebookLM</a> to create a podcast discussion of this post.<br><br>
 <div style="position: relative; width: 100%; height: 140px; max-width: 100%; overflow: hidden;">

@@ -7,7 +7,7 @@ categories: [data-science, data-engineering, business]
 tags: [data-exchange, data-transfer, data-sharing, partnerships, infrastructure]
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem; font-style: italic;">
+<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
 This post was originally published on <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">Medium</a> and is cross-posted here.
 </div>
 

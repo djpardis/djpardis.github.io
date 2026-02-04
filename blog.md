@@ -14,7 +14,7 @@ permalink: /blog
   </div>
   <div class="blog-hero-cards" style="background: transparent;">
     <div class="link-cards">
-      <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-01-27-evolution-software-engineering-fortran-llms %}">
+      <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-02-02-evolution-software-engineering-fortran-llms %}">
         <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/camera%20obscura.jpg')"></div>
         <div class="link-card-body">
           <span class="link-card-title">The evolution of software engineering</span>
@@ -49,8 +49,8 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-- [The evolution of software engineering from FORTRAN to LLMs: Including an in-depth look at AI coding milestones]({{ site.baseurl }}{% post_url 2026-01-27-evolution-software-engineering-fortran-llms %})  
-  January 27, 2026
+- [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones]({{ site.baseurl }}{% post_url 2026-02-02-evolution-software-engineering-fortran-llms %})  
+  February 2, 2026
 
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
