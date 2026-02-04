@@ -12,13 +12,13 @@ image: /files/pics/blog/2025/dataroom.png
 
 In the [first part of this series](/blog/2025/06/20/vibe-coding-data-room-app/), I shared my experience with vibe coding using Windsurf to build a custom data room application for startups. I discussed why existing data room solutions didn't meet my needs and also highlighted best practices for working with AI coding assistants.
 
-Now, in the second part, I'll focus on one of the most critical aspects of any application: secure authentication. Specifically, I'll walk through implementing magic link authentication with Replit, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.
+Now, in the second part, I'll focus on one of the most critical aspects of any application: secure authentication. Specifically, I'll walk through implementing magic link authentication, a passwordless approach that enhances security while providing a seamless user experience for investors accessing confidential documents.
 
 ## Solving the authentication challenge
 
-I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I wasn't able to fully build a magic link authentication flow and needed more opinionated help. I tried Replit which provided a quick and working solution.
+I tried initially to implement magic links with Windsurf. Given that auth flows are not my area of expertise, I needed more opinionated help. I tried Replit which provided a quick and working solution.
 
-[Replit](https://replit.com){:target="_blank"} is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it's now focused on making software development more accessible and collaborative. What drew me to it was its ability to handle full-stack applications with built-in authentication systems and serverless deployments, all without requiring complex DevOps knowledge.
+[Replit](https://replit.com){:target="_blank"} is a browser-based IDE and hosting platform that started in 2016 as a simple code playground but has evolved into a comprehensive development environment. Founded by Amjad Masad, Haya Odeh, and Faris Masad, it's now focused on making software development more accessible. What drew me to it was its ability to handle full-stack applications with built-in authentication and serverless deployments.
 
 ## Replit vs Windsurf: technical comparison
 
@@ -28,13 +28,13 @@ Replit's integrated authentication blueprints provide pre-configured [Passport.j
 
 ### Database integration
 
-Instant PostgreSQL provisioning through [Neon](https://neon.tech){:target="_blank"} with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. [Drizzle ORM](https://drizzleorm.com){:target="_blank"} integration works seamlessly with database push deployments without migration file management.
+Replit enables instant PostgreSQL provisioning through [Neon](https://neon.tech){:target="_blank"} with zero configuration. Connection strings, pooling, and SSL certificates are handled automatically. [Drizzle ORM](https://drizzleorm.com){:target="_blank"} integration works seamlessly with database push deployments without migration file management.
 
 Update (July 2025): Replit has since launched [separate development and production databases](https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases){:target="_blank"}, a significant enhancement that makes the platform more suited for developing real-world applications. This feature enables safer iteration by isolating development changes from live customer data, with automated migration assistance between environments. This advancement positions Replit as a compelling choice for production applications beyond side projects and prototypes.
 
 ### Deployment infrastructure
 
-Zero-config deployment to custom domains with automatic HTTPS, environment variable management, and container orchestration. The platform handles load balancing and scaling automatically. Replit eliminated infrastructure bottlenecks including server configuration, database setup, and SSL certificate management.
+Replit eliminated infrastructure bottlenecks including server configuration, database setup, and SSL certificate management. The platform handles load balancing and scaling automatically. 
 
 ### Replit limitations
 
@@ -48,7 +48,9 @@ Windsurf provides control with traditional Git workflows, full file system acces
 
 ## Data room platform implementation
 
-### Technical stack
+Here are the implementation details we narrowed in on with Replit.
+
+### Tech stack
 - React frontend with TypeScript and shadcn/ui components
 - Express.js backend with PostgreSQL database
 - Drizzle ORM for type-safe database operations
@@ -77,6 +79,7 @@ The platform is deployed at [thedataroom.app](https://thedataroom.app) and opera
 
 ## Development timeline
 
+Here's a summary of our development timeline.
 - Week 1: Authentication and data modeling implementation
 - Week 2: Document management and UI development
 - Week 3: Email system integration and production deployment
