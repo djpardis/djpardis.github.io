@@ -49,6 +49,20 @@ bundle exec jekyll build
 ./scripts/validate-build.sh
 ```
 
+### Updating dependencies
+
+The site is built on **Linux** (GitHub Pages). To avoid "run failed" after updating gems, keep the lockfile valid for Linux:
+
+```bash
+# Preferred: use the script (runs bundle update then adds Linux platforms)
+./scripts/bundle-update-safe.sh
+
+# Or after any manual "bundle update" or Gemfile change, run:
+bundle lock --add-platform ruby --add-platform x86_64-linux
+```
+
+CI runs the build on Ubuntu on every push; if the lockfile is macOS-only, the workflow fails before GitHub Pages runs.
+
 **Note**: Always use `bundle exec` with Jekyll commands to avoid gem version conflicts. The convenience scripts in `./scripts/` handle this automatically.
 
 ### Troubleshooting
