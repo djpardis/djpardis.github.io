@@ -8,14 +8,10 @@ tags: [data, data science, management, technology, software, product, cloud infr
 canonical_url: https://djpardis.com/
 ---
 
-<div class="hero-container">
-  <div>
-    <img src="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" style="height: auto; width: 100%;">
-  </div>
-  <div style="background: transparent;">
-    <p>🏡 Hello! I'm an engineer and a researcher focused on data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling the pitfalls of cross-company data transfer. I built <a href="https://thedataroom.app" target="_blank">The Data Room App</a> to improve data rooms for fundraising. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
-  </div>
-</div>
+{% capture hero_text %}
+<p>🏡 Hello! I'm an engineer and a researcher focused on data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling the pitfalls of cross-company data transfer. I built <a href="https://thedataroom.app" target="_blank">The Data Room App</a> to improve data rooms for fundraising. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
+{% endcapture %}
+{% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>

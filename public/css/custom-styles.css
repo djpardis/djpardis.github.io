@@ -71,7 +71,7 @@
 }
 
 .section-references a {
-  color: #555;
+  color: #7d78b5;
   text-decoration: none;
 }
 
@@ -102,7 +102,7 @@
   flex: 1 1 38%;
 }
 
-/* Tighter spacing between hero and "Currently building" on homepage */
+/* Hero + collapsible-section pages (about, dj-gigs): single place for hero-to-content gap */
 .page > .hero-container {
   margin-bottom: 0.5rem;
 }
@@ -1264,6 +1264,21 @@ p:has(+ .collapsible-section) {
 
 .form-field:last-of-type {
   margin-top: 1rem;
+}
+
+#reviewer-signup-form .form-field:last-of-type {
+  margin-top: 0;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.required {
+  color: #c00;
+  font-weight: bold;
 }
 
 .button {
