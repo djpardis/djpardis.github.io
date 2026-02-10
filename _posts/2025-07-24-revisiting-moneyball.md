@@ -8,10 +8,6 @@ date: 2025-07-24
 image: /files/pics/blog/2025/moneyball.jpg
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
-This post was originally published on <a href="https://djpardis.medium.com/revisiting-moneyball-074fc2435b07" target="_blank">Medium</a> and is cross-posted here.
-</div>
-
 <div class="update-container post-container" style="margin-bottom: 1rem;">
 <em>Update, July 25, 2025</em><br>
 The piece made it to the front page of <a href="https://news.ycombinator.com/item?id=44676348" target="_blank">HN</a>. Thanks to <a href="https://x.com/matsonj" target="_blank">@matsonj</a> and <a href="https://x.com/akm" target="_blank">@akm</a> for letting me know!<br>
@@ -308,4 +304,8 @@ Ultimately, it's hard to overlook the attention that Moneyball has brought to ba
 
 <a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" <a href="https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/" target="_blank">https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/</a>
 
-<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <a href="https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/" target="_blank">https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/</a> 
+<a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <a href="https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/" target="_blank">https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/</a>
+
+<div class="crosspost-container post-container" style="margin-top: 2rem; margin-bottom: 1rem;">
+This post was originally published on <a href="https://djpardis.medium.com/revisiting-moneyball-074fc2435b07" target="_blank" rel="noopener">Medium</a> and is cross-posted here.
+</div>

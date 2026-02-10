@@ -7,10 +7,6 @@ categories: [data-science, data-engineering, business]
 tags: [data-exchange, data-transfer, data-sharing, partnerships, infrastructure]
 ---
 
-<div class="crosspost-container post-container" style="margin-bottom: 1rem;">
-This post was originally published on <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank">Medium</a> and is cross-posted here.
-</div>
-
 <div class="toc-container post-container">
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
@@ -277,3 +273,7 @@ Below are reactions to the talk.
 
 ![Ananth Packkildurai shoutout](/files/pics/blog/2023/ananth-packkildurai-shoutout.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Thanks for the [shoutout](https://twitter.com/GeneralFolders/status/1644394291270422528?s=20){:target="_blank"} Ananth Packkildurai! Big fan of the DB comparison and of [Data Engineering Weekly](https://twitter.com/data_weekly){:target="_blank"}!*
+
+<div class="crosspost-container post-container" style="margin-top: 2rem; margin-bottom: 1rem;">
+This post was originally published on <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank" rel="noopener">Medium</a> and is cross-posted here.
+</div>
