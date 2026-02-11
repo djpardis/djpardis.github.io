@@ -14,13 +14,7 @@ permalink: /blog
   </div>
   <div class="blog-hero-cards" style="background: transparent;">
     <div class="link-cards">
-      <a class="link-card" href="{{ site.baseurl }}{% post_url 2026-02-10-evolution-software-engineering-fortran-llms %}">
-        <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/camera%20obscura.jpg')"></div>
-        <div class="link-card-body">
-          <span class="link-card-title">The evolution of software engineering</span>
-          <span class="link-card-domain">djpardis.com</span>
-        </div>
-      </a>
+      <!-- Evolution post when published: post_url 2026-02-04-evolution-software-engineering-fortran-llms -->
       <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
         <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
         <div class="link-card-body">
@@ -49,9 +43,7 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-- [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones]({{ site.baseurl }}{% post_url 2026-02-10-evolution-software-engineering-fortran-llms %})  
-  February 10, 2026
-
+<!-- Evolution post when published: post_url 2026-02-04-evolution-software-engineering-fortran-llms -->
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
 
