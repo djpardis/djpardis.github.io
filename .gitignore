@@ -10,6 +10,7 @@ _site/
 .obsidian/
 .vscode/
 
+
 # Ruby dependency management
 .bundle/
 vendor/
