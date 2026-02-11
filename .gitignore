@@ -21,3 +21,5 @@ _config.gh-pages.yml
 _drafts/
 *.DS_Store
 episode1-transcript.md
+
+DEV-NOTES.md
