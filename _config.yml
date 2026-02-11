@@ -13,7 +13,7 @@ lang:                'en-US'
 pages_list:
   About: '/'
   Blog: '/blog'
-  Work: '/work'
+  Research: '/research'
 
 # Collections for better organization
 collections:
