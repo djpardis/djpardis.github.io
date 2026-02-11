@@ -16,7 +16,7 @@ Get notified about new posts and podcast episodes every couple of weeks.
 
 - **🎯 Quality over quantity**: Updates every couple of weeks, not daily spam
 - **📝 Behind-the-scenes insights**: Posts about the real stories behind building products
-- **🎙️ Podcast episodes**: Deep dives into data, startups, and new tech from [107 Wins](/107wins.html)
+- **🎙️ Podcast episodes**: Deep dives into data, startups, and new tech from [107 Wins](https://107wins.club)
 - **⚾️ Baseball fun**: Posts about sabermetrics or pure baseball facts
 - **🎶 Playlists**: Annual top 20 playlists with brief song reviews
 
