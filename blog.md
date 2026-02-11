@@ -14,7 +14,6 @@ permalink: /blog
   </div>
   <div class="blog-hero-cards" style="background: transparent;">
     <div class="link-cards">
-      <!-- Evolution post when published: post_url 2026-02-04-evolution-software-engineering-fortran-llms -->
       <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
         <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
         <div class="link-card-body">
@@ -43,7 +42,6 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-<!-- Evolution post when published: post_url 2026-02-04-evolution-software-engineering-fortran-llms -->
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
 
