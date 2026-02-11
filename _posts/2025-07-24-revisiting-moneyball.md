@@ -117,7 +117,7 @@ Scott Hatteberg was available at a below-market price due to perceived limitatio
 
 Oakland signed Hatteberg to first base for $950K on a one-year contract after Colorado declined salary arbitration. The A's saw past the injury to identify exceptional plate discipline and on-base skills. His .367 OBP in 2000 and .410 OBP in 1999 demonstrated an ability to get on base.
 
-The position switch to first base was unprecedented. He had never played the position professionally. He learned first base during spring training with infield coach Ron Washington.
+Catcher-to-first-base conversions are common in baseball, and most are injury-driven. But players like Joe Mauer and Buster Posey had logged games at first base before switching permanently. Hatteberg had zero professional innings at the position. He went from injured catcher to opening day first baseman in one spring training, learning the position from infield coach Ron Washington.
 
 Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 slash line, 68 walks versus 56 strikeouts, and 4.15 pitches per plate appearance (3rd in AL). His defining moment came on September 4, 2002, when his walk-off home run against Kansas City secured the A's 20th consecutive victory and set an AL record.
 
@@ -181,7 +181,7 @@ The Oakland A's themselves became the perfect case study for this phenomenon. Fr
 
 Academic analysis by Stanford <a href="#ref6">[6]</a> found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" <a href="#ref7">[7]</a>.
 
-The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP- the cornerstone of their analytical advantage - declined 11% in playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
+The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP, which is the cornerstone of their analytical advantage, declined 11% in the playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
 
 This randomness explains why sabermetricians often view regular-season performance as a more reliable indicator of a team's true quality than its playoff results.
 
@@ -224,7 +224,7 @@ Fast forward to today, the Dodgers won the 2024 World Series while employing one
 
 The 2024 season saw a record nine teams exceed the luxury tax threshold, resulting in $311 million in penalties. The Mets, under Steve Cohen, topped the league with a $333 million payroll, while the A's payroll of $66.5 million represents ownership decisions rather than analytical ones.
 
-It turns out that Moneyball is about money. Billy Beane's Oakland A's succeeded not because they rejected the importance of money, but because they maximized every dollar's impact when competing against teams with three times their budget. The book's enduring relevance lies in demonstrating how intelligence and efficiency can overcome - though not eliminate - financial disadvantage.
+It turns out that Moneyball is about money. Billy Beane's Oakland A's succeeded not because they rejected the importance of money, but because they maximized every dollar's impact when competing against teams with three times their budget. The book's enduring relevance lies in demonstrating how intelligence and efficiency can overcome, though maybe not eliminate, financial disadvantage.
 
 Rather than promoting frugality, Moneyball's lasting impact has been to make teams more analytical. Every MLB franchise now employs statisticians and data scientists. The result has been more informed decision making at all spending levels, not a reduction in overall spending. Moneyball's impact, short-term or long-term, has not been frugality.
 
@@ -232,7 +232,7 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 
 ### [Moneyball promotes the use of analytics in baseball, thus ruining the sport.](#table-of-contents) {#moneyball-promotes-analytics}
 
-The analytics revolution was already underway before Moneyball - the book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
+The analytics revolution was already underway before Moneyball. The book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
 
 To understand baseball's numerical history, you can go back even further. Henry Chadwick, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
 
@@ -249,9 +249,9 @@ However, the use of analytics has not been without downsides:
 
 **The "Three True Outcomes" problem**. Home runs, walks, and strikeouts now dominate baseball, with 35% of plate appearances ending without involving seven defensive players. This has reduced balls in play by 20% since 1980, resulting in longer games with less action.
 
-**Entertainment decline**. As Theo Epstein admitted, "executives like me who have spent a lot of time using analytics…have unwittingly had a negative impact on the aesthetic value of the game." Even Bill James acknowledged the game's aesthetics "went to hell in a dump truck" due to excessive strikeouts and endless pitching changes.
+**Entertainment decline**. As Theo Epstein admitted, "executives like me who have spent a lot of time using analytics…have unwittingly hurt the aesthetic value of the game." Even Bill James acknowledged the game's aesthetics "went to hell in a dump truck" due to excessive strikeouts and endless pitching changes.
 
-Analytics improved baseball's efficiency but arguably damaged its entertainment value - a trade-off MLB addressed with 2023 rule changes, including pitch clocks and shift bans.
+Analytics improved baseball's efficiency but arguably damaged its entertainment value. This is a tradeoff the MLB addressed with 2023 rule changes, including pitch clocks and shift bans.
 
 ### [Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.](#table-of-contents) {#moneyball-suggests-baseball-is-unfair}
 
@@ -260,17 +260,17 @@ Despite conventional wisdom linking salary caps to competitive balance, the data
 
 However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
-Despite this, playoff access remains remarkably broad: 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
+Despite this, playoff access remains remarkably broad as 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
 
 While the NBA currently enjoys unprecedented parity, seven different champions in seven years (2019–2025), this represents a dramatic shift from its historically dynasty-heavy nature where superstars concentrated championships among elite teams.
 
-The NFL's "National Parity League" reputation may be an overstatement: just five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century <a href="#ref10">[10]</a>.
+The NFL's "National Parity League" reputation may be an overstatement. Only five AFC teams (Broncos, Ravens, Patriots, Steelers, Colts) represented the conference in 13 consecutive Super Bowls, while the Chiefs have reached more Super Bowls in six years than any MLB team has World Series appearances in the 21st century <a href="#ref10">[10]</a>.
 
 This suggests that playoff format, season length, and sport-specific factors matter more than financial structures alone.
 
 ## [Conclusion](#table-of-contents) {#conclusion}
 
-Whether the 2002 A's succeeded primarily through analytics or traditional talent is less important than the broader principle they demonstrated: analytics can reveal value that conventional wisdom misses. They also showed the power of intelligence, creativity, and sheer persistence in overcoming financial disadvantage.
+Whether the 2002 A's succeeded primarily through analytics or traditional talent is less important than the broader principle that analytics can reveal value that conventional wisdom misses. They also showed the power of intelligence, creativity, and sheer persistence in overcoming financial disadvantage.
 
 Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and Jonah Hill admirers.
 
