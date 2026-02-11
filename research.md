@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Work
+title: Research
 description: Talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
 keywords: data science, team management, B2B data collaboration, talks, panels, podcasts, academic papers, pardis noorzad, general folders
-canonical_url: https://djpardis.com/work
-permalink: /work/
+canonical_url: https://djpardis.com/research
+permalink: /research/
 ---
 
 <div class="work-hero-image">
@@ -138,7 +138,7 @@ permalink: /work/
 </details>
 
 <details class="collapsible-section" markdown="1">
-<summary><h3>Research</h3></summary>
+<summary><h3>Seminars</h3></summary>
 
 - Modeling the Facebook social network: The memoryless GEO-P graph model  
   [SOGMSC](https://mathstat.uoguelph.ca/graduate/sogmsc), May 21, 2014  
