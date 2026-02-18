@@ -2,6 +2,7 @@
 layout: post
 title: "The state of data exchange"
 subtitle: "A survey of data transfer and sharing methodology"
+description: "A survey of how enterprises share and transfer data with business partners, from Excel and SFTP to clean rooms, and the challenges that remain."
 date: 2023-04-03
 categories: [data-science, data-engineering, business]
 tags: [data-exchange, data-transfer, data-sharing, partnerships, infrastructure]
@@ -274,6 +275,6 @@ Below are reactions to the talk.
 ![Ananth Packkildurai shoutout](/files/pics/blog/2023/ananth-packkildurai-shoutout.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *Thanks for the [shoutout](https://twitter.com/GeneralFolders/status/1644394291270422528?s=20){:target="_blank"} Ananth Packkildurai! Big fan of the DB comparison and of [Data Engineering Weekly](https://twitter.com/data_weekly){:target="_blank"}!*
 
-<div class="crosspost-container post-container" style="margin-top: 2rem; margin-bottom: 1rem;">
+<div class="crosspost-container post-container">
 This post was originally published on <a href="https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0" target="_blank" rel="noopener">Medium</a> and is cross-posted here.
 </div>

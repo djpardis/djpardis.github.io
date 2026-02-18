@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-description: Talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
+description: Research. Talks, panels, podcasts, and academic work by Pardis Noorzad on data science, team management, and B2B data collaboration.
 keywords: data science, team management, B2B data collaboration, talks, panels, podcasts, academic papers, pardis noorzad, general folders
 canonical_url: https://djpardis.com/research
 permalink: /research/
