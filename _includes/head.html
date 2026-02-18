@@ -66,8 +66,8 @@
   <link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
   
 
-  <!-- Title with proper separator -->
-  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Title: Page › Site (arrow is Google-safe, shows in SERPs) -->
+  <title>{% if page.title %}{{ page.title }} › {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   
   <!-- Meta description -->
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -81,7 +81,7 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} › {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
@@ -94,7 +94,7 @@
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} › {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.image %}
   <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
@@ -164,6 +164,29 @@
   </script>
   {% endif %}
 
+  <!-- WebPage schema for non-post pages: explicit name, url, breadcrumb so SERPs show correct title and path -->
+  {% if page.layout != 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}",
+    "name": "{% if page.title %}{{ page.title }} › {{ site.title }}{% else %}{{ site.title }}{% endif %}",
+    "url": "{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}",
+    "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+    "isPartOf": { "@type": "WebSite", "@id": "{{ site.url }}/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "{{ site.title }}", "item": "{{ site.url }}/" }{% if page.url == '/' %},
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "{{ site.url }}/" }{% else %},
+        { "@type": "ListItem", "position": 2, "name": "{{ page.title }}", "item": "{{ site.url }}{{ page.url }}" }{% endif %}
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
   <!-- Website navigation schema for better sitelinks -->
   <script type="application/ld+json">
   {
@@ -209,7 +232,7 @@
         "@id": "{{ site.url }}/#homepage",
         "name": "About",
         "url": "{{ site.url }}/",
-        "description": "About Pardis Noorzad — background, talk, podcast, and recent posts",
+        "description": "About Pardis Noorzad. Background, talk, podcast, and recent posts",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website"
@@ -338,7 +361,7 @@
         "@type": "SiteNavigationElement",
         "name": "About",
         "url": "{{ site.url }}/",
-        "description": "About Pardis Noorzad — background, talk, podcast, and recent posts"
+        "description": "About Pardis Noorzad. Background, talk, podcast, and recent posts"
       },
       {
         "@type": "SiteNavigationElement", 
@@ -363,7 +386,7 @@
   </script>
 
   <!-- Breadcrumb navigation schema -->
-  {% if page.url != "/" %}
+  {% if page.url == "/" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -373,7 +396,28 @@
         "@type": "ListItem",
         "position": 1,
         "name": "{{ site.title }}",
-        "item": "{{ site.url }}"
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "{{ site.url }}/"
+      }
+    ]
+  }
+  </script>
+  {% elsif page.url != "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ site.title }}",
+        "item": "{{ site.url }}/"
       }{% if page.layout == 'post' %},
       {
         "@type": "ListItem",
