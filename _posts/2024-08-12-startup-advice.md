@@ -107,6 +107,6 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 What are some of your experiences from working at startups? I'd love to hear from you!
 
-<div class="crosspost-container post-container" style="margin-top: 2rem; margin-bottom: 1rem;">
+<div class="crosspost-container post-container">
 This article is cross-posted from my <a href="https://medium.com/@djpardis/startup-advice-e9459d6c1ebb" target="_blank" rel="noopener">original publication on Medium</a>.
 </div>
