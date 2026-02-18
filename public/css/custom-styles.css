@@ -578,7 +578,14 @@ iframe {
 
 .container.content .crosspost-container,
 .crosspost-container {
-  background-color: rgba(255, 191, 0, 0.15);
+  background-color: rgba(147, 197, 253, 0.35);
+}
+
+/* End-of-post containers: uniform spacing (no inline styles in posts) */
+.container.content .note-container.post-container,
+.container.content .crosspost-container.post-container {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Ensure links work inside containers */
@@ -589,11 +596,16 @@ iframe {
 }
 
 .container.content .update-container {
-  background-color: rgba(255, 192, 203, 0.12);
+  background-color: rgba(125, 120, 181, 0.12);
+}
+
+.container.content .update-container.post-container {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .container.content .note-container {
-  background-color: rgba(255, 255, 0, 0.12);
+  background-color: rgba(125, 120, 181, 0.18);
 }
 
 .container.content .warning-container {
@@ -1200,10 +1212,12 @@ p:has(+ .collapsible-section) {
     padding: 0 0.5rem;
   }
   
-  /* Remove extra space after the last paragraph in mobile */
+  /* Remove extra space after the last paragraph in mobile (keep margin on end-of-post containers) */
   .post > p:last-child,
-  .post > div:last-child,
   .post > pre:last-child {
+    margin-bottom: 0;
+  }
+  .post > div:last-child:not(.note-container):not(.crosspost-container) {
     margin-bottom: 0;
   }
   
