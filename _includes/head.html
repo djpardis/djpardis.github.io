@@ -66,8 +66,8 @@
   <link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
   
 
-  <!-- Title: Page | Site (standard for SERPs) -->
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Title: Page — Site -->
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   
   <!-- Meta description. Posts never use site description so SERPs show post-specific text. -->
   <meta name="description" content="{% if page.layout == 'post' %}{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | truncate: 160 }}{% endif %}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -78,10 +78,9 @@
   <meta name="copyright" content="{{ site.author.name }}">
   <link rel="author" href="{{ site.url }}">
   <meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow{% endif %}">
-  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.layout == 'post' %}{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | truncate: 160 }}{% endif %}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
@@ -94,8 +93,8 @@
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.layout == 'post' %}{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | truncate: 160 }}{% endif %}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.image %}
   <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
   {% else %}
@@ -172,7 +171,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}",
-    "name": "{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}",
+    "name": "{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}",
     "url": "{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}",
     "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
     "isPartOf": { "@type": "WebSite", "@id": "{{ site.url }}/#website" }
@@ -210,109 +209,7 @@
       "@type": "WebPage",
       "@id": "{{ site.url }}/"
     },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    },
-    "sameAs": {{ site.social.links | jsonify }},
-    "hasPart": [
-      {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}/#homepage",
-        "name": "About",
-        "url": "{{ site.url }}/",
-        "description": "About Pardis Noorzad. Background, talk, podcast, and recent posts",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "{{ site.url }}/#website"
-        }
-      },
-      {
-        "@type": "WebPage", 
-        "@id": "{{ site.url }}/research/#researchpage",
-        "name": "Research",
-        "url": "{{ site.url }}/research/",
-        "description": "Talks, panels, podcasts, and academic work",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "{{ site.url }}/#website"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}/blog/#blogpage",
-        "name": "Blog", 
-        "url": "{{ site.url }}/blog/",
-        "description": "Blog posts on data science and technology",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "{{ site.url }}/#website"
-        },
-        "mainEntity": {
-          "@type": "Blog",
-          "@id": "{{ site.url }}/blog/#blog",
-          "name": "Pardis Noorzad Blog",
-          "description": "Personal blog on data science, team management, startup building, and technology leadership",
-          "url": "{{ site.url }}/blog/",
-          "publisher": {
-            "@type": "Person",
-            "@id": "{{ site.url }}/#person",
-            "name": "{{ site.author.name }}"
-          }
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}/dj-gigs/#gigspage",
-        "name": "Gigs",
-        "url": "{{ site.url }}/dj-gigs/",
-        "description": "DJ services and event information",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "{{ site.url }}/#website"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Site Navigation Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SiteNavigationElement",
-    "name": "Main Navigation",
-    "url": "{{ site.url }}/",
-    "hasPart": [
-      {
-        "@type": "SiteNavigationElement",
-        "name": "About",
-        "url": "{{ site.url }}/",
-        "description": "About Pardis Noorzad. Background, talk, podcast, and recent posts"
-      },
-      {
-        "@type": "SiteNavigationElement", 
-        "name": "Blog",
-        "url": "{{ site.url }}/blog/",
-        "description": "Blog posts on data science and technology"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Research",
-        "url": "{{ site.url }}/research/",
-        "description": "Talks, panels, podcasts, and academic work"
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Gigs",
-        "url": "{{ site.url }}/dj-gigs/",
-        "description": "DJ services and event information"
-      }
-    ]
+    "sameAs": {{ site.social.links | jsonify }}
   }
   </script>
 
