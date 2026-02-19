@@ -2,12 +2,12 @@
 layout: post
 title: 'Lessons in AI coding'
 subtitle: 'Building a data room app'
-description: 'Building an intuitive data room app to streamline investor access to startup information'
-keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication
+description: 'Lessons learned in using AI coding to build an intuitive data room app'
+keywords: ai coding, windsurf, cursor, data rooms, startup, investors, vibe coding, user experience, next.js, mongodb, authentication
 image: /files/pics/blog/2025/fancy-pooh.jpg
 ---
 
-This is part 1 of a 2-part post. The first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The second part is about how I set up the magic link authentication flow.
+This is part 1 of a 2-part post. This first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The [second part]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}) is about how I set up the magic link authentication flow.
 
 ![A cute bear saying 'oh bother'](/files/pics/blog/2025/fancy-pooh.jpg)
 *It's different.*
@@ -113,7 +113,7 @@ That's it for now. I'll add to this list as I learn more.
 
 ## Next steps
 
-Along with part 2 of this post where I'll explain the login flow with magic link authentication, I will publish a link for you to try out the data room app. 
+In the [second part]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}) I explain the login flow with magic link authentication. I've also published a link for you to try out the data room app. 
 
 Next up, stay tuned as I share some of my [explorations](https://github.com/djpardis/mcp-code-qna){:target="_blank"} into MCP servers and agents.
 
