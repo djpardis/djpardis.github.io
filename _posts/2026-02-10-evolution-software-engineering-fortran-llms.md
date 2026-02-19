@@ -673,7 +673,7 @@ Because $h_t$ depends on $h_{t-1}$, the forward pass required $n$ sequential ste
 
 $$
 \begin{aligned}
-h_i &= \sum_j \alpha_{ij} V_j \\
+h_i &= \sum_j \alpha_{ij} V_j \\\\
 \alpha_{ij} &= \mathrm{softmax}\bigl( q_i \cdot k_j \big/ \sqrt{d} \bigr)
 \end{aligned}
 $$
@@ -731,19 +731,21 @@ The model produced the continuation by computing $P(\text{next token} \mid \text
 
 <!-- ### Solution. Reward models trained on human preferences align output to what programmers want -->
 
-**Solution.** The fix was to add a second training phase that optimized the policy for human preference, not only for next-token likelihood. Here the policy is the code model that, given a prompt $x$, defines a distribution over completions $y$, written $\pi_\theta(y \mid x)$ with parameters $\theta$. The procedure is reinforcement learning from human feedback (RLHF). It has two components: (1) a reward model and (2) an RL phase.
+**Solution.** The fix was to add a second training phase that optimized the policy for human preference, not only for next-token likelihood. Here the policy is the code model that, given a prompt $x$, defines a distribution over completions $y$, written $\pi\_\theta(y \mid x)$ with parameters $\theta$. The procedure is reinforcement learning from human feedback (RLHF). It has two components. (1) A reward model and (2) an RL phase.
 
-(1) The reward model is a network that scores each prompt-completion pair with a scalar, e.g. $r(x, y) \in \mathbb{R}$ where $x$ is the prompt and $y$ is the completion. It is trained on human pairwise preferences so that preferred completions receive higher scores. That required new human-labeled data, but only preference labels that indicate which of two completions is better, not full target completions. The scale of this preference data is on the order of tens of thousands of comparisons, far less than pretraining data.
+(1) The reward model is a network that assigns each prompt-completion pair a scalar reward, e.g. $r(x, y) \in \mathbb{R}$ where $x$ is the prompt and $y$ is the completion. It is trained on human pairwise preferences so that preferred completions receive higher reward. That required new human-labeled data, but only preference labels that indicate which of two completions is better, not full target completions. The scale of this preference data is on the order of tens of thousands of comparisons, far less than pretraining data.
 
-(2) The RL phase fine-tunes the policy $\pi_\theta$ with PPO to maximize reward on its samples, with a penalty so the policy does not drift far from the pretrained reference $\pi_{\mathrm{ref}}$. The objective is
+(2) The RL phase has one goal. The policy is adjusted so that its completions get high reward from the reward model (i.e. what humans prefer), without drifting so far from the pretrained reference that outputs degenerate into gibberish or reward-hacking (e.g. repeating phrases the reward model likes). The policy is fine-tuned with PPO (proximal policy optimization), an RL algorithm that updates the policy in constrained steps. In plain language, the training objective is to maximize the average reward on completions the policy produces, then subtract a penalty for how far the policy has drifted from the pretrained reference. So the policy is pushed toward high-reward outputs but kept close to the reference so that outputs stay readable, valid code.
 
-$$\mathbb{E}_{x \sim \pi_\theta}[r(x)] - \beta\,\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}})$$
+Formally, the objective is
 
-where KL is the Kullback–Leibler divergence,
+$$\mathbb{E}_{y \sim \pi_\theta}[r(y)] - \beta\,\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}})$$
 
-$$\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}}) = \mathbb{E}_{x \sim \pi_\theta}\left[\log \pi_\theta(x) - \log \pi_{\mathrm{ref}}(x)\right].$$
+where $\mathbb{E}\_{y \sim \pi\_\theta}$ is the expectation (average over completions drawn from the policy), $y$ is a completion, and $r(y)$ is its reward. Thus the objective maximizes the first term (expected reward under the policy) and minimizes the second (deviation from the reference policy). The coefficient $\beta$ controls the tradeoff between reward and staying close. KL denotes the Kullback–Leibler divergence,
 
-Without the KL term, the policy can collapse toward high-reward, low-fluency or reward-hacking outputs. The KL term keeps outputs close to the reference distribution so that code stays coherent. The policy is thus optimized for preference, not only for likelihood on a fixed corpus.
+$$\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}}) = \mathbb{E}_{y \sim \pi_\theta}\left[\log \pi_\theta(y) - \log \pi_{\mathrm{ref}}(y)\right],$$
+
+Without the KL term, the policy can collapse toward high-reward, low-fluency or reward-hacking outputs. The KL term keeps outputs close to the reference distribution so that they stay readable, valid code. The policy is thus optimized for preference, not only for likelihood on a fixed corpus.
 
 InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> and ChatGPT (November 2022) established the pipeline. Code assistants adopted it with programmer labelers and code completions.
 
@@ -851,7 +853,7 @@ Programming languages are not consolidating into fewer options. Python rose to t
 
 Other trends deserve attention. Studies report that code churn is projected to double in AI-assisted codebases compared to pre-AI baselines, with more copy-pasted code and patterns resembling work from less experienced contributors <a href="#ref-Har24" id="ref-Har24-back">[Har24]</a>. Copilot and similar tools have been found to generate vulnerable code in a substantial fraction of security-sensitive scenarios <a href="#ref-PPL22" id="ref-PPL22-back">[PPL22]</a>. Adoption is high. So is the need for rigorous review. The tool is not the process.
 
-### Where AI fits: internet, cloud, and SaaS
+### Where AI fits (internet, cloud, and SaaS)
 
 The introductory claims, that AI is "the best thing since the internet," "as big as cloud," or that "SaaS is dead," can be assessed against the transitions documented above. The internet (TCP/IP, 1983) became a universal substrate. Cloud computing (AWS EC2, 2006) transformed infrastructure from capital expenditure to operational expense and enabled elastic scaling. Both altered what could be built and how software reached users. AI coding assistants operate at a different layer. They change how code is produced, not the substrate or platform itself. Whether that remains a productivity tool for programmers or extends to non-programmers writing their own software is an empirical question. The economic logic of SaaS is instructive. SaaS exists because the cost of building, maintaining, and operating software in-house has historically exceeded the cost of subscribing. Vendors amortize development, maintenance, security, and compliance across many customers. AI may lower the cost of initial construction, but it does not by itself reduce the cost of ongoing maintenance, integration across systems, or compliance. Whether end users can free themselves from SaaS depends on whether the total cost of AI-assisted in-house development falls below the cost of subscription for a given use case. Bacchelli and Bird <a href="#ref-BB13" id="ref-BB13-back">[BB13]</a> find that the expertise to verify code closely matches the expertise to write it, which implies that verification costs remain nontrivial. The framework does not settle whether AI is "as big as" the internet or cloud. It provides a lens for comparing the kind of change each represents and for reasoning about the conditions under which SaaS remains economically viable.
 
