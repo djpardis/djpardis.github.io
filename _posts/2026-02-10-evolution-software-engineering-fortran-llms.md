@@ -67,11 +67,11 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
       <li><a href="#ai-transformers-2017">2017. Transformers replace recurrence with self-attention</a></li>
       <li><a href="#ai-llm-2020">2020. Large language models demonstrate in-context learning</a></li>
       <li><a href="#ai-copilot-2021">2021. Copilot and Codex bring AI code generation to mainstream development</a></li>
-      <li><a href="#ai-benchmarks-2021">2021–2024. Code evals establish how the field measures progress and reveal the gap between algorithmic and real-world tasks</a></li>
       <li><a href="#ai-rlhf-2022">2022. RLHF aligns code models to programmer intent</a></li>
       <li><a href="#ai-rag-2022">2023. RAG grounds code generation in the codebase</a></li>
       <li><a href="#ai-agentic-2023">2023–2024. Long-context and agentic interfaces expand scope</a></li>
       <li><a href="#ai-reasoning-2024">2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack</a></li>
+      <li><a href="#ai-benchmarks-2021">2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.</a></li>
       <li><a href="#ai-discussion">Discussion. The impact of AI coding in software engineering has yet to unfold</a></li>
     </ul>
   </details>
@@ -87,13 +87,15 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
 
 ## [Introduction](#table-of-contents) {#introduction}
 
-Back in college I found myself taking a couple of AI courses. At the time, we believed that achieving what AI promised meant we would not merely write ordinary software but rather software that could generate software. Of course, code generation was already underway in many forms. Compilers turned high-level code into machine code. Parser generators like yacc turned a grammar into a parser. But that was all purpose-built and deterministic. AI code generation is different. 
+My first exposure to AI, save a few books from Scholastic, was through a number of electives in college. The understanding at the time was that if we were to achieve the promises of AI, we would not merely write ordinary software but rather software that would generate other software. Of course, code generation was already underway in many forms. Compilers turned high-level code into machine code. Parser generators like yacc turned a grammar into a parser. But that was all purpose-built and deterministic. AI code generation is different.
 
-The discourse about AI today is almost ritualistic. "<a href="https://www.techradar.com/pro/nvidia-ceo-ai-could-be-the-largest-technological-leap-weve-ever-seen" target="_blank" rel="noopener">It's the largest technological leap we've seen.</a>" "<a href="https://www.businessinsider.com/ben-horowitz-says-ai-is-bigger-than-internet-not-bubble-2026-1" target="_blank" rel="noopener">It's bigger than the internet.</a>" "<a href="https://www.pcmag.com/news/apple-ceo-ai-is-as-big-or-bigger-than-the-internet-smartphones" target="_blank" rel="noopener">It's as big as smartphones.</a>" "<a href="https://youtu.be/Gnl833wXRz0?t=3435" target="_blank" rel="noopener">SaaS is so over.</a>" This article examines seven decades of software engineering evolution, from FORTRAN to LLMs. We draw on this history to analyze where today’s AI tools fit. What changed when new paradigms arrived? What stayed the same? And what can the economic patterns of previous breakthroughs reveal about this one? To kick off our analysis, let's go all the way back and start our journey in 1957.
+The discourse about AI today is almost ritualistic. "<a href="https://www.techradar.com/pro/nvidia-ceo-ai-could-be-the-largest-technological-leap-weve-ever-seen" target="_blank" rel="noopener">It's the largest technological leap we've seen.</a>" "<a href="https://www.businessinsider.com/ben-horowitz-says-ai-is-bigger-than-internet-not-bubble-2026-1" target="_blank" rel="noopener">It's bigger than the internet.</a>" "<a href="https://www.pcmag.com/news/apple-ceo-ai-is-as-big-or-bigger-than-the-internet-smartphones" target="_blank" rel="noopener">It's as big as smartphones.</a>" "<a href="https://youtu.be/Gnl833wXRz0?t=3435" target="_blank" rel="noopener">SaaS is so over.</a>" This article examines seven decades of software engineering evolution, from FORTRAN to LLMs. We draw on this history to analyze where today’s AI tools fit. What changed when new paradigms arrived? What stayed the same? And what can the economic patterns of previous breakthroughs reveal about this one? 
+
+The article is organized into four eras, each built from milestones presented in roughly chronological order. We begin in 1957.
 
 <h2 id="foundations" class="era-heading"><a href="#table-of-contents">Foundations</a></h2>
 
-This era established the core abstractions that programming would build on for decades. The following milestones are presented in roughly chronological order.
+This era established the core abstractions that programming would build on for decades.
 
 ## [1957. FORTRAN eliminates the need for scientists to understand computer hardware](#table-of-contents) {#fortran-1957}
 
@@ -245,7 +247,7 @@ Unix had made programs portable across machines that ran Unix. C made Unix porta
 
 <h2 id="internet-and-web" class="era-heading"><a href="#table-of-contents">Internet and Web</a></h2>
 
-This era saw the Internet become a universal substrate and the Web the primary way software reached users. The following milestones are presented in roughly chronological order.
+This era saw the Internet become a universal substrate and the Web the primary way software reached users.
 
 ## [1983. TCP/IP makes the Internet a universal network layer](#table-of-contents) {#tcpip-1983}
 
@@ -438,7 +440,7 @@ J2EE had established the enterprise Java market but created the complexity Sprin
 
 <h2 id="cloud-and-infrastructure" class="era-heading"><a href="#table-of-contents">Cloud and infrastructure</a></h2>
 
-This era saw cloud computing, mobile, big data, and the commoditization of previously specialized infrastructure. The following milestones are presented in roughly chronological order.
+This era saw cloud computing, mobile, big data, and the commoditization of previously specialized infrastructure.
 
 ## [2004–2009. MapReduce and Hadoop make processing massive datasets accessible](#table-of-contents) {#mapreduce-2004}
 
@@ -691,17 +693,13 @@ The query $q_i$, key $k_j$, and value $V_j$ are learned linear projections of th
 
 <!-- ### Solution. Scale enables few-shot learning from examples in the prompt -->
 
-**Solution.** Brown et al. <a href="#ref-BMR20" id="ref-BMR20-back">[BMR+20]</a> showed that the problem could be solved by training on general text and then conditioning at inference time. The model is pretrained once on a large corpus of general text (web, books, code), which already contains many input–output style sequences. No task-specific labels are used in pretraining. At inference, the user conditions the model on a prompt that consists of a few demonstration input–output pairs followed by a new query input. The model completes the sequence with the appropriate output. The demonstrations are not training data and do not update the model; they specify which pattern the model should follow by making the prompt match the format of sequences seen during pretraining. This is in-context learning, so called because the task is specified only in the prompt context at inference, with no parameter update.
-
-For example, a translation prompt might look like:
+**Solution.** Brown et al. <a href="#ref-BMR20" id="ref-BMR20-back">[BMR+20]</a> showed that fine-tuning could be dropped and demonstrated it at scale. A 175-billion-parameter model, trained only on next-token prediction over text, performed well across many tasks when given a few in-context examples and no gradient update. Smaller models had not shown the same capability, so scale mattered. The pretraining corpus contained many input–output style subsequences, such as translations, Q&A, and code with comments, so the model had already learned to continue them without task labels. At inference the input was a prompt of a few pairs plus the new query. A translation prompt could look like:
 
 "Hello, world." → "Bonjour, le monde."  
 "Good morning." → "Bonjour."  
 "See you tomorrow." → ?
 
-The model produces the target-language continuation.
-
-Technically, the model outputs $P(\text{next token} \mid \text{prefix})$; the prompt is the prefix. The few demos in the prompt disambiguate which pre-learned pattern to use. One forward pass, no backward pass or parameter update. A single model serves many tasks, with the task fixed by the prompt at inference time. Brown et al. found that larger models achieved higher few-shot accuracy on the same benchmarks.
+The model produced the continuation by computing $P(\text{next token} \mid \text{prefix})$ with the prompt as prefix, with no second phase or parameter update. They called this in-context learning because the task was specified only in the prompt at inference.
 
 <div class="section-references">
 <strong>References</strong>
@@ -710,13 +708,13 @@ Technically, the model outputs $P(\text{next token} \mid \text{prefix})$; the pr
 
 ## [2021. Copilot and Codex bring AI code generation to mainstream development](#table-of-contents) {#ai-copilot-2021}
 
-### Problem. Programmers spend significant time on mechanical tasks that do not require deep expertise
+<!-- ### Problem. Programmers spend significant time on mechanical tasks that do not require deep expertise -->
 
-Before AI assistants, software development faced persistent productivity bottlenecks. Significant time went to mechanical tasks (writing boilerplate such as REST endpoints, validation, and error handling, consulting documentation for API signatures and examples, navigating codebases to find patterns, translating between formats such as schemas to API objects and specs to function signatures, and writing tests with predictable arrange-call-assert patterns). Empirical studies found these activities consumed substantial development time without requiring deep expertise.
+**Problem.** Software engineering continued to face productivity bottlenecks. Significant time was spent on mechanical tasks, including implementing CRUD endpoints and validation logic, consulting documentation for library and API usage, searching codebases for analogous implementations, translating schemas to types and API specs to stubs, and writing unit tests with conventional arrange-act-assert structure. 
 
-### Solution. AI assistants generate code from context but require expert verification
+<!-- ### Solution. AI assistants generate code from context but require expert verification -->
 
-Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> showed that models pretrained on GitHub code outperformed general-purpose models. GitHub Copilot <a href="#ref-Git21" id="ref-Git21-back">[Git21]</a> (June 2021) was the first mainstream assistant, with 55% faster task completion <a href="#ref-Git22" id="ref-Git22-back">[Git22]</a>. The model completed code as programmers typed, trained on public code. The abstraction was autocomplete at the level of functions and blocks. Verification remained necessary. Output was statistically plausible, not formally correct.
+**Solution.** General-purpose language models were Transformer LMs pretrained on broad text (e.g. GPT-3) and applied to code via in-context learning without code-specific training. Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> was a GPT model fine-tuned on publicly available code from GitHub. It used the same next-token, in-context paradigm as Brown et al., but with a code-heavy training distribution, and outperformed general-purpose models on code. GitHub Copilot <a href="#ref-Git21" id="ref-Git21-back">[Git21]</a> (June 2021) was the first mainstream assistant, with 55% faster task completion <a href="#ref-Git22" id="ref-Git22-back">[Git22]</a>. The model completed code as programmers typed. The abstraction was autocomplete at the level of functions and blocks. Verification remained necessary. Output was statistically plausible, not formally correct.
 
 <div class="section-references">
 <strong>References</strong>
@@ -725,55 +723,29 @@ Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> showed that models p
 <div class="ref-item"><a id="ref-Git22" href="#ref-Git22-back">[Git22]</a> GitHub. 2022. "Research: Quantifying GitHub Copilot's impact on developer productivity and happiness." Available at <a href="https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" target="_blank">github.blog</a></div>
 </div>
 
-## [2021–2024. Code evals establish how the field measures progress and reveal the gap between algorithmic and real-world tasks](#table-of-contents) {#ai-benchmarks-2021}
-
-### Problem. We lack objective measures of what AI coding assistants can and cannot do
-
-Evaluations (evals) are standardized test suites that measure how well models perform on defined tasks. They drive research priorities and product development. Without evals, claims about AI coding capabilities varied widely. Different tasks required different skills. Isolated function generation was not the same as modifying a large, unfamiliar codebase.
-
-### Solution. HumanEval and SWE-bench establish the gap between isolated algorithms and real-world codebases
-
-HumanEval <a href="#ref-CKB21" id="ref-CKB21-back-2">[CKB+21]</a>, introduced alongside Codex in 2021, tests function-level code generation. Each problem provides a docstring specifying desired behavior. The tasks are algorithmic and self-contained. Claude 3.5 Sonnet (June 2024) reached 93% <a href="#ref-Ant24" id="ref-Ant24-back">[Ant24]</a>.
-
-SWE-bench <a href="#ref-JYW24" id="ref-JYW24-back">[JYW+24]</a>, introduced in 2024, tests on real-world tasks (fixing actual bugs from open-source repositories such as Django, Flask, Matplotlib, and Scikit-learn). Each task provides a GitHub issue description, often ambiguous, and expects a code patch that resolves the issue and passes existing test suites. This requires understanding an existing codebase, navigating its architecture, inferring undocumented invariants, and ensuring changes do not introduce regressions. GPT-4 achieved 1.74% in early 2024 and Claude 3.5 Sonnet reached 33.5% in June (both on the original SWE-bench) <a href="#ref-Ant24" id="ref-Ant24-back-2">[Ant24]</a>. OpenAI's o1 achieved 48.9% on SWE-bench Verified in December 2024 <a href="#ref-Ope24" id="ref-Ope24-back-2">[Ope24]</a>, and Claude 4 reached 72.5% in May 2025 <a href="#ref-Ant25" id="ref-Ant25-back">[Ant25]</a>.
-
-The gap between 93% on HumanEval and 72.5% on SWE-bench Verified is the most informative metric. (Leaderboards at <a href="https://www.swebench.com/" target="_blank">swebench.com</a> track current results.) The gap reveals what remains hard (interpreting ambiguous requirements, navigating complex codebases, understanding implicit architectural context, and making design tradeoffs). These are the skills that differentiate novice from expert programmers.
-
-### What the gap reveals
-
-That gap is not a small implementation detail. It reveals which skills remain hard for AI and which differentiate expert from novice programmers.
-
-HumanEval tests algorithmic problem-solving with clear specifications. The model receives a docstring like "Write a function that returns the nth Fibonacci number" with explicit input/output examples. The task is self-contained. There's no ambiguity about what "correct" means. The output either passes the test suite or it doesn't. This mirrors coding interview questions or LeetCode problems.
-
-SWE-bench tests real-world software engineering. The model receives a GitHub issue description, often ambiguous or incomplete ("The chart legend overlaps with data points at certain window sizes"), and must produce a patch that fixes the issue without breaking existing functionality. This requires:
-
-**Codebase archaeology.** Understanding how an unfamiliar 50,000-line codebase is organized, which modules own which responsibilities, and where the relevant code likely lives. Programmers learn this through experience and pattern recognition.
-
-**Ambiguity resolution.** Inferring what "at certain window sizes" means, whether the fix should adjust the legend or the layout engine, and what tradeoffs are acceptable. Real-world requirements are underspecified.
-
-**Architectural context.** Recognizing that a "simple" fix in the rendering code might violate assumptions elsewhere, that the codebase uses a particular design pattern consistently, or that a seemingly unrelated module depends on current behavior.
-
-**Regression avoidance.** Ensuring changes don't break any of the 2,000 existing tests or introduce subtle bugs in edge cases. Expert programmers build mental models of which changes are safe and which are risky.
-
-The gap between 93% and 72.5% measures exactly these skills (the ones that take programmers years to develop and that don't appear in textbooks or interview questions). As the gap closes, AI moves from "autocomplete" to "junior engineer" to "experienced contributor." But the final 10–20% may be the hardest, because it requires judgment that comes from understanding not just code, but the people and organizations the code serves.
-
-<div class="section-references">
-<strong>References</strong>
-<div class="ref-item"><a id="ref-Ant24" href="#ref-Ant24-back">[Ant24]</a> Anthropic. 2024. "Claude 3.5 Sonnet." Available at <a href="https://www.anthropic.com/claude/sonnet" target="_blank">anthropic.com</a></div>
-<div class="ref-item"><a id="ref-Ant25" href="#ref-Ant25-back">[Ant25]</a> Anthropic. 2025. "Introducing Claude 4." Available at <a href="https://www.anthropic.com/news/claude-4" target="_blank">anthropic.com</a></div>
-<div class="ref-item"><a id="ref-Ope24" href="#ref-Ope24-back">[Ope24]</a> OpenAI. 2024. "Introducing OpenAI o1." Available at <a href="https://openai.com/o1/" target="_blank">openai.com</a></div>
-<div class="ref-item"><a id="ref-JYW24" href="#ref-JYW24-back">[JYW+24]</a> Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. 2024. "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" <em>ICLR 2024</em>. Available at <a href="https://arxiv.org/abs/2310.06770" target="_blank">arxiv.org</a></div>
-</div>
-
 ## [2022. RLHF aligns code models to programmer intent](#table-of-contents) {#ai-rlhf-2022}
 
-### Problem. Base models generate plausible code that often misses intent
+<!-- ### Problem. Base models generate plausible code that often misses intent -->
 
-Models optimized for next-token prediction did not reliably follow instructions or match user preference. A programmer asking to "add error handling" might receive technically valid code that didn't match their error-handling conventions. Early Copilot and Codex produced code that was statistically plausible but often misaligned with intent.
+**Problem.** Models optimized for next-token prediction did not reliably follow instructions or match user preference. A programmer asking to "add error handling" might receive technically valid code that didn't match their error-handling conventions. Early Copilot and Codex produced code that was statistically plausible but often misaligned with intent.
 
-### Solution. Reward models trained on human preferences align output to what programmers want
+<!-- ### Solution. Reward models trained on human preferences align output to what programmers want -->
 
-RLHF (reinforcement learning from human feedback) trained reward models on human preferences and used reinforcement learning to favor outputs humans rated higher. InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> demonstrated the approach. ChatGPT (November 2022) applied it at scale. The same technique improved code assistants. Models became better at following instructions and matching programmer intent.
+**Solution.** The fix was to add a second training phase that optimized the policy for human preference, not only for next-token likelihood. Here the policy is the code model that, given a prompt $x$, defines a distribution over completions $y$, written $\pi_\theta(y \mid x)$ with parameters $\theta$. The procedure is reinforcement learning from human feedback (RLHF). It has two components: (1) a reward model and (2) an RL phase.
+
+(1) The reward model is a network that scores each prompt-completion pair with a scalar, e.g. $r(x, y) \in \mathbb{R}$ where $x$ is the prompt and $y$ is the completion. It is trained on human pairwise preferences so that preferred completions receive higher scores. That required new human-labeled data, but only preference labels that indicate which of two completions is better, not full target completions. The scale of this preference data is on the order of tens of thousands of comparisons, far less than pretraining data.
+
+(2) The RL phase fine-tunes the policy $\pi_\theta$ with PPO to maximize reward on its samples, with a penalty so the policy does not drift far from the pretrained reference $\pi_{\mathrm{ref}}$. The objective is
+
+$$\mathbb{E}_{x \sim \pi_\theta}[r(x)] - \beta\,\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}})$$
+
+where KL is the Kullback–Leibler divergence,
+
+$$\mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}}) = \mathbb{E}_{x \sim \pi_\theta}\left[\log \pi_\theta(x) - \log \pi_{\mathrm{ref}}(x)\right].$$
+
+Without the KL term, the policy can collapse toward high-reward, low-fluency or reward-hacking outputs. The KL term keeps outputs close to the reference distribution so that code stays coherent. The policy is thus optimized for preference, not only for likelihood on a fixed corpus.
+
+InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> and ChatGPT (November 2022) established the pipeline. Code assistants adopted it with programmer labelers and code completions.
 
 <div class="section-references">
 <strong>References</strong>
@@ -813,6 +785,44 @@ Extended-reasoning models like o1 spent more inference compute on internal chain
 <div class="section-references">
 <strong>References</strong>
 <div class="ref-item"><a id="ref-Git24" href="#ref-Git24-back">[Git24]</a> GitHub. 2024. "Fine-tuned models are now in limited public beta for GitHub Copilot Enterprise." Available at <a href="https://github.blog/news-insights/product-news/fine-tuned-models-are-now-in-limited-public-beta-for-github-copilot-enterprise" target="_blank">github.blog</a></div>
+</div>
+
+## [2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.](#table-of-contents) {#ai-benchmarks-2021}
+
+<!-- ### Problem. We lack objective measures of what AI coding assistants can and cannot do -->
+
+**Problem.** HumanEval was introduced alongside Codex in the 2021 Codex paper <a href="#ref-CKB21" id="ref-CKB21-back-2">[CKB+21]</a> and gave the field its first standardized benchmark for code generation. However, it only measured function-level generation from docstrings. Modifying a large, unfamiliar codebase from an ambiguous bug report was a different kind of work and still had no shared evaluation. The field could not separate algorithmic performance from real-world codebase capability, so capability claims that mixed the two were not distinguishable.
+
+<!-- ### Solution. SWE-bench fills the gap and reveals what remains hard -->
+
+**Solution.** An eval is a run that measures how well a model performs on a defined set of tasks. Practitioners use the term for both fixed, replicable benchmarks and for ad-hoc checks or internal metrics, so comparability depends on which is meant; here we mean fixed benchmarks. SWE-bench <a href="#ref-JYW24" id="ref-JYW24-back">[JYW+24]</a>, introduced in 2024, filled that gap. It tests real-world tasks by fixing actual bugs from open-source repositories such as Django, Flask, Matplotlib, and Scikit-learn. Each task provides a GitHub issue description, often ambiguous, and expects a code patch that resolves the issue and passes existing test suites. That requires understanding an existing codebase, navigating its architecture, inferring undocumented invariants, and ensuring changes do not introduce regressions. On HumanEval, Claude 3.5 Sonnet reached 93% in June 2024 <a href="#ref-Ant24" id="ref-Ant24-back">[Ant24]</a>. On SWE-bench Verified, GPT-4 achieved 1.74% in early 2024, Claude 3.5 Sonnet 33.5% in June 2024 <a href="#ref-Ant24" id="ref-Ant24-back-2">[Ant24]</a>, OpenAI o1 48.9% in December 2024 <a href="#ref-Ope24" id="ref-Ope24-back-2">[Ope24]</a>, and Claude 4 72.5% in May 2025 <a href="#ref-Ant25" id="ref-Ant25-back">[Ant25]</a>. The gap between 93% on HumanEval and 72.5% on SWE-bench Verified is the informative metric. Leaderboards at <a href="https://www.swebench.com/" target="_blank">swebench.com</a> track current results. The gap reveals what remains hard. Interpreting ambiguous requirements, navigating complex codebases, understanding implicit architectural context, and making design tradeoffs are the skills that differentiate novice from expert programmers.
+
+Comparable capability claims therefore depend on which kind of eval is being reported.
+
+### What the gap reveals
+
+That gap is not a small implementation detail. It reveals which skills remain hard for AI and which differentiate expert from novice programmers.
+
+HumanEval tests algorithmic problem-solving with clear specifications. The model receives a docstring like "Write a function that returns the nth Fibonacci number" with explicit input/output examples. The task is self-contained. There's no ambiguity about what "correct" means. The output either passes the test suite or it doesn't. This mirrors coding interview questions or LeetCode problems.
+
+SWE-bench tests real-world software engineering. The model receives a GitHub issue description, often ambiguous or incomplete ("The chart legend overlaps with data points at certain window sizes"), and must produce a patch that fixes the issue without breaking existing functionality. This requires:
+
+**Codebase archaeology.** Understanding how an unfamiliar 50,000-line codebase is organized, which modules own which responsibilities, and where the relevant code likely lives. Programmers learn this through experience and pattern recognition.
+
+**Ambiguity resolution.** Inferring what "at certain window sizes" means, whether the fix should adjust the legend or the layout engine, and what tradeoffs are acceptable. Real-world requirements are underspecified.
+
+**Architectural context.** Recognizing that a "simple" fix in the rendering code might violate assumptions elsewhere, that the codebase uses a particular design pattern consistently, or that a seemingly unrelated module depends on current behavior.
+
+**Regression avoidance.** Ensuring changes don't break any of the 2,000 existing tests or introduce subtle bugs in edge cases. Expert programmers build mental models of which changes are safe and which are risky.
+
+The gap between 93% and 72.5% measures exactly these skills (the ones that take programmers years to develop and that don't appear in textbooks or interview questions). As the gap closes, AI moves from "autocomplete" to "junior engineer" to "experienced contributor." But the final 10–20% may be the hardest, because it requires judgment that comes from understanding not just code, but the people and organizations the code serves.
+
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-Ant24" href="#ref-Ant24-back">[Ant24]</a> Anthropic. 2024. "Claude 3.5 Sonnet." Available at <a href="https://www.anthropic.com/claude/sonnet" target="_blank">anthropic.com</a></div>
+<div class="ref-item"><a id="ref-Ant25" href="#ref-Ant25-back">[Ant25]</a> Anthropic. 2025. "Introducing Claude 4." Available at <a href="https://www.anthropic.com/news/claude-4" target="_blank">anthropic.com</a></div>
+<div class="ref-item"><a id="ref-Ope24" href="#ref-Ope24-back">[Ope24]</a> OpenAI. 2024. "Introducing OpenAI o1." Available at <a href="https://openai.com/o1/" target="_blank">openai.com</a></div>
+<div class="ref-item"><a id="ref-JYW24" href="#ref-JYW24-back">[JYW+24]</a> Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. 2024. "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" <em>ICLR 2024</em>. Available at <a href="https://arxiv.org/abs/2310.06770" target="_blank">arxiv.org</a></div>
 </div>
 
 ## [Discussion. The impact of AI coding in software engineering has yet to unfold](#table-of-contents) {#ai-discussion}
