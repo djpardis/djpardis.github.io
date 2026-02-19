@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Magic link authentication with Replit'
+title: 'Magic link authentication with AI'
 subtitle: 'Introducing the data room app'
 description: 'Implementing magic link authentication for a secure investor data room'
-keywords: data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, replit
+keywords: ai coding, data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, ai
 image: /files/pics/blog/2025/dataroom.png
 ---
 

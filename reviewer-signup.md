@@ -3,6 +3,7 @@ layout: page
 title: Reviewer signup
 description: Sign up to review the preprint of "The evolution of software engineering from FORTRAN to LLMs."
 permalink: /reviewer-signup/
+robots: noindex, follow
 ---
 
 <h1 class="post-title">Review the preprint</h1>
