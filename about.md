@@ -48,7 +48,7 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Magic link auth with Replit</span>
+        <span class="link-card-title">Magic link auth with AI</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
