@@ -65,6 +65,7 @@ exclude:
   - .git/
   - .github/
   - scripts/
+  - docs/
   - public/preview/
   - google-site-verification.html
   - episode1-transcript.md

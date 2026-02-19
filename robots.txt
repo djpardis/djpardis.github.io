@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Disallow deprecated pages (removed, 404)
+Disallow: /gigs.html
+Disallow: /djpardis-request.html
+
 # Disallow access to specific files and directories
 Disallow: /Gemfile
 Disallow: /Gemfile.lock
