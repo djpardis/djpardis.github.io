@@ -18,7 +18,7 @@ layout: null
 <!-- CORE SECTION PAGES - Blog/Research BEFORE posts show grouping -->
 {% for page in site.pages %}
   {% unless page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
-  {% if page.url == '/blog/' or page.url == '/research/' or page.url == '/dj-gigs/' %}
+  {% if page.url == '/blog/' or page.url == '/blog' or page.url == '/research/' or page.url == '/dj-gigs/' %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -39,7 +39,7 @@ layout: null
 {% endfor %}
 <!-- SUB-PAGES EXCLUDE -->
 {% for page in site.pages %}
-  {% unless page.url == '/' or page.url == '/blog/' or page.url == '/research/' or page.url == '/dj-gigs/' or page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
+  {% unless page.url == '/' or page.url == '/blog/' or page.url == '/blog' or page.url == '/research/' or page.url == '/dj-gigs/' or page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
