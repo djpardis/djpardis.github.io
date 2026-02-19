@@ -8,7 +8,7 @@ robots: noindex, follow
 
 <h1 class="post-title">Review the preprint</h1>
 
-<p>We’re planning a published edition of <em><a href="{{ site.baseurl }}{% post_url 2026-02-10-evolution-software-engineering-fortran-llms %}">The evolution of software engineering from FORTRAN to LLMs</a></em> and would be grateful for your help. If you’d like to review the preprint, please fill out the form below.</p>
+<p>We’re planning a published edition of <em><a href="{{ site.baseurl }}/blog/">The evolution of software engineering from FORTRAN to LLMs</a></em> and would be grateful for your help. If you’d like to review the preprint, please fill out the form below.</p>
 
 <form id="reviewer-signup-form" action="https://formspree.io/f/xldnywyl" method="POST">
   <input type="hidden" name="_subject" value="Preprint reviewer signup">
