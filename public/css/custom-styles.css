@@ -452,6 +452,15 @@ iframe {
 
 
 /* ===== TABLE OF CONTENTS STYLING ===== */
+/* Formula display */
+.post .formula,
+.container.content .formula {
+  display: block;
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+
 /* TOC Container */
 .toc-container {
   background-color: rgba(125, 120, 181, 0.08);
@@ -596,7 +605,7 @@ iframe {
 }
 
 .container.content .update-container {
-  background-color: rgba(125, 120, 181, 0.12);
+  background-color: rgba(200, 230, 201, 0.5);
 }
 
 .container.content .update-container.post-container {

@@ -75,16 +75,16 @@ Beginning in the <a href="https://en.wikipedia.org/wiki/Apache_Hadoop" target="_
 What became important was to determine how this work could be achieved efficiently and effectively. Designing and building a data science organization is a complex problem, particularly when determining the nature of data science interactions with stakeholders.
 
 > A DS team isn't just the people, it is the process and the interaction of the team with the rest of the company.
-> 
-> DJ Patil<a href="#ref2">[2]</a>
+>
+> — DJ Patil <a href="#ref2">[2]</a>
 
 In this post, I compare some of the popular models of integrating data science teams within companies. In determining the best model, I take into account the following factors:
 
 **Coordination efficiency.** Every team creates new sources of knowledge. Incorporating that knowledge into the business in a timely and repeatable fashion requires robust organization design. Bad designs lead to failures and inefficiencies in knowledge sharing and coordination; this directly affects the *speed* and *cost* at which work is done.
 
-> The goal of work is some output—a strategy, product, marketing plan, budget, account plan, sale, feature, etc. Communication is a way of incorporating stakeholders into a plan *before* it is too far along to change or the cost is too high (or coworkers too angry!)
-> 
-> <a href="https://medium.com/@stevesi" target="_blank">Steven Sinofsky</a> on Twitter
+> The goal of work is some output, a strategy, product, marketing plan, budget, account plan, sale, feature, etc. Communication is a way of incorporating stakeholders into a plan *before* it is too far along to change or the cost is too high (or coworkers too angry!)
+>
+> — <a href="https://medium.com/@stevesi" target="_blank">Steven Sinofsky</a> on Twitter
 
 **Employee happiness.** No discussion of organizational structure is complete without considering employee happiness, motivation, and growth factors. This is not just about reducing the cost of recruiting in response to employee churn, but also about providing employees with the circumstances to do creative and effective work during their tenure. Designing structures without considering employee happiness is a costly failure.
 
@@ -119,8 +119,8 @@ There are important drawbacks to having the data science team operate within the
 **b. Difficulty in closing the loop.** In cases where they are successful at identifying and solving an important problem, centralized research teams find it difficult to get the solution adopted by the product teams. The adoption of the proposed solution would likely disrupt a team's existing roadmap—as the two teams are out of sync. Resolving this conflict usually requires actions by higher management, leading to unwelcome interruptions to existing teams and their roadmaps. If higher management does not step in, research teams become demotivated.
 
 > My view is everyone is on the same calendar/cadence. That's a huge thing for me. If you don't have that then split resources (all of them) by cadence. Teams on difference cadences can't collaborate.
-> 
-> <a href="https://medium.com/@stevesi" target="_blank">Steven Sinofsky</a> on Twitter
+>
+> — <a href="https://medium.com/@stevesi" target="_blank">Steven Sinofsky</a> on Twitter
 
 **c. High cost associated with building new team to back initiative.** Rather than disrupting existing roadmaps, an alternate path is to build a new product team to back a proposed solution. This team would have cross-functional membership to work on the proposals by the research team, making it a costly but valid endeavor. Valid, because ideas need to be backed by a complete team in order to be assessed correctly and quickly. It would be useless to measure the success of an idea if any part of the experience is lacking. A new feature requires design, engineering, data, marketing, comms, and sales involvement to realize its potential.
 
@@ -254,9 +254,11 @@ Revisiting the assumptions we enumerated at the beginning, in the PDS model, the
 
 ### [Drawbacks](#table-of-contents) {#pds-drawbacks}
 
-No model is perfect and each have their drawbacks. To quote <a href="https://medium.learningbyshipping.com/functional-versus-unit-organizations-6b82bfbaa57" target="_blank">Sinofsky</a>,
+No model is perfect and each have their drawbacks.
 
 > Since there is no optimal or perfect organizational structure […] then the most important thing is to know the weaknesses of your structure and to compensate for them.
+>
+> — Steven Sinofsky, <a href="https://medium.learningbyshipping.com/functional-versus-unit-organizations-6b82bfbaa57" target="_blank">Functional versus Unit Organizations</a>
 
 Below are some drawbacks of the PDS model.
 
@@ -274,19 +276,23 @@ The drawbacks of the PDS model have relatively straightforward solutions, as des
 
 Where an SBU is involved, I recommend the PDS model as the best in effectiveness and efficiency in leveraging data for the business.
 
-The PDS model is compliant with <a href="https://www.quora.com/What-is-Groves-Law-and-What-is-the-difference-between-Moores-Law-and-Groves-Law" target="_blank">Grove's Law</a>,
+The PDS model is compliant with <a href="https://www.quora.com/What-is-Groves-Law-and-What-is-the-difference-between-Moores-Law-and-Groves-Law" target="_blank">Grove's Law</a>.
 
 > All large organizations with a common business purpose end up in a hybrid organizational form.
+>
+> — Andy Grove
 
 It is also aligned with <a href="https://object.cato.org/sites/cato.org/files/articles/hayek-use-knowledge-society.pdf" target="_blank">Hayek's views on the use of knowledge in society</a>, where he motivates the need for a hybrid approach to organization and decision making. Neither end of the spectrum sufficiently meets the speed and context requirements of decision making in society.
 
 > We cannot expect that this problem will be solved by first communicating all this knowledge to a central board which, after integrating *all* knowledge, issues its orders. We must solve it by some form of decentralization. But this answers only part of our problem. We need decentralization because only thus can we insure that the knowledge of the particular circumstances of time and place will be promptly used. But the "man on the spot" cannot decide solely on the basis of his limited but intimate knowledge of the facts of his immediate surroundings. There still remains the problem of communicating to him such further information as he needs to fit his decisions into the whole pattern of changes of the larger economic system.
+>
+> — F.A. Hayek
 
 P.S. I had an easier time saying all of this in a Tweet,
 
-> Embedded for context, relevance, communication efficiency, and to be in sync; centralized for hiring and promotion purposes, for peer review, for sharing and maintaining best practices [, for global optimization, and to align on strategy].
-> 
-> —@djpardis on <a href="https://twitter.com/djpard1s/status/999784577441787905?s=20&t=tTdNIhFQpuwmEcSwAujllA" target="_blank">Twitter</a>
+> Embedded for context, relevance, communication efficiency, and to be in sync. Centralized for hiring and promotion purposes, for peer review, for sharing and maintaining best practices [, for global optimization, and to align on strategy].
+>
+> — @djpardis on <a href="https://twitter.com/djpard1s/status/999784577441787905?s=20&t=tTdNIhFQpuwmEcSwAujllA" target="_blank">Twitter</a>
 
 ## [References](#table-of-contents) {#references}
 
