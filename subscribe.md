@@ -5,6 +5,7 @@ description: Get notified about new posts and podcast episodes from Pardis Noorz
 keywords: newsletter, subscription, data science, startups, podcast, pardis noorzad
 canonical_url: https://djpardis.com/subscribe
 permalink: /subscribe/
+robots: noindex, follow
 ---
 
 <h1 class="post-title">Never miss an update</h1>
