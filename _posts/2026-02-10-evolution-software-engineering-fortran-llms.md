@@ -124,9 +124,22 @@ In addition, programs were non-portable. Code for the IBM 704 would not run on U
 
 **Solution.** In 1956, John Backus was able to convince IBM executives to fund FORTRAN. He  estimated that in 1954, more than half of operating costs were programming costs, despite computers being enormously expensive. He argued that automating translation would reduce programming costs. The first FORTRAN compiler shipped in 1957 <a href="#ref-Bac57" id="ref-Bac57-back">[Bac57]</a>. 
 
-FORTRAN (Formula Translation) let scientists write mathematical expressions in notation close to standard syntax. The statement `Y = A * X + B` directly expressed the computation without registers or memory addresses. The compiler performed register allocation, instruction selection, and optimization.
+FORTRAN (Formula Translation) let scientists write mathematical expressions in notation close to standard syntax. The statement `Y = A * X + B` directly expressed the computation without registers or memory addresses. A recurrence like the Fibonacci sequence could be written in a handful of lines:
 
-Many believed compilers could never match skilled assembly programmers. But Backus demonstrated the compiler often generated faster code than hand-written assembly by performing tedious optimizations systematically. 
+```fortran
+      INTEGER I, N, F0, F1, TMP
+      F0 = 0
+      F1 = 1
+      READ *, N
+      DO 10 I = 1, N
+        TMP = F1
+        F1 = F0 + F1
+        F0 = TMP
+   10 CONTINUE
+      PRINT *, F1
+```
+
+The compiler performed register allocation, instruction selection, and optimization. Many believed compilers could never match skilled assembly programmers. But Backus demonstrated the compiler often generated faster code than hand-written assembly by performing tedious optimizations systematically. 
 
 Within five years, most scientific computing moved from assembly to FORTRAN. Scientists became programmers. Computational fluid dynamics, molecular modeling, weather forecasting, and financial modeling all benefited. FORTRAN did not merely accelerate existing work. It made feasible work that had been almost impossible to undertake.
 
@@ -149,6 +162,11 @@ Dijkstra called this "spaghetti code" where control flow wove like tangled stran
 <!-- ### Solution. Three control flow constructs prove sufficient and enable local reasoning -->
 
 **Solution.** Dijkstra's "Go To Statement Considered Harmful" argued that GOTOs should be eliminated entirely <a href="#ref-Dij68" id="ref-Dij68-back">[Dij68]</a>. He proposed restricting control flow to three constructs. These were sequential execution, conditional execution (if-then-else), and iteration (while loops).
+
+<figure>
+<a href="https://xkcd.com/292/" target="_blank" rel="noopener"><img src="https://imgs.xkcd.com/comics/goto.png" alt="xkcd: goto"></a>
+</figure>
+<p class="image-caption">goto. Randall Munroe, <a href="https://xkcd.com/292/" target="_blank" rel="noopener">xkcd</a>.</p>
 
 Böhm and Jacopini proved these three constructs were sufficient to express any algorithm expressible with GOTOs <a href="#ref-Böh66" id="ref-Böh66-back">[Böh66]</a>. The restriction did not reduce expressive power. Floyd and Hoare had shown that structured constructs admitted formal reasoning (preconditions, postconditions), whereas arbitrary GOTOs did not <a href="#ref-Flo67" id="ref-Flo67-back">[Flo67]</a> <a href="#ref-Hoa69" id="ref-Hoa69-back">[Hoa69]</a>. Niklaus Wirth designed Pascal <a href="#ref-Wir71" id="ref-Wir71-back">[Wir71]</a> to enforce structured programming through syntax. The language had no GOTO statement. Programs could be understood by reading top to bottom, following nested control flow. 
 
@@ -177,6 +195,24 @@ IBM's Information Management System (IMS), introduced in 1966, provided hierarch
 <!-- ### Solution. Relational model separates logical data organization from physical storage -->
 
 **Solution.** Codd's 1970 paper "A Relational Model of Data for Large Shared Data Banks" <a href="#ref-Cod70" id="ref-Cod70-back">[Cod70]</a> proposed organizing data as mathematical relations, that is, tables with rows and columns. Each table represented an entity type, each row an instance, each column an attribute.
+
+<div class="link-cards" style="grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto;">
+<a class="link-card" href="https://en.wikipedia.org/wiki/Codd%27s_12_rules" target="_blank" rel="noopener">
+<div class="link-card-image" style="background-color: #f8f9fa; position: relative;">
+<div style="position: absolute; inset: 0; padding: 10px; overflow: hidden; font-size: 0.7rem; line-height: 1.35; color: #202122; font-family: Georgia, serif;">
+<strong>Rule 0 (Foundation).</strong> The system must manage databases entirely through its relational capabilities.<br><br>
+<strong>Rule 1 (Information).</strong> All information is represented explicitly by values in tables.<br><br>
+<strong>Rule 2 (Guaranteed access).</strong> Every datum is accessible by table name, primary key value, and column name.<br><br>
+<strong>Rule 3 (Nulls).</strong> Null values are supported for missing or inapplicable information.
+</div>
+</div>
+<div class="link-card-body">
+<span class="link-card-title">Codd's 12 rules</span>
+<span class="link-card-domain">en.wikipedia.org</span>
+</div>
+</a>
+</div>
+<p class="image-caption">Codd's 12 rules, often called the "twelve commandments," define what makes a database management system fully relational. <a href="https://en.wikipedia.org/wiki/Codd%27s_12_rules" target="_blank" rel="noopener">en.wikipedia.org</a></p>
 
 Codd grounded the model in set theory and predicate logic. Relational algebra and calculus were equivalent, so systems could accept declarative queries and automatically generate efficient procedural execution plans.
 
@@ -209,6 +245,10 @@ The crucial innovation was separating logical organization from physical storage
 <!-- ### Solution. A minimal, composable operating system provides a uniform interface -->
 
 **Solution.** Thompson and Ritchie built Unix at Bell Labs between 1969 and 1971 <a href="#ref-RT74" id="ref-RT74-back">[RT74]</a>. Unix exposed a single interface instead of vendor-specific system calls. Programs ran as processes. The same read and write operations applied to files on disk, terminals, and devices. "Everything is a file" meant that one abstraction covered all I/O. The kernel implemented the interface in privileged mode and mediated access to hardware. Programs invoked it through system calls, so the kernel hid the details of any particular device.
+
+> Unix is simple. It just takes a genius to understand its simplicity.
+>
+> — <a href="https://www.goodreads.com/quotes/1292776-unix-is-basically-a-simple-operating-system-but-you-have" target="_blank" rel="noopener">Dennis Ritchie</a>
 
 That interface had two consequences. Software written to it could run on any machine running Unix, so organizations could change hardware without abandoning software. The abstraction also allowed an interpreted shell. Thompson added one that read command sequences from the terminal or from scripts and executed them. The shell turns command strings into system calls the same as any other process. Programmers could orchestrate tools with a short script instead of compiled software. For example, the following runs two compressions at once. A trailing `&` runs a command in the background so the next one starts right away. The shell's `wait` pauses until all background commands finish.
 
