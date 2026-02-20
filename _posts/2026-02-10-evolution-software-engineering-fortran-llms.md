@@ -334,7 +334,12 @@ File transfer (FTP/SFTP), email (SMTP), naming (DNS), the Web (HTTP), and every 
 
 **Solution.** Tim Berners-Lee proposed the Web at CERN in 1989 <a href="#ref-BL89" id="ref-BL89-back">[BL89]</a> as a way to share documents and files across the Internet. Its original motivation had nothing to do with software delivery. CERN's scientific documentation was scattered across hundreds of incompatible computers. Researchers spent significant time just locating information that existed somewhere on the network. Berners-Lee wanted to link documents through hypertext so people could navigate between them without knowing where they were physically stored. By 1990, he had built the first HTTP server, the first browser, and defined HTML and URLs. Hostnames in URLs were resolved by DNS, the same naming layer the rest of the Internet already used. CERN released the protocol royalty-free in 1993 <a href="#ref-CERN93" id="ref-CERN93-back">[CERN93]</a>.
 
-The insight that made the Web transformative was universality. Any computer with a browser could access any server, regardless of operating system. Marc Andreessen and Eric Bina built Mosaic <a href="#ref-AB93" id="ref-AB93-back">[AB93]</a> at the National Center for Supercomputing Applications, the first graphical browser. As adoption grew, programmers saw the implication. Applications could be hosted on a server rather than shipping floppy disks. You put the new version on the server once. Every user could get it. No more mailing new disks to every customer. Initially that meant downloading software from the Web. Netscape Navigator was distributed that way, as were Winamp, RealPlayer, and countless early desktop applications. The pattern persists today. Zoom, VS Code, and most desktop and mobile installers are still distributed by download from a website or app store. 
+<figure style="max-width: 400px; margin-left: auto; margin-right: auto;">
+<a href="https://en.wikipedia.org/wiki/Les_Horribles_Cernettes" target="_blank" rel="noopener"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Les_Horribles_Cernettes_in_1992.jpg?width=400" alt="Les Horribles Cernettes, 1992" style="width: 100%; height: auto;"></a>
+</figure>
+<p class="image-caption">The first image on the Web was a band photo at CERN in 1992 (Les Horribles Cernettes). <a href="https://en.wikipedia.org/wiki/Les_Horribles_Cernettes" target="_blank" rel="noopener">en.wikipedia.org</a></p>
+
+The insight that made the Web transformative was universality. Any computer with a browser could access any server, regardless of operating system. Marc Andreessen and Eric Bina built Mosaic <a href="#ref-AB93" id="ref-AB93-back">[AB93]</a> at the National Center for Supercomputing Applications, the first graphical browser. As adoption grew, programmers saw the implication. Applications could be hosted on a server rather than shipped on floppy disks. A single deployment to the server made the new version available to every user, eliminating the need to mail updated media to customers. Initially that meant downloading software from the Web. Netscape Navigator was distributed that way, as were Winamp, RealPlayer, and countless early desktop applications. The pattern persists today. Zoom, VS Code, and most desktop and mobile installers are still distributed by download from a website or app store. 
 
 Making software run inside the browser, not just be downloaded from it, took two more steps. JavaScript, created by Brendan Eich at Netscape, was the next necessary piece. Static HTML pages couldn't respond to user input without sending a request back to the server and reloading the entire page. JavaScript ran directly in the browser, so a form could validate input before submission, a button could trigger an action, a page could change without disappearing and reappearing. Web pages started feeling less like documents and more like applications. The shift completed with AJAX. Jesse James Garrett named the pattern <a href="#ref-Gar05" id="ref-Gar05-back">[Gar05]</a> that programmers had already begun using. Applications sent requests in the background and updated only the changed parts of the page instead of reloading. Gmail (2004) proved this worked at scale. An entire productivity application ran in the browser, feeling as responsive as desktop software. The Web had evolved from a tool for sharing scientific documents into the primary platform for delivering software to users.
 
@@ -355,6 +360,29 @@ Making software run inside the browser, not just be downloaded from it, took two
 <!-- ### Solution. Optimize for readability and productivity. Use C when speed is needed -->
 
 **Solution.** Guido van Rossum released Python in 1991 <a href="#ref-Pyt91" id="ref-Pyt91-back">[Pyt91]</a>. Python prioritized readability and ease of use over raw performance. It required no compile step, used clear syntax, and would become "batteries included" as its standard library grew. The crucial design choice was extensibility. When a hot path needed speed, programmers could drop into C. NumPy (2006) demonstrated the pattern. Python for glue code and control flow, C (via extensions) for the numerical inner loops. Programmers got productivity for the 95% of code that wasn't performance-critical, and C-level speed where it mattered. pandas, Django, TensorFlow, and PyTorch followed the same model. Python became the default for data science, ML, and glue code because it optimized for the right variable (programmer time).
+
+<div class="link-cards" style="grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto;">
+<a class="link-card" href="https://peps.python.org/pep-0020/" target="_blank" rel="noopener">
+<div class="link-card-image" style="background-color: #f8f9fa; position: relative;">
+<div style="position: absolute; inset: 0; padding: 10px; overflow: hidden; font-size: 0.68rem; line-height: 1.35; color: #202122; font-family: Georgia, serif;">
+Flat is better than nested.<br>
+Sparse is better than dense.<br>
+Readability counts.<br>
+Special cases aren't special enough to break the rules.<br>
+Although practicality beats purity.<br>
+Errors should never pass silently.<br>
+Unless explicitly silenced.<br>
+In the face of ambiguity, refuse the temptation to guess.<br>
+There should be one obvious way to do it.
+</div>
+</div>
+<div class="link-card-body">
+<span class="link-card-title">PEP 20, Zen of Python</span>
+<span class="link-card-domain">peps.python.org</span>
+</div>
+</a>
+</div>
+<p class="image-caption">Guiding principles for Python design. <a href="https://peps.python.org/pep-0020/" target="_blank" rel="noopener">peps.python.org</a></p>
 
 <div class="section-references">
 <strong>References</strong>
