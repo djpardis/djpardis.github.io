@@ -851,11 +851,17 @@ In June 2024 Claude 3.5 Sonnet reached 93% on HumanEval and 33.5% on SWE-bench V
 
 ## [Discussion](#table-of-contents) {#discussion}
 
-### Where AI fits can be assessed against the internet, cloud, and SaaS
+The historical framework above equips us with a lens to understand where AI coding stands today and what its impact may be. The following sections use that lens to further assess the impact of AI coding on software engineering.
 
-The introductory claims, that AI is "the best thing since the internet," "as big as cloud," or that "SaaS is dead," can be assessed against the transitions documented above. The internet (TCP/IP, 1983) became a universal substrate. Cloud computing (AWS EC2, 2006) transformed infrastructure from capital expenditure to operational expense and enabled elastic scaling. Both altered what could be built and how software reached users. AI coding assistants operate at a different layer. They change how code is produced, not the substrate or platform itself. Whether that remains a productivity tool for programmers or extends to non-programmers writing their own software is an empirical question.
+### Where AI fits can be understood by comparison to the internet, cloud, and mobile eras
 
-The economic logic of SaaS is instructive. SaaS exists because the cost of building, maintaining, and operating software in-house has historically exceeded the cost of subscribing. Vendors amortize development, maintenance, security, and compliance across many customers. AI may lower the cost of initial construction, but it does not by itself reduce the cost of ongoing maintenance, integration across systems, or compliance. Whether end users can free themselves from SaaS depends on whether the total cost of AI-assisted in-house development falls below the cost of subscription for a given use case. Bacchelli and Bird <a href="#ref-BB13" id="ref-BB13-back">[BB13]</a> find that the expertise to verify code closely matches the expertise to write it, which implies that verification costs remain nontrivial. The framework does not settle whether AI is "as big as" the internet or cloud. It provides a lens for comparing the kind of change each represents and for reasoning about the conditions under which SaaS remains economically viable.
+ The internet (TCP/IP, 1983) became a universal substrate for connecting machines and distributing software. Cloud computing (AWS EC2, 2006) turned infrastructure from capital expenditure into operational expense and enabled elastic scaling. Mobile (iPhone and Android, 2007–2008) made the phone a general-purpose computer and established app stores as a dominant distribution channel. All three changed how software reached users. AI coding operates at a different layer. It alters how code is produced, not the substrate or platform. Nevertheless, this framework does not settle the magnitude of AI's economic impact relative to the internet, cloud, or mobile.
+
+### Whether AI can displace SaaS depends on the cost of verification and maintenance
+
+SaaS prevails where the cost of building, operating, and maintaining software in-house has historically exceeded the cost of subscription. Vendors amortize development, maintenance, security, and compliance across many customers. AI may lower the cost of initial construction and can reduce ongoing maintenance, integration, and compliance. In each use case, subscription is displaced only when AI-assisted in-house development costs less in total than subscribing. Bacchelli and Bird <a href="#ref-BB13" id="ref-BB13-back">[BB13]</a> find that the expertise to verify code matches the expertise to write it, so verification cannot be offloaded yet and remains a large share of in-house cost. Where that holds, total in-house cost may stay above subscription even when AI lowers the cost of producing code.
+
+SaaS has other moats that in-house builds do not easily reproduce. Vendors spread the cost of compliance certifications (e.g. SOC 2, HIPAA), availability and SLAs, ongoing R&D, and data that grows with the customer base. A single organization replicating that must bear the full cost of audits, redundancy, feature development, and acquiring equivalent data. 
 
 ### English is not a programming language and prompts cannot replace code as specification
 
@@ -921,7 +927,7 @@ Education must evolve without abandoning fundamentals. Algorithms, data structur
 
 ## [Conclusion](#table-of-contents) {#conclusion}
 
-Seven decades of software engineering followed consistent economic logic. When the cost of manual work exceeded the cost of automation, the abstraction won. The motivations varied, but each was a form of that cost.
+Seven decades of software engineering followed consistent economic logic. When the cost of manual work exceeded the cost of automation, the abstraction won. What counted as "cost" differed from case to case (programmer time, portability, errors, capital, scale), but the dynamic was always the same.
 
 Programmer time drove most of it (FORTRAN when programmers were scarce, IDEs when mechanical refactoring consumed hours, package managers when dependency management was manual, Spring when J2EE boilerplate dominated, Node.js when context-switching cost time, REST when SOAP required thousands of lines of configuration, AI assistants when boilerplate and documentation lookup consumed programmer time). And sometimes even performance didn't matter as much as programmer productivity (Python, Rails, Django).
 
