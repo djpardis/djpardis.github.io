@@ -75,7 +75,23 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
     </ul>
   </details>
 </li>
-<li><a href="#discussion">Discussion</a></li>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#discussion">Discussion</a></summary>
+    <ul>
+      <li><a href="#where-ai-fits">Where AI fits can be understood by comparison to the internet, cloud, and mobile eras</a></li>
+      <li><a href="#whether-ai-displace-saas">Whether AI can displace SaaS depends on the cost of verification and maintenance</a></li>
+      <li><a href="#english-not-pl">English is not a programming language and prompts cannot replace code as specification</a></li>
+      <li><a href="#each-past-abstraction">Each past abstraction eliminated the need to acquire entire areas of knowledge</a></li>
+      <li><a href="#verification-complacency">Verification, complacency, and education pose risks and open questions</a></li>
+      <li><a href="#code-quality-security">Code quality, security, and adoption deserve attention as AI coding spreads</a></li>
+      <li><a href="#open-source-ai">Open source creation and maintenance both benefit from AI in empirical work</a></li>
+      <li><a href="#ai-era-optimize">The AI era raises the question of what we optimize for now</a></li>
+      <li><a href="#pl-not-consolidating">Languages, frameworks, and tools are consolidating, and AI may accelerate the trend</a></li>
+      <li><a href="#ai-improve-abstractions">A distinct question is whether AI can improve previous abstraction layers</a></li>
+    </ul>
+  </details>
+</li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 </div>
@@ -853,76 +869,95 @@ In June 2024 Claude 3.5 Sonnet reached 93% on HumanEval and 33.5% on SWE-bench V
 
 The historical framework above equips us with a lens to understand where AI coding stands today and what its impact may be. The following sections use that lens to further assess the impact of AI coding on software engineering.
 
-### Where AI fits can be understood by comparison to the internet, cloud, and mobile eras
+### Where AI fits can be understood by comparison to the internet, cloud, and mobile eras {#where-ai-fits}
 
- The internet (TCP/IP, 1983) became a universal substrate for connecting machines and distributing software. Cloud computing (AWS EC2, 2006) turned infrastructure from capital expenditure into operational expense and enabled elastic scaling. Mobile (iPhone and Android, 2007–2008) made the phone a general-purpose computer and established app stores as a dominant distribution channel. All three changed how software reached users. AI coding operates at a different layer. It alters how code is produced, not the substrate or platform. Nevertheless, this framework does not settle the magnitude of AI's economic impact relative to the internet, cloud, or mobile.
+ The internet (TCP/IP, 1983) became a universal substrate for connecting machines and distributing software. Cloud computing (AWS EC2, 2006) turned infrastructure from capital expenditure into operational expense and enabled elastic scaling. Mobile (iPhone and Android, 2007–2008) made the phone a general-purpose computer and established app stores as a dominant distribution channel. All three changed how software reached users. AI coding operates at a different layer. It alters how code is produced, not the substrate or platform. Nevertheless, our framework does not settle the magnitude of AI's economic impact relative to the internet, cloud, or mobile.
 
-### Whether AI can displace SaaS depends on the cost of verification and maintenance
+### Whether AI can displace SaaS depends on the cost of verification and maintenance {#whether-ai-displace-saas}
 
 SaaS prevails where the cost of building, operating, and maintaining software in-house has historically exceeded the cost of subscription. Vendors amortize development, maintenance, security, and compliance across many customers. AI may lower the cost of initial construction and can reduce ongoing maintenance, integration, and compliance. In each use case, subscription is displaced only when AI-assisted in-house development costs less in total than subscribing. Bacchelli and Bird <a href="#ref-BB13" id="ref-BB13-back">[BB13]</a> find that the expertise to verify code matches the expertise to write it, so verification cannot be offloaded yet and remains a large share of in-house cost. Where that holds, total in-house cost may stay above subscription even when AI lowers the cost of producing code.
 
-SaaS has other moats that in-house builds do not easily reproduce. Vendors spread the cost of compliance certifications (e.g. SOC 2, HIPAA), availability and SLAs, ongoing R&D, and data that grows with the customer base. A single organization replicating that must bear the full cost of audits, redundancy, feature development, and acquiring equivalent data. 
+SaaS has other moats that in-house builds do not easily reproduce. Vendors spread the cost of compliance certifications (e.g. SOC 2, HIPAA), availability and SLAs, ongoing R&D, and data that grows with the customer base. A single organization replicating that must bear the full cost of audits, redundancy, feature development, and acquiring equivalent data.
 
-### English is not a programming language and prompts cannot replace code as specification
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-BB13" href="#ref-BB13-back">[BB13]</a> Bacchelli, A. & Bird, C. 2013. "Expectations, Outcomes, and Challenges of Modern Code Review." <em>Proceedings of ICSE</em>, 712-721. Available at <a href="https://dl.acm.org/doi/10.1109/ICSE.2013.6606617" target="_blank">dl.acm.org</a></div>
+</div>
 
-One obstacle persists regardless of how good AI gets at testing and verification. English is not a programming language. Programming languages exist for two reasons. They eliminate ambiguity for machines, and they organize human thought.
+### English is not a programming language and prompts cannot replace code as specification {#english-not-pl}
 
-Natural language is inherently ambiguous. Berry and Kamsties note that ambiguity in natural language requirements is inescapable. Different readers may understand different things from the same text <a href="#ref-BK04" id="ref-BK04-back">[BK04]</a>. Consider "sort the list of customers by priority." Does that mean sort by a priority field ascending? Descending? Filter to show high-priority first, then medium, then low? The English is underspecified. A compiler produces the same output for the same source every time. The same English prompt yields different code from an LLM on different runs. As Meyer argues, programmers save the source code, not the prompts, because prompts cannot serve as reproducible specification <a href="#ref-Mey25" id="ref-Mey25-back">[Mey25]</a>.
+One obstacle persists no matter how capable AI becomes at testing and verification. The artifact that is stored, run, reviewed, and maintained is code, not the natural-language prompts that may have produced it. Meyer puts it directly. Programmers save the source code, not the prompts, because prompts cannot serve as reproducible specification <a href="#ref-Mey25" id="ref-Mey25-back">[Mey25]</a>. English is not a programming language because the code is not in English.
 
-But precision for machines is only half of it. Programming languages force precision in human thinking. Writing `customers.sort(key=lambda x: x.priority, reverse=True)` forces the programmer to answer. What is the data structure? What field holds priority? What does "higher" mean? The language demands answers. Without it, we remain vague. The discipline of expressing logic in code makes the logic itself clearer.
+Programming languages serve two important purposes. First, they eliminate ambiguity for machines. Natural language is inherently ambiguous. Berry and Kamsties show that ambiguity in requirements is inescapable; different readers take different meanings from the same text <a href="#ref-BK04" id="ref-BK04-back">[BK04]</a>. "Export recent orders" leaves format, date range, and fields unspecified. "Retry on failure" leaves how many attempts, which exceptions, and whether to back off unspecified. "Delete inactive users" leaves the inactivity threshold and soft-delete versus purge unspecified. The same prompt yields different code from an LLM on different runs.
 
-Work underway addresses both problems. DSLs and declarative languages reduce ambiguity by narrowing the gap between domain intent and executable code. PDL (Prompt Declaration Language) applies a typed approach to orchestrating LLM applications <a href="#ref-VMH24" id="ref-VMH24-back">[VMH+24]</a>. SpecGen uses LLMs to generate formal specifications that can be verified <a href="#ref-Spe24" id="ref-Spe24-back">[Spe24]</a>. These treat the LLM as a bridge to formal specification, not a replacement. The formal artifact remains the source of truth.
+Second, they force precision in human thinking. Writing code commits to each choice. In Python you might call `export_orders(since_days=7, format='csv', fields=['id', 'total', 'created_at'])`, `retry(times=3, on=TimeoutError)`, or `delete_inactive_users(inactive_since_days=90, soft=False)`. Each argument answers a question the English left open. The language demands answers. The discipline of expressing logic in code makes the logic itself clearer.
 
-Intentional Software, Molybdenum, and generations of research aimed to let humans specify intent without writing code. The dream persists. So does the gap.
+Intentional Software and generations of research aimed to let humans specify intent without writing code. The idea was that domain experts would edit in their own notation (e.g. tax rules or business logic in domain vocabulary) and the system would maintain a single representation and generate code, like WYSIWYG for documents but for software <a href="#ref-Sim95" id="ref-Sim95-back">[Sim95]</a>. The vision was influential. Intentional Software was acquired by Microsoft in 2017, but the approach never became mainstream. Nevertheless, the dream persists and may be more accessible than ever.
 
-### Each past abstraction eliminated entire areas of knowledge that programmers no longer needed
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-Mey25" href="#ref-Mey25-back">[Mey25]</a> Meyer, C. 2025. "English Isn't a Programming Language." <em>Substack</em>. Available at <a href="https://csmeyer.substack.com/p/english-isnt-a-programming-language" target="_blank">csmeyer.substack.com</a></div>
+<div class="ref-item"><a id="ref-BK04" href="#ref-BK04-back">[BK04]</a> Berry, D. M. & Kamsties, E. 2004. "Ambiguity in Requirements Specification." In <em>Perspectives on Software Requirements</em>, Springer, 7-44. Available at <a href="https://link.springer.com/chapter/10.1007/978-1-4615-0465-8_2" target="_blank">link.springer.com</a></div>
+<div class="ref-item"><a id="ref-Sim95" href="#ref-Sim95-back">[Sim95]</a> Simonyi, C. 1995. "The Death of Computer Languages, The Birth of Intentional Programming." Microsoft Research Technical Report MSR-TR-95-52. Available at <a href="https://www.microsoft.com/en-us/research/publication/the-death-of-computer-languages-the-birth-of-intentional-programming/" target="_blank">microsoft.com</a></div>
+</div>
+
+### Each past abstraction eliminated the need to acquire entire areas of knowledge {#each-past-abstraction}
 
 FORTRAN eliminated the need to understand instruction timing, register allocation, and machine-specific assembly. Structured programming eliminated the need to reason about arbitrary control flow and spaghetti GOTO. Relational databases eliminated the need to know physical storage layout and file structures. Unix eliminated the need to understand vendor-specific system calls and device interfaces. C eliminated the need to write per-architecture assembly for kernels and drivers. Garbage collection eliminated manual memory management and whole categories of memory errors. TCP/IP eliminated the need to understand packet switching, routing algorithms, and network topology. The Web eliminated the need to reason about distribution logistics, physical media, and per-machine installation. In each case, the abstraction was sound. Programmers could assume it worked. They did not need to verify the layer below.
 
 How does that change with the AI revolution? AI coding assistants reduce the effort of writing code, but the output still requires verification. Past abstractions eliminated knowledge. AI may accelerate production without eliminating the knowledge required to judge the result. Whether that distinction holds as tools evolve is an open question.
 
-### Code quality, security, and adoption deserve attention as AI assistance spreads
-
-Other trends deserve attention. Studies report that code churn is projected to double in AI-assisted codebases compared to pre-AI baselines, with more copy-pasted code and patterns resembling work from less experienced contributors <a href="#ref-Har24" id="ref-Har24-back">[Har24]</a>. Copilot and similar tools have been found to generate vulnerable code in a substantial fraction of security-sensitive scenarios <a href="#ref-PPL22" id="ref-PPL22-back">[PPL22]</a>. Adoption is high. So is the need for rigorous review. The tool is not the process.
-
-### Open source creation and maintenance both benefit from AI in empirical work
-
-Empirical work on open source suggests both creation and maintenance benefit from AI. Hoffmann et al. find that maintainers with access to GitHub Copilot increase coding activity and reduce project management load; effects persist for at least two years <a href="#ref-HBB24" id="ref-HBB24-back">[HBB24]</a>. Yeverechyahu et al., using the rollout of Copilot support for Python but not R, show that maintenance-related contributions (iterative work on others' code) rise more than origination contributions (new code) <a href="#ref-YMO24" id="ref-YMO24-back">[YMO24]</a>. AI appears to lower the cost of both creation and maintenance, with a larger effect on maintenance. Whether that pattern holds as models evolve is an empirical question.
-
-### The AI era raises the question of what we optimize for now
-
-The history in this article suggests that programming languages were designed for different priorities at different times. FORTRAN optimized for machine efficiency. Python optimized for programmer time and readability. Rust optimizes for memory safety without garbage collection. A question the AI era raises is what we optimize for now. Readability? Raw performance? Security? And for AI assistants themselves, which languages should they generate? The answer may not align with human preferences. Models are trained on what exists. The languages with the most data (JavaScript, Python, Java, C++) are the ones models know best. That favors the languages that dominate open source and Stack Overflow, not necessarily the languages best suited to a given task. Whether AI will reinforce the popularity of data-rich languages or eventually learn to generate lesser-known ones well is an open question.
-
-### Programming languages are not consolidating into fewer options
-
-Python rose to the top in 2024, driven by AI and data science <a href="#ref-Git24oct" id="ref-Git24oct-back">[Git24oct]</a>. Rust and Go continue to grow. TypeScript extends JavaScript. The AI era favors specialization by use case. Python for ML pipelines, Rust for systems components, JavaScript for the web. Different tasks demand different tools. The infrastructure stack is multilayered rather than unified.
-
-### A distinct question is whether AI can improve the abstraction layers described in this article
-
-Learned query optimizers have been shown to outperform classical optimizers on some workloads; GenJoin consistently outperforms PostgreSQL on standard benchmarks <a href="#ref-Gen24" id="ref-Gen24-back">[Gen24]</a>. In compilers, models trained on LLVM IR and assembly reach a substantial fraction of autotuning search potential <a href="#ref-Met24" id="ref-Met24-back">[Met24]</a>. In cloud infrastructure, methods combining demand prediction with reinforcement learning for resource allocation report utilization gains and cost improvements compared to rule-based autoscaling. These results demonstrate incremental improvements within existing abstractions. Whether AI will yield qualitatively new abstractions (e.g., new models of concurrency, persistence, or distribution) is unresolved. Past transitions such as relational algebra, garbage collection, or TCP/IP required conceptual shifts. The literature does not yet demonstrate AI producing such shifts.
-
-The cost framework implies that new abstractions emerge when the cost of the incumbent exceeds the cost of the alternative. AI may lower the cost of exploring new designs, but whether that leads to meaningfully better cloud, databases, or languages is an empirical question for which the evidence is currently limited.
-
-### Verification, complacency, and education pose risks and open questions
+### Verification, complacency, and education pose risks and open questions {#verification-complacency}
 
 Given that verification is required, the question "what happens at 90% or 95% accuracy?" misunderstands what the remaining percentage represents. Problems solved first have clear specifications and objective correctness criteria. The problems that remain are fundamentally different. There is also the risk of automation complacency. When a system is correct 90% of the time, humans stop scrutinizing carefully. A 90% accurate AI might paradoxically lead to worse outcomes than a 50% accurate one. The critical skill becomes knowing when to trust AI output and when to verify deeply.
 
 Education must evolve without abandoning fundamentals. Algorithms, data structures, system design, and debugging remain essential for verification. Pedagogy may emphasize code review, architectural thinking, and specification clarity.
 
+### Code quality, security, and adoption deserve attention as AI coding spreads {#code-quality-security}
+
+Other trends deserve attention. Studies report that code churn is projected to double in AI-assisted codebases compared to pre-AI baselines, with more copy-pasted code and patterns resembling work from less experienced contributors <a href="#ref-Har24" id="ref-Har24-back">[Har24]</a>. Copilot and similar tools have been found to generate vulnerable code in a substantial fraction of security-sensitive scenarios <a href="#ref-PPL22" id="ref-PPL22-back">[PPL22]</a>. Adoption is high. So is the need for rigorous review. The tool is not the process.
+
 <div class="section-references">
 <strong>References</strong>
-<div class="ref-item"><a id="ref-BK04" href="#ref-BK04-back">[BK04]</a> Berry, D. M. & Kamsties, E. 2004. "Ambiguity in Requirements Specification." In <em>Perspectives on Software Requirements</em>, Springer, 7-44. Available at <a href="https://link.springer.com/chapter/10.1007/978-1-4615-0465-8_2" target="_blank">link.springer.com</a></div>
-<div class="ref-item"><a id="ref-Mey25" href="#ref-Mey25-back">[Mey25]</a> Meyer, C. 2025. "English Isn't a Programming Language." <em>Substack</em>. Available at <a href="https://csmeyer.substack.com/p/english-isnt-a-programming-language" target="_blank">csmeyer.substack.com</a></div>
-<div class="ref-item"><a id="ref-VMH24" href="#ref-VMH24-back">[VMH+24]</a> Vaziri, M., Mandel, L., Spiess, C., & Hirzel, M. 2024. "PDL: A Declarative Prompt Programming Language." <em>arXiv:2410.19135</em>. Available at <a href="https://arxiv.org/abs/2410.19135" target="_blank">arxiv.org</a></div>
-<div class="ref-item"><a id="ref-Spe24" href="#ref-Spe24-back">[Spe24]</a> Ma, L., Liu, S., Li, Y., Xie, X., & Bu, L. 2024. "SpecGen: Automated Generation of Formal Program Specifications via Large Language Models." <em>arXiv:2401.08807</em>. Available at <a href="https://arxiv.org/abs/2401.08807" target="_blank">arxiv.org</a></div>
-<div class="ref-item"><a id="ref-Git24oct" href="#ref-Git24oct-back">[Git24oct]</a> GitHub. 2024. "Octoverse 2024: AI leads Python to top language." Available at <a href="https://github.blog/news-insights/octoverse/octoverse-2024" target="_blank">github.blog</a></div>
 <div class="ref-item"><a id="ref-Har24" href="#ref-Har24-back">[Har24]</a> Harding, W. & GitClear. 2024. "Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality." Available at <a href="https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality" target="_blank">gitclear.com</a></div>
 <div class="ref-item"><a id="ref-PPL22" href="#ref-PPL22-back">[PPL22]</a> Pearce, H., Ahmad, B., Tan, B., Dolan-Gavitt, B., & Karri, R. 2022. "Asleep at the Keyboard? Assessing the Security of GitHub Copilot's Code Contributions." <em>2022 IEEE Symposium on Security and Privacy</em>. Available at <a href="https://arxiv.org/abs/2108.09293" target="_blank">arxiv.org</a></div>
-<div class="ref-item"><a id="ref-BB13" href="#ref-BB13-back">[BB13]</a> Bacchelli, A. & Bird, C. 2013. "Expectations, Outcomes, and Challenges of Modern Code Review." <em>Proceedings of ICSE</em>, 712-721. Available at <a href="https://dl.acm.org/doi/10.1109/ICSE.2013.6606617" target="_blank">dl.acm.org</a></div>
-<div class="ref-item"><a id="ref-Gen24" href="#ref-Gen24-back">[Gen24]</a> Sulimov, P., Lehmann, C., & Stockinger, K. 2024. "GenJoin: Conditional Generative Plan-to-Plan Query Optimizer." <em>arXiv:2411.04525</em>. Available at <a href="https://arxiv.org/abs/2411.04525" target="_blank">arxiv.org</a></div>
+</div>
+
+### Open source creation and maintenance both benefit from AI in empirical work {#open-source-ai}
+
+Empirical work on open source suggests both creation and maintenance benefit from AI. Hoffmann et al. find that maintainers with access to GitHub Copilot increase coding activity and reduce project management load; effects persist for at least two years <a href="#ref-HBB24" id="ref-HBB24-back">[HBB24]</a>. Yeverechyahu et al., using the rollout of Copilot support for Python but not R, show that maintenance-related contributions (iterative work on others' code) rise more than origination contributions (new code) <a href="#ref-YMO24" id="ref-YMO24-back">[YMO24]</a>. AI appears to lower the cost of both creation and maintenance, with a larger effect on maintenance. Whether that pattern holds as models evolve is an empirical question.
+
+<div class="section-references">
+<strong>References</strong>
 <div class="ref-item"><a id="ref-HBB24" href="#ref-HBB24-back">[HBB24]</a> Hoffmann, M., Boysel, S., et al. 2024. "Generative AI and the Nature of Work." <em>SSRN</em>. Available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007084" target="_blank">papers.ssrn.com</a></div>
-<div class="ref-item"><a id="ref-Met24" href="#ref-Met24-back">[Met24]</a> Meta. 2024. "LLM Compiler: Foundation Models of Compiler Optimization." <em>arXiv:2407.02524</em>. Available at <a href="https://arxiv.org/abs/2407.02524" target="_blank">arxiv.org</a></div>
 <div class="ref-item"><a id="ref-YMO24" href="#ref-YMO24-back">[YMO24]</a> Yeverechyahu, D., Mayya, R., & Oestreicher-Singer, G. 2024. "The Impact of Large Language Models on Open-source Innovation." <em>SSRN</em>. Available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4684662" target="_blank">papers.ssrn.com</a></div>
+</div>
+
+### The AI era raises the question of what we optimize for now {#ai-era-optimize}
+
+The history in this article suggests that programming languages were designed for different priorities at different times. FORTRAN optimized for machine efficiency. Python optimized for programmer time and readability. Rust optimizes for memory safety without garbage collection. A question the AI era raises is what we optimize for now. Readability? Raw performance? Security? And for AI assistants themselves, which languages should they generate? The answer may not align with human preferences. Models are trained on what exists. The languages with the most data (JavaScript, Python, Java, C++) are the ones models know best. That favors the languages that dominate open source and Stack Overflow, not necessarily the languages best suited to a given task. Whether AI will reinforce the popularity of data-rich languages or eventually learn to generate lesser-known ones well is an open question.
+
+### Languages, frameworks, and tools are consolidating, and AI may accelerate the trend {#pl-not-consolidating}
+
+Research supports consolidation rather than fragmentation. Language adoption has long followed a power law, with a small number of languages accounting for most use <a href="#ref-MR13" id="ref-MR13-back">[MR13]</a>. GitHub Octoverse shows Python at the top in 2024, driven by AI and data science, with Rust and Go growing but the overall distribution remaining concentrated <a href="#ref-Git24oct" id="ref-Git24oct-back">[Git24oct]</a>. The same pattern holds for frameworks and tools. Gu et al. find that mainstream languages and frameworks achieve significantly higher success rates in AI-generated code than niche alternatives. That disparity creates a feedback loop consistent with a Matthew effect. Data-rich ecosystems get better AI support, which in turn reinforces their dominance and introduces non-negligible productivity friction for niche technologies <a href="#ref-Gu25" id="ref-Gu25-back">[Gu25]</a>. Consolidation is observed across languages, frameworks, and tools, and current models may be accelerating it.
+
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-MR13" href="#ref-MR13-back">[MR13]</a> Meyerovich, L. A. & Rabkin, A. S. 2013. "Empirical analysis of programming language adoption." <em>Proceedings of OOPSLA</em>. ACM. Available at <a href="https://dl.acm.org/doi/10.1145/2509136.2509515" target="_blank">dl.acm.org</a></div>
+<div class="ref-item"><a id="ref-Git24oct" href="#ref-Git24oct-back">[Git24oct]</a> GitHub. 2024. "Octoverse 2024: AI leads Python to top language." Available at <a href="https://github.blog/news-insights/octoverse/octoverse-2024" target="_blank">github.blog</a></div>
+<div class="ref-item"><a id="ref-Gu25" href="#ref-Gu25-back">[Gu25]</a> Gu, F., Liang, Z., Ma, J., & Li, H. 2025. "The Matthew Effect of AI Programming Assistants: A Hidden Bias in Software Evolution." <em>arXiv:2509.23261</em>. Available at <a href="https://arxiv.org/abs/2509.23261" target="_blank">arxiv.org</a></div>
+</div>
+
+### A distinct question is whether AI can improve previous abstraction layers {#ai-improve-abstractions}
+
+Learned query optimizers have been shown to outperform classical optimizers on some workloads; GenJoin consistently outperforms PostgreSQL on standard benchmarks <a href="#ref-Gen24" id="ref-Gen24-back">[Gen24]</a>. In compilers, models trained on LLVM IR and assembly reach a substantial fraction of autotuning search potential <a href="#ref-Met24" id="ref-Met24-back">[Met24]</a>. In cloud infrastructure, methods combining demand prediction with reinforcement learning for resource allocation report utilization gains and cost improvements compared to rule-based autoscaling. These results demonstrate incremental improvements within existing abstractions. Whether AI will yield qualitatively new abstractions (e.g., new models of concurrency, persistence, or distribution) is unresolved. Past transitions such as relational algebra, garbage collection, or TCP/IP required conceptual shifts. The literature does not yet demonstrate AI producing such shifts.
+
+The cost framework implies that new abstractions emerge when the cost of the incumbent exceeds the cost of the alternative. AI may lower the cost of exploring new designs, but whether that leads to meaningfully better cloud, databases, or languages is an empirical question for which the evidence is currently limited.
+
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-Gen24" href="#ref-Gen24-back">[Gen24]</a> Sulimov, P., Lehmann, C., & Stockinger, K. 2024. "GenJoin: Conditional Generative Plan-to-Plan Query Optimizer." <em>arXiv:2411.04525</em>. Available at <a href="https://arxiv.org/abs/2411.04525" target="_blank">arxiv.org</a></div>
+<div class="ref-item"><a id="ref-Met24" href="#ref-Met24-back">[Met24]</a> Meta. 2024. "LLM Compiler: Foundation Models of Compiler Optimization." <em>arXiv:2407.02524</em>. Available at <a href="https://arxiv.org/abs/2407.02524" target="_blank">arxiv.org</a></div>
 </div>
 
 ## [Conclusion](#table-of-contents) {#conclusion}
