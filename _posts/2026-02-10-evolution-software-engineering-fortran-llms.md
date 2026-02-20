@@ -71,7 +71,7 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
       <li><a href="#ai-rag-2022">2023. RAG grounds code generation in the codebase</a></li>
       <li><a href="#ai-agentic-2023">2023–2024. Long-context and agentic interfaces expand scope</a></li>
       <li><a href="#ai-reasoning-2024">2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack</a></li>
-      <li><a href="#ai-benchmarks-2021">2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.</a></li>
+      <li><a href="#ai-benchmarks-2024">2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.</a></li>
       <li><a href="#ai-discussion">Discussion. The impact of AI coding in software engineering has yet to unfold</a></li>
     </ul>
   </details>
@@ -178,7 +178,7 @@ GROUP BY customer_name HAVING SUM(order_amount) > 1000
 
 Later, relational databases made ACID transactions <a href="#ref-HR83" id="ref-HR83-back">[HR83]</a> (atomicity, consistency, isolation, durability) standard. Applications could focus on business logic rather than implementing concurrency control and crash recovery.
 
-The crucial innovation was separating logical organization from physical storage. Users worked with tables conceptually; the database system decided how to store them, what indexes to maintain, and how to organize bytes. Changing storage layout did not require modifying applications. That data independence made possible a single, shared source of truth. Multiple applications and users could read and update the same data with consistent results. These are the systems we take for granted today, from banking and reservations to inventory and ERP, where many programs depend on the same records.
+The crucial innovation was separating logical organization from physical storage. Users worked with tables conceptually. The database system decided how to store them, what indexes to maintain, and how to organize bytes. Changing storage layout did not require modifying applications. That data independence made possible a single, shared source of truth. Multiple applications and users could read and update the same data with consistent results. These are the systems we take for granted today, from banking and reservations to inventory and ERP, where many programs depend on the same records.
 
 <div class="section-references">
 <strong>References</strong>
@@ -197,7 +197,7 @@ The crucial innovation was separating logical organization from physical storage
 
 **Solution.** Thompson and Ritchie built Unix at Bell Labs between 1969 and 1971 <a href="#ref-RT74" id="ref-RT74-back">[RT74]</a>. Unix exposed a single interface instead of vendor-specific system calls. Programs ran as processes. The same read and write operations applied to files on disk, terminals, and devices. "Everything is a file" meant that one abstraction covered all I/O. The kernel implemented the interface in privileged mode and mediated access to hardware. Programs invoked it through system calls, so the kernel hid the details of any particular device.
 
-That interface had two consequences. Software written to it could run on any machine running Unix, so organizations could change hardware without abandoning software. The abstraction also allowed an interpreted shell. Thompson added one that read command sequences from the terminal or from scripts and executed them. The shell turns command strings into system calls the same as any other process. Programmers could orchestrate tools with a short script instead of compiled software. For example, the following runs two compressions at once. A trailing `&` runs a command in the background so the next one starts right away; `wait` pauses until all background commands finish.
+That interface had two consequences. Software written to it could run on any machine running Unix, so organizations could change hardware without abandoning software. The abstraction also allowed an interpreted shell. Thompson added one that read command sequences from the terminal or from scripts and executed them. The shell turns command strings into system calls the same as any other process. Programmers could orchestrate tools with a short script instead of compiled software. For example, the following runs two compressions at once. A trailing `&` runs a command in the background so the next one starts right away. The shell's `wait` pauses until all background commands finish.
 
 ```sh
 gzip file1.log & gzip file2.log & wait
@@ -646,7 +646,7 @@ The stateless model imposed constraints. Cold starts introduced latency after in
 
 <!-- ### Solution. High-level frameworks with automatic differentiation and GPU support make ML accessible -->
 
-**Solution.** TensorFlow (2015) <a href="#ref-Aba15" id="ref-Aba15-back">[Aba+15]</a> and PyTorch (2016) <a href="#ref-Pas17" id="ref-Pas17-back">[Pas+17]</a> made deep learning tractable for programmers without research-level expertise. Both provided backpropagation, GPU acceleration, and a high-level API. Programmers defined computation as a graph or in imperative code; the frameworks handled the math, learning-rate tuning, and distributed training across GPUs. Both integrated with NumPy, pandas, and Jupyter. Transfer learning allowed fine-tuning of pretrained models with minimal data. Scikit-learn had already made classical ML such as regression, classification, and clustering accessible. TensorFlow and PyTorch did the same for deep learning, and the language models behind AI coding assistants such as Copilot and Codex were trained with these frameworks <a href="#ref-CKB21-ml" id="ref-CKB21-back-ml">[CKB+21]</a>.
+**Solution.** TensorFlow (2015) <a href="#ref-Aba15" id="ref-Aba15-back">[Aba+15]</a> and PyTorch (2016) <a href="#ref-Pas17" id="ref-Pas17-back">[Pas+17]</a> made deep learning tractable for programmers without research-level expertise. Both provided backpropagation, GPU acceleration, and a high-level API. Programmers defined computation as a graph or in imperative code. The frameworks handled the math, learning-rate tuning, and distributed training across GPUs. Both integrated with NumPy, pandas, and Jupyter. Transfer learning allowed fine-tuning of pretrained models with minimal data. Scikit-learn had already made classical ML such as regression, classification, and clustering accessible. TensorFlow and PyTorch did the same for deep learning, and the language models behind AI coding assistants such as Copilot and Codex were trained with these frameworks <a href="#ref-CKB21-ml" id="ref-CKB21-back-ml">[CKB+21]</a>.
 
 <div class="section-references">
 <strong>References</strong>
@@ -714,11 +714,12 @@ The model produced the continuation by computing $P(\text{next token} \mid \text
 
 <!-- ### Solution. AI assistants generate code from context but require expert verification -->
 
-**Solution.** General-purpose language models were Transformer LMs pretrained on broad text (e.g. GPT-3) and applied to code via in-context learning without code-specific training. Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> was a GPT model fine-tuned on publicly available code from GitHub. It used the same next-token, in-context paradigm as Brown et al., but with a code-heavy training distribution, and outperformed general-purpose models on code. GitHub Copilot <a href="#ref-Git21" id="ref-Git21-back">[Git21]</a> (June 2021) was the first mainstream assistant, with 55% faster task completion <a href="#ref-Git22" id="ref-Git22-back">[Git22]</a>. The model completed code as programmers typed. The abstraction was autocomplete at the level of functions and blocks. Verification remained necessary. Output was statistically plausible, not formally correct.
+**Solution.** Research had already shown that pretraining on code improved over general-purpose LMs. CodeBERT <a href="#ref-Fen20" id="ref-Fen20-back">[Fen+20]</a> and related work demonstrated that joint representations of code and natural language supported search, summarization, and completion. Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> was a GPT model fine-tuned on publicly available code from GitHub. It used the same next-token, in-context paradigm as Brown et al., but with a code-heavy training distribution, and outperformed general-purpose models on code. GitHub Copilot <a href="#ref-Git21" id="ref-Git21-back">[Git21]</a> (June 2021) was the first mainstream assistant, with 55% faster task completion <a href="#ref-Git22" id="ref-Git22-back">[Git22]</a>. The model completed code as programmers typed. The abstraction was autocomplete at the level of functions and blocks. Verification remained necessary. Output was statistically plausible, not formally correct.
 
 <div class="section-references">
 <strong>References</strong>
 <div class="ref-item"><a id="ref-CKB21" href="#ref-CKB21-back">[CKB+21]</a> Chen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. D. O., Kaplan, J., et al. 2021. "Evaluating Large Language Models Trained on Code." <em>arXiv:2107.03374</em>. Available at <a href="https://arxiv.org/abs/2107.03374" target="_blank">arxiv.org</a></div>
+<div class="ref-item"><a id="ref-Fen20" href="#ref-Fen20-back">[Fen+20]</a> Feng, Z., Guo, D., Tang, D., Duan, N., Feng, X., Gong, M., et al. 2020. "CodeBERT: A Pre-Trained Model for Programming and Natural Languages." <em>Findings of EMNLP</em>. Available at <a href="https://arxiv.org/abs/2002.08155" target="_blank">arxiv.org</a></div>
 <div class="ref-item"><a id="ref-Git21" href="#ref-Git21-back">[Git21]</a> GitHub. 2021. "Introducing GitHub Copilot: Your AI pair programmer." Available at <a href="https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/" target="_blank">github.blog</a></div>
 <div class="ref-item"><a id="ref-Git22" href="#ref-Git22-back">[Git22]</a> GitHub. 2022. "Research: Quantifying GitHub Copilot's impact on developer productivity and happiness." Available at <a href="https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" target="_blank">github.blog</a></div>
 </div>
@@ -756,40 +757,79 @@ InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> a
 
 ## [2023. RAG grounds code generation in the codebase](#table-of-contents) {#ai-rag-2022}
 
-### Problem. Context windows are too small to encompass real codebases
+<!-- ### Problem. Context windows are too small to encompass real codebases -->
 
-Early models had 2k–8k token context windows, insufficient for real codebases. A programmer fixing a bug needed relevant files, but the 4k–8k token limits of 2021 could not hold them. A programmer debugging a service that spanned 15 files across 20,000 lines couldn't fit the relevant context.
+**Problem.** A language model's context window is the maximum number of tokens (roughly, words or subwords) it can take as input in one call. Code-capable models of the Codex and Copilot era (2021–2022) had context windows of 2k–8k tokens. That was enough for a short prompt and a few in-context examples, but not for real codebases. Typical limits remained 4k–8k tokens through 2022. A programmer fixing a bug needed relevant files in context, but those limits could not hold them. Even a modest service spanning dozens of files and tens of thousands of lines exceeded the window, so the model never saw most of the code.
 
-### Solution. Retrieval augments the prompt with relevant files and documentation
+<!-- ### Solution. Retrieval augments the prompt with relevant files and documentation -->
 
-RAG (retrieval-augmented generation) retrieved relevant files, documentation, or code snippets and injected them into the prompt. The model's output was grounded in actual codebase structure rather than generic patterns. Instead of relying only on pretrained knowledge, tools could pull from the repository. Cursor, GitHub Copilot Chat, and others adopted RAG for codebase search. Programmers could point the assistant at a repo and get answers grounded in its structure and contents.
+**Solution.** RAG (retrieval-augmented generation) <a href="#ref-Lew20" id="ref-Lew20-back">[Lew+20]</a> was introduced for knowledge-intensive NLP in 2020. Code assistants adopted it for the codebase context problem in 2023. The delay reflected two factors. Code-specific retrieval infrastructure (repository indexing, code-aware embeddings) had to be developed. In addition, context limits became a pressing constraint only once coding assistants were widely adopted. RAG sidesteps the context limit by not sending the whole codebase. A retrieval step (e.g. semantic search over embeddings or a code index) selects a subset of files or snippets relevant to the programmer's request. Only that subset is concatenated into the prompt, so the model's fixed context window holds the query plus the retrieved material instead of the entire repo. The model's output is therefore grounded in actual codebase structure rather than generic patterns. Cursor, GitHub Copilot Chat, and others adopted RAG for codebase search. Programmers could point the assistant at a repo and get answers grounded in its structure and contents.
+
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-Lew20" href="#ref-Lew20-back">[Lew+20]</a> Lewis, P., et al. 2020. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." <em>Advances in NeurIPS</em> 33. Available at <a href="https://arxiv.org/abs/2005.11401" target="_blank">arxiv.org</a></div>
+</div>
 
 ## [2023–2024. Long-context and agentic interfaces expand scope](#table-of-contents) {#ai-agentic-2023}
 
-### Problem. RAG is a workaround. Assistants are reactive, not proactive
+<!-- ### Problem. RAG is a workaround. Assistants are reactive, not proactive -->
 
-RAG addressed context limits by retrieving a subset of the codebase, but it was a workaround. Assistants were reactive. They completed what the programmer typed. They did not search the codebase, run tests, or iterate on feedback. A single request like "fix the failing tests" required the programmer to run tests, read errors, and re-prompt by hand.
+**Problem.** RAG addressed context limits by supplying a retrieved subset of the codebase to the model, but the assistant remained a single-turn completer. It produced output only in response to the current prompt and had no ability to execute tools, query the repository, run tests, or incorporate execution results into the next step. Any task that required multiple steps (for example, fixing failing tests by running the test suite, reading failures, editing code, and re-running until green) therefore had to be orchestrated entirely by the programmer, who ran each step, read the outcome, and re-prompted by hand. The cognitive and manual burden of multi-step tasks stayed with the programmer rather than shifting to the assistant.
 
-### Solution. Native long context and agentic tool use let the assistant plan, act, and iterate
+<!-- ### Solution. Native long context and agentic tool use let the assistant plan, act, and iterate -->
 
-By 2024, models supported 100k–200k tokens natively. Entire moderate-sized repositories could fit in context. The model could reason about architectural patterns, cross-file dependencies, and project-wide conventions without retrieval heuristics. Agentic interfaces went further. Cursor, Devin, and Claude with computer use could execute commands, run tests, read error messages, edit files, and iterate. The assistant could plan ("I need to understand this API"), act (search docs, read implementation), observe (parse results), and replan. A single request like "fix the failing tests" could trigger a multi-step workflow (run tests, read failures, locate relevant code, generate fixes, rerun tests, iterate). Multi-agent systems (MetaGPT, Devin) assigned roles to collaborating agents.
+**Solution.** Two developments unfolded over 2023 and 2024.
+
+First, context windows grew. Models with 100k-token context (e.g. Claude 2, GPT-4 Turbo) reached production in 2023, and 200k-token windows became available by 2024. Entire moderate-sized repositories could fit in context, so the model could reason about architectural patterns, cross-file dependencies, and project-wide conventions without retrieval.
+
+Second, agentic interfaces enabled multi-step behaviour. The enabling mechanism is tool use (function calling). The model emits structured tool invocations (e.g. run command, read file, edit file, run tests). The host executes them and appends the results to the model context, so that the model chooses the next action in a repeating plan, act, observe loop. Cursor embedded this pattern in the IDE. Devin (Cognition, March 2024) applied it to autonomous multi-file coding. Claude’s "computer use" capability <a href="#ref-Ant24cu" id="ref-Ant24cu-back">[Ant24cu]</a> (Anthropic, October 2024) extended it to direct desktop control (cursor, keyboard, screen) in addition to structured tool APIs.
+
+A single request such as "fix the failing tests" could thus trigger a multi-step workflow (run tests, read failures, locate code, generate fixes, rerun tests, iterate) without the programmer re-prompting at each step. Multi-agent systems (e.g. MetaGPT, Devin) went beyond a single model driving tools by deploying several agents that divide the work. Each agent has a distinct role (e.g. planning, coding, reviewing, testing), and they pass outputs to one another so that planning, implementation, and verification are separated and sequenced rather than performed by one monolithic assistant.
+
+<div class="section-references">
+<strong>References</strong>
+<div class="ref-item"><a id="ref-Ant24cu" href="#ref-Ant24cu-back">[Ant24cu]</a> Anthropic. 2024. "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku." Available at <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank">anthropic.com</a></div>
+</div>
 
 ## [2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack](#table-of-contents) {#ai-reasoning-2024}
 
-### Problem. Standard models commit to each token before seeing the consequences
+<!-- ### Problem. Standard models commit to each token before seeing the consequences -->
 
-Standard models generated tokens left-to-right, committing to each token before seeing the consequences. For complex debugging or architectural decisions, this limited quality. Separately, general-purpose models did not reflect an organization's codebase conventions or proprietary patterns.
+**Problem.** By 2024, coding assistants combined RLHF, RAG, long-context windows, and agentic tool use. Two gaps remained.
 
-### Solution. Extended-reasoning models and enterprise fine-tuning complete the stack
+The first gap was the absence of an explicit reasoning phase before the model produced code. Many tasks benefited from weighing options before committing, such as diagnosing a failing test whose cause might lie in several files or choosing among plausible implementations. The autoregressive model used in these assistants did not. It generated one token at a time, at each step computing the distribution over the next token given the prefix and then emitting it.
 
-Extended-reasoning models like o1 spent more inference compute on internal chain-of-thought before outputting code. For complex tasks, this produced substantially better results. Enterprise fine-tuning (Copilot Enterprise 2024) <a href="#ref-Git24" id="ref-Git24-back">[Git24]</a> let organizations customize on proprietary codebases. These layers (RLHF, RAG, long context, agentic tool use, extended reasoning, and enterprise fine-tuning) compound. A programmer using Claude 4 or o1 by 2025 works with a fundamentally different system than Copilot in 2021, not because the base model is bigger, but because the entire stack around it evolved.
+$$P(x_t \mid x_1, \ldots, x_{t-1})$$
+
+That autoregressive model did not weigh alternatives before committing. When asked to fix a bug, it could output the first line of a patch immediately, without having considered other possible causes. A human might consider several alternatives before writing any code; such a model did not, and on those tasks its outputs were often wrong or suboptimal.
+
+The second gap was a distribution mismatch between model output and each organization's codebase. RAG and long-context windows both supplied the organization's code as input in the prompt, so that the model had access to it at inference. The weights, however, had been learned only on public corpora and did not change at inference. The model could reuse names or patterns from the prompt, but when the prompt did not fully determine style, structure, or naming, it fell back on what it had learned in training. Output often looked more like public repos than the organization's code, so programmers edited heavily or rejected it.
+
+<!-- ### Solution. Extended-reasoning models and enterprise fine-tuning complete the stack -->
+
+**Solution.** Each gap had a direct technical fix.
+
+The first gap was the absence of explicit reasoning before committing to code. Extended-reasoning models solved it. Models such as o1 <a href="#ref-Ope24" id="ref-Ope24-back">[Ope24]</a> add an internal chain-of-thought phase before the final output. Instead of generating code tokens directly from the user prompt, the model first generates a sequence of reasoning tokens $r_1, \ldots, r_k$ and then the answer tokens $y_1, \ldots, y_n$ (the code). The user sees only the answer. The next-token distribution at each step conditions on the full prefix, including the model's own reasoning, so the model can explore steps or alternatives before committing to code. Formally, the output distribution is
+
+$$P(y_{1:n} \mid x) = \sum_{r_{1:k}} P(r_{1:k} \mid x)\, P(y_{1:n} \mid x, r_{1:k}).$$
+
+In practice the model is trained to produce $(r_{1:k}, y_{1:n})$ and is given more inference-time compute for the reasoning segment. For complex tasks (e.g. multi-file debugging or choosing among implementations) this yielded substantially better results than direct generation.
+
+The second gap was a distribution mismatch between model output and each organization's codebase. Enterprise fine-tuning solved it. The model's parameters are updated on the organization's code. Let $\theta$ denote the base parameters (trained on public corpora). Let $\mathcal{D}\_{\mathrm{org}}$ denote the organization's dataset (e.g. proprietary code or prompt–completion pairs). Fine-tuning minimizes the negative log-likelihood on $\mathcal{D}\_{\mathrm{org}}$,
+
+$$\mathcal{L}(\theta) = -\sum_{(x,y) \in \mathcal{D}_{\mathrm{org}}} \log P_\theta(y \mid x),$$
+
+yielding parameters $\theta\_{\mathrm{org}}$ that assign higher probability to continuations consistent with the organization's style, naming, and structure. The model's default behaviour at inference then reflects the fine-tuning corpus rather than public code. Copilot Enterprise (2024) <a href="#ref-Git24" id="ref-Git24-back">[Git24]</a> offered such customization on proprietary repositories.
+
+By 2024 the ecosystem had diversified. Developers could choose among multiple leading models (Claude, GPT-4, Gemini, open code models such as DeepSeek Coder) and AI-native IDEs (Cursor, Windsurf) alongside incumbent tools. The jump from 2021 Copilot to 2025-era assistants came not mainly from larger base models but from adding RAG, long context, tool use, extended reasoning, and enterprise fine-tuning. Those additions changed what the assistant can do and how well it matches an organization's codebase.
 
 <div class="section-references">
 <strong>References</strong>
 <div class="ref-item"><a id="ref-Git24" href="#ref-Git24-back">[Git24]</a> GitHub. 2024. "Fine-tuned models are now in limited public beta for GitHub Copilot Enterprise." Available at <a href="https://github.blog/news-insights/product-news/fine-tuned-models-are-now-in-limited-public-beta-for-github-copilot-enterprise" target="_blank">github.blog</a></div>
+<div class="ref-item"><a id="ref-Ope24" href="#ref-Ope24-back">[Ope24]</a> OpenAI. 2024. "Introducing OpenAI o1." Available at <a href="https://openai.com/o1/" target="_blank">openai.com</a></div>
 </div>
 
-## [2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.](#table-of-contents) {#ai-benchmarks-2021}
+## [2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.](#table-of-contents) {#ai-benchmarks-2024}
 
 <!-- ### Problem. We lack objective measures of what AI coding assistants can and cannot do -->
 
@@ -797,27 +837,9 @@ Extended-reasoning models like o1 spent more inference compute on internal chain
 
 <!-- ### Solution. SWE-bench fills the gap and reveals what remains hard -->
 
-**Solution.** An eval is a run that measures how well a model performs on a defined set of tasks. Practitioners use the term for both fixed, replicable benchmarks and for ad-hoc checks or internal metrics, so comparability depends on which is meant; here we mean fixed benchmarks. SWE-bench <a href="#ref-JYW24" id="ref-JYW24-back">[JYW+24]</a>, introduced in 2024, filled that gap. It tests real-world tasks by fixing actual bugs from open-source repositories such as Django, Flask, Matplotlib, and Scikit-learn. Each task provides a GitHub issue description, often ambiguous, and expects a code patch that resolves the issue and passes existing test suites. That requires understanding an existing codebase, navigating its architecture, inferring undocumented invariants, and ensuring changes do not introduce regressions. On HumanEval, Claude 3.5 Sonnet reached 93% in June 2024 <a href="#ref-Ant24" id="ref-Ant24-back">[Ant24]</a>. On SWE-bench Verified, GPT-4 achieved 1.74% in early 2024, Claude 3.5 Sonnet 33.5% in June 2024 <a href="#ref-Ant24" id="ref-Ant24-back-2">[Ant24]</a>, OpenAI o1 48.9% in December 2024 <a href="#ref-Ope24" id="ref-Ope24-back-2">[Ope24]</a>, and Claude 4 72.5% in May 2025 <a href="#ref-Ant25" id="ref-Ant25-back">[Ant25]</a>. The gap between 93% on HumanEval and 72.5% on SWE-bench Verified is the informative metric. Leaderboards at <a href="https://www.swebench.com/" target="_blank">swebench.com</a> track current results. The gap reveals what remains hard. Interpreting ambiguous requirements, navigating complex codebases, understanding implicit architectural context, and making design tradeoffs are the skills that differentiate novice from expert programmers.
+**Solution.** SWE-bench <a href="#ref-JYW24" id="ref-JYW24-back">[JYW+24]</a> in 2024 supplied the missing benchmark for codebase-editing evaluation. SWE-bench Verified is the curated subset with validated, solvable tasks used for the results reported here. Each instance is an actual bug from open-source repos such as Django, Flask, Matplotlib, and Scikit-learn. The model gets the GitHub issue and must produce a patch that passes the project's test suite. Success depends on locating the relevant code, respecting architecture and invariants, and avoiding regressions.
 
-Comparable capability claims therefore depend on which kind of eval is being reported.
-
-### What the gap reveals
-
-That gap is not a small implementation detail. It reveals which skills remain hard for AI and which differentiate expert from novice programmers.
-
-HumanEval tests algorithmic problem-solving with clear specifications. The model receives a docstring like "Write a function that returns the nth Fibonacci number" with explicit input/output examples. The task is self-contained. There's no ambiguity about what "correct" means. The output either passes the test suite or it doesn't. This mirrors coding interview questions or LeetCode problems.
-
-SWE-bench tests real-world software engineering. The model receives a GitHub issue description, often ambiguous or incomplete ("The chart legend overlaps with data points at certain window sizes"), and must produce a patch that fixes the issue without breaking existing functionality. This requires:
-
-**Codebase archaeology.** Understanding how an unfamiliar 50,000-line codebase is organized, which modules own which responsibilities, and where the relevant code likely lives. Programmers learn this through experience and pattern recognition.
-
-**Ambiguity resolution.** Inferring what "at certain window sizes" means, whether the fix should adjust the legend or the layout engine, and what tradeoffs are acceptable. Real-world requirements are underspecified.
-
-**Architectural context.** Recognizing that a "simple" fix in the rendering code might violate assumptions elsewhere, that the codebase uses a particular design pattern consistently, or that a seemingly unrelated module depends on current behavior.
-
-**Regression avoidance.** Ensuring changes don't break any of the 2,000 existing tests or introduce subtle bugs in edge cases. Expert programmers build mental models of which changes are safe and which are risky.
-
-The gap between 93% and 72.5% measures exactly these skills (the ones that take programmers years to develop and that don't appear in textbooks or interview questions). As the gap closes, AI moves from "autocomplete" to "junior engineer" to "experienced contributor." But the final 10–20% may be the hardest, because it requires judgment that comes from understanding not just code, but the people and organizations the code serves.
+In June 2024 Claude 3.5 Sonnet reached 93% on HumanEval and 33.5% on SWE-bench Verified <a href="#ref-Ant24" id="ref-Ant24-back">[Ant24]</a>. The same model thus showed a wide spread between the two benchmarks. On SWE-bench Verified, GPT-4 reached 1.74% in early 2024, OpenAI o1 reached 48.9% in December 2024 <a href="#ref-Ope24" id="ref-Ope24-back-2">[Ope24]</a>, and Claude 4 reached 72.5% in May 2025 <a href="#ref-Ant25" id="ref-Ant25-back">[Ant25]</a>. The spread between function-level generation under clear specs and codebase editing under ambiguous, multi-file constraints is therefore substantial. Leaderboards at <a href="https://www.swebench.com/" target="_blank">swebench.com</a> track current results, and any capability claim must state the benchmark and task class.
 
 <div class="section-references">
 <strong>References</strong>
@@ -833,7 +855,7 @@ The gap between 93% and 72.5% measures exactly these skills (the ones that take 
 
 One obstacle persists regardless of how good AI gets at testing and verification. English is not a programming language. Programming languages exist for two reasons. They eliminate ambiguity for machines, and they organize human thought.
 
-Natural language is inherently ambiguous. Berry and Kamsties note that ambiguity in natural language requirements is inescapable; different readers may understand different things from the same text <a href="#ref-BK04" id="ref-BK04-back">[BK04]</a>. Consider "sort the list of customers by priority." Does that mean sort by a priority field ascending? Descending? Filter to show high-priority first, then medium, then low? The English is underspecified. A compiler produces the same output for the same source every time. The same English prompt yields different code from an LLM on different runs. As Meyer argues, programmers save the source code, not the prompts, because prompts cannot serve as reproducible specification <a href="#ref-Mey25" id="ref-Mey25-back">[Mey25]</a>.
+Natural language is inherently ambiguous. Berry and Kamsties note that ambiguity in natural language requirements is inescapable. Different readers may understand different things from the same text <a href="#ref-BK04" id="ref-BK04-back">[BK04]</a>. Consider "sort the list of customers by priority." Does that mean sort by a priority field ascending? Descending? Filter to show high-priority first, then medium, then low? The English is underspecified. A compiler produces the same output for the same source every time. The same English prompt yields different code from an LLM on different runs. As Meyer argues, programmers save the source code, not the prompts, because prompts cannot serve as reproducible specification <a href="#ref-Mey25" id="ref-Mey25-back">[Mey25]</a>.
 
 But precision for machines is only half of it. Programming languages force precision in human thinking. Writing `customers.sort(key=lambda x: x.priority, reverse=True)` forces the programmer to answer. What is the data structure? What field holds priority? What does "higher" mean? The language demands answers. Without it, we remain vague. The discipline of expressing logic in code makes the logic itself clearer.
 
