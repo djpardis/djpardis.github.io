@@ -72,10 +72,10 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
       <li><a href="#ai-agentic-2023">2023–2024. Long-context and agentic interfaces expand scope</a></li>
       <li><a href="#ai-reasoning-2024">2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack</a></li>
       <li><a href="#ai-benchmarks-2024">2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.</a></li>
-      <li><a href="#ai-discussion">Discussion. The impact of AI coding in software engineering has yet to unfold</a></li>
     </ul>
   </details>
 </li>
+<li><a href="#discussion">Discussion</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 </div>
@@ -849,7 +849,7 @@ In June 2024 Claude 3.5 Sonnet reached 93% on HumanEval and 33.5% on SWE-bench V
 <div class="ref-item"><a id="ref-JYW24" href="#ref-JYW24-back">[JYW+24]</a> Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. 2024. "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" <em>ICLR 2024</em>. Available at <a href="https://arxiv.org/abs/2310.06770" target="_blank">arxiv.org</a></div>
 </div>
 
-## [Discussion. The impact of AI coding in software engineering has yet to unfold](#table-of-contents) {#ai-discussion}
+## [Discussion. The impact of AI coding in software engineering has yet to unfold](#table-of-contents) {#discussion}
 
 ### English is not a programming language
 
