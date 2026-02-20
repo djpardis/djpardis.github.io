@@ -633,6 +633,15 @@ Dynamo <a href="#ref-DHJ07" id="ref-DHJ07-back">[DHJ+07]</a> (Amazon, 2007) chos
 
 Document stores addressed sparse data and schema evolution. Fixed schemas had forced migrations that locked tables. MongoDB (2009) <a href="#ref-Mon09" id="ref-Mon09-back">[Mon09]</a> and CouchDB stored JSON-like documents. Applications could add fields without migrations. The model suited user profiles with varying attributes, product catalogs with nested specifications, and content with arbitrary metadata. The tradeoff was eventual consistency and no ACID across documents. Cassandra (2008) <a href="#ref-LM10" id="ref-LM10-back">[LM10]</a> combined BigTable's column-family model with Dynamo's decentralized distribution. It handled sparse data, scaled horizontally, and offered tunable consistency. Use cases included activity feeds and time-series data. The cost was eventual consistency by default.
 
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        src="https://www.youtube.com/embed/b2F-DItXtZs"
+        frameborder="0"
+        allowfullscreen>
+</iframe>
+</div>
+<p class="image-caption">MongoDB is web scale (parody). <a href="https://www.youtube.com/watch?v=b2F-DItXtZs" target="_blank" rel="noopener">youtube.com</a></p>
+
 Columnar stores and search engines addressed analytical scans and full-text search. Row-oriented storage had made broad aggregations slow. Vertica and ClickHouse stored each column separately, so scans could read only the columns needed for aggregations. They suited analytical dashboards, sales reports, and click analytics (OLAP) but were poor for transactional point updates (OLTP). Elasticsearch (2010) <a href="#ref-Ban10" id="ref-Ban10-back">[Ban10]</a> and Solr, built on Lucene, provided full-text search over HTTP for product search, log analysis, and site search. NoSQL made web-scale storage reachable without purpose-built hardware or specialist teams.
 
 <div class="section-references">
