@@ -7,45 +7,16 @@ canonical_url: https://djpardis.com/blog
 permalink: /blog
 ---
 
-<!-- <div class="hero-container blog-hero">
-  <div style="background: transparent;">
-    <p>I write about AI, data science, and team organization, among other topics. Take a look at some of the highlights. 👉</p>
-    <p>If you'd like to be notified about new posts <a href="{{ site.baseurl }}/subscribe/">subscribe for updates</a>.</p>
-  </div>
-  <div class="blog-hero-cards" style="background: transparent;">
-    <div class="link-cards">
-      <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %}">
-        <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/moneyball.jpg')"></div>
-        <div class="link-card-body">
-          <span class="link-card-title">Revisiting Moneyball</span>
-          <span class="link-card-domain">djpardis.com</span>
-        </div>
-      </a>
-      <a class="link-card" href="{{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %}">
-        <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2019/ds-team-models-1.jpeg')"></div>
-        <div class="link-card-body">
-          <span class="link-card-title">Models for integrating data science teams</span>
-          <span class="link-card-domain">djpardis.com</span>
-        </div>
-      </a>
-      <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
-        <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
-        <div class="link-card-body">
-          <span class="link-card-title">Lessons in AI coding: Building a data room app</span>
-          <span class="link-card-domain">djpardis.com</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</div> -->
-
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
+
+- [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones]({{ site.baseurl }}{% post_url 2026-02-10-evolution-software-engineering-fortran-llms %})  
+  February 10, 2026
 
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
 
-- [Magic link authentication with Replit: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
+- [Magic link authentication with AI: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
   July 20, 2025
 
 - [Lessons in AI coding: Building a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
