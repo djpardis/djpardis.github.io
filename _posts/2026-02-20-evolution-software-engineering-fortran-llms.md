@@ -8,6 +8,13 @@ date: 2026-02-20
 image: /files/pics/blog/2026/camera%20obscura.jpg
 ---
 
+<div class="note-container preprint-container post-container">
+<strong>Preprint.</strong> We're planning a published edition and would be grateful for your help. If you'd like to be a reviewer, please <a href="{{ site.baseurl }}/reviewer-signup/">sign up here</a>. 
+<br>
+<br>
+<a href="{{ site.baseurl }}/files/papers/Noorzad2026.pdf">Download the PDF</a>. 
+</div>
+
 <div class="toc-container post-container">
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
@@ -1027,11 +1034,3 @@ Seven decades of software engineering followed one dynamic. When the cost of man
 AI coding fits the same cost logic. Assistants reduce programmer time on mechanical work and accelerate production. Open source evidence suggests both creation and maintenance benefit. Code remains the durable artifact that teams can review, refine, and own. Consolidation around dominant languages and frameworks may deepen, a pattern that has long applied. 
 
 Research already shows AI improving existing layers. Query optimizers, compilers, and cloud resource allocation all see gains. Whether AI will yield qualitatively new abstractions remains open. Better tooling and formal methods may narrow the verification gap further. Software engineering has absorbed every prior shift, and there is good reason to expect it to absorb this one.
-
-<div class="note-container post-container"> 
-<strong>Published version.</strong> We're planning a published edition and would be grateful for your help. If you'd like to be a reviewer, please <a href="/reviewer-signup/">sign up here</a>.
-</div>
-
-<div class="crosspost-container post-container">
-This article has been cross-posted to <a href="https://medium.com/@djpardis/the-evolution-of-software-engineering-from-fortran-to-llms-63d2427a3e73" target="_blank" rel="noopener">Medium</a>.
-</div>
