@@ -8,7 +8,7 @@ date: 2026-02-20
 image: /files/pics/blog/2026/camera%20obscura.jpg
 ---
 
-<div class="note-container post-container">
+<div class="note-container preprint-container post-container">
 <strong>Preprint.</strong> We're planning a published edition and would be grateful for your help. If you'd like to be a reviewer, please <a href="{{ site.baseurl }}/reviewer-signup/">sign up here</a>. 
 <br>
 <br>
