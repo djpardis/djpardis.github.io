@@ -85,7 +85,7 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
       <li><a href="#english-not-pl">English is not a programming language</a></li>
       <li><a href="#open-source-ai">Open source creation and maintenance both benefit from AI</a></li>
       <li><a href="#pl-not-consolidating">Languages, frameworks, and tools are consolidating, and AI may accelerate the trend</a></li>
-      <li><a href="#ai-improve-abstractions">Can AI improve existing abstraction layers</a></li>
+      <li><a href="#ai-improve-abstractions">Can AI improve existing abstraction layers?</a></li>
     </ul>
   </details>
 </li>
@@ -1007,7 +1007,7 @@ On the frontend, observers note that models default to React because it dominate
 <div class="ref-item"><a id="ref-NS25" href="#ref-NS25-back">[NS25]</a> Cass, S. 2025. "Web Development in 2025. AI's React Bias vs. Native Web." <em>The New Stack</em>. Available at <a href="https://thenewstack.io/web-development-in-2025-ais-react-bias-vs-native-web/" target="_blank">thenewstack.io</a></div>
 </div>
 
-### Can AI improve existing abstraction layers {#ai-improve-abstractions}
+### Can AI improve existing abstraction layers? {#ai-improve-abstractions}
 
 Research shows AI improving existing abstraction layers in several domains. Learned query optimizers outperform classical optimizers on some workloads, and GenJoin consistently outperforms PostgreSQL on standard benchmarks <a href="#ref-Gen24" id="ref-Gen24-back">[Gen24]</a>. In compilers, models trained on LLVM IR and assembly reach a substantial fraction of autotuning search potential <a href="#ref-Met24" id="ref-Met24-back">[Met24]</a>. In cloud infrastructure, reinforcement learning for dynamic resource allocation has been shown to reduce CPU allocation and improve utilization over rule-based autoscaling <a href="#ref-Fet23" id="ref-Fet23-back">[Fet23]</a>. Nevertheless, these results show that AI is already delivering real gains within existing abstraction layers. 
 
@@ -1033,5 +1033,5 @@ Research already shows AI improving existing layers. Query optimizers, compilers
 </div>
 
 <div class="crosspost-container post-container">
-This article has been cross-posted to <a href="https://djpardis.medium.com/" target="_blank" rel="noopener">Medium</a>.
+This article has been cross-posted to <a href="https://medium.com/@djpardis/the-evolution-of-software-engineering-from-fortran-to-llms-63d2427a3e73" target="_blank" rel="noopener">Medium</a>.
 </div>
