@@ -453,7 +453,7 @@ Following Java's success, garbage collection became standard in new languages. C
 
 <!-- ### Problem. Every company reinvents the wheel. Code is proprietary and reuse means licensing or rewriting -->
 
-**Problem.** Through the 1990s, most software was proprietary. Companies kept source code secret to protect competitive advantage. Reusing code meant licensing it or rewriting it. Richard Stallman had founded the free software movement (GNU, GPL) and framed it as "free as in free speech, not free beer." That established legal and ethical foundations, but "free" carried political baggage that made businesses hesitant. Linux and Apache had proven that open collaboration could produce production-grade software, yet there was no neutral term that invited broad adoption. Programmers who wanted to share code faced a fragmented landscape of licenses and ideologies.
+**Problem.** Through the 1990s, most software was proprietary. Companies kept source code secret to protect their competitive advantage. Reusing code meant licensing it or rewriting it. Richard Stallman had founded the free software movement (GNU, GPL) and framed it as "free as in free speech, not free beer." That established legal and ethical foundations, but "free" carried political baggage that made businesses hesitant. Linux and Apache had proven that open collaboration could produce production-grade software, yet there was no neutral term that invited broad adoption. Programmers who wanted to share code faced a fragmented landscape of licenses and ideologies.
 
 <!-- ### Solution. The Open Source Initiative gives the movement a business-friendly identity and formalizes the model -->
 
