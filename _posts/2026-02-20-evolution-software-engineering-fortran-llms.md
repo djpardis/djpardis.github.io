@@ -754,7 +754,7 @@ The stateless model imposed constraints. Cold starts introduced latency after in
 
 <h2 id="ai-coding" class="era-heading"><a href="#table-of-contents">AI coding</a></h2>
 
-AI coding assistants depend on language models that map input sequences to output sequences. Code generation is one such task, given a specification or context, produce code. The following milestones trace the architectural and scaling developments that made those models possible.
+AI coding assistants depend on language models that map input sequences to output sequences. The following milestones trace the architectural and scaling developments that made those models possible.
 
 ## [2017. Transformers replace recurrence with self-attention](#table-of-contents) {#ai-transformers-2017}
 
