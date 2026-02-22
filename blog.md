@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Blog
-description: Blog posts by Pardis Noorzad on data science, team management, and B2B data collaboration.
-keywords: data science, team management, B2B data collaboration, blog posts, pardis noorzad, general folders
+description: Blog posts by Pardis Noorzad on software, data, startups, and technology.
+keywords: software engineering, data, startups, technology, blog posts, pardis noorzad
 canonical_url: https://djpardis.com/blog
 permalink: /blog
 ---
