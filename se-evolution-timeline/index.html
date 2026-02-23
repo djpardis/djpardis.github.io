@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The evolution of software engineering – An interactive timeline</title>
+  <meta name="description" content="An interactive timeline exploring the evolution of software engineering from FORTRAN (1957) to LLMs (2024), based on research by Pardis Noorzad.">
+  <meta property="og:title" content="The evolution of software engineering">
+  <meta property="og:description" content="An interactive timeline from FORTRAN to LLMs.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-inner">
+        <div>
+          <h1>The evolution of software engineering</h1>
+          <p class="subtitle">An interactive timeline</p>
+        </div>
+        <a href="https://djpardis.com/blog/2026/02/20/evolution-software-engineering-fortran-llms/" target="_blank" rel="noopener noreferrer" class="header-link">
+          Read full article
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <nav class="era-nav" id="era-nav">
+      <div class="era-nav-scroll" id="era-nav-scroll"></div>
+    </nav>
+
+    <div class="timeline-main">
+      <button class="scroll-arrow scroll-arrow-left" id="scroll-left" aria-label="Scroll left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="scroll-arrow scroll-arrow-right" id="scroll-right" aria-label="Scroll right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="timeline-scroll" id="timeline-scroll">
+        <div class="timeline-track" id="timeline-track"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>Based on research by <a href="https://djpardis.com/" target="_blank" rel="noopener noreferrer">Pardis Noorzad</a></p>
+        <p class="nav-hint-desktop">Use arrow keys or scroll horizontally to navigate</p>
+        <p class="nav-hint-mobile">Swipe to explore the timeline</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <div class="modal-meta" id="modal-meta">
+            <span class="modal-year-badge" id="modal-year-badge"></span>
+            <span class="modal-era-name" id="modal-era-name"></span>
+          </div>
+          <h2 class="modal-title" id="modal-title"></h2>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
