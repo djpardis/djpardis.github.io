@@ -355,7 +355,7 @@ Making software run inside the browser, not just be downloaded from it, took two
 <div class="ref-item"><a id="ref-AB93" href="#ref-AB93-back">[AB93]</a> Andreessen, M. & Bina, E. 1993. "NCSA Mosaic: A Global Hypermedia System." <em>Internet Research</em> 3(1). Available at <a href="https://www.emerald.com/insight/content/doi/10.1108/10662249410798803/full/html" target="_blank">emerald.com</a></div>
 <div class="ref-item"><a id="ref-BL89" href="#ref-BL89-back">[BL89]</a> Berners-Lee, T. 1989. "Information Management: A Proposal." CERN. Available at <a href="https://www.w3.org/History/1989/proposal.html" target="_blank">w3.org</a></div>
 <div class="ref-item"><a id="ref-CERN93" href="#ref-CERN93-back">[CERN93]</a> CERN. 1993. "CERN Puts Web into Public Domain." Available at <a href="https://home.cern/science/computing/birth-web/licensing-web" target="_blank">cern.ch</a></div>
-<div class="ref-item"><a id="ref-Gar05" href="#ref-Gar05-back">[Gar05]</a> Garrett, J. J. 2005. "Ajax: A New Approach to Web Applications." Available at <a href="https://web.archive.org/web/20060207160552/https://adaptivepath.com/ideas/ajax-a-new-approach-to-web-applications/" target="_blank">Wayback Machine</a> (original: adaptivepath.com). See also <a href="https://jessejamesgarrett.com/2025/02/18/ajax-at-20/" target="_blank">Garrett's 2025 reflection</a>.</div>
+<div class="ref-item"><a id="ref-Gar05" href="#ref-Gar05-back">[Gar05]</a> Garrett, J. J. 2005. "Ajax: A New Approach to Web Applications." Available at <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf" target="_blank">MIT</a>. See also <a href="https://jessejamesgarrett.com/2025/02/18/ajax-at-20/" target="_blank">Garrett's 2025 reflection</a>.</div>
 </div>
 
 ## [1991. Python becomes the default for scripting, automation, and data science](#table-of-contents) {#python-1991}
@@ -599,7 +599,7 @@ This transformed capacity planning. Organizations could scale elastically to mat
 
 <div class="section-references">
 <strong>References</strong>
-<div class="ref-item"><a id="ref-App08" href="#ref-App08-back">[App08]</a> Apple. 2008. "iPhone SDK Announcement." Available at <a href="https://www.apple.com/newsroom/2008/03/06/Apple-Announces-iPhone-2-0-Software-Beta/" target="_blank">apple.com</a></div>
+<div class="ref-item"><a id="ref-App08" href="#ref-App08-back">[App08]</a> Apple. 2008. "iPhone SDK Announcement." Available at <a href="https://www.apple.com/newsroom/2008/03/06Apple-Announces-iPhone-2-0-Software-Beta/" target="_blank">apple.com</a></div>
 <div class="ref-item"><a id="ref-And08" href="#ref-And08-back">[And08]</a> Android Open Source Project. 2008. "Android Platform Overview." Available at <a href="https://source.android.com" target="_blank">source.android.com</a></div>
 </div>
 
@@ -962,7 +962,7 @@ SaaS has other moats that in-house builds do not easily reproduce. Vendors sprea
 
 <div class="section-references">
 <strong>References</strong>
-<div class="ref-item"><a id="ref-BB13" href="#ref-BB13-back">[BB13]</a> Bacchelli, A. & Bird, C. 2013. "Expectations, Outcomes, and Challenges of Modern Code Review." <em>Proceedings of ICSE</em>, 712-721. Available at <a href="https://dl.acm.org/doi/10.1109/ICSE.2013.6606617" target="_blank">dl.acm.org</a></div>
+<div class="ref-item"><a id="ref-BB13" href="#ref-BB13-back">[BB13]</a> Bacchelli, A. & Bird, C. 2013. "Expectations, Outcomes, and Challenges of Modern Code Review." <em>Proceedings of ICSE</em>, 712-721. Available at <a href="https://dl.acm.org/doi/10.5555/2486788.2486882" target="_blank">dl.acm.org</a></div>
 </div>
 
 ### Each past abstraction eliminated the need to acquire entire areas of knowledge {#each-past-abstraction}
