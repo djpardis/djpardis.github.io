@@ -8,6 +8,38 @@ permalink: /blog
 ---
 
 <details class="collapsible-section" markdown="1" open>
+<summary><h3><span style="background: linear-gradient(to bottom, transparent 25%, rgba(255, 182, 193, 0.6) 25%, rgba(255, 182, 193, 0.6) 75%, transparent 75%); padding: 0 0.15em;">New drops!</span></h3></summary>
+
+<p>Here are some of the most recent posts and projects.</p>
+
+  <div class="link-cards">
+    <a class="link-card" href="{{ site.baseurl }}/timeline/" target="_blank" rel="noopener">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/timeline-screenshot.png')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">SE interactive timeline</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+      {% unless post.url contains 'ai-coding-era-and-discussion' %}
+        {% if count < 2 %}
+    <a class="link-card" href="{{ site.baseurl }}{{ post.url }}">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ post.image }}')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">{{ post.title }}</span>
+        <span class="link-card-domain">djpardis.com</span>
+      </div>
+    </a>
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+</details>
+
+<details class="collapsible-section" markdown="1">
 <summary><h3>Posts</h3></summary>
 
 - [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones]({{ site.baseurl }}{% post_url 2026-02-20-evolution-software-engineering-fortran-llms %})  
