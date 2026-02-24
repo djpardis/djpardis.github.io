@@ -6,6 +6,7 @@ description: "Tracing the evolution of software engineering from FORTRAN to mode
 keywords: software engineering, programming evolution, FORTRAN, LLMs, AI coding, code generation, programming milestones
 date: 2026-02-20
 image: /files/pics/blog/2026/camera%20obscura.jpg
+card_image: /files/pics/blog/2026/camera-obscura-card.jpg
 ---
 
 <div class="note-container preprint-container post-container">
@@ -19,7 +20,7 @@ Click to download the <a href="{{ site.baseurl }}/files/papers/Noorzad2026.pdf">
 <strong>Interactive.</strong> Explore the evolution of software engineering in a visual, scrollable timeline with eras and milestones from the article.
 <br>
 <br>
-Click to open the <a href="{{ site.baseurl }}/timeline/" target="_blank" rel="noopener">interactive timeline</a>.
+Click to open the <a href="{{ site.baseurl }}/timeline/">interactive timeline</a>.
 </div>
 
 <div class="toc-container post-container">
