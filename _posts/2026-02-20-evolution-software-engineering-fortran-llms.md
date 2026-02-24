@@ -19,7 +19,7 @@ Click to download the <a href="{{ site.baseurl }}/files/papers/Noorzad2026.pdf">
 <strong>Interactive.</strong> Explore the evolution of software engineering in a visual, scrollable timeline with eras and milestones from the article.
 <br>
 <br>
-Click to open the <a href="{{ site.baseurl }}/se-evolution-timeline/" target="_blank" rel="noopener">interactive timeline</a>.
+Click to open the <a href="{{ site.baseurl }}/timeline/" target="_blank" rel="noopener">interactive timeline</a>.
 </div>
 
 <div class="toc-container post-container">
