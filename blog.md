@@ -8,12 +8,12 @@ permalink: /blog
 ---
 
 <details class="collapsible-section" markdown="1" open>
-<summary><h3><span style="background: linear-gradient(to bottom, transparent 25%, rgba(255, 182, 193, 0.6) 25%, rgba(255, 182, 193, 0.6) 75%, transparent 75%); padding: 0 0.15em;">New drops!</span></h3></summary>
+<summary><h3><span style="background: linear-gradient(to bottom, transparent 25%, rgba(255, 182, 193, 0.6) 25%, rgba(255, 182, 193, 0.6) 75%, transparent 75%); padding: 0 0.15em;">New drops</span></h3></summary>
 
 <p>Here are some of the most recent posts and projects.</p>
 
   <div class="link-cards">
-    <a class="link-card" href="{{ site.baseurl }}/timeline/" target="_blank" rel="noopener">
+    <a class="link-card" href="{{ site.baseurl }}/timeline/">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2026/timeline-screenshot.png')"></div>
       <div class="link-card-body">
         <span class="link-card-title">SE interactive timeline</span>
@@ -25,7 +25,7 @@ permalink: /blog
       {% unless post.url contains 'ai-coding-era-and-discussion' %}
         {% if count < 2 %}
     <a class="link-card" href="{{ site.baseurl }}{{ post.url }}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ post.image }}')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ post.card_image | default: post.image }}')"></div>
       <div class="link-card-body">
         <span class="link-card-title">{{ post.title }}</span>
         <span class="link-card-domain">djpardis.com</span>
