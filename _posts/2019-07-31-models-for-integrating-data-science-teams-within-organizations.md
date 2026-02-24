@@ -5,6 +5,7 @@ subtitle: 'A comparative analysis'
 description: 'A comprehensive analysis of different organizational models for integrating data science teams, comparing centralized, decentralized, and hybrid approaches across coordination efficiency, employee happiness, and product success factors.'
 keywords: data science, team organization, management, organizational design, product data science, center of excellence, embedded teams
 image: /files/pics/blog/2019/ds-team-models-1.jpeg
+card_image: /files/pics/blog/2019/ds-team-models-1-card.jpeg
 ---
 
 <div class="toc-container post-container">
