@@ -404,6 +404,28 @@ iframe {
   }
 }
 
+/* Blog “New drops” section: asymmetric widths only; keep equal card height */
+.container.content .new-drops-cards {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
+  max-width: none;
+}
+.container.content .new-drops-cards .link-card-image {
+  padding-bottom: 0;
+  height: 6.5rem;
+}
+.container.content .new-drops-cards .link-card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 540px) {
+  .container.content .new-drops-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Blog hero: same card size as home page (home = 600px/3 cols); 2×2 grid → width so each card = (600-16)/3 px */
 .hero-container.blog-hero .blog-hero-cards {
   flex: 0 0 calc((600px - 16px) / 3 * 2 + 8px);
@@ -1397,7 +1419,7 @@ p:has(+ .collapsible-section) {
   margin: 1rem 0 0.5rem;
 }
 .newsletter-section.dj-promo .newsletter-signup {
-  background-color: rgba(255, 105, 180, 0.12);
+  background-color: rgba(214, 51, 132, 0.12); /* match pink highlight #d63384 */
   padding: 0.5rem 1rem;
 }
 .newsletter-section.dj-promo .newsletter-signup p {
