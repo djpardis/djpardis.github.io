@@ -5,6 +5,7 @@ subtitle: 'Introducing the data room app'
 description: 'Implementing magic link authentication for a secure investor data room'
 keywords: ai coding, data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, ai
 image: /files/pics/blog/2025/dataroom.png
+card_image: /files/pics/blog/2025/dataroom-card.png
 ---
 
 ![Data room app main interface](/files/pics/blog/2025/dataroom.png)

@@ -200,7 +200,7 @@ permalink: /research/
 
 - Efficient classification based on sparse regression*  
   MSc Thesis, Amirkabir University of Technology, July 2012  
-  📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/thesis_in_persian.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
+  📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/Noorzad2012c.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
 
 - Regression with sparse approximations of data*  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
@@ -210,5 +210,5 @@ permalink: /research/
 - On automatic music genre recognition by sparse representation classification using auditory temporal modulations*  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences (LNCS). Springer, 2012  
-  📃 [paper](/files/papers/genreSturmNoorzad20120116.pdf)
+  📃 [paper](/files/papers/SturmNoorzad2012.pdf)
 </details>

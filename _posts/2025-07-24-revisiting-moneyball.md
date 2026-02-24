@@ -6,6 +6,7 @@ description: "Data, sports, payrolls, and memes - examining the enduring fascina
 keywords: moneyball, baseball analytics, sabermetrics, oakland athletics, billy beane, data science, sports analytics
 date: 2025-07-24
 image: /files/pics/blog/2025/moneyball.jpg
+card_image: /files/pics/blog/2025/moneyball-card.jpg
 ---
 
 <div class="update-container post-container">
