@@ -10,7 +10,7 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3><span style="background: linear-gradient(to bottom, transparent 25%, rgba(255, 182, 193, 0.6) 25%, rgba(255, 182, 193, 0.6) 75%, transparent 75%); padding: 0 0.15em;">New drops</span></h3></summary>
 
-<p>Here are some of the most recent posts and projects.</p>
+<p>Here are some of the most recent posts.</p>
 
   <div class="link-cards">
     <a class="link-card" href="{{ site.baseurl }}/timeline/">
