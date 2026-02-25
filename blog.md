@@ -42,7 +42,7 @@ permalink: /blog
 <details class="collapsible-section" markdown="1">
 <summary><h3>Posts</h3></summary>
 
-- [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones]({{ site.baseurl }}{% post_url 2026-02-20-evolution-software-engineering-fortran-llms %})  
+- [The evolution of software engineering: From FORTRAN to LLMs]({{ site.baseurl }}{% post_url 2026-02-20-evolution-software-engineering-fortran-llms %})  
   February 20, 2026
 
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
@@ -69,7 +69,7 @@ permalink: /blog
 
 <p><span class="highlight-text">Follow <a href="https://medium.com/@djpardis/">my blog</a> or subscribe via <a href="https://medium.com/@djpardis/feed">RSS</a> or <a href="https://djpardis.medium.com/subscribe">email</a> for updates.</span></p>
 
-- [The evolution of software engineering from FORTRAN to LLMs: With an in-depth look at major AI coding milestones](https://medium.com/@djpardis/the-evolution-of-software-engineering-from-fortran-to-llms-63d2427a3e73)  
+- [The evolution of software engineering: From FORTRAN to LLMs](https://medium.com/@djpardis/the-evolution-of-software-engineering-from-fortran-to-llms-63d2427a3e73)  
   February 20, 2026
 
 - [Startup advice: Some lessons I learned while building General Folders](https://djpardis.medium.com/startup-advice-e9459d6c1ebb)  
