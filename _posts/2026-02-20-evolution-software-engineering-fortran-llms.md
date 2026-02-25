@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The evolution of software engineering from FORTRAN to LLMs"
-subtitle: "With an in-depth look at major AI coding milestones"
-description: "Tracing the evolution of software engineering from FORTRAN to modern LLM-assisted development, including an in-depth look at AI coding milestones"
+title: "The evolution of software engineering"
+subtitle: "From FORTRAN to LLMs"
+description: "Tracing the evolution of software engineering from FORTRAN to LLMs and where today's AI coding tools fit."
 keywords: software engineering, programming evolution, FORTRAN, LLMs, AI coding, code generation, programming milestones
 date: 2026-02-20
 image: /files/pics/blog/2026/camera%20obscura.jpg
