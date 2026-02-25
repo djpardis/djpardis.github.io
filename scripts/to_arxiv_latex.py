@@ -10,6 +10,32 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 POST_PATH = REPO_ROOT / "_posts/2026-02-20-evolution-software-engineering-fortran-llms.md"
 OUT_PATH = REPO_ROOT / "_drafts/evolution-arxiv.tex"
+CONFIG_PATH = REPO_ROOT / "_config.yml"
+AUTHOR_COMPANY = "General Folders"
+AUTHOR_EMAIL = "pardis@generalfolders.com"
+
+
+def _get_author_from_config() -> tuple[str, str]:
+    """Read author name from _config.yml and pair with the paper email.
+
+    Returns (name, email_for_paper).
+    """
+    name = "Pardis Noorzad"
+    email = AUTHOR_EMAIL
+    if not CONFIG_PATH.exists():
+        return name, email
+    in_author = False
+    for line in CONFIG_PATH.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if stripped.startswith("author:"):
+            in_author = True
+            continue
+        if in_author and stripped.startswith("name:"):
+            name = stripped.split(":", 1)[1].strip().strip('"\'')
+            continue
+        if in_author and stripped and not line.startswith(" "):
+            break
+    return name, email
 
 
 def extract_refs(text: str) -> tuple[dict, str]:
@@ -121,11 +147,26 @@ def convert_body(text: str) -> str:
     text = re.sub(r"<em>", r"\\emph{", text)
     text = re.sub(r"</em>", "}", text)
 
-    # Code blocks: ```lang\n...\n``` (no escaping _ in verbatim)
+    # Code blocks: ```lang\n...\n``` in CLRS style (listings: line numbers, frame, monospace)
+    # Display name for code block caption (CLRS-style language label)
+    def _lang_caption(lang):
+        if not lang:
+            return "Code"
+        m = {"fortran": "FORTRAN", "sql": "SQL", "sh": "Shell", "bash": "Bash", "c": "C", "python": "Python", "text": "Text"}
+        return m.get(lang.lower(), lang)
+
     def code_block(m):
         lang, code = m.group(1), m.group(2)
-        code = code.replace("\\", "\\textbackslash{}").replace("{", "\\{").replace("}", "\\}").replace("&", "\\&").replace("%", "\\%")
-        return "\\begin{verbatim}\n" + code.strip() + "\n\\end{verbatim}\n"
+        code = code.strip()
+        # For listings, escape \ { } % so they print correctly
+        code = code.replace("\\", "\\\\").replace("{", "\\{").replace("}", "\\}").replace("%", "\\%")
+        caption = _lang_caption(lang) if lang else "Code"
+        opts = f"[caption={{{caption}}}"
+        # Use listings language when we have a known one (optional syntax highlight)
+        if lang:
+            opts += f", language={lang}"
+        opts += "]"
+        return "\\begin{lstlisting}" + opts + "\n" + code + "\n\\end{lstlisting}\n"
     text = re.sub(r"```(\w*)\n(.*?)```", code_block, text, flags=re.DOTALL)
 
     # Blockquote: > line
@@ -146,6 +187,15 @@ def convert_body(text: str) -> str:
     if in_quote:
         out_lines.append("\\end{quote}")
     text = "\n".join(out_lines)
+
+    # Inline code wrapped in backticks: render as \texttt{...} (CLRS-style inline code).
+    # Escape only \ and #; _ & % { } are escaped later at line level to avoid double-escape.
+    def inline_code_breaks(m):
+        code = m.group(1)
+        code = code.replace("\\", r"\textbackslash{}").replace("#", r"\#")
+        return r"\texttt{" + code + "}"
+
+    text = re.sub(r"`([^`]+)`", inline_code_breaks, text)
 
     # Remove remaining HTML
     text = re.sub(r"<figure[^>]*>.*?</figure>", "", text, flags=re.DOTALL)
@@ -194,15 +244,6 @@ def convert_body(text: str) -> str:
                 result.append("$" + seg + "$")
         return "".join(result)
 
-    # Apply only to paragraphs that look like prose (have no section/paragraph commands)
-    def escape_paragraph(m):
-        content = m.group(1)
-        if "\\section" in content or "\\paragraph" in content or "\\begin{" in content:
-            return m.group(0)
-        return "\\paragraph{}" not in content and "\\section" not in content and "$" in content
-    # Simpler: just escape backslash and then unescape inside math
-    text = re.sub(r"\\\\", "\\\\textbackslash{}", text)  # avoid double escape
-
     # Remove note-container and crosspost
     text = re.sub(r"<div class=\"note-container[^\"]*\"[^>]*>.*?</div>", "", text, flags=re.DOTALL)
     text = re.sub(r"<div class=\"crosspost-container[^\"]*\"[^>]*>.*?</div>", "", text, flags=re.DOTALL)
@@ -235,7 +276,41 @@ def main():
         if not line:
             out.append("")
             continue
-        if line.startswith("\\section") or line.startswith("\\subsection") or line.startswith("\\paragraph"):
+        # Section and subsection lines: keep together with following text to avoid bad page breaks
+        if line.startswith("\\section") or line.startswith("\\subsection"):
+            out.append(line + "\n\\nopagebreak[4]")
+            continue
+        # Paragraph headings like "\paragraph{Problem.} Text with C# and A&B" need escaping
+        if line.startswith("\\paragraph"):
+            closing = line.find("}")
+            if closing != -1:
+                head = line[: closing + 1]
+                tail = line[closing + 1 :]
+                if "$" in tail:
+                    segs = re.split(r"(\$[^$]*\$|\$\$[^$]*\$\$)", tail)
+                    new_segs = []
+                    for seg in segs:
+                        if seg.startswith("$") and seg.endswith("$"):
+                            seg = seg.replace("\\_", "_")
+                            new_segs.append(seg)
+                        else:
+                            seg = (
+                                seg.replace("&", "\\&")
+                                .replace("_", "\\_")
+                                .replace("#", "\\#")
+                                .replace("%", "\\%")
+                            )
+                            seg = seg.replace("\\textbackslash{}", "\\textbackslash{}")
+                            new_segs.append(seg)
+                    tail = "".join(new_segs)
+                else:
+                    tail = (
+                        tail.replace("&", "\\&")
+                        .replace("_", "\\_")
+                        .replace("#", "\\#")
+                        .replace("%", "\\%")
+                    )
+                line = head + tail
             out.append(line)
             continue
         if line.startswith("\\begin{") or line.startswith("\\end{"):
@@ -261,6 +336,26 @@ def main():
 
     body = "\n".join(out)
 
+    # Collapse 3+ consecutive newlines to 2 (at most one blank line between blocks)
+    body = re.sub(r"\n{3,}", "\n\n", body)
+
+    # Wrap paragraphs with multiple \texttt{ (long inline code) in \raggedright to avoid underfull \hbox
+    def wrap_ragged_paragraphs(s: str) -> str:
+        parts = re.split(r"(\n\n+)", s)
+        result = []
+        for i, part in enumerate(parts):
+            if i % 2 == 1:
+                result.append(part)
+                continue
+            strip = part.strip()
+            if strip.count(r"\texttt{") >= 2 and not strip.startswith("\\"):
+                result.append("{\\raggedright " + part.rstrip() + "\\par}\n")
+            else:
+                result.append(part)
+        return "".join(result)
+
+    body = wrap_ragged_paragraphs(body)
+
     # Final cleanup: fix section headers that ended up concatenated (escaped as \#\# or plain ##)
     body = re.sub(
         r"\.(\\#\\#|##)\s*\[([^\]]+)\]\([^)]*\)\s*\{\#?[^}]*\}",
@@ -277,25 +372,57 @@ def main():
 
     bib = build_bibliography(refs)
 
-    preamble = r"""\documentclass[11pt,a4paper]{article}
+    author_name, author_email = _get_author_from_config()
+    email_tex = author_email.replace("_", r"\_")
+    author_latex = (
+        author_name + r"\\" + "\n  " + AUTHOR_COMPANY + r"\\" + "\n  " + r"\texttt{" + email_tex + "}"
+    )
+
+    preamble = r"""\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{xurl}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref}
+\usepackage[svgnames,dvipsnames]{xcolor}
+\colorlet{mylinkcolor}{Purple}
+\colorlet{mycitecolor}{MediumPurple}
+\colorlet{myurlcolor}{SteelBlue}
+\usepackage{listings}
+\lstset{
+  numbers=left,
+  numberstyle=\small\ttfamily\color{gray},
+  numbersep=10pt,
+  numberfirstline=true,
+  frame=single,
+  framesep=6pt,
+  xleftmargin=0pt,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  keepspaces=true,
+  showstringspaces=false,
+  captionpos=t,
+  abovecaptionskip=4pt,
+  belowcaptionskip=4pt
+}
+\usepackage[colorlinks=true,linkcolor=mylinkcolor,citecolor=mycitecolor,urlcolor=myurlcolor]{hyperref}
 \usepackage{url}
+\let\CheckCommand\providecommand
+\usepackage{microtype}
 \usepackage{parskip}
+\setlength{\emergencystretch}{5em}
 \setlength{\parindent}{0pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\setcounter{secnumdepth}{0}
 
-\title{The Evolution of Software Engineering from FORTRAN to LLMs}
-\author{}
+\title{The Evolution of Software Engineering\\ from FORTRAN to LLMs}
+\author{""" + author_latex + r"""}
 \date{}
 
 \begin{document}
 \maketitle
-
-\begin{abstract}
-This article examines seven decades of software engineering evolution, from FORTRAN to LLMs. We trace major milestones in four eras (foundations, Internet and Web, cloud and infrastructure, AI coding) and use this history to analyze where today's AI coding tools fit. We discuss what changed when new paradigms arrived, what stayed the same, and what economic patterns of previous breakthroughs imply for AI-assisted development. The article includes an in-depth look at AI coding milestones: transformers, in-context learning, Copilot and Codex, RLHF, RAG, agentic interfaces, extended reasoning, and code benchmarks.
-\end{abstract}
 
 """
 
