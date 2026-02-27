@@ -1,6 +1,29 @@
-/* 
- * Readable typography (Inter: highly legible, Cursor-like)
- */
+@font-face {
+  font-family: 'Inter';
+  src: url('/public/fonts/Inter-Variable.woff2') format('woff2-variations'),
+       url('/public/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/public/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/public/fonts/JetBrainsMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Readable typography (Inter: highly legible, Cursor-like) */
 
 /* Apply Inter – clean, readable sans-serif */
 body {

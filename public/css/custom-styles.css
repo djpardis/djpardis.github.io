@@ -195,6 +195,8 @@
   max-width: 100%;
   margin: 0;
   display: block;
+  /* Reserve space before image load to reduce layout shift */
+  aspect-ratio: 4 / 3;
   border-radius: 5px;
   height: auto;
 }
