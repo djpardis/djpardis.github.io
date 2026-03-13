@@ -205,7 +205,8 @@
   }
   </script>
 
-  <!-- MathJax for LaTeX rendering -->
+  {% if page.math %}
+  <!-- MathJax for LaTeX rendering (only on posts with math: true) -->
   <script>
     MathJax = {
       tex: {
@@ -216,6 +217,7 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  {% endif %}
 
   <!-- Newsletter JavaScript -->
   <script src="{{ '/public/js/newsletter.js' | relative_url }}"></script>
