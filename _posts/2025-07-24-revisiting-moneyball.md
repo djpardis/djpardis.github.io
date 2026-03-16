@@ -117,7 +117,7 @@ Scott Hatteberg was available at a below-market price due to perceived limitatio
 
 Oakland signed Hatteberg to first base for $950K on a one-year contract after Colorado declined salary arbitration. The A's saw past the injury to identify exceptional plate discipline and on-base skills. His .367 OBP in 2000 and .410 OBP in 1999 demonstrated an ability to get on base.
 
-Catcher-to-first-base conversions are common in baseball, and most are injury-driven. But players like Joe Mauer and Buster Posey had logged games at first base before switching permanently. Hatteberg had zero professional innings at the position. He went from injured catcher to opening day first baseman in one spring training, learning the position from infield coach Ron Washington.
+Catcher-to-first-base conversions are common in baseball, and most are injury-driven. But players like Joe Mauer and Buster Posey had at least some experience at first base before switching permanently. Hatteberg had zero professional innings at the position. He went from injured catcher to opening day first baseman in one spring training, learning the position from infield coach Ron Washington.
 
 Hatteberg's 2002 performance validated the analytical approach: .280/.374/.433 slash line, 68 walks versus 56 strikeouts, and 4.15 pitches per plate appearance (3rd in AL). His defining moment came on September 4, 2002, when his walk-off home run against Kansas City secured the A's 20th consecutive victory and set an AL record.
 
