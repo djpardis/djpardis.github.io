@@ -36,7 +36,7 @@ Click to open the <a href="{{ site.baseurl }}/timeline/">interactive timeline</a
       <li><a href="#structured-1968">1968. Structured programming makes programs comprehensible by constraining control flow</a></li>
       <li><a href="#relational-1970">1970. Relational databases enable declarative data access independent of storage implementation</a></li>
       <li><a href="#unix-1971">1971. Unix establishes the operating system as a portable hardware abstraction layer</a></li>
-      <li><a href="#c-1973">1973. C made systems software like Unix portable across different computer architectures</a></li>
+      <li><a href="#c-1973">1973. C makes systems software like Unix portable across different computer architectures</a></li>
       <li><a href="#oop-1970s">1970s–1980s. Object-oriented programming enforces encapsulation to manage large system complexity</a></li>
     </ul>
   </details>
@@ -87,7 +87,7 @@ Click to open the <a href="{{ site.baseurl }}/timeline/">interactive timeline</a
       <li><a href="#ai-rag-2022">2023. RAG grounds code generation in the codebase</a></li>
       <li><a href="#ai-agentic-2023">2023–2024. Long-context and agentic interfaces expand scope</a></li>
       <li><a href="#ai-reasoning-2024">2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack</a></li>
-      <li><a href="#ai-benchmarks-2024">2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.</a></li>
+      <li><a href="#ai-benchmarks-2024">2024. Code evals establish comparable benchmarks and reveal the gap to real-world tasks</a></li>
     </ul>
   </details>
 </li>
@@ -275,7 +275,7 @@ Software portability and orchestration efficiency gave organizations incentive t
 <div class="ref-item"><a id="ref-RT74" href="#ref-RT74-back">[RT74]</a> Ritchie, D. M. & Thompson, K. 1974. "The UNIX Time-Sharing System." <em>Communications of the ACM</em> 17(7):365-375. Available at <a href="https://dl.acm.org/doi/10.1145/361011.361061" target="_blank">dl.acm.org</a></div>
 </div>
 
-## [1973. C made systems software like Unix portable across different computer architectures](#table-of-contents) {#c-1973}
+## [1973. C makes systems software like Unix portable across different computer architectures](#table-of-contents) {#c-1973}
 
 <!-- ### Problem. Systems code is still written in assembly, and no one believes that can change -->
 
@@ -931,7 +931,7 @@ By 2024 the ecosystem had diversified. Developers could choose among multiple le
 <div class="ref-item"><a id="ref-Ope24" href="#ref-Ope24-back">[Ope24]</a> OpenAI. 2024. "Introducing OpenAI o1." Available at <a href="https://openai.com/o1/" target="_blank">openai.com</a></div>
 </div>
 
-## [2024. Code evals established comparable benchmarks and revealed the gap to real-world tasks.](#table-of-contents) {#ai-benchmarks-2024}
+## [2024. Code evals establish comparable benchmarks and reveal the gap to real-world tasks](#table-of-contents) {#ai-benchmarks-2024}
 
 <!-- ### Problem. We lack objective measures of what AI coding assistants can and cannot do -->
 
