@@ -77,7 +77,11 @@
 .highlight-copy svg {
   width: 18px;
   height: 18px;
+  /* Flip clipboard icon only. Checkmark after copy must not be mirrored. */
   transform: scaleX(-1);
+}
+.highlight-copy.copied svg {
+  transform: none;
 }
 .highlight-copy:hover { opacity: 1; }
 .highlight-copy.copied { color: #2da44e; }
