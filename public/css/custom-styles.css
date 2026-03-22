@@ -5,20 +5,18 @@
 
 
 
-/* Blog post title + subtitle. Tight display title, secondary deck line, fixed px gap (Medium-style cluster). */
+/* Blog post title + subtitle. Spacing only. Subtitle color, size, and line-height match original Poole + first custom pass. */
 .post h1.post-title {
   margin-bottom: 0;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
 }
 
 .post h2.post-subtitle {
   margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.125rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 400;
-  color: #6b6b6b;
-  line-height: 1.35;
+  color: #8a8a8a;
+  line-height: 1.2;
 }
 
 /* Fixed px gap between title and subtitle (stable across root font-size breakpoints) */
