@@ -5,14 +5,36 @@
 
 
 
-/* Blog post subtitle styling */
-.post .post-subtitle {
-  margin-top: -0.8rem;
-  margin-bottom: 1.2rem;
-  font-size: 1.35rem;
+/* Blog post title + subtitle. Tight display title, secondary deck line, fixed px gap (Medium-style cluster). */
+.post h1.post-title {
+  margin-bottom: 0;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.post h2.post-subtitle {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
   font-weight: 400;
-  color: #8a8a8a;
-  line-height: 1.2;
+  color: #6b6b6b;
+  line-height: 1.35;
+}
+
+/* Fixed px gap between title and subtitle (stable across root font-size breakpoints) */
+.post h1.post-title + h2.post-subtitle {
+  margin-top: 4px;
+}
+
+/* Date after subtitle. Neutralize Poole’s negative pull-up so metadata sits clearly below the deck */
+.post h2.post-subtitle + .post-date {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* No subtitle. Title sits directly above date */
+.post h1.post-title + .post-date {
+  margin-top: 0.35rem;
 }
 
 /* Reference and citation highlighting */
