@@ -5,6 +5,9 @@ Allow: /
 Disallow: /gigs.html
 Disallow: /djpardis-request.html
 
+# Disallow utility files that can look like "content" in SERPs
+Disallow: /site.webmanifest
+
 # Disallow access to specific files and directories
 Disallow: /Gemfile
 Disallow: /Gemfile.lock
