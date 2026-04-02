@@ -14,3 +14,11 @@
   height: auto;
   display: block;
 }
+
+/* Blog post hero (loads after custom-styles). Keep natural aspect ratio; do not stretch. */
+.container.content .post .post-hero-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  aspect-ratio: auto;
+}
