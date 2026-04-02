@@ -12,7 +12,23 @@ POST_PATH = REPO_ROOT / "_posts/2026-02-20-evolution-software-engineering-fortra
 OUT_PATH = REPO_ROOT / "_drafts/evolution-arxiv.tex"
 CONFIG_PATH = REPO_ROOT / "_config.yml"
 AUTHOR_COMPANY = "General Folders"
-AUTHOR_EMAIL = "pardis@generalfolders.com"
+AUTHOR_EMAIL = ""
+
+
+def _get_title_from_post() -> str:
+    """Extract the Jekyll `title:` field from the current POST_PATH."""
+    try:
+        text = POST_PATH.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return "The Evolution of Software Engineering from FORTRAN to LLMs"
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("title:"):
+            # title: "The evolution ..." or title: The evolution ...
+            title = stripped.split(":", 1)[1].strip().strip('"\'')
+            if title:
+                return title
+    return "The Evolution of Software Engineering from FORTRAN to LLMs"
 
 
 def _get_author_from_config() -> tuple[str, str]:
@@ -115,12 +131,21 @@ def convert_body(text: str) -> str:
         text,
     )
     # ### Subsection
+    # Pattern with markdown link and explicit anchor: ### [Title](#toc) {#id}
+    text = re.sub(
+        r"^###\s*\[([^\]]+)\]\([^)]*\)\s*\{#[^}]*\}\s*$",
+        r"\\subsection{\1}",
+        text,
+        flags=re.MULTILINE,
+    )
+    # Pattern with explicit anchor only: ### Title {#id}
     text = re.sub(
         r"^###\s+([^\n]+)\s*\{#[^}]*\}\s*$",
         r"\\subsection{\1}",
         text,
         flags=re.MULTILINE,
     )
+    # Plain markdown subsection: ### Title
     text = re.sub(r"^###\s+([^\n]+)\s*$", r"\\subsection{\1}", text, flags=re.MULTILINE)
 
     # Inline citations: <a href="#ref-X" id="...">[Y]</a> -> \cite{X}
@@ -372,6 +397,18 @@ def main():
 
     bib = build_bibliography(refs)
 
+    paper_title = _get_title_from_post()
+    # Escape characters that would break LaTeX in the title
+    paper_title_tex = (
+        paper_title.replace("\\", r"\textbackslash{}")
+        .replace("&", r"\&")
+        .replace("%", r"\%")
+        .replace("#", r"\#")
+        .replace("_", r"\_")
+        .replace("{", r"\{")
+        .replace("}", r"\}")
+    )
+
     author_name, author_email = _get_author_from_config()
     email_tex = author_email.replace("_", r"\_")
     author_latex = (
@@ -417,7 +454,7 @@ def main():
 \widowpenalty=10000
 \setcounter{secnumdepth}{0}
 
-\title{The Evolution of Software Engineering\\ from FORTRAN to LLMs}
+\title{<<TITLE>>}
 \author{""" + author_latex + r"""}
 \date{}
 
@@ -433,6 +470,8 @@ def main():
 
 \end{document}
 """
+
+    preamble = preamble.replace("<<TITLE>>", paper_title_tex)
 
     OUT_PATH.write_text(preamble + body + end, encoding="utf-8")
     print(f"Wrote {OUT_PATH}", file=sys.stderr)
