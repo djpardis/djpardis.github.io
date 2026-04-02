@@ -227,7 +227,7 @@ While ensuring everyone has direct and easy access to data is a noble goal, ther
 
 **b. Dashboards are not the goal of data science, they are an intermediary step in the exploration of data.**
 
-<a href="http://attackwithnumbers.com/the-laws-of-shitty-dashboard" target="_blank">**The laws of shitty dashboards * Attack with Numbers**</a><br>
+<a href="http://attackwithnumbers.com/the-laws-of-shitty-dashboard" target="_blank">**The laws of shitty dashboards * Attack with Numbers**</a> (<a href="https://web.archive.org/web/20200621172508/http://attackwithnumbers.com/the-laws-of-shitty-dashboard" target="_blank" rel="noopener">Wayback snapshot</a>)<br>
 *Disclosure: I have been responsible for building shitty dashboards. I personally made most of the errors below. I…*
 
 ## [The product data science model](#table-of-contents) {#product-data-science-model}
