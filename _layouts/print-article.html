@@ -8,6 +8,7 @@ layout: null
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  {% if article %}<link rel="canonical" href="{{ article.url | absolute_url }}">{% endif %}
   <title>{% if article %}{{ article.title | escape }}{% if page.print_hide_images %} (text only){% endif %}{% else %}Print{% endif %}</title>
   <style>
     :root {
