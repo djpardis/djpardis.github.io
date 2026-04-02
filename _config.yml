@@ -30,7 +30,6 @@ collections:
 author:
   name:              "Pardis Noorzad"
   url:               https://djpardis.com
-  email:             pardis.noorzad@gmail.com
 
 # Social
 social:
@@ -57,6 +56,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - docs/
   - node_modules/
   - vendor/
   - .sass-cache/
