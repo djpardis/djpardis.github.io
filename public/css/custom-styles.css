@@ -215,10 +215,10 @@
   max-width: 100%;
   margin: 0;
   display: block;
-  /* Reserve space before image load to reduce layout shift */
-  aspect-ratio: 4 / 3;
   border-radius: 5px;
   height: auto;
+  /* Intrinsic aspect ratio from the file. Do not set a fixed aspect-ratio here,
+     or non-matching heroes stretch or letterbox incorrectly. */
 }
 
 /* ===== CAPTION SYSTEM (central) =====
@@ -1446,6 +1446,32 @@ p:has(+ .collapsible-section) {
 }
 .newsletter-section.dj-promo .newsletter-signup p {
   margin-bottom: 0;
+}
+
+/* Inline pink highlight for the "New drops" label on about.md */
+.dj-pink-highlight {
+  border-radius: 4px;
+  padding: 0;
+  display: inline;
+  position: relative;
+  z-index: 0;
+}
+
+.dj-pink-highlight::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -0.1em;
+  right: -0.1em;
+  /*
+   * Make the highlight taller without changing the underlying text layout.
+   * Increase or decrease these values to tune the height.
+   */
+  top: 0.06em;
+  bottom: -0.1em;
+  background-color: rgba(214, 51, 132, 0.12); /* match dj-promo */
+  border-radius: 6px;
+  pointer-events: none;
 }
 @media (max-width: 30em) {
   .newsletter-section.dj-promo .newsletter-signup {
