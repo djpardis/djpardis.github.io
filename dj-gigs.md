@@ -3,8 +3,8 @@ layout: page
 title: Gigs
 description: DJ Pardis music portfolio and performance history. Tour DJ for Sim Simah and Aarxn Cxle, featured performances at Twitter HQ and The New Parish opening for artists like Cam'ron.
 keywords: DJ Pardis, DJ portfolio, Sim Simah tour DJ, Twitter HQ performance, New Parish, originals, mixtapes, Bay Area DJ history, DJ performances
-canonical_url: https://djpardis.com/dj-gigs
-permalink: /dj-gigs/
+canonical_url: https://djpardis.com/gigs/
+permalink: /gigs/
 ---
 
 {% capture hero_text %}
@@ -14,7 +14,7 @@ permalink: /dj-gigs/
 {% include hero-with-text.html image="/files/pics/pages/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" content=hero_text %}
 
 <div class="note-container preprint-container post-container">
-<strong>Book us for your event.</strong> We'd love to deejay your next company event, conference, gallery opening, or themed event. Please <a href="{{ site.baseurl }}/dj-booking/">submit a request</a>.
+<strong>Book us for your event.</strong> We'd love to deejay your next company event, conference, gallery opening, or themed event. Please <a href="{{ site.baseurl }}/booking/">submit a request</a>.
 </div>
 
 <details class="collapsible-section" markdown="1" open>
