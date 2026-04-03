@@ -8,9 +8,14 @@ permalink: /dj-gigs/
 ---
 
 {% capture hero_text %}
-<p>🎧 I started DJing in May 2017 and played <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> at Twitter HQ. I usually DJed with <a href="https://www.linkedin.com/in/juliengaillard1/" target="_blank">Julien Gaillard</a> on the <a href="https://vimeo.com/463687716" target="_blank">guitar</a>. In the summer of 2019, I was the tour DJ for <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://music.apple.com/us/artist/aarxn-cxle/1453179768" target="_blank">Aarxn Cxle</a>. The picture is by <a href="https://www.instagram.com/meria.agency/?hl=ne" target="_blank">Jesse Meria</a> from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf" target="_blank">the opening act</a>.</p>
+<p>Hey, this is DJ Pardis! 🎧</p>
+<p>I started DJing in May 2017 and played <a href="https://vimeo.com/463652373" target="_blank">themed Tea Time tunes</a> at Twitter HQ. I usually DJed with <a href="https://www.linkedin.com/in/juliengaillard1/" target="_blank">Julien Gaillard</a> on the <a href="https://vimeo.com/463687716" target="_blank">guitar</a>. In the summer of 2019, I was the tour DJ for <a href="https://soundcloud.com/ohsimsimah" target="_blank">Sim Simah</a> and <a href="https://music.apple.com/us/artist/aarxn-cxle/1453179768" target="_blank">Aarxn Cxle</a>. The picture is by <a href="https://www.instagram.com/meria.agency/?hl=ne" target="_blank">Jesse Meria</a> from July 2019 at <a href="https://www.thenewparish.com/" target="_blank">The New Parish</a>, where we were <a href="https://www.teamllfent.com/news/2019/7/30/camron-with-special-guest-troyllf" target="_blank">the opening act</a>.</p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/djing.jpg" alt="Sim Simah and Pardis Noorzad (aka DJ Pardis)" content=hero_text %}
+
+<div class="note-container preprint-container post-container">
+<strong>Book us for your event.</strong> We'd love to deejay your next company event, conference, gallery opening, or themed event. Please <a href="{{ site.baseurl }}/dj-booking/">submit a request</a>.
+</div>
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Annual song reviews</h3></summary>
