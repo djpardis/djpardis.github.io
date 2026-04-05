@@ -42,10 +42,12 @@
 
       <!-- Same column width as main content, outside the bordered box (not .container — poole adds padding) -->
       {% unless page.url == '/subscribe/' %}
+      {% unless page.hide_footer_promos %}
       <div class="content-column-outside">
         {% include newsletter-signup.html %}
         {% include dj-promo.html %}
       </div>
+      {% endunless %}
       {% endunless %}
 
       <div class="copyright">
