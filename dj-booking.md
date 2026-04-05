@@ -1,5 +1,6 @@
 ---
 layout: post-shell
+hide_footer_promos: true
 title: Book us for your event
 subtitle: Company events, conferences, gallery openings, etc.
 description: Request DJ Pardis for company events, gallery openings, and special occasions. Submit a booking inquiry through the form on this page.
@@ -17,14 +18,16 @@ sitemap: false
 
   <h3>Contact information</h3>
 
-  <div class="form-field">
-    <label for="first_name">First name <span class="required">*</span></label>
-    <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
-  </div>
+  <div class="form-row form-row-cols-2">
+    <div class="form-field">
+      <label for="first_name">First name <span class="required">*</span></label>
+      <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+    </div>
 
-  <div class="form-field">
-    <label for="last_name">Last name <span class="required">*</span></label>
-    <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+    <div class="form-field">
+      <label for="last_name">Last name <span class="required">*</span></label>
+      <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+    </div>
   </div>
 
   <div class="form-field">
@@ -56,7 +59,9 @@ sitemap: false
     <textarea id="additional_comments" name="additional_comments" placeholder="Music preferences, special requests, event details, etc." rows="4"></textarea>
   </div>
 
-  <button type="submit" class="button">Submit</button>
+  <div class="form-actions">
+    <button type="submit" class="button">Submit</button>
+  </div>
 </form>
 
 <script>
