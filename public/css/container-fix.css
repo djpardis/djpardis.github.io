@@ -20,6 +20,19 @@ body {
   background: transparent;
 }
 
+/*
+ * Column width token: masthead, bordered content box, copyright, footer blocks.
+ *
+ * Outside the bordered box (newsletter, DJ promo): use .content-column-outside only.
+ * Do not use .container there — poole.css adds horizontal padding to .container.
+ *
+ * Inside the bordered box: children of .container.content — e.g. .post-container,
+ * .toc-container, .note-container, .subscribe-container (end-of-post prompt), etc.
+ */
+:root {
+  --content-column-max-width: 42rem;
+}
+
 /* Base container styles */
 .container.content {
   background-color: rgba(255, 255, 255, 0.9);
@@ -56,13 +69,20 @@ body {
 @media (min-width: 30em) {
   .container,
   .container.content,
+  .content-column-outside,
   .masthead-title,
   .copyright div {
-    max-width: 42rem;
+    max-width: var(--content-column-max-width);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Outside the bordered box: align with main column, no extra padding (unlike poole .container) */
+.content-column-outside {
+  box-sizing: border-box;
+  padding: 0;
 }
 
 /* Mobile container widths */
@@ -92,5 +112,15 @@ body {
     width: calc(100% - 1rem);
     margin: 0.125rem 0.5rem;
     padding: 0.5rem;
+  }
+
+  /* Full width of .wrap; inset matches old layout on .newsletter-signup, not here */
+  .content-column-outside {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 }
