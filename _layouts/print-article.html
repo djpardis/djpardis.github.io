@@ -189,6 +189,10 @@ layout: null
       max-width: 100%;
       box-sizing: border-box;
     }
+    /* Override custom-styles mobile cap so print shows every link card */
+    .print-body .link-cards .link-card:nth-child(n + 3) {
+      display: block !important;
+    }
     .print-body .link-card {
       display: block;
       border: 1px solid #e0e0e0;
