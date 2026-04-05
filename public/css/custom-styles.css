@@ -362,6 +362,7 @@ iframe {
   }
 }
 
+/* Link cards: inset max-width inside .container.content (narrower than the column on purpose) */
 /* LinkedIn-style link cards under experience (thumbnail + title + domain) */
 .link-cards {
   display: grid;
@@ -415,61 +416,18 @@ iframe {
 .link-card-placeholder .link-card-image {
   background-color: #e8e8e8;
 }
-@media (max-width: 540px) {
+/* Mobile and small tablet: two columns and at most two cards (no 2 + 1 layout) */
+@media (max-width: 767px) {
   .link-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .link-cards .link-card:nth-child(n + 3) {
+    display: none !important;
   }
 }
 @media (max-width: 360px) {
   .link-cards {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Blog “New drops” section: asymmetric widths only; keep equal card height */
-.container.content .new-drops-cards {
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
-  max-width: none;
-}
-.container.content .new-drops-cards .link-card-image {
-  padding-bottom: 0;
-  height: 6.5rem;
-}
-.container.content .new-drops-cards .link-card-title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@media (max-width: 540px) {
-  .container.content .new-drops-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Blog hero: same card size as home page (home = 600px/3 cols); 2×2 grid → width so each card = (600-16)/3 px */
-.hero-container.blog-hero .blog-hero-cards {
-  flex: 0 0 calc((600px - 16px) / 3 * 2 + 8px);
-  min-width: 0;
-}
-.hero-container.blog-hero .link-cards {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: none;
-}
-@media (max-width: 768px) {
-  .hero-container.blog-hero .blog-hero-cards {
-    flex: none;
-  }
-}
-@media (max-width: 540px) {
-  .hero-container.blog-hero .link-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 360px) {
-  .hero-container.blog-hero .link-cards {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1381,44 +1339,48 @@ p:has(+ .collapsible-section) {
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
 }
 
-/* Newsletter Signup Styling */
+/* Newsletter + DJ: wrapped in .content-column-outside in default layout (same column, outside bordered box) */
 .newsletter-section {
   margin: 1.5rem 0;
   padding: 0 1rem;
 }
 
-/* Match spacing to header/content gap */
-.content > .newsletter-section {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Ensure consistent spacing with adjacent elements */
 .newsletter-signup {
   margin: 0 auto;
-  max-width: 42rem;
+  max-width: var(--content-column-max-width, 42rem);
 }
 
-/* Desktop and tablet newsletter width */
 @media (min-width: 30em) {
+  /* .content-column-outside is already max column width; do not inset again */
+  .content-column-outside .newsletter-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content-column-outside .newsletter-signup {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    width: 100%;
+  }
+
   .newsletter-signup {
     background-color: rgba(125, 120, 181, 0.08);
     border-radius: 6px;
     padding: 1rem;
     text-align: left;
-    max-width: 42rem;
+    max-width: var(--content-column-max-width, 42rem);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-/* Mobile newsletter width */
 @media (max-width: 30em) {
   .newsletter-section {
-    padding: 0; /* Remove padding on mobile to match other containers */
+    padding: 0;
   }
-  
+
   .newsletter-signup {
     background-color: rgba(125, 120, 181, 0.08);
     border-radius: 6px;

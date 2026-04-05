@@ -12,7 +12,7 @@ canonical_url: https://djpardis.com/
 <p>Hello! 👋
 <br>
 <br>
-I'm an engineer and a researcher focused on data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling the pitfalls of cross-company data transfer. I built <a href="https://thedataroom.app" target="_blank">The Data Room App</a> to improve data rooms for fundraising. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
+I'm an engineer and a researcher focused on data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling the pitfalls of cross-company data transfer. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 
@@ -24,7 +24,11 @@ I'm an engineer and a researcher focused on data and AI. At <a href="https://gen
   <div class="link-cards">
     {% assign timeline_pages = site.pages | where: "url", "/timeline/" %}
     {% assign featured_items = site.posts | concat: timeline_pages | sort: "date" | reverse %}
-    {% for item in featured_items limit:3 %}
+    {% assign featured_count = 0 %}
+    {% for item in featured_items %}
+    {% if featured_count >= 3 %}{% break %}{% endif %}
+    {% if item.url contains "vibe-coding-data-room-app" or item.url contains "introducing-the-data-room-app" %}
+    {% else %}
     <a class="link-card" href="{{ site.baseurl }}{{ item.url }}">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ item.card_image | default: item.image }}')"></div>
       <div class="link-card-body">
@@ -32,6 +36,8 @@ I'm an engineer and a researcher focused on data and AI. At <a href="https://gen
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
+    {% assign featured_count = featured_count | plus: 1 %}
+    {% endif %}
     {% endfor %}
   </div>
 
@@ -57,25 +63,6 @@ I'm an engineer and a researcher focused on data and AI. At <a href="https://gen
       <div class="link-card-body">
         <span class="link-card-title">Making cross-company data exchange easy</span>
         <span class="link-card-domain">datastackshow.com</span>
-      </div>
-    </a>
-  </div>
-
-- **[The Data Room App](https://thedataroom.app){:target="_blank"}** — Simple and secure data rooms for fundraising
-
-  <div class="link-cards">
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/dataroom.png')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">Magic link auth with AI</span>
-        <span class="link-card-domain">djpardis.com</span>
-      </div>
-    </a>
-    <a class="link-card" href="{{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/blog/2025/fancy-pooh.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">Lessons in AI coding</span>
-        <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
   </div>
