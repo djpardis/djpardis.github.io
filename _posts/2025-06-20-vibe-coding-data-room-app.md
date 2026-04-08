@@ -1,53 +1,42 @@
 ---
 layout: post
-title: 'Lessons in AI coding'
-subtitle: 'Building a data room app'
-description: 'Lessons learned in using AI coding to build an intuitive data room app'
-keywords: ai coding, windsurf, cursor, data rooms, startup, investors, vibe coding, user experience, next.js, mongodb, authentication
+title: 'Best practices in AI coding'
+subtitle: 'Observations while building a data room app'
+description: 'Observations and best practices while building a data room app with AI-assisted programming'
+keywords: ai coding, windsurf, cursor, data rooms, startup, investors, vibe coding, user experience, next.js, mongodb, authentication, best practices
 image: /files/pics/blog/2025/fancy-pooh.jpg
 card_image: /files/pics/blog/2025/fancy-pooh-card.jpg
 ---
 
-This is part 1 of a 2-part post. This first part is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"} with [Windsurf](https://windsurf.com){:target="_blank"}. The [second part]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}) is about how I set up the magic link authentication flow.
+![Vintage arcade cabinets including a Junior Deputy Sheriff shooting game, Love Test machine, and a bill-to-quarters change machine, with Playland memorabilia on the wall](/files/pics/blog/2025/vibe-coding-arcade-machines.png)
 
-![A cute bear saying 'oh bother'](/files/pics/blog/2025/fancy-pooh.jpg)
-*It's different.*
+This is part 1 of a 2-part post. This first is about my experience with [vibe coding](https://twitter.com/karpathy/status/1886192184808149383){:target="_blank"}, or rather, [AI-assisted programming](https://simonwillison.net/2025/Mar/19/vibe-coding/){:target="_blank"}. The [second part]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %}) is about how I set up the magic link authentication flow.
+
+<p>
+<img src="/files/pics/blog/2025/fancy-pooh.jpg" alt="A cute bear saying 'oh bother'" style="max-width: 350px">
+<em>It's different.</em>
+</p>
 
 ## The problem
 
-To put these cool tools to use, I've been working on a couple of side projects. The one we'll discuss here is a custom data room app for [General Folders](https://generalfolders.com){:target="_blank"}. 
+To put these cool tools to use, I've been working on a couple of side projects. The one we'll discuss here is a custom data room app for [General Folders](https://generalfolders.com){:target="_blank"}.
 
-I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one. Here's how they compare:
-
-<div class="table-responsive" markdown="1">
-
-| Tool | Features | Limitations | Strengths |
-|------|-----------|-------------|----------|
-| DocSend | Document analytics, granular access control | Limited customization, corporate aesthetic | Tracking investor engagement |
-| Notion | Flexible organization, modern interface | Weak access controls, limited analytics | Early-stage startups with simple needs |
-| Google Drive | Familiar interface, real-time collaboration | Poor presentation layer, generic experience | Teams already in Google ecosystem |
-| Dropbox | Simple file sharing, version history | Limited structure for investor narrative | Basic file sharing needs |
-
-</div>
-
-For a more thorough comparison of tools and features see Papermark <a href="#ref1">[1]</a> and FirmRoom <a href="#ref1b">[1b]</a>. 
-
-None of these tools fully meet my needs. DocSend's tracking features often [discourage investor engagement](https://bothsidesofthetable.com/i-know-everybody-told-you-to-send-your-fund-raising-decks-as-a-link-d5b4409886af){:target="_blank"}, while its templated approach limits storytelling. It's also [not cheap](https://www.docsend.com/pricing/){:target="_blank"} for cost-sensitive early stage startups. While a tool like Notion allows for customizations that are consistent with your brand, it doesn't allow for the global control of the look and feel of pages in a project. Over time, it's easy to have pages that look very different. We're looking for an affordable solution that balances security with brand customization while preserving investor preferences.
+I evaluated several popular data room solutions to understand their strengths and limitations before deciding to work on a new one.
 
 ## The solution
 
-Given that context, our goal is to build a secure platform, with a brand-consistent look and feel, for startups to share links to confidential documents with authenticated investors. 
+Given that context, our goal is to build a secure platform for startups to quickly set up data rooms and share links to confidential documents with authenticated investors.
 
-What we're envisioning is one flavor of a file explorer for the browser. In addition to the file explorer, we can add on a file viewer, like a slide viewer or a doc viewer, and replicate the logic that DocSend or Google Workspace have built. However, apart from enabling for granular tracking it's hard to justify the effort that goes into building a file viewer given the affordable price tag on Google Workspace products and the familiarity of the experience.  
+What we're envisioning is one flavor of a file explorer for the browser. In addition to the file explorer, we can add on a file viewer, like a slide viewer or a doc viewer, and replicate the logic that DocSend or Google Workspace has built. However, apart from enabling granular tracking, it's hard to justify the effort that goes into building a file viewer, given the affordable price tag on Google Workspace products and the familiarity of the experience.
 
-As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box, are all file explorers at the core which is quite beautiful.
+As a sidenote, this exercise made me realize that GitHub, Dropbox, and Box are all file explorers at the core, which is quite beautiful.
 
 ### The tools
 
 Now we get to the topic of vibe coding. I believe the tools have finally reached that critical threshold where they're not just fun demos but genuinely practical for everyday use. And it looks like others feel the same!
 
 > Last time I felt as giddy as I do when vibe coding was my first ever visual basic app. Seismic shifts afoot people, seismic.
-> 
+>
 > — Harry Brundage ([@harrybrundage](https://x.com/harrybrundage/status/1928812963085070585)) • May 31, 2024
 
 > Programming with AI is what you thought programming would be like prior to learning it.
@@ -56,11 +45,11 @@ Now we get to the topic of vibe coding. I believe the tools have finally reached
 
 To build this data room app, I used [Windsurf](https://windsurf.com){:target="_blank"}, an AI-assisted development platform founded in June 2021 by Varun Mohan and Douglas Chen. Originally launched as Exafunction (focusing on GPU optimization), the company pivoted to developer tools and rebranded as Codeium in 2022, before becoming Windsurf in April 2025. 
 
-For a comparison of coding agents, see Yogesh's head-to-head comparison <a href="#ref2">[2]</a>, C# Corner's top AI tools <a href="#ref3">[3]</a>, Kingy AI's agent analysis <a href="#ref4">[4]</a>, and BrightCoding's technical benchmarks <a href="#ref5">[5]</a>. To understand how they work, see Sourcegraph's anatomy of coding assistants <a href="#ref6">[6]</a>.
+For a comparison of coding agents, see [Yogesh's head-to-head comparison](https://medium.com/@b.yogesh565/comparison-of-ai-coding-tools-a-developers-perspective-cbde8005a7dd){:target="_blank"}, [C# Corner's top AI tools](https://www.c-sharpcorner.com/article/top-7-ai-tools-for-software-developers/){:target="_blank"}, [Kingy AI's agent analysis](https://kingy.ai/blog/ai-coding-agents-in-2025-cursor-vs-windsurf-vs-copilot-vs-claude-vs-vs-code-ai/){:target="_blank"}, and [BrightCoding's technical benchmarks](https://www.blog.brightcoding.dev/2025/03/22/cursor-vs-windsurf-vs-github-copilot-the-ai-coding-assistant-showdown/){:target="_blank"}. To understand how they work, see [Sourcegraph's anatomy of coding assistants](https://sourcegraph.com/blog/anatomy-of-a-coding-assistant){:target="_blank"}.
 
 ## Observations and best practices
 
-Now let's get to the main point of this post. Below I share some observations I've made while using these tools over the past few months. 
+Now let's get to the main point of this post. Below, I share some observations I've made while using these tools over the past few months.
 
 ### Observations
 
