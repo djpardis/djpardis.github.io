@@ -16,10 +16,10 @@ permalink: /blog
 - [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
   July 24, 2025
 
-- [Magic link authentication with AI: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
+- [AI coding an authentication flow: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
   July 20, 2025
 
-- [Lessons in AI coding: Building a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
+- [Best practices in AI coding: Observations while building a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
   June 20, 2025
 
 - [Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})  
