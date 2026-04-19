@@ -12,32 +12,25 @@ canonical_url: https://djpardis.com/
 <p>Hello! 👋
 <br>
 <br>
-I'm an engineer and a researcher focused on data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling the pitfalls of cross-company data transfer. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
+I'm an engineer and a researcher in data and AI. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am tackling B2B data transfer. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- <strong><span class="dj-pink-highlight"><a href="{{ site.baseurl }}/blog/">New drops</a></span></strong> — Some recent posts and projects
+- <strong><a href="{{ site.baseurl }}/blog/">Data and AI blog</a></strong> — Research, ongoing projects, and updates
 
   <div class="link-cards">
-    {% assign timeline_pages = site.pages | where: "url", "/timeline/" %}
-    {% assign featured_items = site.posts | concat: timeline_pages | sort: "date" | reverse %}
-    {% assign featured_count = 0 %}
-    {% for item in featured_items %}
-    {% if featured_count >= 3 %}{% break %}{% endif %}
-    {% if item.url contains "vibe-coding-data-room-app" or item.url contains "introducing-the-data-room-app" %}
-    {% else %}
-    <a class="link-card" href="{{ site.baseurl }}{{ item.url }}">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ item.card_image | default: item.image }}')"></div>
+    {% for item in site.posts limit:3 %}
+    {% assign card_thumb = item.image | default: item.card_image %}
+    <a class="link-card" href="{{ item.url | relative_url }}">
+      <div class="link-card-image"{% if card_thumb %} style="background-image: url('{{ card_thumb | relative_url }}')"{% endif %}></div>
       <div class="link-card-body">
         <span class="link-card-title">{{ item.title }}</span>
         <span class="link-card-domain">djpardis.com</span>
       </div>
     </a>
-    {% assign featured_count = featured_count | plus: 1 %}
-    {% endif %}
     {% endfor %}
   </div>
 
