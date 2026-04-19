@@ -4,6 +4,7 @@ title: 'Hourly mentions of a word on Twitter'
 subtitle: 'Tracking social media data with Tweepy and ELK stack'
 description: 'A guide to tracking and visualizing hourly Twitter mentions using Tweepy and the ELK stack'
 keywords: twitter api, elk stack, logstash, elasticsearch, kibana, data visualization, tweepy, social media analytics
+blog_index_exclude: true
 ---
 
 Some time ago (OK, a month ago—time ✈️s), I saw this tweet:
