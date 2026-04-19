@@ -7,6 +7,13 @@ keywords: keyword1, keyword2, keyword3
 # date: YYYY-MM-DD (optional - Jekyll uses filename date if not specified)
 # IMPORTANT: If you include a date field, it MUST match the filename date
 # blog_index_exclude: true   # optional. Omit from /blog "Posts" list (still published; link from elsewhere e.g. #tbt)
+#
+# `image` is the post's hero / card thumbnail / social-share image.
+# It SHOULD point to the same file used as the first visible image in the post body.
+# If omitted, homepage and related-posts cards auto-extract the first `![](...)` from content.
+# `card_image` is an optional pre-cropped variant used only when different from `image`.
+image: /files/pics/blog/YYYY/your-hero-image.jpg
+# card_image: /files/pics/blog/YYYY/your-hero-image-card.jpg
 ---
 
 <!-- Table of Contents (use for posts with 3+ sections) -->
