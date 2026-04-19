@@ -29,10 +29,10 @@ layout: null
     }
     a {
       color: #0b57d0;
-      text-decoration: none;
+      text-decoration: underline;
     }
     a:hover {
-      text-decoration: underline;
+      color: #0842a0;
     }
     .print-header {
       margin-bottom: 2rem;
@@ -274,14 +274,33 @@ layout: null
       color: #555;
     }
     @media print {
+      /* Avoid browser print pipelines clipping long articles (overflow on screen
+         must not create a fixed-height box when printing). */
+      html,
+      body {
+        height: auto !important;
+        overflow: visible !important;
+      }
       body {
         padding: 0;
         max-width: none;
         font-size: 10pt;
       }
+      .print-body {
+        overflow: visible !important;
+        max-height: none !important;
+      }
+      .print-body pre {
+        overflow: visible !important;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .print-body h2 {
+        break-after: avoid-page;
+      }
       a {
         color: #000;
-        text-decoration: none;
+        text-decoration: underline;
       }
       .print-footer a::after {
         content: " (" attr(href) ")";
@@ -314,7 +333,7 @@ layout: null
     <p class="meta">{{ article.date | date_to_string }}</p>
   </header>
   <div class="print-body">
-    {{ article.content }}
+    {{ article.content | strip_print_boilerplate }}
   </div>
   <footer class="print-footer">
     <p><a href="{{ article.url | relative_url }}">Web version of this article</a></p>
