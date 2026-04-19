@@ -10,26 +10,15 @@ permalink: /blog
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 
-- [The evolution of software engineering: From FORTRAN to LLMs]({{ site.baseurl }}{% post_url 2026-02-20-evolution-software-engineering-fortran-llms %})  
-  February 20, 2026
-
-- [Revisiting Moneyball: Data, sports, payrolls, and memes]({{ site.baseurl }}{% post_url 2025-07-24-revisiting-moneyball %})  
-  July 24, 2025
-
-- [AI coding an authentication flow: Introducing the data room app]({{ site.baseurl }}{% post_url 2025-07-20-introducing-the-data-room-app %})  
-  July 20, 2025
-
-- [Best practices in AI coding: Observations while building a data room app]({{ site.baseurl }}{% post_url 2025-06-20-vibe-coding-data-room-app %})  
-  June 20, 2025
-
-- [Startup advice: Lessons from building General Folders]({{ site.baseurl }}{% post_url 2024-08-12-startup-advice %})  
-  August 12, 2024
-
-- [The state of data exchange: A survey of data transfer and sharing methodology]({{ site.baseurl }}{% post_url 2023-04-03-the-state-of-data-exchange %})  
-  April 3, 2023
-
-- [Models for integrating data science teams within organizations: A comparative analysis]({{ site.baseurl }}{% post_url 2019-07-31-models-for-integrating-data-science-teams-within-organizations %})  
-  July 31, 2019
+{% comment %}
+  Jekyll's site.posts is reverse chronological by date (newest first). No manual ordering.
+  Set blog_index_exclude: true in a post's front matter to hide it from this list only (e.g. #tbt).
+{% endcomment %}
+{% assign blog_index_posts = site.posts | where_exp: "p", "p.blog_index_exclude != true" %}
+{% for post in blog_index_posts %}
+- [{{ post.title | strip }}{% if post.subtitle %}: {{ post.subtitle | strip }}{% endif %}]({{ post.url | relative_url }})  
+  {{ post.date | date: "%B %-d, %Y" }}
+{% endfor %}
 </details>
 
 <details class="collapsible-section" markdown="1">
