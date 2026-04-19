@@ -21,8 +21,9 @@ layout: default
   <h2>Related posts</h2>
   <div class="link-cards related-posts-cards">
     {% for post in site.related_posts limit:3 %}
+      {% assign thumb = post.image | default: post.card_image %}
       <a class="link-card" href="{{ site.baseurl }}{{ post.url }}">
-        <div class="link-card-image"{% assign thumb = post.image | default: post.card_image %}{% if thumb %} style="background-image: url('{{ thumb | relative_url }}')"{% endif %}></div>
+        <div class="link-card-image"{% if thumb %} style="background-image: url('{{ thumb | relative_url }}')"{% endif %}></div>
         <div class="link-card-body">
           <span class="link-card-title">{{ post.title }}</span>
           <span class="link-card-domain">{{ post.date | date_to_string }}</span>

@@ -4,8 +4,8 @@ title: 'Best practices in AI coding'
 subtitle: 'Observations while building a data room app'
 description: 'Observations and best practices while building a data room app with AI-assisted programming'
 keywords: ai coding, windsurf, cursor, data rooms, startup, investors, vibe coding, user experience, next.js, mongodb, authentication, best practices
-image: /files/pics/blog/2025/fancy-pooh.jpg
-card_image: /files/pics/blog/2025/fancy-pooh-card.jpg
+image: /files/pics/blog/2025/vibe-coding-arcade-machines.png
+card_image: /files/pics/blog/2025/vibe-coding-arcade-machines.png
 ---
 
 ![Vintage arcade cabinets including a Junior Deputy Sheriff shooting game, Love Test machine, and a bill-to-quarters change machine, with Playland memorabilia on the wall](/files/pics/blog/2025/vibe-coding-arcade-machines.png)
