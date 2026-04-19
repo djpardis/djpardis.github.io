@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'AI coding an authentication flow'
+title: 'Building an auth flow with AI'
 subtitle: 'Introducing the data room app'
 description: 'Implementing magic link authentication for a secure investor data room'
 keywords: ai coding, data room, startup, investors, web app, vibe coding, user experience, next.js, mongodb, authentication, magic link, ai
-image: /files/pics/blog/2025/dataroom.png
-card_image: /files/pics/blog/2025/dataroom-card.png
+image: /files/pics/blog/2025/data-room-post-vintage-stove.png
+card_image: /files/pics/blog/2025/data-room-post-vintage-stove.png
 ---
 
 ![Vintage white Standard Electric stove with curved doors in the foreground, dining room with wooden table and chairs visible through a doorway in the background](/files/pics/blog/2025/data-room-post-vintage-stove.png)
