@@ -6,6 +6,7 @@ description: 'Brief description for SEO and social sharing'
 keywords: keyword1, keyword2, keyword3
 # date: YYYY-MM-DD (optional - Jekyll uses filename date if not specified)
 # IMPORTANT: If you include a date field, it MUST match the filename date
+# blog_index_exclude: true   # optional. Omit from /blog "Posts" list (still published; link from elsewhere e.g. #tbt)
 ---
 
 <!-- Table of Contents (use for posts with 3+ sections) -->
