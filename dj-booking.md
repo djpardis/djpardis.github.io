@@ -5,8 +5,8 @@ title: Book us for your event
 subtitle: Company events, conferences, gallery openings, etc.
 description: Request DJ Pardis for company events, gallery openings, and special occasions. Submit a booking inquiry through the form on this page.
 keywords: DJ Pardis, book DJ, event DJ, company DJ, private party DJ, Bay Area DJ
-canonical_url: https://djpardis.com/booking/
-permalink: /booking/
+canonical_url: https://djpardis.com/book/
+permalink: /book/
 robots: noindex, follow
 sitemap: false
 ---
