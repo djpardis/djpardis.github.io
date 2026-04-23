@@ -5,6 +5,8 @@ description: Research. Talks, panels, podcasts, and academic work by Pardis Noor
 keywords: data science, team management, data transfer, talks, panels, podcasts, academic papers, pardis noorzad, general folders
 canonical_url: https://djpardis.com/research
 permalink: /research/
+robots: noindex, follow
+sitemap: false
 ---
 
 <div class="work-hero-image">
