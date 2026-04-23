@@ -33,7 +33,7 @@ Checks include Jekyll build, CSS, broken links, and image alt text.
 
 ## Hero and list pages
 
-- Hero block: `_includes/hero-with-text.html` (used by `about.md`, `dj-gigs.md`). Pass `image`, `alt`, `content`.
+- Hero block: `_includes/hero-with-text.html` (used by `about.md`, `gigs.md`). Pass `image`, `alt`, `content`.
 - Spacing and layout: `public/css/custom-styles.css` (`.hero-container`, `.page > .hero-container`, `.collapsible-section`).
 
 ## Deploy

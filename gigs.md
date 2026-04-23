@@ -2,10 +2,12 @@
 layout: page
 hide_footer_promos: true
 title: Gigs
-description: DJ Pardis music portfolio and performance history. Tour DJ for Sim Simah and Aarxn Cxle, featured performances at Twitter HQ and The New Parish opening for artists like Cam'ron.
-keywords: DJ Pardis, DJ portfolio, Sim Simah tour DJ, Twitter HQ performance, New Parish, originals, mixtapes, Bay Area DJ history, DJ performances
+description: Music portfolio and performance history. Tour DJ for Sim Simah and Aarxn Cxle, featured performances at Twitter HQ and The New Parish opening for artists like Cam'ron.
+keywords: DJ portfolio, Sim Simah tour DJ, Twitter HQ performance, New Parish, originals, mixtapes, Bay Area DJ history
 canonical_url: https://djpardis.com/gigs/
 permalink: /gigs/
+robots: noindex, follow
+sitemap: false
 ---
 
 {% capture hero_text %}

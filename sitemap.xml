@@ -15,19 +15,8 @@ layout: null
   </url>
   {% endif %}
 {% endfor %}
-<!-- CORE SECTION PAGES - Blog/Research BEFORE posts show grouping -->
-{% for page in site.pages %}
-  {% unless page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' %}
-  {% if page.url == '/blog/' or page.url == '/blog' or page.url == '/research/' or page.url == '/gigs/' %}
-  <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>{% if page.url == '/blog/' %}0.9{% elsif page.url == '/research/' %}0.8{% else %}0.8{% endif %}</priority>
-  </url>
-  {% endif %}
-  {% endunless %}
-{% endfor %}
+<!-- CORE SECTION PAGES - all listing pages are noindex; only homepage and individual posts are indexed -->
+
 <!-- BLOG POSTS AFTER BLOG PAGE REPLACED -->
 {% for post in site.posts %}
   <url>
@@ -39,7 +28,7 @@ layout: null
 {% endfor %}
 <!-- SUB-PAGES EXCLUDE -->
 {% for page in site.pages %}
-  {% unless page.url == '/' or page.url == '/blog/' or page.url == '/blog' or page.url == '/research/' or page.url == '/gigs/' or page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' or page.sitemap == false %}
+  {% unless page.url == '/' or page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' or page.sitemap == false %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
