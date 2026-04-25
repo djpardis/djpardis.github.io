@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /
-description: Pardis Noorzad is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises. Previously led data science at Carbon Health and Twitter.
+description: Pardis is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data transfer, secure data sharing
 tags: [data, data science, management, technology, software, product, cloud infrastructure]
 canonical_url: https://djpardis.com/
@@ -94,6 +94,6 @@ Shipped the flagship promotion optimization system, among other AI products
 
 Here is my bio for talks and conferences:
 
-> Pardis Noorzad is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
+> Pardis is founder of General Folders, a Techstars-backed company pioneering secure data exchange solutions for enterprises. 
 > Previously, she led data science at Twitter and Carbon Health. Her expertise spans data infrastructure, fintech, 
 > healthcare, and social media, backed by degrees in software engineering, mathematics, and AI. -->
