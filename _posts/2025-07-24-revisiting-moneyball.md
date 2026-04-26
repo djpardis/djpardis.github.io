@@ -99,7 +99,7 @@ While scouts focused on batting average, home runs, and RBIs, Beane recognized t
 
 The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
-The strategy worked. The 2002 A's ranked 2nd in the American League (AL) in OBP (.339) despite having the third-lowest payroll in baseball.
+The strategy worked. The 2002 A's ranked 4th in baseball in OBP (.349) despite having the third-lowest payroll in baseball.
 
 <div class="image-row">
   <div class="image-container">
