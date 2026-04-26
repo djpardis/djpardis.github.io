@@ -1,5 +1,6 @@
 ---
 layout: page
+plain_title: true
 title: Subscribe
 description: Get notified about new posts and podcast episodes from Pardis Noorzad. Insights on data science, startups, and building in public.
 keywords: newsletter, subscription, data science, startups, podcast, pardis noorzad

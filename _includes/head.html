@@ -58,8 +58,8 @@
   <link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
   
 
-  <!-- Title: exact for homepage, "X by Pardis" for all other pages and posts -->
-  {% if page.url == '/' %}{% assign page_title_full = page.title %}{% elsif page.title %}{% assign page_title_full = page.title | append: ' by Pardis' %}{% else %}{% assign page_title_full = site.title %}{% endif %}
+  <!-- Title: exact for homepage and plain_title pages, "X by Pardis" for all other pages and posts -->
+  {% if page.url == '/' or page.plain_title %}{% assign page_title_full = page.title %}{% elsif page.title %}{% assign page_title_full = page.title | append: ' by Pardis' %}{% else %}{% assign page_title_full = site.title %}{% endif %}
   <title>{{ page_title_full }}</title>
   
   <!-- Meta description. Posts never use site description so SERPs show post-specific text. -->

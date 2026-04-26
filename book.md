@@ -1,6 +1,7 @@
 ---
 layout: post-shell
 hide_footer_promos: true
+plain_title: true
 title: Book us for your event
 subtitle: Company events, conferences, gallery openings, etc.
 description: Request DJ Pardis for company events, gallery openings, and special occasions. Submit a booking inquiry through the form on this page.
