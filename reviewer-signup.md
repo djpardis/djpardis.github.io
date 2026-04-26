@@ -1,5 +1,6 @@
 ---
 layout: page
+plain_title: true
 title: Reviewer signup
 description: Sign up to review the preprint of "The evolution of software engineering."
 permalink: /reviewer-signup/
