@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pardis – Computers . Photos . Baseball . Music
+title: Pardis – About
 permalink: /
 description: Pardis is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data transfer, secure data sharing
