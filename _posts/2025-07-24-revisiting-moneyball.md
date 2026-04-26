@@ -97,9 +97,9 @@ This transparency allowed decisions regarding players to be justified through ob
 
 While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics <a href="#ref1">[1]</a><a href="#ref2">[2]</a>. 
 
-The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.374 OBP in 2002) and David Justice (.370 OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
+The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.361 career OBP) and David Justice (.378 career OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
-The strategy worked. The 2002 A's ranked 4th in baseball in OBP (.349) despite having the third-lowest payroll in baseball.
+The strategy worked. The 2002 A's ranked 4th in baseball in OBP (.349) despite having the 3rd lowest payroll in baseball.
 
 <div class="image-row">
   <div class="image-container">
