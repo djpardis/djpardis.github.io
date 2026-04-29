@@ -15,6 +15,8 @@ Subscribe via RSS to get new posts delivered directly to your reader (Feedly, Ne
 
 <a href="/atom.xml">djpardis.com/atom.xml</a>
 
+You can also follow me on <a href="https://medium.com/@djpardis/">Medium</a>.
+
 ### Looking for the newsletter?
 
 The Future Shock Media newsletter is published separately at <a href="https://futureshock.media" target="_blank">futureshock.media</a>, where you can subscribe.

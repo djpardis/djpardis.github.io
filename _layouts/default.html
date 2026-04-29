@@ -44,8 +44,16 @@
       {% unless page.url == '/subscribe/' %}
       {% unless page.hide_footer_promos %}
       <div class="content-column-outside">
-        {% include newsletter-signup.html %}
-        {% include dj-promo.html %}
+        <div class="newsletter-section">
+          <div class="newsletter-signup">
+            <p style="margin-bottom: 0;">🎙️ Here for the podcast? Subscribe via <a href="https://futureshock.media" target="_blank">Future Shock Media</a>.</p>
+          </div>
+        </div>
+        <div class="newsletter-section dj-promo">
+          <div class="newsletter-signup">
+            <p>🎧 Here for DJ Pardis? Check out <a href="https://djpardis.club" target="_blank" rel="noopener">her page</a>!</p>
+          </div>
+        </div>
       </div>
       {% endunless %}
       {% endunless %}
