@@ -9,6 +9,8 @@ robots: noindex, follow
 sitemap: false
 ---
 
+<p><span class="highlight-text">For updates, <a href="/subscribe/">subscribe</a> via <a href="/atom.xml">RSS</a> or follow me on <a href="https://medium.com/@djpardis/">Medium</a>.</span></p>
+
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Posts</h3></summary>
 

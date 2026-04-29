@@ -936,15 +936,13 @@ body .wrap .container.content {
 
 /* Highlight text styling */
 .highlight-text {
-  position: relative;
-  z-index: 1;
   display: inline;
+  background-color: rgba(140, 255, 50, 0.3);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   padding: 0 2px;
 }
 
-.highlight-text::before,
 .copyright div span::before {
   content: "";
   position: absolute;
@@ -1243,16 +1241,6 @@ p:has(+ .collapsible-section) {
     margin-bottom: 0;
   }
   
-  /* Mobile highlight fix */
-  .highlight-text {
-    background-color: rgba(140,255,50,0.3);
-    display: inline;
-  }
-  
-  .highlight-text::before {
-    display: none;
-  }
-  
   /* Highlight adjustments for mobile */
   .copyright div span::before {
     left: -0.25rem;
@@ -1458,9 +1446,9 @@ p:has(+ .collapsible-section) {
   }
 
   .newsletter-signup {
-    background-color: rgba(125, 120, 181, 0.08);
+    background-color: rgba(255, 140, 0, 0.12);
     border-radius: 6px;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-align: left;
     max-width: var(--content-column-max-width, 42rem);
     width: 100%;
@@ -1475,7 +1463,7 @@ p:has(+ .collapsible-section) {
   }
 
   .newsletter-signup {
-    background-color: rgba(125, 120, 181, 0.08);
+    background-color: rgba(255, 140, 0, 0.12);
     border-radius: 6px;
     padding: 0.5rem;
     text-align: left;
@@ -1535,90 +1523,6 @@ p:has(+ .collapsible-section) {
   }
 }
 
-.newsletter-form .form-group {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 0.5rem 1rem;
-  border: var(--form-control-border);
-  border-radius: var(--form-control-radius);
-  font-size: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.newsletter-input:focus {
-  outline: none;
-  border-color: #7d78b5;
-  box-shadow: var(--form-control-focus-ring);
-}
-
-.newsletter-button {
-  padding: 0.5rem 1rem;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.newsletter-button:hover {
-  background-color: #2980b9;
-}
-
-.newsletter-button:active {
-  background-color: #2471a3;
-}
-
-.newsletter-message {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  text-align: center;
-  display: none;
-}
-
-.newsletter-message.success {
-  background-color: rgba(144, 238, 144, 0.25);
-  color: #2d5a2d;
-  border: 1px solid rgba(144, 238, 144, 0.5);
-}
-
-.newsletter-message.error {
-  background-color: rgba(255, 165, 0, 0.25);
-  color: #8b4513;
-  border: 1px solid rgba(255, 165, 0, 0.5);
-}
-
-/* Mobile form layout */
-@media (max-width: 500px) {
-  .newsletter-form .form-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .newsletter-input {
-    width: 100%;
-    min-width: unset;
-  }
-  
-  .newsletter-button {
-    width: auto;
-    align-self: flex-start;
-  }
-}
-
 /* Subscribe container follows same pattern as other post containers */
 
 .subscribe-cta-button {
@@ -1646,53 +1550,4 @@ p:has(+ .collapsible-section) {
   transform: translateY(0);
 }
 
-/* Page Subscribe CTA */
-.page-subscribe-cta {
-  background-color: rgba(125, 120, 181, 0.12);
-  border-radius: 8px;
-  padding: 2.5rem;
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 100%;
-}
-
-.page-subscribe-cta h2 {
-  margin: 0 0 1rem 0;
-  color: #7d78b5;
-  font-size: 1.75rem;
-  font-weight: 600;
-}
-
-.page-subscribe-cta p {
-  margin: 0 0 2rem 0;
-  color: #515151;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.page-subscribe-cta .newsletter-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* Mobile responsive for subscribe components */
-@media (max-width: 30em) {
-  .subscribe-prompt,
-  .page-subscribe-cta {
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-  }
-  
-  .subscribe-prompt h3 {
-    font-size: 1.25rem;
-  }
-  
-  .page-subscribe-cta h2 {
-    font-size: 1.5rem;
-  }
-  
-  .page-subscribe-cta p {
-    font-size: 1rem;
-  }
-}
 
