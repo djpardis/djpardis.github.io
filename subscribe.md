@@ -15,7 +15,7 @@ Subscribe via RSS to get new posts delivered directly to your reader (Feedly, Ne
 
 <a href="/atom.xml">djpardis.com/atom.xml</a>
 
-You can also follow me on <a href="https://medium.com/@djpardis/">Medium</a>.
+You can also follow the blog on <a href="https://medium.com/@djpardis/">Medium</a>.
 
 ### Looking for the newsletter?
 
