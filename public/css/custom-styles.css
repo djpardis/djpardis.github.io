@@ -233,6 +233,12 @@
   --form-control-border: 2px solid #e5e5e5;
   --form-control-radius: 4px;
   --form-control-focus-ring: 0 0 0 2px rgba(125, 120, 181, 0.1);
+  /* Post tables — same accent and neutrals as blockquotes, code chips, and content chrome */
+  --post-table-border-outer: #e0e0e0;
+  --post-table-border-row: #e5e5e5;
+  --post-table-header-bg: rgba(125, 120, 181, 0.1);
+  --post-table-header-rule: #7d78b5;
+  --post-table-hover-row: rgba(125, 120, 181, 0.07);
 }
 
 /* Caption styling - all patterns in one place */
@@ -1151,30 +1157,45 @@ p:has(+ .collapsible-section) {
   margin-bottom: 0;
 }
 
-/* Blog posts: tables (extends Poole base table rules) */
+/* Blog posts: tables — content width, centered, rules not a full grid (Poole uses width 100% + cell borders) */
+.container.content .post {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .post table {
-  margin: 1.25rem 0 1.5rem;
-  width: 100%;
+  margin: 1.25rem auto 1.5rem;
+  width: auto;
   max-width: 100%;
   border-collapse: collapse;
-  border: 1px solid #d0d7de;
+  border-spacing: 0;
+  border-style: none;
+  border-top: 1px solid var(--post-table-border-outer);
+  border-bottom: 1px solid var(--post-table-border-outer);
   font-size: 0.9375rem;
-  line-height: 1.45;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  line-height: 1.5;
+  box-shadow: none;
+  color: #454545;
 }
 
 .post table th,
 .post table td {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #e4e9ef;
+  padding: 0.55rem 1rem;
+  border-style: none;
+  border-bottom: 1px solid var(--post-table-border-row);
   vertical-align: middle;
 }
 
 .post table thead th {
   font-weight: 600;
   text-align: center;
-  background-color: #eef2f7;
-  border-bottom: 2px solid #c9d4e3;
+  color: #313131;
+  background-color: var(--post-table-header-bg);
+  border-bottom: 2px solid var(--post-table-header-rule);
+}
+
+.post table tbody tr:last-child td {
+  border-bottom-style: none;
 }
 
 .post table tbody td:first-child {
@@ -1186,12 +1207,14 @@ p:has(+ .collapsible-section) {
   font-variant-numeric: tabular-nums;
 }
 
-.post table tbody tr:nth-child(odd) td {
-  background-color: #f8fafc;
+/* Undo Poole zebra in posts so rows stay flat unless hovered */
+.post table tbody tr:nth-child(odd) td,
+.post table tbody tr:nth-child(odd) th {
+  background-color: transparent;
 }
 
-.post table tbody tr:nth-child(even) td {
-  background-color: #fff;
+.post table tbody tr:hover td {
+  background-color: var(--post-table-hover-row);
 }
 
 @media (max-width: 30em) {
@@ -1201,7 +1224,7 @@ p:has(+ .collapsible-section) {
 
   .post table th,
   .post table td {
-    padding: 0.4rem 0.5rem;
+    padding: 0.45rem 0.65rem;
   }
 }
 
