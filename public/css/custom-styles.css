@@ -1198,7 +1198,7 @@ p:has(+ .collapsible-section) {
   font-weight: 600;
   color: #7d78b5;
   opacity: 1;
-  margin-left: 0.2em;
+  margin-right: 0.2em;
   vertical-align: middle;
   line-height: 1;
 }
