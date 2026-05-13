@@ -239,6 +239,7 @@
   --post-table-header-bg: rgba(125, 120, 181, 0.1);
   --post-table-header-rule: #7d78b5;
   --post-table-hover-row: rgba(125, 120, 181, 0.07);
+  --post-table-inline-gutter: 1.5rem;
 }
 
 /* Caption styling - all patterns in one place */
@@ -1166,12 +1167,10 @@ p:has(+ .collapsible-section) {
 .post table {
   margin: 1.25rem auto 1.5rem;
   width: auto;
-  max-width: 100%;
+  max-width: calc(100% - var(--post-table-inline-gutter));
   border-collapse: collapse;
   border-spacing: 0;
-  border-style: none;
-  border-top: 1px solid var(--post-table-border-outer);
-  border-bottom: 1px solid var(--post-table-border-outer);
+  border: 1px solid var(--post-table-border-outer);
   font-size: 0.9375rem;
   line-height: 1.5;
   box-shadow: none;
@@ -1180,7 +1179,7 @@ p:has(+ .collapsible-section) {
 
 .post table th,
 .post table td {
-  padding: 0.55rem 1rem;
+  padding: 0.55rem 1.25rem;
   border-style: none;
   border-bottom: 1px solid var(--post-table-border-row);
   vertical-align: middle;
@@ -1220,11 +1219,12 @@ p:has(+ .collapsible-section) {
 @media (max-width: 30em) {
   .post table {
     font-size: 0.875rem;
+    max-width: calc(100% - 1rem);
   }
 
   .post table th,
   .post table td {
-    padding: 0.45rem 0.65rem;
+    padding: 0.45rem 0.85rem;
   }
 }
 
