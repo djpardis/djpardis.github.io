@@ -97,18 +97,26 @@ This transparency allowed decisions regarding players to be justified through ob
 
 While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics. 
 
-The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column. OBP ranks above batting average and home runs.
+The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column.
 
-| Stat | r² |
-| --- | --- |
-| Batting average (BA) | .672 |
-| On-base percentage (OBP) | .835 |
-| Slugging percentage (SLG) | .804 |
-| On-base plus slugging (OPS) | .900 |
-| Home runs (HR) | .542 |
-| Walks (BB) | .404 |
-| Strikeouts (SO) | .078 |
-| Stolen bases (SB) | .001 |
+<table>
+  <thead>
+    <tr><th>Stat</th><th>r²</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>On-base plus slugging (OPS)</td><td>.900</td></tr>
+    <tr>
+      <td style="background-color: rgba(125, 120, 181, 0.18); font-weight: 600;">On-base percentage (OBP)</td>
+      <td style="background-color: rgba(125, 120, 181, 0.18); font-weight: 600;">.835</td>
+    </tr>
+    <tr><td>Slugging percentage (SLG)</td><td>.804</td></tr>
+    <tr><td>Batting average (BA)</td><td>.672</td></tr>
+    <tr><td>Home runs (HR)</td><td>.542</td></tr>
+    <tr><td>Walks (BB)</td><td>.404</td></tr>
+    <tr><td>Strikeouts (SO)</td><td>.078</td></tr>
+    <tr><td>Stolen bases (SB)</td><td>.001</td></tr>
+  </tbody>
+</table>
 
 Separate work on Southeastern Conference team seasons from 2014 through 2017 still regresses team runs on team on-base percentage at the college level, which supports treating the link as more than a one-off MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
