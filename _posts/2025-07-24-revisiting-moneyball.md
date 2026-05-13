@@ -105,10 +105,7 @@ The table below reproduces r² from a Bucknell University paper on MLB run scori
   </thead>
   <tbody>
     <tr><td>On-base plus slugging (OPS)</td><td>.900</td></tr>
-    <tr>
-      <td style="background-color: rgba(125, 120, 181, 0.18); font-weight: 600;">On-base percentage (OBP)</td>
-      <td style="background-color: rgba(125, 120, 181, 0.18); font-weight: 600;">.835</td>
-    </tr>
+    <tr><td><strong>On-base percentage (OBP)</strong></td><td><strong>.835</strong></td></tr>
     <tr><td>Slugging percentage (SLG)</td><td>.804</td></tr>
     <tr><td>Batting average (BA)</td><td>.672</td></tr>
     <tr><td>Home runs (HR)</td><td>.542</td></tr>
