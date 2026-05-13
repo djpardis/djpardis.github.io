@@ -1193,6 +1193,15 @@ p:has(+ .collapsible-section) {
   border-bottom: 2px solid var(--post-table-header-rule);
 }
 
+.post table thead th .post-table-sort-hint {
+  font-size: 0.62em;
+  font-weight: 500;
+  opacity: 0.42;
+  margin-left: 0.08em;
+  vertical-align: super;
+  line-height: 0;
+}
+
 .post table tbody tr:last-child td {
   border-bottom-style: none;
 }

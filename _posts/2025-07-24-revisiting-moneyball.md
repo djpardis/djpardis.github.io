@@ -101,7 +101,7 @@ The table below reproduces r² from a Bucknell University paper on MLB run scori
 
 <table>
   <thead>
-    <tr><th>Stat</th><th title="Rows ordered by this value, highest first">r² (sorted)</th></tr>
+    <tr><th>Stat</th><th title="Rows ordered by r², highest first">r²<sup class="post-table-sort-hint">↓</sup></th></tr>
   </thead>
   <tbody>
     <tr><td>On-base plus slugging (OPS)</td><td>.900</td></tr>
