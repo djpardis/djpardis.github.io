@@ -1151,6 +1151,13 @@ p:has(+ .collapsible-section) {
   margin-bottom: 0;
 }
 
+/* Blog posts: right-align last column in simple tables (e.g. stat + r²) for easier comparison */
+.post table th:last-child,
+.post table td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Mobile-only adjustments */
 @media (max-width: 30em) {
   body {

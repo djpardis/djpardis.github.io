@@ -97,18 +97,18 @@ This transparency allowed decisions regarding players to be justified through ob
 
 While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics. 
 
-The table below reproduces R² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column. OBP ranks above batting average and home runs.
+The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column. OBP ranks above batting average and home runs.
 
-| Stat | R² with runs per game |
+| Stat | r² with runs per game |
 | --- | --- |
-| Batting average | 0.672 |
-| On-base percentage | 0.835 |
-| Slugging percentage | 0.804 |
-| OPS | 0.900 |
-| Home runs | 0.542 |
-| Walks | 0.404 |
-| Strikeouts | 0.078 |
-| Stolen bases | 0.001 |
+| Batting average | .672 |
+| On-base percentage | .835 |
+| Slugging percentage | .804 |
+| OPS | .900 |
+| Home runs | .542 |
+| Walks | .404 |
+| Strikeouts | .078 |
+| Stolen bases | .001 |
 
 Separate work on Southeastern Conference team seasons from 2014 through 2017 still regresses team runs on team on-base percentage at the college level, which supports treating the link as more than a one-off MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
@@ -194,7 +194,7 @@ The statistical evidence supports this theory. Since the Wild Card era began in 
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 
-Academic analysis by Stanford <a href="#ref6">[6]</a> found no correlation between regular season and postseason performance (p-value: 0.6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" <a href="#ref7">[7]</a>.
+Academic analysis by Stanford <a href="#ref6">[6]</a> found no correlation between regular season and postseason performance (p = .6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" <a href="#ref7">[7]</a>.
 
 The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP, which is the cornerstone of their analytical advantage, declined 11% in the playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
 
