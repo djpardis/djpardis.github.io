@@ -99,9 +99,22 @@ While scouts focused on batting average, home runs, and RBIs, Beane recognized t
 
 The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column.
 
-<table>
+<table class="sortable" data-sort-default-col="2" data-sort-default-dir="desc">
   <thead>
-    <tr><th>Stat</th><th title="Rows ordered by r², highest first">r<sup>2</sup><span class="post-table-sort-hint" aria-hidden="true">↓</span></th></tr>
+    <tr>
+      <th scope="col" data-sort-type="text">
+        <button type="button" class="sort-table__btn" aria-label="Sort by statistic name">
+          <span class="sort-table__text">Stat</span>
+          <span class="sort-table__sort-icon" aria-hidden="true"></span>
+        </button>
+      </th>
+      <th scope="col" data-sort-type="number">
+        <button type="button" class="sort-table__btn" aria-label="Sort by r squared">
+          <span class="sort-table__text">r²</span>
+          <span class="sort-table__sort-icon" aria-hidden="true"></span>
+        </button>
+      </th>
+    </tr>
   </thead>
   <tbody>
     <tr><td>On-base plus slugging (OPS)</td><td>.900</td></tr>
