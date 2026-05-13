@@ -24,7 +24,7 @@ card_image: /files/pics/blog/2025/moneyball-card.jpg
 <li><a href="#understanding-moneyball">Understanding Moneyball</a>
   <ul>
     <li><a href="#the-2001-as-lost-significant-talent">The 2001 A's lost significant talent.</a></li>
-    <li><a href="#analytics-unlocks-transparent-decision-making">Analytics unlocks transparent decision-making.</a></li>
+    <li><a href="#analytics-unlocks-transparent-decision-making">The A's used analytics to unlock transparent decision-making.</a></li>
     <li><a href="#getting-on-base-was-undervalued">Getting on base was undervalued.</a></li>
     <li><a href="#scott-hatteberg-was-undervalued">Scott Hatteberg was undervalued.</a></li>
     <li><a href="#the-streak-was-historic-and-remarkable">The streak was historic and remarkable.</a></li>
@@ -87,7 +87,7 @@ Let's begin by discussing the book's central themes and what the author found in
 
 After losing MVP Jason Giambi (7-year, $120M), Johnny Damon (4-year, $31M), and closer Jason Isringhausen (4-year, $27M), totaling $31.6 million in annual value ($17.1M + $7.75M + $6.75M), the cash-strapped A's faced an impossible challenge with just a $41 million payroll. This is what made the season irresistible to Michael Lewis as he watched the A's replace these stars not with expensive equivalents, but with undervalued players.
 
-### [Analytics unlocks transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
+### [The A's used analytics to unlock transparent decision-making.](#table-of-contents) {#analytics-unlocks-transparent-decision-making}
 
 The A's GM, Billy Beane, working with statistician Paul DePodesta, used sabermetrics to challenge traditional scouting methods that relied on more subjective evaluations.
 
@@ -95,7 +95,22 @@ This transparency allowed decisions regarding players to be justified through ob
 
 ### [Getting on base was undervalued.](#table-of-contents) {#getting-on-base-was-undervalued}
 
-While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics <a href="#ref1">[1]</a><a href="#ref2">[2]</a>. 
+While scouts focused on batting average, home runs, and RBIs, Beane recognized that OBP had a stronger correlation with run production than any of the traditional metrics. 
+
+The table below reproduces R² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column. OBP ranks above batting average and home runs.
+
+| Stat | R² with runs per game |
+| --- | --- |
+| Batting average | 0.672 |
+| On-base percentage | 0.835 |
+| Slugging percentage | 0.804 |
+| OPS | 0.900 |
+| Home runs | 0.542 |
+| Walks | 0.404 |
+| Strikeouts | 0.078 |
+| Stolen bases | 0.001 |
+
+Separate work on Southeastern Conference team seasons from 2014 through 2017 still regresses team runs on team on-base percentage at the college level, which supports treating the link as more than a one-off MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
 The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.361 career OBP) and David Justice (.378 career OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
