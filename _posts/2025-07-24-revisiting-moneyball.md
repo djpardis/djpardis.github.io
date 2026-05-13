@@ -99,16 +99,16 @@ While scouts focused on batting average, home runs, and RBIs, Beane recognized t
 
 The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column. OBP ranks above batting average and home runs.
 
-| Stat | r² with runs per game |
+| Stat | r² |
 | --- | --- |
-| Batting average | .672 |
-| On-base percentage | .835 |
-| Slugging percentage | .804 |
-| OPS | .900 |
-| Home runs | .542 |
-| Walks | .404 |
-| Strikeouts | .078 |
-| Stolen bases | .001 |
+| Batting average (BA) | .672 |
+| On-base percentage (OBP) | .835 |
+| Slugging percentage (SLG) | .804 |
+| On-base plus slugging (OPS) | .900 |
+| Home runs (HR) | .542 |
+| Walks (BB) | .404 |
+| Strikeouts (SO) | .078 |
+| Stolen bases (SB) | .001 |
 
 Separate work on Southeastern Conference team seasons from 2014 through 2017 still regresses team runs on team on-base percentage at the college level, which supports treating the link as more than a one-off MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
