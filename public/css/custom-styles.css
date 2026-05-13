@@ -1196,7 +1196,8 @@ p:has(+ .collapsible-section) {
 .post table thead th .post-table-sort-hint {
   font-size: 1.05em;
   font-weight: 600;
-  opacity: 0.72;
+  color: #7d78b5;
+  opacity: 1;
   margin-left: 0.2em;
   vertical-align: middle;
   line-height: 1;
