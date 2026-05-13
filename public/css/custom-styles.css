@@ -1193,15 +1193,70 @@ p:has(+ .collapsible-section) {
   border-bottom: 2px solid var(--post-table-header-rule);
 }
 
-.post table thead th .post-table-sort-hint {
+/* Sortable tables: header buttons, sort indicator, focus ring */
+.post table.sortable thead th {
+  padding: 0;
+  vertical-align: middle;
+}
+
+.post table.sortable thead th .sort-table__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.35rem;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+}
+
+.post table.sortable thead th .sort-table__text {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.post table.sortable thead th .sort-table__text sup {
+  font-size: 0.88em;
+  vertical-align: 0.2em;
+}
+
+.post table.sortable thead th .sort-table__btn:hover {
+  background-color: rgba(125, 120, 181, 0.1);
+}
+
+.post table.sortable thead th .sort-table__btn:focus-visible {
+  outline: 2px solid #7d78b5;
+  outline-offset: 2px;
+}
+
+.post table.sortable thead th .sort-table__sort-icon {
+  flex-shrink: 0;
+  min-width: 1.1em;
   font-size: 1.05em;
   font-weight: 600;
   color: #7d78b5;
-  opacity: 1;
-  margin-left: 0.5rem;
-  margin-right: 0.1rem;
-  vertical-align: middle;
   line-height: 1;
+}
+
+.post table.sortable thead th .sort-table__text sup {
+  font-size: 0.75em;
 }
 
 .post table tbody tr:last-child td {
