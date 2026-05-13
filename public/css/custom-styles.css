@@ -1151,11 +1151,58 @@ p:has(+ .collapsible-section) {
   margin-bottom: 0;
 }
 
-/* Blog posts: right-align last column in simple tables (e.g. stat + r²) for easier comparison */
-.post table th:last-child,
-.post table td:last-child {
+/* Blog posts: tables (extends Poole base table rules) */
+.post table {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d0d7de;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.post table th,
+.post table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e4e9ef;
+  vertical-align: middle;
+}
+
+.post table thead th {
+  font-weight: 600;
+  text-align: center;
+  background-color: #eef2f7;
+  border-bottom: 2px solid #c9d4e3;
+}
+
+.post table tbody td:first-child {
+  text-align: left;
+}
+
+.post table tbody td:last-child {
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+.post table tbody tr:nth-child(odd) td {
+  background-color: #f8fafc;
+}
+
+.post table tbody tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+@media (max-width: 30em) {
+  .post table {
+    font-size: 0.875rem;
+  }
+
+  .post table th,
+  .post table td {
+    padding: 0.4rem 0.5rem;
+  }
 }
 
 /* Mobile-only adjustments */
