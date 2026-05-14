@@ -25,17 +25,19 @@ At first, I tried to implement magic links with Windsurf. Given that auth flows 
 
 ## Replit vs Windsurf: technical comparison
 
-### Authentication and session management
+### Replit features
+
+#### Authentication and session management
 
 Replit's integrated authentication blueprints provide pre-configured [Passport.js](https://www.passportjs.org/){:target="_blank"} setups, session store integration with PostgreSQL, and automatic HTTPS for secure cookie handling. Magic link authentication was implemented in 15 minutes compared to hours of OAuth configuration debugging.
 
-### Database integration
+#### Database integration
 
 Replit enables instant PostgreSQL provisioning through [Neon](https://neon.tech){:target="_blank"}. Connection strings, pooling, and SSL certificates are handled automatically. [Drizzle ORM](https://drizzleorm.com){:target="_blank"} integration works seamlessly with database push deployments without migration file management.
 
 Update (July 2025): Replit has since launched [separate development and production databases](https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases){:target="_blank"}, which makes the platform more suitable for developing real-world applications. This feature enables safer iteration by isolating development changes from live customer data.
 
-### Deployment infrastructure
+#### Deployment infrastructure
 
 The platform handles load balancing and scaling automatically. 
 
@@ -45,7 +47,7 @@ Git operations lack the intuitiveness of terminal workflows. Even basic branchin
 
 The container-based environment limits access to lower-level system functions and file operations, which can make debugging more challenging when compared to local development.
 
-### Windsurf trade-offs
+### Windsurf comparison
 
 Windsurf provides control with traditional Git workflows, intuitive file system access, and familiar terminal operations. However, the setup overhead for authentication, databases, and deployment significantly slows initial development velocity compared to Replit's integrated infrastructure.
 
