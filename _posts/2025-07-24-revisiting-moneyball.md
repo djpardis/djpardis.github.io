@@ -225,7 +225,7 @@ The A's story resonated because it featured underdogs using intelligence and cre
 ![Baseball romance](/files/pics/blog/2025/romantic.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *From [here](https://x.com/MLB/status/1914109400413016515){:target="_blank"}.*
 
-Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball.
+Now that we've gone through the book's central themes, let's discuss how they hold up. In particular, let's examine them through the lens of criticisms of Moneyball and whether those criticisms are warranted.
 
 ## [Critiquing Moneyball](#table-of-contents) {#critiquing-moneyball}
 
@@ -245,7 +245,9 @@ Oakland executives Billy Beane, David Forst, and scout Ron Washington later ackn
 
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
-The lesson of Moneyball is not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
+Oakland won 103 games in 2002 with the third-lowest payroll in baseball. Sports economists have argued that *Moneyball* became a cultural reference point in arguments about spending restraint <a id="ref11-back" href="#ref11">[11]</a>. The critique is that the story made low payrolls look like the intelligent default rather than a limitation.
+
+However, the actual lesson of Moneyball for the league was not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
 
 After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Billy Beane as a GM with a five-year, $12.5M contract that would have made him the highest paid GM in baseball history. The offer was a testament to how highly Henry and then-CEO Larry Lucchino regarded Beane's analytical approach.
 
@@ -265,7 +267,9 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 
 ### [Moneyball promotes the use of analytics in baseball, thus ruining the sport.](#table-of-contents) {#moneyball-promotes-analytics}
 
-The analytics revolution was already underway before Moneyball. The book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
+The critique is that *Moneyball* helped mainstream a front-office style tied to more strikeouts, walks, and home runs, fewer balls in play, longer games, and shifts that many fans experience as less action on the field. Figures inside that movement, including Theo Epstein and Bill James, have said publicly that analytics-driven optimization has hurt the game's aesthetic.
+
+It's important to note that the analytics revolution was already underway before Moneyball. The book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
 
 To understand baseball's numerical history, you can go back even further. Henry Chadwick, an English cricket lover enchanted by the new American sport, created the first box score for a Brooklyn Excelsiors game in 1859, establishing the systematic tracking that made all future analytics possible.
 
@@ -288,10 +292,11 @@ Analytics improved baseball's efficiency but arguably damaged its entertainment 
 
 ### [Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.](#table-of-contents) {#moneyball-suggests-baseball-is-unfair}
 
-Despite conventional wisdom linking salary caps to competitive balance, the data shows that MLB's luxury tax system has produced championship diversity equal to hard-cap league. Since 1995, counting 30 championship years, 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
+The critique is that baseball rewards money in a way fans experience as unfair, with postseason outcomes and playoff gates increasingly correlated with payroll rank in recent years. 
 
+However, despite conventional wisdom linking salary caps to competitive balance, the data shows that MLB's luxury tax system has produced championship diversity equal to hard-cap leagues. Since 1995, counting 30 championship years, 16 different winners each in MLB, NFL, and NHL, with only the NBA lagging at 13 unique champions. This challenges the assumption that financial constraints alone determine competitive outcomes.
 
-However, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
+Having said that, recent trends suggest MLB's historical parity may be eroding under financial pressure. From 2015–2024, eight of ten World Series champions ranked in the top 10 for payroll, with only the 2015 Royals and 2017 Astros winning from outside the top half of spending teams <a href="#ref9">[9]</a>. Meanwhile, in 2024, all six highest-spending teams made the playoffs, while the Dodgers' $327 million payroll advantage over Miami represents the largest spending gap in modern baseball history.
 
 Despite this, playoff access remains remarkably broad as 28 of 30 MLB teams (93.3%) have made the playoffs since 2015, compared to 28 of 32 NFL teams (87.5%).
 
@@ -338,6 +343,8 @@ Ultimately, it's hard to overlook the attention that Moneyball has brought to ba
 <a id="ref9" href="#ref9-back">[9]</a> Cronkite News - "How big MLB payrolls affect postseason success" <a href="https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/" target="_blank">https://cronkitenews.azpbs.org/2024/11/12/big-mlb-payrolls-affect-postseason-success/</a>
 
 <a id="ref10" href="#ref10-back">[10]</a> The Athletic - "NFL is the parity league? MLB would like a word" <a href="https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/" target="_blank">https://www.nytimes.com/athletic/6116536/2025/02/06/mlb-nfl-parity-super-bowl-world-series/</a>
+
+<a id="ref11" href="#ref11-back">[11]</a> Matheson, Victor. Sportico. "Study Table: Blame Moneyball for Major League Labor Strife." Available at: <a href="https://www.sportico.com/leagues/baseball/2022/study-table-blame-moneyball-1234668622/" target="_blank">https://www.sportico.com/leagues/baseball/2022/study-table-blame-moneyball-1234668622/</a>
 
 <div class="crosspost-container post-container">
 This post was originally published on <a href="https://djpardis.medium.com/revisiting-moneyball-074fc2435b07" target="_blank" rel="noopener">Medium</a> and is cross-posted here.
