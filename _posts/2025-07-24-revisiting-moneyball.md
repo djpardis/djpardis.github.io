@@ -220,7 +220,7 @@ This randomness explains why sabermetricians often view regular-season performan
 
 ### [It's hard not to be romantic about baseball.](#table-of-contents) {#its-hard-not-to-be-romantic-about-baseball}
 
-The A's story resonated because it featured underdogs using intelligence and creativity to compete against overwhelming financial disadvantages. The story showed ordinary players achieving extraordinary things when given proper opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
+The A's story showed ordinary players achieving extraordinary things when given the opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
 ![Baseball romance](/files/pics/blog/2025/romantic.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *From [here](https://x.com/MLB/status/1914109400413016515){:target="_blank"}.*
@@ -267,7 +267,7 @@ The criticisms tend to confuse cause and effect. The analytical methods were in 
 
 ### [Moneyball promotes the use of analytics in baseball, thus ruining the sport.](#table-of-contents) {#moneyball-promotes-analytics}
 
-The critique is that *Moneyball* helped mainstream a front-office style tied to more strikeouts, walks, and home runs, fewer balls in play, longer games, and shifts that many fans experience as less action on the field. Figures inside that movement, including Theo Epstein and Bill James, have said publicly that analytics-driven optimization has hurt the game's aesthetic.
+The critique is that *Moneyball* helped normalize a front-office style tied to more strikeouts, walks, and home runs, fewer balls in play, longer games, and shifts that many fans experience as less action on the field. Figures inside that movement, including Theo Epstein and Bill James, have said publicly that analytics-driven optimization has hurt the game's aesthetic.
 
 It's important to note that the analytics revolution was already underway before Moneyball. The book brought it into mainstream consciousness rather than creating it. Allan Roth served as baseball's first team statistician with the Brooklyn Dodgers from 1947–1964, tracking advanced metrics like OBP and developing situational statistics. Earnshaw Cook's 1964 book "Percentage Baseball" was the first full-length sabermetrics work, while Bill James began publishing Baseball Abstracts in 1977, coining "sabermetrics" in 1980.
 
