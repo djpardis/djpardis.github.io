@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Pardis Noorzad | Data, AI, and software
+title: Pardis Noorzad
 permalink: /
-description: Pardis is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises. Previously led data science at Carbon Health and Twitter.
+description: Pardis Noorzad is an engineer and researcher. She is the founder of General Folders.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data transfer, secure data sharing
 tags: [data, data science, management, technology, software, product, cloud infrastructure]
 canonical_url: https://djpardis.com/
 ---
 
 {% capture hero_text %}
-<p>Hello! 👋 I'm an engineer and a researcher. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I built an identity- and policy-aware transport layer for B2B data, replacing hacky SFTP, email, and ad-hoc pipelines. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
+<p>I'm an engineer and a researcher. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I built an identity- and policy-aware transport layer for B2B data, replacing hacky SFTP, email, and ad-hoc pipelines. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 

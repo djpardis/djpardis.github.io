@@ -2,9 +2,9 @@
 # permalink: /:year/:month/:day/:title/
 
 # Setup
-title:               "Pardis"
+title:               "Pardis Noorzad"
 tagline:             'Data Science & Technology Leadership'
-description:         'Pardis is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises.'
+description:         'Pardis Noorzad is an engineer and researcher. She is the founder of General Folders.'
 baseurl:             ""
 url:                 "https://djpardis.com"
 logo:                "/public/favicon/favicon.svg"
