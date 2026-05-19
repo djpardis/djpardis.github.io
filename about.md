@@ -22,14 +22,14 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/newsletter-card.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Newsletter service</span>
+        <span class="link-card-title">newsletter</span>
         <span class="link-card-domain">github.com</span>
       </div>
     </a>
     <a class="link-card" href="https://github.com/djpardis/form" target="_blank">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/form-card.jpg')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">Backend for embedded forms</span>
+        <span class="link-card-title">form</span>
         <span class="link-card-domain">github.com</span>
       </div>
     </a>
