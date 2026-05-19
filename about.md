@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Pardis
+title: Pardis Noorzad | Data, AI, and software
 permalink: /
 description: Pardis is the founder and CEO of General Folders, pioneering secure data transfer solutions for enterprises. Previously led data science at Carbon Health and Twitter.
 keywords: pardis noorzad, djpardis, general folders, data science, ceo founder, techstars, carbon health, twitter, data transfer, secure data sharing
@@ -9,14 +9,40 @@ canonical_url: https://djpardis.com/
 ---
 
 {% capture hero_text %}
-<p>Hello! 👋 I'm an engineer and a researcher. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I am building an identity- and policy-aware transport layer for B2B data, replacing hacky SFTP, email, and ad-hoc pipelines. I built <a href="https://thedataroom.app" target="_blank">The Data Room App</a> for fundraising. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped scalable AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
+<p>Hello! 👋 I'm an engineer and a researcher. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I built an identity- and policy-aware transport layer for B2B data, replacing hacky SFTP, email, and ad-hoc pipelines. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- <strong><a href="{{ site.baseurl }}/blog/">Data and AI blog</a></strong> — Research, ongoing projects, and updates
+- **[Miscellany](https://github.com/djpardis){:target="_blank"}** — A few useful tools and utilities
+
+  <div class="link-cards">
+    <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/newsletter-card.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Newsletter service</span>
+        <span class="link-card-domain">github.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="https://github.com/djpardis/form" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/form-card.jpg')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">Backend for embedded forms</span>
+        <span class="link-card-domain">github.com</span>
+      </div>
+    </a>
+    <a class="link-card" href="https://thedataroom.app" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/data-room-app-card.png')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">The Data Room App</span>
+        <span class="link-card-domain">thedataroom.app</span>
+      </div>
+    </a>
+  </div>
+
+- <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Research, ongoing projects, and updates
 
   <div class="link-cards">
     {% for item in site.posts limit:3 %}
