@@ -42,7 +42,7 @@ canonical_url: https://djpardis.com/
     </a>
   </div>
 
-- <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Research, ongoing projects, and updates
+- <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Research and ongoing projects
 
   <div class="link-cards">
     {% for item in site.posts limit:3 %}
