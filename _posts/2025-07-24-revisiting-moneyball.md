@@ -5,8 +5,7 @@ subtitle: "Data, sports, payrolls, and memes"
 description: "Data, sports, payrolls, and memes - examining the enduring fascination with Oakland's 2002 season and the analytics revolution in baseball"
 keywords: moneyball, baseball analytics, sabermetrics, oakland athletics, billy beane, data science, sports analytics
 date: 2025-07-24
-image: /files/pics/blog/2025/moneyball.jpg
-card_image: /files/pics/blog/2025/moneyball-card.jpg
+image: /files/pics/blog/2025/oakland1.jpg
 ---
 
 <div class="update-container post-container">

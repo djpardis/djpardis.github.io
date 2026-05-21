@@ -61,6 +61,13 @@
   <!-- Title: exact for homepage and plain_title pages, "X by Pardis" for all other pages and posts -->
   {% if page.url == '/' or page.plain_title %}{% assign page_title_full = page.title %}{% elsif page.title %}{% assign page_title_full = page.title | append: ' by Pardis' %}{% else %}{% assign page_title_full = site.title %}{% endif %}
   <title>{{ page_title_full }}</title>
+  {% assign default_share_image = '/files/pics/pages/profile%20pic%203.jpg' %}
+  {% assign share_image = page.image | default: default_share_image %}
+  {% if share_image contains '://' %}
+  {% assign share_image_url = share_image %}
+  {% else %}
+  {% assign share_image_url = share_image | absolute_url %}
+  {% endif %}
   
   <!-- Meta description. Posts never use site description so SERPs show post-specific text. -->
   <meta name="description" content="{% if page.layout == 'post' %}{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | truncate: 160 }}{% endif %}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -78,21 +85,14 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}/files/pics/pages/profile%20pic%203.jpg">
-  {% endif %}
+  <meta property="og:image" content="{{ share_image_url }}">
+  <meta property="og:image:secure_url" content="{{ share_image_url }}">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page_title_full }}">
   <meta name="twitter:description" content="{% if page.layout == 'post' %}{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | truncate: 160 }}{% endif %}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.image %}
-  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
-  {% else %}
-  <meta name="twitter:image" content="{{ site.url }}/files/pics/pages/profile%20pic%203.jpg">
-  {% endif %}
+  <meta name="twitter:image" content="{{ share_image_url }}">
 
   <!-- Additional Person schema for richer profile data -->
   <script type="application/ld+json">
@@ -122,6 +122,7 @@
     "headline": "{{ page.title }}",
     "description": "{{ post_desc | replace: '"', '\"' }}",
     "url": "{{ site.url }}{{ page.url }}",
+    "image": "{{ share_image_url }}",
     "datePublished": "{{ page.date | date_to_xmlschema }}",
     "dateModified": "{{ page.date | date_to_xmlschema }}",
     "author": {

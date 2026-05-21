@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 
 # Disallow deprecated pages (removed, 404)
-Disallow: /gigs.html
 Disallow: /djpardis-request.html
 
 # Disallow utility files that can look like "content" in SERPs
