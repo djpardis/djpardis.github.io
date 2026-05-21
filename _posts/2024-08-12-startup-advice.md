@@ -4,6 +4,7 @@ title: 'Startup advice'
 subtitle: 'Some lessons I learned while building General Folders'
 description: 'Sharing key lessons and insights gained from building General Folders'
 keywords: startup advice, General Folders, entrepreneurship, company building, lessons learned
+image: https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg
 ---
 
 ![From my time at Techstars SDSU](https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg)

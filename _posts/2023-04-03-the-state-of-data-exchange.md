@@ -6,6 +6,7 @@ description: "A survey of how enterprises share and transfer data with business 
 date: 2023-04-03
 categories: [data-science, data-engineering, business]
 tags: [data-exchange, data-transfer, data-sharing, partnerships, infrastructure]
+image: /files/pics/blog/2023/sftp-pipeline.png
 ---
 
 <div class="toc-container post-container">

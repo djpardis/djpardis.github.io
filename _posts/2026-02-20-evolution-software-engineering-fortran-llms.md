@@ -6,7 +6,6 @@ description: "Tracing the evolution of software engineering from FORTRAN to LLMs
 keywords: software engineering, programming evolution, FORTRAN, LLMs, AI coding, code generation, programming milestones
 date: 2026-02-20
 image: /files/pics/blog/2026/camera%20obscura.jpg
-card_image: /files/pics/blog/2026/camera-obscura-card.jpg
 math: true
 ---
 
