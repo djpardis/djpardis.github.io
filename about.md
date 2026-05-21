@@ -46,9 +46,14 @@ canonical_url: https://djpardis.com/
 
   <div class="link-cards">
     {% for item in site.posts limit:3 %}
-    {% assign card_thumb = item.image | default: item.card_image %}
+    {% assign card_thumb = item.image %}
+    {% if card_thumb contains '://' %}
+    {% assign card_thumb_url = card_thumb %}
+    {% else %}
+    {% assign card_thumb_url = card_thumb | relative_url %}
+    {% endif %}
     <a class="link-card" href="{{ item.url | relative_url }}">
-      <div class="link-card-image"{% if card_thumb %} style="background-image: url('{{ card_thumb | relative_url }}')"{% endif %}></div>
+      <div class="link-card-image"{% if card_thumb %} style="background-image: url('{{ card_thumb_url }}')"{% endif %}></div>
       <div class="link-card-body">
         <span class="link-card-title">{{ item.title }}</span>
         <span class="link-card-domain">djpardis.com</span>
