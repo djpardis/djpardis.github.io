@@ -108,7 +108,7 @@ Next up, stay tuned as I share some of my [explorations](https://github.com/djpa
 
 *If you have any feedback or advice, please let me know via [X](https://x.com/djpardis){:target="_blank"}, [Bluesky](https://bsky.app/profile/djpardis.com){:target="_blank"}, or [Medium](https://djpardis.medium.com/vibe-coding-a-data-room-app-2858246857e9){:target="_blank"}. I'm looking forward to hearing from you.*
 
-### References
+## References
 
 <a id="ref1" href="#ref1-back">[1]</a> Papermark. (2023). ["Best virtual data room providers comparison"](https://www.papermark.com/virtual-data-room-providers).
 

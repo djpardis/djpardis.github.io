@@ -526,12 +526,12 @@ iframe {
   margin-right: 0;
 }
 .toc-container li.toc-era .collapsible-section[open] summary::before {
-  content: "∨";
+  content: "\2228"; /* ∨ */
 }
 
 /* Bullets for all levels */
 .toc-container li::before {
-  content: "×";
+  content: "\00D7"; /* × */
   color: #888;
   position: absolute;
   left: -1rem;
@@ -541,12 +541,12 @@ iframe {
 
 /* Second level bullets */
 .toc-container ul ul li::before {
-  content: "÷";
+  content: "\00F7"; /* ÷ */
 }
 
 /* Third level bullets */
 .toc-container ul ul ul li::before {
-  content: "⊃";
+  content: "\2283"; /* ⊃ */
 }
 
 /* Links - force normal word wrapping with high specificity */
@@ -1032,7 +1032,7 @@ body .wrap .container.content {
 }
 
 .page li::before {
-  content: "×";
+  content: "\00D7"; /* × */
   color: #888;
   position: absolute;
   left: -1rem;
