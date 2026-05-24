@@ -1694,3 +1694,96 @@ p:has(+ .collapsible-section) {
 }
 
 
+/* ─── Sticky right-hand TOC ──────────────────────────────────────────────── */
+
+#sticky-toc {
+  display: none;
+  position: fixed;
+  left: calc(50% + 22.5rem);
+  width: 14rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 100;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid #7d78b5;
+  border-right: 2px solid #7d78b5;
+  padding: 0.6rem 0.75rem;
+}
+
+#sticky-toc::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 70rem) {
+  #sticky-toc {
+    display: block;
+  }
+
+  .toc-container {
+    display: none;
+  }
+}
+
+.sticky-toc-title {
+  color: #7d78b5;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+#sticky-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sticky-toc li {
+  margin: 0;
+}
+
+#sticky-toc a {
+  color: #7d78b5;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: block;
+  padding: 0.1rem 0.25rem;
+  border-radius: 3px;
+  transition: background-color 0.12s;
+}
+
+#sticky-toc a:hover {
+  text-decoration: none;
+  background-color: #FFFF99;
+}
+
+#sticky-toc a.active {
+  background-color: #FFFF99;
+}
+
+#sticky-toc a.stoc-era-label {
+  font-weight: 500;
+}
+
+/* Subsections: hidden until parent section is active */
+#sticky-toc .sticky-toc-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+#sticky-toc .sticky-toc-sub.open {
+  max-height: 60rem;
+}
+
+#sticky-toc .sticky-toc-sub a {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+

@@ -9,13 +9,6 @@ image: /files/pics/blog/2026/camera%20obscura.jpg
 math: true
 ---
 
-<div class="note-container preprint-container post-container">
-<strong>Preprint.</strong> We're planning a published edition and would be grateful for your help. If you'd like to be a reviewer, please <a href="{{ site.baseurl }}/reviewer-signup/">sign up here</a>. 
-<br>
-<br>
-Click to download the <a href="{{ site.baseurl }}/files/papers/Noorzad2026.pdf">PDF version</a>. 
-</div>
-
 <div class="note-container timeline-link-container post-container">
 <strong>Interactive.</strong> Explore the evolution of software engineering in a visual, scrollable timeline with eras and milestones from the article.
 <br>
