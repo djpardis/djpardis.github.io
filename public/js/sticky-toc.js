@@ -3,9 +3,115 @@
   if (!postEl) return;
 
   var inlineTocUl = document.querySelector('.toc-container > ul');
-  if (!inlineTocUl) return;
 
-  // Build nav
+  // ── Build TOC entries from inline TOC or from headings ──────────────────
+  // Entry shape: { label, href, children: [{label, href}], isGroup }
+
+  var entries = [];
+
+  if (inlineTocUl) {
+    // Mirror the hand-authored inline TOC structure
+    Array.from(inlineTocUl.children).forEach(function (sourceLi) {
+      if (sourceLi.classList.contains('toc-era')) {
+        var summaryA = sourceLi.querySelector('summary a');
+        var sourceSubUl = sourceLi.querySelector('ul');
+        if (!summaryA) return;
+        var children = [];
+        if (sourceSubUl) {
+          Array.from(sourceSubUl.children).forEach(function (subLi) {
+            var a = subLi.querySelector('a');
+            if (a) children.push({ label: a.textContent.trim(), href: a.getAttribute('href') });
+          });
+        }
+        var firstHref = children.length ? children[0].href : summaryA.getAttribute('href');
+        entries.push({ label: summaryA.textContent.trim(), href: firstHref, children: children, isGroup: true });
+      } else {
+        var sourceA = sourceLi.querySelector('a');
+        if (!sourceA) return;
+        var children = [];
+        var nestedUl = sourceLi.querySelector('ul');
+        if (nestedUl) {
+          Array.from(nestedUl.children).forEach(function (subLi) {
+            var a = subLi.querySelector('a');
+            if (a) children.push({ label: a.textContent.trim(), href: a.getAttribute('href') });
+          });
+        }
+        entries.push({ label: sourceA.textContent.trim(), href: sourceA.getAttribute('href'), children: children, isGroup: false });
+      }
+    });
+  } else {
+    // Fallback: scan h2[id] headings (and nested h3s) from the post
+    var allH = Array.from(postEl.querySelectorAll('h2[id], h3[id]')).filter(function (h) {
+      return !h.classList.contains('post-subtitle');
+    });
+    var h2s = allH.filter(function (h) { return h.tagName === 'H2'; });
+    if (h2s.length < 2) return;
+
+    h2s.forEach(function (h2, i) {
+      var nextH2 = h2s[i + 1];
+      var h3s = allH.filter(function (h) {
+        if (h.tagName !== 'H3') return false;
+        if (!(h2.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING)) return false;
+        if (nextH2 && !(nextH2.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_PRECEDING)) return false;
+        return true;
+      });
+      entries.push({
+        label: h2.textContent.trim(),
+        href: '#' + h2.id,
+        children: h3s.map(function (h3) { return { label: h3.textContent.trim(), href: '#' + h3.id }; }),
+        isGroup: false
+      });
+    });
+
+    // Inject inline TOC for mobile (hidden on desktop via CSS)
+    injectInlineToc(entries);
+  }
+
+  if (entries.length < 2) return;
+
+  // ── Inject inline TOC for posts that don't have one ─────────────────────
+  function injectInlineToc(entries) {
+    var wrap = document.createElement('div');
+    wrap.className = 'toc-container post-container';
+
+    var h2 = document.createElement('h2');
+    h2.id = 'table-of-contents';
+    h2.textContent = 'Table of contents';
+    wrap.appendChild(h2);
+
+    var ul = document.createElement('ul');
+    entries.forEach(function (entry) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = entry.href;
+      a.textContent = entry.label;
+      li.appendChild(a);
+      if (entry.children.length) {
+        var subUl = document.createElement('ul');
+        entry.children.forEach(function (child) {
+          var subLi = document.createElement('li');
+          var subA = document.createElement('a');
+          subA.href = child.href;
+          subA.textContent = child.label;
+          subLi.appendChild(subA);
+          subUl.appendChild(subLi);
+        });
+        li.appendChild(subUl);
+      }
+      ul.appendChild(li);
+    });
+    wrap.appendChild(ul);
+
+    // Insert before the first h2 in the post
+    var firstH2 = postEl.querySelector('h2');
+    if (firstH2) {
+      postEl.insertBefore(wrap, firstH2);
+    } else {
+      postEl.prepend(wrap);
+    }
+  }
+
+  // ── Build sticky TOC nav ─────────────────────────────────────────────────
   var nav = document.createElement('nav');
   nav.id = 'sticky-toc';
   nav.setAttribute('aria-label', 'Table of contents');
@@ -15,8 +121,7 @@
   titleEl.textContent = 'Table of contents';
   nav.appendChild(titleEl);
 
-  // allLinks: [{el, href, parentLi}]
-  // parentLi is the top-level <li> that owns a .sticky-toc-sub (so we can expand it)
+  // allLinks: [{el, href, parentLi, isGroupLabel}]
   var allLinks = [];
 
   function makeLink(href, text) {
@@ -27,93 +132,49 @@
   }
 
   var ul = document.createElement('ul');
-
-  Array.from(inlineTocUl.children).forEach(function (sourceLi) {
+  entries.forEach(function (entry) {
     var li = document.createElement('li');
+    var a = makeLink(entry.href, entry.label);
+    if (entry.isGroup) a.className = 'stoc-era-label';
+    li.appendChild(a);
 
-    if (sourceLi.classList.contains('toc-era')) {
-      // Era group: <details><summary><a>label</a></summary><ul>...</ul></details>
-      var summaryA = sourceLi.querySelector('summary a');
-      var sourceSubUl = sourceLi.querySelector('ul');
-      if (!summaryA) return;
-
-      // Era label links to the first sub-item target
-      var firstSubA = sourceSubUl ? sourceSubUl.querySelector('a') : null;
-      var labelHref = firstSubA ? firstSubA.getAttribute('href') : summaryA.getAttribute('href');
-      var labelA = makeLink(labelHref, summaryA.textContent.trim());
-      labelA.className = 'stoc-era-label';
-      li.appendChild(labelA);
-
-      if (sourceSubUl && sourceSubUl.children.length > 0) {
-        var subUl = document.createElement('ul');
-        subUl.className = 'sticky-toc-sub';
-        Array.from(sourceSubUl.children).forEach(function (subSourceLi) {
-          var subA = subSourceLi.querySelector('a');
-          if (!subA) return;
-          var subLi = document.createElement('li');
-          var a = makeLink(subA.getAttribute('href'), subA.textContent.trim());
-          subLi.appendChild(a);
-          subUl.appendChild(subLi);
-          allLinks.push({ el: a, href: a.getAttribute('href'), parentLi: li });
-        });
-        li.appendChild(subUl);
-        // Also let the era label open its group
-        allLinks.push({ el: labelA, href: labelHref, parentLi: li, isGroupLabel: true });
-      }
-
+    if (entry.children.length) {
+      var subUl = document.createElement('ul');
+      subUl.className = 'sticky-toc-sub';
+      entry.children.forEach(function (child) {
+        var subLi = document.createElement('li');
+        var subA = makeLink(child.href, child.label);
+        subLi.appendChild(subA);
+        subUl.appendChild(subLi);
+        allLinks.push({ el: subA, href: child.href, parentLi: li });
+      });
+      li.appendChild(subUl);
+      allLinks.push({ el: a, href: entry.href, parentLi: li, isGroupLabel: true });
     } else {
-      // Regular item — may have nested <ul> (e.g. Moneyball h3s)
-      var sourceA = sourceLi.querySelector('a');
-      if (!sourceA) return;
-      var a = makeLink(sourceA.getAttribute('href'), sourceA.textContent.trim());
-      li.appendChild(a);
-
-      var sourceSubUl = sourceLi.querySelector('ul');
-      if (sourceSubUl && sourceSubUl.children.length > 0) {
-        var subUl = document.createElement('ul');
-        subUl.className = 'sticky-toc-sub';
-        Array.from(sourceSubUl.children).forEach(function (subSourceLi) {
-          var subA = subSourceLi.querySelector('a');
-          if (!subA) return;
-          var subLi = document.createElement('li');
-          var subANew = makeLink(subA.getAttribute('href'), subA.textContent.trim());
-          subLi.appendChild(subANew);
-          subUl.appendChild(subLi);
-          allLinks.push({ el: subANew, href: subANew.getAttribute('href'), parentLi: li });
-        });
-        li.appendChild(subUl);
-        allLinks.push({ el: a, href: a.getAttribute('href'), parentLi: li, isGroupLabel: true });
-      } else {
-        allLinks.push({ el: a, href: a.getAttribute('href'), parentLi: null });
-      }
+      allLinks.push({ el: a, href: entry.href, parentLi: null });
     }
 
     ul.appendChild(li);
   });
-
   nav.appendChild(ul);
   document.body.appendChild(nav);
 
-  // Position: start at post top, slide up as user scrolls
+  // ── Position: start at post top, slide up as user scrolls ───────────────
   var contentEl = document.querySelector('.container.content');
   var postTopOffset = contentEl ? contentEl.getBoundingClientRect().top + window.scrollY : 80;
-  var minTop = 24;
   function positionToc() {
-    nav.style.top = Math.max(minTop, postTopOffset - window.scrollY) + 'px';
+    nav.style.top = Math.max(24, postTopOffset - window.scrollY) + 'px';
   }
   window.addEventListener('scroll', positionToc, { passive: true });
   positionToc();
 
-  // Build id → element map for all tracked hrefs
+  // ── Scrollspy ────────────────────────────────────────────────────────────
   var idToEl = {};
   allLinks.forEach(function (entry) {
     var id = entry.href.replace(/^#/, '');
-    if (!idToEl[id]) {
-      idToEl[id] = document.getElementById(id);
-    }
+    if (!idToEl[id]) idToEl[id] = document.getElementById(id);
   });
 
-  // Ordered list of tracked headings for scrollspy (in DOM order)
   var orderedLinks = allLinks.slice().sort(function (a, b) {
     var elA = idToEl[a.href.replace(/^#/, '')];
     var elB = idToEl[b.href.replace(/^#/, '')];
@@ -124,27 +185,18 @@
   var lastActiveLi = null;
 
   function updateActive() {
-    var offset = 90;
     var active = null;
     for (var i = 0; i < orderedLinks.length; i++) {
       var entry = orderedLinks[i];
       var el = idToEl[entry.href.replace(/^#/, '')];
-      if (el && el.getBoundingClientRect().top <= offset) {
-        active = entry;
-      }
+      if (el && el.getBoundingClientRect().top <= 90) active = entry;
     }
 
-    // Clear all active states
     allLinks.forEach(function (e) { e.el.classList.remove('active'); });
-
     if (!active) return;
 
-    // Highlight the active link (skip era/group labels — highlight their sub-item instead)
-    if (!active.isGroupLabel) {
-      active.el.classList.add('active');
-    }
+    if (!active.isGroupLabel) active.el.classList.add('active');
 
-    // Expand the right sub-ul, collapse others
     var activeLi = active.parentLi;
     if (activeLi !== lastActiveLi) {
       lastActiveLi = activeLi;
@@ -153,9 +205,7 @@
       });
     }
 
-    // Keep active link visible in the scrollable TOC
-    var activeEl = active.el;
-    var linkTop = activeEl.offsetTop;
+    var linkTop = active.el.offsetTop;
     var navHeight = nav.clientHeight;
     if (linkTop < nav.scrollTop + 32 || linkTop > nav.scrollTop + navHeight - 48) {
       nav.scrollTop = linkTop - navHeight / 2;
