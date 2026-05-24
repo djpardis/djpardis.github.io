@@ -20,25 +20,31 @@ image: /files/pics/blog/2025/oakland1.jpg
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#understanding-moneyball">Understanding Moneyball</a>
-  <ul>
-    <li><a href="#the-2001-as-lost-significant-talent">The 2001 A's lost significant talent.</a></li>
-    <li><a href="#analytics-unlocks-transparent-decision-making">The A's used analytics to unlock transparent decision-making.</a></li>
-    <li><a href="#getting-on-base-was-undervalued">Getting on base was undervalued.</a></li>
-    <li><a href="#scott-hatteberg-was-undervalued">Scott Hatteberg was undervalued.</a></li>
-    <li><a href="#the-streak-was-historic-and-remarkable">The streak was historic and remarkable.</a></li>
-    <li><a href="#you-can-build-a-player-in-aggregate">You can build a player in aggregate.</a></li>
-    <li><a href="#the-playoffs-are-a-crapshoot">The playoffs are a crapshoot.</a></li>
-    <li><a href="#its-hard-not-to-be-romantic-about-baseball">It's hard not to be romantic about baseball.</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#understanding-moneyball">Understanding Moneyball</a></summary>
+    <ul>
+      <li><a href="#the-2001-as-lost-significant-talent">The 2001 A's lost significant talent.</a></li>
+      <li><a href="#analytics-unlocks-transparent-decision-making">The A's used analytics to unlock transparent decision-making.</a></li>
+      <li><a href="#getting-on-base-was-undervalued">Getting on base was undervalued.</a></li>
+      <li><a href="#scott-hatteberg-was-undervalued">Scott Hatteberg was undervalued.</a></li>
+      <li><a href="#the-streak-was-historic-and-remarkable">The streak was historic and remarkable.</a></li>
+      <li><a href="#you-can-build-a-player-in-aggregate">You can build a player in aggregate.</a></li>
+      <li><a href="#the-playoffs-are-a-crapshoot">The playoffs are a crapshoot.</a></li>
+      <li><a href="#its-hard-not-to-be-romantic-about-baseball">It's hard not to be romantic about baseball.</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#critiquing-moneyball">Critiquing Moneyball</a>
-  <ul>
-    <li><a href="#moneyball-overlooks-existing-talent">Moneyball overlooks existing talent on the 2002 roster.</a></li>
-    <li><a href="#moneyball-promotes-low-payrolls">Moneyball promotes low payrolls in baseball, thus ruining the game.</a></li>
-    <li><a href="#moneyball-promotes-analytics">Moneyball promotes the use of analytics in baseball, thus ruining the sport.</a></li>
-    <li><a href="#moneyball-suggests-baseball-is-unfair">Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#critiquing-moneyball">Critiquing Moneyball</a></summary>
+    <ul>
+      <li><a href="#moneyball-overlooks-existing-talent">Moneyball overlooks existing talent on the 2002 roster.</a></li>
+      <li><a href="#moneyball-promotes-low-payrolls">Moneyball promotes low payrolls in baseball, thus ruining the game.</a></li>
+      <li><a href="#moneyball-promotes-analytics">Moneyball promotes the use of analytics in baseball, thus ruining the sport.</a></li>
+      <li><a href="#moneyball-suggests-baseball-is-unfair">Moneyball suggests baseball is unfair, even though it's not that unfair, comparatively speaking.</a></li>
+    </ul>
+  </details>
 </li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>

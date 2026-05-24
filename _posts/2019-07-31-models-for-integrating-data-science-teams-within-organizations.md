@@ -11,42 +11,60 @@ image: /files/pics/blog/2019/ds-team-models-1.jpeg
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#center-of-excellence-model">The center-of-excellence model</a>
-  <ul>
-    <li><a href="#coe-misconceptions">Some misconceptions</a></li>
-    <li><a href="#coe-drawbacks">Drawbacks</a></li>
-    <li><a href="#coe-benefits">Benefits and success scenarios</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#center-of-excellence-model">The center-of-excellence model</a></summary>
+    <ul>
+      <li><a href="#coe-misconceptions">Some misconceptions</a></li>
+      <li><a href="#coe-drawbacks">Drawbacks</a></li>
+      <li><a href="#coe-benefits">Benefits and success scenarios</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#accounting-model">Accounting model</a>
-  <ul>
-    <li><a href="#accounting-drawbacks">Drawbacks</a></li>
-    <li><a href="#accounting-benefits">Benefits</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#accounting-model">Accounting model</a></summary>
+    <ul>
+      <li><a href="#accounting-drawbacks">Drawbacks</a></li>
+      <li><a href="#accounting-benefits">Benefits</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#consultant-model">The consultant model</a>
-  <ul>
-    <li><a href="#consultant-benefits">Benefits</a></li>
-    <li><a href="#consultant-drawbacks">Drawbacks</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#consultant-model">The consultant model</a></summary>
+    <ul>
+      <li><a href="#consultant-benefits">Benefits</a></li>
+      <li><a href="#consultant-drawbacks">Drawbacks</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#embedded-model">The embedded model</a>
-  <ul>
-    <li><a href="#embedded-benefits">Benefits</a></li>
-    <li><a href="#embedded-drawbacks">Drawbacks</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#embedded-model">The embedded model</a></summary>
+    <ul>
+      <li><a href="#embedded-benefits">Benefits</a></li>
+      <li><a href="#embedded-drawbacks">Drawbacks</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#democratic-model">The democratic model</a>
-  <ul>
-    <li><a href="#democratic-benefits">Benefits</a></li>
-    <li><a href="#democratic-drawbacks">Drawbacks</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#democratic-model">The democratic model</a></summary>
+    <ul>
+      <li><a href="#democratic-benefits">Benefits</a></li>
+      <li><a href="#democratic-drawbacks">Drawbacks</a></li>
+    </ul>
+  </details>
 </li>
-<li><a href="#product-data-science-model">The product data science model</a>
-  <ul>
-    <li><a href="#pds-benefits">Benefits</a></li>
-    <li><a href="#pds-drawbacks">Drawbacks</a></li>
-  </ul>
+<li class="toc-era">
+  <details class="collapsible-section">
+    <summary><a href="#product-data-science-model">The product data science model</a></summary>
+    <ul>
+      <li><a href="#pds-benefits">Benefits</a></li>
+      <li><a href="#pds-drawbacks">Drawbacks</a></li>
+    </ul>
+  </details>
 </li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#references">References</a></li>

@@ -4,18 +4,25 @@
 
   var inlineTocUl = document.querySelector('.toc-container > ul');
 
-  // ── Build TOC entries from inline TOC or from headings ──────────────────
-  // Entry shape: { label, href, children: [{label, href}], isGroup }
+  // ── Build TOC entries ────────────────────────────────────────────────────
+  // Entry: { label, href, labelIsHeading, children: [{label, href}] }
+  //   labelIsHeading: true  → summary href resolves to a real page heading
+  //                           → include label in scrollspy, highlight it
+  //                  false  → era-style label with no own heading
+  //                           → don't add to scrollspy (first child covers it)
 
   var entries = [];
 
   if (inlineTocUl) {
-    // Mirror the hand-authored inline TOC structure
     Array.from(inlineTocUl.children).forEach(function (sourceLi) {
       if (sourceLi.classList.contains('toc-era')) {
         var summaryA = sourceLi.querySelector('summary a');
         var sourceSubUl = sourceLi.querySelector('ul');
         if (!summaryA) return;
+
+        var summaryHref = summaryA.getAttribute('href');
+        var summaryResolvable = !!document.getElementById(summaryHref.replace(/^#/, ''));
+
         var children = [];
         if (sourceSubUl) {
           Array.from(sourceSubUl.children).forEach(function (subLi) {
@@ -23,8 +30,18 @@
             if (a) children.push({ label: a.textContent.trim(), href: a.getAttribute('href') });
           });
         }
-        var firstHref = children.length ? children[0].href : summaryA.getAttribute('href');
-        entries.push({ label: summaryA.textContent.trim(), href: firstHref, children: children, isGroup: true });
+
+        var labelHref = summaryResolvable
+          ? summaryHref
+          : (children.length ? children[0].href : summaryHref);
+
+        entries.push({
+          label: summaryA.textContent.trim(),
+          href: labelHref,
+          labelIsHeading: summaryResolvable,
+          children: children
+        });
+
       } else {
         var sourceA = sourceLi.querySelector('a');
         if (!sourceA) return;
@@ -36,11 +53,17 @@
             if (a) children.push({ label: a.textContent.trim(), href: a.getAttribute('href') });
           });
         }
-        entries.push({ label: sourceA.textContent.trim(), href: sourceA.getAttribute('href'), children: children, isGroup: false });
+        entries.push({
+          label: sourceA.textContent.trim(),
+          href: sourceA.getAttribute('href'),
+          labelIsHeading: true,
+          children: children
+        });
       }
     });
+
   } else {
-    // Fallback: scan h2[id] headings (and nested h3s) from the post
+    // Fallback: scan h2[id] headings from the post
     var allH = Array.from(postEl.querySelectorAll('h2[id], h3[id]')).filter(function (h) {
       return !h.classList.contains('post-subtitle');
     });
@@ -58,18 +81,17 @@
       entries.push({
         label: h2.textContent.trim(),
         href: '#' + h2.id,
-        children: h3s.map(function (h3) { return { label: h3.textContent.trim(), href: '#' + h3.id }; }),
-        isGroup: false
+        labelIsHeading: true,
+        children: h3s.map(function (h3) { return { label: h3.textContent.trim(), href: '#' + h3.id }; })
       });
     });
 
-    // Inject inline TOC for mobile (hidden on desktop via CSS)
     injectInlineToc(entries);
   }
 
   if (entries.length < 2) return;
 
-  // ── Inject inline TOC for posts that don't have one ─────────────────────
+  // ── Inject inline TOC for posts without a hand-authored one ─────────────
   function injectInlineToc(entries) {
     var wrap = document.createElement('div');
     wrap.className = 'toc-container post-container';
@@ -82,11 +104,16 @@
     var ul = document.createElement('ul');
     entries.forEach(function (entry) {
       var li = document.createElement('li');
-      var a = document.createElement('a');
-      a.href = entry.href;
-      a.textContent = entry.label;
-      li.appendChild(a);
       if (entry.children.length) {
+        li.className = 'toc-era';
+        var details = document.createElement('details');
+        details.className = 'collapsible-section';
+        var summary = document.createElement('summary');
+        var a = document.createElement('a');
+        a.href = entry.href;
+        a.textContent = entry.label;
+        summary.appendChild(a);
+        details.appendChild(summary);
         var subUl = document.createElement('ul');
         entry.children.forEach(function (child) {
           var subLi = document.createElement('li');
@@ -96,16 +123,23 @@
           subLi.appendChild(subA);
           subUl.appendChild(subLi);
         });
-        li.appendChild(subUl);
+        details.appendChild(subUl);
+        li.appendChild(details);
+      } else {
+        var a = document.createElement('a');
+        a.href = entry.href;
+        a.textContent = entry.label;
+        li.appendChild(a);
       }
       ul.appendChild(li);
     });
     wrap.appendChild(ul);
 
-    // Insert before the first h2 in the post
-    var firstH2 = postEl.querySelector('h2');
-    if (firstH2) {
-      postEl.insertBefore(wrap, firstH2);
+    var postDate = postEl.querySelector('.post-date');
+    if (postDate && postDate.nextSibling) {
+      postEl.insertBefore(wrap, postDate.nextSibling);
+    } else if (postDate) {
+      postDate.parentNode.appendChild(wrap);
     } else {
       postEl.prepend(wrap);
     }
@@ -121,7 +155,7 @@
   titleEl.textContent = 'Table of contents';
   nav.appendChild(titleEl);
 
-  // allLinks: [{el, href, parentLi, isGroupLabel}]
+  // allLinks: [{el, href, parentLi}]
   var allLinks = [];
 
   function makeLink(href, text) {
@@ -135,7 +169,6 @@
   entries.forEach(function (entry) {
     var li = document.createElement('li');
     var a = makeLink(entry.href, entry.label);
-    if (entry.isGroup) a.className = 'stoc-era-label';
     li.appendChild(a);
 
     if (entry.children.length) {
@@ -149,7 +182,11 @@
         allLinks.push({ el: subA, href: child.href, parentLi: li });
       });
       li.appendChild(subUl);
-      allLinks.push({ el: a, href: entry.href, parentLi: li, isGroupLabel: true });
+
+      // Only track the group label in scrollspy if it has its own real heading
+      if (entry.labelIsHeading) {
+        allLinks.push({ el: a, href: entry.href, parentLi: li });
+      }
     } else {
       allLinks.push({ el: a, href: entry.href, parentLi: null });
     }
@@ -175,11 +212,18 @@
     if (!idToEl[id]) idToEl[id] = document.getElementById(id);
   });
 
+  // Sort links in DOM order, deduplicated by id (keep first occurrence)
+  var seen = {};
   var orderedLinks = allLinks.slice().sort(function (a, b) {
     var elA = idToEl[a.href.replace(/^#/, '')];
     var elB = idToEl[b.href.replace(/^#/, '')];
     if (!elA || !elB) return 0;
     return elA.compareDocumentPosition(elB) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  }).filter(function (entry) {
+    var id = entry.href.replace(/^#/, '');
+    if (seen[id]) return false;
+    seen[id] = true;
+    return true;
   });
 
   var lastActiveLi = null;
@@ -195,7 +239,7 @@
     allLinks.forEach(function (e) { e.el.classList.remove('active'); });
     if (!active) return;
 
-    if (!active.isGroupLabel) active.el.classList.add('active');
+    active.el.classList.add('active');
 
     var activeLi = active.parentLi;
     if (activeLi !== lastActiveLi) {
