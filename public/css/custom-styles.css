@@ -1628,7 +1628,6 @@ p:has(+ .collapsible-section) {
   margin: 1rem 0 0.5rem;
 }
 .newsletter-section.dj-promo .newsletter-signup {
-  background-color: rgba(214, 51, 132, 0.12); /* match pink highlight #d63384 */
   padding: 0.5rem 1rem;
 }
 .newsletter-section.dj-promo .newsletter-signup p {
