@@ -9,8 +9,6 @@ _site/
 .editorconfig
 .obsidian/
 .vscode/
-
-
 # Ruby dependency management
 .bundle/
 vendor/
