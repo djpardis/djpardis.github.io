@@ -120,15 +120,11 @@ This era established the core abstractions that programming would build on for d
 
 ## [1957. FORTRAN eliminates the need for scientists to understand computer hardware](#table-of-contents) {#fortran-1957}
 
-<!-- ### Problem. Scientists need specialized programmers to translate equations into machine code -->
-
 **Problem.** In the mid-1950s, scientific computing required programming in assembly language. The IBM 704 had 36-bit words and three 15-bit index registers. A programmer writing code to solve differential equations needed to understand both the mathematical method and the hardware details. These included which registers to use, instruction timing, and minimizing the instruction count in inner loops.
 
 This dual expertise created a bottleneck. Universities employed small numbers of programmers who understood both scientific problems and machine architecture. A physicist at Los Alamos might wait weeks for a programmer to translate equations into code <a href="#ref-Met59" id="ref-Met59-back">[Met59]</a>. The programmer might not understand the scientific context, causing errors.
 
 In addition, programs were non-portable. Code for the IBM 704 would not run on UNIVAC. Each new machine required complete reimplementation. 
-
-<!-- ### Solution. FORTRAN automates translation from mathematical notation to machine code -->
 
 **Solution.** In 1956, John Backus was able to convince IBM executives to fund FORTRAN. He  estimated that in 1954, more than half of operating costs were programming costs, despite computers being enormously expensive. He argued that automating translation would reduce programming costs. The first FORTRAN compiler shipped in 1957 <a href="#ref-Bac57" id="ref-Bac57-back">[Bac57]</a>. 
 
@@ -159,15 +155,11 @@ Within five years, most scientific computing moved from assembly to FORTRAN. Sci
 
 ## [1968. Structured programming makes programs comprehensible by constraining control flow](#table-of-contents) {#structured-1968}
 
-<!-- ### Problem. Unrestricted GOTO statements make programs impossible to understand -->
-
 **Problem.** By 1968, program size had outpaced human comprehension. FORTRAN, COBOL, and assembly relied heavily on GOTO statements that could transfer control to any labeled statement. A program might contain hundreds of GOTOs jumping to labels scattered throughout thousands of lines.
 
 GOTO statements made local reasoning impossible. Understanding what a program did at any point required tracing all possible execution paths from anywhere. A label on line 500 might be reached by GOTOs from lines 100, 250, 780, and 1200. The number of paths grew combinatorially with program size.
 
 Dijkstra called this "spaghetti code" where control flow wove like tangled strands <a href="#ref-Dij68" id="ref-Dij68-back">[Dij68]</a>. By the late 1960s, commercial systems exceeded 50,000 lines and operating systems approached 100,000 lines. NATO convened a conference in 1968 to address "the software crisis" <a href="#ref-NR69" id="ref-NR69-back">[NR69]</a>. Programs had become too complex to understand.
-
-<!-- ### Solution. Three control flow constructs prove sufficient and enable local reasoning -->
 
 **Solution.** Dijkstra's "Go To Statement Considered Harmful" argued that GOTOs should be eliminated entirely <a href="#ref-Dij68" id="ref-Dij68-back">[Dij68]</a>. He proposed restricting control flow to three constructs. These were sequential execution, conditional execution (if-then-else), and iteration (while loops).
 
@@ -192,15 +184,11 @@ The practical effect was that software could grow. Before structured programming
 
 ## [1970. Relational databases separate logical data organization from physical storage implementation](#table-of-contents) {#relational-1970}
 
-<!-- ### Problem. Application code is tightly coupled to data storage formats -->
-
 **Problem.** Through the 1960s, programs stored data in flat files with application-specific formats. Each program defined its own file structure and wrote custom parsing code. This worked for isolated applications but created problems as organizations accumulated data and needed to share it.
 
 The fundamental issue was tight coupling. Every program accessing a customer file needed to understand the exact byte layout, and adding a new field required modifying every program that touched that data, even those not using the new field.
 
 IBM's Information Management System (IMS), introduced in 1966, provided hierarchical organization. But accessing data required manual navigation. To find all orders for a customer, a program traversed pointers to child records. There was no declarative way to express access patterns. Different applications wrote redundant filtering logic. When business rules changed, organizations faced updating inconsistent code across dozens of programs.
-
-<!-- ### Solution. Relational model separates logical data organization from physical storage -->
 
 **Solution.** Codd's 1970 paper "A Relational Model of Data for Large Shared Data Banks" <a href="#ref-Cod70" id="ref-Cod70-back">[Cod70]</a> proposed organizing data as mathematical relations, that is, tables with rows and columns. Each table represented an entity type, each row an instance, each column an attribute.
 
@@ -246,11 +234,7 @@ The crucial innovation was separating logical organization from physical storage
 
 ## [1971. Unix establishes the operating system as a portable hardware abstraction layer](#table-of-contents) {#unix-1971}
 
-<!-- ### Problem. Every machine requires programmers to understand its specific hardware and system calls -->
-
 **Problem.** Before Unix, operating systems were tightly coupled to their hardware. Software written for an IBM mainframe could not run on a DEC minicomputer. The problem was not just different instruction sets. The ways programs interacted with the system (file I/O, process creation, inter-process communication), together with device drivers, memory management, and scheduling, were all machine-specific. Moving software to new hardware meant rewriting it for a new operating environment, not just recompiling.
-
-<!-- ### Solution. A minimal, composable operating system provides a uniform interface -->
 
 **Solution.** Thompson and Ritchie built Unix at Bell Labs between 1969 and 1971 <a href="#ref-RT74" id="ref-RT74-back">[RT74]</a>. Unix exposed a single interface instead of vendor-specific system calls. Programs ran as processes. The same read and write operations applied to files on disk, terminals, and devices. "Everything is a file" meant that one abstraction covered all I/O. The kernel implemented the interface in privileged mode and mediated access to hardware. Programs invoked it through system calls, so the kernel hid the details of any particular device.
 
@@ -269,11 +253,7 @@ Software portability and orchestration efficiency gave organizations incentive t
 
 ## [1973. C makes systems software like Unix portable across different computer architectures](#table-of-contents) {#c-1973}
 
-<!-- ### Problem. Systems code is still written in assembly, and no one believes that can change -->
-
 **Problem.** Unix had made application software portable across machines that ran Unix. However, systems software such as kernels, device drivers, and system utilities was not portable. It was written in assembly for performance via control over memory layout, interrupts, and registers. No high-level language had shown it could match assembly for that workload. Different machines (IBM, DEC, CDC, and others) came with different instruction sets and architectures. Assembly code for one did not run on another. Porting a Unix kernel or systems stack meant a full rewrite in that machine's assembly. Thus portability and performance seemed to be in conflict.
-
-<!-- ### Solution. C balances hardware control with abstraction to achieve portable performance -->
 
 **Solution.** Dennis Ritchie developed C between 1969 and 1973 at Bell Labs to achieve portability without sacrificing performance <a href="#ref-Rit93" id="ref-Rit93-back">[Rit93]</a>. C provided pointers and low-level operations while abstracting machine-specific details. Data types such as `int` and `char` had no fixed size, so compilers could map them to each architecture. Programmers confined machine-dependent code to a small amount of assembly or conditional code. The rest was portable C. The same source could be compiled for different CPUs with minimal changes.
 
@@ -288,11 +268,7 @@ Unix had made programs portable across machines that ran Unix. C made Unix porta
 
 ## [1970s–1980s. Object-oriented programming enforces encapsulation to manage complexity](#table-of-contents) {#oop-1970s}
 
-<!-- ### Problem. Procedural languages cannot enforce architectural boundaries in large systems -->
-
 **Problem.** By the late 1970s, software systems had grown to hundreds of thousands of lines. Procedural programs organized code as functions operating on global or parameter-passed data. That structure worked for small programs but failed at scale. The central issue was that data structures lived as global variables or parameters, and any function could read or modify their internals. Verifying that an invariant held, such as that account balances never went negative, required checking every function that touched the relevant data. Changing the representation of a type, such as dates, forced updates across every function that used it. With all functions in a single namespace, naming conflicts and unintended coupling were common. Architectural boundaries existed only by convention. Programmers under pressure could bypass them, and large systems tended to degrade.
-
-<!-- ### Solution. Classes enforce encapsulation through the type system -->
 
 **Solution.** Object-oriented languages such as C++ <a href="#ref-Str85" id="ref-Str85-back">[Str85]</a>, Smalltalk, and Java addressed the encapsulation problem by making boundaries enforceable in the type system. Classes bundled data with the operations that could act on that data. Callers could use only the exposed methods. Invariants could be enforced in one place instead of by auditing every function. Inheritance and polymorphism supported reuse and abstraction without breaking encapsulation. Design patterns <a href="#ref-GHJV94" id="ref-GHJV94-back">[GHJV94]</a> codified recurring designs. Before OOP, keeping a large system coherent depended on every programmer respecting boundaries by discipline. After, the language enforced those boundaries. Teams could own classes, change internals without breaking callers, and build systems that could grow to millions of lines without the same collapse into unmaintainability. OOP became and remains the dominant basis for enterprise and systems software.
 
@@ -308,11 +284,7 @@ This era saw the Internet become a common foundation and the Web the primary way
 
 ## [1983. TCP/IP makes the Internet a universal network layer](#table-of-contents) {#tcpip-1983}
 
-<!-- ### Problem. Networks are incompatible, with different protocols and different assumptions -->
-
 **Problem.** Through the 1970s, computer networks had proliferated in isolation. ARPANET used its Network Control Protocol (NCP). The Xerox PARC Ethernet had different conventions. Packet radio networks, satellite networks, and local area networks each had distinct protocols for addressing, routing, and reliability. Interconnecting them required understanding each network's quirks. A program written for one could not simply talk to another. Programmers building distributed systems had to implement compatibility layers or choose a single network and accept its limitations.
-
-<!-- ### Solution. A single standard makes the Internet the universal substrate -->
 
 **Solution** Vint Cerf and Bob Kahn had laid the theoretical foundation in 1974 with "A Protocol for Packet Network Intercommunication" <a href="#ref-CK74" id="ref-CK74-back">[CK74]</a>, which described how to interconnect dissimilar networks through gateways. The protocol split into two layers. IP (Internet Protocol) handled addressing and routing packets across networks, and TCP (Transmission Control Protocol) handled reliable, ordered delivery on top. The design was deliberately minimal. Networks kept their internal structure, and the Internet layer handled only what was necessary to pass packets between them.
 
@@ -330,11 +302,7 @@ File transfer (FTP/SFTP), email (SMTP), naming (DNS), the Web (HTTP), and every 
 
 ## [1989–1993. The World Wide Web enables universal software distribution through browsers](#table-of-contents) {#web-1989}
 
-<!-- ### Problem. Reaching users requires physical media and per-machine installation -->
-
 **Problem.** In the 1980s, getting software to people was a logistics problem. Applications like WordPerfect and Lotus 1-2-3 were sold in boxes of floppy disks, each compiled for a specific operating system. A program for MS-DOS would not run on Mac OS or Unix. Updates required mailing new physical media to every user. Business applications accessed by multiple users followed a client-server model that required installing and maintaining software on every client machine independently. Distribution was slow, updates were painful, and every new operating system meant recompiling and repackaging from scratch.
-
-<!-- ### Solution. The Web starts as a document-sharing tool, then becomes the platform for all software -->
 
 **Solution.** Tim Berners-Lee proposed the Web at CERN in 1989 <a href="#ref-BL89" id="ref-BL89-back">[BL89]</a> as a way to share documents and files across the Internet. Its original motivation had nothing to do with software delivery. CERN's scientific documentation was scattered across hundreds of incompatible computers. Researchers spent significant time just locating information that existed somewhere on the network. Berners-Lee wanted to link documents through hypertext so people could navigate between them without knowing where they were physically stored. By 1990, he had built the first HTTP server, the first browser, and defined HTML and URLs. Hostnames in URLs were resolved by DNS, the same naming layer the rest of the Internet already used. CERN released the protocol royalty-free in 1993 <a href="#ref-CERN93" id="ref-CERN93-back">[CERN93]</a>.
 
@@ -357,11 +325,7 @@ Making software run inside the browser, not just be downloaded from it, took two
 
 ## [1991. Python becomes the default for scripting, automation, and data science](#table-of-contents) {#python-1991}
 
-<!-- ### Problem. Programmer time is the bottleneck, not machine time -->
-
 **Problem.** The dominant assumption at the time was that runtime performance mattered most. C and FORTRAN optimized for execution speed. The opposite insight was that programmer time is more expensive than machine time. Most code runs once or rarely (scripts, glue code, prototypes). The cost of writing, debugging, and maintaining it dwarfs execution time. A language that made the common case fast to write, even if slow to run, would win.
-
-<!-- ### Solution. Optimize for readability and productivity. Use C when speed is needed -->
 
 **Solution.** Guido van Rossum released Python in 1991 <a href="#ref-Pyt91" id="ref-Pyt91-back">[Pyt91]</a>. Python prioritized readability and ease of use over raw performance. It required no compile step, used clear syntax, and would become "batteries included" as its standard library grew. The crucial design choice was extensibility. When a hot path needed speed, programmers could drop into C. NumPy (2006) demonstrated the pattern. Python for glue code and control flow, C (via extensions) for the numerical inner loops. Programmers got productivity for the 95% of code that wasn't performance-critical, and C-level speed where it mattered. pandas, Django, TensorFlow, and PyTorch followed the same model. Python became the default for data science, ML, and glue code because it optimized for the right variable (programmer time).
 
@@ -395,13 +359,9 @@ There should be one obvious way to do it.
 
 ## [1994–1998. Standard algorithm libraries make common algorithms and data structures reusable](#table-of-contents) {#stdlib-1994}
 
-<!-- ### Problem. Implementing algorithms and data structures from scratch is error-prone and duplicates effort -->
-
 **Problem.** Programmers implementing a sorted collection had to build their own balanced tree or settle for a slower linked list. Those needing O(log n) lookup implemented a red-black tree. Those needing to sort implemented quicksort or merge sort. These implementations were subtle. Off-by-one errors, edge cases with empty collections, and incorrect handling of equal elements were common. Every team duplicated the same work, and bugs in algorithm implementations were hard to detect because the logic was buried in application code.
 
 Algorithm theory (Big O notation, complexity analysis) had given programmers a vocabulary for reasoning about performance, but it did not eliminate the need to implement. The gap between theory and practice remained.
-
-<!-- ### Solution. STL and Java Collections provide battle-tested implementations as standard components -->
 
 **Solution.** Alexander Stepanov and Meng Lee developed the Standard Template Library (STL) for C++ at Hewlett-Packard in 1994 <a href="#ref-Step94" id="ref-Step94-back">[Step94]</a>. The design separated containers, iterators, algorithms, and functors. The key insight was generic programming. Algorithms were written once in terms of iterators and worked with any container. `std::sort` worked on a vector, a queue, or a custom container, as long as it provided random-access iterators. HP released the STL freely. It was incorporated into the C++ standard and shipped with every C++ compiler.
 
@@ -416,13 +376,9 @@ In 1998, Java followed with the Collections Framework in JDK 1.2 <a href="#ref-B
 
 ## [1995. Garbage collection makes entire categories of memory errors impossible](#table-of-contents) {#gc-1995}
 
-<!-- ### Problem. Manual memory management causes memory leaks, corruption, and security vulnerabilities -->
-
 **Problem.** Through the early 1990s, most commercial software was written in C and C++ requiring manual memory management. Programmers explicitly allocated memory with `malloc()` or `new` and deallocated with `free()` or `delete`. Getting the pairing wrong led to memory leaks, use-after-free, double-free, and corruption. Memory leaks consumed all available memory in long-running programs. Use-after-free errors occurred when code freed memory but later accessed it through a dangling pointer, often causing data corruption. Double-free errors corrupted the allocator's internal structures. These bugs were insidious because they might not manifest during testing but caused failures only after days of production operation.
 
 The consequences were real. BlueKeep (2019), a use-after-free in Windows RDP, let attackers execute arbitrary code with kernel privileges over the network without authentication. The NSA issued a rare advisory. Microsoft patched even end-of-life systems. Microsoft estimated 70% of their 2006–2018 security vulnerabilities were memory-safety issues <a href="#ref-MSRC19" id="ref-MSRC19-back">[MSRC19]</a>.
-
-<!-- ### Solution. Automatic memory reclamation eliminates entire categories of errors by construction -->
 
 **Solution.** Java, released in 1995 <a href="#ref-Gos96" id="ref-Gos96-back">[Gos96]</a>, popularized garbage collection for mainstream commercial development. Java's innovation was demonstrating that automatic memory management was practical despite performance overhead.
 
@@ -445,21 +401,13 @@ Following Java's success, garbage collection became standard in new languages. C
 
 ## [1995–2010. Package managers make dependency management automatic](#table-of-contents) {#package-managers-1995}
 
-<!-- ### Problem. Reusing code requires manual copying, version tracking, and integration work -->
-
 **Problem.** Before package managers, reusing code meant finding it, downloading it, manually placing it in your project, and ensuring it worked with other dependencies. Version conflicts were discovered only when builds failed. There was no central registry, no automated resolution. Dependency management was manual and error-prone.
-
-<!-- ### Solution. Centralized registries with declarative dependencies automate fetching and resolution -->
 
 **Solution.** CPAN, launched in 1995 for Perl, established the pattern. It provided a central archive, a standard layout for how modules were packaged, and a tool that installed modules and dependencies with a single command. Maven, released in 2004, brought the same approach to Java with declarative `pom.xml` files. npm, launched in 2010, did the same for Node and became the largest package ecosystem in history. The abstraction was declarative. Programmers specified what they needed, not how to get it. The same pattern spread to Python (pip), Ruby (RubyGems), and virtually every language. Dependency management became part of the standard toolkit.
 
 ## [1998. Open source makes collaborative, publicly developed software the default](#table-of-contents) {#opensource-1998}
 
-<!-- ### Problem. Every company reinvents the wheel. Code is proprietary and reuse means licensing or rewriting -->
-
 **Problem.** Through the 1990s, most software was proprietary. Companies kept source code secret to protect their competitive advantage. Reusing code meant licensing it or rewriting it. Richard Stallman had founded the free software movement (GNU, GPL) and framed it as "free as in free speech, not free beer." That established legal and ethical foundations, but "free" carried political baggage that made businesses hesitant. Linux and Apache had proven that open collaboration could produce production-grade software, yet there was no neutral term that invited broad adoption. Programmers who wanted to share code faced a fragmented landscape of licenses and ideologies.
-
-<!-- ### Solution. The Open Source Initiative gives the movement a business-friendly identity and formalizes the model -->
 
 **Solution.** In 1998, Christine Peterson coined the term "open source," and Bruce Perens and Eric S. Raymond founded the Open Source Initiative (OSI) <a href="#ref-OSI98" id="ref-OSI98-back">[OSI98]</a>. The shift from "free software" to "open source" was deliberate. It emphasized practical benefits (peer review, faster iteration, no vendor lock-in) over the freedom-first stance that Stallman had championed. The OSI defined criteria for open source licenses and certified them. Apache, MIT, and GPL became mainstream choices rather than ideological statements.
 
@@ -472,11 +420,7 @@ The model proved itself. Linux, Apache, MySQL, PHP (LAMP) powered the early web.
 
 ## [2000. REST APIs standardize how web services communicate](#table-of-contents) {#rest-2000}
 
-<!-- ### Problem. Machines need to talk to each other across the web, but there is no good way to do it -->
-
 **Problem.** Business-to-business commerce and supply-chain integration required one organization's applications to talk to another's over the Internet. Existing distributed computing (CORBA, DCOM, Java RMI) was vendor-specific, complex, and did not work across organizational boundaries. HTTP could carry requests and XML could encode data. What was missing was an agreed way to structure a call. How should one program ask another for a record or submit an update? Without a standard, every service invented its own. SOAP (Microsoft, IBM, W3C 2000) proposed one approach. It was heavyweight (XML envelopes, WSDL, WS-*). No lightweight alternative existed.
-
-<!-- ### Solution. Roy Fielding formalizes the architectural principles the Web is built on -->
 
 **Solution.** Roy Fielding <a href="#ref-Fie00" id="ref-Fie00-back">[Fie00]</a>, a co-author of HTTP/1.1, had helped design the Web's protocol. In his 2000 doctoral dissertation he named and formalized the architectural style already present in the Web. Resources were identified by URLs. The interface was the HTTP methods (`GET`, `POST`, `PUT`, `DELETE`). Requests were stateless. He called this style REST. He was not inventing a new protocol. He was documenting what had made the Web scale. That gave programmers a clear model for designing application programming interfaces (APIs). To get a customer, use `GET` on a URL. To create one, use `POST`. No XML envelope, no WSDL. When JSON replaced XML as the preferred format, REST with JSON was easy to use and to test in a browser. Public APIs that let external developers access a site's data (Amazon, Google, and others) adopted REST. By the 2010s, REST had become the default way machines talked to each other on the Web.
 
@@ -487,11 +431,7 @@ The model proved itself. Linux, Apache, MySQL, PHP (LAMP) powered the early web.
 
 ## [2001. IDEs automate the mechanical scaffolding of programming, an early step toward code generation](#table-of-contents) {#ides-2001}
 
-<!-- ### Problem. Navigating, refactoring, and wiring code in large projects is tedious manual work -->
-
 **Problem.** As Java and enterprise applications grew into systems of hundreds of thousands of lines, the mechanical overhead of programming became a significant drag on productivity. Adding a new method to a class meant manually hunting through dozens of files to find every call site that needed updating. Renaming a class required running `grep` across the entire codebase and editing each hit by hand. Finding where a method was actually defined meant navigating through directories of source files. These tasks required no deep thought. They were purely mechanical, but they consumed hours each day.
-
-<!-- ### Solution. IDEs provide intelligent navigation, completion, and refactoring powered by static analysis -->
 
 **Solution.** IntelliJ IDEA (2001) <a href="#ref-Jet01" id="ref-Jet01-back">[Jet01]</a> and Eclipse (2001, first release 2004) <a href="#ref-Ecl01" id="ref-Ecl01-back">[Ecl01]</a> represented a generational leap in development tools. They parsed entire codebases and built an internal model of every class, method, and reference. This let them provide intelligent code completion. As a programmer typed, the IDE suggested valid method names and parameter types. Automated refactoring made operations like renaming a class or extracting a method into a single action that propagated correctly across the entire project. Integrated debugging let programmers step through code without leaving the editor. Visual Studio provided similar capabilities for C# and .NET development. Design patterns (Gamma et al., 1994) <a href="#ref-GHJV94">[GHJV94]</a> had codified common OOP solutions. Refactoring (1999) <a href="#ref-Fow99" id="ref-Fow99-back">[Fow99]</a>, JUnit (1997) <a href="#ref-Jun97" id="ref-Jun97-back">[Jun97]</a>, and test-driven development (TDD) made restructuring and automated testing mainstream practices.
 
@@ -507,11 +447,7 @@ The productivity gains were substantial. Operations that previously required man
 
 ## [2002. Dependency injection frees enterprise programmers from framework boilerplate](#table-of-contents) {#di-2002}
 
-<!-- ### Problem. Programmer time is spent on wiring, not business logic -->
-
 **Problem.** Java 2 Enterprise Edition (J2EE) and Enterprise JavaBeans (EJBs) were the standard platform for enterprise Java in the early 2000s. J2EE was the platform. EJBs were the component model for server-side business logic, objects that ran in a container and handled transactions and persistence. In practice it required extensive XML, deployment descriptors, and boilerplate just to wire objects together. A simple database service might need dozens of config files and hundreds of lines of scaffolding. Objects created their own dependencies. Testing and swapping implementations required rewriting wiring code throughout. Programmer time went to infrastructure, not features.
-
-<!-- ### Solution. Inversion of control containers wire dependencies automatically -->
 
 **Solution.** Spring (2003) <a href="#ref-Spr03" id="ref-Spr03-back">[Spr03]</a> replaced J2EE's heavy wiring with dependency injection. Rod Johnson's 2002 book <a href="#ref-Joh02" id="ref-Joh02-back">[Joh02]</a> had argued that Plain Old Java Objects (POJOs) and a lightweight container could replace EJBs, and Spring implemented that idea. Instead of objects creating their own dependencies, a container created and injected them, so a class that needed a database connection could simply declare the dependency and Spring would provide it. Testing became straightforward because tests could inject mocks. Wiring became explicit and centralized rather than scattered throughout the codebase.
 
@@ -529,11 +465,7 @@ This era saw cloud computing, mobile, big data, and the commoditization of previ
 
 ## [2004–2009. MapReduce and Hadoop make processing massive datasets accessible](#table-of-contents) {#mapreduce-2004}
 
-<!-- ### Problem. Big data is a Google monopoly. No one else has the engineering to build equivalent systems -->
-
 **Problem.** By the early 2000s, companies like Google were crawling and indexing billions of web pages. The sheer volume of data dwarfed what any single machine could store or process. Google solved this internally by building the Google File System (GFS) in 2003 <a href="#ref-GGL03" id="ref-GGL03-back">[GGL03]</a>, a distributed file system that spread data across hundreds or thousands of commodity servers, and MapReduce in 2004 <a href="#ref-DG04" id="ref-DG04-back">[DG04]</a>. MapReduce was a programming model that let programmers express massively parallel computation in a simple way. A Map function processed individual records and a Reduce function aggregated results. The framework handled distributing work, shuffling data, and recovering from failures. Google published papers but did not release the code. 
-
-<!-- ### Solution. Yahoo funds the open-source implementation that democratizes big data -->
 
 **Solution.** Doug Cutting and Mike Cafarella had started Nutch, an open-source web crawler, in 2002. When Google's GFS and MapReduce papers appeared, they implemented the techniques in Nutch but needed institutional backing. Yahoo hired Cutting in 2006 to build distributed data processing for its search engine. He extracted the distributed file system and MapReduce implementation from Nutch into a new project, Hadoop. Hadoop comprised HDFS (the file system) and MapReduce (the processing framework). The same name, MapReduce, was intentional. It implemented the same model from the Google papers. Yahoo dedicated a large team to developing it. By 2007, Yahoo was running Hadoop on a 1,000-node cluster.
 
@@ -550,13 +482,9 @@ Yahoo open-sourced its Hadoop work in 2009, ran Hadoop at scale, and adoption fo
 
 ## [2005. Git enables distributed collaboration at global scale](#table-of-contents) {#git-2005}
 
-<!-- ### Problem. The Linux kernel outgrows every version control system available -->
-
 **Problem.** For the first decade of Linux kernel development (1991–2002), there was no formal version control at all. Contributors emailed patches to mailing lists, and Linus Torvalds manually applied them to his own source tree before cutting releases. This worked when the project was small, but Linux had grown into the most important open-source project in the world, with thousands of contributors. The manual process became a serious bottleneck.
 
 In 2002, Torvalds adopted BitKeeper, a proprietary distributed system that was far ahead of CVS or Subversion. In early 2005, BitMover revoked the free license and the kernel community lost its version control overnight.
-
-<!-- ### Solution. Torvalds builds a replacement in 10 days that redefines the category -->
 
 **Solution.** Torvalds had spent months considering what kernel development required. CVS and Subversion were centralized, which made cheap branching and offline work impossible, and no open-source alternative was mature. He began writing Git on April 3, 2005, and had a working system within roughly 10 days. The design was fully distributed. Every clone contained the complete repository history, which allowed programmers to commit, branch, and merge locally without network access. Branching became a lightweight operation, a pointer to a commit that made it essentially free. The Linux kernel 2.6.12 release in June 2005 was the first managed entirely by Git.
 
@@ -569,11 +497,7 @@ Git-based workflows later enabled continuous integration and deployment. Jenkins
 
 ## [2006. Cloud platforms transform infrastructure into elastic, pay-per-use resources](#table-of-contents) {#cloud-2006}
 
-<!-- ### Problem. Capital requirements and capacity guessing block startups and punish spiky workloads -->
-
 **Problem.** Before 2006, running applications meant purchasing servers, networking equipment, and storage, renting rack space and power in a data center, and hiring system administrators to maintain all of it. For a startup launching a web service, the upfront capital was substantial. Ordering, installing, and configuring new hardware took weeks or months. Capacity planning made this worse. Organizations had to forecast future demand and either overprovision and pay for idle capacity or underprovision and risk outages. Spiky workloads, such as retail at holidays or tax software in filing season, made the tradeoff brutal.
-
-<!-- ### Solution. API-driven virtual servers with pay-per-use pricing enable elastic scaling -->
 
 **Solution.** Amazon Web Services launched Elastic Compute Cloud (EC2) in August 2006 <a href="#ref-AWS06" id="ref-AWS06-back">[AWS06]</a>, providing virtual servers provisionable through an API in minutes with pay-per-hour billing. This transformed infrastructure from capital expenditure (CapEx) to operational expense (OpEx) and from static to elastic. EC2 is the foundational example of what the industry came to call Infrastructure as a Service (IaaS). The cloud provider manages physical hardware, networking, and virtualization, while the customer retains responsibility for operating systems, applications, and data. The customer rents compute, storage, and network capacity rather than purchasing it.
 
@@ -586,11 +510,7 @@ This transformed capacity planning. Organizations could scale elastically to mat
 
 ## [2007. Mobile platforms turn the phone into a general-purpose computer with app ecosystems](#table-of-contents) {#mobile-2007}
 
-<!-- ### Problem. Mobile phones are closed appliances, not programmable computers -->
-
 **Problem.** At its peak, Nokia controlled over 40% of the global mobile phone market. Within six years, that share had collapsed to under 5%. Hardware was not the issue. Nokia's model treated phones as closed appliances. SDKs were fragmented (J2ME on some devices, proprietary on others), there was no unified channel for programmers to distribute software to users, and Symbian was not built for a phone as a general-purpose computer running third-party software.
-
-<!-- ### Solution. Apple reframes the phone as a pocket computer, and opens it to programmers -->
 
 **Solution.** Apple released the iPhone in June 2007. The multitouch screen and full web browser were significant, but the deeper change was conceptual. The iPhone was positioned as a general-purpose computing device that also made calls, with a browser that rendered full web pages rather than a stripped-down mobile experience. The iPhone SDK launched in March 2008 <a href="#ref-App08" id="ref-App08-back">[App08]</a> and the App Store opened in July 2008. For software distribution, Apple provided a single channel. Programmers could submit apps and reach millions of devices without going through carriers or OEMs. Google followed with Android in September 2008 <a href="#ref-And08" id="ref-And08-back">[And08]</a> and the Android Market, with a more permissive review process. Both platforms provided high-level APIs and enabled instant global distribution. By the mid-2010s, mobile had created new categories such as ridesharing, mobile payments, and social photography, and changed how software was discovered, distributed, and monetized.
 
@@ -602,13 +522,9 @@ This transformed capacity planning. Organizations could scale elastically to mat
 
 ## [2008–2012. Microservices replace monoliths as the architecture for large-scale applications](#table-of-contents) {#microservices-2008}
 
-<!-- ### Problem. Monolithic applications become fragile, slow to develop, and impossible to scale selectively -->
-
 **Problem.** Large web companies in the late 2000s built their platforms as monolithic applications, that is, large codebases deployed as one unit. Early Netflix illustrates the pattern. Its core system was a Java application backed by an Oracle database. In August 2008, a hardware failure took the entire service down for three days. The cause was initially suspected to be database corruption. Every part of the system depended on the same database, so a failure in one place propagated everywhere. Such failures are inherent to monolithic architecture.
 
 Beyond availability, monoliths created organizational bottlenecks. Because the application was a single deployment unit, teams working on different features, such as recommendations, billing, and streaming playback, had to deploy together. A bug in one component could take down the whole process and break unrelated features. Because the codebase had no service boundaries, adding a feature required understanding and testing the entire application. Because all components ran in the same process, scaling meant adding more copies of the entire application. Provisioning more compute for one component required scaling everything, wasting capacity on components that needed none. As the codebase grew, development slowed and onboarding became increasingly difficult.
-
-<!-- ### Solution. Decomposing applications into independently deployable services, each owning its own data -->
 
 **Solution.** Amazon arrived at the architecture first <a href="#ref-Vog22" id="ref-Vog22-back">[Vog22]</a>. Its monolithic e-commerce platform became unmanageable as it expanded. Architects required every internal capability to be exposed as an independent service. That restructuring produced the infrastructure that became AWS. Netflix began migrating to that model on AWS in 2009, a seven-year process. The core idea was to break the monolith into small, independently deployable services, each owning its own database. A failure in one service no longer took down the whole platform. Netflix eventually decomposed into over 700 microservices. At that scale, services must find each other, handle failures gracefully, and distribute load across instances. Netflix open-sourced its operational tooling as Eureka (service discovery), Hystrix (circuit breaker), and Ribbon (load balancing) <a href="#ref-Net12" id="ref-Net12-back">[Net12]</a>. Fowler and Lewis gave the pattern its name and a widely cited reference in 2014 <a href="#ref-Mar14" id="ref-Mar14-back">[Mar14]</a>. By the 2020s microservices had become the dominant architecture for large-scale web applications, adopted by most large enterprises.
 
@@ -621,11 +537,7 @@ Beyond availability, monoliths created organizational bottlenecks. Because the a
 
 ## [2009. NoSQL databases trade consistency for scale and flexibility](#table-of-contents) {#nosql-2009}
 
-<!-- ### Problem. Relational databases cannot scale horizontally for massive web applications -->
-
 **Problem.** By the late 2000s, web-scale data and traffic exceeded what relational databases could handle. Horizontal scaling required ACID across partitions and two-phase commit, which did not scale. The CAP theorem <a href="#ref-Bre00" id="ref-Bre00-back">[Bre00]</a> formalized the tradeoff. Relational databases chose consistency and became unavailable during partitions. Fixed schemas forced sparse tables or many joins for heterogeneous data. Schema changes required migrations that locked tables. Row-oriented storage made analytical scans expensive. Relational full-text search did not scale.
-
-<!-- ### Solution. NoSQL databases optimize for different data models and scale-out architectures -->
 
 **Solution.** NoSQL databases relax relational constraints in exchange for scale. Different designs addressed different constraints.
 
@@ -660,11 +572,7 @@ Columnar stores and search engines addressed analytical scans and full-text sear
 
 ## [2009. Node.js makes JavaScript full-stack and enables the npm ecosystem](#table-of-contents) {#nodejs-2009}
 
-<!-- ### Problem. Full-stack means two languages, two toolchains, and constant context-switching -->
-
 **Problem.** By the late 2000s, web applications had a split identity. The browser ran JavaScript. The server ran Java, PHP, Python, or Ruby. Programmers wrote frontend and backend in different languages, with different runtimes and toolchains. Building a real-time feature meant WebSockets on the server and JavaScript in the browser. Full-stack development meant context-switching between languages, deployment targets, and debugging environments. Programmer time was spent on integration friction, not features. There was no way to share code reliably between client and server.
-
-<!-- ### Solution. A JavaScript runtime on V8 brings the browser language to the server -->
 
 **Solution.** Ryan Dahl released Node.js in 2009 <a href="#ref-Dah09" id="ref-Dah09-back">[Dah09]</a>. Node.js ran JavaScript on the server using Google's V8 engine, the same one powering Chrome. The key innovation was non-blocking I/O. Instead of threads, it used an event loop. A single process could handle thousands of concurrent connections. This suited I/O-bound workloads such as APIs, proxies, and real-time applications that had dominated server-side scaling challenges.
 
@@ -677,13 +585,9 @@ Node.js made JavaScript full-stack. Programmers could write client and server in
 
 ## [2010–2015. Type safety, component architecture, and safer concurrency reach mainstream development](#table-of-contents) {#language-tooling-2010}
 
-<!-- ### Problem. JavaScript lacks structure. Concurrency with mutable state is a correctness trap -->
-
 **Problem.** Dynamic languages such as JavaScript, Python, and Ruby had become central to web and backend development, but type checking and clear separation of concerns lagged. Dynamic typing deferred errors to runtime that static typing would have caught at compile time. In JavaScript, jQuery-based applications entangled DOM manipulation, business logic, and data fetching with no clear separation. 
 
 Concurrent programming in Java, C++, and similar languages faced a separate set of challenges. Mutable shared state and race conditions produced bugs that were difficult to reproduce and debug. Locks offered a remedy but introduced deadlocks and contention, and correctness depended on precise lock ordering that most programmers found impractical to maintain.
-
-<!-- ### Solution. The JavaScript ecosystem matures. Functional concepts enter mainstream languages -->
 
 **Solution.** TypeScript (2012) <a href="#ref-Mic12" id="ref-Mic12-back">[Mic12]</a> and React (2013) <a href="#ref-Fac13" id="ref-Fac13-back">[Fac13]</a> added type checking and component architecture to JavaScript, transforming jQuery spaghetti into structured development. 
 
@@ -698,8 +602,6 @@ Functional concepts entered mainstream languages. Scala bridged object-oriented 
 </div>
 
 ## [2013–2014. Containers and orchestration make deployment portable and scalable](#table-of-contents) {#containers-2013}
-
-<!-- ### Problem. Applications behave differently across environments, and scaling deployment doesn't scale -->
 
 **Problem.** Two constraints slowed deployment. The first was environment inconsistency. Applications ran in development but crashed in production due to different library versions, missing dependencies, or configuration drift. Virtual machines provided isolation but were heavyweight. Each VM required a full OS and consumed gigabytes. Manual configuration and documentation were brittle. 
 
@@ -717,11 +619,7 @@ Kubernetes (2014) <a href="#ref-Bur16" id="ref-Bur16-back">[Bur+16]</a>, based o
 
 ## [2014. Serverless computing shifts the unit of deployment from servers to functions](#table-of-contents) {#serverless-2014}
 
-<!-- ### Problem. Container-based architectures still require programmers to reason about infrastructure -->
-
 **Problem.** Containers and orchestration made deployment portable and scalable, but containers were always-on. A workload handling one request per hour still required a running container and continuous compute cost. For bursty or infrequent workloads, organizations paid for idle capacity, the same inefficiency that cloud computing had aimed to eliminate.
-
-<!-- ### Solution. Function-as-a-Service abstracts the unit of deployment from a long-running process to a single, ephemeral function invocation -->
 
 **Solution.** AWS Lambda, launched in November 2014 <a href="#ref-AWS14" id="ref-AWS14-back">[AWS14]</a>, introduced Function-as-a-Service, or serverless. The platform invoked functions only when triggered by events such as HTTP requests, file uploads, queue messages, or scheduled jobs. Each execution was ephemeral. The runtime was torn down afterward, so no compute was allocated between runs and pricing was per-invocation and per-duration. Cost aligned with actual usage rather than provisioned capacity, eliminating idle cost for bursty or infrequent workloads. Lambda scaled automatically from zero to thousands of concurrent executions. 
 
@@ -734,11 +632,7 @@ The stateless model imposed constraints. Cold starts introduced latency after in
 
 ## [2015–2016. ML frameworks democratize machine learning without research-level expertise](#table-of-contents) {#ml-frameworks-2015}
 
-<!-- ### Problem. ML is locked in research labs. Implementing from papers or hiring PhDs is the only path -->
-
 **Problem.** Before 2015, applying machine learning meant implementing algorithms from academic papers and using tools like R and Python that required statistical expertise. Deep learning had emerged as a research direction, but implementing backpropagation, designing architectures, and training at scale demanded deep knowledge of linear algebra, optimization, and distributed systems. Google, Facebook, Twitter, and a few labs built their ow internal frameworks. They either had to hire PhDs or stay out. The gap between "research breakthrough" and "programmer can use it" was enormous. The bottleneck was expertise, not compute.
-
-<!-- ### Solution. High-level frameworks with automatic differentiation and GPU support make ML accessible -->
 
 **Solution.** TensorFlow (2015) <a href="#ref-Aba15" id="ref-Aba15-back">[Aba+15]</a> and PyTorch (2016) <a href="#ref-Pas17" id="ref-Pas17-back">[Pas+17]</a> made deep learning tractable for programmers without research-level expertise. Both provided backpropagation, GPU acceleration, and a high-level API. Programmers defined computation as a graph or in imperative code. The frameworks handled the math, learning-rate tuning, and distributed training across GPUs. Both integrated with NumPy, pandas, and Jupyter. Transfer learning allowed fine-tuning of pretrained models with minimal data. Scikit-learn had already made classical ML such as regression, classification, and clustering accessible. TensorFlow and PyTorch did the same for deep learning, and the language models behind AI coding assistants such as Copilot and Codex were trained with these frameworks <a href="#ref-CKB21-ml" id="ref-CKB21-back-ml">[CKB+21]</a>.
 
@@ -761,8 +655,6 @@ $$h_t = f(h_{t-1}, x_t)$$
 
 Because $h_t$ depends on $h_{t-1}$, the forward pass required $n$ sequential steps and could not be parallelized. Information from position $t$ to $t+k$ propagated through $k$ steps. During backpropagation, the gradient was multiplied by $\partial h_t / \partial h_{t-1}$ at each step. The product of $k$ Jacobians often had spectral norm below one, so the gradient decayed exponentially and long-range dependencies received negligible signal. An architecture that allowed parallel computation and direct flow between arbitrary positions was needed.
 
-<!-- ### Solution. Self-attention enables parallel computation and captures long-range dependencies -->
-
 **Solution.** Vaswani et al. <a href="#ref-VSP17" id="ref-VSP17-back">[VSP+17]</a> introduced the Transformer, an encoder-decoder that dispenses with recurrence. Instead of the recurrent update above, each layer uses self-attention. Let $i$ and $j$ denote sequence indices (positions). At each layer, the representation at position $i$ is computed as a weighted sum over all positions $j$,
 
 $$
@@ -781,11 +673,7 @@ The query $q_i$, key $k_j$, and value $V_j$ are learned linear projections of th
 
 ## [2020. Large language models demonstrate in-context learning](#table-of-contents) {#ai-llm-2020}
 
-<!-- ### Problem. Adapting models to new tasks requires fine-tuning with labeled data -->
-
 **Problem.** By 2019, Transformer-based language models such as BERT and GPT-2 had been pretrained on large text corpora. The standard way to apply these models to a specific task was supervised fine-tuning. A practitioner took a pretrained model, collected labeled examples for the target task, and trained the model on those examples. Translation required labeled translation pairs. Sentiment analysis required labeled sentences. Code generation required labeled specification-code pairs. Each task demanded its own dataset and its own training run. Deploying a new capability meant fine-tuning, validating, and shipping a new model variant. The cost of data collection and the expertise required for training and deployment limited adoption to organizations with dedicated ML infrastructure.
-
-<!-- ### Solution. Scale enables few-shot learning from examples in the prompt -->
 
 **Solution.** Brown et al. <a href="#ref-BMR20" id="ref-BMR20-back">[BMR+20]</a> showed that fine-tuning could be dropped and demonstrated it at scale. A 175-billion-parameter model, trained only on next-token prediction over text, performed well across many tasks when given a few in-context examples and no gradient update. Smaller models had not shown the same capability, so scale mattered. The pretraining corpus contained many input–output style subsequences, such as translations, Q&A, and code with comments, so the model had already learned to continue them without task labels. At inference the input was a prompt of a few pairs plus the new query. A translation prompt could look like:
 
@@ -802,11 +690,7 @@ The model produced the continuation by computing $P(\text{next token} \mid \text
 
 ## [2021. Copilot and Codex bring AI code generation to mainstream development](#table-of-contents) {#ai-copilot-2021}
 
-<!-- ### Problem. Programmers spend significant time on mechanical tasks that do not require deep expertise -->
-
 **Problem.** Software engineering continued to face productivity bottlenecks. Significant time was spent on mechanical tasks, including implementing CRUD endpoints and validation logic, consulting documentation for library and API usage, searching codebases for analogous implementations, translating schemas to types and API specs to stubs, and writing unit tests with conventional arrange-act-assert structure. 
-
-<!-- ### Solution. AI assistants generate code from context but require expert verification -->
 
 **Solution.** Research had already shown that pretraining on code improved over general-purpose LMs. CodeBERT <a href="#ref-Fen20" id="ref-Fen20-back">[Fen+20]</a> and related work demonstrated that joint representations of code and natural language supported search, summarization, and completion. Codex <a href="#ref-CKB21" id="ref-CKB21-back">[CKB+21]</a> was a GPT model fine-tuned on publicly available code from GitHub. It used the same next-token, in-context paradigm as Brown et al., but with a code-heavy training distribution, and outperformed general-purpose models on code. GitHub Copilot <a href="#ref-Git21" id="ref-Git21-back">[Git21]</a> (June 2021) was the first mainstream assistant, with 55% faster task completion <a href="#ref-Git22" id="ref-Git22-back">[Git22]</a>. The model completed code as programmers typed. The abstraction was autocomplete at the level of functions and blocks. Verification remained necessary. Output was statistically plausible, not formally correct.
 
@@ -820,11 +704,7 @@ The model produced the continuation by computing $P(\text{next token} \mid \text
 
 ## [2022. RLHF aligns code models to programmer intent](#table-of-contents) {#ai-rlhf-2022}
 
-<!-- ### Problem. Base models generate plausible code that often misses intent -->
-
 **Problem.** Models optimized for next-token prediction did not reliably follow instructions or match user preference. A programmer asking to "add error handling" might receive technically valid code that didn't match their error-handling conventions. Early Copilot and Codex produced code that was statistically plausible but often misaligned with intent.
-
-<!-- ### Solution. Reward models trained on human preferences align output to what programmers want -->
 
 **Solution.** The fix was to add a second training phase that optimized the policy for human preference, not only for next-token likelihood. Here the policy is the code model that, given a prompt $x$, defines a distribution over completions $y$, written $\pi\_\theta(y \mid x)$ with parameters $\theta$. The procedure is reinforcement learning from human feedback (RLHF). It has two components. (1) A reward model and (2) an RL phase.
 
@@ -851,11 +731,7 @@ InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> a
 
 ## [2023. RAG grounds code generation in the codebase](#table-of-contents) {#ai-rag-2022}
 
-<!-- ### Problem. Context windows are too small to encompass real codebases -->
-
 **Problem.** A language model's context window is the maximum number of tokens (roughly, words or subwords) it can take as input in one call. Code-capable models of the Codex and Copilot era (2021–2022) had context windows of 2k–8k tokens. That was enough for a short prompt and a few in-context examples, but not for real codebases. Typical limits remained 4k–8k tokens through 2022. A programmer fixing a bug needed relevant files in context, but those limits could not hold them. Even a modest service spanning dozens of files and tens of thousands of lines exceeded the window, so the model never saw most of the code.
-
-<!-- ### Solution. Retrieval augments the prompt with relevant files and documentation -->
 
 **Solution.** RAG (retrieval-augmented generation) <a href="#ref-Lew20" id="ref-Lew20-back">[Lew+20]</a> was introduced for knowledge-intensive NLP in 2020. Code assistants adopted it for the codebase context problem in 2023. The delay reflected two factors. Code-specific retrieval infrastructure (repository indexing, code-aware embeddings) had to be developed. In addition, context limits became a pressing constraint only once coding assistants were widely adopted. RAG sidesteps the context limit by not sending the whole codebase. A retrieval step (e.g. semantic search over embeddings or a code index) selects a subset of files or snippets relevant to the programmer's request. Only that subset is concatenated into the prompt, so the model's fixed context window holds the query plus the retrieved material instead of the entire repo. The model's output is therefore grounded in actual codebase structure rather than generic patterns. Cursor, GitHub Copilot Chat, and others adopted RAG for codebase search. Programmers could point the assistant at a repo and get answers grounded in its structure and contents.
 
@@ -866,11 +742,7 @@ InstructGPT (March 2022) <a href="#ref-Ouy22" id="ref-Ouy22-back">[Ouy+22]</a> a
 
 ## [2023–2024. Long-context and agentic interfaces expand scope](#table-of-contents) {#ai-agentic-2023}
 
-<!-- ### Problem. RAG is a workaround. Assistants are reactive, not proactive -->
-
 **Problem.** RAG addressed context limits by supplying a retrieved subset of the codebase to the model, but the assistant remained a single-turn completer. It produced output only in response to the current prompt and had no ability to execute tools, query the repository, run tests, or incorporate execution results into the next step. Any task that required multiple steps (for example, fixing failing tests by running the test suite, reading failures, editing code, and re-running until green) therefore had to be orchestrated entirely by the programmer, who ran each step, read the outcome, and re-prompted by hand. The cognitive and manual burden of multi-step tasks stayed with the programmer rather than shifting to the assistant.
-
-<!-- ### Solution. Native long context and agentic tool use let the assistant plan, act, and iterate -->
 
 **Solution.** Two developments unfolded over 2023 and 2024.
 
@@ -887,8 +759,6 @@ A single request such as "fix the failing tests" could thus trigger a multi-step
 
 ## [2024. Extended reasoning and enterprise fine-tuning complete the AI coding assistant stack](#table-of-contents) {#ai-reasoning-2024}
 
-<!-- ### Problem. Standard models commit to each token before seeing the consequences -->
-
 **Problem.** By 2024, coding assistants combined RLHF, RAG, long-context windows, and agentic tool use. Two gaps remained.
 
 The first gap was the absence of an explicit reasoning phase before the model produced code. Many tasks benefited from weighing options before committing, such as diagnosing a failing test whose cause might lie in several files or choosing among plausible implementations. The autoregressive model used in these assistants did not. It generated one token at a time, at each step computing the distribution over the next token given the prefix and then emitting it.
@@ -898,8 +768,6 @@ $$P(x_t \mid x_1, \ldots, x_{t-1})$$
 That autoregressive model did not weigh alternatives before committing. When asked to fix a bug, it could output the first line of a patch immediately, without having considered other possible causes. A human might consider several alternatives before writing any code; such a model did not, and on those tasks its outputs were often wrong or suboptimal.
 
 The second gap was a distribution mismatch between model output and each organization's codebase. RAG and long-context windows both supplied the organization's code as input in the prompt, so that the model had access to it at inference. The weights, however, had been learned only on public corpora and did not change at inference. The model could reuse names or patterns from the prompt, but when the prompt did not fully determine style, structure, or naming, it fell back on what it had learned in training. Output often looked more like public repos than the organization's code, so programmers edited heavily or rejected it.
-
-<!-- ### Solution. Extended-reasoning models and enterprise fine-tuning complete the stack -->
 
 **Solution.** Each gap had a direct technical fix.
 
@@ -925,11 +793,7 @@ By 2024 the ecosystem had diversified. Developers could choose among multiple le
 
 ## [2024. Code evals establish comparable benchmarks and reveal the gap to real-world tasks](#table-of-contents) {#ai-benchmarks-2024}
 
-<!-- ### Problem. We lack objective measures of what AI coding assistants can and cannot do -->
-
 **Problem.** HumanEval was introduced alongside Codex in the 2021 Codex paper <a href="#ref-CKB21">[CKB+21]</a> and gave the field its first standardized benchmark for code generation. However, it only measured function-level generation from docstrings. Modifying a large, unfamiliar codebase from an ambiguous bug report was a different kind of work and still had no shared evaluation. The field could not separate algorithmic performance from real-world codebase capability, so capability claims that mixed the two were not distinguishable.
-
-<!-- ### Solution. SWE-bench fills the gap and reveals what remains hard -->
 
 **Solution.** SWE-bench <a href="#ref-JYW24" id="ref-JYW24-back">[JYW+24]</a> in 2024 supplied the missing benchmark for codebase-editing evaluation. SWE-bench Verified is the curated subset with validated, solvable tasks used for the results reported here. Each instance is an actual bug from open-source repos such as Django, Flask, Matplotlib, and Scikit-learn. The model gets the GitHub issue and must produce a patch that passes the project's test suite. Success depends on locating the relevant code, respecting architecture and invariants, and avoiding regressions.
 
