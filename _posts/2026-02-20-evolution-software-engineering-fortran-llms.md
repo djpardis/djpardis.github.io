@@ -304,7 +304,7 @@ Unix had made programs portable across machines that ran Unix. C made Unix porta
 
 <h2 id="internet-and-web" class="era-heading"><a href="#table-of-contents">Internet and Web</a></h2>
 
-This era saw the Internet become a universal substrate and the Web the primary way software reached users.
+This era saw the Internet become a common foundation and the Web the primary way software reached users.
 
 ## [1983. TCP/IP makes the Internet a universal network layer](#table-of-contents) {#tcpip-1983}
 
@@ -949,7 +949,7 @@ The historical framework above equips us with a lens to understand where AI codi
 
 ### The internet, cloud, and mobile eras put AI in context {#where-ai-fits}
 
- The internet (TCP/IP, 1983) became a universal substrate for connecting machines and distributing software. Cloud computing (AWS EC2, 2006) turned infrastructure from capital expenditure into operational expense and enabled elastic scaling. Mobile (iPhone and Android, 2007–2008) made the phone a general-purpose computer and established app stores as a dominant distribution channel. All three changed how software reached users. AI coding operates at a different layer. It alters how code is produced, not the substrate or platform. Nevertheless, our framework does not settle the magnitude of AI's economic impact relative to the internet, cloud, or mobile.
+ The internet (TCP/IP, 1983) became a common foundation for connecting machines and distributing software. Cloud computing (AWS EC2, 2006) turned infrastructure from capital expenditure into operational expense and enabled elastic scaling. Mobile (iPhone and Android, 2007–2008) made the phone a general-purpose computer and established app stores as a dominant distribution channel. All three changed how software reached users. AI coding operates at a different layer. It alters how code is produced, not how it reaches users. Nevertheless, our framework does not settle the magnitude of AI's economic impact relative to the internet, cloud, or mobile.
 
 ### Verification and maintenance costs determine whether AI displaces SaaS {#whether-ai-displace-saas}
 
