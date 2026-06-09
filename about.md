@@ -36,7 +36,7 @@ canonical_url: https://djpardis.com/
     <a class="link-card" href="https://thedataroom.app" target="_blank">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/data-room-app-card.png')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">The Data Room App</span>
+        <span class="link-card-title">the data room</span>
         <span class="link-card-domain">thedataroom.app</span>
       </div>
     </a>
