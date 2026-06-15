@@ -16,7 +16,7 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[Miscellany](https://github.com/djpardis){:target="_blank"}** — A few useful tools and utilities
+- **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Some useful tools I use and maintain
 
   <div class="link-cards">
     <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
@@ -42,7 +42,7 @@ canonical_url: https://djpardis.com/
     </a>
   </div>
 
-- <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Research and ongoing projects
+- <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Essays on data, software, and AI systems
 
   <div class="link-cards">
     {% for item in site.posts limit:3 %}
