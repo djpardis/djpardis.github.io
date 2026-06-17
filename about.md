@@ -16,7 +16,7 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Some tools I use and maintain
+- **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Tools I maintain and use
 
   <div class="link-cards">
     <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
