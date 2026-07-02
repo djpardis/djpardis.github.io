@@ -34,7 +34,7 @@ As it turns out, this is an exercise that a company inevitably repeats again and
 
 **Follow trends.** Don't ignore market trends. Following trends makes you more likely to get noticed, talked about, and funded. It's an easier ride if you want to take it.
 
-**Hire an accountant.** While it pays to follow trends, plan for the dry season. New trends always give way to newer trends — it's funny how that works.
+**Hire an accountant.** While it pays to follow trends, plan for the dry season. New trends always give way to newer trends; it's funny how that works.
 
 **Stand out.** Likewise, while following trends can be rewarding, sometimes it pays to focus on what you uniquely believe to be true. You can't expect a significant return without taking on a risk nobody else wants to take.
 
@@ -50,7 +50,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 **Ask for help.** Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected. Knowing when to ask, who to ask, and for what is a skill worth perfecting. 
 
-**Go after capital.** Raise capital to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit.
+**Get funding.** Raise money to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit.
 
 **Believe in yourself.** Be kind, especially to yourself. Self-confidence is the only thing you have going for you for a long time. Things won't ever be perfect, and that's okay.
 
