@@ -278,15 +278,52 @@ iframe ~ em {
   max-width: 100%;
 }
 
-/* ===== IMAGE SIZING (inline/markdown) ===== */
+/* ===== POST CONTENT OVERFLOW GUARDS =====
+ * Keep all post content inside the article column. Content that cannot shrink,
+ * such as code, tables, and equations, scrolls locally instead of widening the
+ * whole post.
+ */
+.container.content .post,
+.container.content .post * {
+  box-sizing: border-box;
+}
+
 .container.content .post {
+  max-width: 100%;
+  min-width: 0;
   overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .container.content .post a {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+.container.content .post img,
+.container.content .post svg,
+.container.content .post video,
+.container.content .post canvas,
+.container.content .post iframe,
+.container.content .post embed,
+.container.content .post object {
+  max-width: 100% !important;
+}
+
+.container.content .post img,
+.container.content .post video,
+.container.content .post canvas {
+  height: auto !important;
+}
+
+.container.content .post pre,
+.container.content .post .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== IMAGE SIZING (inline/markdown) ===== */
 
 img[style*="max-width: 500px"] {
   max-width: 500px !important;
@@ -1186,11 +1223,6 @@ p:has(+ .collapsible-section) {
 }
 
 /* Blog posts: tables — content width, centered, rules not a full grid (Poole uses width 100% + cell borders) */
-.container.content .post {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 .post table {
   margin: 1.25rem auto 1.5rem;
   width: auto;
@@ -1309,7 +1341,7 @@ p:has(+ .collapsible-section) {
   background-color: var(--post-table-hover-row);
 }
 
-@media (max-width: 30em) {
+@media (max-width: 768px) {
   .post table {
     display: block;
     width: 100%;
