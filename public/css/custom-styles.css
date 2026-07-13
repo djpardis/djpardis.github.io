@@ -312,6 +312,18 @@ iframe {
   margin: 0 auto !important;
 }
 
+/* MathJax display equations can be wider than the post column on mobile. */
+.container.content .post mjx-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container.content .post mjx-container[jax="CHTML"][display="true"] {
+  display: block !important;
+}
+
 /* Mobile responsive for iframes */
 @media (max-width: 768px) {
   iframe {
@@ -1299,8 +1311,12 @@ p:has(+ .collapsible-section) {
 
 @media (max-width: 30em) {
   .post table {
+    display: block;
+    width: 100%;
     font-size: 0.875rem;
-    max-width: calc(100% - 1rem);
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .post table th,
