@@ -3,8 +3,8 @@ layout: page
 title: Blog
 description: Blog posts by Pardis Noorzad on software, data, startups, and technology.
 keywords: software engineering, data, startups, technology, blog posts, pardis noorzad
-canonical_url: https://djpardis.com/blog
-permalink: /blog
+canonical_url: https://djpardis.com/blog/
+permalink: /blog/
 robots: noindex, follow
 sitemap: false
 ---

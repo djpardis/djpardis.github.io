@@ -279,6 +279,15 @@ iframe ~ em {
 }
 
 /* ===== IMAGE SIZING (inline/markdown) ===== */
+.container.content .post {
+  overflow-wrap: break-word;
+}
+
+.container.content .post a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 img[style*="max-width: 500px"] {
   max-width: 500px !important;
   display: block !important;
@@ -443,6 +452,12 @@ iframe {
 
 /* Mobile responsive - force 100% width on small screens */
 @media (max-width: 768px) {
+  .container.content .post img[style*="max-width"] {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
   img[style*="max-width: 500px"] {
     width: 100% !important;
     max-width: 100% !important;
