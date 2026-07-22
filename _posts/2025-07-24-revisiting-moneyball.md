@@ -133,7 +133,7 @@ The table below reproduces r² from a Bucknell University paper on MLB run scori
   </tbody>
 </table>
 
-Separate work on Southeastern Conference team seasons from 2014 through 2017 still regresses team runs on team on-base percentage at the college level, which supports treating the link as more than a one-off MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
+College baseball data shows the same on-base percentage to runs correlation, suggesting it is not just an MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
 The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.361 career OBP) and David Justice (.378 career OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
