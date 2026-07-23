@@ -247,7 +247,7 @@ More importantly, the streak occurred during a season where the A's won 103 game
 
 ### [You can build a player in aggregate.](#table-of-contents) {#you-can-build-a-player-in-aggregate}
 
-The A's discovered they could construct effective offensive production by combining players with complementary skills rather than seeking complete players. This insight challenged the traditional scouting preference for "five-tool players" who could hit for average, hit for power, run, field, and throw.
+The A's discovered they could build an effective offense by combining players with complementary skills rather than seeking complete players. This insight challenged the traditional scouting preference for "five-tool players" who could hit for average, hit for power, run, field, and throw.
 
 Instead of expensive superstars, the A's assembled a roster where different players contributed specific, undervalued skills:
 
