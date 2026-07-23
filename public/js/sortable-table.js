@@ -6,6 +6,8 @@
 (function () {
   function parseNumeric(text) {
     var s = String(text).trim().replace(/\u2212/g, '-');
+    // Strip currency symbols, thousands separators, and unit letters (e.g. "$108M").
+    s = s.replace(/[^0-9.\-]/g, '');
     if (!s.length) return NaN;
     if (s.charAt(0) === '.') s = '0' + s;
     var n = parseFloat(s);
@@ -43,7 +45,8 @@
     var rows = tbodyRows(tbody);
     var data = rows.map(function (tr) {
       var cell = tr.cells[colIndex];
-      var raw = cell ? cell.textContent.trim() : '';
+      var sortValue = cell ? cell.getAttribute('data-sort-value') : null;
+      var raw = sortValue !== null ? sortValue : (cell ? cell.textContent.trim() : '');
       var val = type === 'number' ? parseNumeric(raw) : raw.toLowerCase();
       return { tr: tr, val: val };
     });
