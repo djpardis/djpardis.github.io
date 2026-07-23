@@ -105,9 +105,10 @@ While scouts focused on batting average, home runs, and RBIs, Beane recognized t
 The table below reproduces r² from a Bucknell University paper on MLB run scoring that covers 146 MLB team seasons from 1996 through 2000 <a href="#ref1">[1]</a>. Each row regresses runs per game on the statistic in the first column.
 
 <table class="sortable" data-sort-default-col="2" data-sort-default-dir="desc">
+  <caption>MLB batting statistics and runs per game</caption>
   <thead>
     <tr>
-      <th scope="col" data-sort-type="text">
+      <th scope="col" class="txt" data-sort-type="text">
         <button type="button" class="sort-table__btn" aria-label="Sort by statistic name">
           <span class="sort-table__text">Stat</span>
           <span class="sort-table__sort-icon" aria-hidden="true"></span>
@@ -122,32 +123,60 @@ The table below reproduces r² from a Bucknell University paper on MLB run scori
     </tr>
   </thead>
   <tbody>
-    <tr><td>On-base plus slugging (OPS)</td><td>.900</td></tr>
-    <tr><td><strong>On-base percentage (OBP)</strong></td><td><strong>.835</strong></td></tr>
-    <tr><td>Slugging percentage (SLG)</td><td>.804</td></tr>
-    <tr><td>Batting average (BA)</td><td>.672</td></tr>
-    <tr><td>Home runs (HR)</td><td>.542</td></tr>
-    <tr><td>Walks (BB)</td><td>.404</td></tr>
-    <tr><td>Strikeouts (SO)</td><td>.078</td></tr>
-    <tr><td>Stolen bases (SB)</td><td>.001</td></tr>
+    <tr><td class="txt">On-base plus slugging (OPS)</td><td>.900</td></tr>
+    <tr class="mark"><td class="txt"><span>On-base percentage (OBP)</span></td><td>.835</td></tr>
+    <tr><td class="txt">Slugging percentage (SLG)</td><td>.804</td></tr>
+    <tr><td class="txt">Batting average (BA)</td><td>.672</td></tr>
+    <tr><td class="txt">Home runs (HR)</td><td>.542</td></tr>
+    <tr><td class="txt">Walks (BB)</td><td>.404</td></tr>
+    <tr><td class="txt">Strikeouts (SO)</td><td>.078</td></tr>
+    <tr><td class="txt">Stolen bases (SB)</td><td>.001</td></tr>
   </tbody>
 </table>
 
 College baseball data shows the same on-base percentage to runs correlation, suggesting it is not just an MLB artifact <a id="ref2-back" href="#ref2">[2]</a>.
 
-The math was simple. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.361 career OBP) and David Justice (.378 career OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
+The math was clear. Teams that get on base more frequently score more runs, and teams that score more runs win more games. Yet in 2002, players with high OBP were available at below-market prices. Players like Scott Hatteberg (.361 career OBP) and David Justice (.378 career OBP) were affordable because their most valuable skill, i.e., getting on base, wasn't appreciated sufficiently by the market.
 
 The strategy worked. The 2002 A's ranked 4th in baseball in OBP (.349) despite having the 3rd lowest payroll in baseball.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/obp1.png" alt="2002 A's OBP stats">
-  </div>
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/obp2.png" alt="2002 A's payroll stats">
-  </div>
+<div class="table-duo">
+<table class="sortable" data-sort-default-col="2" data-sort-default-dir="desc">
+  <caption>Top 5 teams by OBP</caption>
+  <thead>
+    <tr>
+      <th scope="col" class="txt" data-sort-type="text"><button type="button" class="sort-table__btn" aria-label="Sort by team"><span class="sort-table__text">Team</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by OBP"><span class="sort-table__text">OBP</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by payroll"><span class="sort-table__text">Payroll</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="txt">Boston Red Sox</td><td>.361</td><td data-sort-value="108366060">$108M</td></tr>
+    <tr><td class="txt">New York Yankees</td><td>.357</td><td data-sort-value="125928583">$126M</td></tr>
+    <tr><td class="txt">San Francisco Giants</td><td>.355</td><td data-sort-value="78299835">$78M</td></tr>
+    <tr class="mark"><td class="txt"><span>Oakland Athletics</span></td><td>.349</td><td data-sort-value="40004167">$40M</td></tr>
+    <tr><td class="txt">Anaheim Angels</td><td>.347</td><td data-sort-value="61721667">$62M</td></tr>
+  </tbody>
+</table>
+<table class="sortable" data-sort-default-col="3" data-sort-default-dir="asc">
+  <caption>Bottom 5 teams by payroll</caption>
+  <thead>
+    <tr>
+      <th scope="col" class="txt" data-sort-type="text"><button type="button" class="sort-table__btn" aria-label="Sort by team"><span class="sort-table__text">Team</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by OBP"><span class="sort-table__text">OBP</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by payroll"><span class="sort-table__text">Payroll</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="txt">San Diego Padres</td><td>.318</td><td data-sort-value="41425000">$41M</td></tr>
+    <tr><td class="txt">Minnesota Twins</td><td>.340</td><td data-sort-value="40225000">$40M</td></tr>
+    <tr class="mark"><td class="txt"><span>Oakland Athletics</span></td><td>.349</td><td data-sort-value="40004167">$40M</td></tr>
+    <tr><td class="txt">Montreal Expos</td><td>.332</td><td data-sort-value="38670500">$39M</td></tr>
+    <tr><td class="txt">Tampa Bay Devil Rays</td><td>.315</td><td data-sort-value="34380000">$34M</td></tr>
+  </tbody>
+</table>
 </div>
-*In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a href="#ref3">[3]</a><a href="#ref4">[4]</a>.*
+<p class="image-caption">In 2002, the A's achieved 4th highest OBP (.349) with 3rd lowest payroll ($40M) <a id="ref3-back" href="#ref3">[3]</a><a id="ref4-back" href="#ref4">[4]</a>.</p>
 
 ### [Scott Hatteberg was undervalued.](#table-of-contents) {#scott-hatteberg-was-undervalued}
 
@@ -178,15 +207,43 @@ The streak's climactic finish, Oakland blowing an 11–0 lead to Kansas City bef
 
 More importantly, the streak occurred during a season where the A's won 103 games despite having one of baseball's lowest payrolls.
 
-<div class="image-row">
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/wins1.png" alt="2002 A's wins stats">
-  </div>
-  <div class="image-container">
-    <img src="/files/pics/blog/2025/wins2.png" alt="2002 MLB payroll stats">
-  </div>
+<div class="table-duo">
+<table class="sortable" data-sort-default-col="2" data-sort-default-dir="desc">
+  <caption>Top 5 teams by wins</caption>
+  <thead>
+    <tr>
+      <th scope="col" class="txt" data-sort-type="text"><button type="button" class="sort-table__btn" aria-label="Sort by team"><span class="sort-table__text">Team</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by wins"><span class="sort-table__text">Wins</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by payroll"><span class="sort-table__text">Payroll</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="txt">New York Yankees</td><td>103</td><td data-sort-value="125928583">$126M</td></tr>
+    <tr class="mark"><td class="txt"><span>Oakland Athletics</span></td><td>103</td><td data-sort-value="40004167">$40M</td></tr>
+    <tr><td class="txt">Atlanta Braves</td><td>101</td><td data-sort-value="93470367">$93M</td></tr>
+    <tr><td class="txt">Anaheim Angels</td><td>99</td><td data-sort-value="61721667">$62M</td></tr>
+    <tr><td class="txt">Arizona Diamondbacks</td><td>98</td><td data-sort-value="102819999">$103M</td></tr>
+  </tbody>
+</table>
+<table class="sortable" data-sort-default-col="3" data-sort-default-dir="asc">
+  <caption>Bottom 5 teams by payroll</caption>
+  <thead>
+    <tr>
+      <th scope="col" class="txt" data-sort-type="text"><button type="button" class="sort-table__btn" aria-label="Sort by team"><span class="sort-table__text">Team</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by wins"><span class="sort-table__text">Wins</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+      <th scope="col" data-sort-type="number"><button type="button" class="sort-table__btn" aria-label="Sort by payroll"><span class="sort-table__text">Payroll</span><span class="sort-table__sort-icon" aria-hidden="true"></span></button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="txt">San Diego Padres</td><td>66</td><td data-sort-value="41425000">$41M</td></tr>
+    <tr><td class="txt">Minnesota Twins</td><td>94</td><td data-sort-value="40225000">$40M</td></tr>
+    <tr class="mark"><td class="txt"><span>Oakland Athletics</span></td><td>103</td><td data-sort-value="40004167">$40M</td></tr>
+    <tr><td class="txt">Montreal Expos</td><td>83</td><td data-sort-value="38670500">$39M</td></tr>
+    <tr><td class="txt">Tampa Bay Devil Rays</td><td>55</td><td data-sort-value="34380000">$34M</td></tr>
+  </tbody>
+</table>
 </div>
-*The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) <a href="#ref4">[4]</a><a href="#ref5">[5]</a>.*
+<p class="image-caption">The A's achieved 103 wins (tied for MLB lead) with the 3rd lowest payroll ($40M) <a href="#ref4">[4]</a><a id="ref5-back" href="#ref5">[5]</a>.</p>
 
 ### [You can build a player in aggregate.](#table-of-contents) {#you-can-build-a-player-in-aggregate}
 
@@ -212,8 +269,17 @@ Billy Beane famously told Michael Lewis, "My shit doesn't work in the playoffs,"
 
 The statistical evidence supports this theory. Since the Wild Card era began in 1995, the team with the best regular season record has won the World Series only 8 out of 29 times (a 28% success rate).
 
-![World Series winners](/files/pics/blog/2025/wswinners.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
-*World Series winners with best regular season record since 1995 and their win-loss records.*
+<p class="data-list-caption">World Series winners with the best regular season record since 1995, and their win-loss records</p>
+<ol class="data-list">
+  <li><span class="yr">1998</span> <span class="team">New York Yankees</span> <span class="rec">114–48</span></li>
+  <li><span class="yr">2007</span> <span class="team">Boston Red Sox</span> <span class="rec">96–66</span></li>
+  <li><span class="yr">2009</span> <span class="team">New York Yankees</span> <span class="rec">103–59</span></li>
+  <li><span class="yr">2013</span> <span class="team">Boston Red Sox</span> <span class="rec">97–65</span></li>
+  <li><span class="yr">2016</span> <span class="team">Chicago Cubs</span> <span class="rec">103–58</span></li>
+  <li><span class="yr">2018</span> <span class="team">Boston Red Sox</span> <span class="rec">108–54</span></li>
+  <li><span class="yr">2020</span> <span class="team">Los Angeles Dodgers</span> <span class="rec">43–17</span></li>
+  <li><span class="yr">2024</span> <span class="team">Los Angeles Dodgers</span> <span class="rec">98–64</span></li>
+</ol>
 
 The Oakland A's themselves became the perfect case study for this phenomenon. From 2000 to 2003, they averaged 98 wins per season, yet lost in the Division Series (first round of the playoffs) each of the four years, with each series going the full five games.
 

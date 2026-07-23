@@ -1222,34 +1222,96 @@ p:has(+ .collapsible-section) {
   margin-bottom: 0;
 }
 
-/* Blog posts: tables — content width, centered, rules not a full grid (Poole uses width 100% + cell borders) */
+/* Site-wide post data design.
+ * Every table inside .post inherits this typography, spacing, alignment, color,
+ * and responsive behavior. Add .sortable for sorting, wrap related tables in
+ * .table-duo, and use .data-list with .data-list-caption for ranked lists.
+ * The visual values live here so future post data stays consistent. */
+:root {
+  --data-outer-rule: 1px solid #dcd9ec;
+  --data-header-rule: 2px solid rgba(125, 120, 181, 0.45);
+  --data-row-rule: #ececf2;
+  --data-mark: rgba(140, 255, 50, 0.30);
+  --data-font-size: 0.8125rem;
+  --data-cell-padding: 0.45rem;
+  --data-pair-gap: 0.75rem;
+  --data-pair-half-gap: 0.375rem;
+  --data-list-width: 24rem;
+}
+
 .post table {
-  margin: 1.25rem auto 1.5rem;
+  margin: 1.5rem auto;
   width: auto;
-  max-width: calc(100% - var(--post-table-inline-gutter));
+  max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid var(--post-table-border-outer);
-  font-size: 0.9375rem;
+  border: none;
+  border-top: var(--data-outer-rule);
+  border-bottom: var(--data-outer-rule);
+  font-size: var(--data-font-size);
   line-height: 1.5;
   box-shadow: none;
   color: #454545;
+  background-color: #fff;
+}
+
+.post table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: var(--data-font-size);
+  color: #313131;
+  padding: 0 0.45rem 0.5rem;
 }
 
 .post table th,
 .post table td {
-  padding: 0.55rem 1.25rem;
+  padding: var(--data-cell-padding);
   border-style: none;
-  border-bottom: 1px solid var(--post-table-border-row);
+  border-bottom: 1px solid var(--data-row-rule);
+  text-align: right;
   vertical-align: middle;
+  font-variant-numeric: tabular-nums;
 }
 
 .post table thead th {
-  font-weight: 600;
-  text-align: center;
+  font-weight: 700;
   color: #313131;
-  background-color: var(--post-table-header-bg);
-  border-bottom: 2px solid var(--post-table-header-rule);
+  background: transparent;
+  border-bottom: var(--data-header-rule);
+  white-space: nowrap;
+}
+
+/* Text columns: first column by default, or any cell tagged .txt */
+.post table th:first-child,
+.post table td:first-child,
+.post table th.txt,
+.post table td.txt {
+  text-align: left;
+}
+
+/* Two-column tables get a little extra separation between label and value. */
+.post table:has(thead th:nth-child(2):last-child) tbody td:first-child {
+  padding-right: 0.75rem;
+}
+
+.post table:has(thead th:nth-child(2):last-child) tbody td:last-child {
+  padding-left: 0.75rem;
+}
+
+/* Emphasis row: only the label wears the highlighter marker, like inline .highlight-text */
+.post table tbody tr.mark td {
+  font-weight: 700;
+  color: #313131;
+}
+
+.post table tbody tr.mark td:first-child span,
+.post table tbody tr.mark td.txt span {
+  background: var(--data-mark);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 3px;
 }
 
 /* Sortable tables: header buttons, sort indicator, focus ring */
@@ -1261,38 +1323,52 @@ p:has(+ .collapsible-section) {
 .post table.sortable thead th .sort-table__btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: flex-end;
+  gap: 0.4rem;
   width: 100%;
   min-height: 2.35rem;
   margin: 0;
-  padding: 0.5rem 0.85rem;
+  padding: var(--data-cell-padding);
   box-sizing: border-box;
   border: none;
   background: transparent;
   font-family: inherit;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 700;
   font-style: inherit;
   line-height: inherit;
   letter-spacing: inherit;
   color: inherit;
   cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-appearance: none;
   appearance: none;
   box-shadow: none;
 }
 
+.post table.sortable thead th:first-child .sort-table__btn,
+.post table.sortable thead th.txt .sort-table__btn {
+  justify-content: flex-start;
+}
+
+.post table:has(thead th:nth-child(2):last-child)
+  thead th:first-child .sort-table__btn {
+  padding-right: 0.75rem;
+}
+
+.post table:has(thead th:nth-child(2):last-child)
+  thead th:last-child .sort-table__btn {
+  padding-left: 0.75rem;
+}
+
 .post table.sortable thead th .sort-table__text {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
 }
 
 .post table.sortable thead th .sort-table__text sup {
-  font-size: 0.88em;
+  font-size: 0.75em;
   vertical-align: 0.2em;
 }
 
@@ -1302,33 +1378,20 @@ p:has(+ .collapsible-section) {
 
 .post table.sortable thead th .sort-table__btn:focus-visible {
   outline: 2px solid #7d78b5;
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
 
 .post table.sortable thead th .sort-table__sort-icon {
   flex-shrink: 0;
-  min-width: 1.1em;
-  font-size: 1.05em;
-  font-weight: 600;
+  min-width: 1em;
+  font-size: 1em;
+  font-weight: 700;
   color: #7d78b5;
   line-height: 1;
 }
 
-.post table.sortable thead th .sort-table__text sup {
-  font-size: 0.75em;
-}
-
 .post table tbody tr:last-child td {
   border-bottom-style: none;
-}
-
-.post table tbody td:first-child {
-  text-align: left;
-}
-
-.post table tbody td:last-child {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
 }
 
 /* Undo Poole zebra in posts so rows stay flat unless hovered */
@@ -1341,11 +1404,112 @@ p:has(+ .collapsible-section) {
   background-color: var(--post-table-hover-row);
 }
 
+/* Paired tables use the article column so they never collide with the sticky
+ * table of contents. Both tables use the same type and spacing as single tables. */
+.post .table-duo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem var(--data-pair-gap);
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.post .table-duo > table {
+  flex: 1 1 calc(50% - var(--data-pair-half-gap));
+  margin: 0;
+  width: calc(50% - var(--data-pair-half-gap));
+  max-width: 100%;
+}
+
+.post .table-duo th,
+.post .table-duo td {
+  white-space: nowrap;
+}
+
+.post .table-duo.sortable thead th,
+.post .table-duo table.sortable thead th {
+  padding: 0;
+}
+
+/* Data list (e.g. World Series winners): same centered width, type, and
+ * horizontal inset for both its title and rows. */
+.post .data-list-caption {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: var(--data-font-size);
+  color: #313131;
+  margin: 1.5rem auto 0.5rem;
+  max-width: var(--data-list-width);
+  padding: 0 0.5rem 0 1.25rem;
+  box-sizing: border-box;
+}
+
+.post .data-list {
+  list-style: none;
+  counter-reset: data-list;
+  margin: 1.5rem auto;
+  max-width: var(--data-list-width);
+  padding: 0;
+  border-top: var(--data-outer-rule);
+  border-bottom: var(--data-outer-rule);
+  font-size: var(--data-font-size);
+  background-color: #fff;
+}
+
+.post .data-list-caption + .data-list {
+  margin-top: 0;
+}
+
+.post .data-list li {
+  counter-increment: data-list;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid var(--data-row-rule);
+}
+
+.post .data-list li:last-child {
+  border-bottom: none;
+}
+
+.post .data-list li:hover {
+  background-color: var(--post-table-hover-row);
+}
+
+.post .data-list li::before {
+  content: counter(data-list);
+  flex: 0 0 auto;
+  min-width: 1.4em;
+  text-align: right;
+  color: #7d78b5;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.post .data-list .yr {
+  font-weight: 700;
+  color: #313131;
+  font-variant-numeric: tabular-nums;
+}
+
+.post .data-list .team {
+  flex: 1 1 auto;
+}
+
+.post .data-list .rec {
+  color: #757575;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .post table {
     display: block;
     width: 100%;
-    font-size: 0.875rem;
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1354,6 +1518,22 @@ p:has(+ .collapsible-section) {
   .post table th,
   .post table td {
     padding: 0.45rem 0.85rem;
+  }
+
+  .post .table-duo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .post .table-duo > table {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* Let stacked, full-width duo tables wrap instead of clipping/scrolling */
+  .post .table-duo th,
+  .post .table-duo td {
+    white-space: normal;
   }
 }
 
