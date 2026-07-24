@@ -1257,12 +1257,150 @@ p:has(+ .collapsible-section) {
 
 .post table caption {
   caption-side: top;
+  position: relative;
   text-align: left;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: var(--data-font-size);
   color: #313131;
-  padding: 0 0.45rem 0.5rem;
+  padding: 0 2rem 0.5rem 0.45rem;
+}
+
+.post table caption.table-expand-caption--actions-only {
+  min-height: 1.5rem;
+}
+
+.post .table-expand-button {
+  position: absolute;
+  top: -0.2rem;
+  right: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #7d78b5;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.post .table-expand-button:hover {
+  background-color: rgba(125, 120, 181, 0.1);
+}
+
+.post .table-expand-button:focus-visible {
+  outline: 2px solid #7d78b5;
+  outline-offset: 2px;
+}
+
+.post .table-expand-button svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.post .table-expand-dialog {
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
+  max-height: 90vh;
+  margin: auto;
+  padding: 2.75rem 0.75rem 0.75rem;
+  border: 1px solid #7d78b5;
+  border-radius: 0;
+  background: #fff;
+  color: #313131;
+  overflow: visible;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.post .table-expand-dialog::backdrop {
+  background: rgba(49, 49, 49, 0.75);
+}
+
+.post .table-expand-dialog__close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #313131;
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.post .table-expand-dialog__close:hover {
+  background-color: rgba(125, 120, 181, 0.1);
+}
+
+.post .table-expand-dialog__close:focus-visible {
+  outline: 2px solid #7d78b5;
+  outline-offset: 2px;
+}
+
+.post .table-expand-dialog__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  user-select: none;
+  z-index: 1;
+}
+
+.post .table-expand-dialog__nav--previous {
+  left: -60px;
+}
+
+.post .table-expand-dialog__nav--next {
+  right: -60px;
+}
+
+.post .table-expand-dialog__nav:hover {
+  background-color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.post .table-expand-dialog__nav:focus-visible {
+  outline: 2px solid #7d78b5;
+  outline-offset: 2px;
 }
 
 .post table th,
@@ -1441,14 +1579,20 @@ p:has(+ .collapsible-section) {
 
 /* Data list (e.g. World Series winners): same centered width, type, and
  * horizontal inset for both its title and rows. */
+.post .data-list-block {
+  max-width: var(--data-compact-width);
+  margin: 1.5rem auto;
+}
+
 .post .data-list-caption {
+  position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: var(--data-font-size);
   color: #313131;
   margin: 1.5rem auto 0.5rem;
   max-width: var(--data-compact-width);
-  padding: 0 0.5rem 0 1.25rem;
+  padding: 0 2rem 0 1.25rem;
   box-sizing: border-box;
 }
 
@@ -1466,6 +1610,16 @@ p:has(+ .collapsible-section) {
 
 .post .data-list-caption + .data-list {
   margin-top: 0;
+}
+
+.post .data-list-block .data-list-caption {
+  max-width: none;
+  margin: 0 0 0.5rem;
+}
+
+.post .data-list-block .data-list {
+  max-width: none;
+  margin: 0;
 }
 
 .post .data-list li {
@@ -1511,7 +1665,37 @@ p:has(+ .collapsible-section) {
   white-space: nowrap;
 }
 
+.post .table-expand-dialog__content {
+  min-width: min-content;
+  max-width: calc(100vw - 3.5rem);
+  max-height: calc(90vh - 3.5rem);
+  overflow: auto;
+}
+
+.post .table-expand-dialog .table-expand-button {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .post .table-expand-dialog__nav {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .post .table-expand-dialog__nav--previous {
+    left: 10px;
+  }
+
+  .post .table-expand-dialog__nav--next {
+    right: 10px;
+  }
+
+  .post .table-expand-dialog__nav:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
   .post table {
     display: block;
     width: 100%;
