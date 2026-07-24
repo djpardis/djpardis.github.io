@@ -123,7 +123,6 @@
     if (!post || document.querySelector('.table-expand-dialog[open]')) return;
 
     var dialog = document.createElement('dialog');
-    var closeButton = document.createElement('button');
     var previousButton = document.createElement('button');
     var nextButton = document.createElement('button');
     var content = document.createElement('div');
@@ -134,11 +133,7 @@
     var currentExpandButton = expandButton;
 
     dialog.className = 'table-expand-dialog';
-
-    closeButton.type = 'button';
-    closeButton.className = 'table-expand-dialog__close';
-    closeButton.setAttribute('aria-label', 'Close expanded data');
-    closeButton.textContent = '\u00d7';
+    dialog.tabIndex = -1;
 
     function configureNavigationButton(button, className, label, text, offset) {
       button.type = 'button';
@@ -182,7 +177,6 @@
     content.className = 'table-expand-dialog__content';
     content.setAttribute('aria-live', 'polite');
 
-    dialog.appendChild(closeButton);
     if (expandableData.length > 1) {
       dialog.appendChild(previousButton);
       dialog.appendChild(nextButton);
@@ -214,13 +208,18 @@
 
       var rect = currentTarget.getBoundingClientRect();
       var computedStyle = window.getComputedStyle(currentTarget);
-      var availableWidth = Math.max(window.innerWidth - 64, rect.width);
-      var availableHeight = Math.max(window.innerHeight - 96, rect.height);
+      var isMobile = window.innerWidth <= 768;
+      var availableWidth = Math.max(window.innerWidth - 48, 200);
+      var availableHeight = Math.max(
+        window.innerHeight - (isMobile ? 160 : 96),
+        160
+      );
       var scale = Math.min(
         1.75,
         availableWidth / rect.width,
         availableHeight / rect.height
       );
+      if (!isMobile) scale = Math.max(1, scale);
 
       originalStyle = {
         width: currentTarget.style.width,
@@ -260,10 +259,6 @@
       currentExpandButton.focus();
     }
 
-    closeButton.addEventListener('click', function () {
-      dialog.close();
-    });
-
     dialog.addEventListener('click', function (event) {
       if (event.target === dialog) dialog.close();
     });
@@ -273,7 +268,7 @@
     showItem(currentIndex);
     dialog.showModal();
     document.body.style.overflow = 'hidden';
-    closeButton.focus();
+    dialog.focus();
   }
 
   function createExpandButton(label) {
