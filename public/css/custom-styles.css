@@ -1314,7 +1314,7 @@ p:has(+ .collapsible-section) {
   max-width: calc(100vw - 2rem);
   max-height: 90vh;
   margin: auto;
-  padding: 2.75rem 0.75rem 0.75rem;
+  padding: 0.35rem 0.75rem 0.75rem;
   border: 1px solid #7d78b5;
   border-radius: 0;
   background: #fff;
@@ -1326,37 +1326,6 @@ p:has(+ .collapsible-section) {
 
 .post .table-expand-dialog::backdrop {
   background: rgba(49, 49, 49, 0.75);
-}
-
-.post .table-expand-dialog__close {
-  position: absolute;
-  top: 0.55rem;
-  right: 0.7rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  color: #313131;
-  font: inherit;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: none;
-}
-
-.post .table-expand-dialog__close:hover {
-  background-color: rgba(125, 120, 181, 0.1);
-}
-
-.post .table-expand-dialog__close:focus-visible {
-  outline: 2px solid #7d78b5;
-  outline-offset: 2px;
 }
 
 .post .table-expand-dialog__nav {
@@ -1668,7 +1637,7 @@ p:has(+ .collapsible-section) {
 .post .table-expand-dialog__content {
   min-width: min-content;
   max-width: calc(100vw - 3.5rem);
-  max-height: calc(90vh - 3.5rem);
+  max-height: calc(90vh - 1.5rem);
   overflow: auto;
 }
 
@@ -1677,31 +1646,55 @@ p:has(+ .collapsible-section) {
 }
 
 @media (max-width: 768px) {
+  .post .table-expand-dialog {
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100vh - 1rem);
+    padding: 0.35rem 0.5rem 4rem;
+  }
+
+  .post .table-expand-dialog__content {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 5rem);
+  }
+
   .post .table-expand-dialog__nav {
-    position: fixed;
+    position: absolute;
+    top: auto;
+    bottom: 0.65rem;
+    transform: none;
     width: 44px;
     height: 44px;
     font-size: 20px;
   }
 
   .post .table-expand-dialog__nav--previous {
-    left: 10px;
+    left: 0.75rem;
   }
 
   .post .table-expand-dialog__nav--next {
-    right: 10px;
+    right: 0.75rem;
   }
 
   .post .table-expand-dialog__nav:hover {
-    transform: translateY(-50%) scale(1.05);
+    transform: scale(1.05);
   }
 
   .post table {
     display: block;
     width: 100%;
     max-width: 100%;
+    border-top: 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .post table:has(thead th:nth-child(2):last-child) {
+    display: table;
+    width: min(var(--data-compact-width), 100%);
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: visible;
   }
 
   .post table th,
