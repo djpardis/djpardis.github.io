@@ -45,13 +45,13 @@ sitemap: false
   [Scale By the Bay: Code and Data in the Age of AI](https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud), November 15, 2023  
   🎥 [video](https://www.youtube.com/watch?v=WqNCBJeM3PA&list=PLNESult6cnOlHK5bRvdT8f2UnoyZ9TfKW&index=40), 📰 [coverage 1](https://twitter.com/ScaleByTheBay/status/1722755722901934481?s=20), [2](https://twitter.com/ScaleByTheBay/status/1723398456574644417?s=20)
 
-  *Abstract.* Data exchange is integral to business collaboration. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods companies use to exchange data. We then discuss solutions that better match the efficiency and security standards of today.
+  *Abstract.* Cross-company data pipelines are often built as one-off integrations that are difficult to test, monitor, secure, and audit. In this talk, we examine how cloud infrastructure can support end-to-end data exchange across organizations through connections across different cloud and data platforms, automated validation, shared observability, and verifiable transaction records.
 
 - Rethinking B2B data exchange and collaboration  
   [Crunch Conference Budapest](https://crunchconf.com/2023/talk/pardis-talk), October 6, 2023  
   🎥 [video](https://www.youtube.com/watch?v=RnQb7zWRL6w&list=PLcTa2e7_ENN-jaHtBTEXRPKNuBjMXm_xb&index=36), 📰 [coverage](https://crafthub.events/crunch-data-conference-budapest/)
 
-  *Abstract.* Data exchange is integral to business collaboration. However, data exchange pipelines are time consuming to build, prone to leaks, difficult to monitor, and costly to audit. In this talk, we present an overview of the methods companies use to exchange data. We then discuss solutions that better match the efficiency and security standards of today.
+  *Abstract.* Business data collaboration takes many forms, including file transfers, shared databases, APIs, and data clean rooms. In this talk, we compare these methods across security, simplicity, and speed, then consider how companies can collaborate without requiring their partners to adopt the same tools or technical architecture.
 
 - The state of cross-company data exchange  
   [Data Council Austin](https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange), March 30, 2023  
