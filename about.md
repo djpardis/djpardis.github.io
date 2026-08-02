@@ -33,11 +33,11 @@ canonical_url: https://djpardis.com/
         <span class="link-card-domain">github.com</span>
       </div>
     </a>
-    <a class="link-card" href="https://thedataroom.app" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/data-room-app-card.png')"></div>
+    <a class="link-card" href="https://trailmix.tools/" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">the data room</span>
-        <span class="link-card-domain">thedataroom.app</span>
+        <span class="link-card-title">trail mix</span>
+        <span class="link-card-domain">trailmix.tools</span>
       </div>
     </a>
   </div>
