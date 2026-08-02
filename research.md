@@ -37,7 +37,7 @@ sitemap: false
 
 - General Folders: The first AI-powered data logistics company  
   [Demo Day: Techstars San Diego Powered by SDSU](https://www.eventbrite.com/e/demo-day-techstars-san-diego-powered-by-sdsu-tickets-721547095787), December 7, 2023  
-  📰 [coverage 1](https://www.techstars.com/newsroom/new-class-san-diego-sdsu), [2](https://www.linkedin.com/feed/update/urn:li:activity:7128131114807787520/)
+  🎞️ [slides](https://docs.google.com/presentation/d/1uWkfP6V1sGZTvkuHGNrNzLULpwP-Rg6aJx7o7RVVx-k/edit?usp=sharing), 📰 [coverage 1](https://www.techstars.com/newsroom/new-class-san-diego-sdsu), [2](https://www.linkedin.com/feed/update/urn:li:activity:7128131114807787520/)
 
   *Abstract.* Join us at Snapdragon Stadium for the first ever Techstars San Diego powered by San Diego State University Demo Day. Meet the incredible cohort of companies as they showcase their progress.
 
