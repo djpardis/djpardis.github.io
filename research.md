@@ -17,6 +17,12 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
 
+- Cueport. A local-first music player for DJs  
+  [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), July 12, 2026  
+  🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🌐 [Cueport website](https://usecueport.com)
+
+  *Abstract.* DJs spend years building music libraries and crates in software such as Serato, but accessing that work on another device often means relying on cloud services or rebuilding it elsewhere. This talk presents Cueport, a local-first music player where the Mac app reads the Serato library and remains the source of truth, while an iPhone companion pairs over the local network to receive crates and play them anywhere.
+
 - The role of B2B data collaboration in marketing  
   [Marketing Analytics & Data Science (MADS)](https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772), October 22, 2024  
   🎞️ [slides](https://docs.google.com/presentation/d/1-L0A9uRdJyWI_jJIuQyNO2Cqj5rzxmkHdcU26s6hn1I/edit?usp=sharing)
@@ -131,12 +137,14 @@ sitemap: false
 
   *Abstract.* The conversation includes the importance of data collaboration and sharing, the challenges and complexities of data sharing in various industries, the need for efficient and secure solutions, and the underlying definitions and dimensions of the data exchange problem—including infrastructure, security, economics, user needs, and more!
 
+<!--
 - Head of Data Science at Healthcare Tech #93  
   with [Grant Ingersoll](https://www.linkedin.com/in/grantingersoll/)  
   [Develomentor](https://develomentor.com/), June 29, 2020  
   🎙️ [podcast episode](https://www.listennotes.com/podcasts/develomentor/pardis-noorzad-head-of-data-YCLkfnTI5ZX/)
 
   *Abstract.* Thanks to Grant, the episode has turned into a good review of my work history.
+-->
 </details>
 
 <details class="collapsible-section" markdown="1">
