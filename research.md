@@ -45,7 +45,7 @@ sitemap: false
   [Scale By the Bay: Code and Data in the Age of AI](https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud), November 15, 2023  
   🎥 [video](https://www.youtube.com/watch?v=WqNCBJeM3PA&list=PLNESult6cnOlHK5bRvdT8f2UnoyZ9TfKW&index=40), 📰 [coverage 1](https://twitter.com/ScaleByTheBay/status/1722755722901934481?s=20), [2](https://twitter.com/ScaleByTheBay/status/1723398456574644417?s=20)
 
-  *Abstract.* Cross-company data pipelines are often built as one-off integrations that are difficult to test, monitor, secure, and audit. In this talk, we examine how cloud infrastructure can support end-to-end data exchange across organizations through connections across different cloud and data platforms, automated validation, shared observability, and verifiable transaction records.
+  *Abstract.* Cross-company data pipelines are often built as one-off integrations that are difficult to test, monitor, secure, and audit. In this talk, we examine the challenges of moving data between organizations across different clouds and data platforms, including fragmented tooling, limited visibility, changing requirements, and the difficulty of maintaining security and compliance across company boundaries.
 
 - Rethinking B2B data exchange and collaboration  
   [Crunch Conference Budapest](https://crunchconf.com/2023/talk/pardis-talk), October 6, 2023  
