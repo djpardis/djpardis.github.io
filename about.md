@@ -19,6 +19,13 @@ canonical_url: https://djpardis.com/
 - **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Tools I maintain and use
 
   <div class="link-cards">
+    <a class="link-card" href="https://trailmix.tools/" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png')"></div>
+      <div class="link-card-body">
+        <span class="link-card-title">trail mix</span>
+        <span class="link-card-domain">trailmix.tools</span>
+      </div>
+    </a>
     <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
       <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/newsletter-card.jpg')"></div>
       <div class="link-card-body">
@@ -31,13 +38,6 @@ canonical_url: https://djpardis.com/
       <div class="link-card-body">
         <span class="link-card-title">form</span>
         <span class="link-card-domain">github.com</span>
-      </div>
-    </a>
-    <a class="link-card" href="https://trailmix.tools/" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">trail mix</span>
-        <span class="link-card-domain">trailmix.tools</span>
       </div>
     </a>
   </div>
