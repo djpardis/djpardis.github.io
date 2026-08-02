@@ -30,8 +30,8 @@ sitemap: false
   *Abstract.* This presentation explores the concept of data collaboration and its use cases in marketing. We'll review how marketers leverage data collaboration to drive decision-making, enhance customer experiences, and achieve business outcomes. We'll also discuss current practices, challenges, and potential solutions for streamlining data sharing and enabling seamless collaboration across organizations.
 
 - A new era in B2B data collaboration  
-  [MDS Fest 2.0](https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud), April 10, 2024  
-  🎥 [video](https://www.youtube.com/watch?v=JTUFUPzDM1c)
+  [MDS Fest 2.0](https://www.secoda.co/mds-fest-2/a-new-era-in-b2b-data-exchange), April 10, 2024  
+  🎞️ [slides](https://docs.google.com/presentation/d/1UX_FrXTweIPae8rs5rbFemuGcNyRc0gfZVZ6vSKYJoM/)
 
   *Abstract.* Businesses collaborate through data — every contract includes a data sharing or transfer clause. However, data collaboration tools have a long way to go to serve modern enterprise needs. In this talk, we will discuss some of the macro trends and practices impacting products in the data collaboration space. Some of these topics remain open and evolving debates.
 
