@@ -39,6 +39,21 @@ text = bundle.read_text()
 text = text.replace("history:Ne(`./`)", "history:Ne(`/talks/cueport/`)")
 bundle.write_text(text)
 
+asset_paths = {
+    "./cueport-logo.svg": "/talks/cueport/cueport-logo.svg",
+    "./dj-booth-wide.jpg": "/talks/cueport/dj-booth-wide.jpg",
+    "./dj-booth-closeup.jpg": "/talks/cueport/dj-booth-closeup.jpg",
+    "./qr-usecueport.svg": "/talks/cueport/qr-usecueport.svg",
+    "./videos/final-final.mp4": "/talks/cueport/videos/final-final.mp4",
+    "./videos/final-final-mobile.mp4": "/talks/cueport/videos/final-final-mobile.mp4",
+}
+
+for js in (dest / "assets").glob("*.js"):
+    js_text = js.read_text()
+    for old, new in asset_paths.items():
+        js_text = js_text.replace(old, new)
+    js.write_text(js_text)
+
 css_files = list((dest / "assets").glob("index-*.css"))
 if len(css_files) != 1:
     raise SystemExit(f"Expected one Slidev CSS bundle, found {len(css_files)}")
