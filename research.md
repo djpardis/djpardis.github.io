@@ -19,7 +19,7 @@ sitemap: false
 
 - Cueport: A local-first music player for DJs  
   [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), July 12, 2026  
-  🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ [slides](/talks/cueport/), 🌐 [website](https://usecueport.com)
+  🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ <a href="/talks/cueport/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://usecueport.com)
 
   *Abstract.* DJs spend years building music libraries and crates in software such as Serato, but accessing that work on another device often means relying on cloud services or rebuilding it elsewhere. This talk presents Cueport, a local-first music player where the Mac app reads the Serato library and remains the source of truth, while an iPhone companion pairs over the local network to receive crates and play them anywhere.
 
