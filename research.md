@@ -61,14 +61,14 @@ sitemap: false
 
 - Making an impact with data  
   with [Gorkem Yurtseven](https://www.linkedin.com/in/gorkemy/), [Britt Allen](https://britt-allen.github.io/), moderated by [Elizabeth Dlha](https://twitter.com/elizabeth_dlha)  
-  [Data Mash #2](https://www.meetup.com/data-mash/events/285750133/), June 2, 2022  
+  [Data Mash #2](https://www.meetup.com/data-mash/), June 2, 2022  
   🎞️ [slides](https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing)
 
   *Abstract.* After introducing [General Folders](https://generalfolders.com), we'll review three impactful data projects. First, the design of OKRs to encourage collaboration among product teams at Twitter; second, the feature creation pipeline for fraud detection at Paytm; and finally, sales enablement at Carbon Health via risk quantification.
 
 - Data transfer challenges in evaluating AI platforms  
-  [apply(meetup)](https://www.applyconf.com/apply-meetup-february-2022/), February 10, 2022  
-  🎥 [video](https://www.applyconf.com/agenda/data-transfer-challenges-in-evaluating-mlops-platforms/), 📃 [blog post](https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167), 📰 [coverage](https://jameskle.com/writes/tecton-apply-meetup2022)
+  [apply(meetup)](https://www.tecton.ai/apply/session-video-archive/data-transfer-challenges-in-evaluating-mlops-platforms/), February 10, 2022  
+  🎥 [video](https://www.youtube.com/watch?v=_9APN-SSobw), 📃 [blog post](https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167), 📰 [coverage](https://jameskle.com/writes/tecton-apply-meetup2022)
 
   *Abstract.* Not so long ago, I met with over 30 AI companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies in providing access to their data. Then I discuss potential solutions.
 
@@ -95,7 +95,7 @@ sitemap: false
 
 - Building teams and culture that support ML innovation  
   with [Ziad Asghar](https://www.linkedin.com/in/ziad-asghar-794404/), [Ameen Kazerouni](https://www.linkedin.com/in/ameenkazerouni/), moderated by [Sam Charrington](https://www.linkedin.com/in/samcharrington/)  
-  [TWIMLcon](https://twimlcon.com/sessions/building-teams-and-culture-that-support-ml-innovation/), January 22, 2021  
+  [TWIMLcon](https://twimlai.com/sessions/building-teams-culture-that-support-ml-innovation), January 22, 2021  
   🎥 [video](https://youtu.be/YJVNVo378Jw)
 
   *Abstract.* Traditional approaches to managing technical projects can be at odds with achieving success with machine learning. In this session, we discuss how ML and AI executives can build effective teams, support them with the right processes and tools, and shift the broader organizational culture in ways that reinforce innovation in machine learning.
@@ -109,7 +109,8 @@ sitemap: false
 
 - Culture & organization for effective ML at scale  
   with [Eric Colson](https://www.linkedin.com/in/ecolson/) and [Jennifer Prendki](https://www.linkedin.com/in/jennifer-prendki/), moderated by [Maribel Lopez](https://www.linkedin.com/in/maribellopez/)  
-  [TWIMLcon](https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/), September 27, 2019
+  [TWIMLcon](https://twimlai.com/sessions/culture-organization-effective-ml-scale), September 27, 2019  
+  🎥 [video](https://www.youtube.com/watch?v=V2qkEGER4zU)
 
   *Abstract.* Hear from people that have experienced startups and large corporations in a range of industries reveal tips to work faster, more efficiently, and create an org-wide culture that supports effective ML.
 
@@ -156,31 +157,31 @@ sitemap: false
 
   *Abstract.* Online social networks are ubiquitous graphs. To test algorithms that scale with the size and order of these networks, we require synthetic samples. In this talk, we go over several methods for generating random graphs representative of online social networks. We are especially interested in the M-GEOP model ([Bonato et al., 2014](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0106052)), and in assessing the fit of these models to the Facebook dataset.
 
-- Efficient classification based on sparse regression*  
+- Efficient classification based on sparse regression  
   [AUT](http://aut.ac.ir/aut/), July 17, 2012  
   🎞️ [slides](/files/slides/defense_slides.pdf)
 
   *Abstract.* Master's thesis defense slides.
 
-- SPARROW: SPARse appROximation Weighted regression*  
+- SPARROW: SPARse appROximation Weighted regression  
   [UdeM](http://www.iro.umontreal.ca/?lang=en), March 12, 2012 and [SUT](http://www.en.sharif.edu/), February 22, 2012  
   🎞️ [slides](/files/slides/sparse_approximation_weighted_regression.pdf), 📰 [UdeM-McGill-mPrime ML seminar ad](https://mailman.iro.umontreal.ca/mailman3/hyperkitty/list/lisa_seminaires@iro.umontreal.ca/message/M4TWNW2L6G4Y5WD42RNPMDPOYWLU2KHN/)
 
   *Abstract.* We propose sparse approximation weighted regression (SPARROW), a nonparametric method of regression that takes advantage of the sparse linear approximation of a query point. SPARROW employs weights based on sparse approximation in the context of locally constant, locally linear, and locally quadratic regression to generate better estimates than for e.g., k-nearest neighbor regression and more generally, kernel-weighted local polynomial regression. Our experimental results show that SPARROW performs competitively.
 
-- Sparse coding and dictionary learning*  
+- Sparse coding and dictionary learning  
   [SUT](http://www.sharif.ir/en/), October 5, 2011  
   🎞️ [slides](/files/slides/sparse_coding_and_dictionary_learning.pdf)
 
   *Abstract.* Sparse coding is achieved by solving an under-determined system of linear equations under sparsity constraints. We briefly look at several algorithms that solve the resulting optimization problem (exactly or approximately). We then see how this optimization principle can be applied in both a supervised and unsupervised context: multiclass classification and feature learning, respectively. Next, we talk about dictionary learning and some of its well-known instances. Applications of dictionary learning include image denoising and inpainting.
 
-- Feature learning with deep networks for image classification*  
+- Feature learning with deep networks for image classification  
   [SUT](http://www.sharif.ir/en/), May 18, 2011  
   🎞️ [slides](/files/slides/feature_learning_with_deep_networks_for_image_classification.pdf)
 
   *Abstract.* An image can be represented at different levels, starting from pixels, going on to edges, to parts, to objects, and beyond. Over the years, many attempts have been made at engineering useful descriptors that are able to extract low-to-high level features from images. But what if we could make this process automatic? What if we could "learn" to detect layer after layer of features of increasing abstraction and complexity? After all, it would be impossible for us to foresee and hard-code all the kinds of invariances necessary to build features for our ever more complicated tasks. In this talk, we go over several unsupervised feature learning methods that have been in the making since 2006.
 
-- Computational learning theory*  
+- Computational learning theory  
   [AUT](http://aut.ac.ir/), April 26, 2011  
   🎞️ [slides](/files/slides/computational_learning_theory.pdf)
 
@@ -192,13 +193,13 @@ sitemap: false
 
   *Abstract.* A review of Gaussian mixture models and the EM algorithm.
 
-- High dimensional data and dimensionality reduction*  
+- High dimensional data and dimensionality reduction  
   [AUT](http://aut.ac.ir/), February 1, 2011  
   🎞️ [slides](/files/slides/high-dimensional_data_and_dimensionality_reduction.pdf)
 
   *Abstract.* A review of dimensionality reduction techniques with applications.
 
-- The split Bregman method for total variation denoising*  
+- The split Bregman method for total variation denoising  
   [AUT](http://aut.ac.ir/), May 30, 2010  
   🎞️ [slides](/files/slides/the_split_bregman_method_for_l1_regularized_problems.pdf)
 
@@ -208,16 +209,16 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Publications</h3></summary>
 
-- Efficient classification based on sparse regression*  
+- Efficient classification based on sparse regression  
   MSc Thesis, Amirkabir University of Technology, July 2012  
   📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/Noorzad2012c.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
 
-- Regression with sparse approximations of data*  
+- Regression with sparse approximations of data  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   European Signal Processing Conference (EUSIPCO), 2012  
   📃 [paper](/files/papers/Noorzad2012a.pdf), 📰 [poster](http://vbn.aau.dk/files/71866593/poster.pdf)
 
-- On automatic music genre recognition by sparse representation classification using auditory temporal modulations*  
+- On automatic music genre recognition by sparse representation classification using auditory temporal modulations  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   Computer Music Modeling and Retrieval: Lecture Notes in Computer Sciences (LNCS). Springer, 2012  
   📃 [paper](/files/papers/SturmNoorzad2012.pdf)
