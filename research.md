@@ -21,7 +21,7 @@ sitemap: false
   [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), July 12, 2026  
   🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ <a href="/talks/cueport/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://usecueport.com)
 
-  *Abstract.* DJs spend years building music libraries and crates in software such as Serato, but accessing that work on another device often means relying on cloud services or rebuilding it elsewhere. This talk presents Cueport, a local-first music player where the Mac app reads the Serato library and remains the source of truth, while an iPhone companion pairs over the local network to receive crates and play them anywhere.
+  *Abstract.* A DJ's Serato library represents years of work in crates, cue points, tags, and prep notes. It all lives on the gig laptop, but DJs want to prepare sets on trains, flights, and long walks. This talk is about [Cueport](https://usecueport.com), a local-first mobile player for music you own, but away from that one machine. The talk covers when to use a CRDT, how Cueport's LAN sync works, and the seven local-first ideals in practice.
 
 - The role of B2B data collaboration in marketing  
   [Marketing Analytics & Data Science (MADS)](https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772), October 22, 2024  
