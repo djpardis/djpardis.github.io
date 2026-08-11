@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" role="img"
+  aria-label="An onset-strength curve over time. Evenly spaced green dots mark the beats that dynamic programming places, one about every beat period P. Beats sit on strong onset peaks where possible, one beat is kept on a weak spot to preserve even spacing, and a strong off-beat peak is skipped because it would break the spacing.">
+  <defs>
+    <marker id="bdp-end" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a403a"/>
+    </marker>
+    <marker id="bdp-start" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#5a403a"/>
+    </marker>
+  </defs>
+
+  <style>
+    #bdp text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: #5a403a; }
+    .bdp-label { font-size: 20px; }
+    .bdp-small { font-size: 17px; fill: #765f57; }
+    .bdp-axis  { font-size: 17px; fill: #765f57; }
+  </style>
+
+  <g id="bdp">
+    <!-- filled onset-strength curve -->
+    <path d="M60,330 L60,320 L140,150 L195,300 L240,315 L290,145 L345,290 L365,185 L400,295 L440,260 L490,305 L540,315 L590,150 L650,295 L700,315 L740,155 L800,295 L850,315 L890,150 L940,315 L940,330 Z"
+      fill="#f3dde1" fill-opacity="0.75"/>
+    <path d="M60,320 L140,150 L195,300 L240,315 L290,145 L345,290 L365,185 L400,295 L440,260 L490,305 L540,315 L590,150 L650,295 L700,315 L740,155 L800,295 L850,315 L890,150 L940,315"
+      fill="none" stroke="#a33d52" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- time axis -->
+    <line x1="50" y1="330" x2="955" y2="330" stroke="#5a403a" stroke-opacity="0.45" stroke-width="1.5" marker-end="url(#bdp-end)"/>
+    <text class="bdp-axis" x="912" y="352">time</text>
+    <text class="bdp-axis" x="34" y="250" transform="rotate(-90 34 250)">onset strength</text>
+
+    <!-- chosen beat path: one dot about every period P -->
+    <polyline points="140,150 290,145 440,260 590,150 740,155 890,150"
+      fill="none" stroke="#2f7d4f" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.9"/>
+
+    <!-- vertical guides from beats to axis -->
+    <g stroke="#2f7d4f" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.5">
+      <line x1="140" y1="150" x2="140" y2="330"/>
+      <line x1="290" y1="145" x2="290" y2="330"/>
+      <line x1="440" y1="260" x2="440" y2="330"/>
+      <line x1="590" y1="150" x2="590" y2="330"/>
+      <line x1="740" y1="155" x2="740" y2="330"/>
+      <line x1="890" y1="150" x2="890" y2="330"/>
+    </g>
+
+    <!-- skipped off-beat peak -->
+    <circle cx="365" cy="185" r="8" fill="none" stroke="#765f57" stroke-width="2" stroke-dasharray="3 3"/>
+
+    <!-- chosen beats -->
+    <g fill="#2f7d4f" stroke="#fffdf9" stroke-width="2">
+      <circle cx="140" cy="150" r="9"/>
+      <circle cx="290" cy="145" r="9"/>
+      <circle cx="440" cy="260" r="9"/>
+      <circle cx="590" cy="150" r="9"/>
+      <circle cx="740" cy="155" r="9"/>
+      <circle cx="890" cy="150" r="9"/>
+    </g>
+
+    <!-- period bracket between two beats -->
+    <line x1="590" y1="105" x2="740" y2="105" stroke="#5a403a" stroke-width="1.5" marker-start="url(#bdp-start)" marker-end="url(#bdp-end)"/>
+    <line x1="590" y1="99" x2="590" y2="150" stroke="#5a403a" stroke-width="1" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+    <line x1="740" y1="99" x2="740" y2="155" stroke="#5a403a" stroke-width="1" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+    <text class="bdp-label" x="665" y="93" text-anchor="middle">P = one beat period</text>
+
+    <!-- callout: beats sit on strong onsets -->
+    <text class="bdp-small" x="70" y="80">Beat sits on a strong onset</text>
+    <line x1="140" y1="92" x2="140" y2="139" stroke="#765f57" stroke-width="1" stroke-opacity="0.6"/>
+
+    <!-- callout: skipped off-beat peak -->
+    <text class="bdp-small" x="398" y="184">off-beat peak skipped</text>
+    <line x1="392" y1="180" x2="374" y2="185" stroke="#765f57" stroke-width="1" stroke-opacity="0.6"/>
+
+    <!-- callout: weak spot still gets a beat -->
+    <text class="bdp-small" x="440" y="415" text-anchor="middle">Weak onset, beat kept for spacing</text>
+    <line x1="440" y1="398" x2="440" y2="272" stroke="#765f57" stroke-width="1" stroke-opacity="0.6"/>
+  </g>
+</svg>

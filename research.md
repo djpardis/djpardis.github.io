@@ -17,6 +17,12 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
 
+- trail mix: Open tempo, key, and waveform analysis  
+  [FOSSY 2026](https://2026.fossy.ca/schedule/presentation/416/), August 9, 2026  
+  🎞️ <a href="/talks/trail-mix-fossy-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools)
+
+  *Abstract.* [Cueport](https://usecueport.com) is a local-first music player for people who own their music. Cueport imports the tempo, key, and beat grids that Serato calculates. However, listeners who don't have DJ tools have no analysis to import. This is where [trail mix](https://trailmix.tools) comes in. We built an open source Rust toolkit that estimates tempo and key, detects beat switch and key change, and generates compact waveform data. This talk shows how the analysis works and how the results are evaluated.
+
 - Cueport: A local-first music player for DJs  
   [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), July 12, 2026  
   🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ <a href="/talks/cueport/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://usecueport.com)
