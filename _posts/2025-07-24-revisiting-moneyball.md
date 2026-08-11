@@ -285,13 +285,13 @@ The Oakland A's themselves became the perfect case study for this phenomenon. Fr
 
 Academic analysis by Stanford <a href="#ref6">[6]</a> found no correlation between regular season and postseason performance (p = .6201), while a comprehensive Braves Journal study concluded that playoffs are "90% crapshoot, 10% skill" <a href="#ref7">[7]</a>.
 
-The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP, which is the cornerstone of their analytical advantage, declined 11% in the playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edges.
+The small sample size problem is a fundamental issue in the playoffs. While batting statistics require 200+ plate appearances to stabilize, playoff series provide players with only 15–30 plate appearances, resulting in massive variance. Even Oakland's signature OBP, which is the cornerstone of their analytical advantage, declined 11% in the playoffs (.305 vs .341 regular season), demonstrating how short series neutralize statistical edge.
 
 This randomness explains why sabermetricians often view regular-season performance as a more reliable indicator of a team's true quality than its playoff results.
 
 ### [It's hard not to be romantic about baseball.](#table-of-contents) {#its-hard-not-to-be-romantic-about-baseball}
 
-The A's story showed ordinary players achieving extraordinary things when given the opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
+The A's story showed ordinary players achieve extraordinary things when given the opportunity. The analytics enhanced rather than detracted from the game with moments like Bradford's submarine delivery, Hatteberg's transformation from injured catcher to first baseman, or the electricity of the 20-game streak.
 
 ![Baseball romance](/files/pics/blog/2025/romantic.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *From [here](https://x.com/MLB/status/1914109400413016515){:target="_blank"}.*
@@ -310,13 +310,13 @@ The A's were excellent at drafting talent. And their lineup in 2002 was made up 
 
 Miguel Tejada (international signing, 1993) and Eric Chavez (10th overall, 1996) provided MVP-caliber offense and Gold Glove defense. Both were premium draft investments that matured into franchise cornerstones.
 
-Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 RBIs while providing leadership throughout the season. Barry Zito won the AL Cy Young Award with a 23–5 record and 2.75 ERA. These weren't marginal players elevated by analytics; they were elite performers by any standard.
+Miguel Tejada won the 2002 AL MVP award, hitting .308 with 34 home runs and 131 RBIs while providing leadership throughout the season. Barry Zito won the AL Cy Young Award with a 23–5 record and 2.75 ERA. These weren't marginal players.
 
 Oakland executives Billy Beane, David Forst, and scout Ron Washington later acknowledged that "there's no way the A's make the playoffs every year from 2000 through 2003, and no way a best-selling book and Brad Pitt movie ever happen, if not for the efforts of the Big Three" <a href="#ref8">[8]</a>. The Big Three compiled a collective 261–131 record from 1999–2006, providing the foundation that allowed Beane's analytical approach to flourish.
 
 ### [Moneyball promotes low payrolls in baseball, thus ruining the game.](#table-of-contents) {#moneyball-promotes-low-payrolls}
 
-Oakland won 103 games in 2002 with the third-lowest payroll in baseball. Sports economists have argued that *Moneyball* became a cultural reference point in arguments about spending restraint <a id="ref11-back" href="#ref11">[11]</a>. The critique is that the story made low payrolls look like the intelligent default rather than a limitation.
+Oakland won 103 games in 2002 with the third-lowest payroll in baseball. Sports economists have argued that *Moneyball* became a cultural reference point in arguments about spending restraint <a id="ref11-back" href="#ref11">[11]</a>. The critique is that the story made low payrolls look like the intelligent choice rather than a limitation.
 
 However, the actual lesson of Moneyball for the league was not "cheap is good." In fact, the most successful application of Moneyball principles came from the Boston Red Sox, who were anything but frugal.
 
@@ -325,6 +325,22 @@ After the 2002 season, Red Sox ownership (led by John W. Henry) tried to hire Bi
 Although Beane declined, the Red Sox promoted Theo Epstein to GM in November 2002. Under Epstein, they adopted a more data-driven approach, complemented by their substantial financial resources. In 2004, only two years after the attempt to hire Beane, the Red Sox broke their 86-year Curse of the Bambino by winning the World Series, and again in 2007.
 
 When DePodesta left Oakland in 2004 to become the Dodgers' GM, he was replaced by Farhan Zaidi. Zaidi carried forward the analytical tradition through the Dodgers (2014–2018) before joining the San Francisco Giants, where his 2021 team achieved a franchise-record 107 wins, demonstrating how Moneyball principles scale effectively when combined with greater financial resources.
+
+<div class="image-row">
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/moneyball-2021-sf-giants-01.png" alt="Oracle Park concourse view during a 2021 Giants game">
+  </div>
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/moneyball-2021-sf-giants-02.png" alt="Giants fans during a 2021 game at Oracle Park">
+  </div>
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/moneyball-2021-sf-giants-03.png" alt="Oracle Park field during a 2021 Giants game at night">
+  </div>
+  <div class="image-container">
+    <img src="/files/pics/blog/2025/moneyball-2021-sf-giants-04.png" alt="Oracle Park crowd during a 2021 Giants game">
+  </div>
+</div>
+<p class="image-caption">The 2021 SF Giants.</p>
 
 Fast forward to today, the Dodgers won the 2024 World Series while employing one of baseball's largest analytics departments (with over 47 personnel, compared to 3 in 1988) and maintaining one of MLB's highest payrolls. Their championship validated that analytics enables more effective spending rather than reduced spending.
 
