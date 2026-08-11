@@ -1,0 +1,1181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="trail mix: Open tempo, key, and waveform analysis"
+    />
+    <title>trail mix: Open tempo, key, and waveform analysis</title>
+    <link rel="icon" type="image/png" href="/talks/trail-mix-fossy-2026/assets/favicon-almond-CYwZmozJ.png" />
+    <script type="module" crossorigin src="/talks/trail-mix-fossy-2026/assets/index-DKob3uzK.js"></script>
+    <link rel="stylesheet" crossorigin href="/talks/trail-mix-fossy-2026/assets/index-DGYu5ni8.css">
+  </head>
+  <body>
+    <!-- Generated from deck.md by scripts/build-deck.mjs. Do not edit directly. -->
+    <a class="skip-link" href="#slides">Skip to slides</a>
+
+    <div class="reveal">
+      <div class="slides" id="slides">
+        <section class="title-slide" data-footer="false">
+<div class="title-layout">
+  <div class="title-copy">
+    <div class="title-rule" aria-hidden="true"></div>
+    <p class="eyebrow">FOSSY 2026 · Vancouver, BC</p>
+    <h1>
+      <span>trail mix: Open tempo, key, and</span>
+      <span>waveform analysis</span>
+    </h1>
+    <div class="speaker-lockup">
+      <strong class="contact-name">Pardis Noorzad</strong>
+      <span class="contact-separator" aria-hidden="true">·</span>
+      <a class="contact-site" href="https://djpardis.com" target="_blank" rel="noopener noreferrer">djpardis.com</a>
+      <span class="contact-separator" aria-hidden="true">·</span>
+      <a class="contact-url" href="https://trailmix.tools" target="_blank" rel="noopener noreferrer">trailmix.tools</a>
+    </div>
+  </div>
+  <img
+    class="title-illustration"
+    src="/talks/trail-mix-fossy-2026/assets/trail-mix-abstract-DXi19OYa.png"
+    alt="Abstract illustration of nuts, seeds, dried fruit, and chocolate"
+  />
+</div>
+        <aside class="notes">
+          <h3>trail mix: Open tempo, key, and waveform analysis</h3>
+          <p>trail mix is an open source Rust toolkit for tempo, key, and waveform analysis of music files.</p>
+          <p>The talk explains why trail mix exists, how its analyzers work, and why the project is open source.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Let's start with Cueport</h2>
+        <p class="lead">Cueport is a local-first music player for people who own their music.</p>
+<div class="dj-photo-row" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px;" aria-label="Pardis Noorzad DJing">
+  <div style="aspect-ratio:4 / 3; overflow:hidden;"><img src="/talks/trail-mix-fossy-2026/assets/dj-solo-CX2mm8SH.png" alt="Pardis DJing with headphones and a laptop" style="object-position:50% 30%;" /></div>
+  <div style="aspect-ratio:4 / 3; border-radius:16px; overflow:hidden;"><img src="/talks/trail-mix-fossy-2026/assets/dj-new-parish-PzEwAb6N.png" alt="Pardis DJing a live set at The New Parish in Oakland" /></div>
+</div>
+        <aside class="notes">
+          <h3>Let's start with Cueport</h3>
+          <p>Cueport starts from the way DJs already work. Music files and DJ metadata live on the gig laptop, and tools such as Serato are used both for live playback and set preparation.</p>
+          <p>That metadata includes crates, cue points, tags, notes, labels, tempo, key, and waveform data. Cueport lets DJs cache selected music and metadata on a phone so they can review and edit away from the laptop, including in places with weak internet such as a flight or a venue.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Cueport is local-first</h2>
+        <p class="lead">The desktop and phone pair directly on a local network or hotspot.  <br/>The QR code carries connection details; data moves both ways after pairing.</p>
+<div class="cueport-pairing" aria-label="Cueport local-first pairing over LAN or hotspot with bidirectional sync">
+  <div class="pairing-device pairing-desktop">
+    <strong>Desktop app</strong>
+    <span>canonical library</span>
+  </div>
+  <div class="pairing-center">
+    <div class="pairing-network">LAN or hotspot</div>
+    <div class="pairing-qr" aria-label="Pairing QR code">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="pairing-label">scan QR to pair</div>
+  </div>
+  <div class="pairing-device pairing-phone">
+    <strong>Phone app</strong>
+    <span>selected replica</span>
+  </div>
+  <div class="pairing-rail pairing-to-phone">
+    <span class="pairing-direction">→</span>
+    <strong>Desktop to phone</strong>
+    <span>selected crates, tracks, analysis, cues</span>
+  </div>
+  <div class="pairing-rail pairing-to-desktop">
+    <span class="pairing-direction">←</span>
+    <strong>Phone to desktop</strong>
+    <span>edits return for desktop review</span>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Cueport is local-first</h3>
+          <p>Cueport copies selected music and associated metadata from a laptop to a phone over a local connection. The usual path is LAN transfer on a private Wi-Fi network. On public Wi-Fi, where client isolation may block device-to-device traffic, the user can pair through a hotspot instead.</p>
+          <p>The QR code carries the connection details so the phone knows which desktop library to pair with.</p>
+          <p>Edits can be made on the phone while away from the laptop. When the devices pair again, mobile edits sync back to the desktop app for review.</p>
+          <p>Pairing is bidirectional: desktop data can move to the phone, and reviewed phone edits can move back to the desktop library.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Cueport v1 workflow</h2>
+        <p class="lead">Cueport v1 uses Serato as the source of truth. <br/> The desktop database imports audio and metadata from Serato.  <br/> The mobile database is a cached replica.</p>
+<div class="cueport-workflow" aria-label="Cueport workflow between Serato, desktop, and mobile">
+  <div class="workflow-system workflow-serato">
+    <strong>Serato library</strong>
+    <span>source of truth</span>
+  </div>
+  <div class="workflow-system workflow-desktop">
+    <strong>Desktop SQLite</strong>
+    <span>canonical working copy</span>
+  </div>
+  <div class="workflow-system workflow-mobile">
+    <strong>Mobile SQLite</strong>
+    <span>cached replica</span>
+  </div>
+  <div class="workflow-rail workflow-import">
+    <span class="workflow-direction">→</span>
+    <strong>Import from Serato</strong>
+    <span>library metadata and existing analysis</span>
+  </div>
+  <div class="workflow-rail workflow-mobile-sync">
+    <span class="workflow-direction">→</span>
+    <strong>Sync to mobile</strong>
+    <span>selected library copy</span>
+  </div>
+  <div class="workflow-rail workflow-edit-return">
+    <span class="workflow-direction">←</span>
+    <strong>Mobile edits return</strong>
+    <span>reviewed on desktop before publishing</span>
+  </div>
+  <div class="workflow-rail workflow-writeback">
+    <span class="workflow-direction">←</span>
+    <strong>Write back to Serato</strong>
+    <span>restore point first, then approved library update</span>
+  </div>
+  <div class="workflow-gate">
+    <strong>One desktop review queue</strong>
+    <span>desktop edits enter directly; synced edits join the same queue</span>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Cueport v1 workflow</h3>
+          <p>Cueport v1 uses Serato as the source of truth for music file analysis and DJ metadata. The desktop database is the canonical working copy, and the mobile database is a cached replica to work away from the laptop.</p>
+          <p>Desktop edits enter the review queue directly. Mobile edits sync back to desktop first, joining the same queue. Once approved the changes write back to Serato.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">The gap</div>
+        <h2>Problem: DJ tool dependence</h2>
+        <p class="lead">DJ tools offer tempo, key, and beat analysis for DJ workflows.  <br/>Mainstream tools need their own analysis layer.</p>
+<div class="dependency-grid">
+  <div class="dependency-card">Tempo, key, and beat grids exist inside DJ tools</div>
+  <div class="dependency-card">Those systems are designed for DJ workflows</div>
+  <div class="dependency-card">Mainstream tools need their own analysis layer</div>
+</div>
+        <aside class="notes">
+          <h3>Problem: DJ tool dependence</h3>
+          <p>Cueport v1 depends on DJ tools for tempo, key, and beat analysis. That works for DJs who already use Serato, Rekordbox, or Traktor, but it does not help people who own and organize music outside those applications.</p>
+          <p>trail mix removes that dependency by generating the analysis directly from audio files.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">trail mix</div>
+        <h2>Solution: trail mix</h2>
+        <p class="lead">trail mix accepts an audio file and returns tempo, key, beat positions, and waveform data as versioned JSON.</p>
+<img
+  class="slide-figure pipeline-figure"
+  src="/talks/trail-mix-fossy-2026/assets/qa-pipeline-Cl-WAkfz.svg?v=20260809b"
+  alt="Facade calling beat-salad, key-lime, and sampler-platter and merging one versioned JSON result"
+/>
+        <aside class="notes">
+          <h3>Solution: trail mix</h3>
+          <p>An audio file first goes through the codec layer, which decodes (MP3, FLAC, WAV, AIFF, or MP4) into mono samples and a sample rate. The audio is now numbers: one amplitude value after another. Mono means the left and right channels have been combined into one signal, and the sample rate tells the analyzers how much time each sample represents.</p>
+          <p>trail mix uses deterministic signal-processing algorithms that compute from samples, not a trained neural model, cloud API, or separate analysis service.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Decode and normalization</h2>
+        <p class="lead">Audio files become a mono sample buffer along with its sample rate</p>
+<ul class="slide-body">
+  <li><strong>Decoding</strong>: an audio file becomes evenly spaced amplitude values</li>
+  <li><strong>Downmixing</strong>: sample buffers combine into one mono signal</li>
+  <li><strong><code>f32</code></strong>: a 32-bit floating-point number for storing those amplitudes</li>
+  <li><strong><code>u32</code></strong>: a non-negative 32-bit integer for storing the sample rate</li>
+</ul>
+<div class="decode-flow" aria-label="Decode and downmix steps before analysis">
+  <div class="decode-input">
+    <div class="decode-label">Input file</div>
+    <div class="decode-formats">MP3 · FLAC · WAV · AIFF · MP4</div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-step decode-codec">
+    <div class="decode-label">Decode to samples</div>
+    <div class="decode-fields">
+      <span>left/right sample buffers</span>
+    </div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-step decode-downmix">
+    <div class="decode-label">Downmix</div>
+    <div class="decode-fields">
+      <span>(left + right) / 2</span>
+      <span>= one mono buffer</span>
+    </div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-output">
+    <div class="decode-label">Analyzer input</div>
+    <div class="decode-fields">
+      <code>samples: &amp;[f32]</code>
+      <code>sample_rate: u32</code>
+    </div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Decode and normalization</h3>
+          <p>Decoding turns an audio file such as MP3, FLAC, WAV, AIFF, or MP4 into evenly spaced amplitude values stored as sample buffers, usually one buffer for the left speaker and one buffer for the right speaker. The decoding layer then downmixes those buffers into one mono buffer. Downmixing combines the left and right samples at the same time position into one amplitude value, commonly by averaging them. After that step every format looks the same to the analyzers: samples and a sample rate. The core takes the buffer, not a file, so an app that already has playback samples can skip file decoding entirely.</p>
+        </aside>
+        </section>
+
+        <section class="demo-video-slide" data-footer="false">
+<video class="demo-video" controls playsinline preload="auto">
+  <source src="/talks/trail-mix-fossy-2026/assets/cueport-demo-DBs3vpt0.mp4" type="video/mp4" />
+</video>
+        <aside class="notes">
+          <h3>Cueport, live</h3>
+          <p>Recorded walkthrough of Cueport running trail mix. This is how both paths work.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Design</div>
+        <h2>Why Rust for trail mix</h2>
+        <p class="lead">trail mix is a Rust library because Cueport is a Rust app and the analysis has to run on-device with the same result every time.</p>
+<div class="why-rust-grid">
+  <div class="why-rust-card card-same-lang">
+    <div class="why-rust-term">Same language as Cueport</div>
+    <div class="why-rust-def">Cueport calls trail mix like any Rust crate, with no cross-language glue code to write or maintain.</div>
+  </div>
+  <div class="why-rust-card card-no-runtime">
+    <div class="why-rust-term">No separate runtime</div>
+    <div class="why-rust-def">Compiles into Cueport's binary. Unlike Python or Java, no interpreter or garbage collector ships with it.</div>
+  </div>
+  <div class="why-rust-card card-memory-safe">
+    <div class="why-rust-term">Memory-safe decoding</div>
+    <div class="why-rust-def">Unlike C or C++, a malformed audio file can't corrupt memory or open a security hole.</div>
+  </div>
+  <div class="why-rust-card card-native-perf">
+    <div class="why-rust-term">Native DSP performance</div>
+    <div class="why-rust-def">Compiles to native machine code, so the analyzers' heavy per-sample math runs fast.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Why Rust for trail mix</h3>
+          <ul>
+            <li>Same language as Cueport. Cueport is already written in Rust, so it can use trail mix directly, the same way it uses any other Rust crate. A C++ or Python implementation would need extra glue code to connect the languages.</li>
+            <li>Trail mix compiles right into the Cueport app, so there is no separate program to install and no background service. It just runs inside the app, with no internet. Languages like Python or Java would carry their own runtime along with the app, like a CPython interpreter or the JVM.</li>
+            <li>Safe with bad files. Opening someone's audio file means reading whatever is inside it, and a broken or hand-crafted file is a common way audio readers written in C or C++ crash or expose memory-safety bugs. Rust prevents many classes of memory corruption in the analysis code.</li>
+            <li>Fast enough on-device. The analyzers do a lot of math on every slice of the audio, and that has to feel instant on a laptop. Rust turns into fast machine code, so that heavy math keeps up.</li>
+            <li>The tradeoff. There was no existing Rust library for this kind of music analysis, so the analyzers were written in this project. The next accuracy step is to add small trained models rather than rewrite everything in another language.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Design</div>
+        <h2>Why we built our own</h2>
+        <p class="lead">The existing libraries in this space are solid, but no single one gave us a permissive, in-process API that also detects mid-track tempo and key changes and emits a versioned format.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Language / API</th>
+      <th>License</th>
+      <th>Benchmark baseline</th>
+      <th>Why not used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>stratum-dsp</strong></td>
+      <td>Rust</td>
+      <td class="status-good">MIT OR Apache-2.0</td>
+      <td class="bench-yes"><span class="bench-badge">Yes</span></td>
+      <td>We should reach out about collaboration</td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY</strong></td>
+      <td>Python</td>
+      <td class="status-good">MIT</td>
+      <td class="bench-yes"><span class="bench-badge">Yes</span></td>
+      <td>Needs a model runtime</td>
+    </tr>
+    <tr>
+      <td><strong>libKeyFinder</strong></td>
+      <td>C++</td>
+      <td class="status-weak">GPL-3.0</td>
+      <td class="bench-yes"><span class="bench-badge">Yes</span></td>
+      <td>License</td>
+    </tr>
+    <tr>
+      <td><strong>Essentia</strong></td>
+      <td>C++ and Python</td>
+      <td class="status-weak">AGPLv3 or paid</td>
+      <td class="bench-yes"><span class="bench-badge">Yes</span></td>
+      <td>License</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Why we built our own</h3>
+          <p>Skipping these was not about reinventing for its own sake. Each is strong at what it does, and we benchmark trail mix against several of them. The problem is that none could ship inside the product, and the reasons split cleanly into license, runtime, and scope.</p>
+          <ul>
+            <li>stratum-dsp is the closest match: pure Rust, zero FFI, permissively licensed under MIT or Apache-2.0, and aimed at DJ apps. It reports one global BPM and key per track, while trail mix adds mid-track tempo and key changes, so the two projects overlap and could work together. Segmentation could be contributed upstream, or stratum-dsp could sit behind the same versioned Analysis JSON as an optional backend. It is benchmarked here as the closest permissive-Rust reference.</li>
+            <li>S-KEY is the most accurate key estimator on this list and is MIT licensed, so again not a license problem. It is a self-supervised model that needs a tensor runtime such as PyTorch or ONNX plus model weights, which is a heavier dependency than a small native Rust crate. It is used as a benchmark baseline, and the plan on the future-work slide is an ONNX version behind a feature gate.</li>
+            <li>libKeyFinder is the accurate key detector Mixxx uses, and it is used as a benchmark baseline, but it is GPL-3.0 C++, which cannot go inside a permissively licensed app. It is also the Queen Mary lineage: Mixxx's default beat and key detection comes from the Queen Mary plugins, so benchmarking libKeyFinder already covers that family.</li>
+            <li>Essentia is the broadest option, with tempo, key, beats, and much more, and it is used as a benchmark baseline. It is open source, so a Rust binding would be possible, but it is AGPL or a paid commercial license, so it cannot ship in the product either way.</li>
+          </ul>
+          <p>The Benchmark baseline column means the tool is scored on the same corpora as trail mix. All four are: the standard key references S-KEY, libKeyFinder, and Essentia, plus stratum-dsp. stratum-dsp matters most as a baseline because it is the other permissive, pure-Rust DSP analyzer, so it is the closest architectural comparison. On FMAKv2 key it scores 0.48 MIREX (0.34 exact) against trail mix's 0.53, and on GiantSteps tempo it scores Accuracy1 0.60 and Accuracy2 0.85 against trail mix's 0.68 and 0.83. stratum-dsp also publishes its own numbers, 87.7 percent within 2 BPM and 72.1 percent exact key, but on a private 155-track DJ set with vendor-tag ground truth, so those are not comparable to the same-corpus figures here.</p>
+          <p>Waveform is left out of this comparison on purpose. It is the simplest of the three outputs, and the comparison here is about beats and key, which are the harder problems. The clear prior art for waveform overviews is BBC audiowaveform, but that is a concept we credit in the acknowledgements rather than code we copied, so it is not a dependency and does not belong on the open-source slide.</p>
+          <p>Mixxx is the main open-source DJ app rather than a reusable analysis library. It uses the Queen Mary plugins and, optionally, libKeyFinder, which is already in this table, so that lineage is represented. A Mixxx maintainer notes in a current pull request that they already store per-measure tempo and key but have not surfaced it to users.</p>
+          <p>The summary is that no single project combined a permissive license, an in-process Rust API, and mid-track key and tempo changes, which is why the analyzers are written from scratch. License was rarely the whole story: stratum-dsp and S-KEY are both permissive, and neither fit, one on scope and one on runtime.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Vocabulary</div>
+        <h2>MIR vocabulary</h2>
+        <p class="lead">Four helpful terms relevant to trail mix.</p>
+<div class="vocab-grid">
+  <div class="vocab-card vocab-onset">
+    <div class="vocab-term">Onset</div>
+    <div class="vocab-def">The start of a sound event. Where energy jumps as a drum hits or a note begins. Onsets are evidence for beats, not beats themselves.</div>
+  </div>
+  <div class="vocab-card vocab-tempo">
+    <div class="vocab-term">Tempo</div>
+    <div class="vocab-def">The rate of the counted beat, in BPM. It also sets the expected time between beats. <br/>120 BPM = two beats per second = 0.5 seconds per beat.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Chroma</div>
+    <div class="vocab-def">A pitch class is a note category such as C, C#, or D. Chroma is a bar chart of how much the song uses each of the 12 pitch classes.</div>
+  </div>
+  <div class="vocab-card vocab-key">
+    <div class="vocab-term">Key</div>
+    <div class="vocab-def">There are 24 keys (12 major, 12 minor). To find it, compare the track's chroma to a template for each of the 24 keys and pick the closest match. <br/>E.g. A minor</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>MIR vocabulary</h3>
+          <p>Four helpful terms from MIR:</p>
+          <p>An onset is the moment a new sound event starts; a curve of onset strength over time is the raw material for tempo.</p>
+          <p>Tempo is the rate of the beat listeners tap, reported as BPM. It also sets the expected time between beats: 120 BPM is two beats per second, or 0.5 seconds per beat.</p>
+          <p>A pitch class is a note category such as C, C#, or D. Chroma is a bar chart of how much the song uses each of the 12 pitch classes.</p>
+          <p>There are 24 keys (12 major, 12 minor). To find it, compare the track's chroma to a template for each of the 24 keys and pick the closest match. E.g. A minor</p>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Analyzer 1 of 3</div>
+    <h2>Beat Salad</h2>
+    <p class="project-tagline">Tempo and beat positions</p>
+  </div>
+  <img
+    src="/talks/trail-mix-fossy-2026/assets/beat-salad-abstract-BxL5Jnpm.png"
+    alt="Abstract illustration of beet salad ingredients"
+  />
+</div>
+        <aside class="notes">
+          <h3>Beat Salad</h3>
+          <p>Beat Salad is the tempo and beat estimation crate. It estimates one global tempo, a confidence score, regular beat positions, and windowed tempo segments from mono samples.</p>
+          <p>It is the most complex of the three analyzers in the current implementation. Multi-tempo tracks such as mashups and medleys are handled by the windowing covered later, in the beat-switch section.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Onset detection</h2>
+        <p class="lead">An onset is where a new sound starts, like a drum hit. It shows up as a sudden jump in energy, so we track the energy frame by frame and add up only the rises. That running total is the onset-strength curve, and its peaks are the candidate beats.</p>
+        <img class="slide-figure large-figure" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDQ3MCIgcm9sZT0iaW1nIgogIGFyaWEtbGFiZWw9IlR3byBzdGFja2VkIHBhbmVscyBzaGFyaW5nIGEgdGltZSBheGlzLiBUaGUgdG9wIHBhbmVsIGlzIHRoZSBhdWRpbzogbW9zdGx5IHF1aWV0LCB3aXRoIHR3byBsb3VkIGJ1cnN0cyB3aGVyZSBuZXcgc291bmRzIHN0YXJ0LiBUaGUgYm90dG9tIHBhbmVsIGlzIHRoZSBvbnNldC1zdHJlbmd0aCBjdXJ2ZSwgd2hpY2ggaXMgbG93IG1vc3Qgb2YgdGhlIHRpbWUgYW5kIHNwaWtlcyBpbnRvIGEgdGFsbCBwZWFrIHVuZGVyIGVhY2ggYnVyc3QuIERhc2hlZCBndWlkZXMgY29ubmVjdCBlYWNoIGJ1cnN0IGluIHRoZSBhdWRpbyB0byBpdHMgcGVhayBpbiB0aGUgb25zZXQgY3VydmUsIHNob3dpbmcgdGhhdCBhIG5ldyBzb3VuZCBpcyBhIGp1bXAgaW4gZW5lcmd5IHRoYXQgYmVjb21lcyBhIHBlYWsuIj4KICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9Im9ucy1lbmQiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOCIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj4KICAgICAgPHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjNWE0MDNhIi8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CgogIDxzdHlsZT4KICAgICNvbnMgdGV4dCB7IGZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sICJTZWdvZSBVSSIsIHNhbnMtc2VyaWY7IGZpbGw6ICM1YTQwM2E7IH0KICAgIC5vbnMtbGFiZWwgeyBmb250LXNpemU6IDIwcHg7IH0KICAgIC5vbnMtc21hbGwgeyBmb250LXNpemU6IDE3cHg7IGZpbGw6ICM3NjVmNTc7IH0KICAgIC5vbnMtYXhpcyAgeyBmb250LXNpemU6IDE3cHg7IGZpbGw6ICM3NjVmNTc7IH0KICA8L3N0eWxlPgoKICA8ZyBpZD0ib25zIj4KICAgIDwhLS0gPT09PT0gdG9wIHBhbmVsOiBhdWRpbyA9PT09PSAtLT4KICAgIDwhLS0gYXVkaW8gZW52ZWxvcGU6IHF1aWV0LCBidXJzdCwgZGVjYXksIHF1aWV0LCBidXJzdCwgZGVjYXkgLS0+CiAgICA8cGF0aCBkPSJNNzAsMTEyIEwxMjAsMTEyIEwxODAsMTEwIEwyMzAsMTA4IEwyNDUsNjIgTDI2MCw3MCBMMjkwLDgyIEwzMzAsOTYgTDM4MCwxMDggTDQzMCwxMTEgTDUwMCwxMTEgTDU2MCwxMTAgTDU4NSwxMDggTDYwMCw2MiBMNjE1LDcwIEw2NDUsODIgTDY5MCw5NiBMNzQwLDEwOCBMODAwLDExMSBMODgwLDExMiBMOTQwLDExMgogICAgICAgICAgICAgTDk0MCwxMjggTDg4MCwxMjggTDgwMCwxMjkgTDc0MCwxMzIgTDY5MCwxNDQgTDY0NSwxNTggTDYxNSwxNzAgTDYwMCwxNzggTDU4NSwxMzIgTDU2MCwxMzAgTDUwMCwxMjkgTDQzMCwxMjkgTDM4MCwxMzIgTDMzMCwxNDQgTDI5MCwxNTggTDI2MCwxNzAgTDI0NSwxNzggTDIzMCwxMzIgTDE4MCwxMzAgTDEyMCwxMjggTDcwLDEyOCBaIgogICAgICBmaWxsPSIjZGJlN2YyIiBmaWxsLW9wYWNpdHk9IjAuODUiIHN0cm9rZT0iIzJmNmRhMyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICA8bGluZSB4MT0iNzAiIHkxPSIxMjAiIHgyPSI5NDAiIHkyPSIxMjAiIHN0cm9rZT0iIzJmNmRhMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgY2xhc3M9Im9ucy1heGlzIiB4PSIzNCIgeT0iMTIwIiB0cmFuc2Zvcm09InJvdGF0ZSgtOTAgMzQgMTIwKSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+YXVkaW88L3RleHQ+CgogICAgPCEtLSA9PT09PSBib3R0b20gcGFuZWw6IG9uc2V0LXN0cmVuZ3RoIGN1cnZlID09PT09IC0tPgogICAgPHBhdGggZD0iTTcwLDM2MCBMNzAsMzUyIEwxMjAsMzUwIEwxODAsMzQ4IEwyMzUsMzUwIEwyNTAsMjU4IEwyNzAsMzIwIEwzMDAsMzQ1IEwzNjAsMzUwIEw0MzAsMzUwIEw1MDAsMzQ5IEw1NjAsMzQ4IEw1OTAsMzUwIEw2MDAsMjU4IEw2MjAsMzIwIEw2NTUsMzQ1IEw3MjAsMzUwIEw4MDAsMzUwIEw4ODAsMzUxIEw5NDAsMzUxIEw5NDAsMzYwIFoiCiAgICAgIGZpbGw9IiNmM2RkZTEiIGZpbGwtb3BhY2l0eT0iMC43NSIvPgogICAgPHBhdGggZD0iTTcwLDM1MiBMMTIwLDM1MCBMMTgwLDM0OCBMMjM1LDM1MCBMMjUwLDI1OCBMMjcwLDMyMCBMMzAwLDM0NSBMMzYwLDM1MCBMNDMwLDM1MCBMNTAwLDM0OSBMNTYwLDM0OCBMNTkwLDM1MCBMNjAwLDI1OCBMNjIwLDMyMCBMNjU1LDM0NSBMNzIwLDM1MCBMODAwLDM1MCBMODgwLDM1MSBMOTQwLDM1MSIKICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTMzZDUyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgoKICAgIDwhLS0gdGltZSBheGlzIC0tPgogICAgPGxpbmUgeDE9IjYwIiB5MT0iMzYwIiB4Mj0iOTU1IiB5Mj0iMzYwIiBzdHJva2U9IiM1YTQwM2EiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1IiBzdHJva2Utd2lkdGg9IjEuNSIgbWFya2VyLWVuZD0idXJsKCNvbnMtZW5kKSIvPgogICAgPHRleHQgY2xhc3M9Im9ucy1heGlzIiB4PSI5MTIiIHk9IjM4MiI+dGltZTwvdGV4dD4KICAgIDx0ZXh0IGNsYXNzPSJvbnMtYXhpcyIgeD0iMzQiIHk9IjMwNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM0IDMwNSkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPm9uc2V0IHN0cmVuZ3RoPC90ZXh0PgoKICAgIDwhLS0gZ3VpZGVzIGxpbmtpbmcgZWFjaCBidXJzdCB0byBpdHMgcGVhayAtLT4KICAgIDxnIHN0cm9rZT0iIzc2NWY1NyIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjQgNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNyI+CiAgICAgIDxsaW5lIHgxPSIyNTAiIHkxPSIxNzgiIHgyPSIyNTAiIHkyPSIyNTgiLz4KICAgICAgPGxpbmUgeDE9IjYwMCIgeTE9IjE3OCIgeDI9IjYwMCIgeTI9IjI1OCIvPgogICAgPC9nPgoKICAgIDwhLS0gcGVhayBkb3RzIC0tPgogICAgPGcgZmlsbD0iI2EzM2Q1MiIgc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjIiPgogICAgICA8Y2lyY2xlIGN4PSIyNTAiIGN5PSIyNTgiIHI9IjgiLz4KICAgICAgPGNpcmNsZSBjeD0iNjAwIiBjeT0iMjU4IiByPSI4Ii8+CiAgICA8L2c+CgogICAgPCEtLSBjYWxsb3V0OiBuZXcgc291bmQgPSBlbmVyZ3kganVtcCAtLT4KICAgIDx0ZXh0IGNsYXNzPSJvbnMtc21hbGwiIHg9IjE1MCIgeT0iNDQiPkEgbmV3IHNvdW5kOiBlbmVyZ3kganVtcHM8L3RleHQ+CiAgICA8bGluZSB4MT0iMjMwIiB5MT0iNTAiIHgyPSIyNDgiIHkyPSI2MiIgc3Ryb2tlPSIjNzY1ZjU3IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz4KCiAgICA8IS0tIGNhbGxvdXQ6IHBlYWsgbWFya3MgdGhlIG9uc2V0IC0tPgogICAgPHRleHQgY2xhc3M9Im9ucy1zbWFsbCIgeD0iNjIwIiB5PSIyNTAiPlBlYWsgbWFya3Mgd2hlcmUgaXQgc3RhcnRzPC90ZXh0PgogICAgPGxpbmUgeDE9IjYxNCIgeTE9IjI0NiIgeDI9IjYwOCIgeTI9IjI1OCIgc3Ryb2tlPSIjNzY1ZjU3IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz4KCiAgICA8IS0tIGNhbGxvdXQ6IHF1aWV0IHN0cmV0Y2ggLS0+CiAgICA8dGV4dCBjbGFzcz0ib25zLXNtYWxsIiB4PSI0NjUiIHk9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U3RlYWR5IHNvdW5kLCBubyBuZXcgb25zZXQ8L3RleHQ+CiAgICA8bGluZSB4MT0iNDY1IiB5MT0iMzg0IiB4Mj0iNDY1IiB5Mj0iMzUyIiBzdHJva2U9IiM3NjVmNTciIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="Audio on top with two loud bursts where new sounds start, and the onset-strength curve below spiking into a peak under each burst" />
+        <aside class="notes">
+          <h3>Onset detection</h3>
+          <p>An onset is where a new sound starts, like a drum hit or a plucked string, and it shows up as a sudden jump in energy. The audio is cut into short frames, and each frame measures how much energy increased since the frame before. Only increases count, because a sound getting louder is evidence for a new event while a sound fading out is not. Adding those increases gives one number per frame, the onset strength, and the sequence of those numbers is the onset-strength curve in the picture. Its peaks are candidate beats for tempo estimation and beat tracking. The implementation reads energy across 24 frequency bands spaced like musical pitch using Goertzel filters, and the summed rises are called spectral flux.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Tempo estimation and beat tracking</h2>
+        <p class="lead">Tempo estimation finds the beat period that best matches the repeating peaks in the onset-strength curve. To find a beat switch, the same estimator runs on rolling sections of the track.</p>
+        <img class="slide-figure large-figure" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDQ3MCIgcm9sZT0iaW1nIgogIGFyaWEtbGFiZWw9IkEgY3VydmUgc2hvd2luZyBob3cgc3Ryb25nbHkgdGhlIG9uc2V0cyByZXBlYXQgYXQgZWFjaCBjYW5kaWRhdGUgdGVtcG8uIEl0IGhhcyB0aHJlZSBwZWFrcyBvZiBzaW1pbGFyIGhlaWdodCBhdCBoYWxmIHRpbWUsIHRoZSB0cnVlIHB1bHNlLCBhbmQgZG91YmxlIHRpbWUsIHdoaWNoIGFyZSB0aGUgc2FtZSBwdWxzZSBjb3VudGVkIGRpZmZlcmVudGx5LiBBIGRhc2hlZCBiZWxsIGN1cnZlIG92ZXJsYWlkIG9uIHRoZSBtaWRkbGUgb2YgdGhlIHRlbXBvIHJhbmdlIGFjdHMgYXMgYSBzb2Z0IHByZWZlcmVuY2UgZm9yIG1pZC1yYW5nZSB0ZW1wb3MsIGFuZCBhIGdyZWVuIGRvdCBtYXJrcyB0aGUgdHJ1ZSBwdWxzZSBhcyB0aGUgdGVtcG8gcGlja2VkIGFmdGVyIHRoYXQgcHJlZmVyZW5jZSBicmVha3MgdGhlIHRpZS4iPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0idG1wLWVuZCIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiM1YTQwM2EiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHN0eWxlPgogICAgI3RtcCB0ZXh0IHsgZm9udC1mYW1pbHk6IHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgIlNlZ29lIFVJIiwgc2Fucy1zZXJpZjsgZmlsbDogIzVhNDAzYTsgfQogICAgLnRtcC1sYWJlbCB7IGZvbnQtc2l6ZTogMjBweDsgfQogICAgLnRtcC1zbWFsbCB7IGZvbnQtc2l6ZTogMTdweDsgZmlsbDogIzc2NWY1NzsgfQogICAgLnRtcC1heGlzICB7IGZvbnQtc2l6ZTogMTdweDsgZmlsbDogIzc2NWY1NzsgfQogICAgLnRtcC1waWNrICB7IGZvbnQtc2l6ZTogMThweDsgZmlsbDogIzJmN2Q0ZjsgfQogIDwvc3R5bGU+CgogIDxnIGlkPSJ0bXAiPgogICAgPCEtLSBhdXRvY29ycmVsYXRpb24gY3VydmU6IG1hdGNoIHN0cmVuZ3RoIHZzIGNhbmRpZGF0ZSB0ZW1wbyAtLT4KICAgIDxwYXRoIGQ9Ik04MCwzNDAgTDgwLDMzOCBMMTEwLDMzNCBMMTQ2LDE1MCBMMTg1LDMwMCBMMjUwLDMyOCBMMzAwLDMwMCBMMzQ1LDE0OCBMMzk1LDMwMCBMNDYwLDMyNiBMNTYwLDMzMCBMNjYwLDMwNSBMNzQxLDE1NiBMODAwLDMwNSBMODgwLDMzMCBMOTQwLDMzNSBMOTQwLDM0MCBaIgogICAgICBmaWxsPSIjZjNkZGUxIiBmaWxsLW9wYWNpdHk9IjAuNzUiLz4KICAgIDxwYXRoIGQ9Ik04MCwzMzggTDExMCwzMzQgTDE0NiwxNTAgTDE4NSwzMDAgTDI1MCwzMjggTDMwMCwzMDAgTDM0NSwxNDggTDM5NSwzMDAgTDQ2MCwzMjYgTDU2MCwzMzAgTDY2MCwzMDUgTDc0MSwxNTYgTDgwMCwzMDUgTDg4MCwzMzAgTDk0MCwzMzUiCiAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2EzM2Q1MiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KCiAgICA8IS0tIHByaW9yIGJlbGwgb3ZlciB0aGUgbWlkZGxlIG9mIHRoZSB0ZW1wbyByYW5nZSAtLT4KICAgIDxwYXRoIGQ9Ik0xODUsMzM2IEwyNTAsMzAwIEwzMDAsMjMwIEwzNDUsMTIwIEwzOTUsMjMwIEw0NTAsMzAwIEw1MTUsMzM2IgogICAgICBmaWxsPSJub25lIiBzdHJva2U9IiMyZjZkYTMiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtZGFzaGFycmF5PSI3IDYiIHN0cm9rZS1vcGFjaXR5PSIwLjkiLz4KCiAgICA8IS0tIGF4aXMgLS0+CiAgICA8bGluZSB4MT0iNzAiIHkxPSIzNDAiIHgyPSI5NTUiIHkyPSIzNDAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLW9wYWNpdHk9IjAuNDUiIHN0cm9rZS13aWR0aD0iMS41IiBtYXJrZXItZW5kPSJ1cmwoI3RtcC1lbmQpIi8+CiAgICA8dGV4dCBjbGFzcz0idG1wLWF4aXMiIHg9IjgwMCIgeT0iMzkyIj5jYW5kaWRhdGUgdGVtcG88L3RleHQ+CiAgICA8dGV4dCBjbGFzcz0idG1wLWF4aXMiIHg9IjM0IiB5PSIyNDUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAzNCAyNDUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5tYXRjaCBzdHJlbmd0aDwvdGV4dD4KCiAgICA8IS0tIHRlbXBvIHRpY2tzIC0tPgogICAgPGcgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utb3BhY2l0eT0iMC40NSIgc3Ryb2tlLXdpZHRoPSIxLjUiPgogICAgICA8bGluZSB4MT0iMTQ2IiB5MT0iMzQwIiB4Mj0iMTQ2IiB5Mj0iMzQ4Ii8+CiAgICAgIDxsaW5lIHgxPSIzNDUiIHkxPSIzNDAiIHgyPSIzNDUiIHkyPSIzNDgiLz4KICAgICAgPGxpbmUgeDE9Ijc0MSIgeTE9IjM0MCIgeDI9Ijc0MSIgeTI9IjM0OCIvPgogICAgPC9nPgogICAgPGcgY2xhc3M9InRtcC1heGlzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4KICAgICAgPHRleHQgeD0iMTQ2IiB5PSIzNjYiPmhhbGYgdGltZTwvdGV4dD4KICAgICAgPHRleHQgeD0iMzQ1IiB5PSIzNjYiPnRydWUgcHVsc2U8L3RleHQ+CiAgICAgIDx0ZXh0IHg9Ijc0MSIgeT0iMzY2Ij5kb3VibGUgdGltZTwvdGV4dD4KICAgIDwvZz4KCiAgICA8IS0tIGNob3NlbiB0ZW1wbyAtLT4KICAgIDxjaXJjbGUgY3g9IjM0NSIgY3k9IjE0OCIgcj0iOSIgZmlsbD0iIzJmN2Q0ZiIgc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgICA8IS0tIGNhbGxvdXQ6IG9jdGF2ZSBmYW1pbHkgLS0+CiAgICA8dGV4dCBjbGFzcz0idG1wLXNtYWxsIiB4PSI3MCIgeT0iMTE4Ij5TYW1lIHB1bHNlIHBlYWtzIGF0IGhhbGYsIHRydWUsIGFuZCBkb3VibGUgdGltZTwvdGV4dD4KICAgIDxsaW5lIHgxPSIxNTAiIHkxPSIxMjYiIHgyPSIxNDYiIHkyPSIxNDQiIHN0cm9rZT0iIzc2NWY1NyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CgogICAgPCEtLSBjYWxsb3V0OiBwcmlvciAtLT4KICAgIDx0ZXh0IGNsYXNzPSJ0bXAtc21hbGwiIHg9IjQ3MCIgeT0iMTUwIj5Tb2Z0IHByZWZlcmVuY2UgZm9yIG1pZC1yYW5nZSB0ZW1wb3M8L3RleHQ+CiAgICA8bGluZSB4MT0iNDY0IiB5MT0iMTQ1IiB4Mj0iMzYwIiB5Mj0iMTI0IiBzdHJva2U9IiM3NjVmNTciIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIvPgoKICAgIDwhLS0gcGljayBsYWJlbCAtLT4KICAgIDx0ZXh0IGNsYXNzPSJ0bXAtcGljayIgeD0iMzQ1IiB5PSI5NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cGlja2VkOiB0cnVlIHB1bHNlPC90ZXh0PgogICAgPGxpbmUgeDE9IjM0NSIgeTE9IjEwNCIgeDI9IjM0NSIgeTI9IjEzOSIgc3Ryb2tlPSIjMmY3ZDRmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="Match-strength curve with three equal peaks at half time, the true pulse, and double time, a dashed preference bell over the middle of the tempo range, and the true pulse chosen" />
+        <aside class="notes">
+          <h3>Tempo estimation and beat tracking</h3>
+          <p>Global tempo is chosen by scoring candidate beat periods over the whole onset-strength curve. This does not require exact beat timestamps yet; it only needs evidence that onsets repeat at a regular interval. The intervals are measured between onset peaks, which are candidate musical events, not confirmed beats. The implementation combines two measures: an inter-onset interval histogram, which measures distances between onset peaks, and normalized autocorrelation, which measures how well the onset-strength curve aligns with itself at a lag. Candidates in the same half-time and double-time family are grouped so related tempos reinforce one reading, then a prior reduces common octave errors. The highest-scoring period sets global_bpm, and beat tracking uses that estimate on the next slide.</p>
+          <p>tempo_segments are separate from global_bpm. They are produced by running the same tempo estimator in rolling windows, 12 seconds wide with a 6-second hop, then grouping adjacent windows when the local BPM changes enough to matter.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat tracking with dynamic programming (DP)</h2>
+        <p class="lead">Beat tracking uses the estimated BPM to place the actual beat timestamps. Tempo estimation gives BPM, but it does not choose the beat grid offset, that is where those beats start. DP helps choose which grid is most plausible across the whole track. It can keep the sequence regular when one beat is weak or missing, and it can skip a loud off-beat onset.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-fossy-2026/assets/beat-dp-Dn0SaX97.svg" alt="Onset-strength curve with regular beat intervals: dots sit on strong peaks, one beat is kept on a weak spot for timing, and an off-beat peak is skipped" />
+        <aside class="notes">
+          <h3>Beat tracking with dynamic programming (DP)</h3>
+          <p>Beat tracking uses the estimated BPM to place the actual beat timestamps. Tempo estimation gives BPM, but it does not choose the beat grid offset, that is where those beats start. DP helps choose which grid is most plausible across the whole track. It can keep the sequence regular when one beat is weak or missing, and it can skip a loud off-beat onset.</p>
+          <p>Ellis 2007 dynamic programming solves that as one path problem over the whole track. The optimization and the Rust inner loop are in the appendix.</p>
+        </aside>
+        </section>
+
+        <section class="pipeline-slide">
+        <h2>Beat Salad pipeline</h2>
+<div class="beat-pipeline-map" aria-label="Beat Salad pipeline">
+  <div class="beat-pipeline-card beat-pipeline-input">
+    <strong>Samples</strong>
+    <span>mono audio values</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Onset detection</strong>
+    <span>energy rises</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Tempo estimation</strong>
+    <span>periodicity score</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Beat tracking</strong>
+    <span>beat timestamps</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-output">
+    <strong>BeatAnalysis</strong>
+    <span><code>global_bpm</code></span>
+    <span><code>beats</code></span>
+    <span><code>tempo_segments</code></span>
+  </div>
+</div>
+<ol class="beat-pipeline-steps">
+  <li>Onset detection uses frequency-band energy to build the onset-strength curve.</li>
+  <li>Tempo estimation works on that curve over time. The interval histogram counts how often different time gaps occur between onset peaks. For example, if 0.5 s gets a high score, it supports 120 BPM. Autocorrelation checks which time shifts make the onset curve line up with itself.</li>
+  <li>Then beat tracking uses DP to choose the actual beat timestamps under that tempo.</li>
+</ol>
+        <aside class="notes">
+          <h3>Beat Salad pipeline</h3>
+          <p>This is the whole Beat Salad path in one picture. The samples become an onset-strength curve, tempo estimation picks the main beat period, and beat tracking turns that tempo estimate into timestamped beats by matching a regular beat sequence to the onset curve.</p>
+          <ul>
+            <li>Onset detection uses frequency-band energy to build the onset-strength curve.</li>
+            <li>Tempo estimation works on that curve over time. The interval histogram counts how often different time gaps occur between onset peaks. For example, if 0.5 s gets a high score, it supports 120 BPM. Autocorrelation checks which time shifts make the onset curve line up with itself.</li>
+            <li>Beat tracking uses DP to choose the actual beat timestamps under that tempo.</li>
+          </ul>
+          <p>The output is a BeatAnalysis:</p>
+          <ul>
+            <li>global_bpm is the dominant tempo for the whole file.</li>
+            <li>beats are the timestamped beat positions.</li>
+            <li>tempo_segments are detected by rerunning tempo estimation in rolling windows. They list time ranges with their own local BPM when the track has a meaningful tempo change.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat switches</h2>
+        <p class="lead">A track can contain more than one meaningful tempo. Beat Salad reports the dominant BPM and the alternate tempo when the second section is long enough to matter.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it contains</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>global_bpm</code></strong></td>
+      <td>Dominant tempo for the whole file</td>
+      <td>120 BPM</td>
+    </tr>
+    <tr>
+      <td><strong><code>multi_tempo</code></strong></td>
+      <td>Boolean: another tempo covers at least 25%</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td><strong><code>alternate_bpm</code></strong></td>
+      <td>Secondary tempo + coverage fraction</td>
+      <td>90 BPM, 45%</td>
+    </tr>
+    <tr>
+      <td><strong><code>tempo_segments</code></strong></td>
+      <td>Timeline of local BPM ranges</td>
+      <td>120 BPM, then 90 BPM</td>
+    </tr>
+  </tbody>
+</table>
+        <p class="caption">Threshold: alternate tempo must cover at least 25% of the track.</p>
+        <aside class="notes">
+          <h3>Beat switches</h3>
+          <p>Beat Salad handles a beat switch by comparing local tempo estimates against the dominant global BPM.</p>
+          <ul>
+            <li>global_bpm is the dominant tempo for the whole track.</li>
+            <li>multi_tempo is true when another tempo covers at least 25 percent of the track.</li>
+            <li>alternate_bpm reports that secondary tempo and its coverage fraction.</li>
+            <li>tempo_segments come from rolling-window tempo estimation and list the time ranges where each local BPM applies.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section class="demo-slide">
+<div class="section-marker">Multi-tempo</div>
+<h2>A beat switch</h2>
+<p class="lead">
+  A 60-second demo: 120 BPM for the first half, then 90 BPM. 
+</p>
+<div class="demo-panel">
+  <canvas
+    id="tempo-waveform"
+    width="1320"
+    height="220"
+    aria-label="Waveform with a tempo boundary at thirty seconds"
+  ></canvas>
+  <div class="segment-labels">
+    <div><strong>120 BPM</strong><span>0:00-0:30</span></div>
+    <div><strong>90 BPM</strong><span>0:30-1:00</span></div>
+  </div>
+  <div class="demo-controls">
+    <button id="play-demo" type="button" aria-label="Play or pause the tempo track">
+      Play track
+    </button>
+    <button id="reset-demo" type="button">Reset</button>
+    <output id="demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="tempo-audio" preload="auto">
+    <source src="/talks/trail-mix-fossy-2026/assets/two-tempo.wav-C1YEiL88.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">global_bpm</span><span class="beat-output-val">120.08</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">multi_tempo</span><span class="beat-output-val">true</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">alternate_bpm</span><span class="beat-output-val">90.03</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">switch detected</span><span class="beat-output-val">~33 s</span></div>
+</div>
+<p class="caption">
+  The values are Beat Salad's output; full JSON in the appendix.
+</p>
+        <aside class="notes">
+          <h3>A beat switch</h3>
+          <p>The track is a 60-second demo built at 120 BPM for the first half and 90 BPM for the second. It is the same file that produced the numbers on the slide.</p>
+          <ul>
+            <li>Beat Salad recovers both speeds within about a tenth of a BPM.</li>
+            <li>multi_tempo is true because the second tempo covers 45 percent of the file.</li>
+            <li>alternate_bpm reports the second tempo at 90 BPM.</li>
+            <li>tempo_segments lists the detected local tempo ranges. The split lands near 33 seconds against a true 30 because the detector scores 12-second windows every 6 seconds.</li>
+          </ul>
+          <p>The windowed detector needs at least a window plus a hop of audio, about 18 seconds, before it can report a second tempo. Below that it returns a single global tempo.</p>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Analyzer 2 of 3</div>
+    <h2>Key Lime</h2>
+    <p class="project-tagline">Musical key from chroma</p>
+  </div>
+  <img
+    src="/talks/trail-mix-fossy-2026/assets/key-lime-abstract-DYggHOP0.png"
+    alt="Abstract illustration of a sliced lime"
+  />
+</div>
+        <aside class="notes">
+          <h3>Key Lime</h3>
+          <p>Key Lime estimates a major or minor key for the whole track, plus local key segments. The API always returns a tonic and a mode, for example A minor. Camelot, the DJ key notation used for harmonic mixing, is a display spelling only, which an app can add.</p>
+          <p>Key is the weakest analyzer in the current implementation, and the results slide quantifies the gap against the baselines.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key detection from chroma</h2>
+        <p class="lead">Take the 12-note chroma and compare it to a template for each key. The closest match, across all 24 major and minor keys, is the detected key.</p>
+<p class="math-formula">
+  \[\operatorname{score}(k) = \frac{\displaystyle\sum_{p=0}^{11}(c_p - \bar{c})\,(T_{p,k} - \bar{T}_k)}{\sqrt{\displaystyle\sum_{p=0}^{11}(c_p - \bar{c})^2 \;\cdot\; \sum_{p=0}^{11}(T_{p,k} - \bar{T}_k)^2}}\]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong>The formula</strong>: Pearson correlation; how closely the chroma matches a key template, after mean-centering and normalizing both</li>
+          <li><strong><code>score(k)</code></strong>: correlation for key k; the highest of 24 keys (12 major + 12 minor) wins</li>
+          <li><strong><code>c_p</code></strong>: chroma energy at pitch class p (0-11, one per semitone)</li>
+          <li><strong><code>T_{p,k}</code></strong>: expected energy for pitch class p in key template k (K-K, Temperley, EDMA, or an ML model)</li>
+        </ul>
+        <aside class="notes">
+          <h3>Key detection from chroma</h3>
+          <p>The 12-note chroma is the input to key scoring. Each of the 24 keys, 12 major and 12 minor, has a template with expected energy per pitch class. Key Lime measures how well the track's chroma matches each template with a Pearson correlation, then takes the best match. The implementation compares against several templates: Krumhansl-Kessler, Temperley, EDMA, and one built with ML from a corpus. It also includes refinements for tuning, relative-key disambiguation, and confidence-gated segmentation.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key changes</h2>
+        <p class="lead">Key Lime reruns chroma-to-template scoring in rolling windows, groups adjacent windows with the same confident key, and reports an alternate key when it covers at least 25% of the track.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it contains</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>key</code></strong></td>
+      <td>Primary key for the whole file</td>
+      <td>A minor</td>
+    </tr>
+    <tr>
+      <td><strong><code>multi_key</code></strong></td>
+      <td>Boolean: another key covers at least 25%</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td><strong><code>alternate_key</code></strong></td>
+      <td>Secondary key + coverage fraction</td>
+      <td>C major, 25% coverage</td>
+    </tr>
+    <tr>
+      <td><strong><code>segments</code></strong></td>
+      <td>Timeline of local key ranges</td>
+      <td>A minor, then C major</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Key changes</h3>
+          <p>Key Lime detects multiple keys with the same key scorer used for the global result:</p>
+          <ul>
+            <li>It scores local windows, 12 seconds wide with a 6-second hop.</li>
+            <li>Adjacent windows with the same confident key are grouped into segments.</li>
+            <li>Very short segments are merged into a neighbor.</li>
+            <li>key is the primary key for the whole track, taken from the longest segment when multiple segments exist.</li>
+            <li>multi_key is true when another key covers at least 25 percent of the track.</li>
+            <li>alternate_key reports that secondary key and its coverage fraction.</li>
+            <li>segments list the time ranges where each local key applies.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section class="demo-slide key-demo-slide">
+<div class="section-marker">Multi-key</div>
+<h2>A key change</h2>
+<p class="lead">
+  A 60-second demo: A major for the first half, then C minor.
+</p>
+<div class="demo-panel">
+  <canvas
+    id="key-change-timeline"
+    width="1320"
+    height="220"
+    aria-label="Key change timeline with A major followed by C minor"
+  ></canvas>
+  <div class="segment-labels">
+    <div><strong>A major</strong><span>0:00-0:30</span></div>
+    <div><strong>C minor</strong><span>0:30-1:00</span></div>
+  </div>
+  <div class="demo-controls">
+    <button id="play-key-demo" type="button" aria-label="Play or pause the key-change sample">
+      Play sample
+    </button>
+    <button id="reset-key-demo" type="button">Reset</button>
+    <output id="key-demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="key-audio" preload="auto">
+    <source src="/talks/trail-mix-fossy-2026/assets/key-change.wav-Cim4b7Tq.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">key</span><span class="beat-output-val">C minor</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">multi_key</span><span class="beat-output-val">true</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">alternate_key</span><span class="beat-output-val">A major</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">change detected</span><span class="beat-output-val">~33 s</span></div>
+</div>
+<p class="caption">
+  The values are Key Lime's output; full JSON in the appendix.
+</p>
+        <aside class="notes">
+          <h3>A key change</h3>
+          <p>The track is a 60-second synthetic demo built from two chord sections: A major for the first half and C minor for the second. It uses the same chroma-to-template scorer as the global key slide. For this demo, the local analysis windows are shorter than the production default so a simple chord change produces visible segments.</p>
+          <ul>
+            <li>Key Lime reports multi_key as true.</li>
+            <li>The stable detected sections are A major at the start and C minor after the change.</li>
+            <li>The primary key is C minor because the local segmentation assigns it the longest stable span in this synthetic example.</li>
+            <li>A short transition window appears around the boundary because the rolling analysis windows overlap both chord sections.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Analyzer 3 of 3</div>
+    <h2>Sampler Platter</h2>
+    <p class="project-tagline">Compact waveform overview</p>
+  </div>
+  <img
+    src="/talks/trail-mix-fossy-2026/assets/sampler-platter-abstract-H8IflbFg.png"
+    alt="Abstract illustration of a sampler platter"
+  />
+</div>
+        <aside class="notes">
+          <h3>Sampler Platter</h3>
+          <p>Sampler Platter bins mono samples into up to 1,500 columns, each summarized by minimum, maximum, and RMS, producing a Serato-compatible column layout for a waveform lane. The output is a WaveformOverview.</p>
+          <p>This analyzer is simpler than beat and key estimation: it summarizes the signal for display rather than inferring a musical label.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Sampler Platter</div>
+        <h2>Waveform summarization</h2>
+        <p class="lead">The min, max, and RMS columns that draw a track lane.</p>
+        <img class="slide-figure" src="/talks/trail-mix-fossy-2026/assets/waveform-columns-DJxqj98r.svg" alt="44,100 samples per second reduced to up to 1,500 columns, each storing min, max, and RMS" />
+        <aside class="notes">
+          <h3>Waveform summarization</h3>
+          <p>The implementation is local arithmetic over buckets. For each bucket, it computes min, max, and RMS, so the waveform overview does not need a separate DSP dependency.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Waveform implementation</h2>
+        <p class="lead">The samples are split into up to 1,500 equally sized buckets. Each bucket becomes one column, summarized by three values.</p>
+<pre class="code-block"><code class="language-rust">let slice = &amp;samples[start..end];
+let min = slice.iter().copied().fold(f32::INFINITY, f32::min);
+let max = slice.iter().copied().fold(f32::NEG_INFINITY, f32::max);
+let sum_sq: f32 = slice.iter().map(|s| s * s).sum();
+let rms = (sum_sq / slice.len() as f32).sqrt();</code></pre>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>slice</code></strong>: the samples in this bucket (track length / up to 1,500 buckets)</li>
+          <li><strong><code>min</code></strong>: lowest sample value; bottom edge of the waveform bar</li>
+          <li><strong><code>max</code></strong>: highest sample value; top edge of the waveform bar</li>
+          <li><strong><code>rms</code></strong>: root mean square energy; renderers can draw it as the filled region inside the bar</li>
+        </ul>
+        <aside class="notes">
+          <h3>Waveform implementation</h3>
+          <p>Each column maps one bucket of samples to min, max, and RMS. Those three values draw one vertical slice of the waveform lane.</p>
+        </aside>
+        </section>
+
+        <section class="demo-slide app-waveform-demo-slide">
+        <div class="section-marker">Sampler Platter</div>
+        <h2>App-style waveform sample</h2>
+        <p class="lead">A 60-second segment from the Cueport demo audio, reduced to 200 fixed-width bars. Bar height uses <code>max(|min|, |max|)</code>; color follows RMS.</p>
+<div class="demo-panel app-waveform-panel">
+  <canvas
+    id="app-waveform"
+    width="1320"
+    height="220"
+    aria-label="Cueport-style waveform bars for a 60-second audio segment"
+  ></canvas>
+  <div class="demo-controls">
+    <button id="play-app-waveform-demo" type="button" aria-label="Play or pause the waveform sample">
+      Play sample
+    </button>
+    <button id="reset-app-waveform-demo" type="button">Reset</button>
+    <output id="app-waveform-demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="app-waveform-audio" preload="auto">
+    <source src="/talks/trail-mix-fossy-2026/assets/app-waveform-segment.wav-8flph4D2.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">segment</span><span class="beat-output-val">60 s</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">bars</span><span class="beat-output-val">200</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">height</span><span class="beat-output-val"><code>max(|min|, |max|)</code></span></div>
+  <div class="beat-output-item"><span class="beat-output-key">color</span><span class="beat-output-val">RMS</span></div>
+</div>
+        <aside class="notes">
+          <h3>App-style waveform sample</h3>
+          <p>Cueport's desktop waveform strip renders 200 fixed-width columns. For trail mix waveform JSON, the app uses max(|min|, |max|) to compute h for height. It takes the larger absolute edge because the compact strip has one centered height value per column, not separate top and bottom edges. That makes the displayed bar symmetric even when min and max are not equal magnitudes. It maps RMS into f for the color lane after scaling RMS relative to the track.</p>
+          <p>This slide uses a 60-second segment from the Cueport demo video audio and computes the same kind of display sample for the deck. The bars are mirrored around the center line so the waveform reads like an audio lane. This is an app-style rendering example, not an additional field in Sampler Platter's analysis JSON.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Evaluation metrics</h2>
+        <p class="lead">How to read the accuracy numbers on the next slide.</p>
+<div class="vocab-grid">
+  <div class="vocab-card vocab-key">
+    <div class="vocab-term">MIREX weighted score (key)</div>
+    <div class="vocab-def">A wrong key is often musically close, so each track earns partial credit rather than pass or fail: an exact match scores 1.0, a perfect fifth 0.5, a relative major or minor 0.3, a parallel major or minor 0.2, and anything else 0. MIREX is the average of that credit over all tracks.</div>
+  </div>
+  <div class="vocab-card vocab-onset">
+    <div class="vocab-term">F1 at 70 ms (beats)</div>
+    <div class="vocab-def">A predicted beat counts as correct when it lands within 70 ms of a real beat. From those matches, <strong>precision</strong> is the fraction of predicted beats that are correct and <strong>recall</strong> is the fraction of real beats found. <strong>F1</strong> is the harmonic mean of the two, so it is high only when both are high: \(F_1 = \dfrac{2\,\times\,\text{precision}\,\times\,\text{recall}}{\text{precision}\,+\,\text{recall}}\), on a 0 to 1 scale.</div>
+  </div>
+  <div class="vocab-card vocab-tempo">
+    <div class="vocab-term">Accuracy1 and Accuracy2 (tempo)</div>
+    <div class="vocab-def"><strong>Accuracy1</strong> counts a BPM as correct within four percent of the label. <strong>Accuracy2</strong> also counts half-time or double-time as correct, because 70 and 140 BPM are the same pulse counted differently.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Hold out vs development</div>
+    <div class="vocab-def">A development corpus is one we looked at while tuning. A hold out corpus is sealed before the run and never used for tuning, so it gives the fair score.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Evaluation metrics</h3>
+          <p>This slide defines the metrics used on the results slide. The key metric is the MIREX weighted score. Each track is weighted by how musically related the guess is to the true key: exact 1.0, perfect fifth 0.5, relative major or minor 0.3, parallel 0.2, and 0 otherwise. The reported number is the average of those weights over all tracks, so near misses receive partial credit. The beat metric is F1 at a 70 millisecond tolerance. Precision is the fraction of predicted beats that land near a real beat, recall is the fraction of real beats found, and F1 is their harmonic mean. For tempo the standard pair is Accuracy1, correct within four percent, and Accuracy2, which also counts half and double time as correct. A development corpus was seen during tuning. A hold out corpus is sealed first, so it gives a fairer score.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Results and gaps</h2>
+        <p class="lead">Tempo leads the hand-written DSP baselines and trails the ML models. Key is the weakest analyzer.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Analyzer</th>
+      <th>Metric</th>
+      <th>trail mix</th>
+      <th>Baseline</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="result-good">
+      <td><strong>Tempo</strong></td>
+      <td>Global BPM Acc1 / Acc2 (GiantSteps, dev)</td>
+      <td>0.68 / 0.83</td>
+      <td>DSP: stratum-dsp 0.60/0.85, Essentia 0.61/0.80, librosa 0.37/0.52. ML: Beat This 0.86/0.94</td>
+      <td class="status-good">Leads DSP, trails ML</td>
+    </tr>
+    <tr class="result-weak">
+      <td><strong>Beats</strong></td>
+      <td>F1 @ 70 ms</td>
+      <td>Implemented, unscored</td>
+      <td>Open corpora label BPM, not beat times</td>
+      <td class="status-weak">No beat-time corpus</td>
+    </tr>
+    <tr class="result-weak">
+      <td><strong>Key</strong></td>
+      <td>MIREX (FMAKv2, hold out)</td>
+      <td>0.53</td>
+      <td>DSP: Essentia 0.66, libKeyFinder 0.62, stratum-dsp 0.48. ML: S-KEY 0.70</td>
+      <td class="status-weak">Main gap</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>Performance</strong></td>
+      <td>Key time / track (FMAKv2)</td>
+      <td>87 ms, 1.7 MB binary</td>
+      <td>Essentia 53, libKeyFinder 101, S-KEY 167 ms</td>
+      <td class="status-good">Small, embeddable</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Results and gaps</h3>
+          <p>On FMAKv2, a 1000-track corpus sealed before anyone inspected results and never used for tuning, trail mix's DSP key detector scores 0.53 MIREX weighted (0.46 exact). The baselines ran on that same hold out set: S-KEY at 0.70, Essentia at 0.66 with its edma profile, libKeyFinder at 0.62, and stratum-dsp at 0.48 (0.34 exact). stratum-dsp is included because it is the other permissive, pure-Rust DSP key detector; on this corpus it scores 0.48 against trail mix's 0.53. Key is still the weakest analyzer overall, and the gap to the ML S-KEY model motivates the ONNX S-KEY backend on the next slide. GiantSteps was the development corpus used during tuning, where trail mix scores 0.49, so those runs are regression diagnostics rather than a hold out comparison. S-KEY is an ML model and FMAKv2 is Free Music Archive audio, so its training overlap is unknown and its 0.70 score may include some training-set exposure. The DSP tools, including trail mix, have no such training overlap.</p>
+          <p>For tempo, the slide reports global BPM on GiantSteps, which gives a same-run comparison across baselines. Trail mix scores Accuracy1 0.68 and Accuracy2 0.83. The DSP baselines are stratum-dsp at 0.60/0.85, Essentia at 0.61/0.80 with the degara method and 0.60/0.83 with multifeature, and librosa at 0.37/0.52. The ML Beat This model scores 0.86/0.94. stratum-dsp is close on the octave-tolerant Accuracy2 but lower on Accuracy1, meaning it lands a related pulse more often than the exact BPM label. GiantSteps is a development corpus inspected during tuning, so this is a diagnostic rather than a sealed comparison. On the hold out FSL10K tempo set, trail mix alone gets 0.43/0.59, lower because that set is short loops rather than full tracks.</p>
+          <p>The beat-placement metric, F1 at a 70 millisecond tolerance, is implemented in code, but scoring it needs a corpus that annotates every beat time. The corpora that cleared the provenance and license gate (GiantSteps, FSL10K, FMAKv2) label only global BPM and key. GTZAN-Rhythm was evaluated and rejected because its official audio is no longer distributed and its annotation repository has no explicit license, so an unofficial mirror would fail the gate. Other beat-tracking sets carry similar audio redistribution or licensing limits. Beat F1 therefore has no permissibly licensed ground truth wired in yet. Beat-tracking quality shows up indirectly through the tempo result and directly in the synthetic multi-tempo demo, where Beat Salad recovers both 120 and 90 BPM within about a tenth of a BPM. The stripped CLI binary with all common codecs is 1.7 MB, 2.0 MB unstripped.</p>
+          <p>The performance row shows same-run per-track key-analysis times on FMAKv2, so all four tools are timed on the same 1000 tracks on the same machine. Trail mix key analysis is about 87 ms, Essentia about 53 ms, libKeyFinder about 101 ms, and S-KEY about 167 ms. Full trail mix analysis, adding tempo, beats, and waveform, is about 89 ms, since key dominates the total. These tools measure slightly different scopes, for example some exclude decode, so the numbers should be read as same-order rather than exact. The packaging result is clearer: the stripped binary with all common codecs is 1.7 MB, 2.0 MB unstripped, with no separate runtime to ship.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">What's next</div>
+        <h2>Future work and collaboration</h2>
+        <p class="lead">What's next for trail mix, and where help from others would make the biggest difference.</p>
+<div class="eval-stack">
+  <div class="eval-layer eval-layer-top">
+    <div class="eval-layer-label">1</div>
+    <div class="eval-layer-title">Publish evaluation numbers</div>
+    <div class="eval-layer-desc">Score key and tempo on hold out corpora and report them next to Essentia, librosa, and S-KEY, so the claims are checkable</div>
+  </div>
+  <div class="eval-layer eval-layer-mid">
+    <div class="eval-layer-label">2</div>
+    <div class="eval-layer-title">Ship the S-KEY key backend</div>
+    <div class="eval-layer-desc">A feature-gated ONNX S-KEY model behind the same <code>KeyAnalysis</code> type, to close the key gap. Target: MIREX &gt; 0.7</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">3</div>
+    <div class="eval-layer-title">Open music datasets</div>
+    <div class="eval-layer-desc">Permissively licensed audio labeled for key, tempo, and especially beat times</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">4</div>
+    <div class="eval-layer-title">Train new ML models</div>
+    <div class="eval-layer-desc">Try a smaller S-KEY-style key model, a tempo-octave classifier, or a beat/bar tracker</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">5</div>
+    <div class="eval-layer-title">Integrations</div>
+    <div class="eval-layer-desc">Pressure-test Analysis JSON in other players and tools</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Future work and collaboration</h3>
+          <p>The near-term roadmap has two parts. First, publish evaluation numbers by scoring key and tempo on hold out corpora and reporting them next to Essentia, librosa, and S-KEY, so the claims are checkable. Second, ship a feature-gated ONNX version of S-KEY behind the same KeyAnalysis return type, aiming for a MIREX score above 0.7 because key is the weakest analyzer today.</p>
+          <p>The collaboration asks are specific. Open, permissively licensed music datasets labeled for key, tempo, and beat times would strengthen hold out evaluation and make beat F1 scoring possible. ML experiments could try a smaller S-KEY-style key model, a tempo-octave classifier, or a beat/bar tracker. Integrations in players and tools other than Cueport would pressure-test whether the Analysis JSON has the right fields, names, units, and semantics for real applications.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Credits</div>
+        <h2>Built with open source</h2>
+        <p class="lead">trail mix builds on a number of Rust libraries, plus open datasets and the Rust toolchain.</p>
+<div class="oss-wall">
+  <div class="oss-group g-decoding">
+    <div class="oss-group-label">Decoding</div>
+    <div class="oss-chips">
+      <a class="oss-chip" href="https://github.com/pdeljanov/Symphonia" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Symphonia</a>
+    </div>
+  </div>
+  <div class="oss-group g-datasets">
+    <div class="oss-group-label">Open datasets</div>
+    <div class="oss-chips">
+      <a class="oss-chip" href="https://github.com/GiantSteps/giantsteps-tempo-dataset" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GiantSteps Tempo</a>
+      <a class="oss-chip" href="https://github.com/GiantSteps/giantsteps-key-dataset" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GiantSteps Key</a>
+      <a class="oss-chip" href="https://zenodo.org/records/3967852" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>FSL10K</a>
+      <a class="oss-chip" href="https://zenodo.org/records/12759100" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>FMAKv2</a>
+    </div>
+  </div>
+  <div class="oss-group g-toolchain">
+    <div class="oss-group-label">Language and packaging</div>
+    <div class="oss-chips">
+      <a class="oss-chip" href="https://www.rust-lang.org" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>Rust</a>
+      <a class="oss-chip" href="https://doc.rust-lang.org/cargo/" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>Cargo</a>
+      <a class="oss-chip" href="https://crates.io" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>crates.io</a>
+    </div>
+  </div>
+  <div class="oss-group g-more">
+    <div class="oss-group-label">And many more</div>
+    <div class="oss-chips">
+      <a class="oss-chip" href="https://serde.rs" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>Serde</a>
+      <a class="oss-chip" href="https://github.com/rayon-rs/rayon" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>rayon</a>
+      <a class="oss-chip" href="https://github.com/ruuda/hound" target="_blank" rel="noopener noreferrer"><svg class="oss-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>hound</a>
+    </div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Built with open source</h3>
+          <p>trail mix builds on a number of Rust libraries. Symphonia handles decoding, turning an audio file into the samples the analyzers read. It is the heaviest dependency, but it lives in a separate decoding layer rather than on the core analysis path, so an app that already has samples can skip it.</p>
+          <p>For accuracy, trail mix is measured against open annotation sets with two roles. GiantSteps Tempo and GiantSteps Key are development corpora used during tuning; they are community EDM datasets with reference BPM and key labels annotated from user corrections, from Knees and colleagues at ISMIR 2015, with a follow-up crowdsourced tempo study by Schreiber and Müller in 2018. The hold out corpora used for external validation are FSL10K, the Freesound Loop Dataset, for tempo, and FMAKv2, key annotations over Free Music Archive audio, for key. Both annotation sets are distributed under CC BY 4.0 on Zenodo. The project imports labels and provenance while the audio keeps its own distribution terms, so the benchmark stores paths rather than redistributing recordings.</p>
+          <p>MIREX is not a dataset here. It is the scoring convention used for key: a weighted score that gives partial credit for musically close answers, so a perfect fifth or a relative major and minor pair earns something rather than zero. It sits on top of these datasets rather than being one of them.</p>
+          <p>The analyzers themselves are almost dependency-free. Beyond Serde there is no FFT or linear-algebra library, so the DSP is hand-written.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Further reading</h2>
+        <p class="lead">Papers, methods, and datasets behind trail mix.</p>
+<div class="refs-grid">
+  <div class="refs-col">
+    <h3>Methods</h3>
+    <ul class="ref-list">
+      <li>Bello et al. <a href="https://doi.org/10.1109/TSA.2005.851998">A tutorial on onset detection in music signals</a>. IEEE TSAP, 2005.</li>
+      <li>Ellis. <a href="https://doi.org/10.1080/09298210701653344">Beat tracking by dynamic programming</a>. J. New Music Research, 2007.</li>
+      <li>Brown. <a href="https://doi.org/10.1121/1.400476">Calculating a constant-Q transform</a>. JASA, 1991.</li>
+      <li>Goertzel. <a href="https://doi.org/10.2307/2310304">An algorithm for the evaluation of finite trigonometric series</a>. Amer. Math. Monthly, 1958.</li>
+    </ul>
+  </div>
+  <div class="refs-col">
+    <h3>Key estimation</h3>
+    <ul class="ref-list">
+      <li>Krumhansl and Kessler. <a href="https://doi.org/10.1037/0033-295X.89.4.334">Perceived tonal organization</a>. Psychological Review, 1982.</li>
+      <li>Temperley. <a href="https://doi.org/10.2307/40285811">What's key for key?</a> Music Perception, 1999.</li>
+      <li>Faraldo et al. <a href="http://hdl.handle.net/10230/33060">Key estimation in electronic dance music (EDMA)</a>. ECIR, 2016.</li>
+      <li>Kong et al. <a href="https://arxiv.org/abs/2501.12907">S-KEY: self-supervised learning of keys</a>. ICASSP, 2025.</li>
+    </ul>
+  </div>
+  <div class="refs-col">
+    <h3>Baselines and datasets</h3>
+    <ul class="ref-list">
+      <li>Foscarin et al. <a href="https://arxiv.org/abs/2407.21658">Beat this! Accurate beat tracking</a>. ISMIR, 2024.</li>
+      <li>Knees et al. <a href="https://archives.ismir.net/ismir2015/paper/000246.pdf">GiantSteps tempo and key datasets</a>. ISMIR, 2015.</li>
+      <li>Schreiber and Müller. <a href="http://ismir2018.ircam.fr/doc/pdfs/220_Paper.pdf">Crowdsourced EDM tempo</a>. ISMIR, 2018.</li>
+      <li>Ramires et al. <a href="https://archives.ismir.net/ismir2020/paper/000241.pdf">Freesound Loop Dataset (FSL10K)</a>. ISMIR, 2020.</li>
+      <li>Wong and Hernandez. <a href="https://zenodo.org/records/12759100">FMAKv2 key annotations</a>. Zenodo, 2024.</li>
+      <li>Defferrard et al. <a href="https://arxiv.org/abs/1612.01840">FMA: a dataset for music analysis</a>. ISMIR, 2017.</li>
+    </ul>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Further reading</h3>
+          <p>These are the main papers, methods, and datasets behind trail mix, kept for anyone who wants to follow up. The methods column covers the DSP: spectral flux onset detection, Ellis dynamic-programming beat tracking, the constant-Q transform, and the Goertzel algorithm. The key column covers the templates and the ML model: Krumhansl-Kessler, Temperley, and the EDMA profiles from Faraldo, plus S-KEY. The last column lists the ML beat baseline and the labeled corpora used for evaluation: GiantSteps and its crowdsourced tempo annotations, the Freesound Loop Dataset, FMAKv2, and the underlying Free Music Archive.</p>
+        </aside>
+        </section>
+
+        <section class="questions-slide" data-footer="false">
+<p class="eyebrow">FOSSY 2026</p>
+<h2>Thank you</h2>
+<div class="question-links">
+  <a href="https://trailmix.tools" target="_blank" rel="noopener noreferrer">trailmix.tools</a>
+  <a href="https://djpardis.com" target="_blank" rel="noopener noreferrer">djpardis.com</a>
+</div>
+        <aside class="notes">
+          <h3>Thank you</h3>
+          <p>Thank you.</p>
+        </aside>
+        </section>
+
+        <section class="questions-slide" data-footer="false">
+<h2>Appendix</h2>
+        <aside class="notes">
+          <h3>Appendix</h3>
+          <p>The appendix contains implementation details for readers who want the public API, formulas, code snippets, and full demo output.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>The analyze() function</h2>
+        <p class="lead">One <code>analyze()</code> call runs the three analyzers over the same sample buffer and returns one versioned result.</p>
+<pre class="code-block"><code class="language-rust">pub fn analyze(audio: AudioBuffer&lt;'_&gt;) -&gt; Analysis {
+    let AudioBuffer { samples, sample_rate } = audio;
+    Analysis {
+        version: 1,
+        beat: beat_salad::analyze(samples, sample_rate),
+        key: key_lime::analyze(samples, sample_rate),
+        waveform: sampler_platter::generate_overview(samples, sample_rate),
+    }
+}</code></pre>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>AudioBuffer</code></strong>: the input, mono samples plus the sample rate</li>
+          <li><strong><code>Analysis</code></strong>: the output, one versioned result with beat, key, and waveform</li>
+          <li><strong><code>beat_salad::analyze</code></strong>: the <code>analyze</code> in the beat_salad crate, a different function from this one</li>
+        </ul>
+        <aside class="notes">
+          <h3>The analyze() function</h3>
+          <p>analyze is the one public entry point. It destructures the buffer into samples and a sample rate, then fills the beat, key, and waveform fields. Each analyzer lives in its own crate and exposes its own entry point, so beat_salad::analyze and key_lime::analyze are different functions that happen to share the name analyze, and the crate path in front makes each call unambiguous rather than recursive. The real signature also takes a config of per-analyzer settings and records a duration, which are dropped here to keep the shape clear. Same input, same output contract, three jobs.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Onset detection: spectral flux</h2>
+        <p class="lead">The onset-strength curve is spectral flux, the summed rise in band energy from one frame to the next.</p>
+<p class="math-formula">
+  \[\operatorname{flux}(t) = \sum_{b=1}^{24} \max\!\bigl(0,\; E_b(t) - E_b(t-1)\bigr)\]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>flux(t)</code></strong>: onset strength at frame t; its peaks are the candidate beats</li>
+          <li><strong><code>E_b(t)</code></strong>: energy in band b at frame t, from 24 pitch-spaced Goertzel filters</li>
+          <li><strong><code>max(0, ...)</code></strong>: half-wave rectification, so only rising energy counts, not fading</li>
+          <li><strong><code>sum over b</code></strong>: fold the rises across all 24 bands into one number per frame</li>
+        </ul>
+        <aside class="notes">
+          <h3>Onset detection: spectral flux</h3>
+          <p>This is the formula behind the onset slide. The audio is cut into short frames, and for each frame the energy is read across 24 frequency bands spaced like musical pitch using cheap Goertzel filters. For every band we take the rise since the previous frame and clamp negatives to zero, so a sound growing louder counts as a new event while a sound fading out does not. Summing those rises across the 24 bands gives one number per frame, the spectral flux, and the sequence of those numbers is the onset-strength curve whose peaks are the candidate beats.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Tempo estimation</h2>
+        <p class="lead">Autocorrelation of the onset curve, together with an inter-onset interval histogram, locates the beat period. An octave prior then nudges the pick toward mid-range tempos to break the half and double time tie.</p>
+<p class="math-formula">
+  \[A(\tau) = \frac{\sum_t O(t)\,O(t-\tau)}{\sum_t O(t)^2}, \qquad \operatorname{prior}(\mathrm{bpm}) = \exp\!\left(-\frac{\log_2(\mathrm{bpm}/120)^2}{8}\right)\]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>A(τ)</code></strong>: normalized autocorrelation of the onset curve at lag τ; peaks mark repeating pulses</li>
+          <li><strong><code>bpm(τ)</code></strong>: tempo for lag τ, \(\mathrm{bpm}(\tau) = 60\,f/\tau\) with onset frame rate f</li>
+          <li><strong><code>prior(bpm)</code></strong>: soft preference near mid-range tempo, applied as \(0.75 + 0.25\,\operatorname{prior}\)</li>
+          <li><strong>pick</strong>: the lag with the highest combined score sets the tempo</li>
+        </ul>
+        <aside class="notes">
+          <h3>Tempo estimation</h3>
+          <p>In the implementation the match strength for each candidate lag is a weighted blend, about 0.65 from an inter-onset interval histogram of the gaps between onset peaks and about 0.35 from the normalized autocorrelation shown here, which measures how strongly the onset curve repeats at lag tau. A lag converts to tempo by bpm equals 60 times the onset frame rate f divided by tau. Because half, true, and double time overlap, candidates in the same octave family are first grouped so related tempos reinforce one reading, then each is weighted by the octave prior, a Gaussian on log2 of bpm over 120 applied as 0.75 plus 0.25 times the prior, which favors mid-range tempos without hard-coding one answer. The best-scoring lag sets the tempo, and the interval histogram refines the final period. The autocorrelation term above is the periodicity piece of that combined score.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat tracking optimization</h2>
+        <p class="lead">Ellis dynamic programming scores a whole beat sequence at once, rewarding strong onsets while keeping regular beat intervals.</p>
+<p class="math-formula">
+  \[C(i) = O(i) + \max_{j \lt i}\left[\,C(j) + w\,\exp\!\left(-\frac{\big((i-j)-P\big)^2}{2\sigma^2}\right)\right]\]
+</p>
+<p class="math-formula math-formula-small">
+  \[J(b_1,\ldots,b_m)=\sum_t O(b_t)+0.5\sum_{t>1}\exp\!\left(-\frac{\big((b_t-b_{t-1})-P\big)^2}{2\sigma^2}\right),\quad b_t-b_{t-1}\in[P-0.25P,\;P+0.25P]\]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>C(i)</code></strong>: best cumulative score for a beat ending at frame i</li>
+          <li><strong><code>O(i)</code></strong>: onset strength at frame i</li>
+          <li><strong><code>P</code></strong>: target beat interval, \(P = 60\,f / \mathrm{BPM}\) with onset frame rate f</li>
+        </ul>
+        <aside class="notes">
+          <h3>Beat tracking optimization</h3>
+          <p>This is the optimization behind the illustration on the beat-tracking slide. C(i) is the best cumulative score for a beat ending at frame i, O(i) is that frame's onset strength, and P is the target beat interval, P equals 60 times the onset frame rate over BPM. The second line writes the same idea as a whole-path objective J over beat frames b. The interval reward is highest when a predecessor is about one period back, with sigma set to half a period and the reward weighted by 0.5. The implementation only searches predecessor gaps within about plus or minus 25 percent of P, which is the interval constraint shown at the end of the objective. Solving this for every frame in one forward pass gives the highest-scoring beat sequence for the whole track.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat tracking inner loop</h2>
+        <p class="lead">The forward pass in Rust: for each frame, keep the best predecessor, then add the frame's own onset strength.</p>
+<pre class="code-block"><code class="language-rust">// beat interval in onset frames, and how far it may drift
+let period = 60.0 * envelope_rate / bpm;
+let denom = 2.0 * (period * 0.5).powi(2);
+// for a beat at frame i, try each earlier frame j before it
+let deviation = (i - j) as f32 - period;
+let penalty = (-(deviation * deviation) / denom).exp();
+let path = previous_score + penalty * 0.5;
+// keep the best predecessor, then add i's own onset strength
+let score = onset[i] + best_path;</code></pre>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>period</code></strong>: ideal beat interval in onset frames, from the estimated BPM</li>
+          <li><strong><code>penalty</code></strong>: Gaussian weight for a predecessor, highest when the gap <code>i - j</code> is one <code>period</code></li>
+          <li><strong><code>path</code></strong>: that predecessor's cumulative score plus the weighted interval reward</li>
+          <li><strong><code>score</code></strong>: frame <code>i</code>'s onset strength plus the best predecessor <code>path</code></li>
+        </ul>
+        <aside class="notes">
+          <h3>Beat tracking inner loop</h3>
+          <p>This is the Rust forward pass for the optimization. period and denom are P and the Gaussian denominator. For a candidate beat at frame i the loop searches predecessor frames near one period back, scores each by that predecessor's cumulative score plus the interval reward weighted by 0.5, and keeps the best. Frame i's own onset strength is then added, and backtracing the best predecessors recovers the beat path.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat switch: full output</h2>
+        <p class="lead">The complete <code>beat</code> object Beat Salad returned for the 120-to-90 BPM click track on the demo slide.</p>
+<pre class="code-block"><code class="language-json">"beat": {
+  "global_bpm": 120.08,
+  "multi_tempo": true,
+  "alternate_bpm": 90.03,
+  "alternate_coverage": 0.45,
+  "tempo_segments": [
+    { "start_seconds": 0.0,  "end_seconds": 33.0, "bpm": 120.09 },
+    { "start_seconds": 33.0, "end_seconds": 60.0, "bpm": 90.03 }
+  ]
+}</code></pre>
+        <ul class="caption-list" aria-label="Reading it">
+          <li><strong><code>global_bpm</code> 120.08</strong>: the dominant tempo across the whole file</li>
+          <li><strong><code>alternate_bpm</code> 90.03, <code>alternate_coverage</code> 0.45</strong>: the second tempo and the share of the file it covers</li>
+          <li><strong><code>tempo_segments</code></strong>: the two detected sections, split near 33 s against a true 30 s</li>
+        </ul>
+        <aside class="notes">
+          <h3>Beat switch: full output</h3>
+          <p>This is the complete beat object from the demo track.</p>
+          <ul>
+            <li>global_bpm is the dominant tempo across the whole file.</li>
+            <li>alternate_bpm and alternate_coverage capture the second tempo and how much of the file it covers.</li>
+            <li>tempo_segments is the timeline of local tempo estimates. In this demo it lists the 120 BPM section and the 90 BPM section.</li>
+            <li>The split near 33 seconds against a true 30 is the windowing lag described on the demo slide.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key change: full output</h2>
+        <p class="lead">The complete <code>key</code> object Key Lime returned for the A-major to C-minor chord track on the demo slide.</p>
+<pre class="code-block"><code class="language-json">"key": {
+  "version": 6,
+  "key": { "tonic": "C", "mode": "Minor" },
+  "confidence": 0.021617552,
+  "chroma": [0.0881601, 0.14320727, 0.0827591, 0.08654915, 0.14292027, 0.06208938, 0.048048906, 0.045049556, 0.06878138, 0.15347181, 0.050051074, 0.02891198],
+  "segments": [
+    { "start_seconds": 0.0, "end_seconds": 27.0, "key": { "tonic": "A", "mode": "Major" }, "confidence": 0.010805504 },
+    { "start_seconds": 27.0, "end_seconds": 33.0, "key": { "tonic": "CSharp", "mode": "Minor" }, "confidence": 0.26016137 },
+    { "start_seconds": 33.0, "end_seconds": 60.0, "key": { "tonic": "C", "mode": "Minor" }, "confidence": 0.0045011365 }
+  ],
+  "multi_key": true,
+  "alternate_key": { "tonic": "A", "mode": "Major" },
+  "alternate_coverage": 0.45
+}</code></pre>
+        <aside class="notes">
+          <h3>Key change: full output</h3>
+          <p>This is the complete key object from the synthetic key-change demo. It is real Key Lime output using the demo segmentation settings described on the slide.</p>
+          <ul>
+            <li>key is C minor because the C-minor region is the longest stable segment after windowing.</li>
+            <li>alternate_key is A major, covering 45 percent of the track.</li>
+            <li>segments includes a short C-sharp minor transition window from 27 to 33 seconds because the rolling windows overlap the true change at 30 seconds.</li>
+            <li>chroma is the 12-value pitch-class summary used by the global key scorer.</li>
+          </ul>
+        </aside>
+        </section>
+      </div>
+    </div>
+
+  </body>
+</html>
