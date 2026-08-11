@@ -9,8 +9,8 @@
     />
     <title>trail mix: Open tempo, key, and waveform analysis</title>
     <link rel="icon" type="image/png" href="/talks/trail-mix-fossy-2026/assets/favicon-almond-CYwZmozJ.png" />
-    <script type="module" crossorigin src="/talks/trail-mix-fossy-2026/assets/index-BUbBsIYy.js"></script>
-    <link rel="stylesheet" crossorigin href="/talks/trail-mix-fossy-2026/assets/index-az5IYIwZ.css">
+    <script type="module" crossorigin src="/talks/trail-mix-fossy-2026/assets/index-398ZFfpq.js"></script>
+    <link rel="stylesheet" crossorigin href="/talks/trail-mix-fossy-2026/assets/index-BIAcXgLH.css">
   </head>
   <body>
     <!-- Generated from deck.md by scripts/build-deck.mjs. Do not edit directly. -->
@@ -1058,7 +1058,12 @@ let rms = (sum_sq / slice.len() as f32).sqrt();</code></pre>
         <h2>Tempo estimation</h2>
         <p class="lead">Autocorrelation of the onset curve, together with an inter-onset interval histogram, locates the beat period. An octave prior then nudges the pick toward mid-range tempos to break the half and double time tie.</p>
 <p class="math-formula">
-  \[A(\tau) = \frac{\sum_t O(t)\,O(t-\tau)}{\sum_t O(t)^2}, \qquad \operatorname{prior}(\mathrm{bpm}) = \exp\!\left(-\frac{\log_2(\mathrm{bpm}/120)^2}{8}\right)\]
+  \[
+  \begin{aligned}
+  A(\tau) &= \frac{\sum_t O(t)\,O(t-\tau)}{\sum_t O(t)^2} \\
+  \operatorname{prior}(\mathrm{bpm}) &= \exp\!\left(-\frac{\log_2(\mathrm{bpm}/120)^2}{8}\right)
+  \end{aligned}
+  \]
 </p>
         <ul class="caption-list" aria-label="Legend">
           <li><strong><code>A(τ)</code></strong>: normalized autocorrelation of the onset curve at lag τ; peaks mark repeating pulses</li>
