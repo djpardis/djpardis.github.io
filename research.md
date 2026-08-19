@@ -137,7 +137,7 @@ sitemap: false
 
 - Pardis Noorzad of General Folders: Transforming B2B Data Collaboration  
   with [Jake Villarreal](https://www.linkedin.com/in/jakevillarreal/)  
-  [Born in Silicon Valley by Match Relevant](https://www.youtube.com/playlist?list=PLPgI4Y1DZOyXM1D_Y7UxFjuPd6QLakNz7), September 6, 2023  
+  [Born in Silicon Valley by Match Relevant](https://www.youtube.com/playlist?list=PLPgI4Y1DZOyXM1D_Y7UxFjuPd6QLakNz7), July 9, 2024  
   🎙️ [podcast episode](https://youtube.com/watch?v=UEofjLSMKrQ)
 
   *Abstract.* Join us for an engaging conversation with Pardis Noorzad, Founder and CEO of General Folders. Learn how she is revolutionizing B2B data collaboration and transforming the way businesses handle data logistics.
