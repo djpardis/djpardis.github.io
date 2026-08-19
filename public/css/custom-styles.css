@@ -1069,6 +1069,22 @@ body .wrap .container.content {
   vertical-align: bottom;
 }
 
+.container.content .research-hero-images {
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.container.content .research-hero-images .image-container {
+  min-width: 0;
+}
+
+.container.content .research-hero-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Mobile: work hero full width like homepage */
 @media (max-width: 768px) {
   .work-hero-image {
@@ -1081,6 +1097,19 @@ body .wrap .container.content {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+  }
+  .container.content .research-hero-images {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+  .container.content .research-hero-images .image-container {
+    width: 100%;
+  }
+  .container.content .research-hero-images img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
   }
 }
 

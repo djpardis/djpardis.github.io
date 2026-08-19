@@ -1,12 +1,7 @@
-#!/bin/bash
-# Jekyll development server script
-# Fixes gem version conflicts by using bundle exec
+#!/usr/bin/env bash
+set -euo pipefail
+# Local preview entry point.
 
-echo "Starting Jekyll development server..."
-echo "Note: If you see gem version conflicts, this script uses bundle exec to fix them"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-# Kill any existing Jekyll processes first
-pkill -f jekyll 2>/dev/null
-
-# Start Jekyll with bundle exec to avoid gem conflicts
-bundle exec jekyll serve --port 4000 --livereload --drafts
+exec "$ROOT/scripts/preview.sh" "${1:-4000}"

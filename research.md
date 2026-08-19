@@ -9,12 +9,17 @@ robots: noindex, follow
 sitemap: false
 ---
 
-<div class="work-hero-image">
-  <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025" />
+<div class="image-row research-hero-images">
+  <div class="image-container" style="flex: 0.8">
+    <img src="/files/pics/pages/vsw2025_panel.jpg" alt="Techstars SDSU Founder Panel with Misti Cain at VSW 2025" />
+  </div>
+  <div class="image-container" style="flex: 1.77">
+    <img src="/files/pics/pages/local-first-conf-2026.png" alt="Local First Conf 2026 presentation slide for Reading Serato" />
+  </div>
 </div>
-*Techstars SDSU Founder Panel with Misti Cain at VSW 2025.*
+*Techstars SDSU Founders with Misti Cain at VSW 2025, and Local First Conf 2026.*
 
-<details class="collapsible-section" markdown="1">
+<details class="collapsible-section" markdown="1" open>
 <summary><h3>Talks</h3></summary>
 
 - trail mix: Open tempo, key, and waveform analysis  
