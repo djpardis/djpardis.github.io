@@ -19,7 +19,7 @@ sitemap: false
 </div>
 *Techstars SDSU Founders with Misti Cain at VSW 2025, and Local First Conf 2026.*
 
-<details class="collapsible-section" markdown="1" open>
+<details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
 
 - trail mix: Open tempo, key, and waveform analysis  
