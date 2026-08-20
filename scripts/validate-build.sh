@@ -1,7 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Build validation script for djpardis.github.io
 # This script checks for common issues before pushing changes
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+export RBENV_VERSION="${RBENV_VERSION:-$(tr -d '[:space:]' < .ruby-version)}"
+unset BUNDLE_PATH
+bundle config set --local path ".bundle/vendor" >/dev/null
 
 echo "🔍 Validating build..."
 
@@ -14,8 +22,8 @@ fi
 # Check if all dependencies are installed
 echo "📦 Checking dependencies..."
 if ! bundle check &> /dev/null; then
-    echo "❌ Error: Dependencies not installed. Run 'bundle install'"
-    exit 1
+    echo "📦 Installing missing dependencies..."
+    bundle install
 fi
 
 # Build the site

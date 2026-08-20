@@ -20,7 +20,7 @@ canonical_url: https://djpardis.com/
 
   <div class="link-cards">
     <a class="link-card" href="https://trailmix.tools/" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png?v=2')"></div>
       <div class="link-card-body">
         <span class="link-card-title">trail mix</span>
         <span class="link-card-domain">trailmix.tools</span>
