@@ -17,7 +17,7 @@ sitemap: false
     <img src="/files/pics/pages/local-first-conf-2026.png" alt="Local First Conf 2026 presentation slide for Reading Serato" />
   </div>
 </div>
-*Techstars SDSU Founders with Misti Cain at VSW 2025, and Local First Conf 2026.*
+*Techstars SDSU Founders with Misti Cain at VSW 2025, and [Local First Conf 2026](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14).*
 
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
