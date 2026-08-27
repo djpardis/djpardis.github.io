@@ -14,15 +14,15 @@ It's been quite the journey building [General Folders](https://generalfolders.co
 
 {% include separator.html %}
 
-**Build a team.** Bring along co-founders, but [for the right reasons](https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441). Two can outperform one. Building the first team is your most important task.
+**Build a team.** Bring along co-founders, but [for the right reasons](https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441). Two can outperform one. Finding the right people comes before getting started.
 
-**Be genuinely passionate.** The secret to hiring great people is to be knowledgeable and passionate about the product and business. Passion is contagious, and expertise is hard to fake. The same holds for sales: don't underestimate the impact of *stoke* on selling a product.
+**Be genuinely passionate.** The secret to attracting great people is to be knowledgeable and passionate about the product and business. Passion is contagious, and expertise is hard to fake. The same holds for sales: don't underestimate the impact of *stoke* on selling a product.
 
-**Define the MVP.** Determine the minimum amount of **product** or **visuals** required to get 1) customer buy-in and 2) relevant feedback.
+**Define the MVP.** Determine the right amount of **product** to get 1) customer buy-in and 2) relevant feedback.
 
-Your ability to come up with a successful MVP is tied to being able to describe a very particular use case with a well-defined customer profile. Having a well-defined use case, more than anything, paves the way for successful distribution.
+It helps to narrow down to a particular use case with a well-defined customer profile. This, more than anything, paves the way for successful distribution.
 
-As it turns out, this is an exercise that a company inevitably repeats again and again. You can easily bankrupt a company as you spend to develop an upcoming version.
+As it turns out, this is an exercise that a company inevitably repeats again and again.
 
 **Sell early and often.** A startup's success hinges on its sales and the trajectory of those sales. Life is easier if the product can be sold early and often. A startup will struggle to survive with grand plans and lengthy sales cycles unless it secures substantial external funding.
 
@@ -30,7 +30,7 @@ As it turns out, this is an exercise that a company inevitably repeats again and
 
 **Embrace change.** Don't obsess over a particular decision or plan. If product reception is anything but stellar, update your strategy.
 
-**Follow the crowd.** Tried-and-true practices are popular for a reason. It pays to follow the crowd if you know when and where to apply a technique.
+**Follow the wise.** Tried-and-true practices are popular for a reason. It pays to follow conventions if you know when and where to apply a technique.
 
 **Follow trends.** Don't ignore market trends. Following trends makes you more likely to get noticed, talked about, and funded. It's an easier ride if you want to take it.
 
@@ -48,17 +48,17 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 **Keep learning.** In every scenario, assume you don't have all the answers. Learn and evolve to become the leader the company needs at each stage. Can you [hire yourself every day](https://youtu.be/qAr-yl9A0Xc?si=wUVTi-zKmvuWsEiK&t=1978)?
 
-**Ask for help.** Ask for things and get help. The startup community is more generous, welcoming, and helpful than expected. Knowing when to ask, who to ask, and for what is a skill worth perfecting. 
+**Ask for help.** Ask for things and get help. It doesn't feel good to tell people you need help; ignore those thoughts. The startup community is more generous, welcoming, and helpful than expected.
 
-**Get funding.** Raise money to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit.
+**Get funding.** Raise money to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit. It's a tough game, and you need cheerleaders.
 
 **Believe in yourself.** Be kind, especially to yourself. Self-confidence is the only thing you have going for you for a long time. Things won't ever be perfect, and that's okay.
 
 **Keep going.** People (mainly yourself) will tell you that what you're doing is not enough and that if it were to work, it would have worked by now. They will tell you to give up. Don't. Opportunities will come around.
 
-**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Startup news doesn't talk about the deal details. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers. Don't attempt to solve global problems for imaginary customers.
+**Keep focused.** Don't compare your startup to other startups. Don't read into startup news. Startup news doesn't talk about the deal details. Focus on your early customers. Focus on your collaborators. Focus on well-defined local problems for your first few customers. Don't try to solve global problems for imaginary customers unless you're OpenAI or Elon Musk.
 
-**Seize the day.** You might not have achieved all the milestones, but you'll never be this young ever again. 💁🏻‍♀️
+**Seize the day.** You might not have achieved all the milestones, but you'll never be this young ever again.
 
 <div class="text-center">
     <span>&#10210;&nbsp;&nbsp;&#10209;&nbsp;&nbsp;&#10211;</span>
