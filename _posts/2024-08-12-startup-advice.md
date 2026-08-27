@@ -14,7 +14,7 @@ It's been quite the journey building [General Folders](https://generalfolders.co
 
 {% include separator.html %}
 
-**Build a team.** Bring along co-founders, but [for the right reasons](https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441). Two can outperform one. Finding the right people comes before getting started.
+**Build a team.** Bring along co-founders, but [for the right reasons](https://medium.com/@mtrajan/price-of-a-great-co-founder-5fe35d62b441). Two can outperform one. Finding the right people is step 1.
 
 **Be genuinely passionate.** The secret to attracting great people is to be knowledgeable and passionate about the product and business. Passion is contagious, and expertise is hard to fake. The same holds for sales: don't underestimate the impact of *stoke* on selling a product.
 
