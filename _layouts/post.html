@@ -19,8 +19,8 @@ layout: default
 {% if site.related_posts.size > 0 %}
 <div class="related">
   <h2>Related posts</h2>
-  <div class="link-cards related-posts-cards">
-    {% for post in site.related_posts limit:3 %}
+  <div class="link-cards card-carousel related-posts-cards">
+    {% for post in site.related_posts %}
       {% assign thumb = post.image %}
       {% if thumb contains '://' %}
         {% assign thumb_url = thumb %}

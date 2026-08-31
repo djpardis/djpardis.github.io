@@ -1,0 +1,26 @@
+[
+  {
+    "name": "trailmix",
+    "url": "https://github.com/djpardis/trailmix",
+    "image": "https://opengraph.githubassets.com/89c0379a1cf4484cfb2cf828699a81455647bc87c90fb7877e50d7c61a54056b/djpardis/trailmix",
+    "language": "Rust"
+  },
+  {
+    "name": "newsletter",
+    "url": "https://github.com/djpardis/newsletter",
+    "image": "https://opengraph.githubassets.com/40368fae1354f4cc735206c85490c5cb782854edd2254765bd0b27aae0689c70/djpardis/newsletter",
+    "language": "TypeScript"
+  },
+  {
+    "name": "form",
+    "url": "https://github.com/djpardis/form",
+    "image": "https://opengraph.githubassets.com/f67a55bfa3e0c61264f26ff66bcafac8fc8948c9728f040bf36afbde65621f63/djpardis/form",
+    "language": "TypeScript"
+  },
+  {
+    "name": "mcp-code-qna",
+    "url": "https://github.com/djpardis/mcp-code-qna",
+    "image": "https://opengraph.githubassets.com/60723a890c92f7b625500ebf0d752d5a0207b39f5df215c684d34ce2def550b0/djpardis/mcp-code-qna",
+    "language": "Python"
+  }
+]

@@ -103,7 +103,7 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     user-select: none;
   `;
@@ -152,7 +152,7 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
       font-size: 14px;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 4px 8px;
-      border-radius: 4px;
+      border-radius: 0;
     `;
     container.appendChild(counter);
   }
@@ -222,7 +222,7 @@ function createNavButton(text, side, clickHandler) {
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.9);
     border: none;
-    border-radius: 50%;
+    border-radius: 0;
     width: ${isMobile ? '44px' : '50px'};
     height: ${isMobile ? '44px' : '50px'};
     font-size: ${isMobile ? '20px' : '24px'};
