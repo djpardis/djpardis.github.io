@@ -16,36 +16,28 @@ canonical_url: https://djpardis.com/
 <details class="collapsible-section" markdown="1" open>
 <summary><h3>Currently building</h3></summary>
 
-- **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Tools I maintain and use
+- **[Open source projects](https://github.com/djpardis){:target="_blank"}** — Tools I use and maintain
 
-  <div class="link-cards">
-    <a class="link-card" href="https://trailmix.tools/" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/trail-mix-card.png?v=2')"></div>
+  <div class="link-cards card-carousel">
+    {% comment %}
+      The sync script writes GitHub's pinnedItems order to this data file.
+      Do not sort this loop. Its order must match the GitHub profile.
+    {% endcomment %}
+    {% for repo in site.data.github_pinned_repos %}
+    <a class="link-card link-card--github" href="{{ repo.url }}" target="_blank">
+      <div class="link-card-image" style="background-image: url('{{ repo.image }}')"></div>
       <div class="link-card-body">
-        <span class="link-card-title">trail mix</span>
-        <span class="link-card-domain">trailmix.tools</span>
+        <span class="link-card-domain">{{ repo.language }}</span>
       </div>
     </a>
-    <a class="link-card" href="https://github.com/djpardis/newsletter" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/newsletter-card.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">newsletter</span>
-        <span class="link-card-domain">github.com</span>
-      </div>
-    </a>
-    <a class="link-card" href="https://github.com/djpardis/form" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/form-card.jpg')"></div>
-      <div class="link-card-body">
-        <span class="link-card-title">form</span>
-        <span class="link-card-domain">github.com</span>
-      </div>
-    </a>
+    {% endfor %}
   </div>
 
 - <strong><a href="{{ '/blog' | relative_url }}">Data and AI blog</a></strong> — Essays on data, software, and AI systems
 
-  <div class="link-cards">
-    {% for item in site.posts limit:3 %}
+  <div class="link-cards card-carousel">
+    {% assign homepage_posts = site.posts | where_exp: "p", "p.blog_index_exclude != true" %}
+    {% for item in homepage_posts %}
     {% assign card_thumb = item.image %}
     {% if card_thumb contains '://' %}
     {% assign card_thumb_url = card_thumb %}
@@ -64,7 +56,7 @@ canonical_url: https://djpardis.com/
 
 - **[General Folders](https://generalfolders.com){:target="_blank"}** — [Techstars](https://www.techstars.com/newsroom/new-class-san-diego-sdsu){:target="_blank"}-backed company for [B2B data transfer](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0){:target="_blank"}
 
-  <div class="link-cards">
+  <div class="link-cards card-carousel">
     <a class="link-card" href="https://www.youtube.com/watch?v=UEofjLSMKrQ" target="_blank">
       <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/UEofjLSMKrQ/hqdefault.jpg')"></div>
       <div class="link-card-body">

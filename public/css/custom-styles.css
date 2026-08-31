@@ -39,7 +39,7 @@
 :target {
   background-color: #FFFF99;
   padding: 2px 4px;
-  border-radius: 3px;
+  border-radius: 0;
   transition: background-color 0.3s ease;
 }
 
@@ -169,7 +169,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto;
   display: block;
 }
@@ -215,7 +215,7 @@
   max-width: 100%;
   margin: 0;
   display: block;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto;
   /* Intrinsic aspect ratio from the file. Do not set a fixed aspect-ratio here,
      or non-matching heroes stretch or letterbox incorrectly. */
@@ -231,7 +231,7 @@
   --caption-font-size: 0.85rem;
   --caption-max-width: 90%;
   --form-control-border: 2px solid #e5e5e5;
-  --form-control-radius: 4px;
+  --form-control-radius: 0;
   --form-control-focus-ring: 0 0 0 2px rgba(125, 120, 181, 0.1);
   /* Post tables — same accent and neutrals as blockquotes, code chips, and content chrome */
   --post-table-border-outer: #e0e0e0;
@@ -329,14 +329,14 @@ img[style*="max-width: 500px"] {
   max-width: 500px !important;
   display: block !important;
   margin: 0 auto !important;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto !important;
 }
 img[style*="max-width: 350px"] {
   max-width: 350px !important;
   display: block !important;
   margin: 0 auto !important;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto !important;
 }
 
@@ -385,7 +385,7 @@ iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .featured-videos .video-embed p {
   margin: 0.4rem 0 0;
@@ -415,7 +415,7 @@ iframe {
   max-width: 360px;
   padding: 1rem;
   border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: 0;
   background: #fafafa;
 }
 .featured-posts .post-card a {
@@ -442,7 +442,7 @@ iframe {
 .link-card {
   display: block;
   border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   background: #fff;
   text-decoration: none;
@@ -475,6 +475,13 @@ iframe {
   font-size: 0.72rem;
   color: #666;
 }
+.link-card--github .link-card-image {
+  padding-bottom: 52.5%;
+}
+.link-card--github .link-card-body {
+  display: block;
+  padding: 6px 8px;
+}
 .link-card-placeholder {
   cursor: default;
   border-style: dashed;
@@ -484,18 +491,99 @@ iframe {
 .link-card-placeholder .link-card-image {
   background-color: #e8e8e8;
 }
-/* Mobile and small tablet: two columns and at most two cards (no 2 + 1 layout) */
+/* Card carousel: keep the original card sizing and place arrows beside the rail. */
+.card-carousel-shell {
+  position: relative;
+  width: 100%;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.link-cards.card-carousel {
+  display: flex;
+  max-width: none;
+  width: 100%;
+  gap: 8px;
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.link-cards.card-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.link-cards.card-carousel .link-card {
+  flex: 0 0 clamp(11.5rem, calc((100% - 24px) / 3.25), calc((600px - 16px) / 3));
+  scroll-snap-align: start;
+}
+
+.card-carousel-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 0;
+  background: rgba(140, 255, 50, 0.3);
+  color: #888;
+  font: inherit;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+.card-carousel-button--previous {
+  left: 0;
+}
+
+.card-carousel-button--next {
+  right: 0;
+}
+
+.card-carousel-button:hover,
+.card-carousel-button:focus {
+  background-color: rgba(140, 255, 50, 0.3);
+  outline: none;
+}
+
+.card-carousel-button:disabled {
+  visibility: hidden;
+  cursor: default;
+  background: rgba(140, 255, 50, 0.3);
+}
+
+/* Mobile and small tablet: plain card grids keep two columns. Carousels keep all cards reachable. */
 @media (max-width: 767px) {
-  .link-cards {
+  .link-cards:not(.card-carousel) {
     grid-template-columns: repeat(2, 1fr);
   }
-  .link-cards .link-card:nth-child(n + 3) {
+  .link-cards:not(.card-carousel) .link-card:nth-child(n + 3) {
     display: none !important;
+  }
+  .card-carousel-shell {
+    width: 100%;
+  }
+  .link-cards.card-carousel {
+    width: 100%;
+  }
+  .link-cards.card-carousel .link-card {
+    flex-basis: calc((100% - 8px) / 2);
   }
 }
 @media (max-width: 360px) {
-  .link-cards {
+  .link-cards:not(.card-carousel) {
     grid-template-columns: 1fr;
+  }
+  .link-cards.card-carousel .link-card {
+    flex-basis: 100%;
   }
 }
 
@@ -541,7 +629,7 @@ iframe {
 .toc-container {
   background-color: rgba(125, 120, 181, 0.08);
   padding: 1.25rem;
-  border-radius: 6px;
+  border-radius: 0;
   margin: 1.5rem 0;
   overflow: hidden;
 }
@@ -649,7 +737,7 @@ iframe {
 /* Post container styling - centralized, non-italic */
 .container.content .post-container,
 .post-container {
-  border-radius: 6px;
+  border-radius: 0;
   padding: 1rem 1.5rem;
   margin: 0.5rem 0 0.5rem;
   line-height: 1.5;
@@ -829,7 +917,7 @@ body {
 .blog .container.content .image-row img {
   max-width: 100%;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto;
 }
 
@@ -837,7 +925,7 @@ body {
 .index .container.content .image-row img {
   max-width: 100%;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: 0;
   height: auto;
 }
 
@@ -1218,7 +1306,7 @@ p:has(+ .collapsible-section) {
 
 .collapsible-section summary::before {
   content: "+";
-  color: #6B46C1;
+  color: #888;
   margin-right: 0.5em;
   display: inline-block;
   transition: opacity 0.2s;
@@ -1455,10 +1543,14 @@ p:has(+ .collapsible-section) {
   padding: 0 3px;
 }
 
-/* Sortable tables: header buttons, sort indicator, focus ring */
+/* Sortable tables: header buttons, sort indicator, focus ring.
+ * Keep fallback padding on th so headers are readable before JS runs. */
 .post table.sortable thead th {
-  padding: 0;
   vertical-align: middle;
+}
+
+.post table.sortable thead th:has(.sort-table__btn) {
+  padding: 0;
 }
 
 .post table.sortable thead th .sort-table__btn {
@@ -1999,7 +2091,7 @@ p:has(+ .collapsible-section) {
   background-color: #3498db;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 1rem;
   font-weight: 500;
   font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -2044,7 +2136,7 @@ p:has(+ .collapsible-section) {
 
   .newsletter-signup {
     background-color: rgba(255, 140, 0, 0.12);
-    border-radius: 6px;
+    border-radius: 0;
     padding: 0.5rem 1rem;
     text-align: left;
     max-width: var(--content-column-max-width, 42rem);
@@ -2061,7 +2153,7 @@ p:has(+ .collapsible-section) {
 
   .newsletter-signup {
     background-color: rgba(255, 140, 0, 0.12);
-    border-radius: 6px;
+    border-radius: 0;
     padding: 0.5rem;
     text-align: left;
     width: calc(100% - 1rem);
@@ -2091,7 +2183,7 @@ p:has(+ .collapsible-section) {
 
 /* Inline pink highlight for the "New drops" label on about.md */
 .dj-pink-highlight {
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0;
   display: inline;
   position: relative;
@@ -2111,7 +2203,7 @@ p:has(+ .collapsible-section) {
   top: 0.06em;
   bottom: -0.1em;
   background-color: rgba(214, 51, 132, 0.12); /* match dj-promo */
-  border-radius: 6px;
+  border-radius: 0;
   pointer-events: none;
 }
 @media (max-width: 30em) {
@@ -2128,7 +2220,7 @@ p:has(+ .collapsible-section) {
   background-color: #7d78b5;
   color: #fff;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 1rem;
   font-weight: 500;
   transition: background-color 0.2s ease, transform 0.1s ease;
@@ -2204,7 +2296,7 @@ p:has(+ .collapsible-section) {
   line-height: 1.4;
   display: block;
   padding: 0.1rem 0.25rem;
-  border-radius: 3px;
+  border-radius: 0;
   transition: background-color 0.12s;
 }
 
