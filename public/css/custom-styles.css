@@ -577,6 +577,9 @@ iframe {
   cursor: default;
 }
 
+/* ── Lightbox ── */
+/* Self-contained: does not inherit from .carousel-control */
+
 .lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -608,81 +611,93 @@ iframe {
   user-select: none;
 }
 
+/* Shared chip style for all three controls and the counter */
+.lightbox-control,
+.lightbox-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.65rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  user-select: none;
+}
+
 .lightbox-control {
-  position: absolute;
-  top: 50%;
-  z-index: 10001;
-  transform: translateY(-50%);
+  border: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.15s ease;
 }
 
-.lightbox-control--previous {
-  left: -3rem;
+.lightbox-control:hover {
+  background: rgba(0, 0, 0, 0.75);
 }
 
-.lightbox-control--next {
-  right: -3rem;
+.lightbox-control:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .lightbox-control--previous,
 .lightbox-control--next {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  position: absolute;
+  top: 50%;
+  z-index: 10001;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  padding: 0.4rem 0.8rem;
 }
 
-.lightbox-control--previous:hover,
-.lightbox-control--next:hover {
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
+.lightbox-control--previous {
+  left: -3.5rem;
+}
+
+.lightbox-control--next {
+  right: -3.5rem;
 }
 
 .lightbox-control--close {
   position: fixed;
   top: max(1rem, env(safe-area-inset-top));
   right: max(1rem, env(safe-area-inset-right));
-  width: auto;
-  height: auto;
-  padding: 0.25rem 0.5rem;
-  transform: none;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.875rem;
+  z-index: 10001;
+  font-size: 1rem;
 }
 
 .lightbox-control--close::before {
   content: "";
   position: absolute;
-  inset: -0.625rem;
-}
-
-.lightbox-control--close:hover {
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-}
-
-.lightbox-control--close:focus-visible {
-  outline-color: #fff;
-}
-
-.lightbox-control--close svg {
-  width: 0.875rem;
-  height: 0.875rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: square;
+  inset: -0.5rem;
 }
 
 .lightbox-counter {
   position: absolute;
   bottom: -2.25rem;
   left: 50%;
-  padding: 0.25rem 0.5rem;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.875rem;
+}
+
+.lightbox-table-wrapper {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  user-select: text;
+  cursor: default;
+}
+
+.lightbox-table-wrapper table {
+  margin: 0;
+}
+
+.lightbox-table-wrapper caption {
+  padding-right: 0.45rem;
 }
 
 /* Mobile and small tablet: plain card grids keep two columns. Carousels keep all cards reachable. */
@@ -724,13 +739,14 @@ iframe {
   .lightbox-control--close {
     top: max(0.5rem, env(safe-area-inset-top));
     right: max(0.5rem, env(safe-area-inset-right));
-    width: auto;
-    height: auto;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
   }
   .lightbox-counter {
     bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+  .lightbox-table-wrapper {
+    max-width: 100vw;
+    max-height: 100dvh;
+    padding: 1rem;
   }
 }
 
@@ -1560,6 +1576,13 @@ p:has(+ .collapsible-section) {
   color: #7d78b5;
   cursor: pointer;
   box-shadow: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.post table:hover .table-expand-button,
+.post .table-expand-button:focus-visible {
+  opacity: 1;
 }
 
 .post .table-expand-button:hover {

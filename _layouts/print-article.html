@@ -235,6 +235,15 @@ layout: null
       font-size: 0.72rem;
       color: #555;
     }
+    .print-body .toc-container {
+      display: block !important;
+      margin: 0 0 1.5rem;
+      padding: 0 0 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .print-body .toc-container h2 {
+      margin-top: 0;
+    }
     /* MathJax CHTML (print layout does not include head.html MathJax) */
     .print-body mjx-container {
       max-width: 100%;
@@ -268,7 +277,6 @@ layout: null
     body.print-no-media .print-body .link-card-image {
       display: none !important;
     }
-    .toc-container,
     .post-hero-image {
       display: none !important;
     }

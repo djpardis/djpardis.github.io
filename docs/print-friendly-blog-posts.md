@@ -1,6 +1,6 @@
 # Print-friendly blog posts
 
-This site serves a **minimal print and PDF view** for every published post. The layout strips the sidebar, hero image, table of contents, subscribe block, and related posts.
+This site serves a **minimal print and PDF view** for every published post. The layout strips the sidebar, hero image, subscribe block, and related posts while keeping the table of contents at the beginning of the article.
 
 For local builds and deploy, see **[dev-notes.md](dev-notes.md)**.
 
@@ -65,6 +65,7 @@ Drafts only appear when you pass **`--drafts`**. Print pages are generated only 
 
 ## Customizing the print layout
 
-Edit **`_layouts/print-article.html`**. The stylesheet hides `.toc-container`
-and `.post-hero-image` inside the post body on every print page. The
-**`print-no-media`** class controls what is hidden on the photo-free variant.
+Edit **`_layouts/print-article.html`**. The stylesheet keeps `.toc-container`
+visible near the beginning of the post body and hides `.post-hero-image` on
+every print page. The **`print-no-media`** class controls what is hidden on
+the photo-free variant.
