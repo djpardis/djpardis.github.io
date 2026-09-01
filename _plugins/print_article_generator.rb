@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Jekyll
-  # Two pages per post. {post.url}print and {post.url}print-no-images (figures/embeds hidden).
+  # Two pages per post. The no-images page omits photos and embeds but keeps SVG figures.
   # Opt out with front matter print_page: false
   class PrintArticleGenerator < Generator
     safe true
