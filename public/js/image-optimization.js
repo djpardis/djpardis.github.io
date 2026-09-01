@@ -1,239 +1,208 @@
-// Simple image optimization script
-document.addEventListener('DOMContentLoaded', function() {
-  // Add loading="lazy" to all images that don't already have it
-  const images = document.querySelectorAll('img:not([loading])');
-  images.forEach(img => {
+document.addEventListener('DOMContentLoaded', function () {
+  var images = document.querySelectorAll('img:not([loading])');
+  images.forEach(function (img) {
     img.setAttribute('loading', 'lazy');
-    
-    // Only add decoding="async" if it doesn't interfere with critical images
     if (!img.closest('.masthead') && !img.classList.contains('critical')) {
       img.setAttribute('decoding', 'async');
     }
   });
 
-  // Add lightbox functionality to content images
-  addImageLightbox();
-  
-  // Process markdown links in image captions
-  processMarkdownLinksInCaptions();
+  setTimeout(function () {
+    addUnifiedGallery();
+    processMarkdownLinksInCaptions();
+  }, 0);
 });
 
-function addImageLightbox() {
-  // Select images throughout the site, excluding small icons and buttons
-  const allImages = document.querySelectorAll('img');
-  const clickableImages = [];
-  
-  // Process images in DOM order to maintain proper carousel sequence
-  allImages.forEach(img => {
-    // Skip small images (likely icons), images in navigation, and other UI elements
-    const skipSelectors = [
-      '.masthead', '.sidebar', '.nav', '.social-icons', '.podcast-social-icon',
-      '.copy-button', '.pagination', '.highlight-header'
-    ];
-    
-    if (skipSelectors.some(selector => img.closest(selector))) return;
-    
-    // Check if image should be clickable (either loaded or assume it's large enough)
-    const shouldMakeClickable = () => {
-      // If loaded, check dimensions
-      if (img.complete && img.naturalWidth > 0) {
-        return img.naturalWidth >= 150 && img.naturalHeight >= 150;
-      }
-      // If not loaded yet, assume it's clickable (will be filtered out if too small on load)
-      return true;
-    };
-    
-    if (shouldMakeClickable()) {
-      // Add to clickable images array in DOM order
-      clickableImages.push(img);
-      
-      // Make image clickable
-      img.style.cursor = 'pointer';
-      img.setAttribute('title', 'Click to enlarge');
-      
-      img.addEventListener('click', function() {
-        const imageIndex = clickableImages.indexOf(this);
-        showLightbox(this, imageIndex, clickableImages);
-      });
-    }
-  });
-  
-  // Store clickable images globally for carousel functionality
-  window.clickableImages = clickableImages;
+function shouldIncludeImage(img) {
+  if (img.src && img.src.toLowerCase().endsWith('.svg')) return true;
+  if (img.complete && img.naturalWidth > 0) {
+    return img.naturalWidth >= 150 && img.naturalHeight >= 150;
+  }
+  return true;
 }
 
+function addUnifiedGallery() {
+  var items = [];
+  var skipSelectors = [
+    '.masthead', '.sidebar', '.nav', '.social-icons', '.podcast-social-icon',
+    '.copy-button', '.pagination', '.highlight-header'
+  ];
 
-
-function showLightbox(img, currentIndex = 0, imagesArray = []) {
-  // Create lightbox overlay
-  const lightbox = document.createElement('div');
-  lightbox.className = 'lightbox-overlay';
-  lightbox.setAttribute('role', 'dialog');
-  lightbox.setAttribute('aria-modal', 'true');
-  lightbox.setAttribute('aria-label', 'Image preview');
-  
-  // Create container for image and navigation
-  const container = document.createElement('div');
-  container.className = 'lightbox-container';
-  
-  // Create enlarged image
-  const enlargedImg = document.createElement('img');
-  enlargedImg.className = 'lightbox-image';
-  enlargedImg.src = img.src;
-  enlargedImg.alt = img.alt;
-  
-  // Prevent image click from closing lightbox
-  enlargedImg.addEventListener('click', function(e) {
-    e.stopPropagation();
+  document.querySelectorAll('img').forEach(function (img) {
+    if (skipSelectors.some(function (s) { return img.closest(s); })) return;
+    if (shouldIncludeImage(img)) {
+      items.push({ type: 'image', el: img });
+    }
   });
 
-  container.appendChild(enlargedImg);
+  document.querySelectorAll('.post table:not([data-no-expand])').forEach(function (table) {
+    items.push({ type: 'table', el: table });
+  });
 
-  const closeBtn = document.createElement('button');
-  closeBtn.className =
-    'carousel-control lightbox-control lightbox-control--close';
+  items.sort(function (a, b) {
+    var pos = a.el.compareDocumentPosition(b.el);
+    return pos & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  });
+
+  items.forEach(function (item, idx) {
+    if (item.type === 'image') {
+      item.el.style.cursor = 'pointer';
+      item.el.setAttribute('title', 'Click to enlarge');
+      item.el.addEventListener('click', function () {
+        openGallery(idx, items);
+      });
+    }
+    if (item.type === 'table') {
+      var btn = item.el.querySelector('.table-expand-button');
+      if (btn) {
+        var fresh = btn.cloneNode(true);
+        btn.parentNode.replaceChild(fresh, btn);
+        fresh.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openGallery(idx, items);
+        });
+      }
+    }
+  });
+
+  window.galleryItems = items;
+}
+
+function createGalleryContent(item) {
+  if (item.type === 'image') {
+    var img = document.createElement('img');
+    img.className = 'lightbox-image';
+    img.src = item.el.src;
+    img.alt = item.el.alt;
+    img.addEventListener('click', function (e) { e.stopPropagation(); });
+    return img;
+  }
+  var wrapper = document.createElement('div');
+  wrapper.className = 'lightbox-table-wrapper';
+  var clone = item.el.cloneNode(true);
+  var expandBtn = clone.querySelector('.table-expand-button');
+  if (expandBtn) expandBtn.remove();
+  wrapper.appendChild(clone);
+  wrapper.addEventListener('click', function (e) { e.stopPropagation(); });
+  return wrapper;
+}
+
+function openGallery(startIndex, items) {
+  var currentIndex = startIndex;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Gallery');
+
+  var container = document.createElement('div');
+  container.className = 'lightbox-container';
+
+  var content = createGalleryContent(items[currentIndex]);
+  container.appendChild(content);
+
+  var closeBtn = document.createElement('button');
+  closeBtn.className = 'lightbox-control lightbox-control--close';
   closeBtn.type = 'button';
-  closeBtn.setAttribute('aria-label', 'Close image preview');
-  closeBtn.textContent = 'Close';
-  closeBtn.addEventListener('click', function(e) {
+  closeBtn.setAttribute('aria-label', 'Close');
+  closeBtn.textContent = '\u00d7';
+  closeBtn.addEventListener('click', function (e) {
     e.stopPropagation();
-    closeLightbox();
+    close();
   });
   container.appendChild(closeBtn);
-  
-  // Create counter variable for navigation (even if no multiple images)
-  let counter = null;
 
-  function moveImage(offset) {
+  var counter = null;
+
+  function navigate(offset) {
     currentIndex =
-      (currentIndex + offset + imagesArray.length) % imagesArray.length;
-    updateLightboxImage(
-      imagesArray[currentIndex],
-      currentIndex,
-      imagesArray,
-      enlargedImg,
-      counter
+      (currentIndex + offset + items.length) % items.length;
+    var old = container.querySelector('.lightbox-image, .lightbox-table-wrapper');
+    if (old) old.remove();
+    container.insertBefore(
+      createGalleryContent(items[currentIndex]),
+      container.firstChild
     );
+    if (counter) {
+      counter.textContent = (currentIndex + 1) + ' / ' + items.length;
+    }
   }
-  
-  // Add navigation buttons if there are multiple images
-  if (imagesArray.length > 1) {
-    // Image counter
-    counter = document.createElement('div');
-    
-    // Previous button
-    const prevBtn = createNavButton('‹', 'left', () => moveImage(-1));
-    
-    // Next button
-    const nextBtn = createNavButton('›', 'right', () => moveImage(1));
-    
+
+  if (items.length > 1) {
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'lightbox-control lightbox-control--previous';
+    prevBtn.type = 'button';
+    prevBtn.setAttribute('aria-label', 'Previous');
+    prevBtn.textContent = '\u2039';
+    prevBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navigate(-1);
+    });
+
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'lightbox-control lightbox-control--next';
+    nextBtn.type = 'button';
+    nextBtn.setAttribute('aria-label', 'Next');
+    nextBtn.textContent = '\u203a';
+    nextBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navigate(1);
+    });
+
     container.appendChild(prevBtn);
     container.appendChild(nextBtn);
-    
-    // Configure counter styling
+
+    counter = document.createElement('div');
     counter.className = 'lightbox-counter';
     counter.setAttribute('aria-live', 'polite');
-    counter.textContent = `${currentIndex + 1} / ${imagesArray.length}`;
+    counter.textContent = (currentIndex + 1) + ' / ' + items.length;
     container.appendChild(counter);
 
-    let touchStartX = null;
-    container.addEventListener('touchstart', function(e) {
-      if (e.touches.length === 1) {
-        touchStartX = e.touches[0].clientX;
-      }
+    var touchStartX = null;
+    container.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 1) touchStartX = e.touches[0].clientX;
     }, { passive: true });
-    container.addEventListener('touchend', function(e) {
+    container.addEventListener('touchend', function (e) {
       if (touchStartX === null || e.changedTouches.length !== 1) return;
-      const distance = e.changedTouches[0].clientX - touchStartX;
+      var dist = e.changedTouches[0].clientX - touchStartX;
       touchStartX = null;
-      if (Math.abs(distance) < 50) return;
-      moveImage(distance > 0 ? -1 : 1);
+      if (Math.abs(dist) < 50) return;
+      navigate(dist > 0 ? -1 : 1);
     }, { passive: true });
   }
-  
-  // Add close functionality
-  lightbox.addEventListener('click', function() {
-    closeLightbox();
-  });
-  
-  // Add keyboard navigation
-  function handleKeyPress(e) {
-    switch(e.key) {
-      case 'Escape':
-        closeLightbox();
-        break;
-      case 'ArrowLeft':
-        if (imagesArray.length > 1) {
-          moveImage(-1);
-        }
-        break;
-      case 'ArrowRight':
-        if (imagesArray.length > 1) {
-          moveImage(1);
-        }
-        break;
+
+  overlay.addEventListener('click', close);
+
+  function onKey(e) {
+    switch (e.key) {
+      case 'Escape': close(); break;
+      case 'ArrowLeft': if (items.length > 1) navigate(-1); break;
+      case 'ArrowRight': if (items.length > 1) navigate(1); break;
     }
   }
-  
-  function closeLightbox() {
-    const existingLightbox = document.querySelector('.lightbox-overlay');
-    if (existingLightbox) {
-      document.body.removeChild(existingLightbox);
-    }
+  document.addEventListener('keydown', onKey);
+
+  function close() {
+    var el = document.querySelector('.lightbox-overlay');
+    if (el) document.body.removeChild(el);
     document.body.style.overflow = '';
-    document.removeEventListener('keydown', handleKeyPress);
+    document.removeEventListener('keydown', onKey);
   }
-  
-  document.addEventListener('keydown', handleKeyPress);
-  
-  // Remove any existing lightbox before adding new one
-  const existingLightbox = document.querySelector('.lightbox-overlay');
-  if (existingLightbox) {
-    document.body.removeChild(existingLightbox);
-  }
-  
-  lightbox.appendChild(container);
-  document.body.appendChild(lightbox);
+
+  var existing = document.querySelector('.lightbox-overlay');
+  if (existing) document.body.removeChild(existing);
+
+  overlay.appendChild(container);
+  document.body.appendChild(overlay);
   document.body.style.overflow = 'hidden';
   closeBtn.focus();
 }
 
-function createNavButton(text, side, clickHandler) {
-  const button = document.createElement('button');
-  const direction = side === 'left' ? 'previous' : 'next';
-  button.className =
-    `carousel-control lightbox-control lightbox-control--${direction}`;
-  button.type = 'button';
-  button.setAttribute(
-    'aria-label',
-    direction === 'previous' ? 'Previous image' : 'Next image'
-  );
-  button.textContent = text;
-  
-  button.addEventListener('click', (e) => {
-    e.stopPropagation();
-    clickHandler();
-  });
-  
-  return button;
-}
-
 function processMarkdownLinksInCaptions() {
-  // Find all elements with image-caption class
-  const captions = document.querySelectorAll('.image-caption');
-  
-  captions.forEach(caption => {
-    // Process markdown-style links [text](url)
-    let html = caption.innerHTML;
+  document.querySelectorAll('.image-caption').forEach(function (caption) {
+    var html = caption.innerHTML;
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
     caption.innerHTML = html;
   });
-}
-
-function updateLightboxImage(img, newIndex, imagesArray, enlargedImg, counter) {
-  enlargedImg.src = img.src;
-  enlargedImg.alt = img.alt;
-  if (counter && imagesArray.length > 1) {
-    counter.textContent = `${newIndex + 1} / ${imagesArray.length}`;
-  }
 }
