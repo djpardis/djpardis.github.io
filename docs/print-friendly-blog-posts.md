@@ -26,9 +26,13 @@ Posts use this permalink pattern from `_config.yml`.
 
 **Full print** (figures, video embeds, link-card thumbnails, image rows). Append **`print`** to that path. Jekyll writes **`print.html`** next to the post `index.html`, so the path is like `/blog/YYYY/MM/DD/your-slug/print.html`.
 
-**Text-only print** (no raster images, no video or other iframe embeds, no `.image-row` blocks, no `.link-card-image` panels). Append **`print-no-images`** the same way, e.g. `/blog/YYYY/MM/DD/your-slug/print-no-images.html`.
+**Print without photos** keeps SVG figures and MathJax while omitting raster
+images, video and iframe embeds, `.image-row` blocks, and `.link-card-image`
+panels. Append **`print-no-images`** the same way, e.g.
+`/blog/YYYY/MM/DD/your-slug/print-no-images.html`.
 
-Each page links to the other in the footer. MathJax is unchanged on the text-only URL when the post has **`math: true`**.
+Each page links to the other in the footer. MathJax is unchanged on the
+photo-free URL when the post has **`math: true`**.
 
 ## Opt out
 
@@ -44,7 +48,7 @@ Use the real year, month, day, and slug for that file.
 
 ```markdown
 A [print-friendly page](/blog/YYYY/MM/DD/your-post-slug/print.html) is available.
-A [text-only print](/blog/YYYY/MM/DD/your-post-slug/print-no-images.html) omits figures for smaller PDFs.
+A [print version without photos](/blog/YYYY/MM/DD/your-post-slug/print-no-images.html) keeps SVG figures while producing a smaller PDF.
 ```
 
 From inside a post you can use Liquid, for example `{{ page.url }}print-no-images.html` as the href. Or build once and copy the exact paths from `_site`.
@@ -61,4 +65,6 @@ Drafts only appear when you pass **`--drafts`**. Print pages are generated only 
 
 ## Customizing the print layout
 
-Edit **`_layouts/print-article.html`**. The stylesheet hides `.toc-container` and `.post-hero-image` inside the post body on every print page. The **`print-no-media`** class controls what is hidden on the text-only variant.
+Edit **`_layouts/print-article.html`**. The stylesheet hides `.toc-container`
+and `.post-hero-image` inside the post body on every print page. The
+**`print-no-media`** class controls what is hidden on the photo-free variant.

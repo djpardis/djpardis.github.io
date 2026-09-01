@@ -9,7 +9,7 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   {% if article %}<link rel="canonical" href="{{ article.url | absolute_url }}">{% endif %}
-  <title>{% if article %}{{ article.title | escape }}{% if page.print_hide_images %} (text only){% endif %}{% else %}Print{% endif %}</title>
+  <title>{% if article %}{{ article.title | escape }}{% if page.print_hide_images %} (without photos){% endif %}{% else %}Print{% endif %}</title>
   <style>
     :root {
       color-scheme: light;
@@ -114,6 +114,12 @@ layout: null
     .print-body {
       overflow-x: hidden;
       min-width: 0;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    .print-body a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .print-body img,
     .print-body picture,
@@ -243,10 +249,10 @@ layout: null
       margin: 0 auto;
     }
     /*
-     * print-no-images variant. Hides raster/video/embed UI and image rows.
-     * Does not hide MathJax (mjx-container).
+     * print-no-images variant. Hides photos, video, embeds, and image rows.
+     * SVG figures and MathJax remain visible.
      */
-    body.print-no-media .print-body img,
+    body.print-no-media .print-body img:not([src$=".svg"]),
     body.print-no-media .print-body picture,
     body.print-no-media .print-body video {
       display: none !important;
@@ -274,6 +280,11 @@ layout: null
       color: #555;
     }
     @media print {
+      /* Give every printed page a real margin so text is not clipped by the
+         printer's non-printable edge, independent of the browser dialog. */
+      @page {
+        margin: 16mm;
+      }
       /* Avoid browser print pipelines clipping long articles (overflow on screen
          must not create a fixed-height box when printing). */
       html,
@@ -285,6 +296,8 @@ layout: null
         padding: 0;
         max-width: none;
         font-size: 10pt;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
       }
       .print-body {
         overflow: visible !important;
@@ -297,6 +310,13 @@ layout: null
       }
       .print-body h2 {
         break-after: avoid-page;
+      }
+      .print-body p:has(> img[src$=".svg"]) {
+        break-inside: avoid-page;
+        break-after: avoid-page;
+      }
+      .print-body p:has(> img[src$=".svg"]) + p {
+        break-before: avoid-page;
       }
       a {
         color: #000;
@@ -340,7 +360,7 @@ layout: null
     {% if page.print_hide_images %}
     <p><a href="{{ article.url | relative_url }}print">Print version with figures</a></p>
     {% else %}
-    <p><a href="{{ article.url | relative_url }}print-no-images">Text-only print (no figures)</a></p>
+    <p><a href="{{ article.url | relative_url }}print-no-images">Print version without photos</a></p>
     {% endif %}
   </footer>
   {% else %}
