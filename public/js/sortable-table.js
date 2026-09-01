@@ -137,7 +137,7 @@
 
     function configureNavigationButton(button, className, label, text, offset) {
       button.type = 'button';
-      button.className = 'table-expand-dialog__nav ' + className;
+      button.className = 'carousel-control table-expand-dialog__nav ' + className;
       button.setAttribute('aria-label', label);
       button.textContent = text;
       button.addEventListener('click', function () {

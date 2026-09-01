@@ -20,13 +20,15 @@
     scroller.parentNode.insertBefore(shell, scroller);
 
     var previous = document.createElement('button');
-    previous.className = 'card-carousel-button card-carousel-button--previous';
+    previous.className =
+      'carousel-control card-carousel-button card-carousel-button--previous';
     previous.type = 'button';
     previous.setAttribute('aria-label', 'Previous cards');
     previous.textContent = '\u2039';
 
     var next = document.createElement('button');
-    next.className = 'card-carousel-button card-carousel-button--next';
+    next.className =
+      'carousel-control card-carousel-button card-carousel-button--next';
     next.type = 'button';
     next.setAttribute('aria-label', 'Next cards');
     next.textContent = '\u203a';
