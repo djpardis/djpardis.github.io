@@ -68,45 +68,19 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   // Create lightbox overlay
   const lightbox = document.createElement('div');
   lightbox.className = 'lightbox-overlay';
-  lightbox.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    cursor: pointer;
-  `;
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.setAttribute('aria-label', 'Image preview');
   
   // Create container for image and navigation
   const container = document.createElement('div');
-  container.style.cssText = `
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
+  container.className = 'lightbox-container';
   
   // Create enlarged image
   const enlargedImg = document.createElement('img');
+  enlargedImg.className = 'lightbox-image';
   enlargedImg.src = img.src;
   enlargedImg.alt = img.alt;
-  enlargedImg.style.cssText = `
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    user-select: none;
-  `;
   
   // Prevent image click from closing lightbox
   enlargedImg.addEventListener('click', function(e) {
@@ -114,9 +88,33 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   });
 
   container.appendChild(enlargedImg);
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className =
+    'carousel-control lightbox-control lightbox-control--close';
+  closeBtn.type = 'button';
+  closeBtn.setAttribute('aria-label', 'Close image preview');
+  closeBtn.textContent = 'Close';
+  closeBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    closeLightbox();
+  });
+  container.appendChild(closeBtn);
   
   // Create counter variable for navigation (even if no multiple images)
   let counter = null;
+
+  function moveImage(offset) {
+    currentIndex =
+      (currentIndex + offset + imagesArray.length) % imagesArray.length;
+    updateLightboxImage(
+      imagesArray[currentIndex],
+      currentIndex,
+      imagesArray,
+      enlargedImg,
+      counter
+    );
+  }
   
   // Add navigation buttons if there are multiple images
   if (imagesArray.length > 1) {
@@ -124,37 +122,33 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
     counter = document.createElement('div');
     
     // Previous button
-    const prevBtn = createNavButton('‹', 'left', () => {
-      const newIndex = currentIndex > 0 ? currentIndex - 1 : imagesArray.length - 1;
-      updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
-      currentIndex = newIndex;
-    });
+    const prevBtn = createNavButton('‹', 'left', () => moveImage(-1));
     
     // Next button
-    const nextBtn = createNavButton('›', 'right', () => {
-      const newIndex = currentIndex < imagesArray.length - 1 ? currentIndex + 1 : 0;
-      updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
-      currentIndex = newIndex;
-    });
+    const nextBtn = createNavButton('›', 'right', () => moveImage(1));
     
     container.appendChild(prevBtn);
     container.appendChild(nextBtn);
     
     // Configure counter styling
+    counter.className = 'lightbox-counter';
+    counter.setAttribute('aria-live', 'polite');
     counter.textContent = `${currentIndex + 1} / ${imagesArray.length}`;
-    counter.style.cssText = `
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 14px;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 4px 8px;
-      border-radius: 0;
-    `;
     container.appendChild(counter);
+
+    let touchStartX = null;
+    container.addEventListener('touchstart', function(e) {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+      }
+    }, { passive: true });
+    container.addEventListener('touchend', function(e) {
+      if (touchStartX === null || e.changedTouches.length !== 1) return;
+      const distance = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(distance) < 50) return;
+      moveImage(distance > 0 ? -1 : 1);
+    }, { passive: true });
   }
   
   // Add close functionality
@@ -170,16 +164,12 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
         break;
       case 'ArrowLeft':
         if (imagesArray.length > 1) {
-          const newIndex = currentIndex > 0 ? currentIndex - 1 : imagesArray.length - 1;
-          updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
-          currentIndex = newIndex;
+          moveImage(-1);
         }
         break;
       case 'ArrowRight':
         if (imagesArray.length > 1) {
-          const newIndex = currentIndex < imagesArray.length - 1 ? currentIndex + 1 : 0;
-          updateLightboxImage(imagesArray[newIndex], newIndex, imagesArray, enlargedImg, counter);
-          currentIndex = newIndex;
+          moveImage(1);
         }
         break;
     }
@@ -205,48 +195,20 @@ function showLightbox(img, currentIndex = 0, imagesArray = []) {
   lightbox.appendChild(container);
   document.body.appendChild(lightbox);
   document.body.style.overflow = 'hidden';
+  closeBtn.focus();
 }
 
 function createNavButton(text, side, clickHandler) {
   const button = document.createElement('button');
+  const direction = side === 'left' ? 'previous' : 'next';
+  button.className =
+    `carousel-control lightbox-control lightbox-control--${direction}`;
+  button.type = 'button';
+  button.setAttribute(
+    'aria-label',
+    direction === 'previous' ? 'Previous image' : 'Next image'
+  );
   button.textContent = text;
-  
-  // Check if mobile for positioning
-  const isMobile = window.innerWidth <= 768;
-  const sidePosition = isMobile ? '10px' : '-60px';
-  
-  button.style.cssText = `
-    position: absolute;
-    top: 50%;
-    ${side}: ${sidePosition};
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 0;
-    width: ${isMobile ? '44px' : '50px'};
-    height: ${isMobile ? '44px' : '50px'};
-    font-size: ${isMobile ? '20px' : '24px'};
-    font-weight: bold;
-    cursor: pointer;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease;
-    user-select: none;
-    z-index: 10001;
-  `;
-  
-  button.addEventListener('mouseover', () => {
-    button.style.backgroundColor = 'white';
-    button.style.transform = `translateY(-50%) scale(${isMobile ? '1.05' : '1.1'})`;
-  });
-  
-  button.addEventListener('mouseout', () => {
-    button.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-    button.style.transform = 'translateY(-50%) scale(1)';
-  });
   
   button.addEventListener('click', (e) => {
     e.stopPropagation();
