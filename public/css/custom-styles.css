@@ -1265,13 +1265,26 @@ body .wrap .container.content {
   z-index: 1;
 }
 
-/* Highlight text styling */
+/* Highlight text styling. Regular text uses green, highlighted links use menu yellow. */
 .highlight-text {
   display: inline;
   background-color: rgba(140, 255, 50, 0.3);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   padding: 0 2px;
+}
+
+.link-highlight {
+  display: inline;
+  background-color: #FFFF99;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 2px;
+}
+
+.link-highlight a:hover,
+.link-highlight a:focus {
+  background-color: transparent;
 }
 
 .copyright div span::before {

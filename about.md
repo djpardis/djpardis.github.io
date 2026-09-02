@@ -10,7 +10,7 @@ canonical_url: https://djpardis.com/
 
 {% capture hero_text %}
 <p>🏠 I'm an engineer and a researcher. At <a href="https://generalfolders.com" target="_blank">General Folders</a>, I built an identity- and policy-aware transport layer for B2B data, replacing hacky SFTP, email, and ad-hoc pipelines. I led data at <a href="https://carbonhealth.com" target="_blank">Carbon Health</a> and <a href="https://twitter.com" target="_blank">Twitter</a> and shipped AI systems at <a href="https://paytm.com" target="_blank">Paytm</a>.</p>
-<p><span class="highlight-text">✉️ <a href="{{ site.baseurl }}/contact/">Send me a message</a>.</span></p>
+<p><span class="link-highlight">✉️ <a href="{{ site.baseurl }}/contact/">Send me a message</a>.</span></p>
 {% endcapture %}
 {% include hero-with-text.html image="/files/pics/pages/profile%20pic%203.jpg" alt="Pardis Noorzad" content=hero_text %}
 
