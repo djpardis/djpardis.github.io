@@ -343,6 +343,8 @@
     });
   }
 
+  window.wireSortableTable = wire;
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('table.sortable').forEach(wire);
     addTableExpandControls();

@@ -78,11 +78,14 @@ function createGalleryContent(item) {
     return img;
   }
   var wrapper = document.createElement('div');
-  wrapper.className = 'lightbox-table-wrapper';
+  wrapper.className = 'post lightbox-table-wrapper';
   var clone = item.el.cloneNode(true);
   var expandBtn = clone.querySelector('.table-expand-button');
   if (expandBtn) expandBtn.remove();
   wrapper.appendChild(clone);
+  if (clone.classList.contains('sortable') && window.wireSortableTable) {
+    window.wireSortableTable(clone);
+  }
   wrapper.addEventListener('click', function (e) { e.stopPropagation(); });
   return wrapper;
 }
