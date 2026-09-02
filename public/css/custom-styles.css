@@ -2319,12 +2319,12 @@ p:has(+ .collapsible-section) {
   margin-top: 0;
 }
 
-/* DJ promo: same container, purple + tighter (one line) */
+/* DJ promo: same container, pink + tighter (one line) */
 .newsletter-section.dj-promo {
   margin: 1rem 0 0.5rem;
 }
 .newsletter-section.dj-promo .newsletter-signup {
-  background-color: rgba(125, 120, 181, 0.14);
+  background-color: rgba(214, 51, 132, 0.12);
   padding: 0.5rem 1rem;
 }
 .newsletter-section.dj-promo .newsletter-signup p {
@@ -2362,12 +2362,12 @@ p:has(+ .collapsible-section) {
   }
 }
 
-/* Future Shock promo: same container, pink tint */
+/* Future Shock promo: same container, orange tint */
 .newsletter-section.future-shock-promo {
   margin: 1rem 0 0.5rem;
 }
 .newsletter-section.future-shock-promo .newsletter-signup {
-  background-color: rgba(214, 51, 132, 0.12);
+  background-color: rgba(255, 140, 0, 0.12);
   padding: 0.5rem 1rem;
 }
 .newsletter-section.future-shock-promo .newsletter-signup p {

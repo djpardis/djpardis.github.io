@@ -39,43 +39,9 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   font-size: 0.9rem;
 }
 
-.contact-layout {
-  align-items: center;
-  display: flex;
-  gap: 20px;
-}
-
-.contact-copy {
-  flex: 1 1 50%;
-  min-width: 0;
-}
-
-.contact-hero {
-  flex: 1 1 50%;
-  margin: 0;
-}
-
-.contact-hero img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  height: 100%;
-  object-fit: cover;
-}
-
 @media (max-width: 52rem) {
   #contact-form .form-row-cols-2 {
     grid-template-columns: 1fr;
-  }
-
-  .contact-layout {
-    flex-direction: column;
-  }
-
-  .contact-copy,
-  .contact-hero {
-    flex: none;
-    width: 100%;
   }
 }
 
@@ -110,15 +76,7 @@ description: Get in touch for collaborations, writing, research, speaking, or co
 }
 </style>
 
-<div class="contact-layout">
-  <figure class="contact-hero">
-    <img src="{{ site.baseurl }}/files/pics/pages/contact-coffee-walk.jpg" alt="Hand holding a coffee cup near the water">
-  </figure>
-
-  <div class="contact-copy">
-    <p><span class="highlight-text">Get in touch for collaborations, writing, research, speaking, or to get coffee. ☕</span></p>
-  </div>
-</div>
+<p><span class="highlight-text">Get in touch for collaborations, writing, research, speaking, or to get coffee. ☕</span></p>
 
 <form id="contact-form" class="form" data-contact-form method="POST" action="https://form-djpardis.pardis-noorzad.workers.dev/submit/contact">
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
