@@ -25,7 +25,13 @@ description: Get in touch for collaborations, writing, research, speaking, or co
 }
 
 #contact-form .button {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.45rem;
+  font-family: inherit;
+  font-weight: 400;
   justify-self: start;
+  line-height: 1.2;
 }
 
 .contact-form-actions {
@@ -34,9 +40,15 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   gap: 0.75rem;
 }
 
-.contact-submit-shortcut {
-  color: #888;
-  font-size: 0.9rem;
+.contact-button-shortcut {
+  align-items: center;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 400;
+  gap: 0.2rem;
+  line-height: 1;
+  opacity: 0.9;
 }
 
 @media (max-width: 52rem) {
@@ -111,8 +123,7 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   </div>
 
   <div class="contact-form-actions">
-    <button class="button" type="submit">Send</button>
-    <span class="contact-submit-shortcut">⌘ ↵</span>
+    <button class="button" type="submit">Send <span class="contact-button-shortcut" aria-hidden="true"><span>⌘</span><span>↵</span></span></button>
   </div>
 </form>
 <p data-contact-status role="status" aria-live="polite"></p>
