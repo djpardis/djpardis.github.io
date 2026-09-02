@@ -24,17 +24,35 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   margin: 0 !important;
 }
 
-@media (max-width: 52rem) {
-  #contact-form .form-row-cols-2 {
-    grid-template-columns: 1fr;
-  }
+#contact-form .button {
+  justify-self: start;
+}
+
+.contact-form-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.contact-submit-shortcut {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.contact-layout {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-copy {
+  flex: 1 1 50%;
+  min-width: 0;
 }
 
 .contact-hero {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0 0 1rem;
+  flex: 1 1 50%;
+  margin: 0;
 }
 
 .contact-hero img {
@@ -45,9 +63,19 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   object-fit: cover;
 }
 
-@media (max-width: 30em) {
-  .contact-hero {
+@media (max-width: 52rem) {
+  #contact-form .form-row-cols-2 {
     grid-template-columns: 1fr;
+  }
+
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-copy,
+  .contact-hero {
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -82,12 +110,15 @@ description: Get in touch for collaborations, writing, research, speaking, or co
 }
 </style>
 
-<figure class="contact-hero">
-  <img src="{{ site.baseurl }}/files/pics/pages/contact-coffee-walk.jpg" alt="Hand holding a coffee cup near the water">
-  <img src="{{ site.baseurl }}/files/pics/pages/contact-flowers.jpg" alt="Flowers beside books in morning light">
-</figure>
+<div class="contact-layout">
+  <figure class="contact-hero">
+    <img src="{{ site.baseurl }}/files/pics/pages/contact-coffee-walk.jpg" alt="Hand holding a coffee cup near the water">
+  </figure>
 
-<p><span class="highlight-text">Get in touch for collaborations, writing, research, speaking, or just to get coffee. ☕</span></p>
+  <div class="contact-copy">
+    <p><span class="highlight-text">Get in touch for collaborations, writing, research, speaking, or to get coffee. ☕</span></p>
+  </div>
+</div>
 
 <form id="contact-form" class="form" data-contact-form method="POST" action="https://form-djpardis.pardis-noorzad.workers.dev/submit/contact">
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
@@ -117,11 +148,14 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   </div>
 
   <div class="form-field">
-    <label class="contact-field-label" for="contact-message">Message. 20 characters minimum</label>
-    <textarea id="contact-message" name="message" rows="5" required minlength="20" placeholder="Message (20 characters minimum)"></textarea>
+    <label class="contact-field-label" for="contact-message">Message. > 20 characters</label>
+    <textarea id="contact-message" name="message" rows="5" required minlength="20" placeholder="Message (> 20 characters)"></textarea>
   </div>
 
-  <button class="button" type="submit">Send</button>
+  <div class="contact-form-actions">
+    <button class="button" type="submit">Send</button>
+    <span class="contact-submit-shortcut">⌘ ↵</span>
+  </div>
 </form>
 <p data-contact-status role="status" aria-live="polite"></p>
 
