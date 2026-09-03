@@ -88,7 +88,7 @@ description: Get in touch for collaborations, writing, research, speaking, or co
 }
 </style>
 
-<p><span class="highlight-text">Get in touch for collaborations, writing, research, speaking, or to get coffee. ☕</span></p>
+<p><span class="highlight-text">Get in touch about collaborations, writing, research, speaking, or to get coffee. ☕</span></p>
 
 <form id="contact-form" class="form" data-contact-form method="POST" action="https://form-djpardis.pardis-noorzad.workers.dev/submit/contact">
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
