@@ -22,76 +22,82 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
 
+- Cueport v1.1.0  
+  [ATProto Vancouver, September 2026 Meetup](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif), Sept 10, 2026  
+  🎞️ <a href="/talks/cueport-atproto-vancouver-2026/" target="_blank" rel="noopener">slides</a>, 📰 [announcement](https://bsky.app/profile/vancouver.atprotocol.community/post/3mv4tlnxvwc2w)
+
+  *Abstract.* This talk follows my Local First Conf introduction to Cueport with two v1.1.0 updates. Cueport now handles public Wi-Fi pairing failures more clearly, and Cueport Direct uses [trail mix](https://trailmix.tools) to analyze local music folders without a DJ library.
+
 - trail mix: Open tempo, key, and waveform analysis  
-  [FOSSY 2026](https://2026.fossy.ca/schedule/presentation/416/), August 9, 2026  
+  [FOSSY 2026](https://2026.fossy.ca/schedule/presentation/416/), Aug 9, 2026  
   🎞️ <a href="/talks/trail-mix-fossy-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools)
 
   *Abstract.* [Cueport](https://usecueport.com) is a local-first music player for people who own their music. Cueport imports the tempo, key, and beat grids that Serato calculates. However, listeners who don't have DJ tools have no analysis to import. This is where [trail mix](https://trailmix.tools) comes in. We built an open source Rust toolkit that estimates tempo and key, detects beat switch and key change, and generates compact waveform data. This talk shows how the analysis works and how the results are evaluated.
 
 - Cueport: A local-first music player for DJs  
-  [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), July 12, 2026  
+  [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), Jul 12, 2026  
   🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ <a href="/talks/cueport/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://usecueport.com)
 
   *Abstract.* A DJ's Serato library represents years of work in crates, cue points, tags, and prep notes. It all lives on the gig laptop, but DJs want to prepare sets on trains, flights, and long walks. This talk is about [Cueport](https://usecueport.com), a local-first mobile player for music you own, but away from that one machine. The talk covers when to use a CRDT, how Cueport's LAN sync works, and the seven local-first ideals in practice.
 
 - The role of B2B data collaboration in marketing  
-  [Marketing Analytics & Data Science (MADS)](https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772), October 22, 2024  
+  [Marketing Analytics & Data Science (MADS)](https://schedule.madsconference.com/session/the-role-of-data-exchange-in-privacy-centric-marketing/906772), Oct 22, 2024  
   🎞️ [slides](https://docs.google.com/presentation/d/1-L0A9uRdJyWI_jJIuQyNO2Cqj5rzxmkHdcU26s6hn1I/edit?usp=sharing)
 
   *Abstract.* This presentation explores the concept of data collaboration and its use cases in marketing. We'll review how marketers leverage data collaboration to drive decision-making, enhance customer experiences, and achieve business outcomes. We'll also discuss current practices, challenges, and potential solutions for streamlining data sharing and enabling seamless collaboration across organizations.
 
 - A new era in B2B data collaboration  
-  [MDS Fest 2.0](https://www.secoda.co/mds-fest-2/a-new-era-in-b2b-data-exchange), April 10, 2024  
+  [MDS Fest 2.0](https://www.secoda.co/mds-fest-2/a-new-era-in-b2b-data-exchange), Apr 10, 2024  
   🎞️ [slides](https://docs.google.com/presentation/d/1UX_FrXTweIPae8rs5rbFemuGcNyRc0gfZVZ6vSKYJoM/)
 
   *Abstract.* Businesses collaborate through data — every contract includes a data sharing or transfer clause. However, data collaboration tools have a long way to go to serve modern enterprise needs. In this talk, we will discuss some of the macro trends and practices impacting products in the data collaboration space. Some of these topics remain open and evolving debates.
 
 - General Folders: The first AI-powered data logistics company  
-  [Demo Day: Techstars San Diego Powered by SDSU](https://www.eventbrite.com/e/demo-day-techstars-san-diego-powered-by-sdsu-tickets-721547095787), December 7, 2023  
+  [Demo Day: Techstars San Diego Powered by SDSU](https://www.eventbrite.com/e/demo-day-techstars-san-diego-powered-by-sdsu-tickets-721547095787), Dec 7, 2023  
   🎞️ [slides](https://docs.google.com/presentation/d/1uWkfP6V1sGZTvkuHGNrNzLULpwP-Rg6aJx7o7RVVx-k/edit?usp=sharing), 📰 [coverage 1](https://web.archive.org/web/20260309115247/https://www.techstars.com/newsroom/new-class-san-diego-sdsu), [2](https://research.sdsu.edu/news/magazine/2024/founders-take-flight), [3](https://risingtidepartners.substack.com/p/techstars-san-diego-powered-by-san-866), [4](https://www.linkedin.com/posts/brockweatherup_techstars-san-diego-powered-by-san-diego-activity-7107512379663347712-TGcn)
 
   *Abstract.* Join us at Snapdragon Stadium for the first ever Techstars San Diego powered by San Diego State University Demo Day. Meet the incredible cohort of companies as they showcase their progress.
 
 - Cross-company data exchange for the cloud  
-  [Scale By the Bay: Code and Data in the Age of AI](https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud), November 15, 2023  
+  [Scale By the Bay: Code and Data in the Age of AI](https://www.scale.bythebay.io/post/pardis-noorzad-cross-company-data-exchange-for-the-cloud), Nov 15, 2023  
   🎥 [video](https://www.youtube.com/watch?v=WqNCBJeM3PA&list=PLNESult6cnOlHK5bRvdT8f2UnoyZ9TfKW&index=40), 📰 [coverage 1](https://twitter.com/ScaleByTheBay/status/1722755722901934481?s=20), [2](https://twitter.com/ScaleByTheBay/status/1723398456574644417?s=20)
 
   *Abstract.* Cross-company data pipelines are often built as one-off integrations that are difficult to test, monitor, secure, and audit. In this talk, we examine the challenges of moving data between organizations across different clouds and data platforms, including fragmented tooling, limited visibility, changing requirements, and the difficulty of maintaining security and compliance across company boundaries.
 
 - Rethinking B2B data exchange and collaboration  
-  [Crunch Conference Budapest](https://crunchconf.com/2023/talk/pardis-talk), October 6, 2023  
+  [Crunch Conference Budapest](https://crunchconf.com/2023/talk/pardis-talk), Oct 6, 2023  
   🎥 [video](https://www.youtube.com/watch?v=RnQb7zWRL6w&list=PLcTa2e7_ENN-jaHtBTEXRPKNuBjMXm_xb&index=36), 📰 [coverage](https://crafthub.events/crunch-data-conference-budapest/)
 
   *Abstract.* Business data collaboration takes many forms, including file transfers, shared databases, APIs, and data clean rooms. In this talk, we compare these methods across security, simplicity, and speed, then consider how companies can collaborate without requiring their partners to adopt the same tools or technical architecture.
 
 - The state of cross-company data exchange  
-  [Data Council Austin](https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange), March 30, 2023  
+  [Data Council Austin](https://www.datacouncil.ai/talks/the-state-of-cross-company-data-exchange), Mar 30, 2023  
   🎥 [video](https://youtu.be/Np0kTZlbRO4), 🎞️ [slides](https://docs.google.com/presentation/d/1g8X0OpOQtPgGZqVzRNU-wGHbQD9sVw1LmEwRz7DAjSA/edit?usp=sharing), 📃 [blog post](https://medium.com/@djpardis/the-state-of-data-exchange-31049fa229f0)
 
   *Abstract.* Data exchange is integral to every business relationship. Yet data exchange practices are highly manual, prone to leaks, difficult to validate, impossible to monitor, and costly to audit. In this talk, we present an overview of the methods enterprises use to exchange data and the outstanding challenges. We conclude by enumerating the properties of a good solution.
 
 - Making an impact with data  
   with [Gorkem Yurtseven](https://www.linkedin.com/in/gorkemy/), [Britt Allen](https://britt-allen.github.io/), moderated by [Elizabeth Dlha](https://twitter.com/elizabeth_dlha)  
-  [Data Mash #2](https://www.meetup.com/data-mash/), June 2, 2022  
+  [Data Mash #2](https://www.meetup.com/data-mash/), Jun 2, 2022  
   🎞️ [slides](https://docs.google.com/presentation/d/1-KvM-bgTd4H5raI3BQhVcbAjI0kHKwkn3biQPThyuyE/edit?usp=sharing)
 
   *Abstract.* After introducing [General Folders](https://generalfolders.com), we'll review three impactful data projects. First, the design of OKRs to encourage collaboration among product teams at Twitter; second, the feature creation pipeline for fraud detection at Paytm; and finally, sales enablement at Carbon Health via risk quantification.
 
 - Data transfer challenges in evaluating AI platforms  
-  [apply(meetup)](https://www.tecton.ai/apply/session-video-archive/data-transfer-challenges-in-evaluating-mlops-platforms/), February 10, 2022  
+  [apply(meetup)](https://www.tecton.ai/apply/session-video-archive/data-transfer-challenges-in-evaluating-mlops-platforms/), Feb 10, 2022  
   🎥 [video](https://www.youtube.com/watch?v=_9APN-SSobw), 📃 [blog post](https://djpardis.medium.com/data-sharing-and-transfer-challenges-2e87e18a1167), 📰 [coverage](https://jameskle.com/writes/tecton-apply-meetup2022)
 
   *Abstract.* Not so long ago, I met with over 30 AI companies to learn of their workflows at the very first step in the evaluation process — that of data collection and transfer. I had a hunch this part of the pipeline posed challenges. In this talk, I review the myriad roadblocks faced by companies in providing access to their data. Then I discuss potential solutions.
 
 - Data Science for tech-enabled healthcare  
   with [Rebekkah Ismakov](https://www.linkedin.com/in/rismakov/)  
-  [The AI Summit](https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/), October 1, 2020  
+  [The AI Summit](https://tmt.knect365.com/ai-summit-san-francisco/speakers/pardis-noorzad/), Oct 1, 2020  
   🎥 [video](https://www.youtube.com/watch?v=CQHwLWMQFDk), 📃 [blog post](https://medium.com/carbon-blog/covid-19-risk-assessment-simulation-model-684fc27d5019), 📊 [data](https://covidclinicaldata.org/), 🎙️ [discussion](https://www.pscp.tv/w/1mnxeQdvAZqxX)
 
   *Abstract.* The first part of the talk is an overview of the Data Science team roadmap and infrastructure decisions, with a tour of the clinical decision support system and [covidclinicaldata.org](http://covidclinicaldata.org/). The second part is a review of our efforts for the [COVID-Ready](https://carbonhealth.com/covid-ready) program. We report on recommendations that can be made to employers, based on simulations surfacing how testing cadence and other policies affect outbreaks in the workplace.
 
 - DJing and the art of audio signal processing  
-  [Twitter HQ](https://twitterwomen-tech-hh.splashthat.com/), September 6, 2017
+  [Twitter HQ](https://twitterwomen-tech-hh.splashthat.com/), Sept 6, 2017
 
   *Abstract.* In this talk, we review concepts from the audio signal processing field. We then show how familiarity with these concepts allows for a better understanding of DJing tools and techniques, and vice versa.
 </details>
@@ -106,28 +112,28 @@ sitemap: false
 
 - Building teams and culture that support ML innovation  
   with [Ziad Asghar](https://www.linkedin.com/in/ziad-asghar-794404/), [Ameen Kazerouni](https://www.linkedin.com/in/ameenkazerouni/), moderated by [Sam Charrington](https://www.linkedin.com/in/samcharrington/)  
-  [TWIMLcon](https://twimlai.com/sessions/building-teams-culture-that-support-ml-innovation), January 22, 2021  
+  [TWIMLcon](https://twimlai.com/sessions/building-teams-culture-that-support-ml-innovation), Jan 22, 2021  
   🎥 [video](https://youtu.be/YJVNVo378Jw)
 
   *Abstract.* Traditional approaches to managing technical projects can be at odds with achieving success with machine learning. In this session, we discuss how ML and AI executives can build effective teams, support them with the right processes and tools, and shift the broader organizational culture in ways that reinforce innovation in machine learning.
 
 - Making an impact in data science: when traditional methods fail  
   with [Eric Glover](https://www.linkedin.com/in/erglover/), [Halim Abbas](https://www.linkedin.com/in/halimabbas/), [Kevin Stumpf](https://www.linkedin.com/in/kevinstumpf/), and [Sean McPherson](https://www.linkedin.com/in/sean-mcpherson-8446922/)  
-  [Branch HQ](https://www.eventbrite.com/e/branch-data-science-meetup-tickets-93123429685#), February 27, 2020  
+  [Branch HQ](https://www.eventbrite.com/e/branch-data-science-meetup-tickets-93123429685#), Feb 27, 2020  
   🎥 [video](https://youtu.be/rQAL02Hdkws)
 
   *Abstract.* In this meetup, we hear about data science projects that succeeded in spite of the limitations of existing methodology.
 
 - Culture & organization for effective ML at scale  
   with [Eric Colson](https://www.linkedin.com/in/ecolson/) and [Jennifer Prendki](https://www.linkedin.com/in/jennifer-prendki/), moderated by [Maribel Lopez](https://www.linkedin.com/in/maribellopez/)  
-  [TWIMLcon](https://twimlai.com/sessions/culture-organization-effective-ml-scale), September 27, 2019  
+  [TWIMLcon](https://twimlai.com/sessions/culture-organization-effective-ml-scale), Sept 27, 2019  
   🎥 [video](https://www.youtube.com/watch?v=V2qkEGER4zU)
 
   *Abstract.* Hear from people that have experienced startups and large corporations in a range of industries reveal tips to work faster, more efficiently, and create an org-wide culture that supports effective ML.
 
 - Women in Data Science meetup: Growing a career in data science  
   with [Laura Pruitt](https://www.linkedin.com/in/lpruitt/), [Kasia Rachuta](https://www.linkedin.com/in/kasiarachuta/), and [Alexandra Johnson](https://www.linkedin.com/in/alexandraj777/), moderated by [Chloe Tseng](https://www.tableau.com/about/blog/contributors/chloe-tseng)  
-  [Airbnb HQ](https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871), March 8, 2018
+  [Airbnb HQ](https://www.eventbrite.com/e/wids-san-francisco-airbnb-tickets-43037683871), Mar 8, 2018
 
   *Abstract.* Meet women in data science from all over the Bay Area at this WiDS post-conference screening. The event will be an opportunity to meet like-minded women as well as listen to the great lineup of panelists.
 </details>
@@ -137,14 +143,14 @@ sitemap: false
 
 - Pardis Noorzad of General Folders: Transforming B2B Data Collaboration  
   with [Jake Villarreal](https://www.linkedin.com/in/jakevillarreal/)  
-  [Born in Silicon Valley by Match Relevant](https://www.youtube.com/playlist?list=PLPgI4Y1DZOyXM1D_Y7UxFjuPd6QLakNz7), July 9, 2024  
+  [Born in Silicon Valley by Match Relevant](https://www.youtube.com/playlist?list=PLPgI4Y1DZOyXM1D_Y7UxFjuPd6QLakNz7), Jul 9, 2024  
   🎙️ [podcast episode](https://youtube.com/watch?v=UEofjLSMKrQ)
 
   *Abstract.* Join us for an engaging conversation with Pardis Noorzad, Founder and CEO of General Folders. Learn how she is revolutionizing B2B data collaboration and transforming the way businesses handle data logistics.
 
 - Making Cross-Company Data Exchange Easy  
   with [Kostas Pardalis](https://www.linkedin.com/in/kostaspardalis/) and [Eric Dodds](https://www.linkedin.com/in/ericdodds/)  
-  [The Data Stack Show](https://datastackshow.com/), September 6, 2023  
+  [The Data Stack Show](https://datastackshow.com/), Sept 6, 2023  
   🎙️ [podcast episode](https://datastackshow.com/podcast/making-cross-company-data-exchange-easy-with-pardis-noorzad-of-general-folders/)
 
   *Abstract.* The conversation includes the importance of data collaboration and sharing, the challenges and complexities of data sharing in various industries, the need for efficient and secure solutions, and the underlying definitions and dimensions of the data exchange problem—including infrastructure, security, economics, user needs, and more!
@@ -152,7 +158,7 @@ sitemap: false
 <!--
 - Head of Data Science at Healthcare Tech #93  
   with [Grant Ingersoll](https://www.linkedin.com/in/grantingersoll/)  
-  [Develomentor](https://develomentor.com/), June 29, 2020  
+  [Develomentor](https://develomentor.com/), Jun 29, 2020  
   🎙️ [podcast episode](https://www.listennotes.com/podcasts/develomentor/pardis-noorzad-head-of-data-YCLkfnTI5ZX/)
 
   *Abstract.* Thanks to Grant, the episode has turned into a good review of my work history.
@@ -169,19 +175,19 @@ sitemap: false
   *Abstract.* Online social networks are ubiquitous graphs. To test algorithms that scale with the size and order of these networks, we require synthetic samples. In this talk, we go over several methods for generating random graphs representative of online social networks. We are especially interested in the M-GEOP model ([Bonato et al., 2014](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0106052)), and in assessing the fit of these models to the Facebook dataset.
 
 - Efficient classification based on sparse regression  
-  [AUT](http://aut.ac.ir/aut/), July 17, 2012  
+  [AUT](http://aut.ac.ir/aut/), Jul 17, 2012  
   🎞️ [slides](/files/slides/defense_slides.pdf)
 
   *Abstract.* Master's thesis defense slides.
 
 - SPARROW: SPARse appROximation Weighted regression  
-  [UdeM](http://www.iro.umontreal.ca/?lang=en), March 12, 2012 and [SUT](http://www.en.sharif.edu/), February 22, 2012  
+  [UdeM](http://www.iro.umontreal.ca/?lang=en), Mar 12, 2012 and [SUT](http://www.en.sharif.edu/), Feb 22, 2012  
   🎞️ [slides](/files/slides/sparse_approximation_weighted_regression.pdf), 📰 [UdeM-McGill-mPrime ML seminar ad](https://mailman.iro.umontreal.ca/mailman3/hyperkitty/list/lisa_seminaires@iro.umontreal.ca/message/M4TWNW2L6G4Y5WD42RNPMDPOYWLU2KHN/)
 
   *Abstract.* We propose sparse approximation weighted regression (SPARROW), a nonparametric method of regression that takes advantage of the sparse linear approximation of a query point. SPARROW employs weights based on sparse approximation in the context of locally constant, locally linear, and locally quadratic regression to generate better estimates than for e.g., k-nearest neighbor regression and more generally, kernel-weighted local polynomial regression. Our experimental results show that SPARROW performs competitively.
 
 - Sparse coding and dictionary learning  
-  [SUT](http://www.sharif.ir/en/), October 5, 2011  
+  [SUT](http://www.sharif.ir/en/), Oct 5, 2011  
   🎞️ [slides](/files/slides/sparse_coding_and_dictionary_learning.pdf)
 
   *Abstract.* Sparse coding is achieved by solving an under-determined system of linear equations under sparsity constraints. We briefly look at several algorithms that solve the resulting optimization problem (exactly or approximately). We then see how this optimization principle can be applied in both a supervised and unsupervised context: multiclass classification and feature learning, respectively. Next, we talk about dictionary learning and some of its well-known instances. Applications of dictionary learning include image denoising and inpainting.
@@ -193,19 +199,19 @@ sitemap: false
   *Abstract.* An image can be represented at different levels, starting from pixels, going on to edges, to parts, to objects, and beyond. Over the years, many attempts have been made at engineering useful descriptors that are able to extract low-to-high level features from images. But what if we could make this process automatic? What if we could "learn" to detect layer after layer of features of increasing abstraction and complexity? After all, it would be impossible for us to foresee and hard-code all the kinds of invariances necessary to build features for our ever more complicated tasks. In this talk, we go over several unsupervised feature learning methods that have been in the making since 2006.
 
 - Computational learning theory  
-  [AUT](http://aut.ac.ir/), April 26, 2011  
+  [AUT](http://aut.ac.ir/), Apr 26, 2011  
   🎞️ [slides](/files/slides/computational_learning_theory.pdf)
 
   *Abstract.* A review of computational learning theory fundamentals.
 
 - <em>Parametric density estimation using GMMs</em><br/>
-  <a title="Amirkabir University of Technology" href="http://aut.ac.ir/" target="_blank">AUT</a>, April 12, 2011  
+  <a title="Amirkabir University of Technology" href="http://aut.ac.ir/" target="_blank">AUT</a>, Apr 12, 2011  
   🎞️ [slides](/files/parametric_density_estimation_using_gmms.pdf)
 
   *Abstract.* A review of Gaussian mixture models and the EM algorithm.
 
 - High dimensional data and dimensionality reduction  
-  [AUT](http://aut.ac.ir/), February 1, 2011  
+  [AUT](http://aut.ac.ir/), Feb 1, 2011  
   🎞️ [slides](/files/slides/high-dimensional_data_and_dimensionality_reduction.pdf)
 
   *Abstract.* A review of dimensionality reduction techniques with applications.
@@ -221,7 +227,7 @@ sitemap: false
 <summary><h3>Publications</h3></summary>
 
 - Efficient classification based on sparse regression  
-  MSc Thesis, Amirkabir University of Technology, July 2012  
+  MSc Thesis, Amirkabir University of Technology, Jul 2012  
   📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/Noorzad2012c.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
 
 - Regression with sparse approximations of data  
