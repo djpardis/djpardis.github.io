@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Let’s talk
+title: Contact
 permalink: /contact/
 plain_title: true
 description: Get in touch for collaborations, writing, research, speaking, or coffee.
