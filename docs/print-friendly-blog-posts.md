@@ -24,12 +24,15 @@ Posts use this permalink pattern from `_config.yml`.
 
 `/blog/:year/:month/:day/:title/`
 
-**Full print** (figures, video embeds, link-card thumbnails, image rows). Append **`print`** to that path. Jekyll writes **`print.html`** next to the post `index.html`, so the path is like `/blog/YYYY/MM/DD/your-slug/print.html`.
+**Full print** (figures, video embeds, link-card thumbnails, image rows). Append
+**`print`** to that path. Jekyll writes **`print.html`** next to the post
+`index.html`, and Jekyll serve exposes the clean path as
+`/blog/YYYY/MM/DD/your-slug/print`.
 
 **Print without photos** keeps SVG figures and MathJax while omitting raster
 images, video and iframe embeds, `.image-row` blocks, and `.link-card-image`
 panels. Append **`print-no-images`** the same way, e.g.
-`/blog/YYYY/MM/DD/your-slug/print-no-images.html`.
+`/blog/YYYY/MM/DD/your-slug/print-no-images`.
 
 Each page links to the other in the footer. MathJax is unchanged on the
 photo-free URL when the post has **`math: true`**.
@@ -56,10 +59,12 @@ From inside a post you can use Liquid, for example `{{ page.url }}print-no-image
 ## Build and check
 
 ```bash
-bundle exec jekyll build
+./scripts/serve.sh
 ```
 
-Open the generated files under `_site` or run `bundle exec jekyll serve` and visit the URLs in the browser, then print or save as PDF.
+Visit the normal post URL, then append `print` or `print-no-images` to check the
+generated print pages. Use `./scripts/build.sh` only when you need a static
+build under `_site`.
 
 Drafts only appear when you pass **`--drafts`**. Print pages are generated only for posts that exist in that build, same as normal post URLs.
 
