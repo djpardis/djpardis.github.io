@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Build and serve _site with clean URLs.
+# Build and serve _site with Python.
+#
+# Prefer scripts/serve.sh for local post review because Jekyll resolves
+# extensionless print URLs such as /print to print.html. This static server
+# is only for quick checks where .html file paths are acceptable.
 # Usage: scripts/preview.sh [port]   (default port 4000)
 set -euo pipefail
 

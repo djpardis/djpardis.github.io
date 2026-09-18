@@ -5,11 +5,19 @@ Jekyll site for djpardis.com. Notes for local development and builds.
 ## Build and run
 
 ```bash
-bundle install
 ./scripts/serve.sh
-# or: bundle exec jekyll serve --port 4000 --livereload --drafts
 ./scripts/build.sh
-# or: bundle exec jekyll build
+```
+
+Use `./scripts/serve.sh` for local post review. It installs missing gems into
+the ignored local bundle path, frees the requested port, and runs Jekyll's
+development server so clean post URLs and generated print URLs work the same
+way they do on the deployed site.
+
+The default port is `4000`. To use another port, pass it as the first argument.
+
+```bash
+./scripts/serve.sh 4001
 ```
 
 ## Updating dependencies
