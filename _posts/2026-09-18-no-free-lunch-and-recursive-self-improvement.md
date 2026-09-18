@@ -2,7 +2,7 @@
 layout: post
 title: "No free lunch and the limits of recursive self-improvement"
 subtitle: "What a theorem about optimization algorithms has to say about the intelligence explosion debate"
-description: "An examination of the academic debate connecting the No Free Lunch theorems of Wolpert and Macready with recursive self-improvement, covering Chollet, Hibbard, recent 2026 work on closed-loop model collapse, and the MIRI counterargument."
+description: "A technical reading of how Wolpert and Macready's No Free Lunch theorems bear on recursive self-improvement, specialization, inductive bias, model collapse, and recent empirical evidence."
 keywords: no free lunch theorem, recursive self-improvement, intelligence explosion, AGI, AI safety, Chollet, Wolpert, Macready, Hibbard, MIRI, Yudkowsky, model collapse
 date: 2026-09-18
 ---
@@ -11,13 +11,21 @@ date: 2026-09-18
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#the-theorem">The theorem and what it actually proves</a></li>
-<li><a href="#chollet">Chollet. The price of specialization</a></li>
-<li><a href="#hibbard">Hibbard. Inductive bias as a necessary commitment</a></li>
-<li><a href="#closed-loop">The closed-loop problem. Model collapse and data exhaustion</a></li>
-<li><a href="#miri">The MIRI counterargument. Physical structure as the relevant prior</a></li>
-<li><a href="#inference-scaling">Inference scaling and iterated amplification</a></li>
-<li><a href="#empirical">The 2025–2026 empirical picture</a></li>
+<li><a href="#theorem">What the theorem says</a></li>
+<li><a href="#limits">Arguments for limits on RSI</a>
+  <ul>
+    <li><a href="#chollet">Chollet. Specialization is not generality.</a></li>
+    <li><a href="#hibbard">Hibbard. Bias is necessary.</a></li>
+    <li><a href="#closed-loop">Closed loops. Self-generated data is not enough.</a></li>
+  </ul>
+</li>
+<li><a href="#counterarguments">Counterarguments and recent evidence</a>
+  <ul>
+    <li><a href="#miri">MIRI. The real world is not random.</a></li>
+    <li><a href="#inference-scaling">Inference scaling. Extra compute can improve fixed models.</a></li>
+    <li><a href="#empirical">Recent evidence. The bottleneck is now measurable.</a></li>
+  </ul>
+</li>
 <li><a href="#open">What remains open</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#references">References</a></li>
@@ -26,154 +34,251 @@ date: 2026-09-18
 
 ## [Introduction](#table-of-contents) {#introduction}
 
-Recursive self-improvement (RSI) is the hypothetical process by which an AI system redesigns its own architecture, learning rules, or objective functions to become more capable, and then uses that increased capability to produce further improvements. The concept has been central to arguments about an "intelligence explosion" since I.J. Good first described it in 1965. The standard worry is that a system which can improve itself will do so at an accelerating rate until it reaches a level of capability far beyond human range.
+Recursive self-improvement (RSI) is the proposed process by which an AI system
+redesigns its own architecture, learning rules, or objective functions, becomes
+more capable, and then uses that added capability to improve itself again. The
+idea has been central to arguments about an "intelligence explosion" since I.J.
+Good described an ultraintelligent machine in 1965.
 
-The No Free Lunch (NFL) theorems, proved by David Wolpert and William G. Macready in 1997, provide a precise mathematical constraint on what optimization algorithms can achieve in general <a id="ref1-back" href="#ref1">[1]</a>. Applying them to RSI is not straightforward, and the resulting academic debate has attracted contributions from AI researchers, philosophers of mind, and AI safety researchers. This post traces the main arguments, the strongest objections, and what the disagreement actually turns on.
+The No Free Lunch (NFL) theorems, proved by David Wolpert and William G.
+Macready in 1997, are often brought into this debate because they state a hard
+limit on optimization in the abstract <a id="ref1-back" href="#ref1">[1]</a>.
+They do not show that RSI is impossible. They do show that "better optimization"
+is never a context-free property. An optimizer improves by fitting some problem
+distribution better, and that fit is a bias.
 
-## [The theorem and what it actually proves](#table-of-contents) {#the-theorem}
+That distinction matters. If RSI means improvement inside a narrow, well-defined
+domain, the NFL theorems do not create much trouble. If RSI means open-ended
+movement toward generally superior intelligence, the theorem asks a sharper
+question. Superior on what distribution of problems?
 
-The core claim of the 1997 Wolpert-Macready paper is this: for any pair of optimization algorithms A and B, if you average their performance over all possible objective functions with a uniform prior, both perform identically. Any advantage A has over B on some subset of problems is exactly offset by B's advantage over A on the complementary subset <a href="#ref1">[1]</a>.
+## [What the theorem says](#table-of-contents) {#theorem}
 
-The theorem is proven for closed optimization, where the objective function is treated as a black box drawn from the uniform distribution over all possible functions on a finite domain. This makes the result precise, but it also defines its limits. The uniform prior assigns equal probability to functions with random structure and to functions with deep regularity. It does not reflect any belief about which functions the real world tends to produce.
+The core result of the Wolpert-Macready paper is that two optimization
+algorithms have the same average performance when averaged uniformly over all
+possible objective functions on a finite domain. If algorithm A performs better
+than algorithm B on one set of functions, algorithm B performs better than A on
+a matching set elsewhere <a href="#ref1">[1]</a>.
 
-The practical corollary matters more than the mathematical statement: an algorithm that is well-suited to one family of problems achieves that suitability by incorporating structure that matches those problems. That matching is not free. It comes at the cost of worse performance on problems with different structure. There is no algorithm that is simultaneously optimal across all problem families; that would require simultaneously incorporating contradictory structural assumptions.
+The result is exact because the setup is exact. The objective function is a
+black box, and the average is taken over all possible functions with a uniform
+prior. That prior treats random functions and highly structured functions as
+equally likely. It is not a claim about which functions the physical world tends
+to present.
 
-When applied to the question of general intelligence and RSI, the theorem raises an immediate difficulty. If "intelligence" is an optimization process, then any improvement to that process must be directed at a specific problem distribution. Improving performance on that distribution means specializing. And NFL guarantees that specialization on one distribution degrades performance on others.
+The useful lesson is narrower and stronger than the slogan. An optimizer does
+well when its assumptions match the problem distribution. Those assumptions may
+be explicit, as in a prior over environments, or implicit, as in an architecture
+that favors some patterns over others. There is no free way to be optimal across
+all possible distributions, because assumptions that help on one distribution
+can hurt on another.
 
-## [Chollet. The price of specialization](#table-of-contents) {#chollet}
+RSI therefore has to specify its target. A system can improve at theorem proving,
+chip design, protein modeling, or AI research benchmarks. Those are meaningful
+claims because each names a problem family. A claim that a system is simply
+"more intelligent" is incomplete unless it also says which environments,
+feedback signals, and tasks make that comparison true.
 
-François Chollet's 2017 essay "The Impossibility of an Intelligence Explosion" is the most widely cited application of NFL to the RSI debate <a id="ref2-back" href="#ref2">[2]</a>. Chollet's argument does not deny that RSI can occur. It argues that RSI produces a more specialized system, not a more generally capable one.
+## [Arguments for limits on RSI](#table-of-contents) {#limits}
 
-The reasoning runs as follows. If intelligence is a problem-solving algorithm evaluated against some distribution of tasks, then NFL applies: the algorithm's performance is always relative to that distribution. An AI undergoing RSI to become more effective at computer science and formal reasoning is implicitly narrowing its inductive biases toward that problem family. The NFL theorems guarantee that this improvement on one part of the problem space is purchased with degraded performance on other parts.
+The NFL-based critique of RSI has three parts. Chollet argues that self-improvement
+deepens specialization. Hibbard argues that useful agents must commit to
+inductive bias. Recent work on model collapse argues that closed training loops
+lose information unless fresh data or an external verifier keeps the loop
+attached to the target distribution.
 
-Chollet's broader claim is that "general intelligence" is not a single axis on which a system can simply climb. Empirically, every intelligent system we have studied is specialized to its ecological niche: the problem of being human, the problem of being an octopus, the problem of playing Go. A recursively self-improving AI would not escape this constraint. Each iteration of improvement would deepen its specialization rather than expand its universal capability.
+### [Chollet. Specialization is not generality.](#table-of-contents) {#chollet}
 
-Eliezer Yudkowsky responded to Chollet at length on behalf of MIRI, and we will address that response below. But Chollet's NFL application was also independently questioned by Scott Aaronson, who noted that citing NFL to bound AI capability treats the theorem as saying more than it does. The theorem applies to a uniform prior over all functions; it does not apply to the distribution of problems found in a structured physical world <a href="#ref2">[2]</a>. This is the crux of the disagreement.
+François Chollet's 2017 essay "The Impossibility of an Intelligence Explosion"
+is the best-known modern use of NFL against an unconstrained intelligence
+explosion <a id="ref2-back" href="#ref2">[2]</a>. His claim is not that no AI
+system can improve itself. His claim is that improvement is always relative to a
+problem distribution.
 
-## [Hibbard. Inductive bias as a necessary commitment](#table-of-contents) {#hibbard}
+If an AI system rewrites itself to become better at computer science, formal
+reasoning, or physics, it has moved toward the structure of those tasks. That may
+be extremely useful. It is still specialization. The NFL theorems rule out the
+stronger picture in which a system climbs a single universal intelligence axis
+without paying any cost elsewhere in problem space.
 
-Bill Hibbard's 2011 paper "Bias and No Free Lunch in Formal Measures of Intelligence," published in the Journal of Artificial General Intelligence, provides a complementary formal treatment <a id="ref3-back" href="#ref3">[3]</a>. Where Chollet focuses on the specialization argument from the perspective of problem-solving capability, Hibbard focuses on what NFL implies for agents that try to measure and improve their own intelligence.
+Chollet's broader view is that intelligence is skill acquisition under a set of
+priors, embodiment, memory, tools, and environmental constraints. Humans, octopuses,
+and Go systems are not points on one clean scale. They solve different problems
+under different assumptions. RSI can improve a system along a chosen axis, but
+that does not by itself imply general capability across all axes.
 
-Hibbard examines universal reinforcement learning agents of the type formalized by Marcus Hutter as AIXI. AIXI is often described as the optimal agent in the sense of Solomonoff induction, which assigns prior probability to environments proportional to the inverse of the size of the program that would generate them. This is an inductive bias: it assumes that the environment is computable and favors shorter descriptions. That assumption is what makes AIXI tractable and what makes it perform well in environments that are, in fact, computable and relatively simple.
+### [Hibbard. Bias is necessary.](#table-of-contents) {#hibbard}
 
-The NFL implication Hibbard draws is that this bias is not a deficiency of AIXI but a necessary feature of any agent that performs better than random. Any agent optimizing across a wide range of environments must choose inductive biases. Without committing to a specific mathematical prior over environments, an agent cannot distinguish better from worse responses to observations. Its performance collapses to random chance when averaged over the environments that its bias does not match.
+Bill Hibbard's 2011 paper "Bias and No Free Lunch in Formal Measures of
+Intelligence" makes the same issue formal for universal agents <a id="ref3-back" href="#ref3">[3]</a>.
+He discusses agents in the AIXI tradition, where Solomonoff-style priors favor
+computable environments with shorter descriptions. AIXI is not practical or
+computable as written. It is useful here because it makes the role of bias
+visible.
 
-The RSI constraint follows directly. A system rewriting its own objective functions or core learning heuristics during self-improvement cannot evaluate which rewrite is better without anchoring to some prior over the environments it will face. If it tries to remain completely neutral across all environments to maximize generality, the NFL theorems guarantee that its self-modification process degrades into a random walk. Every rewrite is as good as every other, on average. Useful self-improvement requires a committed, non-neutral prior about what the world is like.
+AIXI performs well only relative to a prior over environments. That prior assumes
+that the world is computable and that shorter programs deserve higher weight.
+This is not a flaw in the agent. It is the reason the agent can learn at all.
+Without a prior, observations do not tell the agent which future states are more
+likely, which actions are better, or which self-modification is an improvement.
 
-## [The closed-loop problem. Model collapse and data exhaustion](#table-of-contents) {#closed-loop}
+The RSI consequence is direct. A system modifying its own learning rules or
+objective cannot evaluate a proposed change from nowhere. It needs a standard of
+comparison, and that standard encodes assumptions about the environments it will
+face. If the system tries to remain perfectly neutral across all possible
+environments, the NFL theorems say that no proposed rewrite has better expected
+value than any other under the uniform average. Self-improvement needs bias.
 
-A 2026 paper on SSRN titled "Why the God in the Machine has no Training Set" synthesizes the NFL argument with empirical results on closed-loop training of large language models <a id="ref4-back" href="#ref4">[4]</a>. The paper argues that an RSI agent operating in a closed loop has no mathematically sound source of fresh distributional information. It must train on data that is progressively more contaminated by its own previous outputs.
+### [Closed loops. Self-generated data is not enough.](#table-of-contents) {#closed-loop}
 
-The empirical grounding for this concern comes from Shumailov et al., who demonstrated in 2024 what they called model collapse: when a language model is trained repeatedly on its own generated outputs rather than on independent human-produced text, the distribution of its outputs contracts <a id="ref5-back" href="#ref5">[5]</a>. Rare features of the original distribution disappear first, then moderate features, until the model converges toward a narrow set of outputs with low variance. The collapse is irreversible given the training setup. Retaining a fraction of original real data substantially slows the degradation, but a fully closed loop produces it reliably.
+A 2026 SSRN paper titled "Why the God in the Machine has no Training Set" applies
+this point to closed-loop training <a id="ref4-back" href="#ref4">[4]</a>. The
+paper argues that an RSI system cannot generate new information about the world
+by repeatedly training on its own outputs. A loop that lacks independent data or
+an external verifier can refine a proxy distribution, but it cannot guarantee
+progress against the distribution it ultimately needs to model.
 
-The NFL connection is this: the theorem says that no algorithm can manufacture predictive performance about an unknown function from a closed loop of self-referential reasoning. The signal in any training process comes from information about the target distribution. Once an RSI agent severs its feedback loop from independent empirical data, it is optimizing against a shrinking and increasingly corrupted proxy for the actual distribution it needs to generalize over. Each iteration of self-improvement refines performance on the proxy, not on the real world. NFL provides the theoretical warrant for why this cannot produce genuine capability gain: there is no information about the actual objective function being injected into the loop.
+Shumailov et al. give the empirical version of this concern. In their work on
+model collapse, generative models trained repeatedly on generated outputs lose
+parts of the original distribution, starting with rare features <a id="ref5-back" href="#ref5">[5]</a>.
+The model's output distribution contracts over repeated generations. Keeping
+some real data in the training mixture slows the effect, which is exactly the
+point. Fresh information matters.
 
-The practical implication is that RSI loops dependent on synthetic self-generated data do not converge toward greater capability. They converge toward a degenerate specialization on whatever structural artifact of their own outputs they happen to reinforce. The paper argues this is not merely an engineering problem to be solved with better self-training techniques, but a mathematical constraint on closed optimization.
+NFL does not prove model collapse. It explains why a closed loop should not be
+expected to discover information that never enters the loop. If the only feedback
+signal is derived from the model's own distribution, the system may improve at
+imitating and selecting its own artifacts rather than at tracking the outside
+world.
 
-## [The MIRI counterargument. Physical structure as the relevant prior](#table-of-contents) {#miri}
+## [Counterarguments and recent evidence](#table-of-contents) {#counterarguments}
 
-Yudkowsky's 2017 reply to Chollet on the MIRI blog accepts the mathematical statement of NFL while arguing that it is practically irrelevant to the RSI question <a id="ref6-back" href="#ref6">[6]</a>. The argument is direct: NFL averages over all possible functions with a uniform prior. Our universe is not drawn from a uniform prior over all mathematical structures. It is one specific, highly structured physical universe, described by a small number of physical laws with low Kolmogorov complexity.
+The main objections to the NFL-limit argument do not deny the theorem. They
+deny that the theorem's uniform average is the right model for AI. The real world
+is highly structured. Some domains have formal feedback. Some capability gains
+come from spending more compute at inference time rather than from retraining on
+self-generated data.
 
-The set of problems that actually arise from the physical world occupies a tiny and highly non-uniform region of all possible problem space. Gravity, quantum mechanics, computational locality, and polynomial complexity bounds constrain what kinds of functions real-world problems present. An intelligence calibrated to physical reality is not operating under the uniform prior that NFL requires for its conclusions to hold. It is operating under a prior heavily concentrated on structured, low-entropy problems.
+### [MIRI. The real world is not random.](#table-of-contents) {#miri}
 
-Within that constrained prior, Yudkowsky argues, there is room for genuine general improvement through RSI. A system that becomes better at scientific reasoning, formal manipulation, long-horizon planning, and modeling physical processes is becoming better at a broad and practically important class of problems, all of which share structure. NFL does not forbid this. It forbids universal optimization across all possible functions. It says nothing about directed improvement across the structured subset of functions that physical reality produces.
+Eliezer Yudkowsky's 2017 reply to Chollet, published by MIRI, accepts the NFL
+theorems and argues that they are mostly irrelevant to practical RSI <a id="ref6-back" href="#ref6">[6]</a>.
+NFL averages over all possible functions. Our universe is not sampled from that
+average in any practical sense. It has locality, stable physical laws, low-entropy
+regularities, and many repeatable causal structures.
 
-Yudkowsky also raises what he calls the scaling argument from AlphaGo Zero. That system taught itself Go by self-play from scratch, surpassing all human knowledge of the game in three days. The argument against RSI would predict that this closed-loop improvement would degrade: the system would specialize on some artifact of its own play rather than improving at Go itself. Instead it achieved superhuman play. Yudkowsky takes this as evidence that closed-loop self-improvement in a structured domain can produce genuine capability gain, at least within a fixed problem definition.
+On this view, an AI system does not need to perform well in every possible
+mathematical universe. It needs to perform well in this one. A system that becomes
+better at scientific reasoning, coding, planning, and physical modeling may gain
+broad practical power because those tasks share structure in our universe. The
+system pays for lunch by doing worse in other possible worlds, but those worlds
+do not matter for the immediate risk analysis.
 
-Whether this analogy extends from a game with a fixed reward signal to the more open-ended problem of general intelligence is the point where the debate remains genuinely unresolved.
+AlphaGo Zero is the usual example. It improved through self-play and surpassed
+human Go knowledge without learning from human games. That does not violate NFL
+because Go is not an arbitrary objective function. It is a fixed formal domain
+with a stable reward rule. The question is whether AI research, science, and
+real-world planning provide enough equivalent structure.
 
-## [Inference scaling and iterated amplification](#table-of-contents) {#inference-scaling}
+### [Inference scaling. Extra compute can improve fixed models.](#table-of-contents) {#inference-scaling}
 
-A counterargument to the closed-loop model collapse concern emerged with the o-series
-models from OpenAI in 2024–2025. Spending more compute at inference time, through
-extended chain-of-thought reasoning and search, reliably improves performance across
-benchmarks. This is a form of capability gain that does not require a new closed
-training loop. The model's weights are fixed; the improvement comes from allocating
-more computation to search within the space the model already represents.
+Inference scaling adds a newer counterargument. Recent reasoning models show
+that spending more compute at test time, through longer reasoning, sampling,
+search, or verification, can improve performance without changing the model
+weights <a id="ref7-back" href="#ref7">[7]</a>. This is not a closed training
+loop. It is a way to search harder inside the model and select better answers.
 
-Paul Christiano formalized a related mechanism called iterated distillation and
-amplification (IDA): amplify a model by allowing it to reason longer or run in
-parallel to obtain better outputs, then distill that behavior into a new lighter
-model, and repeat <a id="ref7-back" href="#ref7">[7]</a>. The critical feature is
-that the amplification step can include external verification. The system does not
-simply train on its own outputs; it trains on outputs that have been selected or
-checked against an independent signal. AlphaGo Zero is the standard existence proof:
-genuine superhuman capability from a self-contained loop, but with Go rules as an
-external verifier that is entirely independent of the model's outputs.
+Paul Christiano's work on iterated distillation and amplification describes a
+related loop <a id="ref8-back" href="#ref8">[8]</a>. A weak model is amplified
+by giving it more time, more copies, decomposition, or assistance. The amplified
+behavior is then distilled into a successor model. If the process has a reliable
+external signal, it can produce real gains rather than merely amplifying the
+model's own errors.
 
-The NFL response to this is precise. The self-improvement works in these cases
-because the verifier is external and formal. Go rules, mathematical proof checkers,
-and code test suites provide evaluation signals that are not derived from the model's
-own distribution. When such a verifier exists, the loop is not closed in the sense
-that generates model collapse. The question is whether this extends to open-ended
-intelligence improvement, where no equivalent formal verifier exists. A 2026 survey
-of 1,250 RSI papers organized the literature around a verification hierarchy: formal
-verifiers at the top, self-assessment at the bottom <a id="ref8-back" href="#ref8">[8]</a>.
-Demonstrated self-improvement strength tracks this hierarchy, and the characteristic
-failure modes (self-confirming feedback, model collapse, diversity collapse) arise
-specifically when systems attempt improvement against weak or self-referential
-evaluation signals.
+This matters because it separates two kinds of RSI. In domains with strong
+verifiers, such as code tests, proof checkers, games, and some mathematics,
+self-improvement can be genuine. In domains where the system must judge its own
+open-ended research direction, the signal is weaker. A 2026 survey of 1,250 RSI
+papers found that demonstrated self-improvement strength tracks this verification
+hierarchy <a id="ref9-back" href="#ref9">[9]</a>. The more independent the
+evaluation signal is, the better the loop works.
 
-## [The 2025–2026 empirical picture](#table-of-contents) {#empirical}
+### [Recent evidence. The bottleneck is now measurable.](#table-of-contents) {#empirical}
 
-The debate between the NFL-limit position and the MIRI-style counterargument has
-acquired empirical grounding over the past two years that was not available when the
-original arguments were made.
+The debate is now tied to a growing empirical record. Chollet's ARC-AGI series
+tests novel reasoning under minimal prior knowledge. ARC-AGI-2 reported a large
+gap between human performance and current AI systems. ARC-AGI-3 moved to
+interactive environments where agents must infer goals, explore, remember, and
+plan. The paper reports human success across all environments while current AI
+systems remain below 1% <a id="ref10-back" href="#ref10">[10]</a>.
 
-Chollet's ARC-AGI benchmark series is a direct operationalization of his NFL
-argument. ARC-AGI-2 (2025) tested compositional fluid reasoning on novel task
-formats. The best AI result, using synthetic data and test-time training on a 4
-billion parameter model, reached 24% accuracy against a human baseline of 100%.
-ARC-AGI-3 (March 2026) moved to interactive environments requiring goal inference,
-exploration, planning, and action without explicit instructions <a id="ref9-back" href="#ref9">[9]</a>.
-Current AI scores below 1%. Humans solve all environments. The problem class that
-Chollet's NFL argument targets is being measured with increasing precision, and
-current RSI loops are not closing the gap.
+A 2026 Princeton-led shadow evaluation tested another part of the RSI story. AI
+agents were given the central research question from two unpublished NeurIPS
+papers, and the original authors evaluated the results. The agents could do
+research engineering. They ran experiments, processed results, and wrote papers.
+They did not produce work at the target research standard <a id="ref11-back" href="#ref11">[11]</a>.
+The reported failures were not simple tool failures. They involved
+choosing weak directions, over-updating on limited evidence, and failing to
+recover when the plan stopped working.
 
-A 2026 Princeton study (Kirgis and Kapoor) ran shadow evaluations in which frontier
-agents were given the central research question of two unpublished NeurIPS 2026
-papers, with the original authors grading the output <a id="ref10-back" href="#ref10">[10]</a>.
-The agents handled all the engineering: they ran experiments, processed results, and
-produced writeups. They could not do the research. They committed to unpromising
-directions on thin evidence, could not backtrack when initial hypotheses failed, and
-did not address core criticisms across fifteen rounds of internal review. The
-bottleneck is what NFL predicts: knowing which direction of inquiry is worth pursuing
-requires judgment grounded in the actual research landscape, not more search within
-a fixed problem representation.
-
-Cunningham et al. (2026) modeled RSI as a directed graph of feedback loops and
-estimated that current AI productivity uplift on AI R&D work is roughly 9%, below
-the approximately 15% threshold for self-sustaining acceleration <a id="ref11-back" href="#ref11">[11]</a>.
-Their narrow/broad capability distinction is particularly relevant here. An RSI loop
-may become self-sustaining for narrow benchmark-oriented tasks while failing to
-produce the broad capability gains that the intelligence explosion scenario requires.
-This is a quantitative version of the NFL specialization argument: the feedback loops
-that are strengthening are the ones constrained to well-defined, verifiable problem
-families.
+Cunningham et al. give a quantitative complement to those results <a id="ref12-back" href="#ref12">[12]</a>.
+They model RSI as feedback loops whose acceleration depends on elasticities
+across the loop. Their calibration suggests current loops are not yet strong
+enough for self-sustaining acceleration, while also noting that they appear to be
+strengthening. Their distinction between narrow and broad capability is central.
+An AI system might accelerate benchmark-oriented AI R&D without producing the
+wide practical capability gain assumed by stronger intelligence explosion
+claims.
 
 ## [What remains open](#table-of-contents) {#open}
 
-The dispute between these positions is not about whether NFL is a theorem. All parties accept the mathematics. The disagreement is about the size and structure of the problem distribution that matters for evaluating RSI.
+The main question is not whether NFL is true. It is whether the distribution that
+matters for RSI is narrow enough, structured enough, and verifiable enough for
+self-improvement to compound.
 
-Chollet and Hibbard argue that even within physical reality, problem distributions are diverse enough that no single system can improve uniformly across them. Becoming better at formal reasoning involves trade-offs against social cognition, perceptual grounding, and the kinds of embodied physical intuition that are difficult to represent symbolically. RSI produces a more capable system along its chosen axis of optimization, but this is not the same as producing a more generally capable system.
+The limit argument says that each useful improvement must aim at a distribution.
+Better performance on that distribution comes from bias, data, feedback, or a
+verifier. Without those, RSI has no basis for deciding which self-modification is
+better. Closed-loop training on synthetic outputs makes this problem visible
+because the loop can lose contact with the target distribution.
 
-MIRI's position is that the physically realizable problem distribution is structured enough that improvement along its dominant dimensions counts as genuine general improvement. An agent optimized for physical-world reasoning is better in all the ways that matter for the real question, which is whether RSI produces a system with decisive practical advantage over humans.
+The counterargument says that the real world supplies enough structure for this
+not to matter much. A system can sacrifice performance in arbitrary mathematical
+worlds and still become broadly effective in ours. In domains with formal
+verification, current evidence supports that view. Test-time search, code tests,
+mathematical verifiers, and game rules can all turn extra computation into
+measurable gains.
 
-The 2026 SSRN paper adds a third consideration that neither side in the original Chollet-MIRI exchange fully addressed: even if the problem distribution is favorable, RSI loops dependent on synthetic data face an information-theoretic barrier independent of the NFL question. If the training signal degrades empirically as Shumailov et al. show, the prior structure of the problem distribution becomes irrelevant. The system cannot access it.
-
-These are separate constraints. The NFL argument is about whether the target distribution is structured enough to support general improvement. The model collapse argument is about whether a closed-loop RSI process can actually track the target distribution at all. Both need to be satisfied for RSI to work as described in the intelligence explosion scenario.
-
-The IDA and inference scaling results add a fourth variable. They show that RSI-like capability gains are possible when the evaluation signal is external and formal. The verification hierarchy from the 2026 RSI survey is effectively an empirical version of Hibbard's inductive bias argument: the more grounded the evaluation is in external reality, the more reliably self-improvement works. This predicts which domains of RSI will be productive (those with formal verifiers, like code and mathematics) and which will not (those relying on self-referential judgment).
-
-The theoretical positions are now measurable in ways they were not in 2017. The ARC-AGI programme provides a direct measurement of fluid generalization that tracks the core claim of the NFL specialization argument. The shadow evaluation methodology provides evidence about the research direction-setting bottleneck. The Cunningham economics framework gives a way to distinguish self-sustaining narrow RSI from the broad capability acceleration that the intelligence explosion scenario requires. The debate has not been resolved, but it has moved from a primarily philosophical dispute to one where empirical evidence is accumulating at a pace that should constrain the theoretical positions within a few years.
+The unresolved part is open-ended research. Research direction-setting requires
+choosing which question matters, which evidence should update the plan, and when
+to abandon an approach. The recent empirical results suggest that this remains a
+harder target than benchmark solving or engineering execution. That does not
+settle the RSI debate, but it narrows the live question. The issue is no longer
+whether self-improvement can happen at all. It is whether improvement in
+verified narrow domains can transfer into the broad judgment needed for sustained
+AI research progress.
 
 ## [Conclusion](#table-of-contents) {#conclusion}
 
-The NFL theorems do not prove that recursively self-improving AI is impossible. What they establish is a precise cost structure on optimization: any improvement on one class of problems is purchased with degraded performance on the complementary class, under a uniform prior over all functions. Whether that cost matters in practice depends on whether the real-world problem distribution is uniform or structured.
+The NFL theorems do not rule out recursive self-improvement. They rule out a
+stronger and vaguer claim, that an optimizer can become better in the abstract
+without a target distribution or bias. Once the target is named, the theorem
+stops being a prohibition and becomes an accounting rule. Gains come from
+structure, and structure must enter through priors, data, tools, or feedback.
 
-The debate has produced three distinct claims worth keeping separate. Chollet's specialization argument says that RSI produces deeper specialization, not broader capability, and that general intelligence is not a single axis. Hibbard's formal argument says that any self-improving agent must commit to specific inductive biases about its environment, and that this commitment is what makes useful improvement possible at all. The model collapse literature says that closed-loop RSI without external data faces an independent empirical barrier, regardless of what the NFL theorems imply about the target distribution. MIRI's counterargument says that the relevant prior is not uniform and that physical structure leaves room for genuine general improvement within our universe.
+The most useful version of the debate separates three claims. Chollet's argument
+says RSI should be expected to specialize rather than climb a universal
+intelligence scale. Hibbard's argument says useful self-modification requires
+inductive bias. The model collapse literature says closed loops need fresh data
+or independent checks. MIRI's reply says those limits do not block large gains in
+our structured physical world.
 
-These are each technically coherent positions. The disagreement is not primarily mathematical. It is about the right prior over the real-world problem distribution and about whether the problem of general capability is decomposable or unitary. Neither the NFL theorems nor current empirical results fully settle it.
+Recent evidence makes the divide more concrete. Verified domains show real
+self-improvement. Open-ended research still shows a direction-setting bottleneck.
+That is where the NFL argument remains relevant. Not as a proof that RSI cannot
+happen, but as a demand that any RSI story explain which distribution is being
+optimized, what bias makes it learnable, and what signal keeps the loop attached
+to the world.
 
 ## [References](#table-of-contents) {#references}
 
@@ -189,12 +294,14 @@ These are each technically coherent positions. The disagreement is not primarily
 
 <a id="ref6" href="#ref6-back">[6]</a> Yudkowsky, E. "A reply to Francois Chollet on intelligence explosion." Machine Intelligence Research Institute, December 6, 2017. Available at: <a href="https://intelligence.org/2017/12/06/chollet/" target="_blank">https://intelligence.org/2017/12/06/chollet/</a>
 
-<a id="ref7" href="#ref7-back">[7]</a> Christiano, P., Shlegeris, B., and Amodei, D. "Supervising strong learners by amplifying weak experts." arXiv:1810.08575, 2018. Available at: <a href="https://arxiv.org/abs/1810.08575" target="_blank">https://arxiv.org/abs/1810.08575</a>
+<a id="ref7" href="#ref7-back">[7]</a> "Test-Time Scaling in Reasoning LLMs. Inference Regimes, Evaluation, and Reproducibility." arXiv 2608.04001, 2026. Available at: <a href="https://arxiv.org/abs/2608.04001" target="_blank">https://arxiv.org/abs/2608.04001</a>
 
-<a id="ref8" href="#ref8-back">[8]</a> "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops." arXiv:2607.07663, 2026. Available at: <a href="https://arxiv.org/abs/2607.07663" target="_blank">https://arxiv.org/abs/2607.07663</a>
+<a id="ref8" href="#ref8-back">[8]</a> Christiano, P., Shlegeris, B., and Amodei, D. "Supervising strong learners by amplifying weak experts." arXiv 1810.08575, 2018. Available at: <a href="https://arxiv.org/abs/1810.08575" target="_blank">https://arxiv.org/abs/1810.08575</a>
 
-<a id="ref9" href="#ref9-back">[9]</a> Chollet, F. et al. "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence." arXiv:2603.24621, 2026. Available at: <a href="https://arxiv.org/abs/2603.24621" target="_blank">https://arxiv.org/abs/2603.24621</a>
+<a id="ref9" href="#ref9-back">[9]</a> "Recursive Self-Improvement in AI. From Bounded Self-Refinement to Autonomous Research Loops." arXiv 2607.07663, 2026. Available at: <a href="https://arxiv.org/abs/2607.07663" target="_blank">https://arxiv.org/abs/2607.07663</a>
 
-<a id="ref10" href="#ref10-back">[10]</a> Kirgis, P. and Kapoor, S. et al. "Can AI agents conduct open-ended AI research?" arXiv:2607.27191, 2026. Available at: <a href="https://arxiv.org/abs/2607.27191" target="_blank">https://arxiv.org/abs/2607.27191</a>
+<a id="ref10" href="#ref10-back">[10]</a> Chollet, F. et al. "ARC-AGI-3. A New Challenge for Frontier Agentic Intelligence." arXiv 2603.24621, 2026. Available at: <a href="https://arxiv.org/abs/2603.24621" target="_blank">https://arxiv.org/abs/2603.24621</a>
 
-<a id="ref11" href="#ref11-back">[11]</a> Cunningham, T., Althoff, L. et al. "The Economics of Recursive Self-Improvement." arXiv:2609.15802, 2026. Available at: <a href="https://arxiv.org/abs/2609.15802" target="_blank">https://arxiv.org/abs/2609.15802</a>
+<a id="ref11" href="#ref11-back">[11]</a> Kirgis, P. and Kapoor, S. et al. "Can AI agents conduct open-ended AI research?" arXiv 2607.27191, 2026. Available at: <a href="https://arxiv.org/abs/2607.27191" target="_blank">https://arxiv.org/abs/2607.27191</a>
+
+<a id="ref12" href="#ref12-back">[12]</a> Cunningham, T., Althoff, L. et al. "The Economics of Recursive Self-Improvement." arXiv 2609.15802, 2026. Available at: <a href="https://arxiv.org/abs/2609.15802" target="_blank">https://arxiv.org/abs/2609.15802</a>
