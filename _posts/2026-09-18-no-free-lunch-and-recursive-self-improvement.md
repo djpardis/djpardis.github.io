@@ -16,6 +16,8 @@ date: 2026-09-18
 <li><a href="#hibbard">Hibbard. Inductive bias as a necessary commitment</a></li>
 <li><a href="#closed-loop">The closed-loop problem. Model collapse and data exhaustion</a></li>
 <li><a href="#miri">The MIRI counterargument. Physical structure as the relevant prior</a></li>
+<li><a href="#inference-scaling">Inference scaling and iterated amplification</a></li>
+<li><a href="#empirical">The 2025–2026 empirical picture</a></li>
 <li><a href="#open">What remains open</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#references">References</a></li>
@@ -80,6 +82,75 @@ Yudkowsky also raises what he calls the scaling argument from AlphaGo Zero. That
 
 Whether this analogy extends from a game with a fixed reward signal to the more open-ended problem of general intelligence is the point where the debate remains genuinely unresolved.
 
+## [Inference scaling and iterated amplification](#table-of-contents) {#inference-scaling}
+
+A counterargument to the closed-loop model collapse concern emerged with the o-series
+models from OpenAI in 2024–2025. Spending more compute at inference time, through
+extended chain-of-thought reasoning and search, reliably improves performance across
+benchmarks. This is a form of capability gain that does not require a new closed
+training loop. The model's weights are fixed; the improvement comes from allocating
+more computation to search within the space the model already represents.
+
+Paul Christiano formalized a related mechanism called iterated distillation and
+amplification (IDA): amplify a model by allowing it to reason longer or run in
+parallel to obtain better outputs, then distill that behavior into a new lighter
+model, and repeat <a id="ref7-back" href="#ref7">[7]</a>. The critical feature is
+that the amplification step can include external verification. The system does not
+simply train on its own outputs; it trains on outputs that have been selected or
+checked against an independent signal. AlphaGo Zero is the standard existence proof:
+genuine superhuman capability from a self-contained loop, but with Go rules as an
+external verifier that is entirely independent of the model's outputs.
+
+The NFL response to this is precise. The self-improvement works in these cases
+because the verifier is external and formal. Go rules, mathematical proof checkers,
+and code test suites provide evaluation signals that are not derived from the model's
+own distribution. When such a verifier exists, the loop is not closed in the sense
+that generates model collapse. The question is whether this extends to open-ended
+intelligence improvement, where no equivalent formal verifier exists. A 2026 survey
+of 1,250 RSI papers organized the literature around a verification hierarchy: formal
+verifiers at the top, self-assessment at the bottom <a id="ref8-back" href="#ref8">[8]</a>.
+Demonstrated self-improvement strength tracks this hierarchy, and the characteristic
+failure modes (self-confirming feedback, model collapse, diversity collapse) arise
+specifically when systems attempt improvement against weak or self-referential
+evaluation signals.
+
+## [The 2025–2026 empirical picture](#table-of-contents) {#empirical}
+
+The debate between the NFL-limit position and the MIRI-style counterargument has
+acquired empirical grounding over the past two years that was not available when the
+original arguments were made.
+
+Chollet's ARC-AGI benchmark series is a direct operationalization of his NFL
+argument. ARC-AGI-2 (2025) tested compositional fluid reasoning on novel task
+formats. The best AI result, using synthetic data and test-time training on a 4
+billion parameter model, reached 24% accuracy against a human baseline of 100%.
+ARC-AGI-3 (March 2026) moved to interactive environments requiring goal inference,
+exploration, planning, and action without explicit instructions <a id="ref9-back" href="#ref9">[9]</a>.
+Current AI scores below 1%. Humans solve all environments. The problem class that
+Chollet's NFL argument targets is being measured with increasing precision, and
+current RSI loops are not closing the gap.
+
+A 2026 Princeton study (Kirgis and Kapoor) ran shadow evaluations in which frontier
+agents were given the central research question of two unpublished NeurIPS 2026
+papers, with the original authors grading the output <a id="ref10-back" href="#ref10">[10]</a>.
+The agents handled all the engineering: they ran experiments, processed results, and
+produced writeups. They could not do the research. They committed to unpromising
+directions on thin evidence, could not backtrack when initial hypotheses failed, and
+did not address core criticisms across fifteen rounds of internal review. The
+bottleneck is what NFL predicts: knowing which direction of inquiry is worth pursuing
+requires judgment grounded in the actual research landscape, not more search within
+a fixed problem representation.
+
+Cunningham et al. (2026) modeled RSI as a directed graph of feedback loops and
+estimated that current AI productivity uplift on AI R&D work is roughly 9%, below
+the approximately 15% threshold for self-sustaining acceleration <a id="ref11-back" href="#ref11">[11]</a>.
+Their narrow/broad capability distinction is particularly relevant here. An RSI loop
+may become self-sustaining for narrow benchmark-oriented tasks while failing to
+produce the broad capability gains that the intelligence explosion scenario requires.
+This is a quantitative version of the NFL specialization argument: the feedback loops
+that are strengthening are the ones constrained to well-defined, verifiable problem
+families.
+
 ## [What remains open](#table-of-contents) {#open}
 
 The dispute between these positions is not about whether NFL is a theorem. All parties accept the mathematics. The disagreement is about the size and structure of the problem distribution that matters for evaluating RSI.
@@ -91,6 +162,10 @@ MIRI's position is that the physically realizable problem distribution is struct
 The 2026 SSRN paper adds a third consideration that neither side in the original Chollet-MIRI exchange fully addressed: even if the problem distribution is favorable, RSI loops dependent on synthetic data face an information-theoretic barrier independent of the NFL question. If the training signal degrades empirically as Shumailov et al. show, the prior structure of the problem distribution becomes irrelevant. The system cannot access it.
 
 These are separate constraints. The NFL argument is about whether the target distribution is structured enough to support general improvement. The model collapse argument is about whether a closed-loop RSI process can actually track the target distribution at all. Both need to be satisfied for RSI to work as described in the intelligence explosion scenario.
+
+The IDA and inference scaling results add a fourth variable. They show that RSI-like capability gains are possible when the evaluation signal is external and formal. The verification hierarchy from the 2026 RSI survey is effectively an empirical version of Hibbard's inductive bias argument: the more grounded the evaluation is in external reality, the more reliably self-improvement works. This predicts which domains of RSI will be productive (those with formal verifiers, like code and mathematics) and which will not (those relying on self-referential judgment).
+
+The theoretical positions are now measurable in ways they were not in 2017. The ARC-AGI programme provides a direct measurement of fluid generalization that tracks the core claim of the NFL specialization argument. The shadow evaluation methodology provides evidence about the research direction-setting bottleneck. The Cunningham economics framework gives a way to distinguish self-sustaining narrow RSI from the broad capability acceleration that the intelligence explosion scenario requires. The debate has not been resolved, but it has moved from a primarily philosophical dispute to one where empirical evidence is accumulating at a pace that should constrain the theoretical positions within a few years.
 
 ## [Conclusion](#table-of-contents) {#conclusion}
 
@@ -113,3 +188,13 @@ These are each technically coherent positions. The disagreement is not primarily
 <a id="ref5" href="#ref5-back">[5]</a> Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., and Gal, Y. "AI models collapse when trained on recursively generated data." Nature, vol. 631, no. 8022, pp. 755–759, 2024. Preprint available at: <a href="https://arxiv.org/abs/2305.17493" target="_blank">https://arxiv.org/abs/2305.17493</a>
 
 <a id="ref6" href="#ref6-back">[6]</a> Yudkowsky, E. "A reply to Francois Chollet on intelligence explosion." Machine Intelligence Research Institute, December 6, 2017. Available at: <a href="https://intelligence.org/2017/12/06/chollet/" target="_blank">https://intelligence.org/2017/12/06/chollet/</a>
+
+<a id="ref7" href="#ref7-back">[7]</a> Christiano, P., Shlegeris, B., and Amodei, D. "Supervising strong learners by amplifying weak experts." arXiv:1810.08575, 2018. Available at: <a href="https://arxiv.org/abs/1810.08575" target="_blank">https://arxiv.org/abs/1810.08575</a>
+
+<a id="ref8" href="#ref8-back">[8]</a> "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops." arXiv:2607.07663, 2026. Available at: <a href="https://arxiv.org/abs/2607.07663" target="_blank">https://arxiv.org/abs/2607.07663</a>
+
+<a id="ref9" href="#ref9-back">[9]</a> Chollet, F. et al. "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence." arXiv:2603.24621, 2026. Available at: <a href="https://arxiv.org/abs/2603.24621" target="_blank">https://arxiv.org/abs/2603.24621</a>
+
+<a id="ref10" href="#ref10-back">[10]</a> Kirgis, P. and Kapoor, S. et al. "Can AI agents conduct open-ended AI research?" arXiv:2607.27191, 2026. Available at: <a href="https://arxiv.org/abs/2607.27191" target="_blank">https://arxiv.org/abs/2607.27191</a>
+
+<a id="ref11" href="#ref11-back">[11]</a> Cunningham, T., Althoff, L. et al. "The Economics of Recursive Self-Improvement." arXiv:2609.15802, 2026. Available at: <a href="https://arxiv.org/abs/2609.15802" target="_blank">https://arxiv.org/abs/2609.15802</a>
