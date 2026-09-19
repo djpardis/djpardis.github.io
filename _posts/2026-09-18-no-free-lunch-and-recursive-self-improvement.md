@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "No free lunch and the limits of recursive self-improvement"
-subtitle: "What a theorem about optimization algorithms has to say about the intelligence explosion debate"
+subtitle: "What optimization theory can and cannot say about AGI"
 description: "A technical reading of how Wolpert and Macready's No Free Lunch theorems bear on recursive self-improvement, specialization, inductive bias, model collapse, and recent empirical evidence."
 keywords: no free lunch theorem, recursive self-improvement, intelligence explosion, AGI, AI safety, Chollet, Wolpert, Macready, Hibbard, MIRI, Yudkowsky, model collapse
 date: 2026-09-18
@@ -38,7 +38,6 @@ image: /files/pics/blog/2026/no-free-lunch-rsi-hero.jpg
 <div class="post-hero-image">
 <img src="/files/pics/blog/2026/no-free-lunch-rsi-hero.jpg" alt="Books and a skull drawing on a wall">
 </div>
-*Books and a skull drawing on a wall.*
 
 Recursive self-improvement (RSI) is the proposed process by which an AI system
 redesigns its own architecture, learning rules, or objective functions, becomes
