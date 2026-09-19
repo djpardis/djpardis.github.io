@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "No free lunch and the limits of recursive self-improvement"
+title: "The no free lunch theorem and recursive self-improvement"
 subtitle: "What optimization theory can and cannot say about AGI"
 description: "A technical reading of how Wolpert and Macready's No Free Lunch theorems bear on recursive self-improvement, specialization, inductive bias, model collapse, and recent empirical evidence."
 keywords: no free lunch theorem, recursive self-improvement, intelligence explosion, AGI, AI safety, Chollet, Wolpert, Macready, Hibbard, MIRI, Yudkowsky, model collapse
