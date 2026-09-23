@@ -18,6 +18,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check publish-ready markers
+        if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
+        run: ./scripts/check-publish-ready-posts.sh "${{ github.event.before }}" "${{ github.sha }}"
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
