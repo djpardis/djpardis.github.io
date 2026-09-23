@@ -9,6 +9,7 @@ baseurl:             ""
 url:                 "https://djpardis.com"
 logo:                "/public/favicon/favicon.svg"
 lang:                'en-US'
+turnstile_site_key:  "0x4AAAAAAFBV-3Q0rJMzriBj"
 
 pages_list:
   About: '/'
