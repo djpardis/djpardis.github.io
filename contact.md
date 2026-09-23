@@ -108,12 +108,12 @@ description: Get in touch for collaborations, writing, research, speaking, or co
   <div class="form-row-cols-2">
     <div class="form-field">
       <label class="contact-field-label" for="contact-subject">Subject</label>
-      <input id="contact-subject" name="subject" type="text" autocomplete="off" placeholder="Subject (optional)">
+      <input id="contact-subject" name="subject" type="text" required autocomplete="off" placeholder="Subject">
     </div>
 
     <div class="form-field">
       <label class="contact-field-label" for="contact-location">Location</label>
-      <input id="contact-location" name="location" type="text" autocomplete="address-level2" placeholder="Location (optional)">
+      <input id="contact-location" name="location" type="text" required autocomplete="address-level2" placeholder="Location">
     </div>
   </div>
 
