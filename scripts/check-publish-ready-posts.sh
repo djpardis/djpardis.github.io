@@ -8,7 +8,9 @@ if [ "${ALLOW_PUBLISH_POSTS:-}" = "1" ]; then
   exit 0
 fi
 
-if git rev-parse --verify HEAD >/dev/null 2>&1; then
+if [ "$#" -eq 2 ]; then
+  changed_posts="$(git diff --name-status --diff-filter=ACR "$1" "$2" -- _posts/*.md 2>/dev/null | awk '{print $NF}')"
+elif git rev-parse --verify HEAD >/dev/null 2>&1; then
   changed_posts="$(git diff --cached --name-status --diff-filter=ACR HEAD -- _posts/*.md 2>/dev/null | awk '{print $NF}')"
 else
   changed_posts="$(git diff --cached --name-status --diff-filter=ACR -- _posts/*.md 2>/dev/null | awk '{print $NF}')"
