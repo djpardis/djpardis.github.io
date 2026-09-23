@@ -20,6 +20,21 @@ The default port is `4000`. To use another port, pass it as the first argument.
 ./scripts/serve.sh 4001
 ```
 
+## Publishing posts
+
+New posts should start in `_drafts/`. Files under `_posts/` are published by
+normal builds and enter the RSS feed.
+
+The local pre-commit hook runs `./scripts/check-publish-ready-posts.sh` and
+blocks newly staged `_posts/*.md` files unless their front matter contains this
+explicit marker.
+
+```yaml
+publish_ready: true
+```
+
+Use that marker only when the post is ready to publish. Drafts do not need it.
+
 ## Updating dependencies
 
 Site builds on Linux (GitHub Actions). After any `bundle update` or Gemfile change, run:
