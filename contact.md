@@ -122,6 +122,10 @@ description: Get in touch for collaborations, writing, research, speaking, or co
     <textarea id="contact-message" name="message" rows="5" required minlength="20" placeholder="Message (> 20 characters)"></textarea>
   </div>
 
+  {% if site.turnstile_site_key %}
+  <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}" data-action="contact"></div>
+  {% endif %}
+
   <div class="contact-form-actions">
     <button class="button" type="submit">Send <span class="contact-button-shortcut" aria-hidden="true"><span>⌘</span><span>↵</span></span></button>
   </div>
@@ -165,13 +169,18 @@ description: Get in touch for collaborations, writing, research, speaking, or co
           if (status) status.textContent = "Thank you, your message was sent.";
         } else {
           if (status) status.textContent = r.body.error || "Something went wrong. Please try again.";
+          if (window.turnstile) window.turnstile.reset();
         }
         if (button) button.disabled = false;
       })
       .catch(function () {
         if (status) status.textContent = "Could not reach the form service. Please try again.";
         if (button) button.disabled = false;
+        if (window.turnstile) window.turnstile.reset();
       });
   });
 })();
 </script>
+{% if site.turnstile_site_key %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{% endif %}
