@@ -3,7 +3,8 @@
 
   {% include head.html %}
 
-  <body>
+  <body id="top">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/toc.css?v={{ site.time | date: '%s' }}">
 
     {% include sidebar.html %}
 
@@ -68,8 +69,9 @@
     <!-- Reference back-links script -->
     <script src="{{ site.baseurl }}/public/js/ref-backlinks.js"></script>
     
+    <script src="{{ site.baseurl }}/public/js/toc-model.js?v={{ site.time | date: '%s' }}"></script>
     <!-- TOC collapse: era links navigate without toggling -->
-    <script src="{{ site.baseurl }}/public/js/toc-collapse.js"></script>
+    <script src="{{ site.baseurl }}/public/js/toc-collapse.js?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ site.baseurl }}/public/js/sortable-table.js"></script>
     <script src="{{ site.baseurl }}/public/js/card-carousel.js"></script>
     
@@ -77,6 +79,6 @@
     <script src="{{ site.baseurl }}/public/js/image-optimization.js"></script>
 
     <!-- Sticky right-hand TOC (self-guards: no-op on non-post pages) -->
-    <script src="{{ site.baseurl }}/public/js/sticky-toc.js"></script>
+    <script src="{{ site.baseurl }}/public/js/sticky-toc.js?v={{ site.time | date: '%s' }}"></script>
   </body>
 </html>

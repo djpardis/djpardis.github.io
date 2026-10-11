@@ -1,0 +1,42 @@
+.toc-container li.toc-era > .collapsible-section > summary {
+  position: relative;
+}
+
+.toc-container li.toc-era > .collapsible-section > summary::before {
+  content: ">";
+  color: #888;
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  margin-right: 0;
+}
+
+.toc-container li.toc-era > .collapsible-section[open] > summary::before {
+  content: "\2228";
+}
+
+#sticky-toc .sticky-toc-title {
+  color: #7d78b5;
+  cursor: pointer;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+  padding: 0.1rem 0.25rem;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+#sticky-toc .sticky-toc-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+#sticky-toc .sticky-toc-sub.open {
+  max-height: 60rem;
+}
