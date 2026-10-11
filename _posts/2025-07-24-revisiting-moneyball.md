@@ -49,6 +49,7 @@ Also on <a href="https://www.reddit.com/r/LiverpoolFC/comments/1m8s2ih/revisitin
   </details>
 </li>
 <li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
 
