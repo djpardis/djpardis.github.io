@@ -4,10 +4,10 @@ title: 'Startup advice'
 subtitle: 'Some lessons I learned while building General Folders'
 description: 'Sharing key lessons and insights gained from building General Folders'
 keywords: startup advice, General Folders, entrepreneurship, company building, lessons learned
-image: https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg
+image: /files/pics/blog/2024/startup-advice.jpeg
 ---
 
-![From my time at Techstars SDSU](https://cdn-images-1.medium.com/max/800/1*wlkXlVWb8r27CM6ih_EAog.jpeg)
+![From my time at Techstars SDSU](/files/pics/blog/2024/startup-advice.jpeg)
 *From my time at Techstars SDSU.*
 
 It's been quite the journey building [General Folders](https://generalfolders.com) so far. I learned things I wish I had known before starting the company. I also learned valuable lessons from past jobs that proved helpful in company building. Below is a list of these lessons. I hope that you find them useful on your journey!

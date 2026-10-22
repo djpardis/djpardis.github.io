@@ -26,7 +26,7 @@ canonical_url: https://djpardis.com/
     {% endcomment %}
     {% for repo in site.data.github_pinned_repos %}
     <a class="link-card link-card--github" href="{{ repo.url }}" target="_blank">
-      <div class="link-card-image" style="background-image: url('{{ repo.image }}')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}{{ repo.image }}')"></div>
       <div class="link-card-body">
         <span class="link-card-domain">{{ repo.language }}</span>
       </div>
@@ -59,14 +59,14 @@ canonical_url: https://djpardis.com/
 
   <div class="link-cards card-carousel">
     <a class="link-card" href="https://www.youtube.com/watch?v=UEofjLSMKrQ" target="_blank">
-      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/UEofjLSMKrQ/hqdefault.jpg')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/youtube/UEofjLSMKrQ.jpg')"></div>
       <div class="link-card-body">
         <span class="link-card-title">Pardis Noorzad of General Folders</span>
         <span class="link-card-domain">youtube.com</span>
       </div>
     </a>
     <a class="link-card" href="https://www.youtube.com/watch?v=Np0kTZlbRO4" target="_blank">
-      <div class="link-card-image" style="background-image: url('https://img.youtube.com/vi/Np0kTZlbRO4/hqdefault.jpg')"></div>
+      <div class="link-card-image" style="background-image: url('{{ site.baseurl }}/files/pics/pages/youtube/Np0kTZlbRO4.jpg')"></div>
       <div class="link-card-body">
         <span class="link-card-title">The state of cross-company data exchange</span>
         <span class="link-card-domain">youtube.com</span>
