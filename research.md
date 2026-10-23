@@ -178,7 +178,13 @@ sitemap: false
   [AUT](http://aut.ac.ir/aut/), Jul 17, 2012  
   🎞️ [slides](/files/slides/defense_slides.pdf)
 
-  *Abstract.* Master's thesis defense slides.
+  *Abstract.* This presentation studies sparse regression as a way to build
+  smaller classifiers without giving up accuracy. It compares SVMs with
+  $\ell_1$-regularized square loss, then extends the same sparse
+  approximation idea to local regression through SPARROW. The experiments show
+  that sparse square-loss classifiers can be compact and competitive, while the
+  regression results suggest that simpler nearest-neighbor methods are often
+  just as effective.
 
 - SPARROW: SPARse appROximation Weighted regression  
   [UdeM](http://www.iro.umontreal.ca/?lang=en), Mar 12, 2012 and [SUT](http://www.en.sharif.edu/), Feb 22, 2012  
@@ -226,9 +232,11 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Publications</h3></summary>
 
+<!--
 - Efficient classification based on sparse regression  
   MSc Thesis, Amirkabir University of Technology, Jul 2012  
   📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/Noorzad2012c.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
+-->
 
 - Regression with sparse approximations of data  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
