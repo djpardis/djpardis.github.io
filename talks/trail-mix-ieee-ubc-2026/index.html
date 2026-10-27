@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="trail mix: DSP analysis with a compact transformer key reranker"
+    />
+    <title>trail mix: DSP analysis with a compact transformer key reranker</title>
+    <link rel="icon" type="image/png" href="/talks/trail-mix-ieee-ubc-2026/assets/favicon-almond-CYwZmozJ.png" />
+    <script type="module" crossorigin src="/talks/trail-mix-ieee-ubc-2026/assets/index-CNHfdjY5.js"></script>
+    <link rel="stylesheet" crossorigin href="/talks/trail-mix-ieee-ubc-2026/assets/index-uOWRBruH.css">
+  </head>
+  <body>
+    <!-- Generated from deck.md by scripts/build-deck.mjs. Do not edit directly. -->
+    <a class="skip-link" href="#slides">Skip to slides</a>
+
+    <div class="reveal">
+      <div class="slides" id="slides">
+        <section class="title-slide" data-footer="false">
+<div class="title-layout">
+  <div class="title-copy">
+    <div class="title-rule" aria-hidden="true"></div>
+    <p class="eyebrow">IEEE Lunch & Learn<br />2026</p>
+    <h1>
+      <span>trail mix: DSP analysis</span>
+      <span>with a compact transformer key reranker</span>
+    </h1>
+    <div class="speaker-lockup">
+      <strong class="contact-name">Pardis Noorzad</strong>
+      <span class="contact-separator" aria-hidden="true">·</span>
+      <a class="contact-site" href="https://djpardis.com" target="_blank" rel="noopener noreferrer">djpardis.com</a>
+      <span class="contact-separator" aria-hidden="true">·</span>
+      <a class="contact-url" href="https://trailmix.tools" target="_blank" rel="noopener noreferrer">trailmix.tools</a>
+    </div>
+  </div>
+  <img
+    class="title-illustration"
+    src="/talks/trail-mix-ieee-ubc-2026/assets/trail-mix-abstract-DXi19OYa.png"
+    alt="Abstract illustration of nuts, seeds, dried fruit, and chocolate"
+  />
+</div>
+        <aside class="notes">
+          <h3>trail mix: DSP analysis with a compact transformer key reranker</h3>
+          <p>trail mix is a Rust toolkit for local tempo, beat, key, and waveform analysis of music files.</p>
+          <p>This version also covers the compact key reranker, which raises global-key accuracy while keeping the same local Rust analysis API.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Cueport</h2>
+        <p class="lead">Cueport is a multi-device workstation for DJs that can import Serato libraries or construct local libraries directly from audio files.</p>
+<div class="dj-photo-row" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px;" aria-label="Pardis Noorzad DJing">
+  <div style="aspect-ratio:4 / 3; overflow:hidden;"><img src="/talks/trail-mix-ieee-ubc-2026/assets/dj-solo-CX2mm8SH.png" alt="Pardis DJing with headphones and a laptop" style="object-position:50% 30%;" /></div>
+  <div style="aspect-ratio:4 / 3; border-radius:16px; overflow:hidden;"><img src="/talks/trail-mix-ieee-ubc-2026/assets/dj-new-parish-PzEwAb6N.png" alt="Pardis DJing a live set at The New Parish in Oakland" /></div>
+</div>
+        <aside class="notes">
+          <h3>Cueport</h3>
+          <p>Cueport starts from the way DJs already work. Music files and DJ metadata live on the gig laptop, and tools such as Serato are used both for live playback and set preparation.</p>
+          <p>That metadata includes crates, cue points, tags, notes, labels, tempo, key, and waveform data. Cueport lets DJs cache selected music and metadata on a phone so they can review and edit away from the laptop, including in places with weak internet such as a flight or a venue.</p>
+        </aside>
+        </section>
+
+        <section class="demo-video-slide" data-footer="false">
+<video class="demo-video" controls playsinline preload="auto">
+  <source src="/talks/trail-mix-ieee-ubc-2026/assets/cueport-demo-DBs3vpt0.mp4" type="video/mp4" />
+</video>
+        <aside class="notes">
+          <h3>Serato-backed Cueport demo</h3>
+          <p>Recorded walkthrough of Cueport using a Serato-backed library. This demo shows the original product loop: Cueport reads DJ metadata and analysis from the desktop library, gives the user a working copy, and keeps the reviewed writeback step on the desktop.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Local pairing</h2>
+        <p class="lead">The desktop and mobile applications exchange selected library data over a local network or hotspot after QR-based pairing. <br/>The QR code carries connection details; data moves both ways after pairing.</p>
+<div class="cueport-pairing" aria-label="Cueport local-first pairing over LAN or hotspot with bidirectional sync">
+  <div class="pairing-device pairing-desktop">
+    <strong>Desktop app</strong>
+    <span>canonical library</span>
+  </div>
+  <div class="pairing-center">
+    <div class="pairing-network">LAN or hotspot</div>
+    <div class="pairing-qr" aria-label="Pairing QR code">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="pairing-label">scan QR to pair</div>
+  </div>
+  <div class="pairing-device pairing-phone">
+    <strong>Phone app</strong>
+    <span>selected replica</span>
+  </div>
+  <div class="pairing-rail pairing-to-phone">
+    <span class="pairing-direction">→</span>
+    <strong>Desktop to phone</strong>
+    <span>selected crates, tracks, analysis, cues</span>
+  </div>
+  <div class="pairing-rail pairing-to-desktop">
+    <span class="pairing-direction">←</span>
+    <strong>Phone to desktop</strong>
+    <span>edits return for desktop review</span>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Local pairing</h3>
+          <p>Cueport copies selected music and associated metadata from a laptop to a phone over a local connection. The usual path is LAN transfer on a private Wi-Fi network. On public Wi-Fi, where client isolation may block device-to-device traffic, the user can pair through a hotspot instead.</p>
+          <p>The QR code carries the connection details so the phone knows which desktop library to pair with.</p>
+          <p>Edits can be made on the phone while away from the laptop. When the devices pair again, mobile edits sync back to the desktop app for review.</p>
+          <p>Pairing is bidirectional: desktop data can move to the phone, and reviewed phone edits can move back to the desktop library.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Serato integration</h2>
+        <p class="lead">Cueport v1 reads tempo, key, cues, and beat-grid metadata from an existing Serato library on disk. <br/> The desktop database imports audio and metadata from Serato. <br/> The mobile database is a cached replica.</p>
+<div class="cueport-workflow" aria-label="Cueport workflow between Serato, desktop, and mobile">
+  <div class="workflow-system workflow-serato">
+    <strong>Serato library</strong>
+    <span>source of truth</span>
+  </div>
+  <div class="workflow-system workflow-desktop">
+    <strong>Desktop SQLite</strong>
+    <span>canonical working copy</span>
+  </div>
+  <div class="workflow-system workflow-mobile">
+    <strong>Mobile SQLite</strong>
+    <span>cached replica</span>
+  </div>
+  <div class="workflow-rail workflow-import">
+    <span class="workflow-direction">→</span>
+    <strong>Import from Serato</strong>
+    <span>library metadata and existing analysis</span>
+  </div>
+  <div class="workflow-rail workflow-mobile-sync">
+    <span class="workflow-direction">→</span>
+    <strong>Sync to mobile</strong>
+    <span>selected library copy</span>
+  </div>
+  <div class="workflow-rail workflow-edit-return">
+    <span class="workflow-direction">←</span>
+    <strong>Mobile edits return</strong>
+    <span>reviewed on desktop before publishing</span>
+  </div>
+  <div class="workflow-rail workflow-writeback">
+    <span class="workflow-direction">←</span>
+    <strong>Write back to Serato</strong>
+    <span>restore point first, then approved library update</span>
+  </div>
+  <div class="workflow-gate">
+    <strong>One desktop review queue</strong>
+    <span>desktop edits enter directly; synced edits join the same queue</span>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Serato integration</h3>
+          <p>Cueport v1 uses Serato as the source of truth for music file analysis and DJ metadata. The desktop database is the canonical working copy, and the mobile database is a cached replica to work away from the laptop.</p>
+          <p>Desktop edits enter the review queue directly. Mobile edits sync back to desktop first, joining the same queue. Once approved the changes write back to Serato.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport Direct</div>
+        <h2>Cueport Direct</h2>
+        <p class="lead">Cueport Direct constructs a working music library from local folders without depending on an external DJ database.</p>
+<ul class="slide-body">
+  <li>Pick one or more local music folders</li>
+  <li>Cueport builds a <code>cueport-direct.db</code> working library</li>
+  <li>Browse, prep, play, and edit without a Serato library</li>
+  <li><strong>trail mix</strong> analyzes audio locally for BPM, key, beats, and waveforms</li>
+</ul>
+        <aside class="notes">
+          <h3>Cueport Direct</h3>
+          <p>Serato is still the first full integration, but Cueport Direct gives the app a path for people who do not have a Serato library. The user chooses one or more music folders. Cueport scans them into <code>cueport-direct.db</code>, stores collections, cues, notes, colors, restore points, and analysis there, and skips the Serato review and writeback flow because there is no external DJ library to publish into.</p>
+          <p>That is the product reason trail mix exists. If Cueport Direct imports folders directly from disk, it cannot import tempo, key, beat, and waveform analysis from Serato. It has to generate those values from the audio files themselves, locally and reproducibly.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">trail mix</div>
+        <h2>trail mix</h2>
+        <p class="lead">trail mix is a Rust toolkit that decodes audio into mono samples and runs three analyzers behind one versioned JSON output.</p>
+<img
+  class="slide-figure pipeline-figure"
+  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iMzgwIiB2aWV3Qm94PSIwIDAgOTAwIDM4MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJ0cmFpbCBtaXggY3JhdGUgYXJjaGl0ZWN0dXJlIj4KCiAgPGRlZnM+CiAgICA8bWFya2VyIGlkPSJhIiBtYXJrZXJXaWR0aD0iMTAiIG1hcmtlckhlaWdodD0iMTAiIHJlZlg9IjgiIHJlZlk9IjQiIG9yaWVudD0iYXV0byI+CiAgICAgIDxwYXRoIGQ9Ik0wLDAgTDgsNCBMMCw4IFoiIGZpbGw9IiM1YTQwM2EiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHJlY3QgeD0iMzAwIiB5PSIyNCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSI3NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utd2lkdGg9IjMuNSIvPgogIDx0ZXh0IHg9IjMyOCIgeT0iNTYiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBzeXN0ZW0tdWksIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiM1YTQwM2EiPkNhbGxlcjwvdGV4dD4KICA8dGV4dCB4PSIzMjgiIHk9IjgyIiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgc3lzdGVtLXVpLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNWE0MDNhIj5hcHAsIENMSSwgdGVzdCwgb3IgYmVuY2g8L3RleHQ+CgogIDx0ZXh0IHg9IjM4MCIgeT0iMTMwIiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgc3lzdGVtLXVpLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNWE0MDNhIj5BdWRpb0J1ZmZlciArIGNvbmZpZzwvdGV4dD4KICA8cGF0aCBkPSJNNDUwIDEwMCBMNDUwIDE1MiIgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYSkiLz4KCiAgPHJlY3QgeD0iMjYwIiB5PSIxNjIiIHdpZHRoPSIzODAiIGhlaWdodD0iNzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2EzM2Q1MiIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8dGV4dCB4PSIyODgiIHk9IjE5NiIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIHN5c3RlbS11aSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iI2EzM2Q1MiI+dHJhaWxtaXg6OmFuYWx5emU8L3RleHQ+CiAgPHRleHQgeD0iMjg4IiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBzeXN0ZW0tdWksIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1YTQwM2EiPmZhY2FkZSBtZXJnZXMgdGhyZWUgcmVzdWx0czwvdGV4dD4KCiAgPHBhdGggZD0iTTM0MCAyMzggTDE3MCAyOTAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTQ1MCAyMzggTDQ1MCAyOTAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTU2MCAyMzggTDczMCAyOTAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSIzIi8+CgogIDxyZWN0IHg9IjUwIiB5PSIyOTYiIHdpZHRoPSIyNDAiIGhlaWdodD0iNzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc2NWY3YiIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8dGV4dCB4PSI3OCIgeT0iMzI4IiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgc3lzdGVtLXVpLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjNzY1ZjdiIj5iZWF0LXNhbGFkPC90ZXh0PgogIDx0ZXh0IHg9Ijc4IiB5PSIzNTQiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBzeXN0ZW0tdWksIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1YTQwM2EiPnRlbXBvICsgZ3JpZDwvdGV4dD4KCiAgPHJlY3QgeD0iMzMwIiB5PSIyOTYiIHdpZHRoPSIyNDAiIGhlaWdodD0iNzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc2NWY3YiIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8dGV4dCB4PSIzNTgiIHk9IjMyOCIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIHN5c3RlbS11aSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzc2NWY3YiI+a2V5LWxpbWU8L3RleHQ+CiAgPHRleHQgeD0iMzU4IiB5PSIzNTQiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBzeXN0ZW0tdWksIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1YTQwM2EiPmtleSArIGNocm9tYTwvdGV4dD4KCiAgPHJlY3QgeD0iNjEwIiB5PSIyOTYiIHdpZHRoPSIyNDAiIGhlaWdodD0iNzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc2NWY3YiIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8dGV4dCB4PSI2MzgiIHk9IjMyOCIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIHN5c3RlbS11aSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzc2NWY3YiI+c2FtcGxlci1wbGF0dGVyPC90ZXh0PgogIDx0ZXh0IHg9IjYzOCIgeT0iMzU0IiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgc3lzdGVtLXVpLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNWE0MDNhIj53YXZlZm9ybSBjb2x1bW5zPC90ZXh0PgoKPC9zdmc+Cg=="
+  alt="trail mix facade calling beat-salad, key-lime, and sampler-platter crates"
+/>
+        <aside class="notes">
+          <h3>trail mix</h3>
+          <p>An audio file first goes through the codec layer, which decodes (MP3, FLAC, WAV, AIFF, or MP4) into mono samples and a sample rate. The audio is now numbers: one amplitude value after another. Mono means the left and right channels have been combined into one signal, and the sample rate tells the analyzers how much time each sample represents.</p>
+          <p>trail mix has three analyzers behind one compact local output contract. Give the names one beat here: beat salad, key lime, and sampler platter. The names are memorable, but they also map cleanly to the architecture. beat salad estimates tempo, beat positions, and local tempo sections. key lime estimates musical key from chroma, first with DSP template scoring and then with a compact reranker for the global key. sampler platter summarizes the waveform for display with min, max, and RMS columns.</p>
+          <p>key lime shows the main technical argument cleanly: pure DSP gives an interpretable local estimator, and a small transformer helps only where the DSP evidence is ambiguous.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Signal input and normalization</h2>
+        <p class="lead">Audio decoding normalizes supported file formats into a mono sample buffer and sample rate.</p>
+<ul class="slide-body">
+  <li><strong>Decoding</strong>: an audio file becomes evenly spaced amplitude values</li>
+  <li><strong>Downmixing</strong>: sample buffers combine into one mono signal</li>
+  <li><strong><code>f32</code></strong>: a 32-bit floating-point number for storing those amplitudes</li>
+  <li><strong><code>u32</code></strong>: a non-negative 32-bit integer for storing the sample rate</li>
+</ul>
+<div class="decode-flow" aria-label="Decode and downmix steps before analysis">
+  <div class="decode-input">
+    <div class="decode-label">Input file</div>
+    <div class="decode-formats">MP3 · FLAC · WAV · AIFF · MP4</div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-step decode-codec">
+    <div class="decode-label">Decode to samples</div>
+    <div class="decode-fields">
+      <span>left/right sample buffers</span>
+    </div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-step decode-downmix">
+    <div class="decode-label">Downmix</div>
+    <div class="decode-fields">
+      <span>(left + right) / 2</span>
+      <span>= one mono buffer</span>
+    </div>
+  </div>
+  <div class="decode-arrow">→</div>
+  <div class="decode-output">
+    <div class="decode-label">Analyzer input</div>
+    <div class="decode-fields">
+      <code>samples: &amp;[f32]</code>
+      <code>sample_rate: u32</code>
+    </div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Signal input and normalization</h3>
+          <p>Decoding turns an audio file such as MP3, FLAC, WAV, AIFF, or MP4 into evenly spaced amplitude values stored as sample buffers, usually one buffer for the left speaker and one buffer for the right speaker. The decoding layer then downmixes those buffers into one mono buffer. Downmixing combines the left and right samples at the same time position into one amplitude value, commonly by averaging them. After that step every format looks the same to the analyzers: samples and a sample rate. The core takes the buffer, not a file, so an app that already has playback samples can skip file decoding entirely.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">trail mix</div>
+        <h2>Why build a local analyzer?</h2>
+        <p class="lead">Cueport Direct imports ordinary folders on a user's machine. Analysis has to run in process, finish during library import, produce reproducible metadata, and avoid requiring a server.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>License</th>
+      <th>Integration issue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>stratum-dsp</strong></td>
+      <td>MIT OR Apache-2.0</td>
+      <td>closest Rust reference; reports global tempo and key, not the local sections Cueport needs</td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY</strong></td>
+      <td>MIT</td>
+      <td>accurate learned reference, but needs a model runtime rather than a small native Rust crate</td>
+    </tr>
+    <tr>
+      <td><strong>libKeyFinder</strong></td>
+      <td>GPL-3.0</td>
+      <td>license does not fit a permissive app integration</td>
+    </tr>
+    <tr>
+      <td><strong>Essentia</strong></td>
+      <td>AGPLv3 or paid</td>
+      <td>license cost and terms did not fit this product integration</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Why build a local analyzer?</h3>
+          <p>Cueport Direct imports ordinary folders on a user's machine. That means analysis has to run in process, finish during library import, produce reproducible metadata, and avoid requiring a server.</p>
+          <p>The existing tools are useful references, not mistakes to avoid. stratum-dsp is the closest Rust DSP reference, but it reports global tempo and key rather than the local sections Cueport needs. S-KEY is a strong learned reference, but it needs a model runtime. A model runtime means shipping an inference engine such as PyTorch or ONNX Runtime plus the model weights. That adds binary size, platform-specific packaging, and another dependency to validate. For Cueport, the preferred boundary is a small native Rust analyzer that runs inside the app process. libKeyFinder and Essentia both matter as baselines, but their license terms do not fit a permissive in-app integration here. The reason for trail mix is the combination of license fit, local Rust API, mid-track changes, and versioned output.</p>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Tempo estimator</div>
+    <h2>beat salad</h2>
+    <p class="project-tagline">Tempo and beat positions</p>
+  </div>
+  <img
+    src="/talks/trail-mix-ieee-ubc-2026/assets/beat-salad-abstract-BxL5Jnpm.png"
+    alt="Abstract illustration of beet salad ingredients"
+  />
+</div>
+        <aside class="notes">
+          <h3>beat salad</h3>
+          <p>beat salad is the tempo and beat estimation crate. It estimates one global tempo, a confidence score, regular beat positions, and windowed tempo segments from mono samples.</p>
+          <p>It is the most complex of the three analyzers in the current implementation. Multi-tempo tracks such as mashups and medleys are handled by the windowing covered later, in the beat-switch section.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Onset detection</h2>
+        <p class="lead">Onset detection measures frame-to-frame increases in band energy and uses peaks in the resulting onset-strength curve as beat candidates.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/onset-DChTd5FN.svg" alt="Audio on top with two loud bursts where new sounds start, and the onset-strength curve below spiking into a peak under each burst" />
+        <aside class="notes">
+          <h3>Onset detection</h3>
+          <p>An onset is where a new sound starts, like a drum hit or a plucked string, and it shows up as a sudden jump in energy. The audio is cut into short frames, and each frame measures how much energy increased since the frame before. Only increases count, because a sound getting louder is evidence for a new event while a sound fading out is not. Adding those increases gives one number per frame, the onset strength, and the sequence of those numbers is the onset-strength curve in the picture. Its peaks are candidate beats for tempo estimation and beat tracking. The implementation reads energy across 24 frequency bands spaced like musical pitch using Goertzel filters, and the summed positive changes are called spectral flux.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Onset detection formula</h2>
+        <p class="lead">Spectral flux turns band-energy rises into one onset-strength value per frame.</p>
+<p class="math-formula">
+  \[\operatorname{flux}(t) = \sum_{b=1}^{24} \max\!\bigl(0,\; E_b(t) - E_b(t-1)\bigr)\]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>E_b(t)</code></strong>: energy in band b at frame t</li>
+          <li><strong><code>max(0, change)</code></strong>: count rises and ignore decays</li>
+          <li><strong><code>sum over b</code></strong>: combine all 24 band changes into the onset-strength curve</li>
+        </ul>
+        <aside class="notes">
+          <h3>Onset detection formula</h3>
+          <p>This is the formula behind the onset slide. The audio is cut into short frames, and each frame reads energy across 24 frequency bands. For each band we keep only the positive rise since the previous frame. That means a sound growing louder counts as a new event, while a sound fading out does not. Summing across bands gives one onset-strength value per frame, and the peaks in that sequence become beat candidates.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Tempo estimation</h2>
+        <p class="lead">Tempo estimation finds the repeated spacing between onset peaks and converts that spacing into BPM. Beat tracking is the next step.</p>
+        <img class="slide-figure large-figure" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDQ3MCIgcm9sZT0iaW1nIgogIGFyaWEtbGFiZWw9IkEgY3VydmUgc2hvd2luZyBob3cgc3Ryb25nbHkgdGhlIG9uc2V0cyByZXBlYXQgYXQgZWFjaCBjYW5kaWRhdGUgdGVtcG8uIEl0IGhhcyB0aHJlZSBwZWFrcyBvZiBzaW1pbGFyIGhlaWdodCBhdCBoYWxmIHRpbWUsIHRoZSB0cnVlIHB1bHNlLCBhbmQgZG91YmxlIHRpbWUsIHdoaWNoIGFyZSB0aGUgc2FtZSBwdWxzZSBjb3VudGVkIGRpZmZlcmVudGx5LiBBIGRhc2hlZCBiZWxsIGN1cnZlIG92ZXJsYWlkIG9uIHRoZSBtaWRkbGUgb2YgdGhlIHRlbXBvIHJhbmdlIGFjdHMgYXMgYSBzb2Z0IHByZWZlcmVuY2UgZm9yIG1pZC1yYW5nZSB0ZW1wb3MsIGFuZCBhIGdyZWVuIGRvdCBtYXJrcyB0aGUgdHJ1ZSBwdWxzZSBhcyB0aGUgdGVtcG8gcGlja2VkIGFmdGVyIHRoYXQgcHJlZmVyZW5jZSBicmVha3MgdGhlIHRpZS4iPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0idG1wLWVuZCIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiM1YTQwM2EiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHN0eWxlPgogICAgI3RtcCB0ZXh0IHsgZm9udC1mYW1pbHk6IHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgIlNlZ29lIFVJIiwgc2Fucy1zZXJpZjsgZmlsbDogIzVhNDAzYTsgfQogICAgLnRtcC1sYWJlbCB7IGZvbnQtc2l6ZTogMjBweDsgfQogICAgLnRtcC1zbWFsbCB7IGZvbnQtc2l6ZTogMTdweDsgZmlsbDogIzc2NWY1NzsgfQogICAgLnRtcC1heGlzICB7IGZvbnQtc2l6ZTogMTdweDsgZmlsbDogIzc2NWY1NzsgfQogICAgLnRtcC1waWNrICB7IGZvbnQtc2l6ZTogMThweDsgZmlsbDogIzJmN2Q0ZjsgfQogIDwvc3R5bGU+CgogIDxnIGlkPSJ0bXAiPgogICAgPCEtLSBhdXRvY29ycmVsYXRpb24gY3VydmU6IG1hdGNoIHN0cmVuZ3RoIHZzIGNhbmRpZGF0ZSB0ZW1wbyAtLT4KICAgIDxwYXRoIGQ9Ik04MCwzNDAgTDgwLDMzOCBMMTEwLDMzNCBMMTQ2LDE1MCBMMTg1LDMwMCBMMjUwLDMyOCBMMzAwLDMwMCBMMzQ1LDE0OCBMMzk1LDMwMCBMNDYwLDMyNiBMNTYwLDMzMCBMNjYwLDMwNSBMNzQxLDE1NiBMODAwLDMwNSBMODgwLDMzMCBMOTQwLDMzNSBMOTQwLDM0MCBaIgogICAgICBmaWxsPSIjZjNkZGUxIiBmaWxsLW9wYWNpdHk9IjAuNzUiLz4KICAgIDxwYXRoIGQ9Ik04MCwzMzggTDExMCwzMzQgTDE0NiwxNTAgTDE4NSwzMDAgTDI1MCwzMjggTDMwMCwzMDAgTDM0NSwxNDggTDM5NSwzMDAgTDQ2MCwzMjYgTDU2MCwzMzAgTDY2MCwzMDUgTDc0MSwxNTYgTDgwMCwzMDUgTDg4MCwzMzAgTDk0MCwzMzUiCiAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2EzM2Q1MiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KCiAgICA8IS0tIHByaW9yIGJlbGwgb3ZlciB0aGUgbWlkZGxlIG9mIHRoZSB0ZW1wbyByYW5nZSAtLT4KICAgIDxwYXRoIGQ9Ik0xODUsMzM2IEwyNTAsMzAwIEwzMDAsMjMwIEwzNDUsMTIwIEwzOTUsMjMwIEw0NTAsMzAwIEw1MTUsMzM2IgogICAgICBmaWxsPSJub25lIiBzdHJva2U9IiMyZjZkYTMiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtZGFzaGFycmF5PSI3IDYiIHN0cm9rZS1vcGFjaXR5PSIwLjkiLz4KCiAgICA8IS0tIGF4aXMgLS0+CiAgICA8bGluZSB4MT0iNzAiIHkxPSIzNDAiIHgyPSI5NTUiIHkyPSIzNDAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLW9wYWNpdHk9IjAuNDUiIHN0cm9rZS13aWR0aD0iMS41IiBtYXJrZXItZW5kPSJ1cmwoI3RtcC1lbmQpIi8+CiAgICA8dGV4dCBjbGFzcz0idG1wLWF4aXMiIHg9IjgwMCIgeT0iMzkyIj5jYW5kaWRhdGUgdGVtcG88L3RleHQ+CiAgICA8dGV4dCBjbGFzcz0idG1wLWF4aXMiIHg9IjM0IiB5PSIyNDUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAzNCAyNDUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5tYXRjaCBzdHJlbmd0aDwvdGV4dD4KCiAgICA8IS0tIHRlbXBvIHRpY2tzIC0tPgogICAgPGcgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utb3BhY2l0eT0iMC40NSIgc3Ryb2tlLXdpZHRoPSIxLjUiPgogICAgICA8bGluZSB4MT0iMTQ2IiB5MT0iMzQwIiB4Mj0iMTQ2IiB5Mj0iMzQ4Ii8+CiAgICAgIDxsaW5lIHgxPSIzNDUiIHkxPSIzNDAiIHgyPSIzNDUiIHkyPSIzNDgiLz4KICAgICAgPGxpbmUgeDE9Ijc0MSIgeTE9IjM0MCIgeDI9Ijc0MSIgeTI9IjM0OCIvPgogICAgPC9nPgogICAgPGcgY2xhc3M9InRtcC1heGlzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4KICAgICAgPHRleHQgeD0iMTQ2IiB5PSIzNjYiPmhhbGYgdGltZTwvdGV4dD4KICAgICAgPHRleHQgeD0iMzQ1IiB5PSIzNjYiPnRydWUgcHVsc2U8L3RleHQ+CiAgICAgIDx0ZXh0IHg9Ijc0MSIgeT0iMzY2Ij5kb3VibGUgdGltZTwvdGV4dD4KICAgIDwvZz4KCiAgICA8IS0tIGNob3NlbiB0ZW1wbyAtLT4KICAgIDxjaXJjbGUgY3g9IjM0NSIgY3k9IjE0OCIgcj0iOSIgZmlsbD0iIzJmN2Q0ZiIgc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgICA8IS0tIGNhbGxvdXQ6IG9jdGF2ZSBmYW1pbHkgLS0+CiAgICA8dGV4dCBjbGFzcz0idG1wLXNtYWxsIiB4PSI3MCIgeT0iMTE4Ij5TYW1lIHB1bHNlIHBlYWtzIGF0IGhhbGYsIHRydWUsIGFuZCBkb3VibGUgdGltZTwvdGV4dD4KICAgIDxsaW5lIHgxPSIxNTAiIHkxPSIxMjYiIHgyPSIxNDYiIHkyPSIxNDQiIHN0cm9rZT0iIzc2NWY1NyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CgogICAgPCEtLSBjYWxsb3V0OiBwcmlvciAtLT4KICAgIDx0ZXh0IGNsYXNzPSJ0bXAtc21hbGwiIHg9IjQ3MCIgeT0iMTUwIj5Tb2Z0IHByZWZlcmVuY2UgZm9yIG1pZC1yYW5nZSB0ZW1wb3M8L3RleHQ+CiAgICA8bGluZSB4MT0iNDY0IiB5MT0iMTQ1IiB4Mj0iMzYwIiB5Mj0iMTI0IiBzdHJva2U9IiM3NjVmNTciIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIvPgoKICAgIDwhLS0gcGljayBsYWJlbCAtLT4KICAgIDx0ZXh0IGNsYXNzPSJ0bXAtcGljayIgeD0iMzQ1IiB5PSI5NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cGlja2VkOiB0cnVlIHB1bHNlPC90ZXh0PgogICAgPGxpbmUgeDE9IjM0NSIgeTE9IjEwNCIgeDI9IjM0NSIgeTI9IjEzOSIgc3Ryb2tlPSIjMmY3ZDRmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="Match-strength curve with three equal peaks at half time, the true pulse, and double time, a dashed preference bell over the middle of the tempo range, and the true pulse chosen" />
+        <aside class="notes">
+          <h3>Tempo estimation</h3>
+          <p>Global tempo is chosen by scoring candidate beat periods over the whole onset-strength curve. This does not require exact beat timestamps yet; it only needs evidence that onsets repeat at a regular interval. The intervals are measured between onset peaks, which are candidate musical events, not confirmed beats. The implementation combines two measures: an inter-onset interval histogram, which measures distances between onset peaks, and normalized autocorrelation, which measures how well the onset-strength curve aligns with itself at a lag. Candidates in the same half-time and double-time family are grouped so related tempos reinforce one reading, then a prior reduces common half-time and double-time errors. The highest-scoring period sets global_bpm, and beat tracking uses that estimate on the next slide.</p>
+          <p>tempo_segments are separate from global_bpm. They are produced by running the same tempo estimator in rolling windows, 12 seconds wide with a 6-second hop, then grouping adjacent windows when the local BPM changes enough to matter.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat tracking with dynamic programming (DP)</h2>
+        <p class="lead">Tempo gives the beat spacing. DP chooses the beat grid offset, skips loud off-beat peaks, and keeps the grid regular when a beat is weak.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/beat-dp-Dn0SaX97.svg" alt="Onset-strength curve with regular beat intervals: dots sit on strong peaks, one beat is kept on a weak spot for timing, and an off-beat peak is skipped" />
+        <aside class="notes">
+          <h3>Beat tracking with dynamic programming (DP)</h3>
+          <p>Beat tracking uses the estimated BPM to place the actual beat timestamps. Tempo estimation gives BPM, but it does not choose the beat grid offset, that is where those beats start. DP helps choose which grid is most plausible across the whole track. It can keep the sequence regular when one beat is weak or missing, and it can skip a loud off-beat onset.</p>
+          <p>If the tempo is 120 BPM, the beat interval is about half a second, but many half-second grids could fit the same track. A greedy method can pick a loud off-beat peak and shift the rest of the grid. DP scores the full sequence at once: it rewards strong onset evidence, rewards intervals close to the tempo, and chooses the best global sequence rather than making one local decision at a time.</p>
+          <p>Ellis 2007 dynamic programming solves that as one sequence-scoring problem over the whole track. The next slide opens that objective so students can see where the regular beat grid comes from.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat tracking optimization</h2>
+        <p class="lead">DP chooses the beat sequence with the best total score: strong onset peaks plus regular spacing near the estimated BPM.</p>
+<p class="math-formula">
+  \[
+  \hat{b}_{1:m}=\arg\max_{b_{1:m}}
+  \left[
+    \sum_t O(b_t)
+    + \lambda\sum_{t>1} R(b_t-b_{t-1}, P)
+  \right]
+  \]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>b_t</code></strong>: candidate beat time t</li>
+          <li><strong><code>O(b_t)</code></strong>: onset strength at that beat time</li>
+          <li><strong><code>P</code></strong>: target beat spacing from the estimated BPM</li>
+          <li><strong><code>R(gap, P)</code></strong>: spacing reward; highest when the gap is close to P</li>
+          <li><strong>DP job</strong>: find the full beat sequence with the highest total score</li>
+        </ul>
+        <aside class="notes">
+          <h3>Beat tracking optimization</h3>
+          <p>This is the simplified objective behind the beat-tracking picture. The algorithm is choosing the whole beat sequence, not one beat at a time. The first term rewards beats that land on strong onset peaks. The second term rewards gaps between beats that are close to the period P implied by the estimated BPM.</p>
+          <p>The dynamic-programming implementation computes this efficiently by looking backward from each possible beat time to likely previous beat times. It gets a high reward when the gap is close to P, and a lower reward when the gap is early or late. The implementation searches only gaps within about plus or minus 25 percent of P. Solving this forward over the whole onset curve gives the best-scoring beat sequence.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat switches</h2>
+        <p class="lead">beat salad reports a dominant BPM and an alternate tempo when a secondary tempo covers at least 25% of the track.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it contains</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>global_bpm</code></strong></td>
+      <td>Dominant tempo for the whole file</td>
+      <td>120 BPM</td>
+    </tr>
+    <tr>
+      <td><strong><code>multi_tempo</code></strong></td>
+      <td>Boolean: another tempo covers at least 25%</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td><strong><code>alternate_bpm</code></strong></td>
+      <td>Secondary tempo + coverage fraction</td>
+      <td>90 BPM, 45%</td>
+    </tr>
+    <tr>
+      <td><strong><code>tempo_segments</code></strong></td>
+      <td>Timeline of local BPM ranges</td>
+      <td>120 BPM, then 90 BPM</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Beat switches</h3>
+          <p>beat salad handles a beat switch by comparing local tempo estimates against the dominant global BPM.</p>
+          <ul>
+            <li>global_bpm is the dominant tempo for the whole track.</li>
+            <li>multi_tempo is true when another tempo covers at least 25 percent of the track.</li>
+            <li>alternate_bpm reports that secondary tempo and its coverage fraction.</li>
+            <li>tempo_segments come from rolling-window tempo estimation and list the time ranges where each local BPM applies.</li>
+          </ul>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Beat-switch decision rule</h2>
+        <p class="lead">Multi-tempo detection reruns tempo estimation in rolling windows and reports a secondary tempo only when it covers enough of the track.</p>
+<p class="math-formula">
+  \[
+  \begin{aligned}
+  \widehat{b}_w &= \operatorname{tempo}(w) \\
+  b_r &= \operatorname*{mode}_{w \in r}\,\widehat{b}_w \\
+  q_r &= \frac{\operatorname{duration}(r)}{\operatorname{duration}(\mathrm{track})}
+  \end{aligned}
+  \]
+</p>
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>w</code></strong>: a 12-second analysis window, advanced every 6 seconds</li>
+          <li><strong><code>r</code></strong>: a contiguous run made by grouping neighboring windows whose local BPM estimates agree</li>
+          <li><strong><code>b_r</code></strong>: representative BPM for that run of windows</li>
+          <li><strong>Decision rule</strong>: report <code>multi_tempo</code> when \(|b_r - b_{\mathrm{global}}| > \delta\) and \(q_r \ge 0.25\)</li>
+        </ul>
+        <aside class="notes">
+          <h3>Beat-switch decision rule</h3>
+          <p>This formula describes the beat-switch detector rather than a new model. beat salad reruns tempo estimation in overlapping windows. Each window receives a local BPM estimate. The detector then walks along the track and groups neighboring windows into a run r when their local BPM estimates agree closely enough to represent the same local tempo. If the next window moves to a different local BPM, the current run ends and a new run starts.</p>
+          <p>The formula names the local tempo for each window, the representative tempo for a run of similar windows, and the fraction of the track covered by that run. A region becomes the alternate tempo only when it differs enough from the global BPM and covers at least a quarter of the track. That threshold prevents a short noisy section from turning into a multi-tempo result. In the demo, the 90 BPM half passes that coverage rule.</p>
+        </aside>
+        </section>
+
+        <section class="demo-slide">
+<div class="section-marker">Multi-tempo</div>
+<h2>Beat-switch demo</h2>
+<p class="lead">
+  A 60-second demo: 120 BPM for the first half, then 90 BPM. The output below is beat salad's result.
+</p>
+<div class="demo-panel">
+  <canvas
+    id="tempo-waveform"
+    width="1320"
+    height="220"
+    aria-label="Waveform with a tempo boundary at thirty seconds"
+  ></canvas>
+  <div class="segment-labels">
+    <div><strong>120 BPM</strong><span>0:00-0:30</span></div>
+    <div><strong>90 BPM</strong><span>0:30-1:00</span></div>
+  </div>
+  <div class="demo-controls">
+    <button id="play-demo" type="button" aria-label="Play or pause the tempo track">
+      Play track
+    </button>
+    <button id="reset-demo" type="button">Reset</button>
+    <output id="demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="tempo-audio" preload="auto">
+    <source src="/talks/trail-mix-ieee-ubc-2026/assets/two-tempo.wav-C1YEiL88.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">global_bpm</span><span class="beat-output-val">120.08</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">multi_tempo</span><span class="beat-output-val">true</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">alternate_bpm</span><span class="beat-output-val">90.03</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">switch detected</span><span class="beat-output-val">~33 s</span></div>
+</div>
+        <aside class="notes">
+          <h3>Beat-switch demo</h3>
+          <p>The track is a 60-second demo built at 120 BPM for the first half and 90 BPM for the second. It is the same file that produced the numbers on the slide.</p>
+          <ul>
+            <li>beat salad recovers both speeds within about a tenth of a BPM.</li>
+            <li>multi_tempo is true because the second tempo covers 45 percent of the file.</li>
+            <li>alternate_bpm reports the second tempo at 90 BPM.</li>
+            <li>tempo_segments lists the detected local tempo ranges. The split lands near 33 seconds against a true 30 because the detector scores 12-second windows every 6 seconds.</li>
+          </ul>
+          <p>The windowed detector needs at least a window plus a hop of audio, about 18 seconds, before it can report a second tempo. Below that it returns a single global tempo.</p>
+        </aside>
+        </section>
+
+        <section class="pipeline-slide">
+        <h2>beat salad pipeline</h2>
+        <p class="lead">beat salad turns samples into onset evidence, estimates tempo, places beats, and checks for local tempo changes.</p>
+<div class="beat-pipeline-map" aria-label="beat salad pipeline">
+  <div class="beat-pipeline-card beat-pipeline-input">
+    <strong>Samples</strong>
+    <span>mono audio values</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Onset detection</strong>
+    <span>energy rises</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Tempo estimation</strong>
+    <span>periodicity score</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Beat tracking</strong>
+    <span>beat timestamps</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-stage">
+    <strong>Beat-switch detection</strong>
+    <span>local tempo runs</span>
+  </div>
+  <div class="beat-pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="beat-pipeline-card beat-pipeline-output">
+    <strong>BeatAnalysis</strong>
+    <span><code>global_bpm</code></span>
+    <span><code>beats</code></span>
+    <span><code>multi_tempo</code></span>
+    <span><code>alternate_bpm</code></span>
+    <span><code>tempo_segments</code></span>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>beat salad pipeline</h3>
+          <p>This slide puts the beat salad method back together after the individual method slides. The samples become an onset-strength curve. Tempo estimation picks the main beat period from repeated peaks in that curve. Beat tracking then uses dynamic programming to turn that period into timestamped beats. Beat-switch detection reruns tempo estimation in rolling windows, groups local BPM runs, and reports multi_tempo, alternate_bpm, and tempo_segments when a secondary tempo covers enough of the track.</p>
+          <p>The output is a BeatAnalysis. global_bpm is the dominant tempo for the whole file. beats are the timestamped beat positions. tempo_segments are detected by rerunning tempo estimation in rolling windows and grouping local BPM ranges when the track has a meaningful tempo change.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Tempo evaluation metrics</h2>
+        <p class="lead">Tempo uses Acc1 and Acc2. The next slide reports both on GiantSteps Tempo.</p>
+<div class="vocab-grid">
+  <div class="vocab-card vocab-tempo">
+    <div class="vocab-term">Acc1</div>
+    <div class="vocab-def">Global BPM is correct when it is within 4% of the reference tempo.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Acc2</div>
+    <div class="vocab-def">Also counts half-time and double-time as correct, because they represent the same pulse counted differently.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Tempo evaluation metrics</h3>
+          <p>Define these metrics before the tempo evidence. Accuracy1 counts a BPM estimate as correct when it is within four percent of the reference. Accuracy2 also counts half-time and double-time as correct, because 70 and 140 BPM can describe the same pulse at different metrical levels. The next slide reports only Acc1 and Acc2.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Tempo diagnostic results</h2>
+        <p class="lead">On GiantSteps Tempo, beat salad leads the DSP systems on exact-tempo Acc1 and trails stratum-dsp by 0.02 on Acc2, which accepts half-time and double-time matches. Beat This learns beat activations instead of using a fixed spectral-flux onset curve.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Class</th>
+      <th>Acc1</th>
+      <th>Acc2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="result-good">
+      <td><strong>beat salad</strong></td>
+      <td>DSP</td>
+      <td>0.68</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <td>stratum-dsp</td>
+      <td>DSP</td>
+      <td>0.60</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <td>Essentia</td>
+      <td>DSP</td>
+      <td>0.61</td>
+      <td>0.80</td>
+    </tr>
+    <tr>
+      <td>librosa</td>
+      <td>DSP</td>
+      <td>0.37</td>
+      <td>0.52</td>
+    </tr>
+    <tr>
+      <td>Beat This</td>
+      <td>Learned</td>
+      <td><strong>0.86</strong></td>
+      <td><strong>0.94</strong></td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Tempo diagnostic results</h3>
+          <p>This slide reports the tempo numbers because the metrics slide should lead to evidence, but the evidence boundary has to be explicit. GiantSteps Tempo was used during development, so these numbers are useful for comparing behavior against known systems on the same corpus, but they are not the final generalization claim.</p>
+          <p>beat salad scores 0.68 Acc1 and 0.83 Acc2. It is the best DSP system on Acc1, while stratum-dsp is the best DSP system on Acc2. Beat This uses a trained model to predict beat activations instead of using a fixed spectral-flux onset curve, and it is higher on both metrics. That is useful diagnostic context, but it is not enough for a paper claim. The next benchmark step is to run the same systems on additional tempo corpora with the same metric code, preprocessing, and failure accounting.</p>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Waveform summarizer</div>
+    <h2>sampler platter</h2>
+    <p class="project-tagline">Compact waveform overview</p>
+  </div>
+  <img
+    src="/talks/trail-mix-ieee-ubc-2026/assets/sampler-platter-abstract-H8IflbFg.png"
+    alt="Abstract illustration of a sampler platter"
+  />
+</div>
+        <aside class="notes">
+          <h3>sampler platter</h3>
+          <p>sampler platter bins mono samples into up to 1,500 columns, each summarized by minimum, maximum, and RMS, producing a Serato-compatible column layout for a waveform lane. The output is a WaveformOverview.</p>
+          <p>This analyzer is simpler than beat and key estimation: it summarizes the signal for display rather than inferring a musical label.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">sampler platter</div>
+        <h2>Waveform summarization</h2>
+        <img class="slide-figure" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iMjcyIiB2aWV3Qm94PSIwIDAgOTAwIDI3MiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJXYXZlZm9ybSBzdW1tYXJpemF0aW9uIGZyb20gZGVjb2RlZCBzYW1wbGVzIHRvIGFwcC1zdHlsZSBjb2xvcmVkIGRpc3BsYXkgY29sdW1ucy4gQSBoaWdobGlnaHRlZCBzYW1wbGUgYnVja2V0IGlzIHN1bW1hcml6ZWQgYnkgbWluLCBtYXgsIGFuZCBSTVMsIHRoZW4gcmVuZGVyZWQgYXMgYSBjb21wYWN0IGNvbG9yZWQgd2F2ZWZvcm0gYmFyLiI+CiAgPGRlZnM+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wLDAgTDgsNCBMMCw4IFoiIGZpbGw9IiM1YTQwM2EiLz48L21hcmtlcj4KICA8L2RlZnM+CiAgPHN0eWxlPgogICAgdGV4dCB7IGZvbnQtZmFtaWx5OiBTcGFjZSBHcm90ZXNrLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7IGZpbGw6ICM1YTQwM2E7IH0KICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMThweDsgZm9udC13ZWlnaHQ6IDcwMDsgfQogICAgLnNtYWxsIHsgZm9udC1zaXplOiAxNHB4OyBmaWxsOiAjNzY1ZjU3OyB9CiAgICAuZm9ybXVsYSB7IGZvbnQtc2l6ZTogMTZweDsgZm9udC13ZWlnaHQ6IDYwMDsgfQogIDwvc3R5bGU+CgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iMzgiIHk9IjM0Ij5kZWNvZGVkIHNhbXBsZXM8L3RleHQ+CgogIDxyZWN0IHg9IjE4OCIgeT0iODIiIHdpZHRoPSI1OCIgaGVpZ2h0PSIxMTYiIHJ4PSI4IiBmaWxsPSIjZjNkZGUxIiBvcGFjaXR5PSIwLjc1Ii8+CiAgPGxpbmUgeDE9IjM4IiB5MT0iMTQwIiB4Mj0iMzgyIiB5Mj0iMTQwIiBzdHJva2U9IiMyZjZkYTMiIHN0cm9rZS1vcGFjaXR5PSIwLjI1IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxwYXRoIGQ9Ik00MiwxNjEuMCBMNDYsMTM0LjQgTDUwLDExOS40IEw1NCwxMzIuMiBMNTgsMTQ3LjIgTDYyLDE2OC4zIEw2NiwxMjQuOSBMNzAsMTI4LjQgTDc0LDE0Mi4yIEw3OCwxNjEuOSBMODIsMTU2LjAgTDg2LDEwMi40IEw5MCwxMjcuMSBMOTQsMTQxLjQgTDk4LDE2OC4xIEwxMDIsMTQxLjUgTDEwNiwxMTEuNiBMMTEwLDE0OC4xIEwxMTQsMTU0LjMgTDExOCwxNjYuOSBMMTIyLDExNi40IEwxMjYsMTExLjAgTDEzMCwxNDYuNiBMMTM0LDE1My41IEwxMzgsMTU4LjIgTDE0MiwxMDUuMSBMMTQ2LDEzNi4xIEwxNTAsMTY0LjYgTDE1NCwxNjUuOSBMMTU4LDE0MS4wIEwxNjIsODkuMCBMMTY2LDE0NC4zIEwxNzAsMTU0LjggTDE3NCwxNTcuMSBMMTc4LDExOS43IEwxODIsMTA5LjEgTDE4NiwxNzAuOCBMMTkwLDE2MC45IEwxOTQsMTUzLjEgTDE5OCwxMDkuMSBMMjAyLDEyNS43IEwyMDYsMTU5LjMgTDIxMCwxNDMuOSBMMjE0LDEzNy41IEwyMTgsMTE1LjAgTDIyMiwxNDguNSBMMjI2LDE2MC4wIEwyMzAsMTQ1LjYgTDIzNCwxMzMuMCBMMjM4LDExOS44IEwyNDIsMTU0LjggTDI0NiwxNDcuOCBMMjUwLDEzNS40IEwyNTQsMTIxLjAgTDI1OCwxMjkuNiBMMjYyLDE3MS42IEwyNjYsMTQ4LjMgTDI3MCwxMzcuMiBMMjc0LDExNy40IEwyNzgsMTQzLjggTDI4MiwxNjUuNiBMMjg2LDEyOS40IEwyOTAsMTI1LjAgTDI5NCwxMTcuMyBMMjk4LDE2Mi44IEwzMDIsMTYyLjIgTDMwNiwxMzIuMCBMMzEwLDEyOS42IEwzMTQsMTI5LjkgTDMxOCwxNzAuMyBMMzIyLDE0MC4xIEwzMjYsMTE4LjMgTDMzMCwxMTkuNyBMMzM0LDE0Mi4wIEwzMzgsMTgxLjEgTDM0MiwxMzEuMSBMMzQ2LDEyNi4zIEwzNTAsMTI4LjIgTDM1NCwxNjYuMCBMMzU4LDE3MC4zIEwzNjIsMTAyLjAgTDM2NiwxMTYuMyBMMzcwLDEyNi45IiBmaWxsPSJub25lIiBzdHJva2U9IiMyZjZkYTMiIHN0cm9rZS13aWR0aD0iMi4xIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHRleHQgY2xhc3M9InNtYWxsIiB4PSIxOTEiIHk9IjIxNCI+b25lIGJ1Y2tldDwvdGV4dD4KCiAgPHBhdGggZD0iTTQwNSAxNDAgTDQ4NSAxNDAiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSIzLjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNTE1IiB5PSIzNCI+YXBwLXN0eWxlIGRpc3BsYXkgY29sdW1uczwvdGV4dD4KICA8bGluZSB4MT0iNTMwIiB5MT0iMjA2IiB4Mj0iODU4IiB5Mj0iMjA2IiBzdHJva2U9IiNkMmMyYWUiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjU0OCIgeTE9IjE0MCIgeDI9IjU0OCIgeTI9IjIwNiIgc3Ryb2tlPSIjZmY4YTFjIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI1NzIiIHkxPSIxMjYiIHgyPSI1NzIiIHkyPSIyMDYiIHN0cm9rZT0iI2ZmYzQwMCIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNTk2IiB5MT0iOTAiIHgyPSI1OTYiIHkyPSIyMDYiIHN0cm9rZT0iIzJmYzdmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjIwIiB5MT0iOTQiIHgyPSI2MjAiIHkyPSIyMDYiIHN0cm9rZT0iIzM3YzlmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjQ0IiB5MT0iODYiIHgyPSI2NDQiIHkyPSIyMDYiIHN0cm9rZT0iIzM3YzlmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjY4IiB5MT0iOTIiIHgyPSI2NjgiIHkyPSIyMDYiIHN0cm9rZT0iIzM3YzlmZiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjkyIiB5MT0iMTE4IiB4Mj0iNjkyIiB5Mj0iMjA2IiBzdHJva2U9IiNmZjVhMWYiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjcxNiIgeTE9IjcyIiB4Mj0iNzE2IiB5Mj0iMjA2IiBzdHJva2U9IiM4NWY1MmYiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0MCIgeTE9IjgwIiB4Mj0iNzQwIiB5Mj0iMjA2IiBzdHJva2U9IiM1NGU4M2EiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc2NCIgeTE9IjEwMCIgeDI9Ijc2NCIgeTI9IjIwNiIgc3Ryb2tlPSIjZmY4YTFjIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI3ODgiIHkxPSIxMjIiIHgyPSI3ODgiIHkyPSIyMDYiIHN0cm9rZT0iI2ZmYzQwMCIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iODEyIiB5MT0iMTEyIiB4Mj0iODEyIiB5Mj0iMjA2IiBzdHJva2U9IiNmZjhhMWMiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjgzNiIgeTE9IjEwNiIgeDI9IjgzNiIgeTI9IjIwNiIgc3Ryb2tlPSIjZmY4YTFjIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Decoded samples reduced to display columns, each storing min, max, and RMS" />
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 1.25rem;font-size:1.12em;line-height:1.36;margin-top:0.8rem">
+  <div>
+    <div><strong>Column</strong>: one display column contains samples x_1...x_n.</div>
+    <div><strong>Min</strong>: min = min(x_i), the lowest sample.</div>
+    <div><strong>Max</strong>: max = max(x_i), the highest sample.</div>
+    <div><strong>RMS</strong>: RMS = sqrt((x_1^2 + ... + x_n^2) / n), average energy.</div>
+  </div>
+  <div>
+    <div><strong>Peak</strong>: peak = max(|min|, |max|), the largest absolute sample.</div>
+    <div><strong>Drawn height</strong>: r = sqrt(peak * RMS); h is the final bar height after the app rescales r.</div>
+    <div><strong>Band</strong>: b = 1...8 names the frequency band; E_b is energy in band b.</div>
+    <div><strong>Band scale</strong>: p_b = (b - 1) / 7, so p_b runs from 0 for the lowest band to 1 for the highest.</div>
+    <div><strong>Color</strong>: c = sum_b(p_b E_b) / sum_b(E_b), then hue = 10 + 200c.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Waveform summarization</h3>
+          <p>Each display column keeps a small summary rather than the original audio. Start with one display column that contains samples x_1 through x_n. The stored shape values are min = min(x_i) and max = max(x_i). The stored energy value is RMS = sqrt((x_1^2 + ... + x_n^2) / n). The renderer derives peak = max(|min|, |max|), computes r = sqrt(peak times RMS), then rescales r across the segment. The result h is the final drawn height of that bar.</p>
+          <p>Color is separate. Inside that same display column, b = 1 through 8 names the frequency bands. The analyzer measures E_b, the energy in band b. The value p_b = (b - 1) / 7 is a normalized frequency coordinate: band 1 maps to 0, band 8 maps to 1, and the middle bands fall between those values. The spectral balance is c = sum_b p_b E_b / sum_b E_b. The renderer maps that balance to color with hue = 10 + 200c. The same E_b term is used in both sums, so c is an energy-weighted average of band frequency coordinates.</p>
+        </aside>
+        </section>
+
+        <section class="demo-slide app-waveform-demo-slide">
+        <div class="section-marker">sampler platter</div>
+        <h2>App-style waveform sample</h2>
+        <p class="lead">Orange/red bars mean lower spectral balance: less high-frequency brightness in that column. Green/blue bars mean brighter high-frequency content, such as hi-hats, cymbals, or sharp attacks.</p>
+<div class="demo-panel app-waveform-panel">
+  <canvas
+    id="app-waveform"
+    width="1320"
+    height="220"
+    aria-label="Cueport-style waveform bars for a 60-second audio segment"
+  ></canvas>
+  <div class="demo-controls">
+    <button id="play-app-waveform-demo" type="button" aria-label="Play or pause the waveform sample">
+      Play sample
+    </button>
+    <button id="reset-app-waveform-demo" type="button">Reset</button>
+    <output id="app-waveform-demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="app-waveform-audio" preload="auto">
+    <source src="/talks/trail-mix-ieee-ubc-2026/assets/app-waveform-segment.wav-BAA7L9-f.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">segment</span><span class="beat-output-val">60 s</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">bars</span><span class="beat-output-val">200</span></div>
+</div>
+        <aside class="notes">
+          <h3>App-style waveform sample</h3>
+          <p>This is the same compact waveform idea rendered the way an app would draw it. The previous slide shows the conversion from samples to display columns and gives the formulas. Here the deck uses a 60-second audio segment and reduces it to 200 fixed-width columns, so the audience can see how those summaries look in an application surface.</p>
+          <p>The important point is that sampler platter is not trying to infer a musical label. It turns raw samples into a compact drawing representation that Cueport can cache, display, and regenerate locally.</p>
+        </aside>
+        </section>
+
+        <section class="project-divider">
+<div class="project-divider-layout">
+  <div class="project-divider-copy">
+    <div class="section-marker">Key estimator</div>
+    <h2>key lime</h2>
+    <p class="project-tagline">Musical key from chroma and a compact reranker</p>
+  </div>
+  <img
+    src="/talks/trail-mix-ieee-ubc-2026/assets/key-lime-abstract-DYggHOP0.png"
+    alt="Abstract illustration of a sliced lime"
+  />
+</div>
+        <aside class="notes">
+          <h3>key lime</h3>
+          <p>key lime estimates a major or minor key for the whole track, plus local key segments. The API always returns a tonic and a mode, for example A minor. Camelot, the DJ key notation used for harmonic mixing, is a display spelling only, which an app can add.</p>
+          <p>The global key is now chosen by a compact reranker that reads the same chroma sequence and DSP key scores that key lime already computes.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Vocabulary</div>
+        <h2>Key vocabulary</h2>
+        <p class="lead">These terms define the musical object that key lime predicts.</p>
+<div class="vocab-grid">
+  <div class="vocab-card vocab-tempo">
+    <div class="vocab-term">Pitch class</div>
+    <div class="vocab-def">The note name without octave. One C key and the next C key up are an octave apart, and both are pitch class C.</div>
+  </div>
+  <div class="vocab-card vocab-onset">
+    <div class="vocab-term">Chroma</div>
+    <div class="vocab-def">A 12-value summary of how much audio energy belongs to each pitch class: C, C#, D, ... B.</div>
+  </div>
+  <div class="vocab-card vocab-key">
+    <div class="vocab-term">Tonic</div>
+    <div class="vocab-def">The pitch class that feels like home or resolution in a specific song or section.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Mode</div>
+    <div class="vocab-def">A scale type, such as major or minor.</div>
+  </div>
+  <div class="vocab-card vocab-key">
+    <div class="vocab-term">Key</div>
+    <div class="vocab-def">A contextual label for a song or section, written as tonic plus mode.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Global key</div>
+    <div class="vocab-def">The one key label selected for the full track.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Key vocabulary</h3>
+          <p>A pitch class is the note name without octave. One C key and the next C key up are an octave apart, and both are pitch class C. Chroma is a 12-value summary of how much audio energy belongs to each pitch class: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B. Chroma is useful because key templates are also defined over those 12 pitch classes, so key lime can compare the track's chroma against the expected pitch-class pattern for each key.</p>
+          <p>The tonic is the pitch class that feels like home or resolution in a specific song or section. Mode is a scale type, such as major or minor. A key is a contextual label for a song or section, written as tonic plus mode, for example C major or A minor.</p>
+          <p>A key label combines a tonic and mode, for example C major or A minor. The global key is the one key label selected for the full track. The next slide explains how wrong labels are scored.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key estimation as 24-way classification</h2>
+        <p class="lead">Chroma measures energy in 12 pitch classes. The classifier predicts which pitch class is the tonic and whether the mode is major or minor.</p>
+<div class="vocab-grid">
+  <div class="vocab-card vocab-tempo">
+    <div class="vocab-term">Relative major/minor</div>
+    <div class="vocab-def">A minor and C major share a key signature, so their chroma can be similar.</div>
+  </div>
+  <div class="vocab-card vocab-onset">
+    <div class="vocab-term">Parallel major/minor</div>
+    <div class="vocab-def">A major and A minor share a tonic but differ in mode.</div>
+  </div>
+  <div class="vocab-card vocab-key">
+    <div class="vocab-term">Perfect fifth</div>
+    <div class="vocab-def">A and E are close in tonal function. Keys a fifth apart share many stable notes.</div>
+  </div>
+  <div class="vocab-card vocab-chroma">
+    <div class="vocab-term">Unrelated key</div>
+    <div class="vocab-def">Outside those relationships. Usually means the tonal center was missed entirely.</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Key estimation as 24-way classification</h3>
+          <p>This slide explains the classification problem. Chroma summarizes which note names are present in the audio, independent of octave. key lime uses that pitch-class pattern to choose one global key label. The label set is 12 tonic choices crossed with two modes, major and minor, giving 24 tonic-mode candidates. The later DSP pipeline shows how chroma is compared with templates to produce scores for those labels. The classifier still picks one label, but the wrong labels have different musical meanings.</p>
+          <p>MIREX weighted score gives partial credit when the predicted label is related to the reference key: 50 for a fifth, 30 for a relative major or minor, 20 for a parallel major or minor, and 0 for an unrelated key.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>DSP key-estimation pipeline</h2>
+        <p class="lead">Outputs by stage: windowed audio frames → pitch-class evidence → averaged 12-bin chroma → 24 key scores → global key with optional local segments.</p>
+<img
+  class="slide-figure pipeline-figure"
+  src="/talks/trail-mix-ieee-ubc-2026/assets/key-lime-pipeline-xWTJpwDa.svg"
+  alt="Audio samples feed chroma extraction, 24 key-template scores, and key-lime output fields"
+/>
+        <aside class="notes">
+          <h3>DSP key-estimation pipeline</h3>
+          <p>The DSP pipeline is the control system for the key estimator. Audio samples are decoded and downmixed once. The first output is windowed audio frames. The Goertzel and CQT branches turn those frames into pitch-class evidence. Averaging produces one 12-bin chroma representation. Profile matching turns that chroma into 24 key scores, one for each tonic-mode candidate. The final output is a global key, with optional local key segments from the DSP analysis.</p>
+          <p>That pipeline is useful by itself because it is small, deterministic, and inspectable. It is also useful as a learned-model input because the 24 DSP scores are already a compact musical prior. The reranker later uses that prior together with the chroma sequence.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Framing audio for key estimation</h2>
+        <p class="lead">key lime analyzes short overlapping slices of audio. A Hann window fades each slice at the edges before frequency analysis.</p>
+        <img class="slide-figure large-figure" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk92ZXJsYXBwaW5nIEhhbm4td2luZG93ZWQgZnJhbWVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+QSBtb25vIGF1ZGlvIHdhdmVmb3JtIGlzIHNwbGl0IGludG8gb3ZlcmxhcHBpbmcgZnJhbWVzLiBFYWNoIGZyYW1lIGlzIG11bHRpcGxpZWQgYnkgYSBIYW5uIHdpbmRvdyB0aGF0IGZhZGVzIHRoZSBmcmFtZSBlZGdlcy48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImZyYW1lQSIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiNzRhNjMiIHN0b3Atb3BhY2l0eT0iMC4wOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2I3NGE2MyIgc3RvcC1vcGFjaXR5PSIwLjI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2I3NGE2MyIgc3RvcC1vcGFjaXR5PSIwLjA4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmcmFtZUIiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIwIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNTk3ZGE4IiBzdG9wLW9wYWNpdHk9IjAuMDgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiM1OTdkYTgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1OTdkYTgiIHN0b3Atb3BhY2l0eT0iMC4wOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxtYXJrZXIgaWQ9ImFycm93IiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI4IiBtYXJrZXJIZWlnaHQ9IjgiIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTSAwIDAgTCAxMCA1IEwgMCAxMCB6IiBmaWxsPSIjNWE0MDNhIi8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjUyMCIgcng9IjI4IiBmaWxsPSIjZmZmYWYyIi8+CgogIDx0ZXh0IHg9IjcwIiB5PSI2MiIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj4xLiBTdGFydCB3aXRoIG1vbm8gYXVkaW88L3RleHQ+CiAgPHRleHQgeD0iNzAiIHk9IjI4OCIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj4yLiBUYWtlIG92ZXJsYXBwaW5nIGZyYW1lczwvdGV4dD4KICA8dGV4dCB4PSI3NzAiIHk9IjI4OCIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj4zLiBGYWRlIGZyYW1lIGVkZ2VzPC90ZXh0PgoKICA8bGluZSB4MT0iNzAiIHkxPSIxNjAiIHgyPSIxMTMwIiB5Mj0iMTYwIiBzdHJva2U9IiNkN2M2YjIiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxwYXRoIGQ9Ik03MCAxNjAKICAgICAgICAgICBDMTA1IDk4IDE0MCAyMjIgMTc1IDE2MAogICAgICAgICAgIEMyMTAgOTggMjQ1IDIyMiAyODAgMTYwCiAgICAgICAgICAgQzMxNSA5OCAzNTAgMjIyIDM4NSAxNjAKICAgICAgICAgICBDNDIwIDk4IDQ1NSAyMjIgNDkwIDE2MAogICAgICAgICAgIEM1MjUgOTggNTYwIDIyMiA1OTUgMTYwCiAgICAgICAgICAgQzYzMCA5OCA2NjUgMjIyIDcwMCAxNjAKICAgICAgICAgICBDNzM1IDk4IDc3MCAyMjIgODA1IDE2MAogICAgICAgICAgIEM4NDAgOTggODc1IDIyMiA5MTAgMTYwCiAgICAgICAgICAgQzk0NSA5OCA5ODAgMjIyIDEwMTUgMTYwCiAgICAgICAgICAgQzEwNTAgOTggMTA5NSAyMjIgMTEzMCAxNjAiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGY0MDU1IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjM1MCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSI5MCIgcng9IjE0IiBmaWxsPSJ1cmwoI2ZyYW1lQSkiIHN0cm9rZT0iI2I3NGE2MyIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHJlY3QgeD0iMzMwIiB5PSIzNTAiIHdpZHRoPSIzNjAiIGhlaWdodD0iOTAiIHJ4PSIxNCIgZmlsbD0idXJsKCNmcmFtZUIpIiBzdHJva2U9IiM1OTdkYTgiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwYXRoIGQ9Ik0xMzAgMzk1CiAgICAgICAgICAgQzE2MCAzNDUgMjEwIDQ0NSAyNTAgMzk1CiAgICAgICAgICAgQzI5MCAzNDUgMzQwIDQ0NSAzODAgMzk1CiAgICAgICAgICAgQzQyMCAzNDUgNDcwIDQ0NSA1MTAgMzk1CiAgICAgICAgICAgQzU1MCAzNDUgNjAwIDQ0NSA2NDAgMzk1CiAgICAgICAgICAgQzY3MCAzNjUgNjkwIDM4NSA3MDAgMzk1IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPGxpbmUgeDE9IjEyMCIgeTE9IjQ2MiIgeDI9IjQ4MCIgeTI9IjQ2MiIgc3Ryb2tlPSIjYjc0YTYzIiBzdHJva2Utd2lkdGg9IjQiIG1hcmtlci1zdGFydD0idXJsKCNhcnJvdykiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CiAgPHRleHQgeD0iMjY4IiB5PSI1MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzRhMzMyZiI+ZnJhbWUgbGVuZ3RoIE48L3RleHQ+CgogIDxsaW5lIHgxPSIxMjAiIHkxPSIzMjYiIHgyPSIzMzAiIHkyPSIzMjYiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSI0IiBtYXJrZXItc3RhcnQ9InVybCgjYXJyb3cpIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogIDx0ZXh0IHg9IjIyNSIgeT0iMzQ2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiM0YTMzMmYiPmhvcCBIPC90ZXh0PgoKICA8cGF0aCBkPSJNNzkwIDQ0MCBDODUwIDQ0MCA4NTAgMzUwIDkxMCAzNTAgQzk3MCAzNTAgOTcwIDQ0MCAxMDMwIDQ0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjc0YTYzIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI3OTAiIHkxPSI0NDAiIHgyPSIxMDMwIiB5Mj0iNDQwIiBzdHJva2U9IiNkN2M2YjIiIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjkxMCIgeT0iNDkyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjUiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiM0YTMzMmYiPkhhbm4gd2luZG93OiBsb3cgYXQgZWRnZXMsIGhpZ2ggaW4gdGhlIG1pZGRsZTwvdGV4dD4KCiAgPGxpbmUgeDE9IjcxMCIgeTE9IjM5NSIgeDI9Ijc2NSIgeTI9IjM5NSIgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utd2lkdGg9IjUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+Cjwvc3ZnPgo=" alt="Mono audio split into overlapping frames, then tapered by a Hann window" />
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong>Frame</strong>: a short slice of the audio signal</li>
+          <li><strong><code>H</code></strong>: hop size between frames</li>
+          <li><strong>Hann window</strong>: fades the frame edges so boundaries contribute less energy</li>
+          <li><strong>Output</strong>: windowed audio frames for Goertzel and CQT pitch analysis</li>
+        </ul>
+        <aside class="notes">
+          <h3>Framing audio for key estimation</h3>
+          <p>The key estimator starts from the same mono PCM as the other analyzers. Instead of analyzing the whole track as one block, it cuts the signal into overlapping frames. A frame is a short slice of audio. H is the hop size, which is the step from the start of one frame to the start of the next frame. Because H is smaller than the frame length N, adjacent frames overlap.</p>
+          <p>Each frame is multiplied by a Hann window. The window is near zero at the frame edges and high in the middle, so the frequency analysis is driven by the center of the frame rather than by an abrupt cut at the boundary. In formula form, the windowed frame is \(x_m[n] = x[n + mH]w[n]\), where \(w[n] = 0.5 - 0.5\cos(2\pi n/(N-1))\). The output of this stage is a sequence of windowed audio frames. Those frames feed both pitch-evidence branches on the next slide.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Measuring pitch energy in each frame</h2>
+        <p class="lead">Goal: turn each windowed audio frame into note-energy estimates. The next step folds those estimates into 12 chroma values.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/pitch-evidence-branches-DXt6hop4.svg" alt="Windowed audio frame measured by Goertzel target checks and CQT note-spaced bins, producing pitch-frequency energy" />
+        <ul class="caption-list" aria-label="Branches">
+          <li><strong>Goertzel</strong>: ask a few chosen questions, such as "how much A is in this frame?"</li>
+          <li><strong>CQT</strong>: build a broader note-spaced energy map across the pitch range</li>
+          <li><strong>Output</strong>: note energy estimates for the next chroma-folding step</li>
+        </ul>
+        <aside class="notes">
+          <h3>Measuring pitch energy in each frame</h3>
+          <p>This slide explains the pitch-evidence stage in the pipeline diagram. At this point, key lime has a short Hann-windowed audio frame. The question is simple: which musical frequencies are strong in this frame?</p>
+          <p>Goertzel and CQT both measure pitch energy, but they answer different versions of the question. Goertzel is targeted. It asks a few chosen questions about the frame: how much energy is near A, how much is near C#, and how much is near their harmonics? CQT is broader. It builds a keyboard-shaped spectrum across many note-spaced bins, so the output lines up with musical pitch names rather than equal hertz steps.</p>
+          <p>Both branches produce note energy estimates per frame. The next slide shows the next operation: fold octave-related frequencies into 12 pitch classes to make chroma.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Output: 12-value chroma</h2>
+        <p class="lead">This is the step where the pipeline first creates chroma: 12 values, one for each pitch class.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/chroma-folding-C0iIHZKK.svg" alt="Pitch energy from different octaves folding into 12 pitch-class bins" />
+        <ul class="caption-list" aria-label="Step output">
+          <li><strong>Input</strong>: pitch-frequency energy from Goertzel and CQT</li>
+          <li><strong>Fold octaves</strong>: C2, C3, and C4 all add to the C pitch-class bin</li>
+          <li><strong>Output</strong>: 12 chroma values, one for each pitch class</li>
+          <li><strong>Next step</strong>: compare the chroma pattern with 24 key templates</li>
+        </ul>
+        <aside class="notes">
+          <h3>Output: 12-value chroma</h3>
+          <p>This slide connects the pitch-energy slide to the template-scoring slide. The input is pitch-frequency energy from Goertzel and CQT. The operation is octave folding: frequencies that are different octaves of the same note name add to the same pitch-class bin. For example, C2, C3, and C4 all support pitch class C. The output is a 12-value chroma vector, one value for each pitch class.</p>
+          <p>The important tradeoff is that chroma discards octave and voicing information. That is useful for key estimation because keys are defined by pitch classes, but it also means that related keys can look similar. The next slide compares the chroma pattern with 24 key templates, one for each tonic-mode label. The reranker later reads the frame-level chroma sequence to help resolve related-key confusions.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key templates and scoring</h2>
+        <p class="lead">A key template is a 12-value chroma pattern for one key. Compare the song chroma with 24 templates and pick the highest score.</p>
+        <img class="slide-figure large-figure" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDUyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPktleSB0ZW1wbGF0ZSBzY29yaW5nPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+U29uZyBjaHJvbWEgaXMgY29tcGFyZWQgd2l0aCAyNCBrZXkgdGVtcGxhdGVzLiBFYWNoIHRlbXBsYXRlIHJlY2VpdmVzIGEgc2ltaWxhcml0eSBzY29yZSwgYW5kIHRoZSBoaWdoZXN0IHNjb3JlIGJlY29tZXMgdGhlIHByZWRpY3RlZCBrZXkuPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjgiIG1hcmtlckhlaWdodD0iOCIgb3JpZW50PSJhdXRvIj4KICAgICAgPHBhdGggZD0iTSAwIDAgTCAxMCA1IEwgMCAxMCB6IiBmaWxsPSIjNWE0MDNhIi8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjUyMCIgcng9IjI4IiBmaWxsPSIjZmZmYWYyIi8+CgogIDxyZWN0IHg9IjYwIiB5PSIxMjAiIHdpZHRoPSIyNTAiIGhlaWdodD0iMjUwIiByeD0iMjAiIGZpbGw9IiNlZWYzZTQiIHN0cm9rZT0iIzdhOGY1YSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iMTg1IiB5PSIxNjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzRhMzMyZiI+U29uZyBjaHJvbWE8L3RleHQ+CiAgPHRleHQgeD0iMTg1IiB5PSIyMDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzRhMzMyZiI+MTIgbWVhc3VyZWQgdmFsdWVzPC90ZXh0PgogIDxnIGZpbGw9IiM3YThmNWEiPgogICAgPHJlY3QgeD0iOTUiIHk9IjI5NSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjQyIi8+CiAgICA8cmVjdCB4PSIxMTUiIHk9IjI2MCIgd2lkdGg9IjEyIiBoZWlnaHQ9Ijc3Ii8+CiAgICA8cmVjdCB4PSIxMzUiIHk9IjI4NSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjUyIi8+CiAgICA8cmVjdCB4PSIxNTUiIHk9IjIzNSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEwMiIvPgogICAgPHJlY3QgeD0iMTc1IiB5PSIyNTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSI4NyIvPgogICAgPHJlY3QgeD0iMTk1IiB5PSIzMDUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzMiIvPgogICAgPHJlY3QgeD0iMjE1IiB5PSIyNzUiIHdpZHRoPSIxMiIgaGVpZ2h0PSI2MiIvPgogICAgPHJlY3QgeD0iMjM1IiB5PSIyMjAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMTciLz4KICAgIDxyZWN0IHg9IjI1NSIgeT0iMjkwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDciLz4KICA8L2c+CiAgPGxpbmUgeDE9IjkwIiB5MT0iMzM4IiB4Mj0iMjc1IiB5Mj0iMzM4IiBzdHJva2U9IiM0YTMzMmYiIHN0cm9rZS13aWR0aD0iMyIvPgoKICA8bGluZSB4MT0iMzIwIiB5MT0iMjQ1IiB4Mj0iNDIwIiB5Mj0iMjQ1IiBzdHJva2U9IiM1YTQwM2EiIHN0cm9rZS13aWR0aD0iNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KCiAgPHJlY3QgeD0iNDMwIiB5PSI2MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzNzAiIHJ4PSIyMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZDdjNmIyIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSI1ODAiIHk9IjEwNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj4yNCBrZXkgdGVtcGxhdGVzPC90ZXh0PgogIDx0ZXh0IHg9IjU4MCIgeT0iMTQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiM0YTMzMmYiPjEyIGV4cGVjdGVkIHZhbHVlcyBlYWNoPC90ZXh0PgoKICA8ZyBmb250LWZhbWlseT0iU3BhY2UgR3JvdGVzaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM0YTMzMmYiPgogICAgPHJlY3QgeD0iNDcwIiB5PSIxNzUiIHdpZHRoPSIyMjAiIGhlaWdodD0iNTUiIHJ4PSIxMiIgZmlsbD0iI2YyZDhkZiIgc3Ryb2tlPSIjYjc0YTYzIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDx0ZXh0IHg9IjU4MCIgeT0iMjExIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DIG1ham9yIHRlbXBsYXRlPC90ZXh0PgogICAgPHJlY3QgeD0iNDcwIiB5PSIyNDUiIHdpZHRoPSIyMjAiIGhlaWdodD0iNTUiIHJ4PSIxMiIgZmlsbD0iI2RmZTlmNCIgc3Ryb2tlPSIjNTk3ZGE4IiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDx0ZXh0IHg9IjU4MCIgeT0iMjgxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BIG1pbm9yIHRlbXBsYXRlPC90ZXh0PgogICAgPHJlY3QgeD0iNDcwIiB5PSIzMTUiIHdpZHRoPSIyMjAiIGhlaWdodD0iNTUiIHJ4PSIxMiIgZmlsbD0iI2Y1ZWNkYyIgc3Ryb2tlPSIjZDdjNmIyIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDx0ZXh0IHg9IjU4MCIgeT0iMzUxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yMiBtb3JlIHRlbXBsYXRlczwvdGV4dD4KICA8L2c+CgogIDxsaW5lIHgxPSI3NDAiIHkxPSIyNDUiIHgyPSI4NDAiIHkyPSIyNDUiIHN0cm9rZT0iIzVhNDAzYSIgc3Ryb2tlLXdpZHRoPSI1IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgoKICA8cmVjdCB4PSI4NTAiIHk9IjEyMCIgd2lkdGg9IjI5MCIgaGVpZ2h0PSIyNTAiIHJ4PSIyMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjYjc0YTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSI5OTUiIHk9IjE2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj5TY29yZSB0ZW1wbGF0ZXM8L3RleHQ+CiAgPHRleHQgeD0iOTk1IiB5PSIyMDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzRhMzMyZiI+Y29tcGFyZSBzaGFwZXM8L3RleHQ+CgogIDxnIGZvbnQtZmFtaWx5PSJTcGFjZSBHcm90ZXNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzRhMzMyZiI+CiAgICA8dGV4dCB4PSI5MTAiIHk9IjI2MCI+QyBtYWpvcjwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwODAiIHk9IjI2MCIgdGV4dC1hbmNob3I9ImVuZCI+MC44MjwvdGV4dD4KICAgIDx0ZXh0IHg9IjkxMCIgeT0iMzAwIj5BIG1pbm9yPC90ZXh0PgogICAgPHRleHQgeD0iMTA4MCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0iZW5kIj4wLjY1PC90ZXh0PgogICAgPHRleHQgeD0iOTEwIiB5PSIzNDAiPkcgbWFqb3I8L3RleHQ+CiAgICA8dGV4dCB4PSIxMDgwIiB5PSIzNDAiIHRleHQtYW5jaG9yPSJlbmQiPjAuNTk8L3RleHQ+CiAgPC9nPgoKICA8bGluZSB4MT0iOTk1IiB5MT0iMzgwIiB4Mj0iOTk1IiB5Mj0iNDM1IiBzdHJva2U9IiM1YTQwM2EiIHN0cm9rZS13aWR0aD0iNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICA8dGV4dCB4PSI5OTUiIHk9IjQ3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNwYWNlIEdyb3Rlc2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNGEzMzJmIj5oaWdoZXN0IHNjb3JlIGJlY29tZXMgdGhlIGtleTwvdGV4dD4KPC9zdmc+Cg==" alt="Song chroma compared with 24 key templates, then the highest-scoring template becomes the predicted key" />
+        <ul class="caption-list" aria-label="Legend">
+          <li><strong><code>c</code></strong>: the song chroma, 12 values for pitch-class energy</li>
+          <li><strong><code>T_k</code></strong>: the key template for candidate key k, 12 expected chroma values</li>
+          <li><strong><code>corr</code></strong>: Pearson correlation, high when the two 12-value shapes match</li>
+          <li><strong>Selection</strong>: the highest of 24 template scores becomes the predicted key</li>
+        </ul>
+        <aside class="notes">
+          <h3>Key templates and scoring</h3>
+          <p>The 12-note chroma is the input to key scoring. Think of each key template as a 12-number fingerprint for what that key usually emphasizes. C major, for example, expects more support around pitch classes such as C, E, and G than around unrelated pitch classes. A minor has a different expected pattern.</p>
+          <p>key lime compares the song chroma \(c\) with every candidate template \(T_k\). There are 24 candidates because there are 12 possible tonic pitch classes and 2 modes, major and minor. The score is Pearson correlation after mean-centering and normalizing both vectors. In full form, \(\operatorname{score}(k)\) is the sum over pitch classes of \((c_p-\bar{c})(T_{p,k}-\bar{T}_k)\), divided by the product of their vector lengths. The highest of the 24 scores becomes the global key estimate.</p>
+          <p>Krumhansl-Kessler is one profile family. It comes from listener judgments about how stable each pitch class sounds inside a major or minor key, so it gives a 12-value expected pattern for a key. The shipped DSP scorer averages Krumhansl-Kessler, Temperley, EDMA, and a corpus-learned profile. The learned profile was generated by the trail mix profile-training script from GiantSteps Key benchmark output, which the repo marks as a development corpus and keeps separate from the sealed FMAKv2 holdout. That is not neural-model training, but it is supervised template calibration, so it belongs on the development side of the boundary. This matters because the reranker consumes these 24 DSP scores as input, so template provenance affects both KL-DSP and KL-FMAK. It also includes refinements for tuning, relative-key disambiguation, and confidence-gated segmentation.</p>
+        </aside>
+        </section>
+
+        <section class="demo-slide key-demo-slide">
+<div class="section-marker">Multi-key</div>
+<h2>A key change</h2>
+<p class="lead">
+  A 60-second demo: A major for the first half, then C minor. This is key lime's DSP-only local segmentation; the reranker selects only the global key.
+</p>
+<div class="demo-panel">
+  <canvas
+    id="key-change-timeline"
+    width="1320"
+    height="220"
+    aria-label="Key change timeline with A major followed by C minor"
+  ></canvas>
+  <div class="segment-labels">
+    <div><strong>A major</strong><span>0:00-0:30</span></div>
+    <div><strong>C minor</strong><span>0:30-1:00</span></div>
+  </div>
+  <div class="demo-controls">
+    <button id="play-key-demo" type="button" aria-label="Play or pause the key-change sample">
+      Play sample
+    </button>
+    <button id="reset-key-demo" type="button">Reset</button>
+    <output id="key-demo-time" aria-live="polite">0:00 / 1:00</output>
+  </div>
+  <audio id="key-audio" preload="auto">
+    <source src="/talks/trail-mix-ieee-ubc-2026/assets/key-change.wav-Cim4b7Tq.fixture" type="audio/wav" />
+  </audio>
+</div>
+<div class="beat-output">
+  <div class="beat-output-item"><span class="beat-output-key">key</span><span class="beat-output-val">C minor</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">multi_key</span><span class="beat-output-val">true</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">alternate_key</span><span class="beat-output-val">A major</span></div>
+  <div class="beat-output-item"><span class="beat-output-key">change detected</span><span class="beat-output-val">~33 s</span></div>
+</div>
+        <aside class="notes">
+          <h3>A key change</h3>
+          <p>The track is a 60-second synthetic demo built from two chord sections: A major for the first half and C minor for the second. This demo is DSP-only local segmentation. The compact transformer reranker selects the global key; it does not yet rerank local key segments. For this demo, the local analysis windows are shorter than the production default so a simple chord change produces visible segments.</p>
+          <p>key lime reports multi_key as true. The stable detected sections are A major at the start and C minor after the change. The primary key is C minor because the local segmentation assigns it the longest stable span in this synthetic example. A short transition window appears around the boundary because the rolling analysis windows overlap both chord sections.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key evaluation metric</h2>
+        <p class="lead">For each track, MIREX gives credit based on how close the predicted key is to the reference key, then averages those credits from 0 to 100.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Prediction relation</th>
+      <th>Example if reference is C major</th>
+      <th>Credit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Exact</strong></td>
+      <td>C major</td>
+      <td><strong>100</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Perfect fifth</strong></td>
+      <td>G major or F major</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td><strong>Relative major/minor</strong></td>
+      <td>A minor</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td><strong>Parallel major/minor</strong></td>
+      <td>C minor</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>Unrelated</strong></td>
+      <td>Any other key</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p class="math-formula">\[s_i=\text{credit for track }i\text{ from the table},\qquad \text{MIREX}=\frac{s_1+s_2+\cdots+s_N}{N}\]</p>
+        <aside class="notes">
+          <h3>Key evaluation metric</h3>
+          <p>Define the key metric before showing the results table. MIREX is a standard key-estimation scoring rule used in music information retrieval evaluations. For each track, compare the predicted key with the reference key. The score is not only correct or wrong. A musically related wrong key gets partial credit.</p>
+          <p>Using C major as the reference, C major receives 100. A fifth-related prediction such as G major or F major receives 50. The relative minor, A minor, receives 30. The parallel minor, C minor, receives 20. Any unrelated key receives zero. In the formula, s_i is the credit assigned to track i from this table. The dataset score is the average of those per-track credits, so it remains on a 0 to 100 scale. This deck uses MIREX as the primary key metric because it is the published comparison metric for FMAKv2 and because it distinguishes close key confusions from unrelated errors.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Reranker data splits</h2>
+        <p class="lead">KL means key lime. FMAK means FMA Key, a key-labeled Free Music Archive benchmark; FMAKv2 is the version-2 evaluation set.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Set</th>
+      <th>Tracks</th>
+      <th>Used for</th>
+      <th>Not used for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Training</strong></td>
+      <td>4,040 FMAK</td>
+      <td>Update reranker weights</td>
+      <td>Final reported score</td>
+    </tr>
+    <tr>
+      <td><strong>Validation</strong></td>
+      <td>449 FMAK</td>
+      <td>Choose the saved model version and when to stop training</td>
+      <td>Weight updates or final score</td>
+    </tr>
+    <tr>
+      <td><strong>Sealed holdout</strong></td>
+      <td>1,000 FMAKv2</td>
+      <td><strong>Report KL-DSP, KL-FMAK, and local madmom</strong></td>
+      <td>Training or checkpoint selection</td>
+    </tr>
+    <tr>
+      <td><strong>Published full FMAKv2</strong></td>
+      <td>5,489 FMAKv2 full dataset</td>
+      <td>Cite MIREX scores from earlier papers</td>
+      <td>Reranker training, validation, or same-holdout comparison</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Reranker data splits</h3>
+          <p>Keep the evaluation boundary separate from the metric definition. KL-DSP is key lime's DSP-only scorer. KL-FMAK is key lime with the compact reranker trained on FMAK labels. FMAK means FMA Key, a key-labeled Free Music Archive benchmark. FMAKv2 is the version-2 evaluation set used for the sealed holdout and published full-set references.</p>
+          <p>The paper uses 4,040 labeled FMAK tracks for training. These tracks update the reranker weights. It uses 449 disjoint FMAK tracks for validation. Validation chooses which saved model version to keep and when to stop training, but it does not update weights and it is not the final reported score.</p>
+          <p>The reported local result comes from a sealed 1,000-track FMAKv2 holdout evaluated once for the final result. That holdout reports KL-DSP, KL-FMAK, and local madmom on the same files. The manifest checks track IDs across train, validation, and holdout sets and reports zero overlap, so the learned reranker is evaluated on tracks that were not used for fitting or model selection.</p>
+          <p>The published full FMAKv2 row is not one of our reranker splits. Those numbers come from earlier papers that report full-set FMAKv2 MIREX scores over all 5,489 tracks. They provide context, but they are not same-manifest local comparisons against the 1,000-track sealed holdout.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Key focus</div>
+        <h2>Why add a reranker?</h2>
+        <p class="lead">On the 1,000-track FMAKv2 holdout, the DSP key baseline scores 61.08 MIREX. Local madmom scores 74.16 MIREX on the same files.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Key baseline</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>KL-DSP MIREX</strong></td>
+      <td>61.08</td>
+    </tr>
+    <tr>
+      <td><strong>Local madmom MIREX</strong></td>
+      <td>74.16</td>
+    </tr>
+    <tr>
+      <td><strong>MIREX gap to local madmom</strong></td>
+      <td><strong>13.08 points</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Available evidence</strong></td>
+      <td>24 DSP scores + chroma frames</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Why add a reranker?</h3>
+          <p>trail mix is not only a key estimator. It also emits tempo, beat positions, local tempo sections, and waveform summaries. beat salad and sampler platter now have enough product coverage to discuss, while key estimation has the clearest measured reason for deeper modeling.</p>
+          <p>The pure DSP key scorer is compact and interpretable, but it scores 61.08 MIREX on the sealed 1,000-track FMAKv2 holdout. Local madmom scores 74.16 MIREX on the same files, a 13.08-point gap. key lime already has two inputs that can support a learned correction: frame-level chroma and the 24-dimensional DSP score vector. That motivates a compact reranker rather than a replacement model.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>DSP-guided transformer reranker</h2>
+        <p class="lead">Reranking means the DSP scorer proposes 24 key scores, then the learned model adjusts those scores using chroma-frame context.</p>
+<img
+  class="slide-figure pipeline-figure"
+  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iMjYwIiB2aWV3Qm94PSIwIDAgOTAwIDI2MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPmtleSBsaW1lIHJlcmFua2VyIGZsb3c8L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BdWRpbyBwcm9kdWNlcyBjaHJvbWEgZnJhbWVzIGFuZCBEU1Aga2V5IHNjb3Jlcy4gQSBjb21wYWN0IHRyYW5zZm9ybWVyIHJlcmFua2VyIHJlYWRzIGJvdGggYW5kIHdyaXRlcyB0aGUgc2VsZWN0ZWQga2V5LCBlc3RpbWF0b3IgbmFtZSwgYW5kIERTUCBwcmlvci48L2Rlc2M+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5ib3ggeyBmaWxsOiBub25lOyBzdHJva2U6ICM1YTQwM2E7IHN0cm9rZS13aWR0aDogMzsgfQogICAgICAuZmVhdHVyZSB7IGZpbGw6IG5vbmU7IHN0cm9rZTogIzc2NWY3Yjsgc3Ryb2tlLXdpZHRoOiAzLjU7IH0KICAgICAgLmFjY2VudCB7IGZpbGw6IG5vbmU7IHN0cm9rZTogI2EzM2Q1Mjsgc3Ryb2tlLXdpZHRoOiAzLjU7IH0KICAgICAgLnRhZ2JveCB7IGZpbGw6ICM3NjVmN2I7IH0KICAgICAgLmFycm93IHsgZmlsbDogbm9uZTsgc3Ryb2tlOiAjNWE0MDNhOyBzdHJva2Utd2lkdGg6IDIuNTsgc3Ryb2tlLWxpbmVjYXA6IHNxdWFyZTsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgfQogICAgICAubGFiZWwgeyBmaWxsOiAjMTcxNTE3OyBmb250OiA1MDAgMjFweCAiU3BhY2UgR3JvdGVzayIsIEFyaWFsLCBzYW5zLXNlcmlmOyB9CiAgICAgIC5ib2R5IHsgZmlsbDogIzVhNDAzYTsgZm9udDogNTAwIDIxcHggIlNwYWNlIEdyb3Rlc2siLCBBcmlhbCwgc2Fucy1zZXJpZjsgfQogICAgICAudGFnIHsgZmlsbDogI2ZmZmZmZjsgZm9udDogNTAwIDIxcHggIlNwYWNlIEdyb3Rlc2siLCBBcmlhbCwgc2Fucy1zZXJpZjsgfQogICAgPC9zdHlsZT4KICAgIDxtYXJrZXIgaWQ9ImFoIiBtYXJrZXJXaWR0aD0iNiIgbWFya2VySGVpZ2h0PSI2IiByZWZYPSI2IiByZWZZPSIzIiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCwwIEw2LDMgTDAsNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWE0MDNhIiBzdHJva2Utd2lkdGg9IjEuMiIvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgoKICA8cmVjdCBjbGFzcz0iYm94IiB4PSIyOCIgeT0iNTgiIHdpZHRoPSIxNTQiIGhlaWdodD0iNzAiIHJ4PSIwIi8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSIxMDUiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QQ008L3RleHQ+CiAgPHRleHQgY2xhc3M9ImJvZHkiIHg9IjEwNSIgeT0iMTEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5tb25vIHNhbXBsZXM8L3RleHQ+CgogIDxwYXRoIGNsYXNzPSJhcnJvdyIgZD0iTTE4MiA5MyBMMjIyIDkzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgoKICA8cmVjdCBjbGFzcz0iZmVhdHVyZSIgeD0iMjIyIiB5PSIyNCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSI3NCIgcng9IjAiLz4KICA8dGV4dCBjbGFzcz0ibGFiZWwiIHg9IjI1MCIgeT0iNTgiPmNocm9tYSBmcmFtZXM8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImJvZHkiIHg9IjI1MCIgeT0iODEiPjEyIGJpbnMgYnkgZnJhbWU8L3RleHQ+CgogIDxyZWN0IGNsYXNzPSJmZWF0dXJlIiB4PSIyMjIiIHk9IjE0MiIgd2lkdGg9IjIzMCIgaGVpZ2h0PSI3NCIgcng9IjAiLz4KICA8dGV4dCBjbGFzcz0ibGFiZWwiIHg9IjI1MCIgeT0iMTc2Ij5EU1Aga2V5IHNjb3JlczwvdGV4dD4KICA8dGV4dCBjbGFzcz0iYm9keSIgeD0iMjUwIiB5PSIxOTkiPjI0IGtleSBjYW5kaWRhdGVzPC90ZXh0PgoKICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik00NTIgNjEgTDUwNCA2MSBMNTA0IDExMyBMNTQwIDExMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik00NTIgMTc5IEw1MDQgMTc5IEw1MDQgMTQzIEw1NDAgMTQzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgoKICA8cmVjdCBjbGFzcz0idGFnYm94IiB4PSI1ODQiIHk9IjQ4IiB3aWR0aD0iMTM4IiBoZWlnaHQ9IjI4IiByeD0iMCIvPgogIDx0ZXh0IGNsYXNzPSJ0YWciIHg9IjY1MyIgeT0iNjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjIxLDUyOCBwYXJhbXM8L3RleHQ+CgogIDxyZWN0IGNsYXNzPSJhY2NlbnQiIHg9IjU0MCIgeT0iODgiIHdpZHRoPSIzMDAiIGhlaWdodD0iMTIwIiByeD0iMCIvPgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNTY4IiB5PSIxMjYiPnRyYW5zZm9ybWVyIHJlcmFua2VyPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJib2R5IiB4PSI1NjgiIHk9IjE1MiI+b25lIGVuY29kZXIgbGF5ZXI8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImJvZHkiIHg9IjU2OCIgeT0iMTcyIj5SdXN0IGZvcndhcmQgcGFzczwvdGV4dD4KICA8dGV4dCBjbGFzcz0iYm9keSIgeD0iNTY4IiB5PSIxOTQiPnNlbGVjdGVkIGdsb2JhbCBrZXk8L3RleHQ+Cjwvc3ZnPgo="
+  alt="Audio produces chroma frames and DSP key scores, which feed a compact transformer reranker that outputs the selected key"
+/>
+        <ul class="caption-list" aria-label="Reranking steps">
+          <li><strong>1. DSP ranks candidates</strong>: produce 24 scores, one for each tonic-mode label</li>
+          <li><strong>2. Chroma gives context</strong>: show how pitch-class energy changes across the first 256 frames</li>
+          <li><strong>3. Learned model adjusts scores</strong>: add a learned correction to the DSP ranking</li>
+          <li><strong>4. Highest adjusted score wins</strong>: choose the global key; local key segments remain DSP-based</li>
+        </ul>
+        <aside class="notes">
+          <h3>DSP-guided transformer reranker</h3>
+          <p>The reranker is deliberately small. key lime still extracts chroma, scores all 24 major and minor keys with DSP, and computes local key segments the same way as before. The learned part only reranks the global-key candidates.</p>
+          <p>Reranking means this: the DSP stage produces an initial score for each of the 24 key labels. The transformer reads the frame-level chroma sequence and learns a correction to those 24 scores. The corrected scores keep the same 24 tonic-plus-mode layout, and the highest corrected score becomes the selected global key. The local key segments remain DSP-based.</p>
+          <p>The selected model has 21,528 parameters. In the arXiv paper, the evaluated artifact is a 115 KB ONNX model, and the footprint table includes ONNX Runtime. In the Rust release, those same weights are embedded and the forward pass is written in Rust, so Cueport does not need ONNX Runtime, PyTorch, or a separate model service. Tests compare the Rust logits against ONNX reference fixtures with absolute error below 1.0e-4, so the packaged forward pass remains tied to the validated model.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Reranker architecture and parameter budget</h2>
+        <p class="lead">The chroma branch makes 24 learned score corrections. The DSP branch carries the 24 DSP scores. Add them, then choose the largest score.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/key-lime-reranker-simple-Csjyckyq.svg" alt="Simplified KL-FMAK architecture with chroma frames and DSP scores feeding two branches, added into 24 adjusted key scores, then selecting the largest score" />
+        <aside class="notes">
+          <h3>Reranker architecture and parameter budget</h3>
+          <p>The architecture figure shows how the model uses two branches. The left branch reads frame-level chroma and turns the chroma sequence into 24 learned score corrections. The right branch carries the 24 DSP key scores through a learned 24-by-24 projection. That projection starts as the identity, meaning it initially copies the DSP ranking rather than changing it.</p>
+          <p>The outputs are summed as logits over the same 24 key classes. Logits are unnormalized key scores. This is the concrete implementation of the residual reranking idea: start with the DSP ranking, add learned corrections from chroma context, then select the largest adjusted score. The parameter budget is deliberately small. The whole model has 21,528 trainable parameters.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>How the reranker is trained</h2>
+        <p class="lead">Training teaches the reranker when chroma context should change the DSP ranking.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Read inputs</strong></td>
+      <td>first 256 chroma frames (about 32 s) plus 24 DSP scores</td>
+    </tr>
+    <tr>
+      <td><strong>2. Learn the answer</strong></td>
+      <td>predict the FMAKv2 key label; related keys get small partial credit</td>
+    </tr>
+    <tr>
+      <td><strong>3. Update weights</strong></td>
+      <td>AdamW updates model weights; validation decides when to stop</td>
+    </tr>
+    <tr>
+      <td><strong>4. Test variants</strong></td>
+      <td>transpose examples, try easy-to-hard ordering, and test teacher distillation</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>How the reranker is trained</h3>
+          <p>This slide tells the training story rather than listing every hyperparameter. The reranker reads two inputs: the first 256 chroma frames, which covers about 32 seconds, and the 24 DSP key scores. It learns to predict the FMAKv2 key label from those inputs.</p>
+          <p>The target is MIREX-aware rather than one-hot only. The true key receives most of the mass, while a small amount is spread over musically related fifth, relative, and parallel neighbours. AdamW updates the model weights with learning rate 0.001, batch size 16, at most 25 epochs, class balancing, dropout 0.3, weight decay 0.05, and validation-based early stopping.</p>
+          <p>The tested variants are there to check which training choices matter. Transposition augmentation rotates each input sequence and label through all 12 semitones. The DSP-margin curriculum starts with tracks where the top DSP score is clearly separated from the runner-up, then adds harder tracks over five epochs. Ordering can affect a neural model because training updates weights step by step. Early examples shape the solution that later examples refine.</p>
+          <p>Teacher distillation means that another model supplies a soft target, not just a single hard label. For each track, the frozen madmom KeyCNN teacher produces probabilities over the same 24 key labels. The optional distilled reranker is trained partly to match the FMAKv2 label and partly to match those teacher probabilities. The α = 0.3 setting gives the teacher term 30 percent of the target weight, and temperature T = 4 smooths the teacher probabilities so near-miss labels carry more information. The final reported model is the label-trained version, because the distilled comparison did not improve MIREX.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>FMAKv2 key-estimation results</h2>
+        <p class="lead">Only compare rows with the same run type. The sealed-holdout rows are fair comparisons; published full-FMAKv2 rows are context, not win/loss claims.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Run type</th>
+      <th>Tracks</th>
+      <th>MIREX score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="result-good">
+      <td><strong>KL-DSP</strong></td>
+      <td>local sealed holdout</td>
+      <td>1,000</td>
+      <td>61.08</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>KL-FMAK</strong></td>
+      <td>local sealed holdout</td>
+      <td>1,000</td>
+      <td>73.55 ± 0.46</td>
+    </tr>
+    <tr>
+      <td><strong>madmom (local run)</strong></td>
+      <td>local sealed holdout</td>
+      <td>1,000</td>
+      <td><strong>74.16</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY 60k</strong></td>
+      <td>published full FMAKv2</td>
+      <td>5,489</td>
+      <td>72.10</td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY 1M</strong></td>
+      <td>published full FMAKv2</td>
+      <td>5,489</td>
+      <td>73.20</td>
+    </tr>
+    <tr>
+      <td><strong>madmom (published)</strong></td>
+      <td>published full FMAKv2</td>
+      <td>5,489</td>
+      <td>73.10</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>FMAKv2 key-estimation results</h3>
+          <p>The fair comparison is the local sealed-holdout group. KL-DSP, KL-FMAK, and local madmom are all run on the same sealed 1,000-track holdout. Do not say KL-FMAK beats S-KEY from this table. The S-KEY rows are full-FMAKv2 results from earlier papers over 5,489 tracks. They provide context, but they are not same-manifest comparisons against the local rows because S-KEY was not rerun on this holdout in the paper.</p>
+          <p>On the sealed holdout, KL-DSP reaches 61.08 MIREX. Across three seeds, KL-FMAK raises that to 73.55 plus or minus 0.46 MIREX. That is a 12.47-point gain. Three seeds are enough for a descriptive mean and standard deviation, but the interval should not be read as a complete uncertainty analysis.</p>
+          <p>The same-manifest local madmom KeyCNN reference scores 74.16 MIREX. The KL-FMAK mean is 0.61 MIREX points below local madmom, so this holdout shows them as very close rather than clearly separated. madmom is a same-manifest inference comparison here, but its original training data may overlap with FMA audio. That means the near-tie should be read as context, not as a claim that the two training protocols are equally isolated. Earlier local S-KEY experiments are not presented as paper results here; this deck follows the paper table and uses published S-KEY rows only as full-dataset context.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Which input features help?</h2>
+        <p class="lead">This asks whether the gain comes from reranking alone or from giving the reranker chroma-frame evidence.</p>
+<div class="takeaway-callout"><strong>Takeaway:</strong> DSP-score-only reranking does not help. DSP plus chroma-frame reranking produces the MIREX gain.</div>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>Variant</th>
+      <th>Parameters</th>
+      <th>MIREX score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>KL-DSP baseline</strong></td>
+      <td>0 learned</td>
+      <td>61.08</td>
+    </tr>
+    <tr>
+      <td><strong>Only 24 DSP key scores (no chroma frames)</strong></td>
+      <td>576</td>
+      <td>60.25 ± 0.45</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>DSP-score + chroma-frame features</strong></td>
+      <td>21,528</td>
+      <td><strong>73.55 ± 0.46</strong></td>
+    </tr>
+    <tr>
+      <td><strong>DSP-score + chroma-frame features + teacher distillation</strong></td>
+      <td>21,528</td>
+      <td>72.50 ± 0.58</td>
+    </tr>
+    <tr>
+      <td><strong>No DSP-margin curriculum</strong></td>
+      <td>21,528</td>
+      <td>73.16 ± 0.62</td>
+    </tr>
+    <tr>
+      <td><strong>Linear chroma input projection</strong></td>
+      <td>21,984</td>
+      <td>72.50 ± 0.47</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Which input features help?</h3>
+          <p>This comparison is important because it explains why the reranker works. In machine-learning terms this is an ablation study: remove or replace one feature group and see how the metric changes. The only-24-DSP-key-scores row is still a reranker, but it only learns how to reweight the 24 DSP scores. It does not read the chroma-frame sequence. It scores 60.25 MIREX, below the 61.08 KL-DSP baseline, so reranking the DSP scores by themselves is not enough. The improvement appears when the reranker also reads frame-level chroma, which gives it time-local pitch evidence beyond the final DSP ranking.</p>
+          <p>The final DSP scores plus chroma frames model scores 73.55 MIREX, while the teacher-distilled variant scores 72.50. The paper reports label-trained minus teacher-distilled as +1.05 MIREX with a 95 percent confidence interval of -0.43 to +2.51, so teacher distillation is optional rather than required for the reported gain. The DSP-margin curriculum is an easy-to-hard training order based on how separated the top DSP key scores are. Removing it gives 73.16 plus or minus 0.62 MIREX, close to the final model.</p>
+          <p>The circular input stage uses 12 trainable weights, compared with 468 for a plain linear projection over chroma inputs. The linear-projection comparison remains in the same accuracy range, so the circular stage is kept because it encodes pitch-class rotation structure at much lower input-stage parameter cost.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>New model footprint</h2>
+        <p class="lead">This table breaks installed size into analyzer code, model weights, and runtime so the total shows what an app ships.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Analyzer/lib (MB)</th>
+      <th>Model (MB)</th>
+      <th>Runtime (MB)</th>
+      <th>Total installed (MB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="result-good">
+      <td><strong>KL-DSP (baseline)</strong></td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>KL-FMAK (+ ONNX)</strong></td>
+      <td>2.0</td>
+      <td>0.115</td>
+      <td>74.6</td>
+      <td>76.7</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>KL-FMAK (native)</strong></td>
+      <td>2.0</td>
+      <td>0.115</td>
+      <td>0</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <td><strong>stratum-dsp</strong></td>
+      <td>1.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <td><strong>libKeyFinder</strong></td>
+      <td>0.8</td>
+      <td>0</td>
+      <td>0</td>
+      <td><strong>0.8</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Essentia EDMM</strong></td>
+      <td>48.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>48.4</td>
+    </tr>
+    <tr>
+      <td><strong>madmom KeyCNN</strong></td>
+      <td>0</td>
+      <td>2.5</td>
+      <td>171</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY</strong></td>
+      <td>0</td>
+      <td>0.75</td>
+      <td>435</td>
+      <td>436</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>New model footprint</h3>
+          <p>The simplest way to say the footprint result is: same trained weights, two packages. The paper package is ONNX because that makes the learned model easy to measure and compare with other learned systems. That ONNX package includes 74.6 MB of ONNX Runtime, giving 76.7 MB total. The Cueport package is native Rust. It embeds the same 0.115 MB weights, runs the forward pass in Rust, and does not include ONNX Runtime, giving about 2.1 MB total with the native analyzer.</p>
+          <p>The total installed column is a runtime-inclusive packaging measurement. Read it as analyzer or library code plus model weights plus inference runtime, rounded to one decimal place where needed. For KL-DSP, the 2.0 MB is the native Rust analyzer package. For native KL-FMAK, the same analyzer package embeds the 0.115 MB weights and does not add a separate inference runtime. For the ONNX package, the runtime column is ONNX Runtime. For libKeyFinder, there is no learned model and no model runtime; its 0.8 MB appears under analyzer/library because it is the compiled native DSP library.</p>
+          <p>Under the paper measurement, KL-FMAK is 2.3 times smaller than madmom KeyCNN at 174 MB and 5.7 times smaller than S-KEY at 436 MB. The compact DSP analyzers (stratum-dsp, libKeyFinder) are smaller, but their key accuracy is also lower, as shown on the next accuracy-footprint figure.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Accuracy versus installed footprint</h2>
+        <p class="lead">The paper footprint figure uses the ONNX package measurement; the Cueport release uses the same weights in native Rust.</p>
+        <img class="slide-figure large-figure" src="/talks/trail-mix-ieee-ubc-2026/assets/fmakv2-accuracy-footprint-BaQXPrd5.png" alt="FMAKv2 MIREX score against installed footprint for KL-DSP, libKeyFinder, stratum-dsp, KL-FMAK, local madmom, and S-KEY 1M" />
+        <aside class="notes">
+          <h3>Accuracy versus installed footprint</h3>
+          <p>The figure plots installed footprint in megabytes on a log scale against FMAKv2 MIREX score. KL-DSP is compact but less accurate. KL-FMAK moves close to local madmom's MIREX score while using a smaller installed footprint in the paper's ONNX package measurement. S-KEY is included as a published full-protocol reference with a locally measured footprint, so it is useful context but not a same-manifest comparison.</p>
+          <p>The point of this slide is not that one system is universally better than another. It shows the engineering tradeoff that motivated key lime: keep the local DSP analyzer, add a very small learned key stage, and get much of the accuracy improvement without requiring a large model package for the app use case.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Key runtime measurements</h2>
+        <p class="lead">KL-FMAK uses the same full DSP analysis as KL-DSP, then adds a sub-millisecond reranker pass.</p>
+<table class="results-table">
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Time</th>
+      <th>Corpus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="result-good">
+      <td><strong>KL-DSP</strong></td>
+      <td>486 ms</td>
+      <td>FMAKv2</td>
+    </tr>
+    <tr class="result-good">
+      <td><strong>KL-FMAK</strong></td>
+      <td>486 ms + 0.32 ms</td>
+      <td>FMAKv2</td>
+    </tr>
+    <tr>
+      <td><strong>stratum-dsp</strong></td>
+      <td>684.5 ms</td>
+      <td>FMAKv2</td>
+    </tr>
+    <tr>
+      <td><strong>Essentia EDMM</strong></td>
+      <td><strong>407.1 ms</strong></td>
+      <td>GiantSteps Key</td>
+    </tr>
+    <tr>
+      <td><strong>libKeyFinder</strong></td>
+      <td>591.6 ms</td>
+      <td>GiantSteps Key</td>
+    </tr>
+    <tr>
+      <td><strong>S-KEY</strong></td>
+      <td>884.9 ms</td>
+      <td>GiantSteps Key</td>
+    </tr>
+    <tr>
+      <td><strong>madmom KeyCNN</strong></td>
+      <td>2842.7 ms</td>
+      <td>GiantSteps Key</td>
+    </tr>
+  </tbody>
+</table>
+        <aside class="notes">
+          <h3>Key runtime measurements</h3>
+          <p>This slide is speed evidence, not a sealed accuracy comparison. KL-DSP and stratum-dsp were timed on FMAKv2 tracks. Essentia EDMM, libKeyFinder, S-KEY, and madmom were timed on GiantSteps Key. The full-analysis timings include decode, so they answer how long the analyzer took from an audio file in that harness.</p>
+          <p>KL-FMAK reuses the KL-DSP feature pipeline, so the table shows the 486 ms full-analysis timing plus the measured 0.32 ms warm reranker forward pass after chroma frames and the 24 DSP key scores already exist.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">What's next</div>
+        <h2>trail mix next steps</h2>
+        <p class="lead">Next work should cover beat analysis, stronger key benchmarks, stronger beat benchmarks, and compact model experiments.</p>
+<div class="eval-stack">
+  <div class="eval-layer eval-layer-top">
+    <div class="eval-layer-label">1</div>
+    <div class="eval-layer-title">Beat analysis</div>
+    <div class="eval-layer-desc">Improve beat positions, tempo-change boundaries, and grid stability</div>
+  </div>
+  <div class="eval-layer eval-layer-mid">
+    <div class="eval-layer-label">2</div>
+    <div class="eval-layer-title">Key benchmarks</div>
+    <div class="eval-layer-desc">Add disjoint key datasets and rerun baselines when artifacts are available</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">3</div>
+    <div class="eval-layer-title">Beat benchmarks</div>
+    <div class="eval-layer-desc">Evaluate beat tracking and beat grids beyond global-BPM metrics</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">4</div>
+    <div class="eval-layer-title">Model experiments</div>
+    <div class="eval-layer-desc">Try small learned components for confidence, local key, and beat uncertainty</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>trail mix next steps</h3>
+          <p>The next work should not be only key-reranker polish. beat salad still needs algorithm work and stronger validation beyond global-tempo diagnostics: beat positions, tempo-change boundaries, and grid stability need the same level of evidence as the key results.</p>
+          <p>The benchmark work has two separate tracks. For key, add disjoint datasets and rerun baselines when the artifacts are available. For beat analysis, move beyond global-BPM diagnostics into beat tracking and grid metrics. The model work should remain small enough to explain to students: compact learned components for confidence, local key changes, or beat uncertainty rather than a large replacement model.</p>
+        </aside>
+        </section>
+
+        <section>
+        <div class="section-marker">Cueport</div>
+        <h2>Cueport next steps</h2>
+        <p class="lead">Follow Cueport development at <a href="https://usecueport.com" target="_blank" rel="noopener noreferrer">usecueport.com</a>.</p>
+<div class="eval-stack">
+  <div class="eval-layer eval-layer-top">
+    <div class="eval-layer-label">1</div>
+    <div class="eval-layer-title">Cueport Direct libraries</div>
+    <div class="eval-layer-desc">Choose local music folders, scan files, and keep a working library without a DJ database</div>
+  </div>
+  <div class="eval-layer eval-layer-mid">
+    <div class="eval-layer-label">2</div>
+    <div class="eval-layer-title">Local analysis</div>
+    <div class="eval-layer-desc">Key, tempo, beat positions, waveform overviews, confidence, and analyzer provenance</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">3</div>
+    <div class="eval-layer-title">Desktop and iPhone workflow</div>
+    <div class="eval-layer-desc">Cache selected tracks, review metadata, edit on mobile, and sync changes back</div>
+  </div>
+  <div class="eval-layer eval-layer-bot">
+    <div class="eval-layer-label">4</div>
+    <div class="eval-layer-title">Podcast and conversations</div>
+    <div class="eval-layer-desc">Talk with DJs, engineers, and music analysis experts about music ownership, metadata, analysis, mobile prep, and open tools</div>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Cueport next steps</h3>
+          <p>The product ask is separate from the research roadmap. Cueport Direct is for people who own music and want local tools for organizing, preparing, and reviewing it. The next Cueport work is to make direct libraries feel complete: choose folders, scan tracks, generate analysis, store confidence and provenance, and support desktop and iPhone workflows.</p>
+          <p>The community ask is part of Cueport's product work. Cueport should build an audience by speaking with DJs, engineers, and music analysis experts. A podcast is one way to make those conversations useful beyond a single demo or release note: music ownership, DJ and listener workflows, metadata, analysis quality, mobile preparation, open tooling, and how Cueport should present confidence, provenance, and review.</p>
+        </aside>
+        </section>
+
+        <section>
+        <h2>Selected bibliography</h2>
+        <p class="lead">A short reference map for the methods, learned key baselines, tempo baselines, and datasets used in the talk.</p>
+<div class="refs-grid">
+  <div class="refs-col">
+    <h3>Key estimation</h3>
+    <ul class="ref-list">
+      <li>Krumhansl and Kessler. <a href="https://doi.org/10.1037/0033-295X.89.4.334">Perceived tonal organization</a>. Psychological Review, 1982.</li>
+      <li>Temperley. <a href="https://doi.org/10.2307/40285811">What's key for key?</a> Music Perception, 1999.</li>
+      <li>Faraldo et al. <a href="http://hdl.handle.net/10230/33060">Key estimation in electronic dance music</a>. ECIR, 2016.</li>
+      <li>Korzeniowski and Widmer. <a href="https://doi.org/10.48550/arXiv.1808.05340">Genre-agnostic key classification with CNNs</a>. ISMIR, 2018.</li>
+    </ul>
+  </div>
+  <div class="refs-col">
+    <h3>Reranker and baselines</h3>
+    <ul class="ref-list">
+      <li>Noorzad. Key lime: a 115 KB DSP-guided transformer for key estimation. arXiv preprint, 2026.</li>
+      <li>Vaswani et al. <a href="https://doi.org/10.48550/arXiv.1706.03762">Attention is all you need</a>. NeurIPS, 2017.</li>
+      <li>Kong et al. <a href="https://arxiv.org/abs/2501.12907">S-KEY</a>. ICASSP, 2025.</li>
+    </ul>
+  </div>
+  <div class="refs-col">
+    <h3>Tempo method</h3>
+    <ul class="ref-list">
+      <li>Bello et al. <a href="https://doi.org/10.1109/TSA.2005.851998">A tutorial on onset detection</a>. IEEE TASLP, 2005.</li>
+      <li>Ellis. Beat tracking by dynamic programming. Journal of New Music Research, 2007.</li>
+      <li>Foscarin et al. <a href="https://arxiv.org/abs/2407.21658">Beat This!</a>. ISMIR, 2024.</li>
+      <li>GiantSteps Tempo and Key, plus <a href="https://zenodo.org/records/12759100">FMAKv2</a>.</li>
+    </ul>
+  </div>
+</div>
+        <aside class="notes">
+          <h3>Selected bibliography</h3>
+          <p>These are the references most likely to matter for the talk. The key column covers the template-scoring lineage and the madmom KeyCNN baseline. The reranker column covers the key lime paper, transformers, and S-KEY as the main learned key reference. The tempo-method column covers onset detection, dynamic-programming beat tracking, the learned Beat This baseline, and the datasets shown in the deck.</p>
+        </aside>
+        </section>
+
+        <section class="questions-slide" data-footer="false">
+<p class="eyebrow">IEEE Lunch & Learn<br />2026</p>
+<h2>Thank you</h2>
+<div class="question-links">
+  <a href="https://djpardis.com" target="_blank" rel="noopener noreferrer">djpardis.com</a>
+  <a href="https://trailmix.tools" target="_blank" rel="noopener noreferrer">trailmix.tools</a>
+</div>
+        <aside class="notes">
+          <h3>Thank you</h3>
+          <p>Thank you.</p>
+          <p>Presenter Q&amp;A prep:</p>
+          <ul>
+            <li>DSP template provenance. The shipped KL-DSP scorer averages four profile families: Krumhansl-Kessler, Temperley, EDMA, and a corpus-learned profile. The learned profile comes from GiantSteps Key benchmark output via <code>benchmarks/train_key_profiles.py</code>; GiantSteps Key is a development corpus in <code>benchmarks/corpus-policy.json</code>, not the sealed FMAKv2 holdout. Using all of GiantSteps is acceptable only under that development/evaluation split: it can inform template design and calibration, but it cannot be reported as an independent test set. Since KL-FMAK consumes the DSP scores, this provenance matters for both KL-DSP and KL-FMAK.</li>
+            <li>Tempo diagnostic boundary. The GiantSteps Tempo table is a same-corpus development diagnostic, not the final beat salad benchmark. If asked why it is still shown, say that the talk defines Acc1 and Acc2, so it should show the current evidence, but the slide names the limitation and the next step: more corpora, same metric code, same preprocessing, and explicit failure accounting.</li>
+            <li>madmom training data. The local madmom row is same-manifest inference on the 1,000 FMAKv2 holdout tracks. Its original training data is external and may overlap FMA audio, so the comparison is useful context but not a perfectly isolated training-protocol comparison.</li>
+            <li>Which 32 seconds. The Rust reranker reads the first 256 chroma frames, about 32 seconds at roughly 8 Hz. Shorter inputs are zero-padded and longer inputs are truncated. It is not a random crop at inference. That is a reproducible fixed window; the DSP score vector still summarizes the full track, and smarter window selection is future work.</li>
+            <li>Only three seeds. Say that three seeds support a descriptive mean and standard deviation, but a broader seed sweep would give a better estimate of training variability.</li>
+            <li>One holdout corpus. The FMAKv2 holdout is sealed and useful, but broader key generalization remains future work. That is why the next-work slide lists additional same-manifest corpora.</li>
+            <li>Rust versus ONNX validation. The Rust forward pass is checked against ONNX reference fixtures with absolute logit error below 1.0e-4. I do not currently have a same-manifest 1,000-track argmax-equivalence report, so do not claim that on stage.</li>
+          </ul>
+        </aside>
+        </section>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -22,6 +22,16 @@ sitemap: false
 <details class="collapsible-section" markdown="1">
 <summary><h3>Talks</h3></summary>
 
+- trail mix: DSP analysis with a compact transformer key reranker  
+  [IEEE Lunch and Learn](https://www.ubcieee.org/), Oct 26, 2026  
+  🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools)
+
+  *Abstract.* This IEEE Lunch and Learn talk gives a short overview of
+  [trail mix](https://trailmix.tools), a Rust toolkit for local tempo, key, and
+  waveform analysis. The technical focus is key lime, which combines a DSP key
+  estimator with a newly published compact DSP-guided transformer reranker that
+  improves global-key selection.
+
 - Cueport v1.1.0  
   [ATProto Vancouver, September 2026 Meetup](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif), Sept 10, 2026  
   🎞️ <a href="/talks/cueport-atproto-vancouver-2026/" target="_blank" rel="noopener">slides</a>, 📰 [announcement](https://bsky.app/profile/vancouver.atprotocol.community/post/3mv4tlnxvwc2w)
