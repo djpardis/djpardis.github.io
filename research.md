@@ -24,7 +24,7 @@ sitemap: false
 
 - trail mix: DSP analysis with a compact transformer key reranker  
   [IEEE Lunch and Learn](https://www.ubcieee.org/), Oct 26, 2026  
-  🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools)
+  🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools), 📷 [photo 1](/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg), [2](/files/pics/pages/ieee-ubc-2026-classroom.jpg), [3](/files/pics/pages/ieee-ubc-2026-cueport-demo.jpg)
 
   *Abstract.* This IEEE Lunch and Learn talk gives a short overview of
   [trail mix](https://trailmix.tools), a Rust toolkit for local tempo, key, and
@@ -118,7 +118,7 @@ sitemap: false
 - Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator  
   with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/misticain/)  
   [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 29, 2025  
-  📷 [photos](https://www.instagram.com/p/DKBrPHOxnHt/)
+  📷 [photo 1](/files/pics/pages/vsw2025-founder-panel-1.jpg), [2](/files/pics/pages/vsw2025-founder-panel-2.jpg)
 
 - Building teams and culture that support ML innovation  
   with [Ziad Asghar](https://www.linkedin.com/in/ziad-asghar-794404/), [Ameen Kazerouni](https://www.linkedin.com/in/ameenkazerouni/), moderated by [Sam Charrington](https://www.linkedin.com/in/samcharrington/)  
