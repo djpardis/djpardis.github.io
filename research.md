@@ -24,7 +24,13 @@ sitemap: false
 
 - trail mix: DSP analysis with a compact transformer key reranker  
   [IEEE Lunch and Learn](https://www.ubcieee.org/), Oct 26, 2026  
-  🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools), 📷 [photo 1](/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg), [2](/files/pics/pages/ieee-ubc-2026-classroom.jpg), [3](/files/pics/pages/ieee-ubc-2026-cueport-demo.jpg)
+  🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools), 📷 <a href="/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg" data-gallery-group="ieee-ubc-2026-photos">photos</a>
+
+  <span hidden>
+    <img src="/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg" alt="Presenting the DSP key-estimation pipeline slide at the IEEE Lunch and Learn" data-gallery-group="ieee-ubc-2026-photos" />
+    <img src="/files/pics/pages/ieee-ubc-2026-classroom.jpg" alt="Presenting to an IEEE Lunch and Learn classroom audience" data-gallery-group="ieee-ubc-2026-photos" />
+    <img src="/files/pics/pages/ieee-ubc-2026-cueport-demo.jpg" alt="Presenting a Cueport demo slide at the IEEE Lunch and Learn" data-gallery-group="ieee-ubc-2026-photos" />
+  </span>
 
   *Abstract.* This IEEE Lunch and Learn talk gives a short overview of
   [trail mix](https://trailmix.tools), a Rust toolkit for local tempo, key, and
@@ -118,7 +124,12 @@ sitemap: false
 - Techstars San Diego powered by SDSU Founder Panel: What it Takes to Get Into and Through a Top Accelerator  
   with [Alexander Kurtynin](https://www.linkedin.com/in/alexanderkurtynin/), [Sean Braacx](https://www.linkedin.com/in/seanbraacx/), moderated by [Misti Cain](https://www.linkedin.com/in/misticain/)  
   [Vancouver Startup Week (VSW)](https://www.vanstartupweek.ca/), May 29, 2025  
-  📷 [photo 1](/files/pics/pages/vsw2025-founder-panel-1.jpg), [2](/files/pics/pages/vsw2025-founder-panel-2.jpg)
+  📷 <a href="/files/pics/pages/vsw2025-founder-panel-1.jpg" data-gallery-group="vsw2025-founder-panel-photos">photos</a>
+
+  <span hidden>
+    <img src="/files/pics/pages/vsw2025-founder-panel-1.jpg" alt="Techstars SDSU founder panel at Vancouver Startup Week 2025" data-gallery-group="vsw2025-founder-panel-photos" />
+    <img src="/files/pics/pages/vsw2025-founder-panel-2.jpg" alt="Speakers at the Techstars SDSU founder panel at Vancouver Startup Week 2025" data-gallery-group="vsw2025-founder-panel-photos" />
+  </span>
 
 - Building teams and culture that support ML innovation  
   with [Ziad Asghar](https://www.linkedin.com/in/ziad-asghar-794404/), [Ameen Kazerouni](https://www.linkedin.com/in/ameenkazerouni/), moderated by [Sam Charrington](https://www.linkedin.com/in/samcharrington/)  

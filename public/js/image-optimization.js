@@ -31,7 +31,11 @@ function addUnifiedGallery() {
   document.querySelectorAll('img').forEach(function (img) {
     if (skipSelectors.some(function (s) { return img.closest(s); })) return;
     if (shouldIncludeImage(img)) {
-      items.push({ type: 'image', el: img });
+      items.push({
+        type: 'image',
+        el: img,
+        group: img.getAttribute('data-gallery-group') || ''
+      });
     }
   });
 
@@ -49,6 +53,13 @@ function addUnifiedGallery() {
       item.el.style.cursor = 'pointer';
       item.el.setAttribute('title', 'Click to enlarge');
       item.el.addEventListener('click', function () {
+        if (item.group) {
+          var groupItems = items.filter(function (candidate) {
+            return candidate.type === 'image' && candidate.group === item.group;
+          });
+          openGallery(groupItems.indexOf(item), groupItems);
+          return;
+        }
         openGallery(idx, items);
       });
     }
@@ -66,6 +77,24 @@ function addUnifiedGallery() {
   });
 
   window.galleryItems = items;
+  addGalleryLinkHandlers(items);
+}
+
+function addGalleryLinkHandlers(items) {
+  document.querySelectorAll('[data-gallery-group]').forEach(function (link) {
+    var group = link.getAttribute('data-gallery-group');
+    if (!group || link.tagName !== 'A') return;
+
+    var groupItems = items.filter(function (item) {
+      return item.type === 'image' && item.group === group;
+    });
+    if (groupItems.length === 0) return;
+
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      openGallery(0, groupItems);
+    });
+  });
 }
 
 function createGalleryContent(item) {
