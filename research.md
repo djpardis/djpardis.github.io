@@ -45,13 +45,13 @@ sitemap: false
   *Abstract.* This talk follows my Local First Conf introduction to Cueport with two v1.1.0 updates. Cueport now handles public Wi-Fi pairing failures more clearly, and Cueport Direct uses [trail mix](https://trailmix.tools) to analyze local music folders without a DJ library.
 
 - trail mix: Open tempo, key, and waveform analysis  
-  [FOSSY 2026](https://2026.fossy.ca/schedule/presentation/416/), Aug 9, 2026  
+  [FOSSY](https://2026.fossy.ca/schedule/presentation/416/), Aug 9, 2026  
   🎞️ <a href="/talks/trail-mix-fossy-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools)
 
   *Abstract.* [Cueport](https://usecueport.com) is a local-first music player for people who own their music. Cueport imports the tempo, key, and beat grids that Serato calculates. However, listeners who don't have DJ tools have no analysis to import. This is where [trail mix](https://trailmix.tools) comes in. We built an open source Rust toolkit that estimates tempo and key, detects beat switch and key change, and generates compact waveform data. This talk shows how the analysis works and how the results are evaluated.
 
 - Cueport: A local-first music player for DJs  
-  [Local-First Conf 2026](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), Jul 12, 2026  
+  [Local-First Conf](https://app-2026.localfirstconf.com/schedule/day-1/1630-cueport-a-local-first-music-player-for-djs), Jul 12, 2026  
   🎥 [video](https://www.youtube.com/watch?v=dkrBF08GPu8&list=PLXxEKA_dxoH0&index=14), 🎞️ <a href="/talks/cueport/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://usecueport.com)
 
   *Abstract.* A DJ's Serato library represents years of work in crates, cue points, tags, and prep notes. It all lives on the gig laptop, but DJs want to prepare sets on trains, flights, and long walks. This talk is about [Cueport](https://usecueport.com), a local-first mobile player for music you own, but away from that one machine. The talk covers when to use a CRDT, how Cueport's LAN sync works, and the seven local-first ideals in practice.
