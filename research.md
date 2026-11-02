@@ -23,7 +23,7 @@ sitemap: false
 <summary><h3>Talks</h3></summary>
 
 - trail mix: DSP analysis with a compact transformer key reranker  
-  [IEEE Lunch and Learn](https://www.ubcieee.org/), Oct 26, 2026  
+  [UBC IEEE Lunch and Learn, Oct 26, 2026](https://www.ubcieee.org/)  
   🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools), 📷 <a href="/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg" data-gallery-group="ieee-ubc-2026-photos">photos</a>
 
   <span hidden>
@@ -39,7 +39,7 @@ sitemap: false
   improves global-key selection.
 
 - Cueport v1.1.0  
-  [ATProto Vancouver, September 2026 Meetup](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif), Sept 10, 2026  
+  [ATProto Vancouver, Sept 10, 2026](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif)  
   🎞️ <a href="/talks/cueport-atproto-vancouver-2026/" target="_blank" rel="noopener">slides</a>, 📰 [announcement](https://bsky.app/profile/vancouver.atprotocol.community/post/3mv4tlnxvwc2w)
 
   *Abstract.* This talk follows my Local First Conf introduction to Cueport with two v1.1.0 updates. Cueport now handles public Wi-Fi pairing failures more clearly, and Cueport Direct uses [trail mix](https://trailmix.tools) to analyze local music folders without a DJ library.
