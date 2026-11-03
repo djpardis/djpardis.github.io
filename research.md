@@ -35,8 +35,9 @@ sitemap: false
   *Abstract.* This IEEE Lunch and Learn talk gives a short overview of
   [trail mix](https://trailmix.tools), a Rust toolkit for local tempo, key, and
   waveform analysis. The technical focus is key lime, which combines a DSP key
-  estimator with a newly published compact DSP-guided transformer reranker that
-  improves global-key selection.
+  estimator with a [newly published compact DSP-guided transformer
+  reranker](https://arxiv.org/abs/2611.02408) that improves global-key
+  selection.
 
 - Cueport v1.1.0  
   [ATProto Meetup, Sept 10, 2026](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif)  
