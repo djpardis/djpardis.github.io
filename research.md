@@ -23,7 +23,7 @@ sitemap: false
 <summary><h3>Talks</h3></summary>
 
 - trail mix: DSP analysis with a compact transformer key reranker  
-  [UBC IEEE Lunch and Learn, Oct 26, 2026](https://www.ubcieee.org/)  
+  [UBC IEEE Lunch and Learn, Oct 26, 2026](https://vancouver.ieee.ca/event/lunch-learn-music-analysis-with-classical-signal-processing/)  
   🎞️ <a href="/talks/trail-mix-ieee-ubc-2026/" target="_blank" rel="noopener">slides</a>, 🌐 [website](https://trailmix.tools), 📷 <a href="/files/pics/pages/ieee-ubc-2026-key-pipeline.jpg" data-gallery-group="ieee-ubc-2026-photos">photos</a>
 
   <span hidden>
