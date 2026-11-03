@@ -39,10 +39,10 @@ sitemap: false
   improves global-key selection.
 
 - Cueport v1.1.0  
-  [ATProto Vancouver, Sept 10, 2026](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif)  
+  [ATProto Meetup, Sept 10, 2026](https://atmo.rsvp/p/vancouver.atprotocol.community/e/3muagotvsscif)  
   🎞️ <a href="/talks/cueport-atproto-vancouver-2026/" target="_blank" rel="noopener">slides</a>, 📰 [announcement](https://bsky.app/profile/vancouver.atprotocol.community/post/3mv4tlnxvwc2w)
 
-  *Abstract.* This talk follows my Local First Conf introduction to Cueport with two v1.1.0 updates. Cueport now handles public Wi-Fi pairing failures more clearly, and Cueport Direct uses [trail mix](https://trailmix.tools) to analyze local music folders without a DJ library.
+  *Abstract.* This talk follows my Local First Conf introduction to Cueport with two major updates. Cueport now handles public Wi-Fi pairing failures more clearly, and Cueport Direct uses [trail mix](https://trailmix.tools) to analyze local music folders without a DJ library.
 
 - trail mix: Open tempo, key, and waveform analysis  
   [FOSSY](https://2026.fossy.ca/schedule/presentation/416/), Aug 9, 2026  
