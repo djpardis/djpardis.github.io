@@ -259,6 +259,10 @@ sitemap: false
   📔 [thesis](/files/papers/Noorzad2012b.pdf), 📕 [translation](/files/papers/Noorzad2012c.pdf), 🎞️ [slides](/files/slides/defense_slides.pdf)
 -->
 
+- Deployment-constrained key estimation with a DSP-guided transformer reranker  
+  arXiv preprint, Nov 2026  
+  📃 [paper](https://arxiv.org/abs/2611.02408)
+
 - Regression with sparse approximations of data  
   with [Bob L. Sturm](https://www.linkedin.com/in/bosturm/)  
   European Signal Processing Conference (EUSIPCO), 2012  
