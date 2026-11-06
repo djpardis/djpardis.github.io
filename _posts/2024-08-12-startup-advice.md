@@ -52,7 +52,7 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 **Get funding.** Raise money to accelerate growth. Attract investors who are already sold on the vision and are ready to champion the company. If it's a hard sell, it's not a good fit. It's a tough game, and you need cheerleaders.
 
-**Borrow fundraising craft from people who have done it.** Travis Kalanick's seed-raising advice is useful because it treats fundraising as a managed sales process, not a mysterious investor ritual. Keep a real investor pipeline, practice a short pitch and a tight FAQ, ask every meeting where the person stands, ask for referrals, and keep momentum visible until the money is actually wired. The most useful part is the insistence on credibility. Acknowledge the uncertain parts of the business directly, then explain how you are addressing them. <a id="ref1-back" href="#ref1">[1]</a>
+**Borrow fundraising craft from people who have done it.** Travis Kalanick's seed-raising advice is useful because it treats fundraising as a managed sales process, not a mysterious investor ritual. Keep a real investor pipeline, practice a short pitch and a tight FAQ, ask every meeting where the person stands, ask for referrals, and keep momentum visible until the money is actually wired. The most useful part is the insistence on credibility. Acknowledge the uncertain parts of the business directly, then explain how you are addressing them.
 
 **Believe in yourself.** Be kind, especially to yourself. Self-confidence is the only thing you have going for you for a long time. Things won't ever be perfect, and that's okay.
 
@@ -68,11 +68,13 @@ Moving fast is not just about writing more code, sending more emails, and doing 
 
 What are some of your experiences from working at startups? I'd love to hear from you!
 
+{% comment %}
 ## Further reading
 
 <a id="ref1" href="#ref1-back">[1]</a> Travis Kalanick. 2009. "Startup Seed Raising Skilzzz." Swooshing. Available at: <a href="https://swooshing.wordpress.com/2009/03/19/startup-seed-raising-skillzzz/" target="_blank">https://swooshing.wordpress.com/2009/03/19/startup-seed-raising-skillzzz/</a>
 
 <a id="ref2">[2]</a> Paul Graham. 2013. "Do Things that Don't Scale." Available at: <a href="https://paulgraham.com/ds.html" target="_blank">https://paulgraham.com/ds.html</a>
+{% endcomment %}
 
 <div class="crosspost-container post-container">
 This article is cross-posted from my original publication on <a href="https://medium.com/@djpardis/startup-advice-e9459d6c1ebb" target="_blank" rel="noopener">Medium</a>.
