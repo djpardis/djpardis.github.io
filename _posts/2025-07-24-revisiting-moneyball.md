@@ -398,9 +398,9 @@ This suggests that playoff format, season length, and sport-specific factors mat
 
 ## [Conclusion](#table-of-contents) {#conclusion}
 
-Whether the 2002 A's succeeded primarily through analytics or traditional talent is less important than the broader principle that analytics can reveal value that conventional wisdom misses. They also showed the power of intelligence, creativity, and sheer persistence in overcoming financial disadvantage.
+Whether the 2002 A’s succeeded primarily through analytics or traditional talent is less important than the broader principle that analytics can reveal value that conventional wisdom misses. Further, the 2002 A's showed the power of intelligence, creativity, and sheer persistence in overcoming financial disadvantage.
 
-Ultimately, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and data nerds.
+Beyond the A's, it's hard to overlook the attention that Moneyball has brought to baseball, as it continues to capture the imagination of fans, bandwagoners, and data nerds.
 
 ![DJ Pardis tweet](/files/pics/blog/2025/djpardistwete.png){: style="max-width: 500px; display: block; margin: 0 auto;"}
 *From [here](https://x.com/djpardis/status/1188636997557993472){:target="_blank"}.*
